@@ -1,0 +1,14 @@
+D:\HomeHub\Homehub\bin\Debug\net6.0\Homehub.deps.json
+D:\HomeHub\Homehub\bin\Debug\net6.0\Homehub.runtimeconfig.json
+D:\HomeHub\Homehub\bin\Debug\net6.0\Homehub.dll
+D:\HomeHub\Homehub\bin\Debug\net6.0\Homehub.pdb
+D:\HomeHub\Homehub\obj\Debug\net6.0\Homehub.csproj.AssemblyReference.cache
+D:\HomeHub\Homehub\obj\Debug\net6.0\Homehub.GeneratedMSBuildEditorConfig.editorconfig
+D:\HomeHub\Homehub\obj\Debug\net6.0\Homehub.AssemblyInfoInputs.cache
+D:\HomeHub\Homehub\obj\Debug\net6.0\Homehub.AssemblyInfo.cs
+D:\HomeHub\Homehub\obj\Debug\net6.0\Homehub.csproj.CoreCompileInputs.cache
+D:\HomeHub\Homehub\obj\Debug\net6.0\Homehub.dll
+D:\HomeHub\Homehub\obj\Debug\net6.0\refint\Homehub.dll
+D:\HomeHub\Homehub\obj\Debug\net6.0\Homehub.pdb
+D:\HomeHub\Homehub\obj\Debug\net6.0\Homehub.genruntimeconfig.cache
+D:\HomeHub\Homehub\obj\Debug\net6.0\ref\Homehub.dll

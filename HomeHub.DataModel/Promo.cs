@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace HomeHub.DataModel;
+
+public partial class Promo
+{
+    public string PromoId { get; set; } = null!;
+
+    public string PromoName { get; set; } = null!;
+
+    public string PromoCode { get; set; } = null!;
+
+    public DateTime PromoStart { get; set; }
+
+    public DateTime PromoEnd { get; set; }
+
+    public string BusinessName { get; set; } = null!;
+}
