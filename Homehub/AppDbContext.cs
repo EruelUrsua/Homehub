@@ -12,11 +12,13 @@ namespace Homehub
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-            optionsBuilder.UseSqlServer("");
+            optionsBuilder.UseSqlServer("Server=desktop-1nft1om;" +
+           "Database=Homehub; Integrated Security=SSPI;" +
+           "TrustServerCertificate=true");
         }
 
 
-        public DbSet<Products> Products { get; set; }
+       public DbSet<Product> Products { get; set; }
 
 
     }
