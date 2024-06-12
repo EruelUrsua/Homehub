@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HomeHub\\HomeHubCustomer\\HomeHub.App.csproj": {}
+    "D:\\ISPROJ2 HomeHub\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj": {}
   },
   "projects": {
-    "D:\\HomeHub\\HomeHubCustomer\\HomeHub.App.csproj": {
+    "D:\\ISPROJ2 HomeHub\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HomeHub\\HomeHubCustomer\\HomeHub.App.csproj",
+        "projectUniqueName": "D:\\ISPROJ2 HomeHub\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj",
         "projectName": "HomeHub.App",
-        "projectPath": "D:\\HomeHub\\HomeHubCustomer\\HomeHub.App.csproj",
+        "projectPath": "D:\\ISPROJ2 HomeHub\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj",
         "packagesPath": "C:\\Users\\WIN11\\.nuget\\packages\\",
-        "outputPath": "D:\\HomeHub\\HomeHubCustomer\\obj\\",
+        "outputPath": "D:\\ISPROJ2 HomeHub\\Homehub\\HomeHubCustomer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\WIN11\\AppData\\Roaming\\NuGet\\NuGet.Config",

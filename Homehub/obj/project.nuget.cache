@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VV0gwgltPk9HYxfWOYD6qJk2FXbb4LyPgBmkUg5M82R/yeAmKRyUbPl947jbW4syqM1/QzP3tPhk+5EhpmwtQQ==",
+  "dgSpecHash": "NF+AtlMrHfbO4Ry0qVitwHGSQapwQn0m4l+qA1UnpQ6hQVIeGRY3DKvuL5TEFbtfAJHHbqolsOq6anFW3+Dg1w==",
   "success": true,
-  "projectFilePath": "D:\\HomeHub\\Homehub\\Homehub.csproj",
+  "projectFilePath": "D:\\ISPROJ2 HomeHub\\Homehub\\Homehub\\Homehub.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WIN11\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\WIN11\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6Hmj+aR5Am+Kl1a83/WlxiIljFzgsJx4D5d4ZYMdiXlyY8Ha/jHCM/z2zrshkfmVzo+l4nFmyLP4R0Ra1uKkLQ==",
+  "dgSpecHash": "x19M1JOSIZfrWVqDdsR+MZQ7c/s3AXe9hcSIlSHcoEM3hTXx949yv2E2SLAdnjAMxWmFBoROdYiNAqSaDJNtXg==",
   "success": true,
-  "projectFilePath": "D:\\HomeHub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
+  "projectFilePath": "D:\\ISPROJ2 HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WIN11\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\WIN11\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
