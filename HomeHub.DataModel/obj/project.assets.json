@@ -2980,11 +2980,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HomeHub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
+      "projectUniqueName": "D:\\ISPROJ2 HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
       "projectName": "HomeHub.DataModel",
-      "projectPath": "D:\\HomeHub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
+      "projectPath": "D:\\ISPROJ2 HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
       "packagesPath": "C:\\Users\\WIN11\\.nuget\\packages\\",
-      "outputPath": "D:\\HomeHub\\HomeHub.DataModel\\obj\\",
+      "outputPath": "D:\\ISPROJ2 HomeHub\\Homehub\\HomeHub.DataModel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\WIN11\\AppData\\Roaming\\NuGet\\NuGet.Config",

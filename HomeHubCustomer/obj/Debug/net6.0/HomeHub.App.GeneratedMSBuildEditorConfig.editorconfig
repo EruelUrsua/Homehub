@@ -8,49 +8,49 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HomeHub.App
 build_property.RootNamespace = HomeHub.App
-build_property.ProjectDir = D:\HomeHub\HomeHubCustomer\
+build_property.ProjectDir = D:\ISPROJ2 HomeHub\Homehub\HomeHubCustomer\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\HomeHub\HomeHubCustomer
+build_property.MSBuildProjectDirectory = D:\ISPROJ2 HomeHub\Homehub\HomeHubCustomer
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/HomeHub/HomeHubCustomer/Views/Home/AvailService.cshtml]
+[D:/ISPROJ2 HomeHub/Homehub/HomeHubCustomer/Views/Home/AvailService.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBdmFpbFNlcnZpY2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/HomeHubCustomer/Views/Home/Index.cshtml]
+[D:/ISPROJ2 HomeHub/Homehub/HomeHubCustomer/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/HomeHubCustomer/Views/Home/OrderProduct.cshtml]
+[D:/ISPROJ2 HomeHub/Homehub/HomeHubCustomer/Views/Home/OrderProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPcmRlclByb2R1Y3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/HomeHubCustomer/Views/Home/Orders.cshtml]
+[D:/ISPROJ2 HomeHub/Homehub/HomeHubCustomer/Views/Home/Orders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPcmRlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/HomeHubCustomer/Views/Home/UserProfile.cshtml]
+[D:/ISPROJ2 HomeHub/Homehub/HomeHubCustomer/Views/Home/UserProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/HomeHubCustomer/Views/Shared/Error.cshtml]
+[D:/ISPROJ2 HomeHub/Homehub/HomeHubCustomer/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/HomeHubCustomer/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/ISPROJ2 HomeHub/Homehub/HomeHubCustomer/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/HomeHubCustomer/Views/_ViewImports.cshtml]
+[D:/ISPROJ2 HomeHub/Homehub/HomeHubCustomer/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/HomeHubCustomer/Views/_ViewStart.cshtml]
+[D:/ISPROJ2 HomeHub/Homehub/HomeHubCustomer/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/HomeHubCustomer/Views/Shared/_Layout.cshtml]
+[D:/ISPROJ2 HomeHub/Homehub/HomeHubCustomer/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-n2glndjcuc
