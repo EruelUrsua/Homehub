@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .html {
+        font-family: Arial
+    }
+
+    .row {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .card {
+        background-color: #203B81;
+        border-radius: 30px;
+        width: 300;
+        height: 270px;
+        padding-top: 42px;
+        padding-left: 55px;
+        margin-top: 20px;
+    }
+
+    .card1 {
+        background-color: #203B81;
+        border-radius: 30px;
+        width: 300;
+        height: 300px;
+        padding: 20px;
+    }
+
+    .button {
+        width: 30px;
+        height: 20px;
+        background-color: #F1F1F1;
+        color: #203B81;
+        font-family: Arial;
+        border-color: #F1F1F1;
+    }
+
+    button {
+        background-color: #F1F1F1;
+        color: #203B81;
+        font-family: Arial;
+        font-size: 20px;
+        border-color: #F1F1F1;
+        border-radius: 30px;
+        height: 80px;
+        width: 300px;
+    }
+
+</style>
+
+<body style="background-color:#F1F1F1">
+    <!--
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>
+    -->
+
+    <div>
+        <h2>Welcome back</h2>
+    </div>
+
+    <!--<div class="card">
+        <div class="container-fluid">
+            <h4>What do you want to do?</h4>
+                <div class="flex-container">
+                    <button>Order Products</button>
+                    <button>Avail Services</button>
+                    <button>View Orders</button>
+                </div>
+        </div>
+    </div>
+    -->
+
+
+    <div class="card">
+        <div class="container">
+            <h4 style="color:#F1F1F1">What do you want to do?</h4>
+            <div class="row" style="color:#203B81; border-color:#F1F1F1">
+                <div class="col-sm-4"><a class="nav-link" asp-action="OrderProduct"><button>Order Products</button></a></div>
+                <div class="col-sm-4"><a class="nav-link" asp-action="AvailService"><button>Avail Services</button></a></div>
+                <div class="col-sm-4"><button>View Orders</button></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="row">
+        <div class="col">
+            <h3>Recommendations for you</h3>
+            <div class="card1"></div>
+        </div>
+        <div class="col">
+            <h3>Ongoing Promos</h3>
+            <div class="card1"></div>
+        </div>
+    </div>
+</body>
