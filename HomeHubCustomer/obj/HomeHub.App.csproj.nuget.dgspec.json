@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHubCustomer\\HomeHub.App.csproj": {}
+    "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
+    "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
+        "projectUniqueName": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
         "projectName": "HomeHub.DataModel",
-        "projectPath": "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
-        "packagesPath": "C:\\Users\\Charlize\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHub.DataModel\\obj\\",
+        "projectPath": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Charlize\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -35,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -69,8 +63,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -79,21 +72,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.321\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHubCustomer\\HomeHub.App.csproj": {
+    "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHubCustomer\\HomeHub.App.csproj",
+        "projectUniqueName": "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj",
         "projectName": "HomeHub.App",
-        "projectPath": "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHubCustomer\\HomeHub.App.csproj",
-        "packagesPath": "C:\\Users\\Charlize\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHubCustomer\\obj\\",
+        "projectPath": "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Charlize\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -101,15 +94,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
-                "projectPath": "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHub.DataModel\\HomeHub.DataModel.csproj"
+              "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
+                "projectPath": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj"
               }
             }
           }
@@ -118,11 +110,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -152,8 +139,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -165,7 +151,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.321\\RuntimeIdentifierGraph.json"
         }
       }
     }
