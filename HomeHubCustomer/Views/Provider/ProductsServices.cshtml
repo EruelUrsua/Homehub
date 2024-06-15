@@ -1,0 +1,49 @@
+﻿@model HomeHub.App.Models.CombinedViewModel
+
+<h1>Your Products/Services List</h1>
+
+<div class="mb-3">
+    <a class="btn btn-success" asp-action="AddProduct">Add Product</a>
+    <a class="btn btn-success" asp-action="AddService">Add Service</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td>Product</td>
+                <td>@product.ProductItem</td>
+                <td>@product.Price.ToString("C")</td>
+                <td>
+                    <a class="btn btn-primary" asp-action="UpdateProduct" asp-route-id="@product.ProductId">Update</a>
+                    <form asp-controller="Product" asp-action="RemoveProduct" method="post">
+                        <input type="hidden" name="id" value="@product.ProductId" />
+                        <input type="submit" class="btn btn-danger" value="Delete" />
+                    </form> 
+                </td>
+            </tr>
+        }
+
+        @foreach (var service in Model.Services)
+        {
+            <tr>
+                <td>Service</td>
+                <td>@service.ServiceItem</td>
+                <td>@service.Fee.ToString("C")</td>
+                <td>
+                    <a class="btn btn-primary" asp-action="UpdateService" asp-route-id="@service.ServiceId">Update</a>
+                    <a class="btn btn-danger" href="#">Remove</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
