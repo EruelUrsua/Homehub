@@ -1,14 +1,7 @@
-﻿@{
-    ViewData["Title"] = "Choose where to order";
-}
-<style>
+﻿@model List<Business>
 
-
-</style>
-
-
-<body style="background-color:#F1F1F1">
-    <div class="text-center"><h1>@ViewData["Title"]</h1></div>
+<body style ="background-color:#F1F1F1">
+    <div class="text-center"><h1>Choose where to order</h1></div>
 
     <select name="filter" id="filter">
         <option value="byName">By name</option>
@@ -17,5 +10,28 @@
     </select>
 
     <div class="card">
+        @if (Model.Count() < 1)
+        {
+            <div class="alert alert-info">
+                No Businesses Found
+            </div>
+        }
+        else
+        {
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>Sevice Providers</tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.BusinessName</td>
+                            <td>@item.BusinessType</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
     </div>
 </body>

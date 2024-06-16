@@ -1,3 +1,4 @@
+using HomeHub.App.Configuration;
 using HomeHub.DataModel;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,6 +8,9 @@ builder.Services.AddDbContext<HomeHubContext>(opts =>
 {
     opts.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
+
+//automapper
+builder.Services.AddAutoMapper(typeof(MapperConfig));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -28,8 +32,12 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller=Provider}/{action=ProductsServices}/{id?}");
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Provider}/{action=ProductsServices}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

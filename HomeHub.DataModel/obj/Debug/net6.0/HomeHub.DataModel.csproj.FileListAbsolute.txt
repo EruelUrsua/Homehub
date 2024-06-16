@@ -41,3 +41,17 @@ C:\Users\Charlize\Documents\HomeHub\HomeHub.DataModel\obj\Debug\net6.0\refint\Ho
 C:\Users\Charlize\Documents\HomeHub\HomeHub.DataModel\obj\Debug\net6.0\HomeHub.DataModel.pdb
 C:\Users\Charlize\Documents\HomeHub\HomeHub.DataModel\obj\Debug\net6.0\HomeHub.DataModel.genruntimeconfig.cache
 C:\Users\Charlize\Documents\HomeHub\HomeHub.DataModel\obj\Debug\net6.0\ref\HomeHub.DataModel.dll
+D:\HomeHub\Homehub\HomeHub.DataModel\bin\Debug\net6.0\HomeHub.DataModel.deps.json
+D:\HomeHub\Homehub\HomeHub.DataModel\bin\Debug\net6.0\HomeHub.DataModel.runtimeconfig.json
+D:\HomeHub\Homehub\HomeHub.DataModel\bin\Debug\net6.0\HomeHub.DataModel.dll
+D:\HomeHub\Homehub\HomeHub.DataModel\bin\Debug\net6.0\HomeHub.DataModel.pdb
+D:\HomeHub\Homehub\HomeHub.DataModel\obj\Debug\net6.0\HomeHub.DataModel.csproj.AssemblyReference.cache
+D:\HomeHub\Homehub\HomeHub.DataModel\obj\Debug\net6.0\HomeHub.DataModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\HomeHub\Homehub\HomeHub.DataModel\obj\Debug\net6.0\HomeHub.DataModel.AssemblyInfoInputs.cache
+D:\HomeHub\Homehub\HomeHub.DataModel\obj\Debug\net6.0\HomeHub.DataModel.AssemblyInfo.cs
+D:\HomeHub\Homehub\HomeHub.DataModel\obj\Debug\net6.0\HomeHub.DataModel.csproj.CoreCompileInputs.cache
+D:\HomeHub\Homehub\HomeHub.DataModel\obj\Debug\net6.0\HomeHub.DataModel.dll
+D:\HomeHub\Homehub\HomeHub.DataModel\obj\Debug\net6.0\refint\HomeHub.DataModel.dll
+D:\HomeHub\Homehub\HomeHub.DataModel\obj\Debug\net6.0\HomeHub.DataModel.pdb
+D:\HomeHub\Homehub\HomeHub.DataModel\obj\Debug\net6.0\HomeHub.DataModel.genruntimeconfig.cache
+D:\HomeHub\Homehub\HomeHub.DataModel\obj\Debug\net6.0\ref\HomeHub.DataModel.dll
