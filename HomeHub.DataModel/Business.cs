@@ -18,4 +18,5 @@ public partial class Business
     public int ContactNo { get; set; }
 
     public string OfferList { get; set; } = null!;
+    public char BusinessType { get; set; }
 }
