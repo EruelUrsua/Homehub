@@ -126,11 +126,21 @@ namespace HomeHub.App.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult RemoveProduct(string id)
+        public async Task<IActionResult> RemoveProduct(string id)
         {
-            var product =  _context.Products.Find(id);
+            var product = await _context.Products.FindAsync(id);
             _context.Set<Product>().Remove(product);
-             _context.SaveChanges();
+            await _context.SaveChangesAsync();
+            return RedirectToAction("ProductsServices");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RemoveService(string id)
+        {
+            var service = await _context.Services.FindAsync(id);
+            _context.Set<Service>().Remove(service);
+            await _context.SaveChangesAsync();
             return RedirectToAction("ProductsServices");
         }
     }
