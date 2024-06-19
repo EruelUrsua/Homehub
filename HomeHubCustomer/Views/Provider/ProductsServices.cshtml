@@ -25,7 +25,7 @@
                 <td>@product.Price.ToString("C")</td>
                 <td>
                     <a class="btn btn-primary" asp-action="UpdateProduct" asp-route-id="@product.ProductId">Update</a>
-                    <form asp-controller="Product" asp-action="RemoveProduct" method="post">
+                    <form asp-controller="Provider" asp-action="RemoveProduct" method="post">
                         <input type="hidden" name="id" value="@product.ProductId" />
                         <input type="submit" class="btn btn-danger" value="Delete" />
                     </form> 
@@ -41,7 +41,10 @@
                 <td>@service.Fee.ToString("C")</td>
                 <td>
                     <a class="btn btn-primary" asp-action="UpdateService" asp-route-id="@service.ServiceId">Update</a>
-                    <a class="btn btn-danger" href="#">Remove</a>
+                    <form asp-controller="Provider" asp-action="RemoveService" method="post">
+                        <input type="hidden" name="id" value="@service.ServiceId" />
+                        <input type="submit" class="btn btn-danger" value="Delete" />
+                    </form>
                 </td>
             </tr>
         }
