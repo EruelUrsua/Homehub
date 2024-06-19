@@ -18,4 +18,6 @@ public partial class Customer
     public string ContactNo { get; set; } = null!;
 
     public string Address { get; set; } = null!;
+
+    public ApplicationUser ApplicationUser { get; set; }
 }
