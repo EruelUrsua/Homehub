@@ -69,13 +69,13 @@ namespace HomeHub.App.Controllers
                     else
                     {
                         //return LocalRedirect("/Home/Index");
-                        if (user.Usertype == "Patient")
+                        if (user.Usertype == "Customer")
                         {
-                            return LocalRedirect("/Patient/Add");
+                            return LocalRedirect("/Customer/Add");
                         }
-                        else if (user.Usertype == "Medical")
+                        else if (user.Usertype == "Business")
                         {
-                            return LocalRedirect("/Schedul/Index");
+                            return LocalRedirect("/Provider/Index");
                         }
                     }
                 }
