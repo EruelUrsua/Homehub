@@ -19,5 +19,5 @@ public partial class Customer
 
     public string Address { get; set; } = null!;
 
-    public ApplicationUser ApplicationUser { get; set; }
+   // public ApplicationUser ApplicationUser { get; set; }
 }
