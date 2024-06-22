@@ -24,19 +24,12 @@
 
     <label asp-for="Usertype"></label>
     <select asp-for="Usertype" class="form-control">
-        <option value="Patient">Patient</option>
-        <option value="Medical">Medical</option>
+        <option value="Business">Business</option>
+        <option value="Customer">Customer</option>
     </select>
     <span asp-validation-for="Usertype" class="text-danger"></span>
     <br />
 
-    @*<label asp-for="Usertype"></label>
-    <label>Patient</label> 
-    @Html.RadioButtonFor(m => m.Usertype, "Patient")
-    <label>Medical</label>
-    @Html.RadioButtonFor(m => m.Usertype, "Medical")
-    <span asp-validation-for="Usertype" class="text-danger"></span>
-    <br />*@
 
     <a asp-controller="Home" asp-action="Index" class="btn btn-light">
         Back to Home Page
