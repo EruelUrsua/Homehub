@@ -8,36 +8,15 @@ using System.Diagnostics;
 
 namespace HomeHub.App.Controllers
 {
-    public class HomeController : Controller
+    public class CustomerController : Controller
     {
-        //private readonly ILogger<HomeController> _logger;
-        private readonly HomeHubContext context;
-        //private readonly IMapper mapper;
 
-        public HomeController(HomeHubContext context)
+        private readonly HomeHubContext context;
+
+        public CustomerController(HomeHubContext context)
         {
             this.context = context;
         }
-
-
-
-        //public HomeController(ILogger<HomeController> logger)
-        //{
-        //    _logger = logger;
-        //}
-
-
-        /*public async Task<IActionResult> OrderProduct()
-        {
-            var viewModel = new ProductProviderVM();
-            {
-                ProviderName = await _context.Businesses.ToListAsync(),
-                ProviderType = await _context.Businesses.ToListAsync()
-            }
-
-            return View(viewModel);
-        }*/
-
 
         public IActionResult Index()
         {
