@@ -2,38 +2,38 @@
 
 namespace HomeHub.App.Models
 {
-    public class RegisterViewModel
+    public class RegisterBViewModel
     {
-        public RegisterViewModel()
+        public RegisterBViewModel()
         {
-            Firstname = "";
-            Lastname = "";
             Email = "";
+            CompanyName = "";
             Address = "";
-            Birthday = "";
-            ValidIDno = "";
+            BusinessPermitNo = "";
+            Businesstype = "";
             Password = "";
-            Usertype = "Customer";
+            Usertype = "Business";
         }
 
-        [Required]
-        public string Firstname { get; set; }
-
-        [Required]
-        public string Lastname { get; set; }
 
         [Required]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
+
+        [Required]
+        public string CompanyName { get; set; }
+
+
         [Required]
         public string Address { get; set; }
 
-        [Required]
-        public string Birthday { get; set; }
 
         [Required]
-        public string ValidIDno { get; set; }
+        public string BusinessPermitNo { get; set; }
+
+        [Required]
+        public string Businesstype { get; set; }
 
 
         [Required]
@@ -46,4 +46,6 @@ namespace HomeHub.App.Models
         [Required]
         public string Usertype { get; set; }
     }
+
 }
+
