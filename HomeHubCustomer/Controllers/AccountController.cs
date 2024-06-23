@@ -57,7 +57,7 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> SignIn(SignInViewModel model, string? returnUrl)
         {
-            ApplicationUser user = await userManager.FindByNameAsync(model.Username);
+            ApplicationUser user = await userManager.FindByNameAsync(model.Email);
             if (user != null)
             {
                 var result = await signInManager.PasswordSignInAsync(user, model.Password, false, false);

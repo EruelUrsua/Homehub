@@ -6,19 +6,19 @@ namespace HomeHub.App.Models
     {
         public SignInViewModel()
         {
-            Username = "";
+            Email = "";
             Password = "";
             ReturnUrl = "";
 
         }
 
         [Required]
-        public string Username { get; set; }
+
+        public string Email { get; set; } = null!;
+
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
-
-
 
         public string ReturnUrl { get; set; }
 

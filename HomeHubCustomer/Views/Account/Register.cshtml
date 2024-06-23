@@ -4,31 +4,63 @@
     new SelectList(Enum.GetValues(typeof(Usertypes))),
     "Select Usertype")*@
 
-<h3>Create a new account</h3>
+<h3>Create an Account</h3>
 
 <form asp-controller="Account" asp-action="Register" method="post">
+
+      <label asp-for="Firstname"></label>
+    <input asp-for="Firstname" class="form-control"/>
+    <span asp-validation-for="Firstname" class="text-danger"></span>
+    <br />
+
+    
+      <label asp-for="Lastname"></label>
+    <input asp-for="Lastname" class="form-control"/>
+    <span asp-validation-for="Lastname" class="text-danger"></span>
+    <br />
+
     <label asp-for="Email"></label>
     <input asp-for="Email" class="form-control"/>
     <span asp-validation-for="Email" class="text-danger"></span>
     <br />
 
+
     <label asp-for="Password"></label>
     <input asp-for="Password" class="form-control" />
     <span asp-validation-for="Password" class="text-danger"></span>
+    <br 
+
+    
+      <label asp-for="Address"></label>
+    <input asp-for="Address" class="form-control"/>
+    <span asp-validation-for="Address" class="text-danger"></span>
     <br />
 
-    <label asp-for="ConfirmPassword"></label>
+    
+      <label asp-for="Birthday"></label>
+    <input asp-for="Birthday" class="form-control"/>
+    <span asp-validation-for="Birthday" class="text-danger"></span>
+    <br />
+
+    
+     <label asp-for="ValidIDno">Valid ID Number</label>
+    <input asp-for="ValidIDno" class="form-control"/>
+    <span asp-validation-for="ValidIDno" class="text-danger"></span>
+    <br />
+
+
+    @*<label asp-for="ConfirmPassword"></label>
     <input asp-for="ConfirmPassword" class="form-control" />
     <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-    <br />
+    <br />*@
 
-    <label asp-for="Usertype"></label>
+    @*<label asp-for="Usertype"></label>
     <select asp-for="Usertype" class="form-control">
         <option value="Business">Business</option>
         <option value="Customer">Customer</option>
     </select>
     <span asp-validation-for="Usertype" class="text-danger"></span>
-    <br />
+    <br />*@
 
 
     <a asp-controller="Home" asp-action="Index" class="btn btn-light">
