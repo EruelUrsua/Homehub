@@ -37,6 +37,14 @@ namespace HomeHub.App.Controllers
             return View(list);
         }
 
+        public IActionResult OrderListProduct()
+        {
+            //To only show only the chosen provider's products              ibahin to
+            // List<Business> list = context.Businesses.Where(x => x.BusinessName == '1').ToList();
+            //return View(list);
+            return View();
+        }
+
         public IActionResult UserProfile()
         {
             return View();

@@ -5,7 +5,7 @@ namespace HomeHub.DataModel;
 
 public partial class Business
 {
-    public string UserId { get; set; } = null!;
+    public int UserId { get; set; }
 
     public string Email { get; set; } = null!;
 
@@ -15,10 +15,11 @@ public partial class Business
 
     public string RepresentativeName { get; set; } = null!;
 
-    public int ContactNo { get; set; }
+    public string ContactNo { get; set; } = null!;
 
     public string OfferList { get; set; } = null!;
     public char BusinessType { get; set; }
+    public string CompanyAddress { get; set; } = null!;
 
-    public ApplicationUser ApplicationUser { get; set; }
+    //public ApplicationUser ApplicationUser { get; set; }
 }
