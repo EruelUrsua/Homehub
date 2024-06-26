@@ -7,11 +7,7 @@ namespace HomeHub.App.Models
         public RegisterViewModel()
         {
             Firstname = "";
-            Lastname = "";
             Email = "";
-            Address = "";
-            Birthday = "";
-            ValidIDno = "";
             Password = "";
             Usertype = "Customer";
         }
@@ -30,10 +26,14 @@ namespace HomeHub.App.Models
         public string Address { get; set; }
 
         [Required]
-        public string Birthday { get; set; }
+        public DateTime Birthday { get; set; }
 
         [Required]
         public string ValidIDno { get; set; }
+
+
+        [Required]
+        public int ContactNo { get; set; }
 
 
         [Required]

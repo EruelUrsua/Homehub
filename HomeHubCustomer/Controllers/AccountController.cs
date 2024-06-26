@@ -19,6 +19,16 @@ namespace HomeHub.App.Controllers
             this.context = context;
         }
 
+
+        public IActionResult Selection()
+        {
+
+            return View();
+          
+        }
+
+    
+
         public IActionResult Register()
         {
             return View(new RegisterViewModel());
@@ -27,6 +37,31 @@ namespace HomeHub.App.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                ApplicationUser user = new ApplicationUser();
+                user.UserName = model.Firstname;
+                user.Email = model.Email;
+                user.Usertype = model.Usertype;
+                await userManager.CreateAsync(user, model.Password);
+
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                return View(model);
+            }
+        }
+
+        public IActionResult RegisterB()
+        {
+            return View(new RegisterBViewModel());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RegisterB(RegisterBViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -43,6 +78,10 @@ namespace HomeHub.App.Controllers
                 return View(model);
             }
         }
+
+
+
+
 
         public IActionResult SignIn(string? returnUrl)
         {
