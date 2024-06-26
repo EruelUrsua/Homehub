@@ -37,12 +37,18 @@ namespace HomeHub.App.Controllers
             return View(list);
         }
 
-        public IActionResult OrderListProduct()
+        public IActionResult OrderListProduct(int id)
         {
-            //To only show only the chosen provider's products              ibahin to
-            // List<Business> list = context.Businesses.Where(x => x.BusinessName == '1').ToList();
-            //return View(list);
-            return View();
+            //To only show only the chosen provider's products
+            List<Product> list = context.Products.Where(x => x.ProviderID == id).ToList();
+            return View(list);
+        }
+
+        public IActionResult AvailListService(int id)
+        {
+            //To only show only the chosen provider's services
+            List<Service> list = context.Services.Where(x => x.ProviderID == id).ToList();
+            return View(list);
         }
 
         public IActionResult UserProfile()

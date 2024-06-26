@@ -14,4 +14,6 @@ public partial class Service
     public decimal Fee { get; set; }
 
     public bool Available { get; set; }
+
+    public int ProviderID { get; set; }
 }
