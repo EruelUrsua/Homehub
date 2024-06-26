@@ -1,0 +1,52 @@
+﻿@model List<Business>
+
+<body>
+<!-- Name and address of chosen provider-->
+
+
+<!-- Product List of chosen provider-->
+    <div class="card">
+        <form>
+            @if (Model.Count() < 1)
+            {
+                <div class="alert alert-info">
+                    No Products Found
+                </div>
+            }
+            else
+            {
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>Product Providers</tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.BusinessName</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+
+            <table>
+                <tr>
+                    <td>Date of Delivery</td>
+                    <td>Time of Delivery</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="ddeliv" name="ddeliv" />
+                    <td>
+                    <td><input type="text" id="tdeliv" name="tdeliv" /></td>
+                </tr>
+            </table>
+
+            <label for="requestatt">Request Attachment</label>
+            <input type="text" id="requestatt" name="requestatt" />
+        </form>
+
+    </div>
+
+
+</body>

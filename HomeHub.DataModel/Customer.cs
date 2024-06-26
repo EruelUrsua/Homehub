@@ -5,7 +5,7 @@ namespace HomeHub.DataModel;
 
 public partial class Customer
 {
-    public string UserId { get; set; } = null!;
+    public int UserId { get; set; }
 
     public string Email { get; set; } = null!;
 
@@ -19,5 +19,5 @@ public partial class Customer
 
     public string Address { get; set; } = null!;
 
-    public ApplicationUser ApplicationUser { get; set; }
+    //public ApplicationUser ApplicationUser { get; set; }
 }

@@ -77,10 +77,11 @@ public partial class HomeHubContext : DbContext
             entity.HasKey(e => e.UserId);
 
             entity.Property(e => e.UserId)
-                .HasMaxLength(50)
                 .HasColumnName("UserID");
             entity.Property(e => e.BusinessName).HasMaxLength(50);
             entity.Property(e => e.BusinessType).HasMaxLength(1);
+            entity.Property(e => e.CompanyAddress).HasMaxLength(100);
+            entity.Property(e => e.ContactNo).HasMaxLength(11);
             entity.Property(e => e.Email).HasMaxLength(20);
             entity.Property(e => e.OfferList).HasMaxLength(50);
             entity.Property(e => e.Password).HasMaxLength(20);
@@ -124,7 +125,6 @@ public partial class HomeHubContext : DbContext
             entity.HasKey(e => e.UserId);
 
             entity.Property(e => e.UserId)
-                .HasMaxLength(50)
                 .HasColumnName("UserID");
             entity.Property(e => e.Address).HasMaxLength(80);
             entity.Property(e => e.ContactNo).HasMaxLength(11);
