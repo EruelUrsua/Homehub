@@ -1,31 +1,29 @@
-﻿@model List<Product>
+﻿@model List<Service>
 
 <body>
-<!-- Name and address of chosen provider-->
-
-
-<!-- Product List of chosen provider-->
+    <!-- Name and address of chosen provider-->
+    <!-- Product List of chosen provider-->
     <div class="card">
         <form>
             @if (Model.Count() < 1)
             {
                 <div class="alert alert-info">
-                    No Products Found
+                    No Services Found
                 </div>
             }
             else
             {
                 <table class="table table-striped table-hover">
                     <thead>
-                        <th>Product</th>
+                        <th>Service</th>
                         <th>Price</th>
                     </thead>
                     <tbody>
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <td><input type="radio" id="chosen" name="chosen" value="@item.ProductItem">@item.ProductItem</td>
-                                <td><input type="hidden" id="price" name="price" value="@item.Price">@item.Price</td>
+                                <td><input type="radio" id="chosen" name="chosen" value="@item.ServiceItem">@item.ServiceItem</td>
+                                <td><input type="hidden" id="price" name="price" value="@item.Fee">@item.Fee</td>
                             </tr>
                         }
                     </tbody>
@@ -34,8 +32,8 @@
 
             <table>
                 <tr>
-                    <td>Date of Delivery</td>
-                    <td>Time of Delivery</td>
+                    <td>Date of Booking</td>
+                    <td>Time of Booking</td>
                 </tr>
                 <tr>
                     <td><input type="date" id="ddeliv" name="ddeliv" />
@@ -55,7 +53,7 @@
                 </select>
             </div>
 
-            <input type="submit" value="Order"/>
+            <input type="submit" value="Book" />
         </form>
     </div>
 

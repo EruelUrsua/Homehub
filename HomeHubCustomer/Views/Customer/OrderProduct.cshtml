@@ -23,8 +23,7 @@
         {
             <table class="table table-striped table-hover">
                 <thead>
-                    <tr>Service List</tr>
-                    <tr>Price</tr>
+                    <tr>Product Providers</tr>
                 </thead>
                 <tbody>
                     @foreach (var item in Model)
@@ -32,8 +31,8 @@
                         <tr>
                             <td>@item.BusinessName</td>
                             <td>
-                                <form asp-controller="Customer" asp-action="OrderListProduct" method="post">
-                                    <input type="hidden" name="id" value="@service.ServiceId" />
+                                <form asp-controller="Customer" asp-action="OrderListProduct">
+                                    <input type="hidden" name="id" value="@item.UserId" />
                                     <input type="submit" class="btn btn-success" value="Choose Provider" />
                                 </form>
                             </td>

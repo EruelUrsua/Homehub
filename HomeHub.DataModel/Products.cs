@@ -14,4 +14,6 @@ public partial class Product
     public decimal Price { get; set; }
 
     public string ContainerType { get; set; } = null!;
+
+    public int ProviderID { get; set; }
 }

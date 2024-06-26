@@ -118,6 +118,8 @@ public partial class HomeHubContext : DbContext
             entity.Property(e => e.UserId)
                 .HasMaxLength(50)
                 .HasColumnName("UserID");
+            entity.Property(e => e.ModeOfPayment)
+                .HasMaxLength(5);
         });
 
         modelBuilder.Entity<Customer>(entity =>

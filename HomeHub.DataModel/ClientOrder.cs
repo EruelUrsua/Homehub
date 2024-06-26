@@ -28,4 +28,5 @@ public partial class ClientOrder
     public string ReportId { get; set; } = null!;
 
     public int Quantity { get; set; }
+    public string ModeOfPayment { get; set; } = null!;
 }
