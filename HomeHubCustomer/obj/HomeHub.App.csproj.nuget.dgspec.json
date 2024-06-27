@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj": {}
+    "D:\\HomeHub\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj": {}
   },
   "projects": {
-    "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
+    "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
+        "projectUniqueName": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
         "projectName": "HomeHub.DataModel",
-        "projectPath": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\obj\\",
+        "projectPath": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
+        "packagesPath": "C:\\Users\\WIN11\\.nuget\\packages\\",
+        "outputPath": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WIN11\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +67,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -76,21 +77,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.321\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj": {
+    "D:\\HomeHub\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj",
+        "projectUniqueName": "D:\\HomeHub\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj",
         "projectName": "HomeHub.App",
-        "projectPath": "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\obj\\",
+        "projectPath": "D:\\HomeHub\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj",
+        "packagesPath": "C:\\Users\\WIN11\\.nuget\\packages\\",
+        "outputPath": "D:\\HomeHub\\Homehub\\HomeHubCustomer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WIN11\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,8 +105,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
-                "projectPath": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj"
+              "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
+                "projectPath": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj"
               }
             }
           }
@@ -151,7 +152,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -163,7 +165,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.321\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

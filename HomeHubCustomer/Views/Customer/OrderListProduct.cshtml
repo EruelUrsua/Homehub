@@ -6,7 +6,7 @@
 
 <!-- Product List of chosen provider-->
     <div class="card">
-        <form>
+        <form asp-controller="Customer" asp-action="ConfirmOrder" method="post">
             @if (Model.Count() < 1)
             {
                 <div class="alert alert-info">
@@ -53,6 +53,11 @@
                     <option value="Cash">Cash</option>
                     <option value="GCash">GCash</option>
                 </select>
+            </div>
+
+            <div>
+                Promo Code
+                <input type="text" id="promo" name="promo"/>
             </div>
 
             <input type="submit" value="Order"/>

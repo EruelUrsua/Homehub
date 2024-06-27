@@ -5,7 +5,7 @@ namespace HomeHub.DataModel;
 
 public partial class ClientOrder
 {
-    public string ClientId { get; set; } = null!;
+    public int ClientId { get; set; }
 
     public string BusinessId { get; set; } = null!;
 
@@ -21,12 +21,14 @@ public partial class ClientOrder
 
     public string PromoCode { get; set; } = null!;
 
-    public string UserId { get; set; } = null!;
+    public int UserId { get; set; }
 
-    public string RatingId { get; set; } = null!;
+    public int RatingId { get; set; }
 
-    public string ReportId { get; set; } = null!;
+    public int ReportId { get; set; } 
 
     public int Quantity { get; set; }
     public string ModeOfPayment { get; set; } = null!;
+
+
 }

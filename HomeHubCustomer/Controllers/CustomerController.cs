@@ -37,18 +37,73 @@ namespace HomeHub.App.Controllers
             return View(list);
         }
 
-        public IActionResult OrderListProduct(int id)
+        /*
+        [HttpGet]
+        public IActionResult OrderListProduct()
         {
-            //To only show only the chosen provider's products
-            List<Product> list = context.Products.Where(x => x.ProviderID == id).ToList();
-            return View(list);
+            return View(new OrderAvailViewModel());
         }
 
-        public IActionResult AvailListService(int id)
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> OrderListProduct(OrderAvailViewModel model, int id)
+        {
+            ClientOrder entity = new ClientOrder();
+            entity.BusinessId = id.ToString();
+            entity.OrderDate = DateTime.Parse(model.ddeliv);
+            entity.Schedule = DateTime.Parse(model.tdeliv);
+            entity.Fee = Int32.Parse(model.price);
+            entity.PromoCode = model.promo;
+            //temporary userID
+            entity.UserId = 1;
+            entity.Quantity = model.qty;
+            entity.ModeOfPayment = model.mode;
+            await context.AddAsync(entity);
+            await context.SaveChangesAsync();
+
+            return RedirectToAction("Index");
+        }
+        */
+            
+            public IActionResult OrderListProduct(int id)
+            {
+                //To only show only the chosen provider's products
+                List<Product> list = context.Products.Where(x => x.ProviderID == id).ToList();
+                return View(list);
+            } 
+
+            public IActionResult AvailListService(int id)
         {
             //To only show only the chosen provider's services
             List<Service> list = context.Services.Where(x => x.ProviderID == id).ToList();
             return View(list);
+        }
+
+        [HttpGet]
+        public IActionResult ConfirmOrder()
+        {
+            return View(new OrderAvailViewModel());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ConfirmOrder(OrderAvailViewModel model, int id)
+        {
+            ClientOrder entity = new ClientOrder();
+            entity.BusinessId = id.ToString();
+            entity.OrderDate = DateTime.Parse(model.ddeliv);  
+            entity.Schedule = DateTime.Parse(model.tdeliv);
+            entity.Fee = Convert.ToDecimal(model.price);
+            entity.PromoCode = model.promo;
+            //temporary userID
+            entity.UserId = 1;
+            entity.Quantity = model.qty;
+            entity.ModeOfPayment = model.mode;
+            await context.AddAsync(entity);
+            await context.SaveChangesAsync();
+
+            return RedirectToAction("Index");
         }
 
         public IActionResult UserProfile()
