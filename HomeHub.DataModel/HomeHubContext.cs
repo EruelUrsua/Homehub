@@ -40,15 +40,16 @@ public partial class HomeHubContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
         =>
-            /*
+            
             optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
                     "Database=HomeHub;Integrated Security=sspi;" +
-                    "TrustServerCertificate=true");*/
+                    "TrustServerCertificate=true");
 
-
+    /*
             optionsBuilder.UseSqlServer("Server=desktop-1nft1om;" +
           "Database=HomeHub; Integrated Security=SSPI;" +
           "TrustServerCertificate=true");
+    */
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -100,7 +101,6 @@ public partial class HomeHubContext : DbContext
             entity.HasKey(e => e.ClientId);
 
             entity.Property(e => e.ClientId)
-                .HasMaxLength(50)
                 .HasColumnName("ClientID");
             entity.Property(e => e.BusinessId)
                 .HasMaxLength(50)
@@ -114,16 +114,13 @@ public partial class HomeHubContext : DbContext
                 .HasColumnName("OrderedPS");
             entity.Property(e => e.PromoCode).HasMaxLength(50);
             entity.Property(e => e.RatingId)
-                .HasMaxLength(50)
                 .HasColumnName("RatingID");
             entity.Property(e => e.ReportId)
-                .HasMaxLength(50)
                 .HasColumnName("ReportID");
             entity.Property(e => e.Schedule)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
             entity.Property(e => e.UserId)
-                .HasMaxLength(50)
                 .HasColumnName("UserID");
             entity.Property(e => e.ModeOfPayment)
                 .HasMaxLength(5);
