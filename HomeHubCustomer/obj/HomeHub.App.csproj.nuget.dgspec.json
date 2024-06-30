@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HomeHub\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj": {}
+    "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHubCustomer\\HomeHub.App.csproj": {}
   },
   "projects": {
-    "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
+    "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
+        "projectUniqueName": "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
         "projectName": "HomeHub.DataModel",
-        "projectPath": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
-        "packagesPath": "C:\\Users\\WIN11\\.nuget\\packages\\",
-        "outputPath": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\obj\\",
+        "projectPath": "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
+        "packagesPath": "C:\\Users\\Charlize\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHub.DataModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\WIN11\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Charlize\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -77,21 +83,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\HomeHub\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj": {
+    "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHubCustomer\\HomeHub.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HomeHub\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj",
+        "projectUniqueName": "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHubCustomer\\HomeHub.App.csproj",
         "projectName": "HomeHub.App",
-        "projectPath": "D:\\HomeHub\\Homehub\\HomeHubCustomer\\HomeHub.App.csproj",
-        "packagesPath": "C:\\Users\\WIN11\\.nuget\\packages\\",
-        "outputPath": "D:\\HomeHub\\Homehub\\HomeHubCustomer\\obj\\",
+        "projectPath": "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHubCustomer\\HomeHub.App.csproj",
+        "packagesPath": "C:\\Users\\Charlize\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHubCustomer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\WIN11\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Charlize\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,14 +105,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
-                "projectPath": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj"
+              "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
+                "projectPath": "C:\\Users\\Charlize\\Documents\\HomeHub\\HomeHub.DataModel\\HomeHub.DataModel.csproj"
               }
             }
           }
@@ -115,6 +122,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -165,7 +177,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

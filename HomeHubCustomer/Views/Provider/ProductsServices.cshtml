@@ -13,6 +13,7 @@
             <th>Type</th>
             <th>Name</th>
             <th>Price</th>
+            <th>Availability</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -23,6 +24,7 @@
                 <td>Product</td>
                 <td>@product.ProductItem</td>
                 <td>@product.Price.ToString("C")</td>
+                <td></td>
                 <td>
                     <a class="btn btn-primary" asp-action="UpdateProduct" asp-route-id="@product.ProductId">Update</a>
                     <form asp-controller="Provider" asp-action="RemoveProduct" method="post">
@@ -39,6 +41,16 @@
                 <td>Service</td>
                 <td>@service.ServiceItem</td>
                 <td>@service.Fee.ToString("C")</td>
+                <td>
+                    @if (service.Available)
+                    {
+                        <span class="text-success">Available</span>
+                    }
+                    else
+                    {
+                        <span class="text-danger">Not Available</span>
+                    }
+                </td>
                 <td>
                     <a class="btn btn-primary" asp-action="UpdateService" asp-route-id="@service.ServiceId">Update</a>
                     <form asp-controller="Provider" asp-action="RemoveService" method="post">

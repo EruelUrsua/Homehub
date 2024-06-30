@@ -1,5 +1,6 @@
 ﻿using HomeHub.App.Models;
 using HomeHub.DataModel;
+using HomeHub.DataModel.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,10 +10,14 @@ namespace HomeHub.App.Controllers
     public class ProviderController : Controller
     {
         private readonly HomeHubContext _context;
+        private readonly IOrderService _orderService;
+        private readonly IRepository<ClientOrder> _orderRepository;
         
-        public ProviderController(HomeHubContext context)
+        public ProviderController(HomeHubContext context, IOrderService orderService, IRepository<ClientOrder> orderRepository)
         {
             _context = context;
+            _orderService = orderService;
+            _orderRepository = orderRepository;
         }
 
         public async Task<IActionResult> ProductsServices()
@@ -142,6 +147,47 @@ namespace HomeHub.App.Controllers
             _context.Set<Service>().Remove(service);
             await _context.SaveChangesAsync();
             return RedirectToAction("ProductsServices");
+        }
+
+        public async Task<IActionResult> Orders()
+        {
+            if (_orderRepository == null)
+            {
+                // Log or handle the fact that _orderRepository is not initialized
+                return RedirectToAction("Error");
+            }
+
+            var orders = await _orderRepository.GetAllAsync();
+            var viewModel = orders.Select(order => new ProviderAcceptOrderViewModel
+            {
+                ClientId = order.ClientId,
+                BusinessId = order.BusinessId ?? string.Empty,
+                OrderDate = order.OrderDate,
+                Schedule = order.Schedule,
+                OrderedPs = order.OrderedPs ?? string.Empty,
+                Fee = order.Fee,
+                Status = order.Status,
+                PromoCode = order.PromoCode ?? string.Empty,
+                UserId = order.UserId,
+                RatingId = order.RatingId,
+                ReportId = order.ReportId,
+                Quantity = order.Quantity,
+                ModeOfPayment = order.ModeOfPayment ?? string.Empty
+            }).ToList();
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AcceptOrder (int clientId)
+        {
+            var order = await _orderRepository.GetByIdAsync(clientId);
+
+            order.Status = true;
+            await _orderService.AcceptOrderAsync(order);
+
+            return RedirectToAction("Orders");
         }
     }
  }

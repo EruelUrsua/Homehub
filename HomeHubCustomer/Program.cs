@@ -1,5 +1,6 @@
 using HomeHub.App.Configuration;
 using HomeHub.DataModel;
+using HomeHub.DataModel.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,11 +8,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<HomeHubContext>(opts =>
 {
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("Ursua"));
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("Paw"));
 });
 
 //automapper
 builder.Services.AddAutoMapper(typeof(MapperConfig));
+
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IRepository<ClientOrder>, OrderRepository>();
 
 //Identity services
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
