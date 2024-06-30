@@ -1,0 +1,36 @@
+﻿@model List<HomeHub.DataModel.ClientOrder>
+
+<h1>Accept Orders</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Client</th>
+            <th>Business</th>
+            <th>Order Date</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.ClientId</td>
+                <td>@order.BusinessId</td>
+                <td>@order.OrderDate.ToShortDateString()</td>
+                <td>@order.Status</td>
+                <td>
+                    @if (order.Status != true)
+                    {
+                        <form asp-controller="Provider" asp-action="AcceptOrder" method="post">
+                            <input type="hidden" name="clientId" value="@order.ClientId" />
+                            <input type="hidden" name="businessId" value="@order.BusinessId" />
+                            <button type="submit" class="btn btn-primary">Accept</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
