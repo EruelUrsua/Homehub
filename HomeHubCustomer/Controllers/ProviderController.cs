@@ -1,6 +1,6 @@
 ﻿using HomeHub.App.Models;
 using HomeHub.DataModel;
-using HomeHub.DataModel.Repository;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,14 +10,10 @@ namespace HomeHub.App.Controllers
     public class ProviderController : Controller
     {
         private readonly HomeHubContext _context;
-        private readonly IOrderService _orderService;
-        private readonly IRepository<ClientOrder> _orderRepository;
         
-        public ProviderController(HomeHubContext context, IOrderService orderService, IRepository<ClientOrder> orderRepository)
+        public ProviderController(HomeHubContext context)
         {
             _context = context;
-            _orderService = orderService;
-            _orderRepository = orderRepository;
         }
 
         public async Task<IActionResult> ProductsServices()
@@ -151,43 +147,54 @@ namespace HomeHub.App.Controllers
 
         public async Task<IActionResult> Orders()
         {
-            if (_orderRepository == null)
-            {
-                // Log or handle the fact that _orderRepository is not initialized
-                return RedirectToAction("Error");
-            }
+            var orders = await _context.ClientOrders
+                .Select(o => new ProviderOrderViewModel
+                {
+                    ClientId = o.ClientId,
+                    BusinessId = o.BusinessId,
+                    OrderDate = o.OrderDate,
+                    Schedule = o.Schedule,
+                    OrderedPs = o.OrderedPs,
+                    Fee = o.Fee,
+                    Status = o.Status,
+                    PromoCode = o.PromoCode,
+                    UserId = o.UserId,
+                    RatingId = o.RatingId,
+                    ReportId = o.ReportId,
+                    Quantity = o.Quantity,
+                    ModeOfPayment = o.ModeOfPayment
+                }).ToListAsync();
 
-            var orders = await _orderRepository.GetAllAsync();
-            var viewModel = orders.Select(order => new ProviderAcceptOrderViewModel
-            {
-                ClientId = order.ClientId,
-                BusinessId = order.BusinessId ?? string.Empty,
-                OrderDate = order.OrderDate,
-                Schedule = order.Schedule,
-                OrderedPs = order.OrderedPs ?? string.Empty,
-                Fee = order.Fee,
-                Status = order.Status,
-                PromoCode = order.PromoCode ?? string.Empty,
-                UserId = order.UserId,
-                RatingId = order.RatingId,
-                ReportId = order.ReportId,
-                Quantity = order.Quantity,
-                ModeOfPayment = order.ModeOfPayment ?? string.Empty
-            }).ToList();
-
-            return View(viewModel);
+            return View(orders);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AcceptOrder (int clientId)
+        public async Task<IActionResult> AcceptOrder(int clientId)
         {
-            var order = await _orderRepository.GetByIdAsync(clientId);
+            var order = await _context.ClientOrders
+                .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == false);
 
-            order.Status = true;
-            await _orderService.AcceptOrderAsync(order);
+                order.Status = true;
+                await _context.SaveChangesAsync();
 
-            return RedirectToAction("Orders");
+            return RedirectToAction(nameof(Orders));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UndoAccept(int clientId)
+        {
+            var order = await _context.ClientOrders
+                .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == true);
+
+            if (order != null)
+            {
+                order.Status = false; 
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToAction(nameof(Orders));
         }
     }
  }

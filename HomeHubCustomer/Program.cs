@@ -1,6 +1,5 @@
 using HomeHub.App.Configuration;
 using HomeHub.DataModel;
-using HomeHub.DataModel.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,9 +12,6 @@ builder.Services.AddDbContext<HomeHubContext>(opts =>
 
 //automapper
 builder.Services.AddAutoMapper(typeof(MapperConfig));
-
-builder.Services.AddScoped<IOrderService, OrderService>();
-builder.Services.AddScoped<IRepository<ClientOrder>, OrderRepository>();
 
 //Identity services
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
