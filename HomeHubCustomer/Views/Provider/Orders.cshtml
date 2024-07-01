@@ -1,13 +1,16 @@
-﻿@model List<HomeHub.DataModel.ClientOrder>
+﻿@model IEnumerable<HomeHub.App.Models.ProviderOrderViewModel>
 
-<h1>Accept Orders</h1>
+<h2>Orders</h2>
 
-<table class="table table-striped">
+<table class="table">
     <thead>
         <tr>
-            <th>Client</th>
-            <th>Business</th>
+            <th>Client ID</th>
             <th>Order Date</th>
+            <th>Schedule</th>
+            <th>Ordered Items</th>
+            <th>Quantity</th>
+            <th>Fee</th>
             <th>Status</th>
             <th>Action</th>
         </tr>
@@ -17,16 +20,32 @@
         {
             <tr>
                 <td>@order.ClientId</td>
-                <td>@order.BusinessId</td>
                 <td>@order.OrderDate.ToShortDateString()</td>
-                <td>@order.Status</td>
+                <td>@order.Schedule.ToShortDateString()</td>
+                <td>@order.OrderedPs</td>
+                <td>@order.Quantity</td>
+                <td>@order.Fee</td>
                 <td>
-                    @if (order.Status != true)
+                    @if (order.Status)
                     {
-                        <form asp-controller="Provider" asp-action="AcceptOrder" method="post">
-                            <input type="hidden" name="clientId" value="@order.ClientId" />
-                            <input type="hidden" name="businessId" value="@order.BusinessId" />
-                            <button type="submit" class="btn btn-primary">Accept</button>
+                        <span class="text-success">Accepted</span>
+                    }
+                    else
+                    {
+                        <span class="text-warning">Pending</span>
+                    }
+                </td>
+                <td>
+                    @if (order.Status)
+                    {
+                        <form asp-action="UndoAccept" asp-route-clientId="@order.ClientId" method="post">
+                            <button type="submit" class="btn btn-sm btn-warning">Undo Accept</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <form asp-action="AcceptOrder" asp-route-clientId="@order.ClientId" method="post">
+                            <button type="submit" class="btn btn-sm btn-primary">Accept</button>
                         </form>
                     }
                 </td>
@@ -34,3 +53,4 @@
         }
     </tbody>
 </table>
+

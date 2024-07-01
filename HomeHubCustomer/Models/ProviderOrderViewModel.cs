@@ -1,6 +1,6 @@
 ﻿namespace HomeHub.App.Models
 {
-    public class ProviderAcceptOrderViewModel
+    public class ProviderOrderViewModel
     {
         public int ClientId { get; set; }
 
