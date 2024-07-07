@@ -178,6 +178,24 @@ namespace HomeHub.App.Controllers
                 order.Status = true;
                 await _context.SaveChangesAsync();
 
+            var orderLog = new OrdersLog
+            {
+                LogId = Guid.NewGuid().ToString(),
+                OrderId = order.ClientId.ToString(),
+                OrderDate = order.OrderDate,
+                FirstName = "order.FirstName",
+                LastName = "order.Lastname",
+                BusinessId = order.BusinessId,
+                Item = order.OrderedPs,
+                Qty = order.Quantity,
+                Date = DateTime.Now,
+                Status = "Accepted"
+            };
+
+            _context.OrdersLogs.Add(orderLog);
+
+            await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Orders));
         }
 
@@ -190,11 +208,41 @@ namespace HomeHub.App.Controllers
 
             if (order != null)
             {
-                order.Status = false; 
+                order.Status = false;
+
+                var orderLog = await _context.OrdersLogs
+                    .FirstOrDefaultAsync(log => log.OrderId == order.ClientId.ToString());
+
+                if (orderLog != null)
+                {
+                    _context.OrdersLogs.Remove(orderLog);
+                }
+
                 await _context.SaveChangesAsync();
             }
 
             return RedirectToAction(nameof(Orders));
         }
+
+        public async Task<IActionResult> OrdersLog()
+        {
+            var logs = await _context.OrdersLogs
+                .Select(log => new OrdersLogViewModel
+                {
+                    LogId = log.LogId,
+                    OrderId = log.OrderId,
+                    OrderDate = log.OrderDate,
+                    FirstName = log.FirstName,
+                    LastName = log.LastName,
+                    BusinessId = log.BusinessId,
+                    Item = log.Item,
+                    Qty = log.Qty,
+                    Date = log.Date,
+                    Status = log.Status
+                }).ToListAsync();
+
+            return View(logs);
+        }
+
     }
- }
+}
