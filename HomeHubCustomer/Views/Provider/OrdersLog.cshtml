@@ -1,0 +1,38 @@
+﻿@model IEnumerable<HomeHub.App.Models.OrdersLogViewModel>
+
+<h2>Orders Log</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Log ID</th>
+            <th>Order ID</th>
+            <th>Order Date</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Business ID</th>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var log in Model)
+        {
+            <tr>
+                <td>@log.LogId</td>
+                <td>@log.OrderId</td>
+                <td>@log.OrderDate.ToShortDateString()</td>
+                <td>@log.FirstName</td>
+                <td>@log.LastName</td>
+                <td>@log.BusinessId</td>
+                <td>@log.Item</td>
+                <td>@log.Qty</td>
+                <td>@log.Date.ToShortDateString()</td>
+                <td>@log.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
