@@ -108,6 +108,10 @@ namespace HomeHub.App.Controllers
             await context.AddAsync(entity);
             await context.SaveChangesAsync();
 
+
+            //Snackbar Message
+            TempData["SnackbarMessage"] = "Your order has been placed";
+
             return RedirectToAction("Index");
         }
 
@@ -116,9 +120,10 @@ namespace HomeHub.App.Controllers
             return View();
         }
 
-        public IActionResult Orders()
+        public IActionResult ViewOrders()
         {
-            return View();
+            List<OrdersLog> list = context.OrdersLogs.ToList();
+            return View(list);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

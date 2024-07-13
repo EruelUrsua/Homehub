@@ -40,7 +40,8 @@ public partial class HomeHubContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
         =>
-            
+
+        /*
             optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
 
     /*
@@ -48,6 +49,9 @@ public partial class HomeHubContext : DbContext
           "Database=HomeHub; Integrated Security=SSPI;" +
           "TrustServerCertificate=true");
     */
+        optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
+          "Database=HomeHub; Integrated Security=SSPI;" +
+          "TrustServerCertificate=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
