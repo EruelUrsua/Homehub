@@ -1,0 +1,36 @@
+﻿@model List<OrdersLog>
+
+<h2>Your Orders</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Provider</th>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!--Still needs ID of logged in user to filter-->
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.BusinessId</td>
+                <td>@item.Item</td>
+                <td>@item.Qty</td>
+                <td>@item.Date</td>
+                <td>@item.Status</td>
+                <td>
+                    <!--For Cancellation
+                    <form asp-controller="Customer" asp-action="OrderListProduct">
+                        <input type="hidden" name="id" value="" />
+                        <input type="submit" class="btn btn-success" value="Cancel Order" />
+                    </form> -->
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
