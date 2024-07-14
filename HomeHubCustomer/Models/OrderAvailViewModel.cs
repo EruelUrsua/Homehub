@@ -15,6 +15,7 @@ namespace HomeHub.App.Models
         public string? promo { get; set; }
         public int qty { get; set; }
 
-
+        //Logged in user's id
+        public string userID { get; set; }
     }
 }

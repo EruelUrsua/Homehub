@@ -1,12 +1,15 @@
 ﻿@model List<Business>
 
-<body style ="background-color:#F1F1F1">
-    <div class="text-center"><h1>Choose where to order</h1></div>
+<body style="background-color:#F1F1F1">
+    <div class="text-center">
+        <h1>@ViewData["Title"]</h1>
+    </div>
 
+    <!-- Sorting -->
     <select name="filter" id="filter">
-        <option value="byName">By name</option>
-        <option value="byPrice">By price</option>
-        <option value="byLoc">By location</option>
+        <option value="byName">By Name (A-Z)</option>
+        <option value="byPrice">By Price (Low to High)</option>
+        <option value="byLoc">By Location</option>
     </select>
 
     <div class="card">
@@ -20,9 +23,12 @@
         {
             <table class="table table-striped table-hover">
                 <thead>
-                    <tr>Sevice Providers</tr>
+                    <tr>
+                        <th>Service Providers</th>
+                        <th>Action</th>
+                    </tr>
                 </thead>
-                <tbody>
+                <tbody id="businessTableBody">
                     @foreach (var item in Model)
                     {
                         <tr>
@@ -39,4 +45,35 @@
             </table>
         }
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var selectElement = document.getElementById('filter');
+            var tbodyElement = document.getElementById('businessTableBody');
+            var rows = tbodyElement.getElementsByTagName('tr');
+
+            selectElement.addEventListener('change', function () {
+                var selectedOption = this.value;
+
+                var sortedRows = Array.from(rows).sort(function (rowA, rowB) {
+                    var textA = rowA.cells[0].textContent.trim();
+                    var textB = rowB.cells[0].textContent.trim();
+
+                    if (selectedOption === 'byName') {
+                        return textA.localeCompare(textB);
+                    }
+                });
+
+                // Clear existing rows
+                while (tbodyElement.firstChild) {
+                    tbodyElement.removeChild(tbodyElement.firstChild);
+                }
+
+                // Append sorted rows
+                sortedRows.forEach(function (sortedRow) {
+                    tbodyElement.appendChild(sortedRow);
+                });
+            });
+        });
+    </script>
 </body>
