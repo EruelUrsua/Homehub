@@ -43,16 +43,16 @@ public partial class HomeHubContext : DbContext
 
         /*
             optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
-        */
+        
    
             optionsBuilder.UseSqlServer("Server=desktop-1nft1om;" +
           "Database=HomeHub; Integrated Security=SSPI;" +
           "TrustServerCertificate=true");
-    
-       /* optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
+    */
+        optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
           "Database=HomeHub; Integrated Security=SSPI;" +
           "TrustServerCertificate=true");
-       */
+       
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Admin>(entity =>
