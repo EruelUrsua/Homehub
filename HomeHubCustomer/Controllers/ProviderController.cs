@@ -10,10 +10,15 @@ namespace HomeHub.App.Controllers
     public class ProviderController : Controller
     {
         private readonly HomeHubContext _context;
-        
+
         public ProviderController(HomeHubContext context)
         {
             _context = context;
+        }
+
+        public IActionResult ProviderHome()
+        {
+            return View();
         }
 
         public async Task<IActionResult> ProductsServices()
@@ -40,9 +45,9 @@ namespace HomeHub.App.Controllers
             Product entity = new Product();
             entity.ProductId = model.ProductId;
             entity.ProductItem = model.ProductItem;
-            entity.Qty = model.Qty; 
-            entity.Price = model.Price; 
-            entity.ContainerType = model.ContainerType; 
+            entity.Qty = model.Qty;
+            entity.Price = model.Price;
+            entity.ContainerType = model.ContainerType;
             await _context.AddAsync(entity);
             await _context.SaveChangesAsync();
 
@@ -175,8 +180,8 @@ namespace HomeHub.App.Controllers
             var order = await _context.ClientOrders
                 .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == false);
 
-                order.Status = true;
-                await _context.SaveChangesAsync();
+            order.Status = true;
+            await _context.SaveChangesAsync();
 
             var orderLog = new OrdersLog
             {
@@ -244,5 +249,31 @@ namespace HomeHub.App.Controllers
             return View(logs);
         }
 
+        public IActionResult CreatePromo()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreatePromo(PromoViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                Promo entity = new Promo();
+                entity.PromoName = model.PromoName;
+                entity.PromoCode = model.PromoCode;
+                entity.PromoStart = model.PromoStart;
+                entity.PromoEnd = model.PromoEnd;
+                entity.BusinessName = model.BusinessName;
+                entity.Discount = model.Discount;
+
+                _context.Promos.Add(entity);
+                _context.SaveChanges();
+
+                return RedirectToAction("ProviderHome", "Provider");
+            }
+
+            return View(model);
+        }
     }
 }

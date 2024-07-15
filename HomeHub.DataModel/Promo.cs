@@ -5,7 +5,7 @@ namespace HomeHub.DataModel;
 
 public partial class Promo
 {
-    public string PromoId { get; set; } = null!;
+    public int PromoId { get; set; }
 
     public string PromoName { get; set; } = null!;
 
@@ -16,4 +16,5 @@ public partial class Promo
     public DateTime PromoEnd { get; set; }
 
     public string BusinessName { get; set; } = null!;
+    public decimal Discount { get; set; }
 }
