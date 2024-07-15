@@ -71,6 +71,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcQWRkU2VydmljZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/HomeHub/Homehub/HomeHubCustomer/Views/Provider/CreatePromo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcQ3JlYXRlUHJvbW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/HomeHub/Homehub/HomeHubCustomer/Views/Provider/Orders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcT3JkZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -81,6 +85,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/HomeHub/Homehub/HomeHubCustomer/Views/Provider/ProductsServices.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcUHJvZHVjdHNTZXJ2aWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HomeHub/Homehub/HomeHubCustomer/Views/Provider/ProviderHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcUHJvdmlkZXJIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/HomeHub/Homehub/HomeHubCustomer/Views/Provider/UpdateProduct.cshtml]

@@ -175,9 +175,7 @@ public partial class HomeHubContext : DbContext
 
         modelBuilder.Entity<Promo>(entity =>
         {
-            entity.Property(e => e.PromoId)
-                .HasMaxLength(50)
-                .HasColumnName("PromoID");
+            entity.Property(e => e.PromoId).HasColumnName("PromoID");
             entity.Property(e => e.BusinessName).HasMaxLength(50);
             entity.Property(e => e.PromoCode).HasMaxLength(10);
             entity.Property(e => e.PromoEnd).HasColumnType("date");

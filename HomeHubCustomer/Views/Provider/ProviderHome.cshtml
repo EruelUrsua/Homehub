@@ -1,0 +1,65 @@
+﻿<style>
+    .html {
+        font-family: Arial
+    }
+
+    .row {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .card {
+        background-color: #203B81;
+        border-radius: 30px;
+        width: 300;
+        height: 270px;
+        padding-top: 42px;
+        padding-left: 55px;
+        margin-top: 20px;
+    }
+
+    .card1 {
+        background-color: #203B81;
+        border-radius: 30px;
+        width: 300;
+        height: 300px;
+        padding: 20px;
+    }
+
+    .button {
+        width: 30px;
+        height: 20px;
+        background-color: #F1F1F1;
+        color: #203B81;
+        font-family: Arial;
+        border-color: #F1F1F1;
+    }
+
+    button {
+        background-color: #F1F1F1;
+        color: #203B81;
+        font-family: Arial;
+        font-size: 20px;
+        border-color: #F1F1F1;
+        border-radius: 30px;
+        height: 80px;
+        width: 300px;
+    }
+</style>
+
+<body style="background-color:#F1F1F1">
+
+    <div class="card">
+        <div class="container">
+            <h4 style="color:#F1F1F1">What do you want to do?</h4>
+            <div class="row" style="color:#203B81; border-color:#F1F1F1">
+                <div class="col-sm-4"><a class="nav-link" asp-action="ProductServices"><button>Your Products/Services</button></a></div>
+                <div class="col-sm-4"><a class="nav-link" asp-action="OrderLog"><button>View Order Logs</button></a></div>
+                <div class="col-sm-4"><a class="nav-link" asp-action="CreatePromo"><button>Post a Promo</button></a></div>
+            </div>
+        </div>
+    </div>
+
+
+    
+</body>
