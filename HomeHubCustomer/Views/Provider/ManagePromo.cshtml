@@ -1,0 +1,40 @@
+﻿@model List<Promo>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Promo Name</th>
+            <th>Promo Code</th>
+            <th>Promo Start</th>
+            <th>Promo End</th>
+            <th>Business Name</th>
+            <th>Discount</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.PromoName</td>
+                <td>@item.PromoCode</td>
+                <td>@item.PromoStart.ToShortDateString()</td>
+                <td>@item.PromoEnd.ToShortDateString()</td>
+                <td>@item.BusinessName</td>
+                <td>@item.Discount</td>
+                <td>
+                    <form asp-controller="Provider" asp-action="EditPromo">
+                        <input type="hidden" name="id" value="@item.PromoId" />
+                        <input type="submit" class="btn btn-success" value="Edit Promo" />
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <form asp-controller="Provider" asp-action="CreatePromo">
+        <input type="submit" class="btn btn-success" value="Create New Promo" />
+    </form>
+</p>

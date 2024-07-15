@@ -3,6 +3,7 @@ using HomeHub.DataModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using System;
 
 namespace HomeHub.App.Controllers
@@ -249,6 +250,13 @@ namespace HomeHub.App.Controllers
             return View(logs);
         }
 
+        public IActionResult ManagePromo()
+        {
+            //List<Promo> list = _context.Products.Where(x => x.ProviderID == id).ToList();
+            List<Promo> list = _context.Promos.ToList();
+            return View(list);
+        }
+
         public IActionResult CreatePromo()
         {
             return View();
@@ -275,5 +283,43 @@ namespace HomeHub.App.Controllers
 
             return View(model);
         }
+
+
+        
+        public async Task<IActionResult> EditPromo(int id)
+        {
+            var promo = await _context.Promos.FindAsync(id);
+
+            var PromoViewModel = new PromoViewModel
+            {
+                PromoID = promo.PromoId,
+                PromoName = promo.PromoName,
+                PromoCode = promo.PromoCode,
+                PromoStart = promo.PromoStart,
+                PromoEnd = promo.PromoEnd,
+                BusinessName = promo.BusinessName,
+                Discount = promo.Discount
+            };
+
+            if (promo == null)
+            {
+                return RedirectToAction("ManagePromo");
+            }
+
+            return View(promo);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditPromo(Promo PromoViewModel)
+        {
+            _context.Set<Promo>().Update(PromoViewModel);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("ManagePromo");
+        }
+
+        
+
     }
+    
 }
