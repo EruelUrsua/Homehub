@@ -6,7 +6,6 @@ namespace HomeHub.App.Models
     {
         public RegisterViewModel()
         {
-            Firstname = "";
             Email = "";
             Password = "";
             Usertype = "Customer";
