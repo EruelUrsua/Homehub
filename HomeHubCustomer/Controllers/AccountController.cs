@@ -41,12 +41,12 @@ namespace HomeHub.App.Controllers
             if (ModelState.IsValid)
             {
                 ApplicationUser user = new ApplicationUser();
-                user.UserName = model.Firstname;
+                //user.UserName = model.Firstname;
                 user.Email = model.Email;
                 user.Usertype = model.Usertype;
                 await userManager.CreateAsync(user, model.Password);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("SignIn", "Account");
             }
             else
             {
@@ -71,7 +71,7 @@ namespace HomeHub.App.Controllers
                 user.Usertype = model.Usertype;
                 await userManager.CreateAsync(user, model.Password);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("SignIn", "Account");
             }
             else
             {
