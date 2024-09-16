@@ -21,5 +21,5 @@ public partial class Business
     public char BusinessType { get; set; }
     public string CompanyAddress { get; set; } = null!;
 
-    public ApplicationUser ApplicationUser { get; set; }
+    //public ApplicationUser ApplicationUser { get; set; }
 }

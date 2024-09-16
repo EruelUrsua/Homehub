@@ -65,11 +65,13 @@ app.MapControllerRoute(
     pattern: "{controller=Provider}/{action=ProductsServices}/{id?}");
 
 
-    app.MapControllerRoute(
+
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Customer}/{action=Index}/{id?}");
 
 
+/*
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Account}/{action=SignIn}/{id?}");
