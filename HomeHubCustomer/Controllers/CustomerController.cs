@@ -52,6 +52,11 @@ namespace HomeHub.App.Controllers
             return View(list);
         }
 
+        public IActionResult OrderSummary()
+        {
+            return View();
+        }
+
         [HttpGet]
         public IActionResult ConfirmOrder()
         {

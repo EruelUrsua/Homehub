@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<HomeHubContext>(opts =>
 {
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("Ursua"));
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("DESKTOP-JJNUTRM\\MSSQL2022;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true"));
 });
 
 //automapper
