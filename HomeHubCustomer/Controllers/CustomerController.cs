@@ -52,6 +52,12 @@ namespace HomeHub.App.Controllers
             return View(list);
         }
 
+        /*
+        public IActionResult OrderSummary()
+        {
+            return View();
+        }
+
         [HttpGet]
         public IActionResult ConfirmOrder()
         {
@@ -86,6 +92,43 @@ namespace HomeHub.App.Controllers
             TempData["SnackbarMessage"] = "Your order has been placed";
 
             return RedirectToAction("Index");
+        }
+        */
+
+        [HttpGet]
+        public IActionResult ConfirmOrder()
+        {
+            return View(new OrderAvailViewModel());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ConfirmOrder(OrderAvailViewModel model, int id)
+        {
+            ClientOrder entity = new ClientOrder();
+            //business not yet passed
+            entity.BusinessId = id.ToString();
+            entity.OrderDate = DateTime.Parse(model.ddeliv);
+            entity.Schedule = DateTime.Parse(model.tdeliv);
+            entity.OrderedPs = model.chosen;
+            entity.Fee = Convert.ToDecimal(model.price);
+            entity.PromoCode = model.promo;
+            //temporary userID
+            entity.UserId = 3;
+            //entity.UserId = int.Parse(model.userID);
+            //trying to figure out
+            //entity.RatingId = 1 + entity.ClientId;
+            //entity.ReportId = 1 + entity.ClientId;
+            entity.Quantity = model.qty;
+            entity.ModeOfPayment = model.mode;
+            await context.AddAsync(entity);
+            await context.SaveChangesAsync();
+
+
+            //Snackbar Message
+            TempData["SnackbarMessage"] = "Your order has been placed";
+
+            return View("OrderSummary", model);
         }
 
         public IActionResult UserProfile()
