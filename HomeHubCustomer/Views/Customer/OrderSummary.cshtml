@@ -1,7 +1,8 @@
 ﻿@model OrderAvailViewModel
 
-<form asp-controller="Customer" asp-action="ConfirmOrder" method="post">
-    <h3>Order Details</h3>
+    <h3>Order Confirmed</h3>
+
+    <p>Your order has been successfully placed. Here are the details:</p>
 
     <table>
         <thead>
@@ -28,5 +29,4 @@
         </tbody>
     </table>
 
-    <input type="submit" value="Confirm" />
-</form>
+    <a class="nav-link" asp-action="Index"><button>Back To Home</button></a>
