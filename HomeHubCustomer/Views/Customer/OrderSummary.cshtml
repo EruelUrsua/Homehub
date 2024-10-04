@@ -13,8 +13,10 @@
             <th>Time of Delivery</th>
             <th>Request</th>
             <th>Promo Code</th>
+            <th>Discount</th>
+            <th>Total Price</th>
             <!--<th>User ID</th>-->
-        </thead>
+            </thead>
         <tbody>
             <tr>
                 <td>@Model.qty</td>
@@ -24,6 +26,8 @@
                 <td>@Model.tdeliv</td>
                 <td>@Model.requestatt</td>
                 <td>@Model.promo</td>
+                <td>@Model.discount</td>
+                <td>@Model.totalPrice.ToString("F2")</td>
                 <!--<td>@Model.userID</td>-->
             </tr>
         </tbody>

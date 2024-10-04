@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Xml;
 
 namespace HomeHub.App.Controllers
 {
@@ -52,12 +53,6 @@ namespace HomeHub.App.Controllers
             return View(list);
         }
 
-        /*
-        public IActionResult OrderSummary()
-        {
-            return View();
-        }
-
         [HttpGet]
         public IActionResult ConfirmOrder()
         {
@@ -68,53 +63,34 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ConfirmOrder(OrderAvailViewModel model, int id)
         {
-            ClientOrder entity = new ClientOrder();
-            //business not yet passed
-            entity.BusinessId = id.ToString();
-            entity.OrderDate = DateTime.Parse(model.ddeliv);  
-            entity.Schedule = DateTime.Parse(model.tdeliv);
-            entity.OrderedPs = model.chosen;
-            entity.Fee = Convert.ToDecimal(model.price);
-            entity.PromoCode = model.promo;
-                //temporary userID
-            entity.UserId = 3;
-            //entity.UserId = int.Parse(model.userID);
-                //trying to figure out
-            //entity.RatingId = 1 + entity.ClientId;
-            //entity.ReportId = 1 + entity.ClientId;
-            entity.Quantity = model.qty;
-            entity.ModeOfPayment = model.mode;
-            await context.AddAsync(entity);
-            await context.SaveChangesAsync();
+            if (model.qty == 0)
+            {
+                model.qty = 1;
+            }
 
+            decimal TotalPrice = Convert.ToDecimal(model.price) * model.qty;
+            decimal Discount = 0;
 
-            //Snackbar Message
-            TempData["SnackbarMessage"] = "Your order has been placed";
+            if (!string.IsNullOrWhiteSpace(model.promo))
+            {
+                var promo = GetPromo(model.promo);
+                if (promo != null)
+                {
+                    TotalPrice -= TotalPrice * promo.Discount;
+                    Discount = promo.Discount;
+                }
+            }
 
-            return RedirectToAction("Index");
-        }
-        */
-
-        [HttpGet]
-        public IActionResult ConfirmOrder()
-        {
-            return View(new OrderAvailViewModel());
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ConfirmOrder(OrderAvailViewModel model, int id)
-        {
             ClientOrder entity = new ClientOrder();
             //business not yet passed
             entity.BusinessId = id.ToString();
             entity.OrderDate = DateTime.Parse(model.ddeliv);
             entity.Schedule = DateTime.Parse(model.tdeliv);
             entity.OrderedPs = model.chosen;
-            entity.Fee = Convert.ToDecimal(model.price);
+            //entity.Fee = Convert.ToDecimal(model.price);  uncomment if fee below does not work
+            entity.Fee = TotalPrice;
             entity.PromoCode = model.promo;
-            //temporary userID
-            entity.UserId = 3;
+            entity.UserId = 3; //temporary userID
             //entity.UserId = int.Parse(model.userID);
             //trying to figure out
             //entity.RatingId = 1 + entity.ClientId;
@@ -125,10 +101,19 @@ namespace HomeHub.App.Controllers
             await context.SaveChangesAsync();
 
 
+            model.discount = Discount;
+            model.totalPrice = TotalPrice;
+
             //Snackbar Message
             TempData["SnackbarMessage"] = "Your order has been placed";
 
             return View("OrderSummary", model);
+        }
+
+        //For discounts
+        private Promo GetPromo(string code)
+        {
+            return context.Promos.FirstOrDefault(p => p.PromoCode == code && p.PromoEnd > DateTime.Now);
         }
 
         public IActionResult UserProfile()
