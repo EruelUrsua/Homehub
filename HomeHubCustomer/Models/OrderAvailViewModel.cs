@@ -14,6 +14,8 @@ namespace HomeHub.App.Models
         public string mode { get; set; }
         public string? promo { get; set; }
         public int qty { get; set; }
+        public decimal discount { get; set; }
+        public decimal totalPrice { get; set; }
 
         //Logged in user's id
         public string userID { get; set; }
