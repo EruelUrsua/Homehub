@@ -741,7 +741,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.20"
         },
         "runtime": {
-          "HomeHub.DataModel.dll": {}
+          "HomeHub.DataModel.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

@@ -26,15 +26,32 @@ namespace HomeHub.App.Controllers
 
         public IActionResult OrderProduct()
         {
+            var categories = context.Businesses
+                .Select(b => b.OfferList) 
+                .Distinct()
+                .ToList();
+
+            ViewBag.Categories = categories;
+
             //To only show Product Providers
             List<Business> list = context.Businesses.Where(x => x.BusinessType == '0').ToList();
+            ViewBag.Businesses = list; // Store businesses in ViewBag
             return View(list);
         }
 
         public IActionResult AvailService()
         {
+            // Get the unique categories from the OfferList in the Businesses table
+            var categories = context.Businesses
+                .Select(b => b.OfferList) 
+                .Distinct()
+                .ToList();
+
+            ViewBag.Categories = categories;    
+
             //To only show Service Providers
             List<Business> list = context.Businesses.Where(x => x.BusinessType == '1').ToList();
+            ViewBag.Businesses = list; // Store businesses in ViewBag
             return View(list);
         }
 

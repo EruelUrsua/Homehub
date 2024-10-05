@@ -1,22 +1,37 @@
-﻿@model List<Business>
+﻿@{
+    ViewData["Title"] = "Available Services";
+}
 
 <body style="background-color:#F1F1F1">
     <div class="text-center">
         <h1>@ViewData["Title"]</h1>
     </div>
 
-    <!-- Sorting -->
-    <select name="filter" id="filter">
-        <option value="byName">By Name (A-Z)</option>
-        <option value="byPrice">By Price (Low to High)</option>
-        <option value="byLoc">By Location</option>
-    </select>
+    <div class="filter-section">
+        <!-- Category Filtering -->
+        <label for="categoryFilter">Filter by Category:</label>
+        <select name="category" id="categoryFilter">
+            <option value="All">All</option>
+            @foreach (var category in ViewBag.Categories)
+            {
+                <option value="@category">@category</option>
+            }
+        </select>
+
+        <!-- Sorting -->
+        <label for="filter">Sort By:</label>
+        <select name="filter" id="filter">
+            <option value="byName">By Name (A-Z)</option>
+            <option value="byPrice">By Price (Low to High)</option>
+            <option value="byLoc">By Location</option>
+        </select>
+    </div>
 
     <div class="card">
-        @if (Model.Count() < 1)
+        @if (ViewBag.Businesses.Count < 1)
         {
             <div class="alert alert-info">
-                No Businesses Found
+                No Service Providers Found
             </div>
         }
         else
@@ -29,9 +44,9 @@
                     </tr>
                 </thead>
                 <tbody id="businessTableBody">
-                    @foreach (var item in Model)
+                    @foreach (var item in ViewBag.Businesses)
                     {
-                        <tr>
+                        <tr data-category="@item.OfferList">
                             <td>@item.BusinessName</td>
                             <td>
                                 <form asp-controller="Customer" asp-action="AvailListService">
@@ -72,6 +87,21 @@
                 // Append sorted rows
                 sortedRows.forEach(function (sortedRow) {
                     tbodyElement.appendChild(sortedRow);
+                });
+            });
+
+            // Category Filtering
+            document.getElementById('categoryFilter').addEventListener('change', function () {
+                var selectedCategory = this.value;
+
+                // Show all or filter based on selected category
+                Array.from(rows).forEach(row => {
+                    const category = row.getAttribute('data-category');
+                    if (selectedCategory === 'All' || category === selectedCategory) {
+                        row.style.display = ''; // Show the row
+                    } else {
+                        row.style.display = 'none'; // Hide the row
+                    }
                 });
             });
         });
