@@ -27,6 +27,7 @@ namespace HomeHub.App.Controllers
         public IActionResult OrderProduct()
         {
             var categories = context.Businesses
+                .Where(b => b.BusinessType == '0')
                 .Select(b => b.OfferList) 
                 .Distinct()
                 .ToList();
@@ -43,6 +44,7 @@ namespace HomeHub.App.Controllers
         {
             // Get the unique categories from the OfferList in the Businesses table
             var categories = context.Businesses
+                .Where(b => b.BusinessType == '1')
                 .Select(b => b.OfferList) 
                 .Distinct()
                 .ToList();
