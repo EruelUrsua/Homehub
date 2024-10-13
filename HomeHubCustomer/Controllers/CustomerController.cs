@@ -151,5 +151,36 @@ namespace HomeHub.App.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public ActionResult InitiateRefund()
+        {
+            return View(new RefundViewModel());
+        }
+
+        [HttpPost]
+        public ActionResult Refund(RefundViewModel model)
+        {
+            // Find the order using the unique fields
+            var order = context.ClientOrders
+                .FirstOrDefault(o => o.ClientId == model.ClientID &&
+                                     o.BusinessId == model.BusinessID &&
+                                     o.OrderDate == model.OrderDate &&
+                                     o.UserId == model.UserID);
+
+            if (order == null)
+            {
+                // Handle case where the order does not exist
+                ModelState.AddModelError("", "Order not found.");
+                return View("InitiateRefund", model);
+            }
+
+            // Process the refund
+            order.Status = false; // Assuming false means refunded
+            context.SaveChanges();
+
+            // Redirect or show a confirmation message
+            return RedirectToAction("Index"); // Redirect to an appropriate view
+        }
+
     }
 }
