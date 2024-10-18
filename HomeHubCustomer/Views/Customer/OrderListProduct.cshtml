@@ -27,10 +27,11 @@
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <td><input type="radio" id="chosen" name="chosen" value="@item.ProductItem">@item.ProductItem</td>
-                                <td><input type="hidden" id="price" name="price" value="@item.Price">@item.Price</td>
+                                <td><input type="radio" id="chosen" name="chosen" value="@item.ProductItem" onclick="setPrice('@item.Price')">@item.ProductItem</td>
+                                <td>@item.Price</td>
                             </tr>
                         }
+                        <input type="hidden" id="price" name="price" value="">
                     </tbody>
                 </table>
             }
@@ -73,6 +74,12 @@
         </form>
 
     </div>
+
+    <script>
+        function setPrice(Fee) {
+            document.getElementById('price').value = Fee;
+        }
+    </script>
 
 
 </body>
