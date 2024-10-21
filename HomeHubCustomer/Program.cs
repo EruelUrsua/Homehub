@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<HomeHubContext>(opts =>
 {
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("Pascual"));
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("Ursua"));
 });
 
 //automapper

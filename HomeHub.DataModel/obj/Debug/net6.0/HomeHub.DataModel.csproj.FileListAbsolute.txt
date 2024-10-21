@@ -85,3 +85,4 @@ C:\Users\Charlize\Documents\HomeHub\Homehub\HomeHub.DataModel\obj\Debug\net6.0\r
 C:\Users\Charlize\Documents\HomeHub\Homehub\HomeHub.DataModel\obj\Debug\net6.0\HomeHub.DataModel.pdb
 C:\Users\Charlize\Documents\HomeHub\Homehub\HomeHub.DataModel\obj\Debug\net6.0\HomeHub.DataModel.genruntimeconfig.cache
 C:\Users\Charlize\Documents\HomeHub\Homehub\HomeHub.DataModel\obj\Debug\net6.0\ref\HomeHub.DataModel.dll
+D:\Notes\C#\Homehub\HomeHub.DataModel\obj\Debug\net6.0\HomeHub.DataModel.sourcelink.json
