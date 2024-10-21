@@ -5,136 +5,139 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HomeHub.App
 build_property.RootNamespace = HomeHub.App
-build_property.ProjectDir = D:\HomeHub\Homehub\HomeHubCustomer\
+build_property.ProjectDir = D:\Notes\C#\Homehub\HomeHubCustomer\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\HomeHub\Homehub\HomeHubCustomer
+build_property.MSBuildProjectDirectory = D:\Notes\C#\Homehub\HomeHubCustomer
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Account/Register.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Account/RegisterB.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Account/RegisterB.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RlckIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Account/Selection.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Account/Selection.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTZWxlY3Rpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Account/SignIn.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Account/SignIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduSW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Customer/AvailListService.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Customer/AvailListService.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQXZhaWxMaXN0U2VydmljZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Customer/AvailService.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Customer/AvailService.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQXZhaWxTZXJ2aWNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Customer/ConfirmOrder.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Customer/ConfirmOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ29uZmlybU9yZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Customer/Index.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Customer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Customer/InitiateRefund.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Customer/InitiateRefund.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW5pdGlhdGVSZWZ1bmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Customer/OrderListProduct.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Customer/OrderListProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcT3JkZXJMaXN0UHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Customer/OrderProduct.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Customer/OrderProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcT3JkZXJQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Customer/OrderSummary.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Customer/OrderSummary.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcT3JkZXJTdW1tYXJ5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Customer/UserProfile.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Customer/UserProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcVXNlclByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Customer/ViewOrders.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Customer/ViewOrders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcVmlld09yZGVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Provider/AddProduct.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Provider/AddProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcQWRkUHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Provider/AddService.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Provider/AddService.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcQWRkU2VydmljZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Provider/CreatePromo.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Provider/CreatePromo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcQ3JlYXRlUHJvbW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Provider/EditPromo.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Provider/EditPromo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcRWRpdFByb21vLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Provider/ManagePromo.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Provider/ManagePromo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcTWFuYWdlUHJvbW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Provider/Orders.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Provider/Orders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcT3JkZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Provider/OrdersLog.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Provider/OrdersLog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcT3JkZXJzTG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Provider/ProductsServices.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Provider/ProductsServices.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcUHJvZHVjdHNTZXJ2aWNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Provider/ProviderHome.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Provider/ProviderHome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcUHJvdmlkZXJIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Provider/UpdateProduct.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Provider/UpdateProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcVXBkYXRlUHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Provider/UpdateService.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Provider/UpdateService.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcVXBkYXRlU2VydmljZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Shared/Error.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Shared/_LoginPartial.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/_ViewImports.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/_ViewStart.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HomeHub/Homehub/HomeHubCustomer/Views/Shared/_Layout.cshtml]
+[D:/Notes/C\#/Homehub/HomeHubCustomer/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-n2glndjcuc
