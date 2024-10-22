@@ -1,0 +1,53 @@
+﻿@model List<ClientOrder>
+
+<style>
+    .html {
+        font-family: Arial
+    }
+
+    .card {
+        background-color: #203B81;
+        color: #F1F1F1;
+        border-radius: 30px;
+        width: 300;
+        height: 270px;
+        padding-top: 42px;
+        padding-left: 55px;
+        margin-top: 20px;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Rate Your Order</h1>
+</div>
+
+<div class="card">
+    <form asp-controller="Customer" asp-action="SubmitRating">
+        <!-- Provider Name -->
+  
+        <!--Order List-->
+        <table>
+            <tr>Order Summary</tr>
+        </table>
+
+        <label for="score">Rating</label>
+        <select id="score" name="score" class="form-control">
+            <option value="1">&#9733; 1 Star</option>
+            <option value="2">&#9733;&#9733; 2 Stars</option>
+            <option value="3">&#9733;&#9733;&#9733; 3 Stars</option>
+            <option value="4">&#9733;&#9733;&#9733;&#9733; 4 Stars</option>
+            <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733; 5 Stars</option>
+         </select>
+
+         <label>Comments</label>
+         <input type="text" id="comments" class="form-control"/>
+
+         <!--Date-->
+         <input type="hidden" id="date" name="date" value="" />
+
+        <!-- To pass logged in user's' id
+        <input type="hidden" id="userID" value="@User.Identity.Name" />-->
+
+        <input type="submit" value="Submit Rating" />
+    </form>
+</div>

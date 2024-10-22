@@ -182,5 +182,21 @@ namespace HomeHub.App.Controllers
             return RedirectToAction("Index"); // Redirect to an appropriate view
         }
 
+        public IActionResult RateProvider()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SubmitRating()
+        {
+            return RedirectToAction("RatingConfirmation");
+        }
+
+        public IActionResult RatingConfirmation()
+        {
+            return View();
+        }
+
     }
 }
