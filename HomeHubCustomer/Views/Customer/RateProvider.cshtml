@@ -1,4 +1,4 @@
-﻿@model List<ClientOrder>
+﻿@model ClientOrder
 
 <style>
     .html {
@@ -10,9 +10,10 @@
         color: #F1F1F1;
         border-radius: 30px;
         width: 300;
-        height: 270px;
+        height: 400px;
         padding-top: 42px;
         padding-left: 55px;
+        padding-right: 55px;
         margin-top: 20px;
     }
 </style>
@@ -23,11 +24,33 @@
 
 <div class="card">
     <form asp-controller="Customer" asp-action="SubmitRating">
-        <!-- Provider Name -->
-  
-        <!--Order List-->
+        <input type="hidden" name="clientId" value="@Model.ClientId" />
+        <input type="hidden" name="businessId" value="@Model.BusinessId" />
+
+
+        <!--Provider Name -->
+        <h1>@ViewBag.BusinessName</h1>
+
+        <!--Order Details -->
+        <h3>Order Summary</h3>
         <table>
-            <tr>Order Summary</tr>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Total Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.OrderedPs</td>
+                    <td>@Model.Quantity</td>
+                    <td>@Model.OrderDate</td>
+                    <td>@Model.Schedule</td>
+                    <td>@Model.Fee</td>
+            </tbody>
         </table>
 
         <label for="score">Rating</label>
@@ -40,13 +63,10 @@
          </select>
 
          <label>Comments</label>
-         <input type="text" id="comments" class="form-control"/>
+         <input type="text" name="Comments" id="comments" class="form-control"/>
 
          <!--Date-->
          <input type="hidden" id="date" name="date" value="" />
-
-        <!-- To pass logged in user's' id
-        <input type="hidden" id="userID" value="@User.Identity.Name" />-->
 
         <input type="submit" value="Submit Rating" />
     </form>
