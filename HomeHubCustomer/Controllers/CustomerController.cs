@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Xml;
+using static System.Formats.Asn1.AsnWriter;
+using System.Xml.Linq;
 
 namespace HomeHub.App.Controllers
 {
@@ -106,7 +108,6 @@ namespace HomeHub.App.Controllers
             entity.OrderDate = DateTime.Parse(model.ddeliv);
             entity.Schedule = DateTime.Parse(model.tdeliv);
             entity.OrderedPs = model.chosen;
-            //entity.Fee = Convert.ToDecimal(model.price);  uncomment if fee below does not work
             entity.Fee = TotalPrice;
             entity.PromoCode = model.promo;
             entity.UserId = 3; //temporary userID
@@ -182,14 +183,60 @@ namespace HomeHub.App.Controllers
             return RedirectToAction("Index"); // Redirect to an appropriate view
         }
 
-        public IActionResult RateProvider()
+        [HttpPost]
+        public IActionResult RateProvider(string LogId)
         {
-            return View();
+            var orderLog = context.OrdersLogs.FirstOrDefault(o => o.LogId == LogId);
+
+            if (orderLog == null)
+            {
+                TempData["ErrorMessage"] = "Order not found for the given Log ID.";
+                return RedirectToAction("ViewOrders");
+            }
+
+            // Attempt to convert the OrderId from OrdersLog to an int
+            if (int.TryParse(orderLog.OrderId, out int clientId))
+            {
+                // Retrieve the corresponding client order using the converted clientId
+                var clientOrder = context.ClientOrders.FirstOrDefault(co => co.ClientId == clientId);
+
+                if (clientOrder == null)
+                {
+                    TempData["ErrorMessage"] = "No corresponding client order found.";
+                    return RedirectToAction("ViewOrders");
+                }
+
+                // Retrieve business name using BusinessId from ClientOrder
+                var business = context.Businesses.FirstOrDefault(b => b.UserId == int.Parse(clientOrder.BusinessId));
+                if (business != null)
+                {
+                    ViewBag.BusinessName = business.BusinessName;
+                }
+
+                return View("RateProvider", clientOrder);
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Invalid Client ID format.";
+                return RedirectToAction("ViewOrders");
+            }
         }
 
         [HttpPost]
-        public IActionResult SubmitRating()
+        public IActionResult SubmitRating(int score, string comments, int clientId, int businessId)
         {
+            var rating = new Rating
+            {
+                OrderId = clientId,
+                Score = score,
+                Comments = comments,
+                BusinessId = businessId,
+                Date = DateTime.Now
+            };
+
+            context.Ratings.Add(rating);
+            context.SaveChanges();
+
             return RedirectToAction("RatingConfirmation");
         }
 

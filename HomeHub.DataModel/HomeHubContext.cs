@@ -186,13 +186,13 @@ public partial class HomeHubContext : DbContext
         modelBuilder.Entity<Rating>(entity =>
         {
             entity.Property(e => e.RatingId)
-                .HasMaxLength(50)
                 .HasColumnName("RatingID");
             entity.Property(e => e.Comments).HasMaxLength(50);
             entity.Property(e => e.Date).HasColumnType("date");
-            entity.Property(e => e.UserId)
-                .HasMaxLength(50)
-                .HasColumnName("UserID");
+            entity.Property(e => e.OrderId)
+                .HasColumnName("OrderID");
+            entity.Property(e => e.BusinessId)
+                .HasColumnName("BusinessID");
         });
 
         modelBuilder.Entity<Report>(entity =>

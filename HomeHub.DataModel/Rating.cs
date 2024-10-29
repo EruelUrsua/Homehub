@@ -5,9 +5,10 @@ namespace HomeHub.DataModel;
 
 public partial class Rating
 {
-    public string RatingId { get; set; } = null!;
+    public int RatingId { get; set; }
 
-    public string UserId { get; set; } = null!;
+    public int OrderId { get; set; }
+    public int BusinessId { get; set; }
 
     public int Score { get; set; }
 
