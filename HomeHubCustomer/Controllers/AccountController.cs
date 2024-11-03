@@ -2,6 +2,7 @@
 using HomeHub.DataModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace HomeHub.App.Controllers
 {
@@ -38,13 +39,35 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
+            //if (ModelState.IsValid)
+            //{
+            //    //ApplicationUser user = new ApplicationUser();
+            //    //user.UserName = model.Firstname;
+            //    user.Email = model.Email;
+            //    user.Usertype = model.Usertype;
+            //    await userManager.CreateAsync(user, model.Password);
+
+            //    return RedirectToAction("SignIn", "Account");
+            //}
+            //else
+            //{
+            //    return View(model);
+            //}
+
             if (ModelState.IsValid)
             {
-                ApplicationUser user = new ApplicationUser();
-                //user.UserName = model.Firstname;
-                user.Email = model.Email;
-                user.Usertype = model.Usertype;
-                await userManager.CreateAsync(user, model.Password);
+                Customer entity = new Customer();
+                entity.UserId = model.UserID;
+                entity.Email = model.Email;
+                entity.Password = model.Password;
+                entity.Firstname = model.Firstname;
+                entity.Lastname = model.Lastname;
+                entity.ContactNo = model.ContactNo;
+                entity.Address = model.Address;
+                entity.ValidIDno = model.ValidIDno;
+
+                await context.AddAsync(entity);
+                await context.SaveChangesAsync();
 
                 return RedirectToAction("SignIn", "Account");
             }
@@ -65,14 +88,22 @@ namespace HomeHub.App.Controllers
         {
             if (ModelState.IsValid)
             {
-                ApplicationUser user = new ApplicationUser();
-                user.UserName = model.Email;
-                user.Email = model.Email;
-                user.Usertype = model.Usertype;
-                await userManager.CreateAsync(user, model.Password);
+
+                //    ApplicationUser user = new ApplicationUser();
+                Business entity = new Business();
+                entity.UserID = model.UserID;
+                entity.Email = model.Email;
+                entity.Password = model.Password;
+                entity.BusinessName = model.BusinessName;
+                entity.RepresentativeName = model.RepresentativeName;
+                entity.ContactNo = model.ContactNo;
+                entity.CompanyAddress = model.CompanyAddress;
+                entity.OfferList = model.OfferList;
+                //entity.BusinessPermitNo = model.BusinessPermitNo;
 
                 return RedirectToAction("SignIn", "Account");
             }
+
             else
             {
                 return View(model);

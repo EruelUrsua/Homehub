@@ -45,14 +45,14 @@ public partial class HomeHubContext : DbContext
             //  optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
 
 
-         //   optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
-         // "Database=HomeHub; Integrated Security=SSPI;" +
-         // "TrustServerCertificate=true");
-
-    optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
+            optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
           "Database=HomeHub; Integrated Security=SSPI;" +
           "TrustServerCertificate=true");
-       
+
+    //optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
+    //      "Database=HomeHub; Integrated Security=SSPI;" +
+    //      "TrustServerCertificate=true");
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Admin>(entity =>
@@ -84,9 +84,9 @@ public partial class HomeHubContext : DbContext
 
         modelBuilder.Entity<Business>(entity =>
         {
-            entity.HasKey(e => e.UserId);
+            entity.HasKey(e => e.UserID);
 
-            entity.Property(e => e.UserId)
+            entity.Property(e => e.UserID)
                 .HasColumnName("UserID");
             entity.Property(e => e.BusinessName).HasMaxLength(50);
             entity.Property(e => e.BusinessType).HasMaxLength(1);

@@ -207,7 +207,7 @@ namespace HomeHub.App.Controllers
                 }
 
                 // Retrieve business name using BusinessId from ClientOrder
-                var business = context.Businesses.FirstOrDefault(b => b.UserId == int.Parse(clientOrder.BusinessId));
+                var business = context.Businesses.FirstOrDefault(b => b.UserID == int.Parse(clientOrder.BusinessId));
                 if (business != null)
                 {
                     ViewBag.BusinessName = business.BusinessName;

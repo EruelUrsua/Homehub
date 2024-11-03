@@ -8,30 +8,50 @@
 
 <form asp-controller="Account" asp-action="RegisterB" method="post">
 
+    <input asp-for="UserID" class="" hidden />
+    <span asp-validation-for="UserID" class="text-danger"></span>
+    <br />
+
+
       <label asp-for="Email"></label>
     <input asp-for="Email" class="form-control"/>
     <span asp-validation-for="Email" class="text-danger"></span>
     <br />
 
     
-      <label asp-for="CompanyName"> Company Name</label>
-    <input asp-for="CompanyName" class="form-control"/>
-    <span asp-validation-for="CompanyName" class="text-danger"></span>
+      <label asp-for="BusinessName"> Company Name</label>
+    <input asp-for="BusinessName" class="form-control"/>
+    <span asp-validation-for="BusinessName" class="text-danger"></span>
     <br />
 
-     
-      <label asp-for="Address">Company Address </label>
-    <input asp-for="Address"class="form-control"/> 
-    <span asp-validation-for="Address" class="text-danger"></span>
+    <label asp-for="RepresentativeName"></label>
+    <input asp-for="RepresentativeName" class="form-control" />
+    <span asp-validation-for="RepresentativeName" class="text-danger"></span>
+    <br />
+
+
+
+    <label asp-for="CompanyAddress">Company Address </label>
+    <input asp-for="CompanyAddress"class="form-control"/> 
+    <span asp-validation-for="CompanyAddress" class="text-danger"></span>
     <br />
 
         
-     <label asp-for="BusinessPermitNo">Business Permit Number</label>
-    <input asp-for="BusinessPermitNo" class="form-control"/>
-    <span asp-validation-for="BusinessPermitNo" class="text-danger"></span>
+      @*  <label asp-for="BusinessPermitNo">Business Permit Number</label>
+       <input asp-for="BusinessPermitNo" class="form-control"/>
+       <span asp-validation-for="BusinessPermitNo" class="text-danger"></span>
+    <br />*@
+
+    <label asp-for="ContactNo"></label>
+    <input asp-for="ContactNo" class="form-control" />
+    <span asp-validation-for="ContactNo" class="text-danger"></span>
     <br />
 
 
+    <label asp-for="OfferList"></label>
+    <input asp-for="OfferList" class="form-control" />
+    <span asp-validation-for="OfferList" class="text-danger"></span>
+    <br />
 
     <label asp-for="Password"></label>
     <input asp-for="Password" class="form-control" />
@@ -47,8 +67,8 @@
 
     <label asp-for="Businesstype">Business Type</label>
     <select asp-for="Businesstype" class="form-control">
-        <option value="Product">Product</option>
-        <option value="Service">Service Provider</option>
+        <option value="0">Product</option>
+        <option value="1">Service Provider</option>
     </select>
     <span asp-validation-for="Businesstype" class="text-danger"></span>
     <br />
