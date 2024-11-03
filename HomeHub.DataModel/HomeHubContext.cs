@@ -89,7 +89,7 @@ public partial class HomeHubContext : DbContext
             entity.Property(e => e.UserID)
                 .HasColumnName("UserID");
             entity.Property(e => e.BusinessName).HasMaxLength(50);
-            entity.Property(e => e.BusinessType).HasMaxLength(1);
+            //entity.Property(e => e.BusinessType).HasMaxLength(1);
             entity.Property(e => e.CompanyAddress).HasMaxLength(100);
             entity.Property(e => e.ContactNo).HasMaxLength(11);
             entity.Property(e => e.Email).HasMaxLength(20);
