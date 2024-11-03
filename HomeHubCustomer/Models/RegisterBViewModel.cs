@@ -4,48 +4,60 @@ namespace HomeHub.App.Models
 {
     public class RegisterBViewModel
     {
-        public RegisterBViewModel()
-        {
-            Email = "";
-            CompanyName = "";
-            Address = "";
-            BusinessPermitNo = "";
-            Businesstype = "";
-            Password = "";
-            Usertype = "Business";
-        }
-
+        //public RegisterBViewModel()
+        //{
+        //    Email = "";
+        //    CompanyName = "";
+        //    Address = "";
+        //    BusinessPermitNo = "";
+        //    Businesstype = "";
+        //    Password = "";
+        //    Usertype = "Business";
+        //}
+        [Required]
+        public int UserID { get; set; }
 
         [Required]
         [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }
+        public string Email { get; set; } = null!;
 
 
         [Required]
-        public string CompanyName { get; set; }
+        public string BusinessName { get; set; } = null!;
 
 
+        //[Required]
+        //public string BusinessPermitNo { get; set; } = null!;
+
+      [Required]
+        public string Businesstype { get; set; } = null!;
         [Required]
-        public string Address { get; set; }
 
-
+        public string RepresentativeName { get; set; } = null!;
         [Required]
-        public string BusinessPermitNo { get; set; }
-
-        [Required]
-        public string Businesstype { get; set; }
-
+        public string OfferList { get; set; } = null!;
 
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+        [Required]
+        public string CompanyAddress { get; set; } = null!;
+        [Required]
+
+        public String ContactNo { get; set; }
+
+      
+
         /*[Required]
         [DataType(DataType.Password)]
         [Compare("Password")]
         public string ConfirmPassword { get; set; */
-        [Required]
-        public string Usertype { get; set; }
-    }
+        //[Required]
+        //public string Usertype { get; set; }
 
+    }
 }
+
+
+
 

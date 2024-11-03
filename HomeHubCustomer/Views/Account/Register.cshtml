@@ -8,6 +8,11 @@
 
 <form asp-controller="Account" asp-action="Register" method="post">
 
+
+    <input asp-for="UserID" class=""hidden />
+    <span asp-validation-for="UserID" class="text-danger"></span>
+    <br />
+
       <label asp-for="Firstname"></label>
     <input asp-for="Firstname" class="form-control"/>
     <span asp-validation-for="Firstname" class="text-danger"></span>

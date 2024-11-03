@@ -4,14 +4,14 @@ namespace HomeHub.App.Models
 {
     public class RegisterViewModel
     {
-        public RegisterViewModel()
-        {
-            Email = "";
-            Password = "";
-            Usertype = "Customer";
-        }
+        //public RegisterViewModel()
+        //{
+        //    Email = "";
+        //    Password = "";
+        //    Usertype = "Customer";
+        //}
 
-        [Required]
+        //[Required]
         public string Firstname { get; set; }
 
         [Required]
@@ -25,14 +25,14 @@ namespace HomeHub.App.Models
         public string Address { get; set; }
 
         [Required]
-        public DateTime Birthday { get; set; }
+        //public DateTime Birthday { get; set; }
 
-        [Required]
+        //[Required]
         public string ValidIDno { get; set; }
 
 
         [Required]
-        public int ContactNo { get; set; }
+        public String ContactNo { get; set; }
 
 
         [Required]
@@ -43,6 +43,6 @@ namespace HomeHub.App.Models
         [Compare("Password")]
         public string ConfirmPassword { get; set; */
         [Required]
-        public string Usertype { get; set; }
+        public int UserID { get; set; }
     }
 }
