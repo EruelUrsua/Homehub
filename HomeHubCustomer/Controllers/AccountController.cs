@@ -39,20 +39,6 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            //if (ModelState.IsValid)
-            //{
-            //    //ApplicationUser user = new ApplicationUser();
-            //    //user.UserName = model.Firstname;
-            //    user.Email = model.Email;
-            //    user.Usertype = model.Usertype;
-            //    await userManager.CreateAsync(user, model.Password);
-
-            //    return RedirectToAction("SignIn", "Account");
-            //}
-            //else
-            //{
-            //    return View(model);
-            //}
 
             if (ModelState.IsValid)
             {
@@ -100,6 +86,9 @@ namespace HomeHub.App.Controllers
                 entity.CompanyAddress = model.CompanyAddress;
                 entity.OfferList = model.OfferList;
                 //entity.BusinessPermitNo = model.BusinessPermitNo;
+
+                await context.AddAsync(entity);
+                await context.SaveChangesAsync();
 
                 return RedirectToAction("SignIn", "Account");
             }

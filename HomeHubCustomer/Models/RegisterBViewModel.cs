@@ -39,14 +39,14 @@ namespace HomeHub.App.Models
 
         [Required]
         [DataType(DataType.Password)]
-        public string Password { get; set; }
+        public string Password { get; set; } = null!;
         [Required]
         public string CompanyAddress { get; set; } = null!;
         [Required]
 
-        public String ContactNo { get; set; }
+        public String ContactNo { get; set; } = null!;
 
-      
+
 
         /*[Required]
         [DataType(DataType.Password)]
