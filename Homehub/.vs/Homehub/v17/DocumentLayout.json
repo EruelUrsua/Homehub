@@ -3,10 +3,22 @@
   "WorkspaceRootPath": "D:\\Notes\\C#\\Homehub\\Homehub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1B4635C4-FC04-40FC-8C4F-93F9D533F3E5}|..\\HomeHubCustomer\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehubcustomer\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3EF4C7BD-3781-444F-84A1-7A8B9F316BC5}|..\\HomeHub.DataModel\\HomeHub.DataModel.csproj|d:\\notes\\c#\\homehub\\homehub.datamodel\\clientorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EF4C7BD-3781-444F-84A1-7A8B9F316BC5}|..\\HomeHub.DataModel\\HomeHub.DataModel.csproj|d:\\notes\\c#\\homehub\\homehub.datamodel\\homehubcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EF4C7BD-3781-444F-84A1-7A8B9F316BC5}|..\\HomeHub.DataModel\\HomeHub.DataModel.csproj|d:\\notes\\c#\\homehub\\homehub.datamodel\\orderslog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4635C4-FC04-40FC-8C4F-93F9D533F3E5}|..\\HomeHubCustomer\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehubcustomer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B4635C4-FC04-40FC-8C4F-93F9D533F3E5}|..\\HomeHubCustomer\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehubcustomer\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B4635C4-FC04-40FC-8C4F-93F9D533F3E5}|..\\HomeHubCustomer\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehubcustomer\\views\\account\\registerb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B4635C4-FC04-40FC-8C4F-93F9D533F3E5}|..\\HomeHubCustomer\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehubcustomer\\models\\registerbviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -15,13 +27,7 @@
       "AbsoluteMoniker": "D:0:0:{3EF4C7BD-3781-444F-84A1-7A8B9F316BC5}|..\\HomeHub.DataModel\\HomeHub.DataModel.csproj|d:\\notes\\c#\\homehub\\homehub.datamodel\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B4635C4-FC04-40FC-8C4F-93F9D533F3E5}|..\\HomeHubCustomer\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehubcustomer\\views\\account\\registerb.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3EF4C7BD-3781-444F-84A1-7A8B9F316BC5}|..\\HomeHub.DataModel\\HomeHub.DataModel.csproj|d:\\notes\\c#\\homehub\\homehub.datamodel\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EF4C7BD-3781-444F-84A1-7A8B9F316BC5}|..\\HomeHub.DataModel\\HomeHub.DataModel.csproj|d:\\notes\\c#\\homehub\\homehub.datamodel\\homehubcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,33 +41,59 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
+              "Title": "OrdersLog.cs",
+              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\OrdersLog.cs",
+              "RelativeDocumentMoniker": "..\\HomeHub.DataModel\\OrdersLog.cs",
+              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\OrdersLog.cs",
+              "RelativeToolTip": "..\\HomeHub.DataModel\\OrdersLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T10:15:44.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClientOrder.cs",
+              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\ClientOrder.cs",
+              "RelativeDocumentMoniker": "..\\HomeHub.DataModel\\ClientOrder.cs",
+              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\ClientOrder.cs",
+              "RelativeToolTip": "..\\HomeHub.DataModel\\ClientOrder.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA9wCEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T10:14:41.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "HomeHubContext.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHubContext.cs",
               "RelativeDocumentMoniker": "..\\HomeHub.DataModel\\HomeHubContext.cs",
               "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHubContext.cs",
               "RelativeToolTip": "..\\HomeHub.DataModel\\HomeHubContext.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAYwFsAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAtwHoAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T13:13:08.821Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CustomerController.cs",
-              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\Controllers\\CustomerController.cs",
-              "RelativeDocumentMoniker": "..\\HomeHubCustomer\\Controllers\\CustomerController.cs",
-              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\Controllers\\CustomerController.cs",
-              "RelativeToolTip": "..\\HomeHubCustomer\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAQwDEAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T02:52:59.032Z",
+              "WhenOpened": "2024-11-04T10:13:33.39Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\Program.cs",
+              "RelativeDocumentMoniker": "..\\HomeHubCustomer\\Program.cs",
+              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\Program.cs",
+              "RelativeToolTip": "..\\HomeHubCustomer\\Program.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T10:13:26.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "RegisterBViewModel.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\Models\\RegisterBViewModel.cs",
               "RelativeDocumentMoniker": "..\\HomeHubCustomer\\Models\\RegisterBViewModel.cs",
@@ -69,12 +101,11 @@
               "RelativeToolTip": "..\\HomeHubCustomer\\Models\\RegisterBViewModel.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAxwCAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T23:35:23.163Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-03T23:35:23.163Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "RegisterB.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\Views\\Account\\RegisterB.cshtml",
               "RelativeDocumentMoniker": "..\\HomeHubCustomer\\Views\\Account\\RegisterB.cshtml",
@@ -82,12 +113,11 @@
               "RelativeToolTip": "..\\HomeHubCustomer\\Views\\Account\\RegisterB.cshtml",
               "ViewState": "AgIAADYAAAAAAAAAAAAAACoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-03T14:15:23.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-03T14:15:23.348Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Business.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\Business.cs",
               "RelativeDocumentMoniker": "..\\HomeHub.DataModel\\Business.cs",
@@ -95,12 +125,11 @@
               "RelativeToolTip": "..\\HomeHub.DataModel\\Business.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T14:15:04.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-03T14:15:04.966Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Customer.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\Customer.cs",
               "RelativeDocumentMoniker": "..\\HomeHub.DataModel\\Customer.cs",
@@ -112,13 +141,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "..\\HomeHubCustomer\\Controllers\\AccountController.cs",
               "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHubCustomer\\Controllers\\AccountController.cs",
               "RelativeToolTip": "..\\HomeHubCustomer\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAowFgAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAHYAAAAAAAAAAADwv1gAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-03T12:11:20.007Z",
               "EditorCaption": ""

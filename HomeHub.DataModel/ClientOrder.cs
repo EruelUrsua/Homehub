@@ -30,5 +30,8 @@ public partial class ClientOrder
     public int Quantity { get; set; }
     public string ModeOfPayment { get; set; } = null!;
 
+    public string FirstName { get; set; } = null!;
+    public string LastName { get; set; } = null !;
+
 
 }
