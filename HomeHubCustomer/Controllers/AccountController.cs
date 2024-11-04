@@ -85,7 +85,8 @@ namespace HomeHub.App.Controllers
                 entity.ContactNo = model.ContactNo;
                 entity.CompanyAddress = model.CompanyAddress;
                 entity.OfferList = model.OfferList;
-                //entity.BusinessPermitNo = model.BusinessPermitNo;
+                entity.Businesstype = model.Businesstype;
+                entity.BusinessPermitNo = model.BusinessPermitNo;
 
                 await context.AddAsync(entity);
                 await context.SaveChangesAsync();

@@ -29,7 +29,7 @@ namespace HomeHub.App.Controllers
         public IActionResult OrderProduct()
         {
             var categories = context.Businesses
-                .Where(b => b.BusinessType == '0')
+                .Where(b => b.Businesstype == '0')
                 .Select(b => b.OfferList) 
                 .Distinct()
                 .ToList();
@@ -37,7 +37,7 @@ namespace HomeHub.App.Controllers
             ViewBag.Categories = categories;
 
             //To only show Product Providers
-            List<Business> list = context.Businesses.Where(x => x.BusinessType == '0').ToList();
+            List<Business> list = context.Businesses.Where(x => x.Businesstype == '0').ToList();
             ViewBag.Businesses = list; // Store businesses in ViewBag
             return View(list);
         }
@@ -46,7 +46,7 @@ namespace HomeHub.App.Controllers
         {
             // Get the unique categories from the OfferList in the Businesses table
             var categories = context.Businesses
-                .Where(b => b.BusinessType == '1')
+                .Where(b => b.Businesstype == '1')
                 .Select(b => b.OfferList) 
                 .Distinct()
                 .ToList();
@@ -54,7 +54,7 @@ namespace HomeHub.App.Controllers
             ViewBag.Categories = categories;    
 
             //To only show Service Providers
-            List<Business> list = context.Businesses.Where(x => x.BusinessType == '1').ToList();
+            List<Business> list = context.Businesses.Where(x => x.Businesstype == '1').ToList();
             ViewBag.Businesses = list; // Store businesses in ViewBag
             return View(list);
         }

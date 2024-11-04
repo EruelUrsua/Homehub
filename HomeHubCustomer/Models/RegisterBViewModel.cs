@@ -26,11 +26,11 @@ namespace HomeHub.App.Models
         public string BusinessName { get; set; } = null!;
 
 
-        //[Required]
-        //public string BusinessPermitNo { get; set; } = null!;
+        [Required]
+        public string BusinessPermitNo { get; set; } = null!;
 
       [Required]
-        public string Businesstype { get; set; } = null!;
+        public char Businesstype { get; set; }
         [Required]
 
         public string RepresentativeName { get; set; } = null!;
