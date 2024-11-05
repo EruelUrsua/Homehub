@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<HomeHubContext>(opts =>
 {
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("Pascual"));
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("Ursua"));
 });
 
 //automapper
@@ -63,18 +63,18 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Provider}/{action=ProductsServices}/{id?}");
-*/
+
 
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Customer}/{action=Index}/{id?}");
 
-/*
+*/
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Account}/{action=SignIn}/{id?}");
-*/
+
 
 app.Run();
