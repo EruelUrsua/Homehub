@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HomeHub.DataModel;
 
@@ -24,4 +25,9 @@ public partial class OrdersLog
     public DateTime Date { get; set; }
 
     public string Status { get; set; } = null!;
+
+
+    // Temporary property to track if the order has been rated
+    [NotMapped]
+    public bool IsRated { get; set; }
 }

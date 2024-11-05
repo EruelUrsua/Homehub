@@ -5,7 +5,7 @@ namespace HomeHub.App.Models
 {
     public class OrderAvailViewModel
     {
-        public int id { get; set; }
+        public int businessId { get; set; }
         public string chosen { get; set; }
         public string price { get; set; }
         public string ddeliv { get; set; }
@@ -16,6 +16,9 @@ namespace HomeHub.App.Models
         public int qty { get; set; }
         public decimal discount { get; set; }
         public decimal totalPrice { get; set; }
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
 
         //Logged in user's id
         public string userID { get; set; }

@@ -2,11 +2,11 @@
 
 <body>
     <!-- Name and address of chosen provider-->
-
-
     <!-- Product List of chosen provider-->
     <div class="card">
         <form asp-controller="Customer" asp-action="ConfirmOrder" method="post">
+            <input type="hidden" name="businessId" value="@ViewBag.ProviderID" />
+
             @if (Model.Count() < 1)
             {
                 <div class="alert alert-info">
@@ -17,8 +17,8 @@
             {
                 <table class="table table-striped table-hover">
                     <thead>
-                        <th>Service</th>
-                        <th>Price</th>
+                    <th>Service</th>
+                    <th>Price</th>
                     </thead>
                     <tbody>
                         @foreach (var item in Model)
