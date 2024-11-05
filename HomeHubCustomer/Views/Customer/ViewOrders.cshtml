@@ -1,4 +1,6 @@
-﻿@model List<OrdersLog>
+﻿ViewOrders.cshtml
+
+@model List<OrdersLog>
 
 <h2>Your Orders</h2>
 
@@ -29,13 +31,20 @@
                         <input type="hidden" name="id" value="" />
                         <input type="submit" class="btn btn-success" value="Cancel Order" />
                     </form> -->
+                    @if (item.IsRated)
+                    {
+                        <button class="btn btn-secondary" disabled>Rated</button>
+                    }
+                    else
+                    {
+                        <!--For Rating-->
+                        <form asp-controller="Customer" asp-action="RateProvider">
+                            <input type="hidden" name="LogId" value="@item.LogId" />
+                            <input type="submit" class="btn btn-success" value="Rate Order" />
+                        </form>
+                    }
 
-                    <!--For Rating-->
-                    <form asp-controller="Customer" asp-action="RateProvider">
-                        <input type="hidden" name="LogId" value="@item.LogId" />
-                        <input type="submit" class="btn btn-success" value="Rate Order" />
-                    </form>
-                    
+
                 </td>
             </tr>
         }

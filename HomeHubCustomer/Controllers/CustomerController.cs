@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Xml;
 using static System.Formats.Asn1.AsnWriter;
 using System.Xml.Linq;
+using System.Security.Claims;
 
 namespace HomeHub.App.Controllers
 {
@@ -30,7 +31,7 @@ namespace HomeHub.App.Controllers
         {
             var categories = context.Businesses
                 .Where(b => b.Businesstype == '0')
-                .Select(b => b.OfferList) 
+                .Select(b => b.OfferList)
                 .Distinct()
                 .ToList();
 
@@ -47,11 +48,11 @@ namespace HomeHub.App.Controllers
             // Get the unique categories from the OfferList in the Businesses table
             var categories = context.Businesses
                 .Where(b => b.Businesstype == '1')
-                .Select(b => b.OfferList) 
+                .Select(b => b.OfferList)
                 .Distinct()
                 .ToList();
 
-            ViewBag.Categories = categories;    
+            ViewBag.Categories = categories;
 
             //To only show Service Providers
             List<Business> list = context.Businesses.Where(x => x.Businesstype == '1').ToList();
@@ -59,19 +60,27 @@ namespace HomeHub.App.Controllers
             return View(list);
         }
 
-            
-            public IActionResult OrderListProduct(int id)
-            {
-                //To only show only the chosen provider's products
-                List<Product> list = context.Products.Where(x => x.ProviderID == id).ToList();
-                return View(list);
-            } 
 
-            public IActionResult AvailListService(int id)
+        public IActionResult OrderListProduct(int businessId)
+        {
+            //To only show only the chosen provider's products
+            //List<Product> list = context.Products.Where(x => x.ProviderID == businessId).ToList();
+
+            var products = context.Products.Where(x => x.ProviderID == businessId).ToList();
+
+            ViewBag.ProviderID = businessId;
+            return View(products);
+        }
+
+        public IActionResult AvailListService(int businessId)
         {
             //To only show only the chosen provider's services
-            List<Service> list = context.Services.Where(x => x.ProviderID == id).ToList();
-            return View(list);
+            //List<Service> list = context.Services.Where(x => x.ProviderID == id).ToList();
+
+            var services = context.Services.Where(x => x.ProviderID == businessId).ToList();
+
+            ViewBag.ProviderID = businessId;
+            return View(services);
         }
 
         [HttpGet]
@@ -82,7 +91,7 @@ namespace HomeHub.App.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ConfirmOrder(OrderAvailViewModel model, int id)
+        public async Task<IActionResult> ConfirmOrder(OrderAvailViewModel model, int businessId)
         {
             if (model.qty == 0)
             {
@@ -102,21 +111,37 @@ namespace HomeHub.App.Controllers
                 }
             }
 
+            var userId = 2; //Will replace with logged-in user id retrieval logic
+            //var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await context.Customers.FindAsync(userId);
+
+            if (user == null)
+            {
+                // Handle user not found scenario
+                return NotFound();
+            }
+
             ClientOrder entity = new ClientOrder();
-            //business not yet passed
-            entity.BusinessId = id.ToString();
+            entity.BusinessId = businessId.ToString();
             entity.OrderDate = DateTime.Parse(model.ddeliv);
             entity.Schedule = DateTime.Parse(model.tdeliv);
             entity.OrderedPs = model.chosen;
             entity.Fee = TotalPrice;
             entity.PromoCode = model.promo;
-            entity.UserId = 3; //temporary userID
+            entity.UserId = 2; //temporary userID
+            entity.FirstName = user.Firstname;
+            entity.LastName = user.Lastname;
             //entity.UserId = int.Parse(model.userID);
             //trying to figure out
+            //entity.RatingId = (lastRating != null ? lastRating.RatingId : 0) + 1;
             //entity.RatingId = 1 + entity.ClientId;
             //entity.ReportId = 1 + entity.ClientId;
             entity.Quantity = model.qty;
             entity.ModeOfPayment = model.mode;
+
+            var maxRatingId = await context.ClientOrders.MaxAsync(o => (int?)o.RatingId) ?? 0;
+            entity.RatingId = maxRatingId + 1;
+
             await context.AddAsync(entity);
             await context.SaveChangesAsync();
 
@@ -143,8 +168,23 @@ namespace HomeHub.App.Controllers
 
         public IActionResult ViewOrders()
         {
-            List<OrdersLog> list = context.OrdersLogs.ToList();
-            return View(list);
+            //List<OrdersLog> list = context.OrdersLogs.ToList();
+            //return View(list);
+
+            // Retrieve all OrdersLogs entries for the logged-in user (dagdagan ng UserID na filter pag ayos na)
+            var orders = context.OrdersLogs.ToList();
+
+            // Retrieve all rated order IDs to identify which orders are rated
+            var ratedOrderIds = context.Ratings.Select(r => r.OrderId).ToHashSet();
+
+            // Attach an "IsRated" flag to each OrdersLog entry based on whether it exists in the Ratings table
+            foreach (var order in orders)
+            {
+                // Check if the order ID is in the set of rated order IDs
+                order.IsRated = ratedOrderIds.Contains(int.Parse(order.OrderId)); // Adjust if OrderId is not a string
+            }
+
+            return View(orders);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

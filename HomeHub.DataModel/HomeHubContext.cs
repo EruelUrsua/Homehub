@@ -45,13 +45,13 @@ public partial class HomeHubContext : DbContext
             //  optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
 
 
-            optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
+      //      optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
+      //    "Database=HomeHub; Integrated Security=SSPI;" +
+      //    "TrustServerCertificate=true");
+
+    optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
           "Database=HomeHub; Integrated Security=SSPI;" +
           "TrustServerCertificate=true");
-
-    //optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
-    //      "Database=HomeHub; Integrated Security=SSPI;" +
-    //      "TrustServerCertificate=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -96,6 +96,7 @@ public partial class HomeHubContext : DbContext
             entity.Property(e => e.OfferList).HasMaxLength(50);
             entity.Property(e => e.Password).HasMaxLength(20);
             entity.Property(e => e.RepresentativeName).HasMaxLength(50);
+            entity.Property(e => e.BusinessPermitNo).HasMaxLength(50);
         });
 
         modelBuilder.Entity<ClientOrder>(entity =>
@@ -127,9 +128,11 @@ public partial class HomeHubContext : DbContext
             entity.Property(e => e.ModeOfPayment)
                 .HasMaxLength(5);
             entity.Property(e => e.FirstName)
+                .HasMaxLength(50)
                 .HasColumnName("FirstName");
             entity.Property(e => e.LastName)
-               .HasColumnName("LastName");
+                .HasMaxLength(50)
+                .HasColumnName("LastName");
 
         });
 
@@ -145,6 +148,7 @@ public partial class HomeHubContext : DbContext
             entity.Property(e => e.Firstname).HasMaxLength(20);
             entity.Property(e => e.Lastname).HasMaxLength(20);
             entity.Property(e => e.Password).HasMaxLength(20);
+            entity.Property(e => e.ValidIDno).HasMaxLength(50);
         });
 
         modelBuilder.Entity<OrdersLog>(entity =>
