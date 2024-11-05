@@ -5,7 +5,7 @@ namespace HomeHub.App.Models
 {
     public class OrderAvailViewModel
     {
-        public int id { get; set; }
+        public int businessId { get; set; }
         public string chosen { get; set; }
         public string price { get; set; }
         public string ddeliv { get; set; }

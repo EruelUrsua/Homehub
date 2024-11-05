@@ -29,12 +29,19 @@
                         <input type="hidden" name="id" value="" />
                         <input type="submit" class="btn btn-success" value="Cancel Order" />
                     </form> -->
-
-                    <!--For Rating-->
-                    <form asp-controller="Customer" asp-action="RateProvider">
-                        <input type="hidden" name="LogId" value="@item.LogId" />
-                        <input type="submit" class="btn btn-success" value="Rate Order" />
-                    </form>
+                    @if (item.IsRated)
+                    {
+                        <button class="btn btn-secondary" disabled>Rated</button>
+                    }
+                    else
+                    {
+                        <!--For Rating-->
+                        <form asp-controller="Customer" asp-action="RateProvider">
+                            <input type="hidden" name="LogId" value="@item.LogId" />
+                            <input type="submit" class="btn btn-success" value="Rate Order" />
+                        </form>
+                    }
+                    
                     
                 </td>
             </tr>

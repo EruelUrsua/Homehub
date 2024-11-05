@@ -7,6 +7,8 @@
     <!-- Product List of chosen provider-->
     <div class="card">
         <form asp-controller="Customer" asp-action="ConfirmOrder" method="post">
+            <input type="hidden" name="businessId" value="@ViewBag.ProviderID" />
+                
             @if (Model.Count() < 1)
             {
                 <div class="alert alert-info">
