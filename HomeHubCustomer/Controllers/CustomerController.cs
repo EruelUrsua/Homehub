@@ -285,5 +285,93 @@ namespace HomeHub.App.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult ReportProblem(string LogId)
+        {
+            var orderLog = context.OrdersLogs.FirstOrDefault(o => o.LogId == LogId);
+
+            if (orderLog == null)
+            {
+                TempData["ErrorMessage"] = "Order not found for the given Log ID.";
+                return RedirectToAction("ViewOrders");
+            }
+
+            // Attempt to convert the OrderId from OrdersLog to an int
+            if (int.TryParse(orderLog.OrderId, out int clientId))
+            {
+                // Retrieve the corresponding client order using the converted clientId
+                var clientOrder = context.ClientOrders.FirstOrDefault(co => co.ClientId == clientId);
+
+                if (clientOrder == null)
+                {
+                    TempData["ErrorMessage"] = "No corresponding client order found.";
+                    return RedirectToAction("ViewOrders");
+                }
+
+                // Retrieve business name using BusinessId from ClientOrder
+                var business = context.Businesses.FirstOrDefault(b => b.UserID == int.Parse(clientOrder.BusinessId));
+                if (business != null)
+                {
+                    ViewBag.BusinessName = business.BusinessName;
+                }
+
+                return View("ReportProblem", clientOrder);
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Invalid Client ID format.";
+                return RedirectToAction("ViewOrders");
+            }
+        }
+
+        [HttpPost]
+        public IActionResult SubmitReport(string title, string description, int clientId)
+        {
+            var report = new Report
+            {
+                ReportId = GenerateReportId(),
+                Title = title,
+                Description = description,
+                Date = DateTime.Now.Date,
+                UserId = clientId.ToString()
+            };
+
+            context.Reports.Add(report);
+            context.SaveChanges();
+
+            return RedirectToAction("ReportConfirmation");
+        }
+
+        public IActionResult ReportConfirmation()
+        {
+            return View();
+        }
+
+
+        private string GenerateReportId()
+        {
+            string datePart = DateTime.Now.ToString("yyyyMMdd");
+
+            //Retrieve lastest Report created today
+            var lastReport = context.Reports.Where(r => r.ReportId.StartsWith("RPT-" + datePart))
+                                            .OrderByDescending(r => r.ReportId).FirstOrDefault();
+
+            //Make 1 default if no reports today exist
+            int sequenceNumber = 1;
+
+            //Increment Sequence Number
+            if (lastReport != null)
+            {
+                string[] parts = lastReport.ReportId.Split('-');
+                if (parts.Length == 3 && int.TryParse(parts[2].Trim(), out int lastNumber))
+                {
+                    sequenceNumber = lastNumber + 1;
+                }
+            }
+
+            return $"RPT-{datePart}-{sequenceNumber:D3}";
+        }
+
+
     }
 }
