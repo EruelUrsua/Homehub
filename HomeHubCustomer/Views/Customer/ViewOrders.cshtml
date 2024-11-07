@@ -1,6 +1,4 @@
-﻿ViewOrders.cshtml
-
-@model List<OrdersLog>
+﻿@model List<OrdersLog>
 
 <h2>Your Orders</h2>
 
@@ -43,6 +41,11 @@
                             <input type="submit" class="btn btn-success" value="Rate Order" />
                         </form>
                     }
+                    <!--For Report-->
+                    <form asp-controller="Customer" asp-action="ReportProblem">
+                        <input type="hidden" name="LogId" value="@item.LogId" />
+                        <input type="submit" class="btn btn-warning" value="Report Problem" />
+                    </form>
 
 
                 </td>

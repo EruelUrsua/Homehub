@@ -19,13 +19,12 @@
 </style>
 
 <div class="text-center">
-    <h1 class="display-4">Rate Your Order</h1>
+    <h1 class="display-4">Report a Problem</h1>
 </div>
 
 <div class="card">
-    <form asp-controller="Customer" asp-action="SubmitRating">
+    <form asp-controller="Customer" asp-action="SubmitReport">
         <input type="hidden" name="clientId" value="@Model.ClientId" />
-        <input type="hidden" name="businessId" value="@Model.BusinessId" />
 
 
         <!--Provider Name -->
@@ -53,18 +52,12 @@
             </tbody>
         </table>
 
-        <label for="score">Rating</label>
-        <select id="score" name="score" class="form-control">
-            <option value="1">&#9733; 1 Star</option>
-            <option value="2">&#9733;&#9733; 2 Stars</option>
-            <option value="3">&#9733;&#9733;&#9733; 3 Stars</option>
-            <option value="4">&#9733;&#9733;&#9733;&#9733; 4 Stars</option>
-            <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733; 5 Stars</option>
-        </select>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" class="form-control" placeholder="What is the problem you have encountered?" />
 
-        <label>Comments</label>
-        <input type="text" id="comments" name="Comments" class="form-control" />
+        <label>Description</label>
+        <input type="text" id="description" name="description" class="form-control" placeholder="Give a short description of the problem" />
 
-        <input type="submit" value="Submit Rating" />
+        <input type="submit" value="Submit Report" />
     </form>
 </div>
