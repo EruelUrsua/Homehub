@@ -29,7 +29,7 @@ namespace HomeHub.App.Controllers
 
             if (ongoingPromos.Count == 0)
             {
-                return View(); // No promos, return empty view
+                return View(); // If no promos return empty view
             }
 
             // Ensure the promo index is within the bounds of available promos
@@ -37,6 +37,9 @@ namespace HomeHub.App.Controllers
 
             ViewBag.Promos = ongoingPromos;
             ViewBag.CurrentPromoIndex = promoIndex;
+
+            List<Business> businesses = context.Businesses.ToList();
+            ViewBag.Businesses = businesses;
 
             return View();
         }
