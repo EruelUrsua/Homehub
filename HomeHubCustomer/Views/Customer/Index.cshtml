@@ -63,23 +63,67 @@
     z-index: 1;
     left: 50%;
     bottom: 30px;
-}
+    }
 
-#snackbar.show {
-    visibility: visible;
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
+    #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
 
-keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-}
+    keyframes fadein {
+        from {bottom: 0; opacity: 0;}
+        to {bottom: 30px; opacity: 1;}
+    }
 
-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
-}
+    keyframes fadeout {
+        from {bottom: 30px; opacity: 1;}
+        to {bottom: 0; opacity: 0;}
+    }
+
+    .promo-carousel {
+        text-align: center;
+        position: relative;
+    }
+
+    .promo-navigation-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .promo-navigation button {
+        background-color: #F1F1F1;
+        color: #203B81;
+        border: none;
+        font-size: 14x;
+        padding: 5px 15px;
+        margin: 0 5px;
+        cursor: pointer;
+        border-radius: 30px;
+    }
+
+    .promo-item {
+        margin: 10px 0;
+        padding: 20px;
+        background-color: #203B81;
+        color: #fff;
+        border-radius: 10px;
+    }
+
+    button2 {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+        button2:hover {
+            background-color: #F1F1F1;
+            color: #203B81;
+        }
 
 </style>
 
@@ -117,21 +161,38 @@ keyframes fadeout {
         </div>
         <div class="col">
             <h3>Ongoing Promos</h3>
-            <div class="card1"></div>
+            <div class="card1 promo-carousel">
+                @if (ViewBag.Promos != null && ViewBag.Promos.Count > 0)
+                {
+                    var currentPromo = ViewBag.Promos[ViewBag.CurrentPromoIndex];
+                    <div class="promo-item">
+                        <h4 style="color:#F1F1F1">@currentPromo.PromoName</h4>
+                        <p>Ends on: @currentPromo.PromoEnd.ToString("yyyy-MM-dd")</p>
+                    </div>
+                }
+                else
+                {
+                    <p>No ongoing promos at the moment.</p>
+                }
+                <div class="promo-navigation-container">
+                    <!-- Navigation buttons -->
+                    <div class="promo-navigation">
+                        @if (ViewBag.Promos != null && ViewBag.Promos.Count > 0)
+                        {
+                            var prevPromoIndex = (ViewBag.CurrentPromoIndex - 1 + ViewBag.Promos.Count) % ViewBag.Promos.Count;
+                            <a href="@Url.Action("Index", new { promoIndex = prevPromoIndex })"><button class="button2">❮ Prev</button></a>
+                        }
+                    </div>
+                    <div class="promo-navigation">
+                        @if (ViewBag.Promos != null && ViewBag.Promos.Count > 0)
+                        {
+                            var nextPromoIndex = (ViewBag.CurrentPromoIndex + 1) % ViewBag.Promos.Count;
+                            <a href="@Url.Action("Index", new { promoIndex = nextPromoIndex })"><button class="button2">Next ❯</button></a>
+                        }
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-
-
-    <script>
-        var snackbarMessage = '@(TempData["SnackbarMessage"] ?? "")';
-
-        if (snackbarMessage) {
-            var snackbar = document.getElementById("snackbar");
-            snackbar.textContent = snackbarMessage;
-            snackbar.className = "show";
-            setTimeout(function () { snackbar.className = snackbar.className.replace("show", ""); }, 3000);
-        }
-    </script>
 
 </body>

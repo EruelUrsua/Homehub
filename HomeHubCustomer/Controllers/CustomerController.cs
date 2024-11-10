@@ -22,8 +22,22 @@ namespace HomeHub.App.Controllers
             this.context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int promoIndex = 0)
         {
+            var ongoingPromos = context.Promos.Where(p => p.PromoEnd > DateTime.Now).
+                OrderBy(p => p.PromoEnd).ToList();
+
+            if (ongoingPromos.Count == 0)
+            {
+                return View(); // No promos, return empty view
+            }
+
+            // Ensure the promo index is within the bounds of available promos
+            promoIndex = promoIndex >= ongoingPromos.Count ? 0 : promoIndex;
+
+            ViewBag.Promos = ongoingPromos;
+            ViewBag.CurrentPromoIndex = promoIndex;
+
             return View();
         }
 
