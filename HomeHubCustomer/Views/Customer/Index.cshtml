@@ -14,7 +14,6 @@
     .card {
         background-color: #203B81;
         border-radius: 30px;
-        width: 300;
         height: 270px;
         padding-top: 42px;
         padding-left: 55px;
@@ -24,9 +23,9 @@
     .card1 {
         background-color: #203B81;
         border-radius: 30px;
-        width: 300;
         height: 300px;
         padding: 20px;
+        overflow: hidden;
     }
 
     .button {
@@ -49,38 +48,6 @@
         width: 300px;
     }
 
-
-    #snackbar {
-    visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-    }
-
-    #snackbar.show {
-        visibility: visible;
-        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-        animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    }
-
-    keyframes fadein {
-        from {bottom: 0; opacity: 0;}
-        to {bottom: 30px; opacity: 1;}
-    }
-
-    keyframes fadeout {
-        from {bottom: 30px; opacity: 1;}
-        to {bottom: 0; opacity: 0;}
-    }
-
     .promo-carousel {
         text-align: center;
         position: relative;
@@ -92,7 +59,7 @@
         align-items: center;
         gap: 10px;
     }
-    
+
     .promo-navigation button {
         background-color: #F1F1F1;
         color: #203B81;
@@ -125,17 +92,40 @@
             color: #203B81;
         }
 
+    .table-container {
+        overflow-y: auto;
+        max-height: 260px;
+        border-radius: 10px;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .table th, .table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #203B81;
+            color: #FFFFFF;
+        }
+
+        .table tr:nth-child(even) {
+            background-color: #F2F2F2;
+            ;
+        }
+
+        .table tr:nth-child(odd) {
+            background-color: #203B81;
+            color: #FFFFFF;
+        }
 </style>
 
 <body style="background-color:#F1F1F1">
-    <!--
-    <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
-        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    </div>
-    -->
-
-    <div id="snackbar"></div>
 
     <div>
         <h2>Welcome back</h2>
@@ -157,7 +147,38 @@
     <div class="row">
         <div class="col">
             <h3>Recommendations for you</h3>
-            <div class="card1"></div>
+            <div class="card1">
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Business Name</th>
+                                <th>Address</th>
+                                <th>Business Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (ViewBag.Businesses != null && ViewBag.Businesses.Count > 0)
+                            {
+                                foreach (var business in ViewBag.Businesses)
+                                {
+                                    <tr>
+                                        <td>@business.BusinessName</td>
+                                        <td>@business.CompanyAddress</td>
+                                        <td>@business.OfferList</td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="3">No recommendations available</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
         <div class="col">
             <h3>Ongoing Promos</h3>
