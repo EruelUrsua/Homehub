@@ -210,34 +210,76 @@ namespace HomeHub.App.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public ActionResult InitiateRefund()
+        public async Task<IActionResult> ShowEligibleOrdersForRefund(int clientId)
         {
-            return View(new RefundViewModel());
+            // Fetch accepted orders from the OrdersLog
+            var eligibleRefunds = await context.OrdersLogs
+                .Where(log => log.Status == "Accepted")
+                .Select(log => new
+                {
+                    log.LogId,
+                    log.OrderDate,
+                    log.Item,
+                    log.Qty,
+                    log.BusinessId,
+                    log.OrderId,
+                    // Use business id to find associated ClientOrders
+                    ClientOrder = context.ClientOrders
+                        .FirstOrDefault(o => o.BusinessId == log.BusinessId && o.OrderDate == log.OrderDate)
+                })
+                .ToListAsync();
+
+            // Filter out null ClientOrders and map to RefundViewModel
+            var filteredRefunds = eligibleRefunds
+                .Where(x => x.ClientOrder != null)
+                .Select(x => new RefundViewModel
+                {
+                    ClientID = clientId,
+                    BusinessID = x.ClientOrder.BusinessId,
+                    OrderDate = x.ClientOrder.OrderDate,
+                    OrderedPs = x.Item,
+                    Quantity = x.Qty,
+                    OrderId = x.OrderId // Ensure this is populated
+                })
+                .ToList();
+
+            return View(filteredRefunds);
         }
 
         [HttpPost]
-        public ActionResult Refund(RefundViewModel model)
+        public ActionResult Refund(string orderId)
         {
-            // Find the order using the unique fields
-            var order = context.ClientOrders
-                .FirstOrDefault(o => o.ClientId == model.ClientID &&
-                                     o.BusinessId == model.BusinessID &&
-                                     o.OrderDate == model.OrderDate &&
-                                     o.UserId == model.UserID);
-
-            if (order == null)
+            if (string.IsNullOrEmpty(orderId))
             {
-                // Handle case where the order does not exist
-                ModelState.AddModelError("", "Order not found.");
-                return View("InitiateRefund", model);
+                ViewBag.Message = "Invalid Order ID.";
+                return RedirectToAction("ShowEligibleOrdersForRefund");
             }
 
-            // Process the refund
-            order.Status = false; // Assuming false means refunded
-            context.SaveChanges();
+            // Find the order based on the orderId in the OrdersLog table
+            var order = context.OrdersLogs.FirstOrDefault(o => o.OrderId == orderId && o.Status == "Accepted");
 
-            // Redirect or show a confirmation message
-            return RedirectToAction("Index"); // Redirect to an appropriate view
+            if (order != null)
+            {
+                // Check if the order is eligible for refund (e.g., not already refunded or canceled)
+                if (order.Status != "Refunded" && order.Status != "Cancelled")
+                {
+                    // Update the order status to reflect that a refund has been requested
+                    order.Status = "Refund Requested";
+                    context.SaveChanges();
+
+                    TempData["Message"] = "Your refund request has been submitted successfully.";
+                }
+                else
+                {
+                    TempData["Message"] = "Refund request cannot be processed for this order.";
+                }
+            }
+            else
+            {
+                TempData["Message"] = "Order not found.";
+            }
+
+            return RedirectToAction("ShowEligibleOrdersForRefund");
         }
 
         [HttpPost]
