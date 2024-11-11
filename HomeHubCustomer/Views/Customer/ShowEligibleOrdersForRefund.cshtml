@@ -1,0 +1,56 @@
+﻿@model IEnumerable<HomeHub.App.Models.RefundViewModel>
+
+@{
+    ViewBag.Title = "Eligible Refund Requests";
+}
+
+<h2>Eligible Refund Requests</h2>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-info">@TempData["Message"]</div>
+}
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Business ID</th>
+                <th>Order Date</th>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var request in Model)
+            {
+                <tr>
+                    <td>@request.BusinessID</td>
+                    <td>@request.OrderDate.ToShortDateString()</td>
+                    <td>@request.OrderedPs</td>
+                    <td>@request.Quantity</td>
+                    <td>
+                        @using (Html.BeginForm("Refund", "Customer", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.HiddenFor(model => request.ClientID)
+                            @Html.HiddenFor(model => request.BusinessID)
+                            @Html.HiddenFor(model => request.OrderDate)
+                            @Html.HiddenFor(model => request.OrderedPs)
+                            @Html.HiddenFor(model => request.Quantity)
+                            @Html.HiddenFor(model => request.OrderId)
+
+                            <button type="submit" class="btn btn-primary">Request Refund</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No eligible refund requests found.</p>
+}

@@ -250,6 +250,86 @@ namespace HomeHub.App.Controllers
             return View(logs);
         }
 
+        public async Task<IActionResult> RefundRequests()
+        {
+            // Fetch refund requests from the logs
+            var refundRequests = await _context.OrdersLogs
+                .Where(log => log.Status == "Refund Requested")
+                .Select(log => new RefundRequestViewModel
+                {
+                    LogId = log.LogId,
+                    OrderId = log.OrderId,
+                    OrderDate = log.OrderDate,
+                    FirstName = log.FirstName,
+                    LastName = log.LastName,
+                    BusinessId = log.BusinessId,
+                    Item = log.Item,
+                    Qty = log.Qty,
+                    Date = log.Date,
+                    Status = log.Status
+                }).ToListAsync();
+
+            return View(refundRequests);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ProcessRefund(int clientId)
+        {
+            // Step 1: Retrieve the order by clientId
+            var order = await _context.ClientOrders
+                .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == true); // Only if already accepted
+
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            // Step 2: Log the refund request in the OrdersLog and change the order status
+            var refundLog = new OrdersLog
+            {
+                LogId = Guid.NewGuid().ToString(),
+                OrderId = order.ClientId.ToString(),
+                OrderDate = order.OrderDate,
+                FirstName = order.FirstName,
+                LastName = order.LastName,
+                BusinessId = order.BusinessId,
+                Item = order.OrderedPs,
+                Qty = order.Quantity,
+                Date = DateTime.Now,
+                Status = "Refunded"
+            };
+
+            _context.OrdersLogs.Add(refundLog);
+
+            // Step 3: Remove the order from ClientOrders if it should be voided
+            _context.ClientOrders.Remove(order);
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Orders));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeclineRefund(string orderId)
+        {
+            var orderLog = await _context.OrdersLogs
+                .FirstOrDefaultAsync(log => log.OrderId == orderId && log.Status == "Refund Requested");
+
+            if (orderLog == null)
+            {
+                return NotFound();
+            }
+
+            orderLog.Status = "Refund Declined";
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("RefundRequests");
+        }
+
         public IActionResult ManagePromo()
         {
             //List<Promo> list = _context.Products.Where(x => x.ProviderID == id).ToList();
@@ -285,7 +365,7 @@ namespace HomeHub.App.Controllers
         }
 
 
-        
+
         public async Task<IActionResult> EditPromo(int id)
         {
             var promo = await _context.Promos.FindAsync(id);
@@ -318,8 +398,8 @@ namespace HomeHub.App.Controllers
             return RedirectToAction("ManagePromo");
         }
 
-        
+        // add
 
     }
-    
+
 }
