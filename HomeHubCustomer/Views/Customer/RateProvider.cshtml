@@ -1,25 +1,94 @@
 ﻿@model ClientOrder
 
 <style>
-    .html {
-        font-family: Arial
-    }
-
+    /* Card styling */
     .card {
         background-color: #203B81;
         color: #F1F1F1;
-        border-radius: 30px;
-        width: 300;
-        height: 400px;
-        padding-top: 42px;
-        padding-left: 55px;
-        padding-right: 55px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 800px;
+        padding: 30px;
+        margin: auto;
+        box-sizing: border-box;
+        height: auto;
+    }
+
+    /* Header styling */
+    h1 {
+        font-size: 38px;
+        color: #203B81;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 30px;
+        color: #F1F1F1;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 20px;
+        color: #F1F1F1;
+        margin-bottom: 10px;
+    }
+
+    /* Table styling */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+        color: #F1F1F1;
+    }
+
+    th {
+        font-weight: bold;
+    }
+
+    /* Form styling */
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    /* Button styling */
+    input[type="submit"] {
+        background-color: #007BFF;
+        color: #F1F1F1;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
         margin-top: 20px;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #1a3151;
+        }
+
+    /* Form label styling */
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
     }
 </style>
 
 <div class="text-center">
-    <h1 class="display-4">Rate Your Order</h1>
+    <h1>Rate Your Order</h1>
 </div>
 
 <div class="card">
@@ -29,7 +98,7 @@
 
 
         <!--Provider Name -->
-        <h1>@ViewBag.BusinessName</h1>
+        <h2>@ViewBag.BusinessName</h2>
 
         <!--Order Details -->
         <h3>Order Summary</h3>

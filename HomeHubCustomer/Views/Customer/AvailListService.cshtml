@@ -1,71 +1,203 @@
 ﻿@model List<Service>
 
+<style>
+    /* General container styling */
+    .container {
+        color: #203B81;
+        border-radius: 10px;
+        width: 60%;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Card styling */
+    .card {
+        background-color: #203B81;
+        color: #F1F1F1;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+    /* Header styling */
+    h2 {
+        font-size: 42px;
+        color: #203B81;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 26;
+        color: #203B81;
+    }
+
+    /* Table styling for service list */
+    .service-list table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .service-list th, .service-list td {
+        padding: 10px;
+        text-align: left;
+        color: #F1F1F1;
+    }
+
+    .service-list th {
+        font-weight: bold;
+    }
+
+    .date-time-container {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .date-time-item {
+        flex: 1;
+    }
+
+        .date-time-item label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .date-time-item input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+    /* Input and label styling */
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    input[type="text"], select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    /* Button group styling */
+    .button-group {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .confirm-btn {
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .cancel-btn {
+        background-color: #FF4C4C;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+        .confirm-btn:hover, .cancel-btn:hover {
+            opacity: 0.9;
+        }
+
+</style>
+
 <body>
-    <!-- Name and address of chosen provider-->
-    <!-- Product List of chosen provider-->
-    <div class="card">
-        <form asp-controller="Customer" asp-action="ConfirmOrder" method="post">
-            <input type="hidden" name="businessId" value="@ViewBag.ProviderID" />
+    <div class="container">
+        <!-- Name and address of chosen provider-->
+        <h2>@ViewBag.BusinessName</h2>
+        <p>@ViewBag.Address</p>
 
-            @if (Model.Count() < 1)
-            {
-                <div class="alert alert-info">
-                    No Services Found
+
+        <!-- Service List of chosen provider-->
+        <div class ="card">
+            <form asp-controller="Customer" asp-action="ConfirmOrder" method="post">
+                <input type="hidden" name="businessId" value="@ViewBag.ProviderID" />
+
+                @if (Model.Count() < 1)
+                {
+                    <div class="alert alert-info">
+                        No Services Found
+                    </div>
+                }
+                else
+                {
+                    <div class="service-list">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Services</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td><input type="radio" id="chosen" name="chosen" value="@item.ServiceItem" onclick="setPrice(@item.Fee)">@item.ServiceItem</td>
+                                        <td>@item.Fee</td>
+                                    </tr>
+                                }
+                                <input type="hidden" id="price" name="price" value="">
+                            </tbody>
+                        </table>
+                    </div>
+                }
+
+                <!--Date and Time-->
+                <div class="date-time-container">
+                    <div class="date-time-item">
+                        <label>Date of Booking</label>
+                        <input type="date" id="ddeliv" name="ddeliv" />
+                    </div>
+                    <div class="date-time-item">
+                        <label>Time of Booking</label>
+                        <input type="time" id="tdeliv" name="tdeliv" />
+                    </div>
                 </div>
-            }
-            else
-            {
-                <table class="table table-striped table-hover">
-                    <thead>
-                    <th>Service</th>
-                    <th>Price</th>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model)
-                        {
-                            <tr>
-                                <td><input type="radio" id="chosen" name="chosen" value="@item.ServiceItem" onclick="setPrice(@item.Fee)">@item.ServiceItem</td>
-                                <td>@item.Fee</td>
-                            </tr>
-                        }
-                        <input type="hidden" id="price" name="price" value="">
-                    </tbody>
-                </table>
-            }
 
-            <table>
-                <tr>
-                    <td>Date of Booking</td>
-                    <td>Time of Booking</td>
-                </tr>
-                <tr>
-                    <td><input type="date" id="ddeliv" name="ddeliv" />
-                    <td>
-                    <td><input type="time" id="tdeliv" name="tdeliv" /></td>
-                </tr>
-            </table>
 
-            <label for="requestatt">Request Attachment</label>
-            <input type="text" id="requestatt" name="requestatt" />
+                <label for="requestatt">Request Attachment</label>
+                <input type="text" id="requestatt" name="requestatt" />
 
-            <div>
-                Mode of Payment
+
+                <label>Mode of Payment</label>
                 <select name="mode" id="mode">
                     <option value="Cash">Cash</option>
                     <option value="GCash">GCash</option>
                 </select>
-            </div>
 
-            <div>
-                Promo Code
+
+                <label>Promo Code</label>
                 <input type="text" id="promo" name="promo" />
-            </div>
 
-            <!-- To pass logged in user's' id
-            <input type="hidden" id="userID" value="@User.Identity.Name" />-->
 
-            <input type="submit" value="Book" />
-        </form>
+                <!-- To pass logged in user's' id
+                <input type="hidden" id="userID" value="@User.Identity.Name" />-->
+
+                <div class="button-group">
+                    <input type="submit" value="Book" class="confirm-btn" />
+                    <a asp-action="Index" class="cancel-btn">Cancel</a>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script>
