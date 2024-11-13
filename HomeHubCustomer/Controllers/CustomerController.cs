@@ -82,10 +82,14 @@ namespace HomeHub.App.Controllers
         {
             //To only show only the chosen provider's products
             //List<Product> list = context.Products.Where(x => x.ProviderID == businessId).ToList();
+            var provider = context.Businesses.FirstOrDefault(x => x.UserID == businessId);
 
             var products = context.Products.Where(x => x.ProviderID == businessId).ToList();
 
             ViewBag.ProviderID = businessId;
+            ViewBag.BusinessName = provider.BusinessName;
+            ViewBag.Address = provider.CompanyAddress;
+
             return View(products);
         }
 
@@ -93,10 +97,14 @@ namespace HomeHub.App.Controllers
         {
             //To only show only the chosen provider's services
             //List<Service> list = context.Services.Where(x => x.ProviderID == id).ToList();
+            var provider = context.Businesses.FirstOrDefault(x => x.UserID == businessId);
 
             var services = context.Services.Where(x => x.ProviderID == businessId).ToList();
 
             ViewBag.ProviderID = businessId;
+            ViewBag.BusinessName = provider.BusinessName;
+            ViewBag.Address = provider.CompanyAddress;
+
             return View(services);
         }
 
