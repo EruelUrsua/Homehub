@@ -1,56 +1,183 @@
 ﻿@model IEnumerable<HomeHub.App.Models.ProviderOrderViewModel>
 
-<h2>Orders</h2>
+<style>
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Client ID</th>
-            <th>Order Date</th>
-            <th>Schedule</th>
-            <th>Ordered Items</th>
-            <th>Quantity</th>
-            <th>Fee</th>
-            <th>Status</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var order in Model)
-        {
-            <tr>
-                <td>@order.ClientId</td>
-                <td>@order.OrderDate.ToShortDateString()</td>
-                <td>@order.Schedule.ToShortDateString()</td>
-                <td>@order.OrderedPs</td>
-                <td>@order.Quantity</td>
-                <td>@order.Fee</td>
-                <td>
-                    @if (order.Status)
-                    {
-                        <span class="text-success">Accepted</span>
-                    }
-                    else
-                    {
-                        <span class="text-warning">Pending</span>
-                    }
-                </td>
-                <td>
-                    @if (order.Status)
-                    {
-                        <form asp-action="UndoAccept" asp-route-clientId="@order.ClientId" method="post">
-                            <button type="submit" class="btn btn-sm btn-warning">Undo Accept</button>
-                        </form>
-                    }
-                    else
-                    {
-                        <form asp-action="AcceptOrder" asp-route-clientId="@order.ClientId" method="post">
-                            <button type="submit" class="btn btn-sm btn-primary">Accept</button>
-                        </form>
-                    }
-                </td>
-            </tr>
+    .card {
+        background-color: #203B81;
+        color: #F1F1F1;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 900px;
+        margin: 20px auto;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 42px;
+        color: #203B81;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .table-container {
+        overflow-x: auto;
+        margin-top: 20px;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .table th, .table td {
+            padding: 10px;
+            text-align: left;
+            color: #F1F1F1;
         }
-    </tbody>
-</table>
 
+        .table th {
+            font-weight: bold;
+            background-color: #203B81;
+        }
+
+        .table tbody tr {
+            background-color: #203B81;
+            transition: background-color 0.2s;
+        }
+
+            .table tbody tr:hover {
+                background-color: #2a4b91;
+            }
+
+        .table tbody td {
+            border-bottom: 1px solid #1c3a60;
+        }
+
+    .action-buttons {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.875rem;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        width: 100%;
+        max-width: 120px;
+        text-transform: uppercase;
+    }
+
+    .btn-primary {
+        background-color: #3498db;
+    }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+
+    .btn-danger {
+        background-color: #e74c3c;
+    }
+
+        .btn-danger:hover {
+            background-color: #c0392b;
+        }
+
+    .btn-success {
+        background-color: #27ae60;
+        width: 200px;
+    }
+
+        .btn-success:hover {
+            background-color: #1e8449;
+        }
+
+    .mb-3 {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+        .mb-3 .btn {
+            white-space: nowrap;
+            flex: 0 1 auto;
+            min-width: 200px;
+        }
+</style>
+
+<body>
+    <div class="container">
+        <h2>Orders</h2>
+
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Client ID</th>
+                        <th>Order Date</th>
+                        <th>Schedule</th>
+                        <th>Ordered Items</th>
+                        <th>Quantity</th>
+                        <th>Fee</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model)
+                    {
+                        <tr>
+                            <td>@order.ClientId</td>
+                            <td>@order.OrderDate.ToShortDateString()</td>
+                            <td>@order.Schedule.ToShortDateString()</td>
+                            <td>@order.OrderedPs</td>
+                            <td>@order.Quantity</td>
+                            <td>@order.Fee</td>
+                            <td>
+                                @if (order.Status)
+                                {
+                                    <span class="text-success">Accepted</span>
+                                }
+                                else
+                                {
+                                    <span class="text-warning">Pending</span>
+                                }
+                            </td>
+                            <td>
+                                @if (order.Status)
+                                {
+                                    <form asp-action="UndoAccept" asp-route-clientId="@order.ClientId" method="post">
+                                        <button type="submit" class="btn btn-sm btn-warning">Undo Accept</button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <form asp-action="AcceptOrder" asp-route-clientId="@order.ClientId" method="post">
+                                        <button type="submit" class="btn btn-sm btn-success">Accept</button>
+                                    </form>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
