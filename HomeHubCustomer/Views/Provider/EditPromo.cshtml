@@ -1,46 +1,136 @@
 ﻿@model PromoViewModel
 
-<div class="text-center">
+<style>
+    <style >
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .card {
+        background-color: #203B81;
+        color: #F1F1F1;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 900px;
+        margin: 20px auto;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 42px;
+        color: #203B81;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 1rem;
+        color: #F1F1F1;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #1c3a60;
+        background-color: #2a4b91;
+        color: #F1F1F1;
+        font-size: 1rem;
+    }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #3498db;
+            background-color: #203B81;
+            color: #F1F1F1
+        }
+
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        width: 100%;
+        max-width: 200px;
+        margin-top: 20px;
+    }
+
+    .btn-success {
+        background-color: #27ae60;
+    }
+
+    .btn-success:hover {
+        background-color: #1e8449;
+    }
+
+    .text-danger {
+        color: #e74c3c;
+    }
+</style>
+
+<body>
+    
+<div class="container">
     <h1 class="display-4">Edit Promo</h1>
-</div>
 
-<form asp-action="EditPromo">
-    <input type="hidden" asp-for="PromoID" />
-    <div class="form-group">
-        <label asp-for="PromoName"></label>
-        <input asp-for="PromoName" class="form-control" />
-        <span asp-validation-for="PromoName" class="text-danger"></span>
+    <div class="card">
+        <form asp-action="EditPromo">
+            <input type="hidden" asp-for="PromoID" />
+            <div class="form-group">
+                <label asp-for="PromoName"></label>
+                <input asp-for="PromoName" class="form-control" />
+                <span asp-validation-for="PromoName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PromoCode"></label>
+                <input asp-for="PromoCode" class="form-control" />
+                <span asp-validation-for="PromoCode" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PromoStart"></label>
+                <input asp-for="PromoStart" class="form-control" />
+                <span asp-validation-for="PromoStart" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PromoEnd"></label>
+                <input asp-for="PromoEnd" class="form-control" />
+                <span asp-validation-for="PromoEnd" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="BusinessName"></label>
+                <input asp-for="BusinessName" class="form-control" />
+                <span asp-validation-for="BusinessName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Discount"></label>
+                <input asp-for="Discount" class="form-control" />
+                <span asp-validation-for="Discount" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-success">Save Changes</button>
+        </form>
+        </div>
     </div>
-
-    <div class="form-group">
-        <label asp-for="PromoCode"></label>
-        <input asp-for="PromoCode" class="form-control" />
-        <span asp-validation-for="PromoCode" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="PromoStart"></label>
-        <input asp-for="PromoStart" class="form-control" />
-        <span asp-validation-for="PromoStart" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="PromoEnd"></label>
-        <input asp-for="PromoEnd" class="form-control" />
-        <span asp-validation-for="PromoEnd" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="BusinessName"></label>
-        <input asp-for="BusinessName" class="form-control" />
-        <span asp-validation-for="BusinessName" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Discount"></label>
-        <input asp-for="Discount" class="form-control" />
-        <span asp-validation-for="Discount" class="text-danger"></span>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Save Changes</button>
-</form>
+</body>
