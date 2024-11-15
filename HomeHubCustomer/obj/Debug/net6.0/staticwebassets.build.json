@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uj4YDjegqdzSArgy2J1oq0ezDhT7Y1SyMBNUhJoLaLY=",
+  "Hash": "MxxZklDzWaglqeYIhjFsUYpP5qtdmGsUK0Uf5IxQD8Y=",
   "Source": "HomeHub.App",
   "BasePath": "_content/HomeHub.App",
   "Mode": "Default",
@@ -1086,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\projecticon\\ProjectIcon.png"
+    },
+    {
+      "Identity": "D:\\HomeHub\\Homehub\\HomeHubCustomer\\wwwroot\\UserList\\UserList.html",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HomeHub\\Homehub\\HomeHubCustomer\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "UserList/UserList.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserList\\UserList.html"
     }
   ]
 }
