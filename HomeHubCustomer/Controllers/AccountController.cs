@@ -2,7 +2,10 @@
 using HomeHub.DataModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Data;
 
 namespace HomeHub.App.Controllers
 {
@@ -11,7 +14,7 @@ namespace HomeHub.App.Controllers
         private readonly HomeHubContext context;
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
-
+       
         public AccountController(UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager, HomeHubContext context)
         {
@@ -115,43 +118,50 @@ namespace HomeHub.App.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> SignIn(SignInViewModel model, string? returnUrl)
+        public async Task<IActionResult> SignIn(SignInViewModel model)
         {
-            ApplicationUser user = await userManager.FindByNameAsync(model.Email);
-            if (user != null)
-            {
-                var result = await signInManager.PasswordSignInAsync(user, model.Password, false, false);
+            // var user = await userManager.FindByNameAsync(model.Email);
+            //if (ModelState.IsValid)
+            //{
 
-                if (result.Succeeded)
-                {
-                    if (!string.IsNullOrEmpty(returnUrl))
-                        return LocalRedirect(returnUrl);
-                    else
-                    {
-                        //return LocalRedirect("/Home/Index");
-                        if (user.Usertype == "Customer")
-                        {
-                            return LocalRedirect("/Customer/Add");
-                        }
-                        else if (user.Usertype == "Business")
-                        {
-                            return LocalRedirect("/Provider/Index");
-                        }
-                    }
-                }
-                else
-                {
-                    ModelState.AddModelError("Login Error", "Invalid Credentials");
-                    return View(model);
-                }
+            var email = model.Email;
+            var password = model.Password;
+
+            var usersC = await context.Customers.Where(usr => usr.Email == email && usr.Password == password).Select(usr => new{
+            
+                usr.UserId,
+                usr.Email,
+                usr.Password,
+    
+            }).ToListAsync();
+
+            var usersB = await context.Customers.Where(usr => usr.Email == email && usr.Password == password).Select(usr => new {
+
+                usr.UserId,
+                usr.Email,
+                usr.Password,
+
+            }).ToListAsync();
+
+
+            if (usersC.Count > 0)
+            {
+
+                return RedirectToAction("Index", "Customer");
             }
+
+            else if (usersB.Count > 0)
+            {
+
+                return RedirectToAction("ProviderHome", "Provider");
+            }
+
             else
             {
-                ModelState.AddModelError("Login Error", "Invalid Credentials");
                 return View(model);
             }
 
-            return RedirectToAction("Index", "Home");
+         
         }
 
         [HttpPost]
