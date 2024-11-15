@@ -150,7 +150,7 @@
                             <td>@item.BusinessName</td>
                             <td>@item.Discount</td>
                             <td>
-                                <form asp-controller="Provider" asp-action="EditPromo">
+                                <form asp-controller="Provider" asp-action="EditPromo" method="get">
                                     <input type="hidden" name="id" value="@item.PromoId" />
                                     <input type="submit" class="btn btn-primary" value="Edit Promo" />
                                 </form>
@@ -160,7 +160,6 @@
                 </tbody>
             </table>
         </div>
-
 
         <div class="mb-3 text-center">
             <form asp-controller="Provider" asp-action="CreatePromo">

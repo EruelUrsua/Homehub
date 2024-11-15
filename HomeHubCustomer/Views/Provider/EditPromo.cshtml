@@ -1,7 +1,6 @@
 ﻿@model PromoViewModel
 
 <style>
-    <style >
     .container {
         width: 100%;
         margin: 0 auto;
@@ -86,51 +85,52 @@
 </style>
 
 <body>
-    
-<div class="container">
-    <h1 class="display-4">Edit Promo</h1>
 
-    <div class="card">
-        <form asp-action="EditPromo">
-            <input type="hidden" asp-for="PromoID" />
-            <div class="form-group">
-                <label asp-for="PromoName"></label>
-                <input asp-for="PromoName" class="form-control" />
-                <span asp-validation-for="PromoName" class="text-danger"></span>
-            </div>
+    <div class="container">
+        <h1 class="display-4">Edit Promo</h1>
 
-            <div class="form-group">
-                <label asp-for="PromoCode"></label>
-                <input asp-for="PromoCode" class="form-control" />
-                <span asp-validation-for="PromoCode" class="text-danger"></span>
-            </div>
+        <div class="card">
+            <form asp-action="EditPromo" method="post">
+                <input type="hidden" asp-for="PromoID" />
 
-            <div class="form-group">
-                <label asp-for="PromoStart"></label>
-                <input asp-for="PromoStart" class="form-control" />
-                <span asp-validation-for="PromoStart" class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label asp-for="PromoName"></label>
+                    <input asp-for="PromoName" class="form-control" />
+                    <span asp-validation-for="PromoName" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="PromoEnd"></label>
-                <input asp-for="PromoEnd" class="form-control" />
-                <span asp-validation-for="PromoEnd" class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label asp-for="PromoCode"></label>
+                    <input asp-for="PromoCode" class="form-control" />
+                    <span asp-validation-for="PromoCode" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="BusinessName"></label>
-                <input asp-for="BusinessName" class="form-control" />
-                <span asp-validation-for="BusinessName" class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label asp-for="PromoStart"></label>
+                    <input asp-for="PromoStart" class="form-control" type="date" />
+                    <span asp-validation-for="PromoStart" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="Discount"></label>
-                <input asp-for="Discount" class="form-control" />
-                <span asp-validation-for="Discount" class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label asp-for="PromoEnd"></label>
+                    <input asp-for="PromoEnd" class="form-control" type="date" />
+                    <span asp-validation-for="PromoEnd" class="text-danger"></span>
+                </div>
 
-            <button type="submit" class="btn btn-success">Save Changes</button>
-        </form>
+                <div class="form-group">
+                    <label asp-for="BusinessName"></label>
+                    <input asp-for="BusinessName" class="form-control" />
+                    <span asp-validation-for="BusinessName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Discount"></label>
+                    <input asp-for="Discount" class="form-control" type="number" step="0.01" />
+                    <span asp-validation-for="Discount" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-success">Save Changes</button>
+            </form>
         </div>
     </div>
 </body>
