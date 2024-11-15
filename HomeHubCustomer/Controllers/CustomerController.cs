@@ -326,6 +326,13 @@ namespace HomeHub.App.Controllers
         [HttpPost]
         public IActionResult SubmitRating(int score, string comments, int clientId, int businessId)
         {
+
+            if (string.IsNullOrWhiteSpace(comments))
+            {
+                TempData["ErrorMessage"] = "Please enter your feedback.";
+                return RedirectToAction("RateProvider", new { LogId = clientId.ToString() });
+            }
+
             var rating = new Rating
             {
                 OrderId = clientId,
@@ -385,6 +392,18 @@ namespace HomeHub.App.Controllers
         [HttpPost]
         public IActionResult SubmitReport(string title, string description, int clientId)
         {
+            if (string.IsNullOrWhiteSpace(title))
+            {
+                TempData["ErrorMessage"] = "Please enter a title.";
+                return RedirectToAction("ReportProblem", new { LogId = clientId.ToString() });
+            }
+
+            if (string.IsNullOrWhiteSpace(description))
+            {
+                TempData["ErrorMessage"] = "Please Describe the problem.";
+                return RedirectToAction("ReportProblem", new { LogId = clientId.ToString() });
+            }
+
             var report = new Report
             {
                 ReportId = GenerateReportId(),
