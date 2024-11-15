@@ -135,9 +135,9 @@ namespace HomeHub.App.Controllers
     
             }).ToListAsync();
 
-            var usersB = await context.Customers.Where(usr => usr.Email == email && usr.Password == password).Select(usr => new {
+            var usersB = await context.Businesses.Where(usr => usr.Email == email && usr.Password == password).Select(usr => new {
 
-                usr.UserId,
+                usr.UserID,
                 usr.Email,
                 usr.Password,
 
