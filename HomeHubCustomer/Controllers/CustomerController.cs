@@ -114,6 +114,18 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ConfirmOrder(OrderAvailViewModel model, int businessId)
         {
+
+            if (string.IsNullOrWhiteSpace(model.ddeliv))
+            {
+                ModelState.AddModelError("ddeliv", "Delivery date is required.");
+            }
+
+            if (string.IsNullOrWhiteSpace(model.tdeliv))
+            {
+                ModelState.AddModelError("tdeliv", "Delivery time is required.");
+            }
+
+
             if (model.qty == 0)
             {
                 model.qty = 1;

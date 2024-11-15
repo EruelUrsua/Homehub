@@ -144,7 +144,7 @@
                                 @foreach (var item in Model)
                                 {
                                     <tr>
-                                        <td><input type="radio" id="chosen" name="chosen" value="@item.ProductItem" onclick="setPrice('@item.Price')">@item.ProductItem</td>
+                                        <td><input type="radio" id="chosen" name="chosen" value="@item.ProductItem" onclick="setPrice('@item.Price')" required>@item.ProductItem</td>
                                         <td>@item.Price</td>
                                     </tr>
                                 }
@@ -155,16 +155,16 @@
                 }
 
                 <label for="qty">Quantity</label>
-                <input type="number" id="qty" name="qty" />
+                <input type="number" id="qty" name="qty" placeholder="1" min="1"/>
 
                 <div class="date-time-container">
                     <div class="date-time-item">
                         <label>Date of Delivery</label>
-                        <input type="date" id="ddeliv" name="ddeliv" />
+                        <input type="date" id="ddeliv" name="ddeliv" required/>
                     </div>
                     <div class="date-time-item">
                         <label>Time of Delivery</label>
-                        <input type="time" id="tdeliv" name="tdeliv" />
+                        <input type="time" id="tdeliv" name="tdeliv" required/>
                     </div>
                 </div>
 
