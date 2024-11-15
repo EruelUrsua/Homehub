@@ -56,7 +56,7 @@ namespace HomeHub.App.Controllers
 
             //To only show Product Providers
             List<Business> list = context.Businesses.Where(x => x.Businesstype == '0').ToList();
-            ViewBag.Businesses = list; // Store businesses in ViewBag
+            ViewBag.Businesses = list; 
             return View(list);
         }
 
@@ -80,8 +80,6 @@ namespace HomeHub.App.Controllers
 
         public IActionResult OrderListProduct(int businessId)
         {
-            //To only show only the chosen provider's products
-            //List<Product> list = context.Products.Where(x => x.ProviderID == businessId).ToList();
             var provider = context.Businesses.FirstOrDefault(x => x.UserID == businessId);
 
             var products = context.Products.Where(x => x.ProviderID == businessId).ToList();
@@ -95,8 +93,6 @@ namespace HomeHub.App.Controllers
 
         public IActionResult AvailListService(int businessId)
         {
-            //To only show only the chosen provider's services
-            //List<Service> list = context.Services.Where(x => x.ProviderID == id).ToList();
             var provider = context.Businesses.FirstOrDefault(x => x.UserID == businessId);
 
             var services = context.Services.Where(x => x.ProviderID == businessId).ToList();
@@ -137,7 +133,6 @@ namespace HomeHub.App.Controllers
             }
 
             var userId = 2; //Will replace with logged-in user id retrieval logic
-            //var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var user = await context.Customers.FindAsync(userId);
 
             if (user == null)
@@ -157,10 +152,6 @@ namespace HomeHub.App.Controllers
             entity.FirstName = user.Firstname;
             entity.LastName = user.Lastname;
             //entity.UserId = int.Parse(model.userID);
-            //trying to figure out
-            //entity.RatingId = (lastRating != null ? lastRating.RatingId : 0) + 1;
-            //entity.RatingId = 1 + entity.ClientId;
-            //entity.ReportId = 1 + entity.ClientId;
             entity.Quantity = model.qty;
             entity.ModeOfPayment = model.mode;
 
@@ -173,9 +164,6 @@ namespace HomeHub.App.Controllers
 
             model.discount = Discount;
             model.totalPrice = TotalPrice;
-
-            //Snackbar Message
-            TempData["SnackbarMessage"] = "Your order has been placed";
 
             return View("OrderSummary", model);
         }
@@ -193,20 +181,17 @@ namespace HomeHub.App.Controllers
 
         public IActionResult ViewOrders()
         {
-            //List<OrdersLog> list = context.OrdersLogs.ToList();
-            //return View(list);
-
-            // Retrieve all OrdersLogs entries for the logged-in user (dagdagan ng UserID na filter pag ayos na)
+            //Retrieve all OrdersLogs entries for the logged-in user (dagdagan ng UserID na filter pag ayos na)
             var orders = context.OrdersLogs.ToList();
 
-            // Retrieve all rated order IDs to identify which orders are rated
+            //Retrieve all rated order IDs to identify which orders are rated
             var ratedOrderIds = context.Ratings.Select(r => r.OrderId).ToHashSet();
 
-            // Attach an "IsRated" flag to each OrdersLog entry based on whether it exists in the Ratings table
+            //Attach an "IsRated" flag to each OrdersLog entry based on whether it exists in the Ratings table
             foreach (var order in orders)
             {
                 // Check if the order ID is in the set of rated order IDs
-                order.IsRated = ratedOrderIds.Contains(int.Parse(order.OrderId)); // Adjust if OrderId is not a string
+                order.IsRated = ratedOrderIds.Contains(int.Parse(order.OrderId));
             }
 
             return View(orders);
@@ -301,10 +286,8 @@ namespace HomeHub.App.Controllers
                 return RedirectToAction("ViewOrders");
             }
 
-            // Attempt to convert the OrderId from OrdersLog to an int
             if (int.TryParse(orderLog.OrderId, out int clientId))
             {
-                // Retrieve the corresponding client order using the converted clientId
                 var clientOrder = context.ClientOrders.FirstOrDefault(co => co.ClientId == clientId);
 
                 if (clientOrder == null)
@@ -313,7 +296,6 @@ namespace HomeHub.App.Controllers
                     return RedirectToAction("ViewOrders");
                 }
 
-                // Retrieve business name using BusinessId from ClientOrder
                 var business = context.Businesses.FirstOrDefault(b => b.UserID == int.Parse(clientOrder.BusinessId));
                 if (business != null)
                 {
@@ -363,10 +345,8 @@ namespace HomeHub.App.Controllers
                 return RedirectToAction("ViewOrders");
             }
 
-            // Attempt to convert the OrderId from OrdersLog to an int
             if (int.TryParse(orderLog.OrderId, out int clientId))
             {
-                // Retrieve the corresponding client order using the converted clientId
                 var clientOrder = context.ClientOrders.FirstOrDefault(co => co.ClientId == clientId);
 
                 if (clientOrder == null)
@@ -375,7 +355,6 @@ namespace HomeHub.App.Controllers
                     return RedirectToAction("ViewOrders");
                 }
 
-                // Retrieve business name using BusinessId from ClientOrder
                 var business = context.Businesses.FirstOrDefault(b => b.UserID == int.Parse(clientOrder.BusinessId));
                 if (business != null)
                 {
