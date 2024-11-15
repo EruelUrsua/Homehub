@@ -332,7 +332,6 @@ namespace HomeHub.App.Controllers
 
         public IActionResult ManagePromo()
         {
-            //List<Promo> list = _context.Products.Where(x => x.ProviderID == id).ToList();
             List<Promo> list = _context.Promos.ToList();
             return View(list);
         }
@@ -369,8 +368,12 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> EditPromo(int id)
         {
             var promo = await _context.Promos.FindAsync(id);
+            if (promo == null)
+            {
+                return RedirectToAction("ManagePromo");
+            }
 
-            var PromoViewModel = new PromoViewModel
+            var promoViewModel = new PromoViewModel
             {
                 PromoID = promo.PromoId,
                 PromoName = promo.PromoName,
@@ -381,24 +384,34 @@ namespace HomeHub.App.Controllers
                 Discount = promo.Discount
             };
 
-            if (promo == null)
-            {
-                return RedirectToAction("ManagePromo");
-            }
-
-            return View(promo);
+            return View(promoViewModel);
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditPromo(Promo PromoViewModel)
+        public async Task<IActionResult> EditPromo(PromoViewModel promoViewModel)
         {
-            _context.Set<Promo>().Update(PromoViewModel);
-            await _context.SaveChangesAsync();
+            if (ModelState.IsValid)
+            {
+                var promo = await _context.Promos.FindAsync(promoViewModel.PromoID);
+                if (promo == null)
+                {
+                    return RedirectToAction("ManagePromo");
+                }
 
-            return RedirectToAction("ManagePromo");
+                promo.PromoName = promoViewModel.PromoName;
+                promo.PromoCode = promoViewModel.PromoCode;
+                promo.PromoStart = promoViewModel.PromoStart;
+                promo.PromoEnd = promoViewModel.PromoEnd;
+                promo.BusinessName = promoViewModel.BusinessName;
+                promo.Discount = promoViewModel.Discount;
+
+                _context.Promos.Update(promo);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("ManagePromo");
+            }
+            return View(promoViewModel);
         }
-
-        // add
 
     }
 

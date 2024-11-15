@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5ZFXgsOBjbUWE3H6+Ic7sYBbatF4DfDt2LKg09vpAJo=",
+  "Hash": "uj4YDjegqdzSArgy2J1oq0ezDhT7Y1SyMBNUhJoLaLY=",
   "Source": "HomeHub.App",
   "BasePath": "_content/HomeHub.App",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\HomeHub\\Homehub\\HomeHubCustomer\\wwwroot\\projecticon\\ProjectIcon.png",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HomeHub\\Homehub\\HomeHubCustomer\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "projecticon/ProjectIcon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\projecticon\\ProjectIcon.png"
     }
   ]
 }
