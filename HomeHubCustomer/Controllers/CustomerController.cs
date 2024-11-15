@@ -448,7 +448,5 @@ namespace HomeHub.App.Controllers
 
             return $"RPT-{datePart}-{sequenceNumber:D3}";
         }
-
-        // comment
     }
 }

@@ -43,6 +43,12 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddProduct(ProductServiceViewModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                TempData["Error"] = "Invalid input. Please correct the errors and try again.";
+                return View(model);
+            }
+
             Product entity = new Product();
             entity.ProductId = model.ProductId;
             entity.ProductItem = model.ProductItem;
@@ -51,6 +57,8 @@ namespace HomeHub.App.Controllers
             entity.ContainerType = model.ContainerType;
             await _context.AddAsync(entity);
             await _context.SaveChangesAsync();
+
+            TempData["Message"] = "Product added successfully!";
 
             return RedirectToAction("ProductsServices");
         }
@@ -65,6 +73,12 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddService(ProductServiceViewModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                TempData["Error"] = "Invalid input. Please correct the errors and try again.";
+                return View(model);
+            }
+
             Service entity = new Service();
             entity.ServiceId = model.ServiceId;
             entity.ServiceItem = model.ServiceItem;
@@ -73,6 +87,8 @@ namespace HomeHub.App.Controllers
             entity.Available = model.Available;
             await _context.AddAsync(entity);
             await _context.SaveChangesAsync();
+
+            TempData["Message"] = "Service added successfully!";
 
             return RedirectToAction("ProductsServices");
         }
@@ -98,8 +114,16 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> UpdateProduct(Product model)
         {
+            if (!ModelState.IsValid)
+            {
+                TempData["Error"] = "Invalid input. Please correct the errors and try again.";
+                return View(model);
+            }
+
             _context.Set<Product>().Update(model);
             await _context.SaveChangesAsync();
+
+            TempData["Message"] = "Product updated successfully!";
 
             return RedirectToAction("ProductsServices");
         }
@@ -107,6 +131,7 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> UpdateService(string? id)
         {
             var service = await _context.Services.FindAsync(id);
+
             var viewModel = new ProductServiceViewModel
             {
                 ServiceId = service.ServiceId,
@@ -125,8 +150,30 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> UpdateService(Service model)
         {
+            if (!ModelState.IsValid)
+            {
+                TempData["Error"] = "Invalid input. Please correct the errors and try again.";
+                return View(model);
+            }
+
+            var service = await _context.Services.FindAsync(model.ServiceId);
+
+            if (service == null)
+            {
+                TempData["Error"] = "Service not found.";
+                return RedirectToAction("ProductsServices");
+            }
+
+            service.ServiceItem = model.ServiceItem;
+            service.Details = model.Details;
+            service.Fee = model.Fee;
+            service.Available = model.Available;
+
+
             _context.Set<Service>().Update(model);
             await _context.SaveChangesAsync();
+
+            TempData["Message"] = "Service updated successfully!";
 
             return RedirectToAction("ProductsServices");
         }

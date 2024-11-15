@@ -91,7 +91,8 @@
         <h1>Add Service</h1>
 
         <div class="card">
-            <form asp-action="AddService">
+            <form asp-controller="Provider" method="post" asp-action="AddService">
+                @Html.AntiForgeryToken()
                 <div class="form-group">
                     <label asp-for="ServiceId" class="control-label">Service ID</label>
                     <input asp-for="ServiceId" class="form-control" />
@@ -124,3 +125,4 @@
         </div>
     </div>
 </body>
+

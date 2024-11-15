@@ -89,7 +89,8 @@
         <h1>Update Product</h1>
 
         <div class="card">
-            <form asp-action="UpdateProduct">
+            <form asp-controller="Provider" method="post" asp-action="UpdateProduct">
+                @Html.AntiForgeryToken()
                 <input type="hidden" asp-for="ProductId" />
 
                 <div class="form-group">
@@ -119,4 +120,5 @@
         </div>
     </div>
 </body>
+
 
