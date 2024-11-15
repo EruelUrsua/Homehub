@@ -187,7 +187,8 @@
                 {
                     var currentPromo = ViewBag.Promos[ViewBag.CurrentPromoIndex];
                     <div class="promo-item">
-                        <h4 style="color:#F1F1F1">@currentPromo.PromoName</h4>
+                        <h4 style="color:#F1F1F1">Code: @currentPromo.PromoCode</h4>
+                        <p>@currentPromo.PromoName</p>
                         <p>Ends on: @currentPromo.PromoEnd.ToString("yyyy-MM-dd")</p>
                     </div>
                 }
