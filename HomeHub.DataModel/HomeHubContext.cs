@@ -6,9 +6,7 @@ namespace HomeHub.DataModel;
 
 public partial class HomeHubContext : DbContext
 {
-    public HomeHubContext()
-    {
-    }
+
 
     public HomeHubContext(DbContextOptions<HomeHubContext> options)
         : base(options)
