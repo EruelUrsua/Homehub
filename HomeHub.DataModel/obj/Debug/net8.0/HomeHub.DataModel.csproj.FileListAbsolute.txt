@@ -1,0 +1,15 @@
+D:\Notes\C#\Homehub\HomeHub.DataModel\bin\Debug\net8.0\HomeHub.DataModel.deps.json
+D:\Notes\C#\Homehub\HomeHub.DataModel\bin\Debug\net8.0\HomeHub.DataModel.runtimeconfig.json
+D:\Notes\C#\Homehub\HomeHub.DataModel\bin\Debug\net8.0\HomeHub.DataModel.dll
+D:\Notes\C#\Homehub\HomeHub.DataModel\bin\Debug\net8.0\HomeHub.DataModel.pdb
+D:\Notes\C#\Homehub\HomeHub.DataModel\obj\Debug\net8.0\HomeHub.DataModel.csproj.AssemblyReference.cache
+D:\Notes\C#\Homehub\HomeHub.DataModel\obj\Debug\net8.0\HomeHub.DataModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\Notes\C#\Homehub\HomeHub.DataModel\obj\Debug\net8.0\HomeHub.DataModel.AssemblyInfoInputs.cache
+D:\Notes\C#\Homehub\HomeHub.DataModel\obj\Debug\net8.0\HomeHub.DataModel.AssemblyInfo.cs
+D:\Notes\C#\Homehub\HomeHub.DataModel\obj\Debug\net8.0\HomeHub.DataModel.csproj.CoreCompileInputs.cache
+D:\Notes\C#\Homehub\HomeHub.DataModel\obj\Debug\net8.0\HomeHub.DataModel.sourcelink.json
+D:\Notes\C#\Homehub\HomeHub.DataModel\obj\Debug\net8.0\HomeHub.DataModel.dll
+D:\Notes\C#\Homehub\HomeHub.DataModel\obj\Debug\net8.0\refint\HomeHub.DataModel.dll
+D:\Notes\C#\Homehub\HomeHub.DataModel\obj\Debug\net8.0\HomeHub.DataModel.pdb
+D:\Notes\C#\Homehub\HomeHub.DataModel\obj\Debug\net8.0\HomeHub.DataModel.genruntimeconfig.cache
+D:\Notes\C#\Homehub\HomeHub.DataModel\obj\Debug\net8.0\ref\HomeHub.DataModel.dll

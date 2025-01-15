@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeHub.DataModel", "HomeHub.DataModel\HomeHub.DataModel.csproj", "{68FEDE27-4A6B-4F30-A49F-551C2743F085}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeHub.DataModel", "HomeHub.DataModel\HomeHub.DataModel.csproj", "{68FEDE27-4A6B-4F30-A49F-551C2743F085}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeHub.App", "HomeHub.App\HomeHub.App.csproj", "{76FEDB8A-3136-4AA1-BB61-F89B5160CA46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{68FEDE27-4A6B-4F30-A49F-551C2743F085}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68FEDE27-4A6B-4F30-A49F-551C2743F085}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68FEDE27-4A6B-4F30-A49F-551C2743F085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76FEDB8A-3136-4AA1-BB61-F89B5160CA46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76FEDB8A-3136-4AA1-BB61-F89B5160CA46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76FEDB8A-3136-4AA1-BB61-F89B5160CA46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76FEDB8A-3136-4AA1-BB61-F89B5160CA46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
