@@ -1,0 +1,38 @@
+﻿@model HomeHub.App.Models.ProductServiceViewModel
+
+<h1>Add Product</h1>
+
+<form asp-controller="Provider" method="post" asp-action="AddProduct">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <div class="form-group">
+            <label asp-for="ProductId" class="control-label">Product ID</label>
+            <input asp-for="ProductId" class="form-control" />
+            <span asp-validation-for="ProductId" class="text-danger"></span>
+        </div>
+        <label asp-for="ProductItem" class="control-label">Product Item</label>
+        <input asp-for="ProductItem" class="form-control" />
+        <span asp-validation-for="ProductItem" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Qty" class="control-label">Quantity</label>
+        <input asp-for="Qty" class="form-control" />
+        <span asp-validation-for="Qty" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price" class="control-label">Price</label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ContainerType" class="control-label">Container Type</label>
+        <input asp-for="ContainerType" class="form-control" />
+        <span asp-validation-for="ContainerType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Add Product" class="btn btn-primary" />
+    </div>
+</form>
+
+
+
