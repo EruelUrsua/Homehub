@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\HomeHub.App.csproj": {}
+    "D:\\Notes\\C#\\Homehub\\HomeHub.App\\HomeHub.App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\HomeHub.App.csproj": {
+    "D:\\Notes\\C#\\Homehub\\HomeHub.App\\HomeHub.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\HomeHub.App.csproj",
+        "projectUniqueName": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\HomeHub.App.csproj",
         "projectName": "HomeHub.App",
-        "projectPath": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\HomeHub.App.csproj",
-        "packagesPath": "C:\\Users\\Charlize\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\obj\\",
+        "projectPath": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\HomeHub.App.csproj",
+        "packagesPath": "C:\\Users\\eruel\\.nuget\\packages\\",
+        "outputPath": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Charlize\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eruel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
-                "projectPath": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj"
+              "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
+                "projectPath": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj"
               }
             }
           }
@@ -76,20 +76,20 @@
         }
       }
     },
-    "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
+    "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
+        "projectUniqueName": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
         "projectName": "HomeHub.DataModel",
-        "projectPath": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
-        "packagesPath": "C:\\Users\\Charlize\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\obj\\",
+        "projectPath": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
+        "packagesPath": "C:\\Users\\eruel\\.nuget\\packages\\",
+        "outputPath": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Charlize\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eruel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
