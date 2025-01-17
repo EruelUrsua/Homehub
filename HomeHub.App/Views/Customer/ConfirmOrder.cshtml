@@ -1,0 +1,32 @@
+﻿@model OrderAvailViewModel
+
+<form asp-controller="Customer" asp-action="ConfirmOrder" method="post">
+    <h3>Order Details</h3>
+
+    <table>
+        <thead>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Order</th>
+            <th>Date of Delivery</th>
+            <th>Time of Delivery</th>
+            <th>Request</th>
+            <th>Promo Code</th>
+            <!--<th>User ID</th>-->
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.qty</td>
+                <td>@Model.price</td>
+                <td>@Model.chosen</td>
+                <td>@Model.ddeliv</td>
+                <td>@Model.tdeliv</td>
+                <td>@Model.requestatt</td>
+                <td>@Model.promo</td>
+                <!--<td>@Model.userID</td>-->
+            </tr>
+        </tbody>
+    </table>
+
+    <input type="submit" value="Confirm" />
+</form>
