@@ -1,0 +1,126 @@
+﻿@using HomeHub.DataModel;
+
+@model List<OrdersLog>
+
+<style>
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        padding-top: 8px;
+        font-family: Arial, sans-serif;
+    }
+
+    .card {
+        background-color: #203B81;
+        color: #F1F1F1;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    h2 {
+        font-size: 38px;
+        color: #203B81;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .order-list table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .order-list th, .order-list td {
+        padding: 10px;
+        text-align: left;
+        color: #F1F1F1;
+    }
+
+    .order-list th {
+        font-weight: bold;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        flex: 1;
+        max-width: 150px;
+        margin-bottom: 5px;
+    }
+</style>
+
+<div class="container">
+    <h2>Your Orders</h2>
+
+    <div class="card">
+        <div class="order-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Provider</th>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Still needs ID of logged in user to filter-->
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.BusinessId</td>
+                            <td>@item.Item</td>
+                            <td>@item.Qty</td>
+                            <td>@item.Date</td>
+                            <td>@item.Status</td>
+                            <td class="action-buttons">
+                                <!--For Cancellation
+                                <form asp-controller="Customer" asp-action="OrderListProduct">
+                                    <input type="hidden" name="id" value="" />
+                                    <input type="submit" class="btn btn-success" value="Cancel Order" />
+                                </form> -->
+                                @if (item.IsRated)
+                                {
+                                    <button class="btn btn-secondary" disabled>Rated</button>
+                                }
+                                else
+                                {
+                                    <!--For Rating-->
+                                    <form asp-controller="Customer" asp-action="RateProvider">
+                                        <input type="hidden" name="LogId" value="@item.LogId" />
+                                        <input type="submit" class="btn btn-success" value="Rate Order" />
+                                    </form>
+                                }
+                                <!--For Report-->
+                                <form asp-controller="Customer" asp-action="ReportProblem">
+                                    <input type="hidden" name="LogId" value="@item.LogId" />
+                                    <input type="submit" class="btn btn-warning" value="Report Problem" />
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
