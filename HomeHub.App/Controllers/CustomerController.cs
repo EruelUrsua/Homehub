@@ -144,7 +144,7 @@ namespace HomeHub.App.Controllers
                 }
             }
 
-            var userId = 2; //Will replace with logged-in user id retrieval logic
+            var userId = 1; //Will replace with logged-in user id retrieval logic || input simular userID to a customer userID
             var user = await context.Customers.FindAsync(userId);
 
             if (user == null)
