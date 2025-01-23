@@ -1,4 +1,4 @@
-﻿@model HomeHub.App.Models.ProductServiceViewModel
+﻿@model HomeHub.App.Models.ProductVM
 
 <h1>Update Product</h1>
 
@@ -24,7 +24,7 @@
         <label asp-for="ContainerType" class="control-label">Container Type</label>
         <input asp-for="ContainerType" class="form-control" />
         <span asp-validation-for="ContainerType" class="text-danger"></span>
-    </div>
+    </div><br />
     <div class="form-group">
         <input type="submit" value="Update Product" class="btn btn-primary" />
     </div>

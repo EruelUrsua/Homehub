@@ -1,0 +1,70 @@
+﻿@model IEnumerable<HomeHub.DataModel.Service>
+
+<h1>Services for @ViewBag.BusinessName</h1>
+
+<!-- Dropdown to select service provider -->
+<form method="get" asp-action="ServicesView">
+    <div class="form-group">
+        <label for="businessId">Select Service Provider</label>
+        @Html.DropDownList(
+                 "businessId",
+                 new SelectList(ViewBag.Businesses, "UserID", "BusinessName", ViewBag.ProviderID),
+                 "-- Select a Service Provider --",
+                 new { @class = "form-control", onchange = "this.form.submit()" }
+                 )
+    </div>
+</form><br />
+
+<!-- Button to add a service (visible only when a provider is selected) -->
+@if (ViewBag.ProviderID != null)
+{
+    <div class="mb-3">
+        <a class="btn btn-success" asp-action="AddService" asp-route-businessId="@ViewBag.ProviderID">Add Service</a>
+    </div>
+}
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Service Name</th>
+                <th>Fee</th>
+                <th>Availability</th>
+                <th>Details</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var service in Model)
+            {
+                <tr>
+                    <td>@service.ServiceItem</td>
+                    <td>₱@service.Fee.ToString("N2")</td>
+                    <td>
+                        @if (service.Available)
+                        {
+                            <span class="text-success">Available</span>
+                        }
+                        else
+                        {
+                            <span class="text-danger">Not Available</span>
+                        }
+                    </td>
+                    <td>@service.Details</td>
+                    <td>
+                        <a class="btn btn-primary" asp-action="UpdateService" asp-route-id="@service.ServiceId" asp-route-businessId="@ViewBag.ProviderID">Update</a>
+                        <form asp-action="RemoveService" method="post" onsubmit="return confirm('Are you sure you want to delete this service?');">
+                            <input type="hidden" name="id" value="@service.ServiceId" />
+                            <input type="submit" class="btn btn-danger" value="Delete" />
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No services found for this business.</p>
+}
