@@ -1,9 +1,13 @@
-﻿@model HomeHub.App.Models.ProductServiceViewModel
+﻿@model HomeHub.App.Models.ProductVM
 
 <h1>Add Product</h1>
 
 <form asp-controller="Provider" method="post" asp-action="AddProduct">
     @Html.AntiForgeryToken()
+
+    <!-- Hidden Field to Store ProviderID -->
+    <input type="hidden" asp-for="ProviderID" value="@ViewBag.ProviderID" />
+
     <div class="form-group">
         <div class="form-group">
             <label asp-for="ProductId" class="control-label">Product ID</label>
@@ -28,7 +32,8 @@
         <label asp-for="ContainerType" class="control-label">Container Type</label>
         <input asp-for="ContainerType" class="form-control" />
         <span asp-validation-for="ContainerType" class="text-danger"></span>
-    </div>
+    </div><br />
+
     <div class="form-group">
         <input type="submit" value="Add Product" class="btn btn-primary" />
     </div>
