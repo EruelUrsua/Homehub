@@ -1,54 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace HomeHub.DataModel;
 
-public partial class HomeHubContext : DbContext
+public class HomeHubContext : IdentityDbContext
 {
 
 
-    public HomeHubContext(DbContextOptions<HomeHubContext> options)
-        : base(options)
+    public HomeHubContext(DbContextOptions options) : base(options)
     {
+
     }
 
-    public virtual DbSet<Admin> Admins { get; set; }
+    public DbSet<Admin> Admins { get; set; }
 
-    public virtual DbSet<BugReport> BugReports { get; set; }
+    public DbSet<BugReport> BugReports { get; set; }
 
-    public virtual DbSet<Business> Businesses { get; set; }
+    public DbSet<Business> Businesses { get; set; }
 
-    public virtual DbSet<ClientOrder> ClientOrders { get; set; }
+    public DbSet<ClientOrder> ClientOrders { get; set; }
 
-    public virtual DbSet<Customer> Customers { get; set; }
+    public  DbSet<Customer> Customers { get; set; }
 
-    public virtual DbSet<OrdersLog> OrdersLogs { get; set; }
+    public  DbSet<OrdersLog> OrdersLogs { get; set; }
 
-    public virtual DbSet<Product> Products { get; set; }
+    public DbSet<Product> Products { get; set; }
 
-    public virtual DbSet<Promo> Promos { get; set; }
+    public DbSet<Promo> Promos {  get; set; }
 
-    public virtual DbSet<Rating> Ratings { get; set; }
+    public DbSet<Rating> Ratings { get; set; }
 
     public virtual DbSet<Report> Reports { get; set; }
 
     public virtual DbSet<Service> Services { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)=>
-             optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        //   optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
 
 
-          //  optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
-          //"Database=HomeHub; Integrated Security=SSPI;" +
-          //"TrustServerCertificate=true");
+        optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
+      "Database=HomeHub; Integrated Security=SSPI;" +
+      "TrustServerCertificate=true");
 
-    //optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
-    //      "Database=HomeHub; Integrated Security=SSPI;" +
-    //      "TrustServerCertificate=true");
+        //optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
+        //      "Database=HomeHub; Integrated Security=SSPI;" +
+        //      "TrustServerCertificate=true");
 
+    }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
+
         modelBuilder.Entity<Admin>(entity =>
         {
             entity.ToTable("Admin");
@@ -184,6 +189,7 @@ public partial class HomeHubContext : DbContext
             entity.Property(e => e.PromoEnd).HasColumnType("date");
             entity.Property(e => e.PromoName).HasMaxLength(10);
             entity.Property(e => e.PromoStart).HasColumnType("date");
+            entity.Property(e => e.Discount).HasColumnType("decimal");
         });
 
         modelBuilder.Entity<Rating>(entity =>
@@ -221,8 +227,8 @@ public partial class HomeHubContext : DbContext
             entity.Property(e => e.ServiceItem).HasMaxLength(50);
         });
 
-        OnModelCreatingPartial(modelBuilder);
+//        OnModelCreatingPartial(modelBuilder);
     }
 
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+  //  partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

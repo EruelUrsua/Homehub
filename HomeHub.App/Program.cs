@@ -1,12 +1,27 @@
 using HomeHub.DataModel;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<HomeHubContext>(opts =>
 {
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("Paw"));
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("Ursua"));
 });
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+{
+    options.Password.RequireDigit = false;
+    options.Password.RequiredLength = 3;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+
+    options.SignIn.RequireConfirmedEmail = false;
+}
+).AddEntityFrameworkStores<HomeHubContext>();
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

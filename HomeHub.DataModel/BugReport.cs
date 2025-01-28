@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace HomeHub.DataModel;
 
-public partial class BugReport
+public class BugReport
 {
     public string BugId { get; set; } = null!;
 

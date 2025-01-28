@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HomeHub.DataModel;
 
-public partial class Service
+public class Service
 {
     public string ServiceId { get; set; } = null!;
 
