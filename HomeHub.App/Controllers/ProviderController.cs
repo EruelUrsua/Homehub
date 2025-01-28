@@ -252,5 +252,97 @@ namespace HomeHub.App.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("ServicesView");
         }
+
+        private decimal CalculateDiscount(string promoCode, decimal fee)
+        {
+            var promo = _context.Promos.FirstOrDefault(p => p.PromoCode == promoCode && p.PromoEnd > DateTime.Now);
+            if (promo != null)
+            {
+                return promo.Discount * 2;
+            }
+
+            return 0;
+        }
+
+        public async Task<IActionResult> Orders()
+        {
+            var orders = await _context.ClientOrders
+                .Select(o => new ProviderOrderVM
+                {
+                    ClientId = o.ClientId,
+                    BusinessId = o.BusinessId,
+                    OrderDate = o.OrderDate,
+                    Schedule = o.Schedule,
+                    OrderedPs = o.OrderedPs,
+                    Fee = o.Fee,
+                    Status = o.Status,
+                    PromoCode = o.PromoCode ?? string.Empty,
+                    UserId = o.UserId,
+                    RatingId = o.RatingId,
+                    ReportId = o.ReportId,
+                    Quantity = o.Quantity,
+                    ModeOfPayment = o.ModeOfPayment,
+                }).ToListAsync();
+
+            foreach (var order in orders)
+            {
+                if (!string.IsNullOrEmpty(order.PromoCode))
+                {
+                    order.DiscountedFee = CalculateDiscount(order.PromoCode, order.Fee);
+                    var promo = _context.Promos.FirstOrDefault(p => p.PromoCode == order.PromoCode);
+                    order.DiscountPercentage = promo != null ? promo.Discount * 100 : 0; // Assign discount percentage if promo exists
+                }
+                else
+                {
+                    order.DiscountedFee = order.Fee; // Show original fee if no promo
+                    order.DiscountPercentage = 0;
+                }
+
+                // Optionally, set the OriginalFee if needed, or use the GetOriginalFee method later
+                order.OrigFee = order.GetOriginalFee(); // Get original fee
+            }
+
+            return View(orders);
+        }
+
+        private Promo GetPromo(string code)
+        {
+            return _context.Promos.FirstOrDefault(p => p.PromoCode == code && p.PromoEnd > DateTime.Now);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AcceptOrder(int clientId)
+        {
+            var order = await _context.ClientOrders
+                .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == false);
+
+            if (order == null)
+            {
+                // Handle case where order does not exist
+                return NotFound();
+            }
+
+            // Default values
+            decimal discount = 0;
+            decimal totalFee = order.Fee;
+
+            // Apply promo if available
+            if (!string.IsNullOrWhiteSpace(order.PromoCode))
+            {
+                var promo = GetPromo(order.PromoCode);
+                if (promo != null)
+                {
+                    discount = promo.Discount; // Get the discount percentage
+                }
+            }
+
+            // Update the order status and discounted fee
+            order.Status = true;
+            order.Fee = totalFee;
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Orders));
+        }
     }
 }
