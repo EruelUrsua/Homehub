@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace HomeHub.DataModel;
 
-public partial class Report
+public class Report
 {
     public string ReportId { get; set; } = null!;
 

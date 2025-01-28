@@ -70,7 +70,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.HasKey("BugId");
 
-                    b.ToTable("BugReports");
+                    b.ToTable("BugReports", (string)null);
                 });
 
             modelBuilder.Entity("HomeHub.DataModel.Business", b =>
@@ -128,7 +128,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.HasKey("UserID");
 
-                    b.ToTable("Businesses");
+                    b.ToTable("Businesses", (string)null);
                 });
 
             modelBuilder.Entity("HomeHub.DataModel.ClientOrder", b =>
@@ -207,7 +207,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.HasKey("ClientId");
 
-                    b.ToTable("ClientOrders");
+                    b.ToTable("ClientOrders", (string)null);
                 });
 
             modelBuilder.Entity("HomeHub.DataModel.Customer", b =>
@@ -256,7 +256,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.HasKey("UserId");
 
-                    b.ToTable("Customers");
+                    b.ToTable("Customers", (string)null);
                 });
 
             modelBuilder.Entity("HomeHub.DataModel.OrdersLog", b =>
@@ -309,7 +309,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.HasKey("LogId");
 
-                    b.ToTable("OrdersLogs");
+                    b.ToTable("OrdersLogs", (string)null);
                 });
 
             modelBuilder.Entity("HomeHub.DataModel.Product", b =>
@@ -340,7 +340,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.HasKey("ProductId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("HomeHub.DataModel.Promo", b =>
@@ -378,7 +378,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.HasKey("PromoId");
 
-                    b.ToTable("Promos");
+                    b.ToTable("Promos", (string)null);
                 });
 
             modelBuilder.Entity("HomeHub.DataModel.Rating", b =>
@@ -411,7 +411,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.HasKey("RatingId");
 
-                    b.ToTable("Ratings");
+                    b.ToTable("Ratings", (string)null);
                 });
 
             modelBuilder.Entity("HomeHub.DataModel.Report", b =>
@@ -442,7 +442,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.HasKey("ReportId");
 
-                    b.ToTable("Reports");
+                    b.ToTable("Reports", (string)null);
                 });
 
             modelBuilder.Entity("HomeHub.DataModel.Service", b =>
@@ -473,7 +473,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.HasKey("ServiceId");
 
-                    b.ToTable("Services");
+                    b.ToTable("Services", (string)null);
                 });
 #pragma warning restore 612, 618
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace HomeHub.DataModel;
 
-public partial class Business
+public class Business
 {
     public int UserID { get; set; }
 

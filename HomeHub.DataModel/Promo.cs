@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace HomeHub.DataModel;
 
-public partial class Promo
+public class Promo
 {
     public int PromoId { get; set; }
 

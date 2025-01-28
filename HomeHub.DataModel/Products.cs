@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HomeHub.DataModel;
 
-public partial class Product
+public class Product
 {
     public string ProductId { get; set; }
 

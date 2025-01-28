@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HomeHub.DataModel;
 
-public partial class OrdersLog
+public class OrdersLog
 {
     public string LogId { get; set; } = null!;
 

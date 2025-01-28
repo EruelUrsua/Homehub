@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace HomeHub.DataModel;
 
-public partial class Rating
+public class Rating
 {
     public int RatingId { get; set; }
 
