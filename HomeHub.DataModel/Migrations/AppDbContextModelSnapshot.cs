@@ -358,7 +358,7 @@ namespace HomeHub.DataModel.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<decimal>("Discount")
-                        .HasColumnType("decimal");
+                        .HasColumnType("decimal(18,4)");
 
                     b.Property<string>("PromoCode")
                         .IsRequired()
