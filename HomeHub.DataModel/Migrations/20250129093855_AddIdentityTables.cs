@@ -14,7 +14,7 @@ namespace HomeHub.DataModel.Migrations
             migrationBuilder.AlterColumn<decimal>(
                 name: "Discount",
                 table: "Promos",
-                type: "decimal(18,0)",
+                type: "decimal(18,4)",
                 nullable: false,
                 oldClrType: typeof(decimal),
                 oldType: "decimal(18,2)");
@@ -234,7 +234,7 @@ namespace HomeHub.DataModel.Migrations
                 type: "decimal(18,2)",
                 nullable: false,
                 oldClrType: typeof(decimal),
-                oldType: "decimal(18,0)");
+                oldType: "decimal(18,4)");
         }
     }
 }

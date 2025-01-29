@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeHub.DataModel.Migrations
 {
     [DbContext(typeof(HomeHubContext))]
-    [Migration("20250129040537_AddIdentityTables")]
+    [Migration("20250129093855_AddIdentityTables")]
     partial class AddIdentityTables
     {
         /// <inheritdoc />
@@ -361,7 +361,7 @@ namespace HomeHub.DataModel.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<decimal>("Discount")
-                        .HasColumnType("decimal");
+                        .HasColumnType("decimal(18,4)");
 
                     b.Property<string>("PromoCode")
                         .IsRequired()

@@ -28,7 +28,7 @@ public class HomeHubContext : IdentityDbContext
 
     public DbSet<Product> Products { get; set; }
 
-    public DbSet<Promo> Promos {  get; set; }
+    public DbSet<Promo> Promos { get; set; }
 
     public DbSet<Rating> Ratings { get; set; }
 
@@ -189,7 +189,7 @@ public class HomeHubContext : IdentityDbContext
             entity.Property(e => e.PromoEnd).HasColumnType("date");
             entity.Property(e => e.PromoName).HasMaxLength(10);
             entity.Property(e => e.PromoStart).HasColumnType("date");
-            entity.Property(e => e.Discount).HasColumnType("decimal");
+            entity.Property(e => e.Discount).HasColumnType("decimal(18,4)");
         });
 
         modelBuilder.Entity<Rating>(entity =>
