@@ -162,23 +162,23 @@
                 <div class="date-time-container">
                     <div class="date-time-item">
                         <label>Date of Delivery</label>
-                        <input type="date" id="ddeliv" name="ddeliv" required />
+                        <input type="date" id="ddeliv" name="ddeliv" min="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")" required />
                     </div>
                     <div class="date-time-item">
                         <label>Time of Delivery</label>
-                        <input type="time" id="tdeliv" name="tdeliv" required />
+                        <input type="time" id="tdeliv" name="tdeliv" min="08:00" max="18:00" required />
                     </div>
                 </div>
 
 
-                <label for="requestatt">Request Attachment</label>
+                <label for="requestatt">Additional Instructions</label>
                 <input type="text" id="requestatt" name="requestatt" />
 
 
                 <label>Mode of Payment</label>
                 <select name="mode" id="mode">
                     <option value="Cash">Cash</option>
-                    <option value="GCash">GCash</option>
+                    <option value="Maya">PayMaya</option>
                 </select>
 
 
