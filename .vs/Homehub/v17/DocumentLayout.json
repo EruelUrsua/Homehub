@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\HomeHub\\Homehub\\",
+  "WorkspaceRootPath": "D:\\Notes\\C#\\Homehub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|d:\\homehub\\homehub\\homehub.datamodel\\homehubcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|d:\\notes\\c#\\homehub\\homehub.datamodel\\homehubcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|solutionrelative:homehub.datamodel\\homehubcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|d:\\notes\\c#\\homehub\\homehub.datamodel\\promo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|solutionrelative:homehub.datamodel\\promo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,23 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "HomeHubContext.cs",
-              "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHubContext.cs",
+              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHubContext.cs",
               "RelativeDocumentMoniker": "HomeHub.DataModel\\HomeHubContext.cs",
-              "ToolTip": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHubContext.cs",
+              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHubContext.cs",
               "RelativeToolTip": "HomeHub.DataModel\\HomeHubContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAALUAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T09:46:33.933Z",
+              "WhenOpened": "2025-01-29T13:14:44.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Promo.cs",
+              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\Promo.cs",
+              "RelativeDocumentMoniker": "HomeHub.DataModel\\Promo.cs",
+              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\Promo.cs",
+              "RelativeToolTip": "HomeHub.DataModel\\Promo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T12:45:24.612Z",
               "EditorCaption": ""
             }
           ]
