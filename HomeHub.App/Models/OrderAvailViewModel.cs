@@ -1,5 +1,6 @@
 ﻿using HomeHub.DataModel;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
+using System.ComponentModel.DataAnnotations;
 
 namespace HomeHub.App.Models
 {
@@ -8,7 +9,9 @@ namespace HomeHub.App.Models
         public int businessId { get; set; }
         public string chosen { get; set; }
         public string price { get; set; }
+        [Required(ErrorMessage = "Please select a date.")]
         public string ddeliv { get; set; }
+        [Required(ErrorMessage = "Please select a time.")]
         public string tdeliv { get; set; }
         public string requestatt { get; set; }
         public string mode { get; set; }
