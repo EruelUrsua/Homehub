@@ -23,6 +23,16 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
 ).AddEntityFrameworkStores<HomeHubContext>();
 
 
+builder.Services.ConfigureApplicationCookie(options =>
+
+{ 
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+    options.SlidingExpiration =true;
+
+}
+);
+
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
