@@ -1,0 +1,33 @@
+﻿@model SignInVM
+
+<h3>Sign in to the the App</h3>
+
+<form asp-controller="Account" asp-action="SignIn" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+
+    <label asp-for="Username">Email</label>
+    <input asp-for="Username" />
+    <span asp-validation-for="Username"></span>
+    <br /><br 
+    <label asp-for="Password"></label>
+    <input asp-for="Password" />
+    <span asp-validation-for="Password"></span>
+    <br /><br
+    <a asp-action="Index" asp-controller="Home" class="btn btn-light">
+        Back to Home Page
+    </a>
+    <input type="submit" class="btn btn-success" value="Log-In" />
+
+</form>
+<br />
+Don't have an account?
+<a asp-controller="Account" asp-action="RegisterC">
+    Register here
+</a>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}

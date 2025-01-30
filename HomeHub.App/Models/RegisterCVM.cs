@@ -11,20 +11,24 @@ namespace HomeHub.App.Models
             Email = "";
             Password = "";
             ConfirmPassword = "";
-            ContactNo = 0;
+            ContactNo = " ";
         }
 
         [Required]
         [MaxLength]
         public string Lastname { get; set; }
+        [Required]
         public string Firstname { get; set; }
-
-        public string Email { get; set; }   
-
-        public int ContactNo { get; set; }  
-
+        [Required]
+        public string Email { get; set; }
+        [Required]
+        public string ContactNo { get; set; }
+        [Required]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
-
+        [Required]
+        [DataType(DataType.Password)]
+        [Compare("Password")]
         public string ConfirmPassword { get; set; } 
     }
 }
