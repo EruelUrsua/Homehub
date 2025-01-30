@@ -143,7 +143,12 @@ namespace HomeHub.App.Controllers
                     Discount = promo.Discount;
                 }
             }
-
+            
+            else if (string.IsNullOrWhiteSpace(model.promo))
+            {
+                model.promo = "No Promo Used";
+            }
+                    
             var userId = 2; //Will replace with logged-in user id retrieval logic || input simular userID to a customer userID
             var user = await context.Customers.FindAsync(userId);
 

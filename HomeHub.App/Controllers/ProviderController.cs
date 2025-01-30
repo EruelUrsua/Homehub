@@ -298,8 +298,6 @@ namespace HomeHub.App.Controllers
                     order.DiscountPercentage = 0;
                 }
 
-                // Optionally, set the OriginalFee if needed, or use the GetOriginalFee method later
-                order.OrigFee = order.GetOriginalFee(); // Get original fee
             }
 
             return View(orders);
