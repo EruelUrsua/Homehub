@@ -12,7 +12,7 @@
 
         public string? OrderedPs { get; set; } = null!;
 
-        public decimal OrigFee { get; set; }
+        public decimal Price { get; set; }
         public decimal Fee { get; set; }
         public decimal DiscountedFee { get; set; }
         public decimal DiscountPercentage { get; set; }
@@ -29,10 +29,5 @@
 
         public int Quantity { get; set; }
         public string? ModeOfPayment { get; set; }
-
-        public decimal GetOriginalFee()
-        {
-            return OrigFee; // Calculates the original fee before discount is applied.
-        }
     }
 }
