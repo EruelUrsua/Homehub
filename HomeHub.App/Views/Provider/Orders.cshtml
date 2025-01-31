@@ -6,8 +6,8 @@
     <thead>
         <tr>
             <th>Client ID</th>
-            <th>Order Date</th>
             <th>Schedule</th>
+            <th>Order Date</th>
             <th>Ordered Items</th>
             <th>Quantity</th>
             <th>Fee</th>
@@ -29,31 +29,28 @@
                 <td>@order.Quantity</td>
                 <td>₱@order.Fee.ToString("N2")</td>
                 <td>
-                    @if (!string.IsNullOrEmpty(order.PromoCode))
+                    @if (order.DiscountAmount > 0)
                     {
-                        <span>₱@order.DiscountedFee.ToString("N2")</span>
+                        <span style="color: red;">- ₱@order.DiscountAmount.ToString("N2")</span>
+                    }
+                    else
+                    {
+                        <span style="color: black;">₱@order.DiscountAmount.ToString("N2")</span>
                     }
                 </td>
                 <td>
                     @if (order.DiscountPercentage > 0)
                     {
-                        <span>@((int)order.DiscountPercentage) %</span>
+                        <span style="color: red;">-@((int)order.DiscountPercentage)%</span>
                     }
                     else
                     {
-                        <span>No Promo Used</span>
+                        <span>0%</span>
                     }
                 </td>
 
                 <td>
-                    @if (!string.IsNullOrEmpty(order.PromoCode))
-                    {
                         @order.PromoCode
-                    }
-                    else
-                    {
-                        <span>No Promo Used</span>
-                    }
                 </td>
                 <td>
                     @if (order.Status)
