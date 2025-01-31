@@ -253,15 +253,22 @@ namespace HomeHub.App.Controllers
             return RedirectToAction("ServicesView");
         }
 
-        private decimal CalculateDiscount(string promoCode, decimal fee)
+        private (decimal OriginalFee, decimal DiscountAmount) CalculateDiscount(string promoCode, decimal discountedFee)
         {
             var promo = _context.Promos.FirstOrDefault(p => p.PromoCode == promoCode && p.PromoEnd > DateTime.Now);
             if (promo != null)
             {
-                return promo.Discount * 2;
+                // Reconstruct the original fee
+                decimal originalFee = discountedFee / (1 - promo.Discount);
+
+                // Calculate the discount amount
+                decimal discountAmount = originalFee - discountedFee;
+
+                return (originalFee, discountAmount);
             }
 
-            return 0;
+            // If no promo, the discounted fee is the original fee, and the discount amount is 0
+            return (discountedFee, 0);
         }
 
         public async Task<IActionResult> Orders()
@@ -288,14 +295,25 @@ namespace HomeHub.App.Controllers
             {
                 if (!string.IsNullOrEmpty(order.PromoCode))
                 {
-                    order.DiscountedFee = CalculateDiscount(order.PromoCode, order.Fee);
+                    // Calculate the original fee and discount amount
+                    var (originalFee, discountAmount) = CalculateDiscount(order.PromoCode, order.Fee);
+
+                    // Assign the calculated values
+                    order.OriginalFee = originalFee;
+                    order.DiscountAmount = discountAmount;
+                    order.DiscountedFee = order.Fee; // This is already the discounted fee from the database
+
                     var promo = _context.Promos.FirstOrDefault(p => p.PromoCode == order.PromoCode);
                     order.DiscountPercentage = promo != null ? promo.Discount * 100 : 0; // Assign discount percentage if promo exists
                 }
+
                 else
                 {
-                    order.DiscountedFee = order.Fee; // Show original fee if no promo
+                    // If no promo, the discounted fee is the original fee
+                    order.OriginalFee = order.Fee;
+                    order.DiscountedFee = order.Fee;
                     order.DiscountPercentage = 0;
+                    order.DiscountAmount = 0;
                 }
 
             }

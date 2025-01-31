@@ -11,10 +11,10 @@
         public DateTime Schedule { get; set; }
 
         public string? OrderedPs { get; set; } = null!;
-
-        public decimal Price { get; set; }
+        public decimal OriginalFee { get; set; }
         public decimal Fee { get; set; }
         public decimal DiscountedFee { get; set; }
+        public decimal DiscountAmount { get; set; }
         public decimal DiscountPercentage { get; set; }
 
         public bool Status { get; set; }
