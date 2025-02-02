@@ -16,7 +16,7 @@ public class Customer
     public string Firstname { get; set; } = null!;
 
     public string Lastname { get; set; } = null!;
-
+    [DataType(DataType.PhoneNumber)]
     public string ContactNo { get; set; } = null!;
 
     public string Address { get; set; } = null!;
