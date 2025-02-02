@@ -2,18 +2,13 @@
 
 namespace HomeHub.App.Models
 {
-    public class RegisterCVM
+    public class RegisterBVM
     {
-        public RegisterCVM()
+        public RegisterBVM()
         {
-            Lastname = "";
-            Firstname = "";
-            Email = "";
-            Password = "";
-            ConfirmPassword = "";
-            ContactNo = "";
-            Address = "";
+            
         }
+
 
         [Required]
         [MaxLength]
@@ -26,13 +21,15 @@ namespace HomeHub.App.Models
         [Phone]
         public string ContactNo { get; set; }
         [Required]
-        public string Address { get; set; }
+        public string BusinessAddress { get; set; }
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
         [Required]
         [DataType(DataType.Password)]
         [Compare("Password")]
-        public string ConfirmPassword { get; set; } 
+        public string ConfirmPassword { get; set; }
+
+
     }
 }

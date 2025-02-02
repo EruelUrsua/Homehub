@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<HomeHubContext>(opts =>
 {
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("Paw"));
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("Ursua"));
 });
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
@@ -17,7 +17,8 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     options.Password.RequireLowercase = false;
     options.Password.RequireUppercase = false;
     options.Password.RequireNonAlphanumeric = false;
-
+    
+  
     options.SignIn.RequireConfirmedEmail = false;
 }
 ).AddEntityFrameworkStores<HomeHubContext>();
@@ -63,20 +64,20 @@ app.MapControllerRoute(
 using (var scope = app.Services.CreateScope())
 {
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+    // var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
 
-    var roles = new[] {"Customer", "Provider", "Admin" };
+    var roles = new[] { "Customer", "Provider", "Admin" };
 
     foreach (var role in roles)
     {
 
         if (!await roleManager.RoleExistsAsync(role))
             await roleManager.CreateAsync(new IdentityRole(role));
-    
+
     }
 
 
 
 }
 
-    app.Run();
+app.Run();

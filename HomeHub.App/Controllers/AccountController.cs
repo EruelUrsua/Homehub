@@ -15,6 +15,8 @@ namespace HomeHub.App.Controllers
             this.userManager = userManager;
             this.signInManager = signInManager;
         }
+
+        //Register Customer Accounts
         public IActionResult RegisterC()
         {
             return View(new RegisterCVM());
@@ -24,16 +26,21 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> RegisterC(RegisterCVM model)
         {
+           
             if (ModelState.IsValid)
             {
+
                 ApplicationUser user = new ApplicationUser();
                 user.UserName = model.Email;
                 user.Email = model.Email;
                 user.Lastname = model.Lastname;
                 user.Firstname = model.Firstname;
                 user.PhoneNumber = model.ContactNo;
+                user.Address = model.Address;
+
 
                 await userManager.CreateAsync(user, model.Password);
+                await userManager.AddToRoleAsync(user, "Customer");
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -43,6 +50,39 @@ namespace HomeHub.App.Controllers
         
         }
 
+        //Register Business Accounts
+        public IActionResult RegisterB()
+        {
+            return View(new RegisterBVM());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RegisterB(RegisterBVM model)
+        {
+
+            if (ModelState.IsValid)
+            {
+
+                ApplicationUser user = new ApplicationUser();
+                user.UserName = model.Email;
+                user.Email = model.Email;
+                user.Lastname = model.Lastname;
+                user.Firstname = model.Firstname;
+                user.PhoneNumber = model.ContactNo;
+                user.Address = model.BusinessAddress;
+
+
+                await userManager.CreateAsync(user, model.Password);
+                await userManager.AddToRoleAsync(user, "Business");
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                return View(model);
+            }
+
+        }
         public IActionResult SignIn()
         {
             SignInVM vm = new SignInVM();

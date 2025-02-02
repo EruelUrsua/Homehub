@@ -22,5 +22,4 @@ public class Business
     public string CompanyAddress { get; set; } = null!;
     public string BusinessPermitNo { get; set; }= null;
 
-    //public ApplicationUser ApplicationUser { get; set; }
 }
