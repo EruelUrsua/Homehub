@@ -9,6 +9,7 @@ using System.Xml;
 using static System.Formats.Asn1.AsnWriter;
 using System.Xml.Linq;
 using System.Security.Claims;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace HomeHub.App.Controllers
 {
@@ -41,7 +42,13 @@ namespace HomeHub.App.Controllers
             List<Business> businesses = context.Businesses.ToList();
             ViewBag.Businesses = businesses;
 
-            return View();
+            var model = new CHomeViewModel
+            {
+                ProductProviders = context.Businesses.Where(x => x.Businesstype == '0').ToList(),
+                ServiceProviders = context.Businesses.Where(x => x.Businesstype == '1').ToList()
+            };
+
+            return View(model);
         }
 
         public IActionResult OrderProduct()
@@ -452,6 +459,11 @@ namespace HomeHub.App.Controllers
             }
 
             return $"RPT-{datePart}-{sequenceNumber:D3}";
+        }
+
+        public ActionResult PayOnline()
+        {
+            return View();
         }
     }
 }

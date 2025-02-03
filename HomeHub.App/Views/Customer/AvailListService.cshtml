@@ -76,12 +76,17 @@
         font-weight: bold;
     }
 
-    input[type="text"], select {
+    input[type="text"], select, textarea {
         width: 100%;
         padding: 8px;
         margin-top: 5px;
         border: 1px solid #ccc;
         border-radius: 5px;
+    }
+
+    textarea {
+        height: 120px;
+        resize: vertical;
     }
 
     .button-group {
@@ -148,7 +153,7 @@
                                 {
                                     <tr>
                                         <td><input type="radio" id="chosen" name="chosen" value="@item.ServiceItem" onclick="setPrice(@item.Fee)" required>@item.ServiceItem</td>
-                                        <td>@item.Fee</td>
+                                        <td>Php @item.Fee</td>
                                     </tr>
                                 }
                                 <input type="hidden" id="price" name="price" value="">
@@ -171,7 +176,7 @@
 
 
                 <label for="requestatt">Additional Instructions</label>
-                <input type="text" id="requestatt" name="requestatt" />
+                <textarea id="requestatt" name="requestatt" rows="4" cols="50" placeholder="Enter additional instructions..."></textarea>
 
 
                 <label>Mode of Payment</label>
