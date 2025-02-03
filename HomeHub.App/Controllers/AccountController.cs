@@ -74,7 +74,7 @@ namespace HomeHub.App.Controllers
 
 
                 await userManager.CreateAsync(user, model.Password);
-                await userManager.AddToRoleAsync(user, "Business");
+                await userManager.AddToRoleAsync(user, "Provider");
                 return RedirectToAction("Index", "Home");
             }
             else
