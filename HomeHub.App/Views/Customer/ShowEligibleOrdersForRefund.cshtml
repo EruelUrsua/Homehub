@@ -1,4 +1,4 @@
-﻿@model IEnumerable<HomeHub.App.Models.RefundViewModel>
+﻿@model IEnumerable<HomeHub.App.Models.RefundVM>
 
 @{
     ViewBag.Title = "Eligible Refund Requests";
@@ -16,10 +16,12 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Business ID</th>
                 <th>Order Date</th>
                 <th>Item</th>
                 <th>Quantity</th>
+                <th>Fee</th>
+                <th>Total Discount</th>
+                <th>Discount</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -27,16 +29,19 @@
             @foreach (var request in Model)
             {
                 <tr>
-                    <td>@request.BusinessID</td>
                     <td>@request.OrderDate.ToShortDateString()</td>
                     <td>@request.OrderedPs</td>
                     <td>@request.Quantity</td>
+                    <td>₱@request.DiscountedFee.ToString("N2")</td>
+                    <td>₱@request.DiscountAmount.ToString("N2")</td>
+                    <td>₱@request.DiscountPercentage.ToString("N2")</td>
                     <td>
                         @using (Html.BeginForm("Refund", "Customer", FormMethod.Post))
                         {
                             @Html.AntiForgeryToken()
-                            @Html.HiddenFor(model => request.ClientID)
-                            @Html.HiddenFor(model => request.BusinessID)
+                            @Html.Hidden("OrderId", request.OrderId)
+                            @Html.Hidden("ClientID", request.ClientID)
+                            @Html.Hidden("BusinessID", request.BusinessID)
                             @Html.HiddenFor(model => request.OrderDate)
                             @Html.HiddenFor(model => request.OrderedPs)
                             @Html.HiddenFor(model => request.Quantity)

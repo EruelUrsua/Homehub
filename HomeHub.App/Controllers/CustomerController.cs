@@ -10,6 +10,7 @@ using static System.Formats.Asn1.AsnWriter;
 using System.Xml.Linq;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Azure.Core;
 
 namespace HomeHub.App.Controllers
 {
@@ -156,7 +157,7 @@ namespace HomeHub.App.Controllers
                 model.promo = "No Promo Used";
             }
                     
-            var userId = 2; //Will replace with logged-in user id retrieval logic || input simular userID to a customer userID
+            var userId = 1; //Will replace with logged-in user id retrieval logic || input simular userID to a customer userID
             var user = await context.Customers.FindAsync(userId);
 
             if (user == null)
@@ -172,7 +173,7 @@ namespace HomeHub.App.Controllers
             entity.OrderedPs = model.chosen;
             entity.Fee = TotalPrice;
             entity.PromoCode = model.promo;
-            entity.UserId = 2; //temporary userID
+            entity.UserId = 1; //temporary userID
             entity.FirstName = user.Firstname;
             entity.LastName = user.Lastname;
             //entity.UserId = int.Parse(model.userID);
@@ -227,6 +228,24 @@ namespace HomeHub.App.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        private (decimal OriginalFee, decimal DiscountAmount) CalculateDiscount(string promoCode, decimal discountedFee)
+        {
+            var promo = context.Promos.FirstOrDefault(p => p.PromoCode == promoCode && p.PromoEnd > DateTime.Now);
+            if (promo != null)
+            {
+                // Reconstruct the original fee
+                decimal originalFee = discountedFee / (1 - promo.Discount);
+
+                // Calculate the discount amount
+                decimal discountAmount = originalFee - discountedFee;
+
+                return (originalFee, discountAmount);
+            }
+
+            // If no promo, the discounted fee is the original fee, and the discount amount is 0
+            return (discountedFee, 0);
+        }
+
         public async Task<IActionResult> ShowEligibleOrdersForRefund(int clientId)
         {
             // Fetch accepted orders from the OrdersLog
@@ -240,49 +259,77 @@ namespace HomeHub.App.Controllers
                     log.Qty,
                     log.BusinessId,
                     log.OrderId,
-                    // Use business id to find associated ClientOrders
+                    // Use business id and order date to find associated ClientOrders
                     ClientOrder = context.ClientOrders
                         .FirstOrDefault(o => o.BusinessId == log.BusinessId && o.OrderDate == log.OrderDate)
                 })
                 .ToListAsync();
 
-            // Filter out null ClientOrders and map to RefundViewModel
-            var filteredRefunds = eligibleRefunds
-                .Where(x => x.ClientOrder != null)
-                .Select(x => new RefundViewModel
+            var refundList = new List<RefundVM>();
+
+            foreach (var x in eligibleRefunds.Where(x => x.ClientOrder != null))
+            {
+                var refund = new RefundVM
                 {
                     ClientID = clientId,
                     BusinessID = x.ClientOrder.BusinessId,
                     OrderDate = x.ClientOrder.OrderDate,
                     OrderedPs = x.Item,
                     Quantity = x.Qty,
-                    OrderId = x.OrderId // Ensure this is populated
-                })
-                .ToList();
+                    OrderId = x.OrderId,
+                    Fee = x.ClientOrder.Fee,
+                    PromoCode = x.ClientOrder.PromoCode
+                };
 
-            return View(filteredRefunds);
+                if (!string.IsNullOrEmpty(refund.PromoCode))
+                {
+                    // Calculate the original fee and discount amount
+                    var (originalFee, discountAmount) = CalculateDiscount(refund.PromoCode, refund.Fee);
+
+                    // Assign the calculated values
+                    refund.OriginalFee = originalFee;
+                    refund.DiscountAmount = discountAmount;
+                    refund.DiscountedFee = refund.Fee;
+
+                    var promo = context.Promos.FirstOrDefault(p => p.PromoCode == refund.PromoCode);
+                    refund.DiscountPercentage = promo != null ? promo.Discount * 100 : 0;
+                }
+                else
+                {
+                    // If no promo, the discounted fee is the original fee
+                    refund.OriginalFee = refund.Fee;
+                    refund.DiscountedFee = refund.Fee;
+                    refund.DiscountPercentage = 0;
+                    refund.DiscountAmount = 0;
+                }
+
+                refundList.Add(refund);
+            }
+
+            return View(refundList);
         }
 
         [HttpPost]
-        public ActionResult Refund(string orderId)
+        public async Task<IActionResult> Refund(string orderId)
         {
             if (string.IsNullOrEmpty(orderId))
             {
-                ViewBag.Message = "Invalid Order ID.";
+                TempData["Message"] = "Invalid Order ID.";
                 return RedirectToAction("ShowEligibleOrdersForRefund");
             }
 
             // Find the order based on the orderId in the OrdersLog table
-            var order = context.OrdersLogs.FirstOrDefault(o => o.OrderId == orderId && o.Status == "Accepted");
+            var order = await context.OrdersLogs.FirstOrDefaultAsync(o => o.OrderId == orderId && o.Status == "Accepted");
 
             if (order != null)
             {
-                // Check if the order is eligible for refund (e.g., not already refunded or canceled)
+                // Check if the order is eligible for refund
                 if (order.Status != "Refunded" && order.Status != "Cancelled")
                 {
-                    // Update the order status to reflect that a refund has been requested
                     order.Status = "Refund Requested";
-                    context.SaveChanges();
+
+                    // Save changes to the database
+                    await context.SaveChangesAsync();
 
                     TempData["Message"] = "Your refund request has been submitted successfully.";
                 }

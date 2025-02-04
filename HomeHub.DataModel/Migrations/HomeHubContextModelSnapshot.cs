@@ -352,6 +352,9 @@ namespace HomeHub.DataModel.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime");
 
+                    b.Property<decimal>("Fee")
+                        .HasColumnType("MONEY");
+
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -375,6 +378,12 @@ namespace HomeHub.DataModel.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("OrderID");
+
+                    b.Property<string>("PromoCode")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("PromoCode");
 
                     b.Property<int>("Qty")
                         .HasColumnType("int");
@@ -489,6 +498,68 @@ namespace HomeHub.DataModel.Migrations
                     b.HasKey("RatingId");
 
                     b.ToTable("Ratings");
+                });
+
+            modelBuilder.Entity("HomeHub.DataModel.RefundRequest", b =>
+                {
+                    b.Property<int>("RefundId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("RefundID");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RefundId"));
+
+                    b.Property<int?>("BusinessId")
+                        .IsRequired()
+                        .HasColumnType("int")
+                        .HasColumnName("BusinessID");
+
+                    b.Property<int>("ClientId")
+                        .HasColumnType("int")
+                        .HasColumnName("ClientID");
+
+                    b.Property<decimal>("Fee")
+                        .HasColumnType("MONEY");
+
+                    b.Property<string>("Item")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("OrderId")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("OrderID");
+
+                    b.Property<string>("PromoCode")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("RefundActionDate")
+                        .HasColumnType("DATETIME");
+
+                    b.Property<decimal?>("RefundAmount")
+                        .HasColumnType("MONEY");
+
+                    b.Property<int>("RefundQuantity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("RefundReason")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("RefundRequestDate")
+                        .HasColumnType("DATETIME");
+
+                    b.Property<string>("RefundStatus")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("RefundId");
+
+                    b.ToTable("RefundRequests", (string)null);
                 });
 
             modelBuilder.Entity("HomeHub.DataModel.Report", b =>

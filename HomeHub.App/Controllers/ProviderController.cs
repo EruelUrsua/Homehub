@@ -357,8 +357,151 @@ namespace HomeHub.App.Controllers
             order.Status = true;
             order.Fee = totalFee;
 
+            // Log the accepted order into OrdersLog
+            var orderLog = new OrdersLog
+            {
+                LogId = Guid.NewGuid().ToString(),
+                OrderId = order.ClientId.ToString(),
+                OrderDate = order.OrderDate,
+                FirstName = order.FirstName,
+                LastName = order.LastName,
+                BusinessId = order.BusinessId,
+                Item = order.OrderedPs,
+                Qty = order.Quantity,
+                Date = DateTime.Now,
+                Status = "Accepted"
+            };
+
+            // Add the log to the OrdersLog table
+            _context.OrdersLogs.Add(orderLog);
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Orders));
         }
+
+        public async Task<IActionResult> OrdersLog()
+        {
+            var logs = await _context.OrdersLogs
+                .Select(log => new OrdersLogVM
+                {
+                    LogId = log.LogId,
+                    OrderId = log.OrderId,
+                    OrderDate = log.OrderDate,
+                    FirstName = log.FirstName,
+                    LastName = log.LastName,
+                    BusinessId = log.BusinessId,
+                    Item = log.Item,
+                    Qty = log.Qty,
+                    Date = log.Date,
+                    Status = log.Status
+                }).ToListAsync();
+
+            return View(logs);
+        }
+
+        public async Task<IActionResult> RefundRequests()
+        {
+            // Fetch refund requests from the logs
+            var refundRequests = await _context.OrdersLogs
+                .Where(log => log.Status == "Refund Requested")
+                .Select(log => new RefundRequestVM
+                {
+                    LogId = log.LogId,
+                    OrderId = log.OrderId,
+                    OrderDate = log.OrderDate,
+                    FirstName = log.FirstName,
+                    LastName = log.LastName,
+                    BusinessId = log.BusinessId,
+                    Item = log.Item,
+                    Qty = log.Qty,
+                    Date = log.Date,
+                    Status = log.Status,
+                }).ToListAsync();
+
+            foreach (var request in refundRequests)
+            {
+                if (!string.IsNullOrEmpty(request.PromoCode))
+                {
+                    // Calculate the original fee and discount amount
+                    var (originalFee, discountAmount) = CalculateDiscount(request.PromoCode, request.Fee);
+
+                    // Assign the calculated values
+                    request.OriginalFee = originalFee;
+                    request.DiscountAmount = discountAmount;
+                    request.DiscountedFee = request.Fee; // This is already the discounted fee from the database
+
+                    var promo = _context.Promos.FirstOrDefault(p => p.PromoCode == request.PromoCode);
+                    request.DiscountPercentage = promo != null ? promo.Discount * 100 : 0; // Assign discount percentage if promo exists
+                }
+                else
+                {
+                    // If no promo, the discounted fee is the original fee
+                    request.OriginalFee = request.Fee;
+                    request.DiscountedFee = request.Fee;
+                    request.DiscountPercentage = 0;
+                    request.DiscountAmount = 0;
+                }
+            }
+            return View(refundRequests);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ProcessRefund(int clientId)
+        {
+            // Step 1: Retrieve the order by clientId
+            var order = await _context.ClientOrders
+                .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == true);
+
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            // Step 2: Log the refund in OrdersLog
+            var refundLog = new OrdersLog
+            {
+                LogId = Guid.NewGuid().ToString(),
+                OrderId = order.ClientId.ToString(),
+                OrderDate = order.OrderDate,
+                FirstName = order.FirstName,
+                LastName = order.LastName,
+                BusinessId = order.BusinessId,
+                Item = order.OrderedPs,
+                Qty = order.Quantity,
+                Date = DateTime.Now,
+                Status = "Refunded"
+            };
+
+            _context.OrdersLogs.Add(refundLog);
+
+            // Step 3: Update the order status instead of removing it
+            order.Status = false; // Assuming true = accepted, false can represent "Refunded"
+            _context.ClientOrders.Update(order);
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(RefundRequests));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeclineRefund(string orderId)
+        {
+            var orderLog = await _context.OrdersLogs
+                .FirstOrDefaultAsync(log => log.OrderId == orderId && log.Status == "Refund Requested");
+
+            if (orderLog == null)
+            {
+                return NotFound();
+            }
+
+            orderLog.Status = "Refund Declined";
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(RefundRequests));
+        }
+
     }
 }

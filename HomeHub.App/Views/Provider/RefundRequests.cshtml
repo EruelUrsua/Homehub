@@ -1,0 +1,62 @@
+﻿@model IEnumerable<HomeHub.App.Models.RefundRequestVM>
+
+<h2>Refund Requests</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Order Date</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Original Fee</th>
+            <th>Discount Amount</th>
+            <th>Discounted Fee</th>
+            <th>Discount Percentage</th>
+            <th>Request Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var request in Model)
+        {
+            <tr>
+                <td hidden>@Html.HiddenFor(m => request.LogId)</td>
+                <td>@request.OrderId</td>
+                <td>@request.OrderDate.ToShortDateString()</td>
+                <td>@request.FirstName</td>
+                <td>@request.LastName</td>
+                <td hidden>@Html.HiddenFor(m => request.BusinessId)</td>
+                <td>@request.Item</td>
+                <td>@request.Qty</td>
+                <td>₱@request.Fee.ToString("N2")</td>
+                <td>₱@request.DiscountAmount.ToString("N2")</td>
+                <td>@string.Format("{0:C}", request.DiscountedFee)</td>
+                <td>₱@request.DiscountPercentage.ToString("N2")%</td>
+                <td>@request.Date.ToShortDateString()</td>
+                <td>@request.Status</td>
+                <td>
+                    @using (Html.BeginForm("ProcessRefund", "Provider", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.Hidden("LogId", request.LogId)
+                        @Html.Hidden("OrderId", request.OrderId)
+                        <button type="submit" class="btn btn-success">Accept Refund</button>
+                    }
+
+                    @using (Html.BeginForm("DeclineRefund", "Provider", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.Hidden("LogId", request.LogId)
+                        @Html.Hidden("OrderId", request.OrderId)
+                        <button type="submit" class="btn btn-danger">Decline Refund</button>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
