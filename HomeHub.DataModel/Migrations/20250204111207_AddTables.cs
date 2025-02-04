@@ -117,7 +117,9 @@ namespace HomeHub.DataModel.Migrations
                     Item = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Qty = table.Column<int>(type: "int", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
+                    Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Fee = table.Column<decimal>(type: "MONEY", nullable: false),
+                    PromoCode = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -173,6 +175,30 @@ namespace HomeHub.DataModel.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Ratings", x => x.RatingID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "RefundRequests",
+                columns: table => new
+                {
+                    RefundID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    OrderID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    ClientID = table.Column<int>(type: "int", nullable: false),
+                    BusinessID = table.Column<int>(type: "int", nullable: false),
+                    Item = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    RefundQuantity = table.Column<int>(type: "int", nullable: false),
+                    RefundReason = table.Column<string>(type: "TEXT", nullable: false),
+                    RefundStatus = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    RefundRequestDate = table.Column<DateTime>(type: "DATETIME", nullable: false),
+                    RefundActionDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
+                    Fee = table.Column<decimal>(type: "MONEY", nullable: false),
+                    PromoCode = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    RefundAmount = table.Column<decimal>(type: "MONEY", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RefundRequests", x => x.RefundID);
                 });
 
             migrationBuilder.CreateTable(
@@ -236,6 +262,9 @@ namespace HomeHub.DataModel.Migrations
 
             migrationBuilder.DropTable(
                 name: "Ratings");
+
+            migrationBuilder.DropTable(
+                name: "RefundRequests");
 
             migrationBuilder.DropTable(
                 name: "Reports");

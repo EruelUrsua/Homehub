@@ -32,24 +32,26 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
     public DbSet<Rating> Ratings { get; set; }
 
-    public virtual DbSet<Report> Reports { get; set; }
+    public DbSet<Report> Reports { get; set; }
 
-    public virtual DbSet<Service> Services { get; set; }
+    public DbSet<Service> Services { get; set; }
+
+    public DbSet<RefundRequest> RefundRequests { get; set; }
 
     //public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        //optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
+        optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
 
 
       //  optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
       //"Database=HomeHub; Integrated Security=SSPI;" +
       //"TrustServerCertificate=true");
 
-        optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
-              "Database=HomeHub; Integrated Security=SSPI;" +
-              "TrustServerCertificate=true");
+        //optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
+        //      "Database=HomeHub; Integrated Security=SSPI;" +
+        //      "TrustServerCertificate=true");
 
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -171,6 +173,12 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
                 .HasMaxLength(50)
                 .HasColumnName("OrderID");
             entity.Property(e => e.Status).HasMaxLength(50);
+            entity.Property(e => e.Fee)
+                .HasColumnType("MONEY")
+                .IsRequired();
+            entity.Property(e => e.PromoCode)
+                .HasMaxLength(50)
+                .HasColumnName("PromoCode");
         });
 
         modelBuilder.Entity<Product>(entity =>
@@ -229,7 +237,61 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.ServiceItem).HasMaxLength(50);
         });
 
-//        OnModelCreatingPartial(modelBuilder);
+        modelBuilder.Entity<RefundRequest>(entity =>
+        {
+            entity.ToTable("RefundRequests");
+
+            entity.Property(e => e.RefundId)
+                .ValueGeneratedOnAdd()
+                .HasColumnName("RefundID");
+
+            entity.Property(e => e.OrderId)
+                .IsRequired()
+                .HasMaxLength(50)
+                .HasColumnName("OrderID");
+
+            entity.Property(e => e.ClientId)
+                .IsRequired()
+                .HasColumnName("ClientID");
+
+            entity.Property(e => e.BusinessId)
+                .IsRequired()
+                .HasColumnName("BusinessID");
+
+            entity.Property(e => e.Item)
+                .IsRequired()
+                .HasMaxLength(255);
+
+            entity.Property(e => e.RefundQuantity)
+                .IsRequired();
+
+            entity.Property(e => e.RefundReason)
+                .IsRequired()
+                .HasColumnType("TEXT");
+
+            entity.Property(e => e.RefundStatus)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            entity.Property(e => e.RefundRequestDate)
+                .IsRequired()
+                .HasColumnType("DATETIME");
+
+            entity.Property(e => e.RefundActionDate)
+                .HasColumnType("DATETIME");
+
+            entity.Property(e => e.Fee)
+                .IsRequired()
+                .HasColumnType("MONEY");
+
+            entity.Property(e => e.PromoCode)
+                .HasMaxLength(50);
+
+            entity.Property(e => e.RefundAmount)
+                .HasColumnType("MONEY");
+        });
+
+        //        OnModelCreatingPartial(modelBuilder);
     }
 
   //  partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

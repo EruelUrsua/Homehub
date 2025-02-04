@@ -26,6 +26,10 @@ public class OrdersLog
 
     public string Status { get; set; } = null!;
 
+    public decimal Fee { get; set; }
+
+    public string PromoCode { get; set; } = null!;
+
 
     // Temporary property to track if the order has been rated
     [NotMapped]
