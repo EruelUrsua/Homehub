@@ -11,6 +11,7 @@ using System.Xml.Linq;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Azure.Core;
+using HomeHub.App.Services;
 
 namespace HomeHub.App.Controllers
 {
@@ -18,10 +19,12 @@ namespace HomeHub.App.Controllers
     {
 
         private readonly HomeHubContext context;
+        private readonly PayMayaService _payMayaService;
 
         public CustomerController(HomeHubContext context)
         {
             this.context = context;
+            _payMayaService = new PayMayaService();
         }
 
         public IActionResult Index(int promoIndex = 0)
@@ -508,9 +511,29 @@ namespace HomeHub.App.Controllers
             return $"RPT-{datePart}-{sequenceNumber:D3}";
         }
 
-        public ActionResult PayOnline()
+        [HttpPost]
+        public async Task<ActionResult> PayOnline(string LogId)
         {
-            return View();
+            var orderLog = context.OrdersLogs.FirstOrDefault(o => o.LogId == LogId);
+
+            if (orderLog == null)
+            {
+                TempData["ErrorMessage"] = "Order not found for the given Log ID.";
+                return RedirectToAction("ViewOrders");
+            }
+
+            decimal amount = orderLog.Fee; // Example amount
+            string orderRef = "ORDER-123456"; // Unique order ID
+
+            string qrCodeUrl = await _payMayaService.PayOnline(amount, orderRef);
+
+            if (!string.IsNullOrEmpty(qrCodeUrl))
+            {
+                ViewBag.QRCodeUrl = qrCodeUrl;
+                return View(); // Show the QR code in a view
+            }
+
+            return View("Error");
         }
     }
 }

@@ -1,5 +1,14 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewBag.Title = "Pay with QR Code";
+}
+
+<h2>Scan to Pay</h2>
+
+@if (!string.IsNullOrEmpty(ViewBag.QRCodeUrl))
+{
+    <img src="@ViewBag.QRCodeUrl" alt="PayMaya QR Code">
+}
+else
+{
+    <p>Failed to generate QR code. Please try again.</p>
 }

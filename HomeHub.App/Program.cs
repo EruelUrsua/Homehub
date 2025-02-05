@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<HomeHubContext>(opts =>
 {
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("Paw"));
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("Pascual"));
 });
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
