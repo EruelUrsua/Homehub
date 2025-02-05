@@ -116,6 +116,11 @@
                                     <input type="hidden" name="LogId" value="@item.LogId" />
                                     <input type="submit" class="btn btn-warning" value="Report Problem" />
                                 </form>
+                                <!--For PayMaya-->
+                                <form asp-controller="Customer" asp-action="PayOnline">
+                                    <input type="hidden" name="LogId" value="@item.LogId" />
+                                    <input type="submit" class="btn btn-primary" value="Pay with Maya" />
+                                </form>
                             </td>
                         </tr>
                     }
