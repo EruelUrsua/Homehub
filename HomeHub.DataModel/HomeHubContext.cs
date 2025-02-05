@@ -42,16 +42,16 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        //optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
+        optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
 
 
       //  optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
       //"Database=HomeHub; Integrated Security=SSPI;" +
       //"TrustServerCertificate=true");
 
-        optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
-              "Database=HomeHub; Integrated Security=SSPI;" +
-              "TrustServerCertificate=true");
+        //optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
+        //      "Database=HomeHub; Integrated Security=SSPI;" +
+        //      "TrustServerCertificate=true");
 
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -251,11 +251,11 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
                 .HasColumnName("OrderID");
 
             entity.Property(e => e.ClientId)
-                .IsRequired()
                 .HasColumnName("ClientID");
 
             entity.Property(e => e.BusinessId)
                 .IsRequired()
+                .HasMaxLength(50)
                 .HasColumnName("BusinessID");
 
             entity.Property(e => e.Item)

@@ -21,12 +21,12 @@ namespace HomeHub.DataModel
         [MaxLength(50)]
         public string OrderId { get; set; }
 
-        [Required]
         [Column("ClientID")]
-        public int ClientId { get; set; }
+        public int? ClientId { get; set; }
 
+        [Required]
         [Column("BusinessID")]
-        public int? BusinessId { get; set; }
+        public string BusinessId { get; set; }
 
         [Required]
         [MaxLength(255)]
