@@ -369,7 +369,9 @@ namespace HomeHub.App.Controllers
                 Item = order.OrderedPs,
                 Qty = order.Quantity,
                 Date = DateTime.Now,
-                Status = "Accepted"
+                Status = "Accepted",
+                Fee = totalFee,
+                PromoCode = order.PromoCode
             };
 
             // Add the log to the OrdersLog table
@@ -445,63 +447,50 @@ namespace HomeHub.App.Controllers
             return View(refundRequests);
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ProcessRefund(int clientId)
+        public async Task<IActionResult> ShowRefundRequests(string businessId)
         {
-            // Step 1: Retrieve the order by clientId
-            var order = await _context.ClientOrders
-                .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == true);
+            businessId = "5";  
 
-            if (order == null)
+            // Get the list of refund requests that belong to this provider's BusinessId
+            var refundList = await _context.RefundRequests
+                .Where(r => r.BusinessId == businessId)
+                .ToListAsync();
+
+            // Check if refundList is empty and add a message
+            if (refundList.Count == 0)
             {
-                return NotFound();
+                ViewBag.NoRefundRequests = "No refund requests found for your business.";
             }
 
-            // Step 2: Log the refund in OrdersLog
-            var refundLog = new OrdersLog
-            {
-                LogId = Guid.NewGuid().ToString(),
-                OrderId = order.ClientId.ToString(),
-                OrderDate = order.OrderDate,
-                FirstName = order.FirstName,
-                LastName = order.LastName,
-                BusinessId = order.BusinessId,
-                Item = order.OrderedPs,
-                Qty = order.Quantity,
-                Date = DateTime.Now,
-                Status = "Refunded"
-            };
-
-            _context.OrdersLogs.Add(refundLog);
-
-            // Step 3: Update the order status instead of removing it
-            order.Status = false; // Assuming true = accepted, false can represent "Refunded"
-            _context.ClientOrders.Update(order);
-
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction(nameof(RefundRequests));
+            return View(refundList);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeclineRefund(string orderId)
+        public async Task<IActionResult> RejectRefund(int refundId)
         {
-            var orderLog = await _context.OrdersLogs
-                .FirstOrDefaultAsync(log => log.OrderId == orderId && log.Status == "Refund Requested");
+            // Find the refund request by its RefundId
+            var refundRequest = await _context.RefundRequests
+                .FirstOrDefaultAsync(r => r.RefundId == refundId);
 
-            if (orderLog == null)
+            // Check if the refund request exists
+            if (refundRequest == null)
             {
-                return NotFound();
+                TempData["ErrorMessage"] = "Refund request not found.";
+                return RedirectToAction("ShowRefundRequests");
             }
 
-            orderLog.Status = "Refund Declined";
+            // Reject the refund request (update status to "Rejected")
+            refundRequest.RefundStatus = "Rejected";
+            refundRequest.RefundActionDate = DateTime.Now;  
+
+            // Optionally, you can add a rejection note if needed
+            // refundRequest.RejectionNote = "The refund was rejected due to ...";
 
             await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(RefundRequests));
+            TempData["SuccessMessage"] = "Refund request has been rejected successfully.";
+            return RedirectToAction("ShowRefundRequests");
         }
-
     }
 }

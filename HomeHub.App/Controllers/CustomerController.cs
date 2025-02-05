@@ -12,6 +12,7 @@ using System.Security.Claims;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Azure.Core;
 using HomeHub.App.Services;
+using System.Linq;
 
 namespace HomeHub.App.Controllers
 {
@@ -231,121 +232,120 @@ namespace HomeHub.App.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        private (decimal OriginalFee, decimal DiscountAmount) CalculateDiscount(string promoCode, decimal discountedFee)
+        public async Task<IActionResult> ShowEligibleOrdersForRefund(int refundId, string refundReason)
         {
-            var promo = context.Promos.FirstOrDefault(p => p.PromoCode == promoCode && p.PromoEnd > DateTime.Now);
-            if (promo != null)
-            {
-                // Reconstruct the original fee
-                decimal originalFee = discountedFee / (1 - promo.Discount);
-
-                // Calculate the discount amount
-                decimal discountAmount = originalFee - discountedFee;
-
-                return (originalFee, discountAmount);
-            }
-
-            // If no promo, the discounted fee is the original fee, and the discount amount is 0
-            return (discountedFee, 0);
-        }
-
-        public async Task<IActionResult> ShowEligibleOrdersForRefund(int clientId)
-        {
-            // Fetch accepted orders from the OrdersLog
-            var eligibleRefunds = await context.OrdersLogs
-                .Where(log => log.Status == "Accepted")
-                .Select(log => new
-                {
-                    log.LogId,
-                    log.OrderDate,
-                    log.Item,
-                    log.Qty,
-                    log.BusinessId,
-                    log.OrderId,
-                    // Use business id and order date to find associated ClientOrders
-                    ClientOrder = context.ClientOrders
-                        .FirstOrDefault(o => o.BusinessId == log.BusinessId && o.OrderDate == log.OrderDate)
-                })
+            // Fetch delivered orders from the OrdersLog (assuming "Delivered" status)
+            var deliveredOrders = await context.OrdersLogs
+                .Where(log => log.Status == "Delivered" && log.OrderId != null)
                 .ToListAsync();
 
-            var refundList = new List<RefundVM>();
+            // Get the list of product providers (businesses with BusinessType = 0)
+            var eligibleUserIds = await context.Businesses
+                .Where(b => b.Businesstype == '0')
+                .Select(b => b.UserID) 
+                .ToListAsync();
 
-            foreach (var x in eligibleRefunds.Where(x => x.ClientOrder != null))
+            var refundList = new List<RefundRequest>();
+
+            foreach (var orderLog in deliveredOrders)
             {
-                var refund = new RefundVM
+                // Ensure BusinessId (string) is converted to integer for comparison with UserId
+                int businessId;
+                if (!int.TryParse(orderLog.BusinessId, out businessId))
                 {
-                    ClientID = clientId,
-                    BusinessID = x.ClientOrder.BusinessId,
-                    OrderDate = x.ClientOrder.OrderDate,
-                    OrderedPs = x.Item,
-                    Quantity = x.Qty,
-                    OrderId = x.OrderId,
-                    Fee = x.ClientOrder.Fee,
-                    PromoCode = x.ClientOrder.PromoCode
+                    continue;
+                }
+
+                // Skip if the order is not from a business with BusinessType = 0
+                if (!eligibleUserIds.Contains(businessId)) continue;
+
+                // Check if there's an existing refund request for the order
+                bool refundExists = await context.RefundRequests
+                    .AnyAsync(r => r.OrderId == orderLog.OrderId);
+
+                if (refundExists) continue;
+
+                // Check if the order was delivered within the last 7 days
+                var daysSinceDelivery = (DateTime.Now - orderLog.Date).TotalDays;
+
+                if (daysSinceDelivery > 7) continue;  // Skip if more than 7 days have passed
+
+                // Prepare refund request data
+                var refundRequest = new RefundRequest
+                {
+                    RefundId = refundId,
+                    OrderId = orderLog.OrderId,
+                    // Skip adding ClientId here since it's nullable
+                    BusinessId = orderLog.BusinessId,
+                    Item = orderLog.Item,
+                    RefundQuantity = orderLog.Qty,
+                    RefundStatus = "Pending", // Default to Pending when creating the request
+                    RefundRequestDate = DateTime.Now,
+                    Fee = orderLog.Fee,
+                    PromoCode = orderLog.PromoCode,
+                    RefundReason = refundReason,
+                    RefundAmount = 0 
                 };
 
-                if (!string.IsNullOrEmpty(refund.PromoCode))
-                {
-                    // Calculate the original fee and discount amount
-                    var (originalFee, discountAmount) = CalculateDiscount(refund.PromoCode, refund.Fee);
+                refundList.Add(refundRequest);
+            }
 
-                    // Assign the calculated values
-                    refund.OriginalFee = originalFee;
-                    refund.DiscountAmount = discountAmount;
-                    refund.DiscountedFee = refund.Fee;
-
-                    var promo = context.Promos.FirstOrDefault(p => p.PromoCode == refund.PromoCode);
-                    refund.DiscountPercentage = promo != null ? promo.Discount * 100 : 0;
-                }
-                else
-                {
-                    // If no promo, the discounted fee is the original fee
-                    refund.OriginalFee = refund.Fee;
-                    refund.DiscountedFee = refund.Fee;
-                    refund.DiscountPercentage = 0;
-                    refund.DiscountAmount = 0;
-                }
-
-                refundList.Add(refund);
+            // Check if refundList is empty and add a message
+            if (refundList.Count == 0)
+            {
+                ViewBag.NoEligibleRefunds = "No eligible refund requests found.";
             }
 
             return View(refundList);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Refund(string orderId)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RequestRefund(string orderId, string refundReason)
         {
-            if (string.IsNullOrEmpty(orderId))
+            // Fetch the order log entry for the given OrderId
+            var orderLog = await context.OrdersLogs
+                .FirstOrDefaultAsync(log => log.OrderId == orderId);
+
+            if (orderLog == null)
             {
-                TempData["Message"] = "Invalid Order ID.";
+                // Set an error message in TempData for display on the next page
+                TempData["ErrorMessage"] = "The specified order does not exist or has been removed.";
+
                 return RedirectToAction("ShowEligibleOrdersForRefund");
             }
 
-            // Find the order based on the orderId in the OrdersLog table
-            var order = await context.OrdersLogs.FirstOrDefaultAsync(o => o.OrderId == orderId && o.Status == "Accepted");
+            // Check if a refund request already exists for this order
+            bool refundExists = await context.RefundRequests
+                .AnyAsync(r => r.OrderId == orderId);
 
-            if (order != null)
+            if (refundExists)
             {
-                // Check if the order is eligible for refund
-                if (order.Status != "Refunded" && order.Status != "Cancelled")
-                {
-                    order.Status = "Refund Requested";
+                TempData["ErrorMessage"] = "A refund request has already been submitted for this order.";
 
-                    // Save changes to the database
-                    await context.SaveChangesAsync();
-
-                    TempData["Message"] = "Your refund request has been submitted successfully.";
-                }
-                else
-                {
-                    TempData["Message"] = "Refund request cannot be processed for this order.";
-                }
-            }
-            else
-            {
-                TempData["Message"] = "Order not found.";
+                return RedirectToAction("ShowEligibleOrdersForRefund");
             }
 
+            // Create a new RefundRequest based on the submitted form data
+            var refundRequest = new RefundRequest
+            {
+                OrderId = orderId,
+                BusinessId = orderLog.BusinessId, // Fetch the BusinessId from OrdersLog
+                Item = orderLog.Item,
+                RefundQuantity = orderLog.Qty,
+                Fee = orderLog.Fee,
+                RefundReason = refundReason,
+                RefundStatus = "Pending", // Default to Pending
+                PromoCode= orderLog.PromoCode,  
+                RefundRequestDate = DateTime.Now,
+                RefundAmount = 0 
+            };
+
+            // Add the new refund request to the database
+            context.RefundRequests.Add(refundRequest);
+            await context.SaveChangesAsync();
+
+            // Redirect back to the list of eligible refunds
             return RedirectToAction("ShowEligibleOrdersForRefund");
         }
 

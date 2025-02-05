@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<HomeHub.DataModel.RefundRequest>
 
-<h2>Eligible Refund Requests</h2>
+<h2>Refund Requests for Your Business</h2>
 
 <table class="table">
     <thead>
@@ -12,6 +12,7 @@
             <th>Promo Code</th>
             <th>Refund Amount</th>
             <th>Status</th>
+            <th>Refund Reason</th>
             <th>Request Date</th>
             <th>Actions</th>
         </tr>
@@ -36,16 +37,24 @@
                     }
                 </td>
                 <td>@refundRequest.RefundStatus</td>
+                <td>@refundRequest.RefundReason</td>
                 <td>@refundRequest.RefundRequestDate.ToShortDateString()</td>
                 <td>
-                    @if (refundRequest.RefundStatus != "Approved" && refundRequest.RefundStatus != "Processed")
+                    @if (refundRequest.RefundStatus == "Pending")
                     {
-                        using (Html.BeginForm("RequestRefund", "Customer", FormMethod.Post, new { @class = "refund-form" }))
+                        @* Provider can approve or reject the refund *@
+                        @using (Html.BeginForm("ApproveRefund", "Provider", FormMethod.Post, new { @class = "refund-form" }))
                         {
                             @Html.AntiForgeryToken()
                             @Html.Hidden("OrderId", refundRequest.OrderId)
-                            @Html.TextArea("RefundReason", null, new { placeholder = "Enter Refund Reason", rows = 3, @class = "form-control", required = "required" })
-                            <button type="submit" class="btn btn-primary mt-2">Request Refund</button>
+                            <button type="submit" class="btn btn-success mt-2">Approve</button>
+                        }
+
+                        @using (Html.BeginForm("RejectRefund", "Provider", FormMethod.Post, new { @class = "refund-form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.Hidden("OrderId", refundRequest.OrderId)
+                            <button type="submit" class="btn btn-danger mt-2">Reject</button>
                         }
                     }
                     else
@@ -58,34 +67,12 @@
     </tbody>
 </table>
 
-@{
-    var errorMessage = TempData["ErrorMessage"] as string;
-}
-
-@if (!string.IsNullOrEmpty(errorMessage))
-{
-    <div class="alert alert-danger">
-        @errorMessage
-    </div>
-}
-
-@* Check if there are no eligible refund requests *@
-@if (ViewBag.NoEligibleRefunds != null)
+@* Check if there are no refund requests *@
+@if (ViewBag.NoRefundRequests != null)
 {
     <div class="alert alert-warning">
-        @ViewBag.NoEligibleRefunds
+        @ViewBag.NoRefundRequests
     </div>
 }
 
-@section Scripts {
-    <script>
-        $(document).ready(function () {
-            $(".refund-form").on("submit", function (e) {
-                if ($(this).find("textarea").val().trim() === "") {
-                    e.preventDefault();
-                    alert("Please enter a refund reason.");
-                }
-            });
-        });
-    </script>
-}
+
