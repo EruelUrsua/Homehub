@@ -184,8 +184,8 @@ namespace HomeHub.DataModel.Migrations
                     RefundID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     OrderID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    ClientID = table.Column<int>(type: "int", nullable: false),
-                    BusinessID = table.Column<int>(type: "int", nullable: false),
+                    ClientID = table.Column<int>(type: "int", nullable: true),
+                    BusinessID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Item = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     RefundQuantity = table.Column<int>(type: "int", nullable: false),
                     RefundReason = table.Column<string>(type: "TEXT", nullable: false),
