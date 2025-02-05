@@ -83,6 +83,17 @@ namespace HomeHub.App.Controllers
             }
 
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Authenticate()
+        {
+
+            return View(model);
+        }
+
+
+
         public IActionResult SignIn()
         {
             SignInVM vm = new SignInVM();
