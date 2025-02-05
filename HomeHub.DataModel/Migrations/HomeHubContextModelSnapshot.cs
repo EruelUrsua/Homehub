@@ -509,12 +509,13 @@ namespace HomeHub.DataModel.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RefundId"));
 
-                    b.Property<int?>("BusinessId")
+                    b.Property<string>("BusinessId")
                         .IsRequired()
-                        .HasColumnType("int")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
                         .HasColumnName("BusinessID");
 
-                    b.Property<int>("ClientId")
+                    b.Property<int?>("ClientId")
                         .HasColumnType("int")
                         .HasColumnName("ClientID");
 
