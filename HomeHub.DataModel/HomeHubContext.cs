@@ -44,13 +44,13 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
         //optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
 
 
-        optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
-      "Database=HomeHub; Integrated Security=SSPI;" +
-      "TrustServerCertificate=true");
+      //  optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
+      //"Database=HomeHub; Integrated Security=SSPI;" +
+      //"TrustServerCertificate=true");
 
-        //optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
-        //      "Database=HomeHub; Integrated Security=SSPI;" +
-        //      "TrustServerCertificate=true");
+        optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
+              "Database=HomeHub; Integrated Security=SSPI;" +
+              "TrustServerCertificate=true");
 
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)

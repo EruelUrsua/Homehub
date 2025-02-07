@@ -6,7 +6,7 @@ namespace HomeHub.App.Services
     public class PayMayaService
     {
         private readonly string _apiUrl = "https://pg-sandbox.paymaya.com/payments/v1/qr/payments";
-        private readonly string _publicKey = "pk-rpwb5YR6EfnKiMsldZqY4hgpvJjuy8hhxW2bVAAiz2N";
+        private readonly string _publicKey = "pk-MOfNKu3FmHMVHtjyjG7vhr7vFevRkWxmxYL1Yq6iFk5";
 
         public async Task<string> PayOnline(decimal amount, string orderRef)
         {

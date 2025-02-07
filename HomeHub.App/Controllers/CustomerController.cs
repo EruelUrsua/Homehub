@@ -522,7 +522,7 @@ namespace HomeHub.App.Controllers
                 return RedirectToAction("ViewOrders");
             }
 
-            decimal amount = orderLog.Fee; // Example amount
+            decimal amount = orderLog.Fee;
             string orderRef = "ORDER-123456"; // Unique order ID
 
             string qrCodeUrl = await _payMayaService.PayOnline(amount, orderRef);
@@ -530,7 +530,7 @@ namespace HomeHub.App.Controllers
             if (!string.IsNullOrEmpty(qrCodeUrl))
             {
                 ViewBag.QRCodeUrl = qrCodeUrl;
-                return View(); // Show the QR code in a view
+                return View(); 
             }
 
             return View("Error");
