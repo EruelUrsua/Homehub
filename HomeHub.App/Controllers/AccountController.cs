@@ -16,6 +16,14 @@ namespace HomeHub.App.Controllers
             this.signInManager = signInManager;
         }
 
+
+        public IActionResult Selection()
+        {
+
+            return View();
+
+        }
+
         //Register Customer Accounts
         public IActionResult RegisterC()
         {
