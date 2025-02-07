@@ -6,6 +6,7 @@
 
 @if (!string.IsNullOrEmpty(ViewBag.QRCodeUrl))
 {
+    <p>QR Code URL: <a href="@ViewBag.QRCodeUrl" target="_blank">@ViewBag.QRCodeUrl</a></p>
     <img src="@ViewBag.QRCodeUrl" alt="PayMaya QR Code">
 }
 else

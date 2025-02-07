@@ -89,7 +89,8 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> Authenticate()
         {
 
-            return View(model);
+        //    return View(model);
+            return View();
         }
 
 

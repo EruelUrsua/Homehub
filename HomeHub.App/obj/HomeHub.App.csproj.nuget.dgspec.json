@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Notes\\C#\\Homehub\\HomeHub.App\\HomeHub.App.csproj": {}
+    "D:\\HomeHub\\Homehub\\HomeHub.App\\HomeHub.App.csproj": {}
   },
   "projects": {
-    "D:\\Notes\\C#\\Homehub\\HomeHub.App\\HomeHub.App.csproj": {
+    "D:\\HomeHub\\Homehub\\HomeHub.App\\HomeHub.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\HomeHub.App.csproj",
+        "projectUniqueName": "D:\\HomeHub\\Homehub\\HomeHub.App\\HomeHub.App.csproj",
         "projectName": "HomeHub.App",
-        "projectPath": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\HomeHub.App.csproj",
-        "packagesPath": "C:\\Users\\eruel\\.nuget\\packages\\",
-        "outputPath": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\obj\\",
+        "projectPath": "D:\\HomeHub\\Homehub\\HomeHub.App\\HomeHub.App.csproj",
+        "packagesPath": "C:\\Users\\WIN11\\.nuget\\packages\\",
+        "outputPath": "D:\\HomeHub\\Homehub\\HomeHub.App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\eruel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WIN11\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
-                "projectPath": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj"
+              "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
+                "projectPath": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj"
               }
             }
           }
@@ -88,20 +89,20 @@
         }
       }
     },
-    "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
+    "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
+        "projectUniqueName": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
         "projectName": "HomeHub.DataModel",
-        "projectPath": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
-        "packagesPath": "C:\\Users\\eruel\\.nuget\\packages\\",
-        "outputPath": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\obj\\",
+        "projectPath": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
+        "packagesPath": "C:\\Users\\WIN11\\.nuget\\packages\\",
+        "outputPath": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\eruel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WIN11\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -110,6 +111,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
