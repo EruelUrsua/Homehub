@@ -21,7 +21,7 @@ public class ClientOrder
 
     public string PromoCode { get; set; } = null!;
 
-    public int UserId { get; set; }
+    public string UserId { get; set; }
 
     public int RatingId { get; set; }
 

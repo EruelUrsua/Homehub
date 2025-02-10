@@ -161,8 +161,8 @@ namespace HomeHub.App.Controllers
                 model.promo = "No Promo Used";
             }
                     
-            var userId = 1; //Will replace with logged-in user id retrieval logic || input simular userID to a customer userID
-            var user = await context.Customers.FindAsync(userId);
+            var userId = "e7adc6c6-3798-496b-93e6-08bf177bfb55"; //Will replace with logged-in user id retrieval logic || input simular userID to a customer userID
+            var user = await context.ApplicationUsers.FindAsync(userId);
 
             if (user == null)
             {
@@ -177,10 +177,12 @@ namespace HomeHub.App.Controllers
             entity.OrderedPs = model.chosen;
             entity.Fee = TotalPrice;
             entity.PromoCode = model.promo;
-            entity.UserId = 1; //temporary userID
+            entity.UserId = "e7adc6c6-3798-496b-93e6-08bf177bfb55"; //input similar userID to customer userID
             entity.FirstName = user.Firstname;
             entity.LastName = user.Lastname;
             //entity.UserId = int.Parse(model.userID);
+            entity.ReportId = 1; //remove
+            entity.RatingId = 1; //remove
             entity.Quantity = model.qty;
             entity.ModeOfPayment = model.mode;
 
