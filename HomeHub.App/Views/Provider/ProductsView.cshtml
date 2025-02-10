@@ -30,6 +30,7 @@
         <thead>
             <tr>
                 <th>Product Name</th>
+                <th>Product Image</th>
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Container Type</th>
@@ -41,6 +42,16 @@
             {
                 <tr>
                     <td>@product.ProductItem</td>
+                    <td>
+                        @if (product.ProductImage != null)
+                        {
+                            <img src="data:image/png;base64,@Convert.ToBase64String(product.ProductImage)" width="100" height="100" alt="Product Image" />
+                        }
+                        else
+                        {
+                            <span>No Image Available</span>
+                        }
+                    </td>
                     <td>₱@product.Price.ToString("N2")</td>
                     <td>@product.Qty</td>
                     <td>@product.ContainerType</td>

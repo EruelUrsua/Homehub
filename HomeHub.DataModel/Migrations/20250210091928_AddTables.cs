@@ -135,7 +135,8 @@ namespace HomeHub.DataModel.Migrations
                     Qty = table.Column<int>(type: "int", nullable: false),
                     Price = table.Column<decimal>(type: "money", nullable: false),
                     ContainerType = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    ProviderID = table.Column<int>(type: "int", nullable: false)
+                    ProviderID = table.Column<int>(type: "int", nullable: false),
+                    ProductImage = table.Column<byte[]>(type: "varbinary(max)", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -84,7 +84,14 @@ namespace HomeHub.App.Controllers
 
             if (!ModelState.IsValid)
             {
-                return View(model);  // If validation fails, return the same view
+                return View(model);  
+            }
+
+            byte[] imageBytes;
+            using (var memoryStream = new MemoryStream())
+            {
+                await model.ProductImage.CopyToAsync(memoryStream);
+                imageBytes = memoryStream.ToArray();
             }
 
             Product entity = new Product
@@ -94,7 +101,8 @@ namespace HomeHub.App.Controllers
                 Qty = model.Qty,
                 Price = model.Price,
                 ContainerType = model.ContainerType,
-                ProviderID = providerId 
+                ProviderID = providerId,
+                ProductImage = imageBytes
             };
 
             await _context.AddAsync(entity);
@@ -167,7 +175,10 @@ namespace HomeHub.App.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(model);  // If validation fails, return the same view
+                ViewBag.Businesses = _context.Businesses
+                    .Where(b => b.Businesstype == '1')
+                    .ToList();
+                return View(model);  
             }
 
             var product = await _context.Products.FindAsync(model.ProductId);
@@ -179,6 +190,15 @@ namespace HomeHub.App.Controllers
             product.Price = model.Price;
             product.ContainerType = model.ContainerType;
             product.ProviderID = model.ProviderID;
+
+            if (model.ProductImage != null && model.ProductImage.Length > 0)
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    await model.ProductImage.CopyToAsync(memoryStream);
+                    product.ProductImage = memoryStream.ToArray(); // Update the image if a new one is uploaded
+                }
+            }
 
             _context.Set<Product>().Update(product);
             await _context.SaveChangesAsync();
