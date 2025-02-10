@@ -37,20 +37,20 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
     public DbSet<RefundRequest> RefundRequests { get; set; }
 
-    //public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+    public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
+        //optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
 
 
       //  optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
       //"Database=HomeHub; Integrated Security=SSPI;" +
       //"TrustServerCertificate=true");
 
-        //optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
-        //      "Database=HomeHub; Integrated Security=SSPI;" +
-        //      "TrustServerCertificate=true");
+        optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
+              "Database=HomeHub; Integrated Security=SSPI;" +
+              "TrustServerCertificate=true");
 
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -126,6 +126,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
             entity.Property(e => e.UserId)
+                .HasMaxLength(50)
                 .HasColumnName("UserID");
             entity.Property(e => e.ModeOfPayment)
                 .HasMaxLength(5);

@@ -21,7 +21,7 @@
 
         public string? PromoCode { get; set; } = string.Empty;
 
-        public int UserId { get; set; }
+        public string UserId { get; set; }
 
         public int RatingId { get; set; }
 
