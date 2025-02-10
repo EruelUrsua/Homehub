@@ -2,7 +2,7 @@
 
 <h1>Add Product</h1>
 
-<form asp-controller="Provider" method="post" asp-action="AddProduct">
+<form asp-controller="Provider" method="post" asp-action="AddProduct" enctype="multipart/form-data">
     @Html.AntiForgeryToken()
 
     <!-- Hidden Field to Store ProviderID -->
@@ -17,6 +17,12 @@
         <label asp-for="ProductItem" class="control-label">Product Item</label>
         <input asp-for="ProductItem" class="form-control" />
         <span asp-validation-for="ProductItem" class="text-danger"></span>
+    </div>
+    <!-- File Upload for Product Image -->
+    <div class="form-group">
+        <label for="ProductImage">Upload Product Image</label>
+        <input type="file" asp-for="ProductImage" class="form-control" />
+        <span asp-validation-for="ProductImage" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Qty" class="control-label">Quantity</label>

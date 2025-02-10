@@ -16,4 +16,7 @@ public class Product
     public string ContainerType { get; set; } = null!;
 
     public int ProviderID { get; set; }
+
+    public byte[] ProductImage { get; set; }
+
 }

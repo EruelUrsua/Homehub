@@ -41,12 +41,12 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        //optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
+        optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
 
 
-        optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
-      "Database=HomeHub; Integrated Security=SSPI;" +
-      "TrustServerCertificate=true");
+      //  optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
+      //"Database=HomeHub; Integrated Security=SSPI;" +
+      //"TrustServerCertificate=true");
 
         //optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
         //      "Database=HomeHub; Integrated Security=SSPI;" +
@@ -188,6 +188,9 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.ContainerType).HasMaxLength(50);
             entity.Property(e => e.Price).HasColumnType("money");
             entity.Property(e => e.ProductItem).HasMaxLength(50);
+            entity.Property(e => e.ProductImage)
+                .HasColumnType("varbinary(max)")
+                .HasColumnName("ProductImage");
         });
 
         modelBuilder.Entity<Promo>(entity =>
