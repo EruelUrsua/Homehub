@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeHub.DataModel.Migrations
 {
     [DbContext(typeof(HomeHubContext))]
-    [Migration("20250210092005_AddIdentityTables")]
+    [Migration("20250211104316_AddIdentityTables")]
     partial class AddIdentityTables
     {
         /// <inheritdoc />
@@ -281,8 +281,10 @@ namespace HomeHub.DataModel.Migrations
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int")
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
                         .HasColumnName("UserID");
 
                     b.HasKey("ClientId");
