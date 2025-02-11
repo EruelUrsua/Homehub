@@ -2,13 +2,24 @@
 
 <h1>Update Product</h1>
 
-<form asp-action="UpdateProduct">
+<form asp-action="UpdateProduct" method="post" enctype="multipart/form-data">
     <input type="hidden" asp-for="ProductId" />
+    <input type="hidden" asp-for="ExistingImage" />
 
     <div class="form-group">
         <label asp-for="ProductItem" class="control-label">Product Item</label>
         <input asp-for="ProductItem" class="form-control" />
         <span asp-validation-for="ProductItem" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Current Product Image</label>
+        <br />
+        <img src="data:image/jpeg;base64,@Model.ExistingImage" alt="Current Image" width="200" />
+    </div>
+    <div class="form-group">
+        <label asp-for="ProductImage">Change Product Image (Optional)</label>
+        <input asp-for="ProductImage" type="file" class="form-control" />
+        <span asp-validation-for="ProductImage" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Qty" class="control-label">Quantity</label>

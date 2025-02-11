@@ -29,5 +29,7 @@ namespace HomeHub.App.Models
 
         public int ProviderID { get; set; }  // Link to business provider
         public IFormFile ProductImage { get; set; }
+        public string ExistingImage { get; set; }  // For displaying current image
+
     }
 }
