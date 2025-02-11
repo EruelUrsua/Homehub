@@ -146,6 +146,7 @@ namespace HomeHub.App.Controllers
             return RedirectToAction("ServicesView", new { businessId = model.ProviderID });
         }
 
+        [HttpGet]
         public async Task<IActionResult> UpdateProduct(string? id)
         {
             var product = await _context.Products.FindAsync(id);
@@ -156,7 +157,8 @@ namespace HomeHub.App.Controllers
                 Qty = product.Qty,
                 Price = product.Price,
                 ContainerType = product.ContainerType,
-                ProviderID= product.ProviderID
+                ProviderID = product.ProviderID,
+                ExistingImage = Convert.ToBase64String(product.ProductImage) // Convert image to Base64 for display
             };
 
             ViewBag.Businesses = _context.Businesses
@@ -175,9 +177,6 @@ namespace HomeHub.App.Controllers
         {
             if (!ModelState.IsValid)
             {
-                ViewBag.Businesses = _context.Businesses
-                    .Where(b => b.Businesstype == '1')
-                    .ToList();
                 return View(model);  
             }
 
@@ -191,13 +190,19 @@ namespace HomeHub.App.Controllers
             product.ContainerType = model.ContainerType;
             product.ProviderID = model.ProviderID;
 
+            // Handle image update only if a new image is uploaded
             if (model.ProductImage != null && model.ProductImage.Length > 0)
             {
                 using (var memoryStream = new MemoryStream())
                 {
                     await model.ProductImage.CopyToAsync(memoryStream);
-                    product.ProductImage = memoryStream.ToArray(); // Update the image if a new one is uploaded
+                    product.ProductImage = memoryStream.ToArray();
                 }
+            }
+            else
+            {
+                // Keep the existing image if no new image is uploaded
+                product.ProductImage = Convert.FromBase64String(model.ExistingImage);
             }
 
             _context.Set<Product>().Update(product);
@@ -419,52 +424,6 @@ namespace HomeHub.App.Controllers
                 }).ToListAsync();
 
             return View(logs);
-        }
-
-        public async Task<IActionResult> RefundRequests()
-        {
-            // Fetch refund requests from the logs
-            var refundRequests = await _context.OrdersLogs
-                .Where(log => log.Status == "Refund Requested")
-                .Select(log => new RefundRequestVM
-                {
-                    LogId = log.LogId,
-                    OrderId = log.OrderId,
-                    OrderDate = log.OrderDate,
-                    FirstName = log.FirstName,
-                    LastName = log.LastName,
-                    BusinessId = log.BusinessId,
-                    Item = log.Item,
-                    Qty = log.Qty,
-                    Date = log.Date,
-                    Status = log.Status,
-                }).ToListAsync();
-
-            foreach (var request in refundRequests)
-            {
-                if (!string.IsNullOrEmpty(request.PromoCode))
-                {
-                    // Calculate the original fee and discount amount
-                    var (originalFee, discountAmount) = CalculateDiscount(request.PromoCode, request.Fee);
-
-                    // Assign the calculated values
-                    request.OriginalFee = originalFee;
-                    request.DiscountAmount = discountAmount;
-                    request.DiscountedFee = request.Fee; // This is already the discounted fee from the database
-
-                    var promo = _context.Promos.FirstOrDefault(p => p.PromoCode == request.PromoCode);
-                    request.DiscountPercentage = promo != null ? promo.Discount * 100 : 0; // Assign discount percentage if promo exists
-                }
-                else
-                {
-                    // If no promo, the discounted fee is the original fee
-                    request.OriginalFee = request.Fee;
-                    request.DiscountedFee = request.Fee;
-                    request.DiscountPercentage = 0;
-                    request.DiscountAmount = 0;
-                }
-            }
-            return View(refundRequests);
         }
 
         public async Task<IActionResult> ShowRefundRequests(string businessId)
