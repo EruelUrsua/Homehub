@@ -409,7 +409,7 @@ namespace HomeHub.App.Controllers
 
             // Fetch the product(s) in the order
             var product = await _context.Products
-                .FirstOrDefaultAsync(p => p.ProductId == order.OrderedPs); // Assuming `OrderedPs` is the product ID
+                .FirstOrDefaultAsync(p => p.ProductItem == order.OrderedPs); // Assuming `OrderedPs` is the product ID
 
             if (product == null)
             {
