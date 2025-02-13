@@ -415,10 +415,10 @@ namespace HomeHub.DataModel.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("money");
 
-                    b.Property<byte[]>("ProductImage")
+                    b.Property<string>("ProductImagePath")
                         .IsRequired()
-                        .HasColumnType("varbinary(max)")
-                        .HasColumnName("ProductImage");
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("ProductImagePath");
 
                     b.Property<string>("ProductItem")
                         .IsRequired()

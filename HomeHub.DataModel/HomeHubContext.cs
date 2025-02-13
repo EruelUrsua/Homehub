@@ -5,9 +5,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HomeHub.DataModel;
 
-public class HomeHubContext : DbContext
+public class HomeHubContext : IdentityDbContext<ApplicationUser>
 {
-    //IdentityDbContext<ApplicationUser>
 
     public HomeHubContext(DbContextOptions options) : base(options)
     {
