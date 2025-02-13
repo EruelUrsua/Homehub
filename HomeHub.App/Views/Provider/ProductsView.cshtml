@@ -13,7 +13,8 @@
                  new { @class = "form-control", onchange = "this.form.submit()" }
                  )
     </div>
-</form><br />
+</form>
+<br />
 
 <!-- Button to add a product (visible only when a provider is selected) -->
 @if (ViewBag.ProviderID != null)
@@ -43,14 +44,7 @@
                 <tr>
                     <td>@product.ProductItem</td>
                     <td>
-                        @if (product.ProductImage != null)
-                        {
-                            <img src="data:image/png;base64,@Convert.ToBase64String(product.ProductImage)" width="100" height="100" alt="Product Image" />
-                        }
-                        else
-                        {
-                            <span>No Image Available</span>
-                        }
+                        <img src="@Url.Content(product.ProductImagePath)" width="100" height="100" alt="Product Image" />
                     </td>
                     <td>₱@product.Price.ToString("N2")</td>
                     <td>@product.Qty</td>
@@ -67,9 +61,7 @@
         </tbody>
     </table>
 }
-else 
+else
 {
     <p>No products found for this business.</p>
 }
-
-

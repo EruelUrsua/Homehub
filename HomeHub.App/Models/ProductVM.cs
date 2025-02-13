@@ -28,8 +28,12 @@ namespace HomeHub.App.Models
         public string ContainerType { get; set; }
 
         public int ProviderID { get; set; }  // Link to business provider
-        public IFormFile ProductImage { get; set; }
-        public string ExistingImage { get; set; }  // For displaying current image
 
+        [Required(ErrorMessage = "Please upload a product image.")]
+
+        [Display(Name = "Product Image")]
+        public IFormFile? ProductImage { get; set; } // Optional for updates
+
+        public string? ExistingImage { get; set; } // Stores the existing image path
     }
 }

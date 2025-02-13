@@ -5,8 +5,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HomeHub.DataModel;
 
-public class HomeHubContext : IdentityDbContext<ApplicationUser>
+public class HomeHubContext : DbContext
 {
+    //IdentityDbContext<ApplicationUser>
 
     public HomeHubContext(DbContextOptions options) : base(options)
     {
@@ -41,12 +42,12 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        //optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
+        optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
 
 
-        optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
-      "Database=HomeHub; Integrated Security=SSPI;" +
-      "TrustServerCertificate=true");
+      //  optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
+      //"Database=HomeHub; Integrated Security=SSPI;" +
+      //"TrustServerCertificate=true");
 
         //optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
         //      "Database=HomeHub; Integrated Security=SSPI;" +
@@ -189,9 +190,9 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.ContainerType).HasMaxLength(50);
             entity.Property(e => e.Price).HasColumnType("money");
             entity.Property(e => e.ProductItem).HasMaxLength(50);
-            entity.Property(e => e.ProductImage)
-                .HasColumnType("varbinary(max)")
-                .HasColumnName("ProductImage");
+            entity.Property(e => e.ProductImagePath)
+                .HasColumnType("nvarchar(max)")
+                .HasColumnName("ProductImagePath");
         });
 
         modelBuilder.Entity<Promo>(entity =>
