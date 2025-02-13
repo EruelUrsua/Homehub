@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GijDxPOaypmP5hKdGYu8Xov7fHfTSwFu36OJppWik/s=",
+  "Hash": "cvo4aNFO1ENAl9ob2X1kzxjSiQCtsJIC/iI5kh80Gw4=",
   "Source": "HomeHub.App",
   "BasePath": "_content/HomeHub.App",
   "Mode": "Default",
@@ -164,6 +164,48 @@
       "OriginalItemSpec": "wwwroot\\images\\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg"
     },
     {
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6qu6mo43sh",
+      "Integrity": "DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6qu6mo43sh",
+      "Integrity": "DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
@@ -183,6 +225,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6qu6mo43sh",
+      "Integrity": "DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg"
     },
     {
       "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg",
@@ -2042,6 +2105,170 @@
       ]
     },
     {
+      "Route": "images/741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.6qu6mo43sh.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "100241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Feb 2025 08:03:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6qu6mo43sh"
+        },
+        {
+          "Name": "label",
+          "Value": "images/741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI="
+        }
+      ]
+    },
+    {
+      "Route": "images/741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "100241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Feb 2025 08:03:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI="
+        }
+      ]
+    },
+    {
+      "Route": "images/9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.6qu6mo43sh.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "100241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Feb 2025 08:57:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6qu6mo43sh"
+        },
+        {
+          "Name": "label",
+          "Value": "images/9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI="
+        }
+      ]
+    },
+    {
+      "Route": "images/9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "100241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Feb 2025 08:57:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI="
+        }
+      ]
+    },
+    {
       "Route": "images/a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.6qu6mo43sh.jpg",
       "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg",
       "Selectors": [],
@@ -2110,6 +2337,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Thu, 13 Feb 2025 07:31:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI="
+        }
+      ]
+    },
+    {
+      "Route": "images/a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.6qu6mo43sh.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "100241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Feb 2025 09:03:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6qu6mo43sh"
+        },
+        {
+          "Name": "label",
+          "Value": "images/a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI="
+        }
+      ]
+    },
+    {
+      "Route": "images/a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "100241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Feb 2025 09:03:23 GMT"
         },
         {
           "Name": "Cache-Control",
