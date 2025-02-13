@@ -87,11 +87,36 @@ namespace HomeHub.App.Controllers
                 return View(model);  
             }
 
-            byte[] imageBytes;
-            using (var memoryStream = new MemoryStream())
+            if (model.ProductImage == null || model.ProductImage.Length == 0)
             {
-                await model.ProductImage.CopyToAsync(memoryStream);
-                imageBytes = memoryStream.ToArray();
+                ModelState.AddModelError("ProductImage", "Please upload a product image.");
+                return View(model);
+            }
+
+            string uniqueFileName = null;
+
+            if (model.ProductImage != null)
+            {
+                // 1️ Define the folder path
+                string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
+
+                // Ensure folder exists
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+
+                // 2️ Create a unique file name to avoid overwriting
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + model.ProductImage.FileName;
+
+                // 3️ Combine folder path + file name
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                // 4️ Save the image to the `wwwroot/images/` folder
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await model.ProductImage.CopyToAsync(fileStream);
+                }
             }
 
             Product entity = new Product
@@ -102,7 +127,7 @@ namespace HomeHub.App.Controllers
                 Price = model.Price,
                 ContainerType = model.ContainerType,
                 ProviderID = providerId,
-                ProductImage = imageBytes
+                ProductImagePath = "/images/" + uniqueFileName // Save file path
             };
 
             await _context.AddAsync(entity);
@@ -158,7 +183,7 @@ namespace HomeHub.App.Controllers
                 Price = product.Price,
                 ContainerType = product.ContainerType,
                 ProviderID = product.ProviderID,
-                ExistingImage = Convert.ToBase64String(product.ProductImage) // Convert image to Base64 for display
+                ExistingImage = product.ProductImagePath // Store the image file path
             };
 
             ViewBag.Businesses = _context.Businesses
@@ -190,19 +215,37 @@ namespace HomeHub.App.Controllers
             product.ContainerType = model.ContainerType;
             product.ProviderID = model.ProviderID;
 
-            // Handle image update only if a new image is uploaded
+            /// Handle image update only if a new image is uploaded
             if (model.ProductImage != null && model.ProductImage.Length > 0)
             {
-                using (var memoryStream = new MemoryStream())
+                string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
+
+                // Delete the old image if it exists
+                if (!string.IsNullOrEmpty(product.ProductImagePath))
                 {
-                    await model.ProductImage.CopyToAsync(memoryStream);
-                    product.ProductImage = memoryStream.ToArray();
+                    string oldImagePath = Path.Combine(uploadsFolder, Path.GetFileName(product.ProductImagePath));
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
                 }
+
+                // Save the new image
+                string uniqueFileName = Guid.NewGuid().ToString() + "_" + model.ProductImage.FileName;
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await model.ProductImage.CopyToAsync(fileStream);
+                }
+
+                // Update the database with the new image path
+                product.ProductImagePath = "/images/" + uniqueFileName;
             }
             else
             {
-                // Keep the existing image if no new image is uploaded
-                product.ProductImage = Convert.FromBase64String(model.ExistingImage);
+                // Keep the existing image path
+                product.ProductImagePath = model.ExistingImage;
             }
 
             _context.Set<Product>().Update(product);
@@ -364,6 +407,27 @@ namespace HomeHub.App.Controllers
                 return NotFound();
             }
 
+            // Fetch the product(s) in the order
+            var product = await _context.Products
+                .FirstOrDefaultAsync(p => p.ProductId == order.OrderedPs); // Assuming `OrderedPs` is the product ID
+
+            if (product == null)
+            {
+                // Handle case where the product does not exist
+                return NotFound("Product not found.");
+            }
+
+            // Check if there is enough inventory
+            if (product.Qty < order.Quantity)
+            {
+                // Handle insufficient inventory
+                TempData["ErrorMessage"] = $"Insufficient inventory for product {product.ProductItem}. Available: {product.Qty}, Requested: {order.Quantity}";
+                return RedirectToAction(nameof(Orders));
+            }
+
+            // Decrease the inventory
+            product.Qty -= order.Quantity;
+
             // Default values
             decimal discount = 0;
             decimal totalFee = order.Fee;
@@ -401,8 +465,9 @@ namespace HomeHub.App.Controllers
 
             // Add the log to the OrdersLog table
             _context.OrdersLogs.Add(orderLog);
-
             await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Order accepted and inventory updated successfully.";
             return RedirectToAction(nameof(Orders));
         }
 

@@ -17,6 +17,6 @@ public class Product
 
     public int ProviderID { get; set; }
 
-    public byte[] ProductImage { get; set; }
+    public string ProductImagePath { get; set; }
 
 }
