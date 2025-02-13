@@ -10,18 +10,18 @@ builder.Services.AddDbContext<HomeHubContext>(opts =>
     opts.UseSqlServer(builder.Configuration.GetConnectionString("Paw"));
 });
 
-//builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
-//{
-//    options.Password.RequireDigit = false;
-//    options.Password.RequiredLength = 3;
-//    options.Password.RequireLowercase = false;
-//    options.Password.RequireUppercase = false;
-//    options.Password.RequireNonAlphanumeric = false;
-    
-  
-//    options.SignIn.RequireConfirmedEmail = false;
-//}
-//).AddEntityFrameworkStores<HomeHubContext>();
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+{
+    options.Password.RequireDigit = false;
+    options.Password.RequiredLength = 3;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+
+
+    options.SignIn.RequireConfirmedEmail = false;
+}
+).AddEntityFrameworkStores<HomeHubContext>();
 
 
 builder.Services.ConfigureApplicationCookie(options =>
@@ -61,23 +61,23 @@ app.MapControllerRoute(
     //pattern: "{controller=Provider}/{action=ProductsServices}/{id?}");
     pattern: "{controller=Customer}/{action=Index}/{id?}");
 
-//using (var scope = app.Services.CreateScope())
-//{
-//    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-//    // var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+using (var scope = app.Services.CreateScope())
+{
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    // var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
 
-//    var roles = new[] { "Customer", "Provider", "Admin" };
+    var roles = new[] { "Customer", "Provider", "Admin" };
 
-//    foreach (var role in roles)
-//    {
+    foreach (var role in roles)
+    {
 
-//        if (!await roleManager.RoleExistsAsync(role))
-//            await roleManager.CreateAsync(new IdentityRole(role));
+        if (!await roleManager.RoleExistsAsync(role))
+            await roleManager.CreateAsync(new IdentityRole(role));
 
-//    }
+    }
 
 
 
-//}
+}
 
 app.Run();
