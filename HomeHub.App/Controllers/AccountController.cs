@@ -152,7 +152,6 @@ namespace HomeHub.App.Controllers
                 user.PhoneNumber = model.ContactNo;
                 user.Address = model.Address;
 
-
                 var result = await userManager.CreateAsync(user, model.Password);
                 await userManager.AddToRoleAsync(user, "Customer");
                 if (result.Succeeded)
@@ -195,9 +194,16 @@ namespace HomeHub.App.Controllers
                 user.Address = model.BusinessAddress;
 
 
-                await userManager.CreateAsync(user, model.Password);
+                var result = await userManager.CreateAsync(user, model.Password);
                 await userManager.AddToRoleAsync(user, "Provider");
-                return RedirectToAction("Index", "Home");
+                if (result.Succeeded)
+                {
+                    //Then send the Confirmation Email to the User
+                    await SendConfirmationEmail(model.Email, user);
+
+                    return View("RegistrationSuccessful");
+                }
+                return View(model);
             }
             else
             {
