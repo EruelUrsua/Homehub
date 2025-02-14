@@ -1,13 +1,14 @@
 using HomeHub.DataModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<HomeHubContext>(opts =>
 {
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("Paw"));
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("Ursua"));
 });
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
@@ -19,10 +20,9 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     options.Password.RequireNonAlphanumeric = false;
 
 
-    options.SignIn.RequireConfirmedEmail = false;
+    options.SignIn.RequireConfirmedEmail = true;
 }
-).AddEntityFrameworkStores<HomeHubContext>();
-
+).AddEntityFrameworkStores<HomeHubContext>().AddDefaultTokenProviders();
 
 builder.Services.ConfigureApplicationCookie(options =>
 
@@ -33,6 +33,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 }
 );
 
+builder.Services.AddTransient<EmailSenderService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

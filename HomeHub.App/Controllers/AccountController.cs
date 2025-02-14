@@ -1,7 +1,11 @@
 ﻿using HomeHub.App.Models;
 using HomeHub.DataModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
+using System.Net.Mail;
+using System.Text.Encodings.Web;
 
 namespace HomeHub.App.Controllers
 {
@@ -9,11 +13,12 @@ namespace HomeHub.App.Controllers
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
-
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        private readonly EmailSenderService emailSender;
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, EmailSenderService emailSender)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
+            this.emailSender = emailSender;
         }
 
 
@@ -22,6 +27,107 @@ namespace HomeHub.App.Controllers
 
             return View();
 
+        }
+
+
+        private async Task SendConfirmationEmail(string email, ApplicationUser user)
+        {
+            // Generate the email confirmation token
+            var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
+            // Build the confirmation callback URL
+            var confirmationLink = Url.Action("ConfirmEmail", "Account",
+                new { UserId = user.Id, Token = token }, protocol: HttpContext.Request.Scheme);
+            // Encode the link to prevent XSS and other injection attacks
+            var safeLink = HtmlEncoder.Default.Encode(confirmationLink);
+            // Craft a more polished email subject
+            var subject = "Welcome to Dot Net Tutorials! Please Confirm Your Email";
+            // Create a professional HTML body
+            // Customize inline styles, text, and branding as needed
+            var messageBody = $@"
+        <div style=""font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#333;"">
+            <p>Hi {user.Firstname} {user.Lastname},</p>
+            <p>Thank you for creating an account at <strong>HomeHub</strong>.
+            To start enjoying all of our features, please confirm your email address by clicking the button below:</p>
+            <p>
+                <a href=""{safeLink}"" 
+                   style=""background-color:#007bff;color:#fff;padding:10px 20px;text-decoration:none;
+                          font-weight:bold;border-radius:5px;display:inline-block;"">
+                    Confirm Email
+                </a>
+            </p>
+            <p>If the button doesn’t work for you, copy and paste the following URL into your browser:
+                <br />
+                <a href=""{safeLink}"" style=""color:#007bff;text-decoration:none;"">{safeLink}</a>
+            </p>
+            <p>If you did not sign up for this account, please ignore this email.</p>
+            <p>Thanks,<br />
+            The HomeHub Team</p>
+        </div>
+    ";
+            //Send the Confirmation Email to the User Email Id
+            await emailSender.SendEmailAsync(email, subject, messageBody, true);
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> ConfirmEmail(string UserId, string Token)
+        {
+            if (string.IsNullOrEmpty(UserId) || string.IsNullOrEmpty(Token))
+            {
+                // Provide a descriptive error message for the view
+                ViewBag.ErrorMessage = "The link is invalid or has expired. Please request a new one if needed.";
+                return View();
+            }
+            //Find the User by Id
+            var user = await userManager.FindByIdAsync(UserId);
+            if (user == null)
+            {
+                // Provide a descriptive error for a missing user scenario
+                ViewBag.ErrorMessage = "We could not find a user associated with the given link.";
+                return View();
+            }
+            // Attempt to confirm the email
+            var result = await userManager.ConfirmEmailAsync(user, Token);
+            if (result.Succeeded)
+            {
+                ViewBag.Message = "Thank you for confirming your email address. Your account is now verified!";
+                return View();
+            }
+            // If confirmation fails
+            ViewBag.ErrorMessage = "We were unable to confirm your email address. Please try again or request a new link.";
+            return View();
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult ResendConfirmationEmail(bool IsResend = true)
+        {
+            if (IsResend)
+            {
+                ViewBag.Message = "Resend Confirmation Email";
+            }
+            else
+            {
+                ViewBag.Message = "Send Confirmation Email";
+            }
+            return View();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResendConfirmationEmail(string Email)
+        {
+            var user = await userManager.FindByEmailAsync(Email);
+            if (user == null || await userManager.IsEmailConfirmedAsync(user))
+            {
+                // Handle the situation when the user does not exist or Email already confirmed.
+                // For security, don't reveal that the user does not exist or Email is already confirmed
+                return View("ConfirmationEmailSent");
+            }
+            //Then send the Confirmation Email to the User
+            await SendConfirmationEmail(Email, user);
+            return View("ConfirmationEmailSent");
         }
 
         //Register Customer Accounts
@@ -47,9 +153,16 @@ namespace HomeHub.App.Controllers
                 user.Address = model.Address;
 
 
-                await userManager.CreateAsync(user, model.Password);
+                var result = await userManager.CreateAsync(user, model.Password);
                 await userManager.AddToRoleAsync(user, "Customer");
-                return RedirectToAction("Index", "Home");
+                if (result.Succeeded)
+                {
+                    //Then send the Confirmation Email to the User
+                    await SendConfirmationEmail(model.Email, user);
+
+                    return View("RegistrationSuccessful");
+                }
+                return View(model);
             }
             else
             {
@@ -57,6 +170,7 @@ namespace HomeHub.App.Controllers
             }
         
         }
+
 
         //Register Business Accounts
         public IActionResult RegisterB()
