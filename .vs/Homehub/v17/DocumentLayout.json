@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Notes\\C#\\Homehub\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\views\\shared\\confirmationemailsent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\shared\\confirmationemailsent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\views\\shared\\registrationsuccessful.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\shared\\registrationsuccessful.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\views\\shared\\confirmationemailsent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\shared\\confirmationemailsent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,7 +94,45 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegistrationSuccessful.cshtml",
+              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Shared\\RegistrationSuccessful.cshtml",
+              "RelativeDocumentMoniker": "HomeHub.App\\Views\\Shared\\RegistrationSuccessful.cshtml",
+              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Shared\\RegistrationSuccessful.cshtml",
+              "RelativeToolTip": "HomeHub.App\\Views\\Shared\\RegistrationSuccessful.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T06:00:30.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConfirmationEmailSent.cshtml",
+              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Shared\\ConfirmationEmailSent.cshtml",
+              "RelativeDocumentMoniker": "HomeHub.App\\Views\\Shared\\ConfirmationEmailSent.cshtml",
+              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Shared\\ConfirmationEmailSent.cshtml",
+              "RelativeToolTip": "HomeHub.App\\Views\\Shared\\ConfirmationEmailSent.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAIwBoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T04:35:17.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "HomeHub.App\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "HomeHub.App\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAM0AAAAAAAAAAAAkwNYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T02:43:49.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "RegisterC.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Account\\RegisterC.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Account\\RegisterC.cshtml",
@@ -102,7 +140,31 @@
               "RelativeToolTip": "HomeHub.App\\Views\\Account\\RegisterC.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-14T09:40:30.326Z",
+              "WhenOpened": "2025-02-14T09:40:30.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConfirmEmail.cshtml",
+              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Account\\ConfirmEmail.cshtml",
+              "RelativeDocumentMoniker": "HomeHub.App\\Views\\Account\\ConfirmEmail.cshtml",
+              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Account\\ConfirmEmail.cshtml",
+              "RelativeToolTip": "HomeHub.App\\Views\\Account\\ConfirmEmail.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T04:32:35.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Program.cs",
+              "RelativeDocumentMoniker": "HomeHub.App\\Program.cs",
+              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Program.cs",
+              "RelativeToolTip": "HomeHub.App\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T01:42:22.073Z",
               "EditorCaption": ""
             },
             {
@@ -119,44 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegistrationSuccessful.cshtml",
-              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Shared\\RegistrationSuccessful.cshtml",
-              "RelativeDocumentMoniker": "HomeHub.App\\Views\\Shared\\RegistrationSuccessful.cshtml",
-              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Shared\\RegistrationSuccessful.cshtml",
-              "RelativeToolTip": "HomeHub.App\\Views\\Shared\\RegistrationSuccessful.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-14T06:00:30.861Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ConfirmationEmailSent.cshtml",
-              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Shared\\ConfirmationEmailSent.cshtml",
-              "RelativeDocumentMoniker": "HomeHub.App\\Views\\Shared\\ConfirmationEmailSent.cshtml",
-              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Shared\\ConfirmationEmailSent.cshtml",
-              "RelativeToolTip": "HomeHub.App\\Views\\Shared\\ConfirmationEmailSent.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-14T04:35:17.632Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ConfirmEmail.cshtml",
-              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Account\\ConfirmEmail.cshtml",
-              "RelativeDocumentMoniker": "HomeHub.App\\Views\\Account\\ConfirmEmail.cshtml",
-              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Account\\ConfirmEmail.cshtml",
-              "RelativeToolTip": "HomeHub.App\\Views\\Account\\ConfirmEmail.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-14T04:32:35.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\appsettings.json",
               "RelativeDocumentMoniker": "HomeHub.App\\appsettings.json",
@@ -164,21 +189,7 @@
               "RelativeToolTip": "HomeHub.App\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-13T05:28:05.93Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Program.cs",
-              "RelativeDocumentMoniker": "HomeHub.App\\Program.cs",
-              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Program.cs",
-              "RelativeToolTip": "HomeHub.App\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T01:42:22.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-13T05:28:05.93Z"
             },
             {
               "$type": "Document",
@@ -191,19 +202,6 @@
               "ViewState": "AgIAACoAAAAAAAAAAAAuwDAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T14:04:26.798Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "HomeHub.App\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "HomeHub.App\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAKwAAAAAAAAAAADwv84AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T02:43:49.666Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",

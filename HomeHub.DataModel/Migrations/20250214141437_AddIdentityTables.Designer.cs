@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeHub.DataModel.Migrations
 {
     [DbContext(typeof(HomeHubContext))]
-    [Migration("20250214043726_AddIdentityTables")]
+    [Migration("20250214141437_AddIdentityTables")]
     partial class AddIdentityTables
     {
         /// <inheritdoc />

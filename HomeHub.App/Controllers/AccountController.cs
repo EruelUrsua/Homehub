@@ -212,16 +212,7 @@ namespace HomeHub.App.Controllers
 
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Authenticate()
-        {
-
-        //    return View(model);
-            return View();
-        }
-
-
+       
 
         public IActionResult SignIn()
         {
