@@ -40,7 +40,7 @@ namespace HomeHub.App.Controllers
             // Encode the link to prevent XSS and other injection attacks
             var safeLink = HtmlEncoder.Default.Encode(confirmationLink);
             // Craft a more polished email subject
-            var subject = "Welcome to Dot Net Tutorials! Please Confirm Your Email";
+            var subject = "Welcome to HomeHub! Please Confirm Your Email";
             // Create a professional HTML body
             // Customize inline styles, text, and branding as needed
             var messageBody = $@"
