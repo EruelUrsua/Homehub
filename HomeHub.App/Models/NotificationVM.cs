@@ -10,6 +10,7 @@ namespace HomeHub.App.Models
         public int NotificationId { get; set; }
 
         [Required]
+        [StringLength(50)]
         public string BusinessId { get; set; }  
 
         [Required]

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeHub.DataModel.Migrations
 {
     [DbContext(typeof(HomeHubContext))]
-    [Migration("20250218060644_AddTables")]
+    [Migration("20250218080436_AddTables")]
     partial class AddTables
     {
         /// <inheritdoc />
@@ -338,7 +338,8 @@ namespace HomeHub.DataModel.Migrations
 
                     b.Property<string>("BusinessId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
