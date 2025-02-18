@@ -348,7 +348,8 @@ namespace HomeHub.DataModel.Migrations
 
                     b.Property<string>("BusinessId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
