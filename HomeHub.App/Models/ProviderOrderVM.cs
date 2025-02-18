@@ -17,7 +17,7 @@
         public decimal DiscountAmount { get; set; }
         public decimal DiscountPercentage { get; set; }
 
-        public bool Status { get; set; }
+        public string Status { get; set; }//pakicheck to
 
         public string? PromoCode { get; set; } = string.Empty;
 

@@ -161,7 +161,7 @@ namespace HomeHub.App.Controllers
                 model.promo = "No Promo Used";
             }
                     
-            var userId = "884e161a-3393-4b59-a1c6-b5c4ff6b4bf4"; //Will replace with logged-in user id retrieval logic || input simular userID to a customer userID
+            var userId = "f586567c-18e9-436c-830b-bc33db67209a"; //Will replace with logged-in user id retrieval logic || input simular userID to a customer userID
             var user = await context.ApplicationUsers.FindAsync(userId);
 
             if (user == null)
@@ -177,7 +177,7 @@ namespace HomeHub.App.Controllers
             entity.OrderedPs = model.chosen;
             entity.Fee = TotalPrice;
             entity.PromoCode = model.promo;
-            entity.UserId = "884e161a-3393-4b59-a1c6-b5c4ff6b4bf4"; //input similar userID to customer userID
+            entity.UserId = "f586567c-18e9-436c-830b-bc33db67209a"; //input similar userID to customer userID
             entity.FirstName = user.Firstname;
             entity.LastName = user.Lastname;
             //entity.UserId = int.Parse(model.userID);
@@ -551,6 +551,43 @@ namespace HomeHub.App.Controllers
             }
 
             return View("Error");
+        }
+
+        [HttpPost]
+        public IActionResult CancelOrder(string LogId)
+        {
+            var order = context.OrdersLogs.FirstOrDefault(o => o.LogId == LogId);
+
+            if (order != null)
+            {
+                int clientId;
+                if (int.TryParse(order.OrderId, out clientId))
+                {
+                    var clientOrder = context.ClientOrders.FirstOrDefault(c => c.ClientId == clientId);
+
+                    DateTime orderDateTime = order.OrderDate.Date + order.Date.TimeOfDay;
+                    TimeSpan timeRemaining = orderDateTime - DateTime.Now;
+
+                    if (timeRemaining.TotalHours < 24)
+                    {
+                        TempData["ErrorMessage"] = "Cancellation is not allowed within 24 hours of delivery.";
+                        return RedirectToAction("ViewOrders");
+                    }
+
+                    if (order.Status != "Cancelled")
+                    {
+                        order.Status = "Cancelled";
+                    }
+
+                    if (clientOrder != null && clientOrder.Status != "Cancelled")
+                    {
+                        clientOrder.Status = "Cancelled";
+                    }
+
+                    context.SaveChanges();
+                }
+            }
+            return RedirectToAction("ViewOrders");
         }
     }
 }

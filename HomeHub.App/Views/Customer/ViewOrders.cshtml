@@ -20,7 +20,7 @@
         margin-top: 20px;
         margin-top: 20px;
         width: 100%;
-        max-width: 900px;
+        max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
         box-sizing: border-box;
@@ -121,6 +121,26 @@
                                     <input type="hidden" name="LogId" value="@item.LogId" />
                                     <input type="submit" class="btn btn-primary" value="Pay with Maya" />
                                 </form>
+                                <!--For Cancellation-->
+                                @{
+                                    var orderDateTime = item.OrderDate.Date + item.Date.TimeOfDay;
+                                    var timeRemaining = orderDateTime - DateTime.Now;
+                                }
+                                @if (item.Status == "Cancelled")
+                                {
+                                    <button class="btn btn-secondary" disabled>Cancelled</button>
+                                }
+                                else if (timeRemaining.TotalHours >= 24)
+                                {
+                                    <form asp-controller="Customer" asp-action="CancelOrder" method="post">
+                                        <input type="hidden" name="LogId" value="@item.LogId" />
+                                        <input type="submit" class="btn btn-danger" value="Cancel Order" onclick="return confirm('Are you sure you want to cancel this order?');" />
+                                    </form>
+                                }
+                                else
+                                {
+                                    <button class="btn btn-secondary" disabled>Cannot Cancel</button>
+                                }
                             </td>
                         </tr>
                     }

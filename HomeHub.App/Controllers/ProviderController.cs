@@ -404,7 +404,7 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> AcceptOrder(int clientId)
         {
             var order = await _context.ClientOrders
-                .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == false);
+                .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == "Pending");//Pacheck to
 
             if (order == null)
             {
@@ -448,7 +448,7 @@ namespace HomeHub.App.Controllers
             }
 
             // Update the order status and discounted fee
-            order.Status = true;
+            order.Status = "Accepted";//pakicheck to
             order.Fee = totalFee;
 
             // Log the accepted order into OrdersLog
