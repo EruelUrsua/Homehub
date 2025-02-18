@@ -161,7 +161,7 @@ namespace HomeHub.App.Controllers
                 model.promo = "No Promo Used";
             }
                     
-            var userId = "5d697178-f6a5-4c78-b0fa-9b83f194c096"; //Will replace with logged-in user id retrieval logic || input simular userID to a customer userID
+            var userId = "884e161a-3393-4b59-a1c6-b5c4ff6b4bf4"; //Will replace with logged-in user id retrieval logic || input simular userID to a customer userID
             var user = await context.ApplicationUsers.FindAsync(userId);
 
             if (user == null)
@@ -177,7 +177,7 @@ namespace HomeHub.App.Controllers
             entity.OrderedPs = model.chosen;
             entity.Fee = TotalPrice;
             entity.PromoCode = model.promo;
-            entity.UserId = "5d697178-f6a5-4c78-b0fa-9b83f194c096"; //input similar userID to customer userID
+            entity.UserId = "884e161a-3393-4b59-a1c6-b5c4ff6b4bf4"; //input similar userID to customer userID
             entity.FirstName = user.Firstname;
             entity.LastName = user.Lastname;
             //entity.UserId = int.Parse(model.userID);
@@ -192,6 +192,16 @@ namespace HomeHub.App.Controllers
             await context.AddAsync(entity);
             await context.SaveChangesAsync();
 
+            // **Create a notification for the provider**
+            var notification = new Notification
+            {
+                BusinessId = businessId.ToString(),
+                Message = $"A new order has been placed by {user.Firstname} {user.Lastname}.",
+                IsRead = false,
+            };
+
+            context.Notifications.Add(notification);
+            await context.SaveChangesAsync();
 
             model.discount = Discount;
             model.totalPrice = TotalPrice;
@@ -241,7 +251,6 @@ namespace HomeHub.App.Controllers
                 .Where(log => log.Status == "Delivered" && log.OrderId != null)
                 .ToListAsync();
 
-            // Get the list of product providers (businesses with BusinessType = 0)
             var eligibleUserIds = await context.Businesses
                 .Where(b => b.Businesstype == '0')
                 .Select(b => b.UserID) 
@@ -251,7 +260,6 @@ namespace HomeHub.App.Controllers
 
             foreach (var orderLog in deliveredOrders)
             {
-                // Ensure BusinessId (string) is converted to integer for comparison with UserId
                 int businessId;
                 if (!int.TryParse(orderLog.BusinessId, out businessId))
                 {
@@ -272,7 +280,6 @@ namespace HomeHub.App.Controllers
 
                 if (daysSinceDelivery > 7) continue;  // Skip if more than 7 days have passed
 
-                // Prepare refund request data
                 var refundRequest = new RefundRequest
                 {
                     RefundId = refundId,
@@ -343,11 +350,19 @@ namespace HomeHub.App.Controllers
                 RefundAmount = 0 
             };
 
-            // Add the new refund request to the database
             context.RefundRequests.Add(refundRequest);
+
+            // Create a notification for the provider
+            var notification = new Notification
+            {
+                BusinessId = orderLog.BusinessId,
+                Message = $"A new refund request has been made for order {orderId}.",
+                IsRead = false,
+            };
+
+            context.Notifications.Add(notification);
             await context.SaveChangesAsync();
 
-            // Redirect back to the list of eligible refunds
             return RedirectToAction("ShowEligibleOrdersForRefund");
         }
 

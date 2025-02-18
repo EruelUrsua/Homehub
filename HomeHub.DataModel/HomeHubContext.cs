@@ -39,14 +39,16 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
     public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
+    public DbSet<Notification> Notifications { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        // optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
+         optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
 
 
-        optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
-      "Database=HomeHub; Integrated Security=SSPI;" +
-      "TrustServerCertificate=true");
+      //  optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
+      //"Database=HomeHub; Integrated Security=SSPI;" +
+      //"TrustServerCertificate=true");
 
         //optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
         //      "Database=HomeHub; Integrated Security=SSPI;" +
@@ -292,6 +294,22 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
             entity.Property(e => e.RefundAmount)
                 .HasColumnType("MONEY");
+        });
+
+        modelBuilder.Entity<Notification>(entity =>
+        {
+            entity.HasKey(n => n.NotificationId);
+            entity.Property(n => n.BusinessId)
+                .HasMaxLength(50);
+            entity.Property(n => n.Message)
+                .IsRequired()
+                .HasMaxLength(255);  
+
+            entity.Property(n => n.IsRead)
+                .HasDefaultValue(false);  // Default unread
+
+            entity.Property(n => n.CreatedAt)
+                .HasDefaultValueSql("GETDATE()");  // Default to current timestamp
         });
 
         //        OnModelCreatingPartial(modelBuilder);

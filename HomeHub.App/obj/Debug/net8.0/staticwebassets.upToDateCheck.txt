@@ -1,5 +1,6 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg
 wwwroot\images\2a1dc543-06cd-4551-b20d-5fcf5dae529c_cleaning kit.jpg
 wwwroot\images\2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit.jpg
 wwwroot\images\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg
@@ -10,6 +11,7 @@ wwwroot\images\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg
 wwwroot\images\bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg
 wwwroot\images\c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.jpg
 wwwroot\images\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg
+wwwroot\images\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

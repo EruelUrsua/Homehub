@@ -1,0 +1,45 @@
+﻿@using HomeHub.DataModel
+@model List<Notification>
+
+@{
+    ViewData["Title"] = "Notifications";
+}
+
+<h2>Notifications</h2>
+
+@if (!Model.Any())
+{
+    <p>No notifications at the moment.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Message</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var notification in Model)
+            {
+                <tr class="@(notification.IsRead ? "text-muted" : "")">
+                    <td>@notification.Message</td>
+                    <td>@notification.CreatedAt.ToString("MMMM dd, yyyy HH:mm")</td>
+                    <td>@(notification.IsRead ? "Read" : "Unread")</td>
+                    <td>
+                        @if (!notification.IsRead)
+                        {
+                            <form asp-action="MarkNotificationAsRead" method="post">
+                                <input type="hidden" name="notificationId" value="@notification.NotificationId" />
+                                <button type="submit" class="btn btn-primary btn-sm">Mark as Read</button>
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
