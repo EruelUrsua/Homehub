@@ -52,8 +52,8 @@
                 <td>
                         @order.PromoCode
                 </td>
-                <td>
-                    @if (order.Status)
+                <td> <!--Pakicheck tong mga nasa baba-->
+                    @if (order.Status == "Accepted")
                     {
                         <span class="text-success">Accepted</span>
                     }
@@ -63,7 +63,7 @@
                     }
                 </td>
                 <td>
-                    @if (!order.Status)  
+                    @if (order.Status == "Pending")  
                     {
                         <form asp-action="AcceptOrder" asp-route-clientId="@order.ClientId" method="post">
                             <button type="submit" class="btn btn-sm btn-primary">Accept</button>

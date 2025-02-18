@@ -17,7 +17,7 @@ public class ClientOrder
 
     public decimal Fee { get; set; }
 
-    public bool Status { get; set; }
+    public string Status { get; set; }
 
     public string PromoCode { get; set; } = null!;
 
