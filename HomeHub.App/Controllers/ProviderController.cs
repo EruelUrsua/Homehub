@@ -15,6 +15,11 @@ namespace HomeHub.App.Controllers
             _context = context;
         }
 
+        public IActionResult ProviderHome()
+        {
+            return View();
+        }
+
         public IActionResult ProductsView(int? businessId)
         {
             ViewBag.Businesses = _context.Businesses
@@ -491,9 +496,36 @@ namespace HomeHub.App.Controllers
             return View(logs);
         }
 
+        public async Task<IActionResult> ShowNotifications(string businessId)
+        {
+            businessId = "1";
+
+            var notifications = await _context.Notifications
+                .Where(n => n.BusinessId == businessId)
+                .OrderByDescending(n => n.CreatedAt)
+                .ToListAsync();
+
+            return View(notifications);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> MarkNotificationAsRead(int notificationId)
+        {
+            var notification = await _context.Notifications.FindAsync(notificationId);
+
+            if (notification != null)
+            {
+                notification.IsRead = true;
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToAction("ShowNotifications", new { businessId = notification?.BusinessId });
+        }
+
+
         public async Task<IActionResult> ShowRefundRequests(string businessId)
         {
-            businessId = "5";  
+            businessId = "1";  
 
             // Get the list of refund requests that belong to this provider's BusinessId
             var refundList = await _context.RefundRequests
@@ -535,6 +567,89 @@ namespace HomeHub.App.Controllers
 
             TempData["SuccessMessage"] = "Refund request has been rejected successfully.";
             return RedirectToAction("ShowRefundRequests");
+        }
+
+        public IActionResult ManagePromo()
+        {
+            List<Promo> list = _context.Promos.ToList();
+            return View(list);
+        }
+
+        public IActionResult CreatePromo()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreatePromo(PromoViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                Promo entity = new Promo();
+                entity.PromoName = model.PromoName;
+                entity.PromoCode = model.PromoCode;
+                entity.PromoStart = model.PromoStart;
+                entity.PromoEnd = model.PromoEnd;
+                entity.BusinessName = model.BusinessName;
+                entity.Discount = model.Discount;
+
+                _context.Promos.Add(entity);
+                _context.SaveChanges();
+
+                return RedirectToAction("ProviderHome", "Provider");
+            }
+
+            return View(model);
+        }
+
+
+
+        public async Task<IActionResult> EditPromo(int id)
+        {
+            var promo = await _context.Promos.FindAsync(id);
+            if (promo == null)
+            {
+                return RedirectToAction("ManagePromo");
+            }
+
+            var promoViewModel = new PromoViewModel
+            {
+                PromoID = promo.PromoId,
+                PromoName = promo.PromoName,
+                PromoCode = promo.PromoCode,
+                PromoStart = promo.PromoStart,
+                PromoEnd = promo.PromoEnd,
+                BusinessName = promo.BusinessName,
+                Discount = promo.Discount
+            };
+
+            return View(promoViewModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditPromo(PromoViewModel promoViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var promo = await _context.Promos.FindAsync(promoViewModel.PromoID);
+                if (promo == null)
+                {
+                    return RedirectToAction("ManagePromo");
+                }
+
+                promo.PromoName = promoViewModel.PromoName;
+                promo.PromoCode = promoViewModel.PromoCode;
+                promo.PromoStart = promoViewModel.PromoStart;
+                promo.PromoEnd = promoViewModel.PromoEnd;
+                promo.BusinessName = promoViewModel.BusinessName;
+                promo.Discount = promoViewModel.Discount;
+
+                _context.Promos.Update(promo);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("ManagePromo");
+            }
+            return View(promoViewModel);
         }
     }
 }

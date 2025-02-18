@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<HomeHubContext>(opts =>
 {
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("Ursua"));
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("Paw"));
 });
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
@@ -20,7 +20,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     options.Password.RequireNonAlphanumeric = true;
 
 
-    options.SignIn.RequireConfirmedEmail = true;
+    options.SignIn.RequireConfirmedEmail = false;
 }
 ).AddEntityFrameworkStores<HomeHubContext>().AddDefaultTokenProviders();
 
