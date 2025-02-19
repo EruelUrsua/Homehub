@@ -42,20 +42,23 @@
                 <td>
                     @if (refundRequest.RefundStatus == "Pending")
                     {
-                        @* Provider can approve or reject the refund *@
-                        @using (Html.BeginForm("ApproveRefund", "Provider", FormMethod.Post, new { @class = "refund-form" }))
+                        @using (Html.BeginForm("AcceptRefund", "Provider", FormMethod.Post, new { @class = "refund-form" }))
                         {
                             @Html.AntiForgeryToken()
-                            @Html.Hidden("OrderId", refundRequest.OrderId)
-                            <button type="submit" class="btn btn-success mt-2">Approve</button>
+                            @Html.Hidden("refundId", refundRequest.RefundId) 
+                            <button type="submit" class="btn btn-success mt-2">Accept</button>
                         }
 
                         @using (Html.BeginForm("RejectRefund", "Provider", FormMethod.Post, new { @class = "refund-form" }))
                         {
                             @Html.AntiForgeryToken()
-                            @Html.Hidden("OrderId", refundRequest.OrderId)
+                            @Html.Hidden("refundId", refundRequest.RefundId)
                             <button type="submit" class="btn btn-danger mt-2">Reject</button>
                         }
+                    }
+                    else if (refundRequest.RefundStatus == "Refund Accepted")
+                    {
+                        <span class="text-success">Refund Accepted</span>
                     }
                     else
                     {
@@ -67,7 +70,6 @@
     </tbody>
 </table>
 
-@* Check if there are no refund requests *@
 @if (ViewBag.NoRefundRequests != null)
 {
     <div class="alert alert-warning">

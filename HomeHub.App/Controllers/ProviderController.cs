@@ -520,45 +520,78 @@ namespace HomeHub.App.Controllers
         }
 
 
-        public async Task<IActionResult> ShowRefundRequests(string businessId)
+        public async Task<IActionResult> ShowRefundRequests()
         {
-            businessId = "1";  
+            string businessId = "1";
 
-            // Get the list of refund requests that belong to this provider's BusinessId
+            // Get refund requests for this provider's BusinessId
             var refundList = await _context.RefundRequests
                 .Where(r => r.BusinessId == businessId)
                 .ToListAsync();
 
             // Check if refundList is empty and add a message
-            if (refundList.Count == 0)
-            {
-                ViewBag.NoRefundRequests = "No refund requests found for your business.";
-            }
+                if (!refundList.Any())
+                {
+                    ViewBag.NoRefundRequests = "No refund requests found for your business.";
+                }
 
             return View(refundList);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> RejectRefund(int refundId)
+        public async Task<IActionResult> AcceptRefund(int refundId)
         {
-            // Find the refund request by its RefundId
             var refundRequest = await _context.RefundRequests
                 .FirstOrDefaultAsync(r => r.RefundId == refundId);
 
-            // Check if the refund request exists
             if (refundRequest == null)
             {
                 TempData["ErrorMessage"] = "Refund request not found.";
                 return RedirectToAction("ShowRefundRequests");
             }
 
-            // Reject the refund request (update status to "Rejected")
-            refundRequest.RefundStatus = "Rejected";
-            refundRequest.RefundActionDate = DateTime.Now;  
+            var orderLog = await _context.OrdersLogs
+                .FirstOrDefaultAsync(log => log.OrderId == refundRequest.OrderId);
 
-            // Optionally, you can add a rejection note if needed
-            // refundRequest.RejectionNote = "The refund was rejected due to ...";
+            if (orderLog != null)
+            {
+                orderLog.Status = "Refund Accepted"; // Update order history
+            }
+
+            refundRequest.RefundStatus = "Refund Accepted";
+            refundRequest.RefundActionDate = DateTime.Now;
+            refundRequest.RefundAmount = refundRequest.Fee;
+
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Refund request has been accepted successfully.";
+            return RedirectToAction("ShowRefundRequests");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RejectRefund(int refundId)
+        {
+            var refundRequest = await _context.RefundRequests
+                .FirstOrDefaultAsync(r => r.RefundId == refundId);
+
+            if (refundRequest == null)
+            {
+                TempData["ErrorMessage"] = "Refund request not found.";
+                return RedirectToAction("ShowRefundRequests");
+            }
+
+            var orderLog = await _context.OrdersLogs
+                .FirstOrDefaultAsync(log => log.OrderId == refundRequest.OrderId);
+
+            if (orderLog != null)
+            {
+                orderLog.Status = "Refund Rejected"; // Update order history
+            }
+
+            refundRequest.RefundStatus = "Refund Rejected";
+            refundRequest.RefundActionDate = DateTime.Now;
 
             await _context.SaveChangesAsync();
 

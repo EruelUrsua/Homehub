@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KFWT7IMRw20OWOE9k2sYAsp59VVHqa2yxyIPONWkXAU=",
+  "Hash": "ExjBemvJZaiuZDYv0emg1e/rad2ux/R3JYgBnASw/Yo=",
   "Source": "HomeHub.App",
   "BasePath": "_content/HomeHub.App",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "HomeHub.App\\wwwroot",
       "Source": "HomeHub.App",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\bundle\\HomeHub.App.styles.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\bundle\\HomeHub.App.styles.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "HomeHub.App#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "CmzRxkVxBBkio47qymEoacrAbAueyXC3VpIPYJSv0AU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\bundle\\HomeHub.App.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\bundle\\HomeHub.App.styles.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HomeHub.App.bundle.scp.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HomeHub.App.bundle.scp.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "HomeHub.App#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "CmzRxkVxBBkio47qymEoacrAbAueyXC3VpIPYJSv0AU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HomeHub.App.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HomeHub.App.bundle.scp.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\css\\site.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "css/site#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\favicon.ico",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "favicon#[.{fingerprint}]?.ico",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\0e175329-4e30-4e91-8b21-ae30884a12ec_samplestock.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\0e175329-4e30-4e91-8b21-ae30884a12ec_samplestock.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/0e175329-4e30-4e91-8b21-ae30884a12ec_samplestock#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\images\\0e175329-4e30-4e91-8b21-ae30884a12ec_samplestock.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\images\\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\243470ad-70b5-455a-aeea-ca9526e946d2_cleaning kit.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\243470ad-70b5-455a-aeea-ca9526e946d2_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/243470ad-70b5-455a-aeea-ca9526e946d2_cleaning kit#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -164,10 +164,10 @@
       "OriginalItemSpec": "wwwroot\\images\\243470ad-70b5-455a-aeea-ca9526e946d2_cleaning kit.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\2a1dc543-06cd-4551-b20d-5fcf5dae529c_cleaning kit.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\2a1dc543-06cd-4551-b20d-5fcf5dae529c_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/2a1dc543-06cd-4551-b20d-5fcf5dae529c_cleaning kit#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -185,10 +185,10 @@
       "OriginalItemSpec": "wwwroot\\images\\2a1dc543-06cd-4551-b20d-5fcf5dae529c_cleaning kit.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -206,10 +206,10 @@
       "OriginalItemSpec": "wwwroot\\images\\2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -227,10 +227,10 @@
       "OriginalItemSpec": "wwwroot\\images\\37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -248,10 +248,10 @@
       "OriginalItemSpec": "wwwroot\\images\\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -269,10 +269,10 @@
       "OriginalItemSpec": "wwwroot\\images\\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\925e66ba-5942-4496-a5dd-f23ddd2c11d2_cleaning kit.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\925e66ba-5942-4496-a5dd-f23ddd2c11d2_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/925e66ba-5942-4496-a5dd-f23ddd2c11d2_cleaning kit#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -290,10 +290,10 @@
       "OriginalItemSpec": "wwwroot\\images\\925e66ba-5942-4496-a5dd-f23ddd2c11d2_cleaning kit.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -311,10 +311,10 @@
       "OriginalItemSpec": "wwwroot\\images\\9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -332,10 +332,10 @@
       "OriginalItemSpec": "wwwroot\\images\\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -353,10 +353,10 @@
       "OriginalItemSpec": "wwwroot\\images\\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\images\\bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -395,10 +395,10 @@
       "OriginalItemSpec": "wwwroot\\images\\c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\images\\c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -437,10 +437,10 @@
       "OriginalItemSpec": "wwwroot\\images\\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "images/faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -458,10 +458,10 @@
       "OriginalItemSpec": "wwwroot\\images\\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\js\\site.js",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "js/site#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -479,10 +479,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -500,10 +500,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -521,10 +521,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -542,10 +542,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -563,10 +563,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -584,10 +584,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -605,10 +605,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -626,10 +626,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -647,10 +647,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -668,10 +668,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -689,10 +689,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -710,10 +710,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -752,10 +752,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -773,10 +773,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -794,10 +794,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -836,10 +836,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -857,10 +857,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -878,10 +878,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -899,10 +899,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -920,10 +920,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -941,10 +941,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -962,10 +962,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -983,10 +983,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1004,10 +1004,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1025,10 +1025,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1046,10 +1046,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1067,10 +1067,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1109,10 +1109,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -1130,10 +1130,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1151,10 +1151,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1172,10 +1172,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1193,10 +1193,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1235,10 +1235,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1256,10 +1256,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1277,10 +1277,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1298,10 +1298,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1319,10 +1319,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1340,10 +1340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1361,10 +1361,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1382,10 +1382,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1403,10 +1403,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/bootstrap/LICENSE#[.{fingerprint}]?",
       "AssetKind": "All",
@@ -1424,10 +1424,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/jquery/dist/jquery#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1466,10 +1466,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1487,10 +1487,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/jquery/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
@@ -1508,10 +1508,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/jquery-validation/dist/additional-methods#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1529,10 +1529,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1550,10 +1550,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1571,10 +1571,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1592,10 +1592,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/jquery-validation/LICENSE#[.{fingerprint}]?.md",
       "AssetKind": "All",
@@ -1613,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1634,10 +1634,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1655,10 +1655,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
       "BasePath": "_content/HomeHub.App",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
@@ -1679,7 +1679,7 @@
   "Endpoints": [
     {
       "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\css\\site.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1700,7 +1700,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1724,7 +1724,7 @@
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\css\\site.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1745,7 +1745,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1761,7 +1761,7 @@
     },
     {
       "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\favicon.ico",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1782,7 +1782,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1806,7 +1806,7 @@
     },
     {
       "Route": "favicon.ico",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\favicon.ico",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1827,7 +1827,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1843,7 +1843,7 @@
     },
     {
       "Route": "HomeHub.App.2u5iatmdza.bundle.scp.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HomeHub.App.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HomeHub.App.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1864,7 +1864,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1888,7 +1888,7 @@
     },
     {
       "Route": "HomeHub.App.2u5iatmdza.styles.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\bundle\\HomeHub.App.styles.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\bundle\\HomeHub.App.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1909,7 +1909,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1933,7 +1933,7 @@
     },
     {
       "Route": "HomeHub.App.bundle.scp.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HomeHub.App.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HomeHub.App.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1954,7 +1954,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1970,7 +1970,7 @@
     },
     {
       "Route": "HomeHub.App.styles.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\bundle\\HomeHub.App.styles.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\bundle\\HomeHub.App.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1991,7 +1991,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2007,7 +2007,7 @@
     },
     {
       "Route": "images/0e175329-4e30-4e91-8b21-ae30884a12ec_samplestock.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\0e175329-4e30-4e91-8b21-ae30884a12ec_samplestock.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\0e175329-4e30-4e91-8b21-ae30884a12ec_samplestock.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2028,7 +2028,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Wed, 19 Feb 2025 06:41:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2044,7 +2044,7 @@
     },
     {
       "Route": "images/0e175329-4e30-4e91-8b21-ae30884a12ec_samplestock.u6iwnlni8k.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\0e175329-4e30-4e91-8b21-ae30884a12ec_samplestock.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\0e175329-4e30-4e91-8b21-ae30884a12ec_samplestock.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2065,7 +2065,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Wed, 19 Feb 2025 06:41:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2089,7 +2089,7 @@
     },
     {
       "Route": "images/10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.6qu6mo43sh.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2110,7 +2110,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Tue, 18 Feb 2025 08:01:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2134,7 +2134,7 @@
     },
     {
       "Route": "images/10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2155,7 +2155,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Tue, 18 Feb 2025 08:01:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2171,7 +2171,7 @@
     },
     {
       "Route": "images/243470ad-70b5-455a-aeea-ca9526e946d2_cleaning kit.6qu6mo43sh.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\243470ad-70b5-455a-aeea-ca9526e946d2_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\243470ad-70b5-455a-aeea-ca9526e946d2_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2192,7 +2192,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Wed, 19 Feb 2025 08:49:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2216,7 +2216,7 @@
     },
     {
       "Route": "images/243470ad-70b5-455a-aeea-ca9526e946d2_cleaning kit.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\243470ad-70b5-455a-aeea-ca9526e946d2_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\243470ad-70b5-455a-aeea-ca9526e946d2_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2237,7 +2237,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Wed, 19 Feb 2025 08:49:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2253,7 +2253,7 @@
     },
     {
       "Route": "images/2a1dc543-06cd-4551-b20d-5fcf5dae529c_cleaning kit.6qu6mo43sh.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\2a1dc543-06cd-4551-b20d-5fcf5dae529c_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\2a1dc543-06cd-4551-b20d-5fcf5dae529c_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2274,7 +2274,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2298,7 +2298,7 @@
     },
     {
       "Route": "images/2a1dc543-06cd-4551-b20d-5fcf5dae529c_cleaning kit.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\2a1dc543-06cd-4551-b20d-5fcf5dae529c_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\2a1dc543-06cd-4551-b20d-5fcf5dae529c_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2319,7 +2319,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2335,7 +2335,7 @@
     },
     {
       "Route": "images/2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit.6qu6mo43sh.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2356,7 +2356,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2380,7 +2380,7 @@
     },
     {
       "Route": "images/2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2401,7 +2401,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2417,7 +2417,7 @@
     },
     {
       "Route": "images/37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.6qu6mo43sh.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2438,7 +2438,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Wed, 19 Feb 2025 08:49:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2462,7 +2462,7 @@
     },
     {
       "Route": "images/37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2483,7 +2483,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Wed, 19 Feb 2025 08:49:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2499,7 +2499,7 @@
     },
     {
       "Route": "images/501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.6qu6mo43sh.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2520,7 +2520,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2544,7 +2544,7 @@
     },
     {
       "Route": "images/501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2565,7 +2565,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2581,7 +2581,7 @@
     },
     {
       "Route": "images/741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.6qu6mo43sh.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2602,7 +2602,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2626,7 +2626,7 @@
     },
     {
       "Route": "images/741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2647,7 +2647,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2663,7 +2663,7 @@
     },
     {
       "Route": "images/925e66ba-5942-4496-a5dd-f23ddd2c11d2_cleaning kit.6qu6mo43sh.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\925e66ba-5942-4496-a5dd-f23ddd2c11d2_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\925e66ba-5942-4496-a5dd-f23ddd2c11d2_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2684,7 +2684,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Wed, 19 Feb 2025 08:49:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2708,7 +2708,7 @@
     },
     {
       "Route": "images/925e66ba-5942-4496-a5dd-f23ddd2c11d2_cleaning kit.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\925e66ba-5942-4496-a5dd-f23ddd2c11d2_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\925e66ba-5942-4496-a5dd-f23ddd2c11d2_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2729,7 +2729,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Wed, 19 Feb 2025 08:49:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2745,7 +2745,7 @@
     },
     {
       "Route": "images/9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.6qu6mo43sh.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2766,7 +2766,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2790,7 +2790,7 @@
     },
     {
       "Route": "images/9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2811,7 +2811,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2827,7 +2827,7 @@
     },
     {
       "Route": "images/a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.6qu6mo43sh.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2848,7 +2848,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2872,7 +2872,7 @@
     },
     {
       "Route": "images/a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2893,7 +2893,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2909,7 +2909,7 @@
     },
     {
       "Route": "images/a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.6qu6mo43sh.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2930,7 +2930,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2954,7 +2954,7 @@
     },
     {
       "Route": "images/a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2975,7 +2975,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2991,7 +2991,7 @@
     },
     {
       "Route": "images/bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.6qu6mo43sh.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3012,7 +3012,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3036,7 +3036,7 @@
     },
     {
       "Route": "images/bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3057,7 +3057,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3073,7 +3073,7 @@
     },
     {
       "Route": "images/c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.6qu6mo43sh.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3094,7 +3094,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3118,7 +3118,7 @@
     },
     {
       "Route": "images/c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3139,7 +3139,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3155,7 +3155,7 @@
     },
     {
       "Route": "images/c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3176,7 +3176,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Wed, 19 Feb 2025 06:41:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3192,7 +3192,7 @@
     },
     {
       "Route": "images/c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.u6iwnlni8k.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3213,7 +3213,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Wed, 19 Feb 2025 06:41:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3237,7 +3237,7 @@
     },
     {
       "Route": "images/d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.6qu6mo43sh.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3258,7 +3258,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3282,7 +3282,7 @@
     },
     {
       "Route": "images/d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3303,7 +3303,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3319,7 +3319,7 @@
     },
     {
       "Route": "images/faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.6qu6mo43sh.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3340,7 +3340,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Tue, 18 Feb 2025 08:01:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3364,7 +3364,7 @@
     },
     {
       "Route": "images/faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3385,7 +3385,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Tue, 18 Feb 2025 08:01:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3401,7 +3401,7 @@
     },
     {
       "Route": "js/site.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\js\\site.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3422,7 +3422,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3438,7 +3438,7 @@
     },
     {
       "Route": "js/site.xtxxf3hu2r.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\js\\site.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3459,7 +3459,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3483,7 +3483,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3504,7 +3504,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3520,7 +3520,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.73kdqttayv.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3541,7 +3541,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3565,7 +3565,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3586,7 +3586,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3602,7 +3602,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3623,7 +3623,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3647,7 +3647,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3668,7 +3668,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3684,7 +3684,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3705,7 +3705,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3729,7 +3729,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3750,7 +3750,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3766,7 +3766,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.ozu22stjof.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3787,7 +3787,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3811,7 +3811,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3832,7 +3832,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3848,7 +3848,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.4gxs3k148c.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3869,7 +3869,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3893,7 +3893,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3914,7 +3914,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3930,7 +3930,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.gjcw7pocpk.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3951,7 +3951,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3975,7 +3975,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.6l4ir0ityv.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3996,7 +3996,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4020,7 +4020,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4041,7 +4041,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4057,7 +4057,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.fctod5rc9n.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4078,7 +4078,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4102,7 +4102,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4123,7 +4123,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4139,7 +4139,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4160,7 +4160,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4176,7 +4176,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4197,7 +4197,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4213,7 +4213,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.st1cbwfwo5.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4234,7 +4234,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4258,7 +4258,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.5p029spbuu.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4279,7 +4279,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4303,7 +4303,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4324,7 +4324,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4340,7 +4340,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.5vj65cig9w.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4361,7 +4361,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4385,7 +4385,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4406,7 +4406,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4422,7 +4422,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.nakmwdwsxp.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4443,7 +4443,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4467,7 +4467,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4488,7 +4488,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4504,7 +4504,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.2q4vfeazbq.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4525,7 +4525,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4549,7 +4549,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4570,7 +4570,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4586,7 +4586,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.e6q6xbwqzk.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4607,7 +4607,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4631,7 +4631,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4652,7 +4652,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4668,7 +4668,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4689,7 +4689,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4705,7 +4705,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.o371a8zbv2.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4726,7 +4726,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4750,7 +4750,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.dy6jgresuo.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4771,7 +4771,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4795,7 +4795,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4816,7 +4816,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4832,7 +4832,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.jeal3x0ldm.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4853,7 +4853,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4877,7 +4877,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4898,7 +4898,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4914,7 +4914,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4935,7 +4935,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4951,7 +4951,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4972,7 +4972,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4988,7 +4988,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.okkk44j0xs.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5009,7 +5009,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5033,7 +5033,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.z7kmom2977.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5054,7 +5054,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5078,7 +5078,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.mk8rdyw69w.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5099,7 +5099,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5123,7 +5123,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.97yrjpyf9r.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5144,7 +5144,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5168,7 +5168,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5189,7 +5189,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5205,7 +5205,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.cwzlr5n8x4.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5226,7 +5226,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5250,7 +5250,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5271,7 +5271,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5287,7 +5287,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5308,7 +5308,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5324,7 +5324,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5345,7 +5345,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5361,7 +5361,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.wmug9u23qg.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5382,7 +5382,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5406,7 +5406,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.y53cy5s2zj.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5427,7 +5427,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5451,7 +5451,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5472,7 +5472,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5488,7 +5488,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.j75batdsum.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5509,7 +5509,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5533,7 +5533,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5554,7 +5554,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5570,7 +5570,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.2yn17lgxub.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5591,7 +5591,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5615,7 +5615,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5636,7 +5636,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5652,7 +5652,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5673,7 +5673,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5689,7 +5689,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.vy0bq9ydhf.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5710,7 +5710,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5734,7 +5734,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5755,7 +5755,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5771,7 +5771,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.ab1c3rmv7g.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5792,7 +5792,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5816,7 +5816,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5837,7 +5837,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5853,7 +5853,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5874,7 +5874,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5890,7 +5890,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.56d2bn4wt9.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5911,7 +5911,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5935,7 +5935,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5956,7 +5956,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5972,7 +5972,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.ik6i2hrs65.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5993,7 +5993,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6017,7 +6017,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.ophe14yye5.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6038,7 +6038,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6062,7 +6062,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.z9shlbduue.css",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6083,7 +6083,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6107,7 +6107,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.1piudyfv7h.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6128,7 +6128,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6152,7 +6152,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.f6zq8v6eb3.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6173,7 +6173,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6197,7 +6197,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6218,7 +6218,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6234,7 +6234,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js.kbynt5jhd9.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6255,7 +6255,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6279,7 +6279,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6300,7 +6300,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6316,7 +6316,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.89qbw8ngem.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6337,7 +6337,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6361,7 +6361,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6382,7 +6382,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6398,7 +6398,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.c2nslu3uf3.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6419,7 +6419,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6443,7 +6443,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6464,7 +6464,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6480,7 +6480,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6501,7 +6501,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6517,7 +6517,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js.2lgwfvgpvi.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6538,7 +6538,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6562,7 +6562,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6583,7 +6583,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6599,7 +6599,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.jqwzsa9uv6.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6620,7 +6620,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6644,7 +6644,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6665,7 +6665,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6681,7 +6681,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6702,7 +6702,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6718,7 +6718,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js.wsezl0heh6.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6739,7 +6739,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6763,7 +6763,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.n5w6o92d9r.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6784,7 +6784,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6808,7 +6808,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6829,7 +6829,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6845,7 +6845,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js.6ukhryfubh.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6866,7 +6866,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6890,7 +6890,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6911,7 +6911,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6927,7 +6927,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.4908xmbfjr.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6948,7 +6948,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6972,7 +6972,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6993,7 +6993,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7009,7 +7009,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7030,7 +7030,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7046,7 +7046,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js.u33ctipx7g.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7067,7 +7067,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7091,7 +7091,7 @@
     },
     {
       "Route": "lib/bootstrap/LICENSE",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7112,7 +7112,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7128,7 +7128,7 @@
     },
     {
       "Route": "lib/bootstrap/LICENSE.81b7ukuj9c",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7149,7 +7149,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7173,7 +7173,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.7s2n0ol71w.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7194,7 +7194,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7218,7 +7218,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7239,7 +7239,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7255,7 +7255,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.5pze98is44.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7276,7 +7276,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7300,7 +7300,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.ehgnz7f14e.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7321,7 +7321,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7345,7 +7345,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7366,7 +7366,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7382,7 +7382,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.map",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7403,7 +7403,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7419,7 +7419,7 @@
     },
     {
       "Route": "lib/jquery/LICENSE.mlv21k5csn.txt",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7440,7 +7440,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7464,7 +7464,7 @@
     },
     {
       "Route": "lib/jquery/LICENSE.txt",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7485,7 +7485,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7501,7 +7501,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.ay5nd8zt9x.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7522,7 +7522,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7546,7 +7546,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7567,7 +7567,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7583,7 +7583,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.min.9oaff4kq20.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7604,7 +7604,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7628,7 +7628,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.min.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7649,7 +7649,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7665,7 +7665,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.6d0lkjaslc.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7686,7 +7686,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7710,7 +7710,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7731,7 +7731,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7747,7 +7747,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.min.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7768,7 +7768,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7784,7 +7784,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.min.l1zq2mitth.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7805,7 +7805,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7829,7 +7829,7 @@
     },
     {
       "Route": "lib/jquery-validation/LICENSE.md",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7850,7 +7850,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7866,7 +7866,7 @@
     },
     {
       "Route": "lib/jquery-validation/LICENSE.x0q3zqp4vz.md",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7887,7 +7887,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7911,7 +7911,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.03hjc8e09r.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7932,7 +7932,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7956,7 +7956,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7977,7 +7977,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7993,7 +7993,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.48y08845bh.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8014,7 +8014,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8038,7 +8038,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8059,7 +8059,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8075,7 +8075,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.356vix0kms.txt",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8096,7 +8096,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8120,7 +8120,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.txt",
-      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8141,7 +8141,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Feb 2025 10:29:44 GMT"
+          "Value": "Mon, 17 Feb 2025 11:15:47 GMT"
         },
         {
           "Name": "Cache-Control",
