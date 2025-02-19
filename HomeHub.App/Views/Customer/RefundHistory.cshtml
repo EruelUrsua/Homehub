@@ -1,0 +1,54 @@
+﻿@model IEnumerable<HomeHub.DataModel.RefundRequest>
+
+<h2>Refund History</h2>
+
+<!-- Filter Dropdown -->
+<form method="get" action="@Url.Action("RefundHistory", "Customer")" class="mb-3">
+    <label for="statusFilter">Filter by Status:</label>
+    <select name="statusFilter" id="statusFilter" class="form-control" onchange="this.form.submit()">
+        <option value="All" selected="@(ViewBag.StatusFilter == "All" ? "selected" : null)">All</option>
+        <option value="Refund Pending" selected="@(ViewBag.StatusFilter == "Refund Pending" ? "selected" : null)">Refund Pending</option>
+        <option value="Refund Accepted" selected="@(ViewBag.StatusFilter == "Refund Accepted" ? "selected" : null)">Refund Accepted</option>
+        <option value="Refund Rejected" selected="@(ViewBag.StatusFilter == "Refund Rejected" ? "selected" : null)">Refund Rejected</option>
+    </select>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Refund Amount</th>
+            <th>Status</th>
+            <th>Request Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var refund in Model)
+        {
+            <tr>
+                <td>@refund.OrderId</td>
+                <td>@refund.Item</td>
+                <td>@refund.RefundQuantity</td>
+                <td>₱@(refund.RefundAmount.HasValue ? refund.RefundAmount.Value.ToString("N2") : "0.00")</td>
+                <td>@refund.RefundStatus</td>
+                <td>@refund.RefundRequestDate.ToShortDateString()</td>
+                <td>
+                    @if (refund.RefundStatus == "Refund Accepted")
+                    {
+                        <a href="@Url.Action("SellerProfile", "Customer", new { businessId = refund.BusinessId })" class="btn btn-info btn-sm">
+                            View Seller's Profile
+                        </a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-warning">No refund requests found.</div>
+}
