@@ -369,6 +369,43 @@ namespace HomeHub.App.Controllers
             return RedirectToAction("ShowEligibleOrdersForRefund");
         }
 
+        public async Task<IActionResult> RefundHistory(string statusFilter)
+        {
+            var refundRequests = context.RefundRequests.AsQueryable();
+
+            // Apply filter if a status is selected
+            if (!string.IsNullOrEmpty(statusFilter) && statusFilter != "All")
+            {
+                if (statusFilter == "Approved")
+                    refundRequests = refundRequests.Where(r => r.RefundStatus == "Refund Accepted");
+                else if (statusFilter == "Rejected")
+                    refundRequests = refundRequests.Where(r => r.RefundStatus == "Refund Rejected");
+                else if (statusFilter == "Pending")
+                    refundRequests = refundRequests.Where(r => r.RefundStatus == "Pending");
+                else
+                    refundRequests = refundRequests.Where(r => r.RefundStatus == statusFilter);
+            }
+
+            var filteredRefunds = await refundRequests.OrderByDescending(r => r.RefundRequestDate).ToListAsync();
+
+            ViewBag.StatusFilter = statusFilter;
+            return View(filteredRefunds);
+        }
+
+        public async Task<IActionResult> SellerProfile(int businessId)
+        {
+            var seller = await context.Businesses.FirstOrDefaultAsync(b => b.UserID == businessId);
+
+            if (seller == null)
+            {
+                TempData["ErrorMessage"] = "Seller profile not found.";
+                return RedirectToAction("RefundHistory");
+            }
+
+            return View(seller);
+        }
+
+
         [HttpPost]
         public IActionResult RateProvider(string LogId)
         {

@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<HomeHub.DataModel.RefundRequest>
 
-<h2>Eligible Refund Requests</h2>
+<h2>Refund Requests</h2>
 
 <table class="table">
     <thead>
@@ -38,7 +38,7 @@
                 <td>@refundRequest.RefundStatus</td>
                 <td>@refundRequest.RefundRequestDate.ToShortDateString()</td>
                 <td>
-                    @if (refundRequest.RefundStatus != "Approved" && refundRequest.RefundStatus != "Processed")
+                    @if (refundRequest.RefundStatus == "Pending")
                     {
                         using (Html.BeginForm("RequestRefund", "Customer", FormMethod.Post, new { @class = "refund-form" }))
                         {
@@ -47,6 +47,32 @@
                             @Html.TextArea("RefundReason", null, new { placeholder = "Enter Refund Reason", rows = 3, @class = "form-control", required = "required" })
                             <button type="submit" class="btn btn-primary mt-2">Request Refund</button>
                         }
+                    }
+                    else if (refundRequest.RefundStatus == "Refund Accepted")
+                    {
+                        <span class="text-success">Refund Accepted</span>
+                        <br />
+                        <a href="@Url.Action("SellerProfile", "Business", new { businessId = refundRequest.BusinessId })"
+                           class="btn btn-info btn-sm mt-1">
+                            View Seller Profile
+                        </a>
+                        <br />
+                        @using (Html.BeginForm("SubmitFeedback", "Customer", FormMethod.Post, new { @class = "feedback-form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.Hidden("OrderId", refundRequest.OrderId)
+                            @Html.TextArea("Feedback", null, new { placeholder = "Leave feedback...", rows = 2, @class = "form-control", required = "required" })
+                            <button type="submit" class="btn btn-warning mt-2">Submit Feedback</button>
+                        }
+                    }
+                    else if (refundRequest.RefundStatus == "Refund Rejected")
+                    {
+                        <span class="text-danger">Refund Rejected</span>
+                        <br />
+                        <a href="@Url.Action("SellerProfile", "Business", new { businessId = refundRequest.BusinessId })"
+                           class="btn btn-info btn-sm mt-1">
+                            View Seller Profile
+                        </a>
                     }
                     else
                     {
@@ -58,18 +84,6 @@
     </tbody>
 </table>
 
-@{
-    var errorMessage = TempData["ErrorMessage"] as string;
-}
-
-@if (!string.IsNullOrEmpty(errorMessage))
-{
-    <div class="alert alert-danger">
-        @errorMessage
-    </div>
-}
-
-@* Check if there are no eligible refund requests *@
 @if (ViewBag.NoEligibleRefunds != null)
 {
     <div class="alert alert-warning">
@@ -80,10 +94,10 @@
 @section Scripts {
     <script>
         $(document).ready(function () {
-            $(".refund-form").on("submit", function (e) {
+            $(".refund-form, .feedback-form").on("submit", function (e) {
                 if ($(this).find("textarea").val().trim() === "") {
                     e.preventDefault();
-                    alert("Please enter a refund reason.");
+                    alert("Please fill in the required field.");
                 }
             });
         });
