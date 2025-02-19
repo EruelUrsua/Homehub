@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Azure.Core;
 using HomeHub.App.Services;
 using System.Linq;
+using Microsoft.AspNetCore.Identity;
 
 namespace HomeHub.App.Controllers
 {
@@ -21,13 +22,23 @@ namespace HomeHub.App.Controllers
 
         private readonly HomeHubContext context;
         private readonly PayMayaService _payMayaService;
+        private readonly UserManager<ApplicationUser> userManager;
 
-        public CustomerController(HomeHubContext context)
+        public CustomerController(HomeHubContext context, UserManager<ApplicationUser> userManager)
         {
             this.context = context;
             _payMayaService = new PayMayaService();
+            this.userManager = userManager;
         }
 
+        [HttpGet]
+        public async Task<string> GetCurrentUserId()
+        {
+            ApplicationUser usr = await GetCurrentUserAsync();
+            return usr?.Id;
+        }
+
+        private Task<ApplicationUser> GetCurrentUserAsync() => userManager.GetUserAsync(HttpContext.User);
         public IActionResult Index(int promoIndex = 0)
         {
             var ongoingPromos = context.Promos.Where(p => p.PromoEnd > DateTime.Now).
@@ -126,6 +137,7 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ConfirmOrder(OrderAvailViewModel model, int businessId)
         {
+            string getCurrentUserId = await GetCurrentUserId();
 
             if (string.IsNullOrWhiteSpace(model.ddeliv))
             {
@@ -161,7 +173,7 @@ namespace HomeHub.App.Controllers
                 model.promo = "No Promo Used";
             }
                     
-            var userId = "47ae60c1-5de0-4f86-9a6a-5ce24df3b2c0"; //Will replace with logged-in user id retrieval logic || input simular userID to a customer userID
+            var userId = getCurrentUserId; //"47ae60c1-5de0-4f86-9a6a-5ce24df3b2c0"; //Will replace with logged-in user id retrieval logic || input simular userID to a customer userID
             var user = await context.ApplicationUsers.FindAsync(userId);
 
             if (user == null)
@@ -177,7 +189,7 @@ namespace HomeHub.App.Controllers
             entity.OrderedPs = model.chosen;
             entity.Fee = TotalPrice;
             entity.PromoCode = model.promo;
-            entity.UserId = "47ae60c1-5de0-4f86-9a6a-5ce24df3b2c0"; //input similar userID to customer userID
+            entity.UserId = getCurrentUserId; //input similar userID to customer userID
             entity.FirstName = user.Firstname;
             entity.LastName = user.Lastname;
             //entity.UserId = int.Parse(model.userID);
