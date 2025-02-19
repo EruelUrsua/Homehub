@@ -1,36 +1,33 @@
-﻿@model HomeHub.App.Models.UserProfileVM
+﻿@model HomeHub.App.Models.UpdateAddressVM
 
-<body style="background-color:#F1F1F1">
-    <div class="container text-center">
-        <h1>User Profile</h1>
+<div class="container">
+    <h1>Edit Address</h1>
 
-        @if (TempData["SuccessMessage"] != null)
-        {
-            <div class="alert alert-success">@TempData["SuccessMessage"]</div>
-        }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+    }
+    <div class="edit-card">
+        <form asp-action="EditAddress" asp-controller="Customer" method="post">
+            @Html.AntiForgeryToken()
 
-        <div class="profile-card">
-            <table class="table text-white">
-                <tr>
-                    <th>First Name</th>
-                    <td>@Model.FirstName</td>
-                </tr>
-                <tr>
-                    <th>Last Name</th>
-                    <td>@Model.LastName</td>
-                </tr>
-                <tr>
-                    <th>Address</th>
-                    <td>@Model.Address</td>
-                </tr>
-            </table>
-
-            <div class="d-flex justify-content-center">
-                <a asp-controller="Customer" asp-action="EditAddress" class="custom-btn">Edit Address</a>
+            <div class="form-group">
+                <label asp-for="Address"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
             </div>
-        </div>
+
+            <div class="button-container">
+                <button type="submit" class="custom-btn">Save</button>
+                <a asp-controller="Customer" asp-action="UserProfile" class="custom-btn cancel-btn">Cancel</a>
+            </div>
+        </form>
     </div>
-</body>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
 
 <style>
     body {
@@ -42,9 +39,10 @@
     }
 
     h1 {
-        font-size: 56px;
+        font-size: 48px;
         font-weight: 500;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
+        text-align: center;
     }
 
     .container {
@@ -54,7 +52,7 @@
         text-align: center;
     }
 
-    .profile-card, .edit-card {
+    .edit-card {
         background-color: #18367b;
         padding: 40px;
         border-radius: 20px;
@@ -65,22 +63,16 @@
         margin: auto;
     }
 
-        .profile-card table {
-            width: 100%;
-            margin-top: 20px;
-            border-collapse: collapse;
-        }
+    .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+    }
 
-        .profile-card th, .profile-card td {
-            padding: 12px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            font-size: 18px;
-        }
-
-        .profile-card th {
-            text-align: left;
+        .form-group label {
+            display: block;
             font-weight: bold;
-            opacity: 0.8;
+            margin-bottom: 8px;
+            opacity: 0.9;
         }
 
     .rounded-input {
@@ -100,6 +92,13 @@
             border-color: white;
         }
 
+    .button-container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
     .custom-btn {
         display: inline-block;
         background: white;
@@ -111,8 +110,7 @@
         text-decoration: none;
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease;
-        width: 100%;
-        max-width: 300px;
+        width: 48%;
         text-align: center;
         border: none;
         cursor: pointer;
@@ -124,14 +122,29 @@
             box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
         }
 
+    .cancel-btn {
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+    }
+
+        .cancel-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
     @@media (max-width: 576px) {
-        .custom-btn
+        .button-container
 
     {
+        flex-direction: column;
+    }
+
+    .custom-btn {
         width: 100%;
     }
 
-    .profile-card, .edit-card {
+    .edit-card {
         padding: 25px;
         border-radius: 15px;
     }
