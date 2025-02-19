@@ -53,6 +53,11 @@
             font-weight: bold;
         }
 
+    .business-details {
+        font-size: 0.80rem;
+        color: #white;
+    }
+
     .btn-success {
         background-color: #F1F1F1;
         color: #203B81;
@@ -114,7 +119,11 @@
                         @foreach (var item in ViewBag.Businesses)
                         {
                             <tr data-category="@item.OfferList">
-                                <td>@item.BusinessName</td>
+                                <td>
+                                    <strong>@item.BusinessName</strong><br />
+                                    <span class="business-details">@item.CompanyAddress</span><br />
+                                    <span class="business-details">@item.ContactNo</span>
+                                </td>
                                 <td>
                                     <form asp-controller="Customer" asp-action="OrderListProduct">
                                         <input type="hidden" name="businessId" value="@item.UserID" />

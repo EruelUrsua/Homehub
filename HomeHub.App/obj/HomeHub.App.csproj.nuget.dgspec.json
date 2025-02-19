@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\HomeHub.App.csproj": {}
+    "D:\\HomeHub\\Homehub\\HomeHub.App\\HomeHub.App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\HomeHub.App.csproj": {
+    "D:\\HomeHub\\Homehub\\HomeHub.App\\HomeHub.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\HomeHub.App.csproj",
+        "projectUniqueName": "D:\\HomeHub\\Homehub\\HomeHub.App\\HomeHub.App.csproj",
         "projectName": "HomeHub.App",
-        "projectPath": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\HomeHub.App.csproj",
-        "packagesPath": "C:\\Users\\Charlize\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\obj\\",
+        "projectPath": "D:\\HomeHub\\Homehub\\HomeHub.App\\HomeHub.App.csproj",
+        "packagesPath": "C:\\Users\\WIN11\\.nuget\\packages\\",
+        "outputPath": "D:\\HomeHub\\Homehub\\HomeHub.App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Charlize\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WIN11\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
-                "projectPath": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj"
+              "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
+                "projectPath": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj"
               }
             }
           }
@@ -96,20 +97,20 @@
         }
       }
     },
-    "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
+    "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
+        "projectUniqueName": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
         "projectName": "HomeHub.DataModel",
-        "projectPath": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
-        "packagesPath": "C:\\Users\\Charlize\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\obj\\",
+        "projectPath": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHub.DataModel.csproj",
+        "packagesPath": "C:\\Users\\WIN11\\.nuget\\packages\\",
+        "outputPath": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Charlize\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WIN11\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -118,6 +119,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

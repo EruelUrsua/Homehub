@@ -14,6 +14,8 @@ using Azure.Core;
 using HomeHub.App.Services;
 using System.Linq;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.Net;
 
 namespace HomeHub.App.Controllers
 {
@@ -228,9 +230,58 @@ namespace HomeHub.App.Controllers
             return context.Promos.FirstOrDefault(p => p.PromoCode == code && p.PromoEnd > DateTime.Now);
         }
 
-        public IActionResult UserProfile()
+        public async Task<ActionResult> UserProfile()
         {
-            return View();
+            ApplicationUser user = await GetCurrentUserAsync();
+            if (user == null)
+                return View("Index");
+
+            var model = new UserProfileVM
+            {
+                FirstName = user.Firstname,
+                LastName = user.Lastname,
+                Address = user.Address
+            };
+
+            return View(model);
+        }
+
+        public async Task<IActionResult> EditAddress()
+        {
+            ApplicationUser user = await GetCurrentUserAsync();
+            if (user == null)
+                return View("Index");
+
+            var model = new UpdateAddressVM
+            {
+                Address = user.Address
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> EditAddress(UpdateAddressVM model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            ApplicationUser user = await GetCurrentUserAsync();
+            if (user == null)
+                return View("Index");
+
+            user.Address = model.Address;
+            var result = await userManager.UpdateAsync(user);
+
+            if (result.Succeeded)
+            {
+                TempData["SuccessMessage"] = "Address updated successfully!";
+                return RedirectToAction("UserProfile");
+            }
+
+
+            return View(model);
         }
 
         public IActionResult ViewOrders()
