@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeHub.DataModel.Migrations
 {
     [DbContext(typeof(HomeHubContext))]
-    [Migration("20250218080502_AddIdentityTables")]
+    [Migration("20250219071344_AddIdentityTables")]
     partial class AddIdentityTables
     {
         /// <inheritdoc />
@@ -278,8 +278,12 @@ namespace HomeHub.DataModel.Migrations
                         .HasColumnType("datetime")
                         .HasDefaultValueSql("(getdate())");
 
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)")
+                        .HasDefaultValue("Pending");
 
                     b.Property<string>("UserId")
                         .IsRequired()
