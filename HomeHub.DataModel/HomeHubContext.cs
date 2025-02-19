@@ -43,16 +43,16 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-         //optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
+         optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
 
 
       //  optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
       //"Database=HomeHub; Integrated Security=SSPI;" +
       //"TrustServerCertificate=true");
 
-        optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
-              "Database=HomeHub; Integrated Security=SSPI;" +
-              "TrustServerCertificate=true");
+        //optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
+        //      "Database=HomeHub; Integrated Security=SSPI;" +
+        //      "TrustServerCertificate=true");
 
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -129,6 +129,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
                 .HasColumnType("datetime");
             entity.Property(e => e.Status)
                 .HasDefaultValue("Pending")
+                .HasColumnType("nvarchar(10)")
                 .HasMaxLength(10);
             entity.Property(e => e.UserId)
                 .HasMaxLength(50)

@@ -161,7 +161,7 @@ namespace HomeHub.App.Controllers
                 model.promo = "No Promo Used";
             }
                     
-            var userId = "f586567c-18e9-436c-830b-bc33db67209a"; //Will replace with logged-in user id retrieval logic || input simular userID to a customer userID
+            var userId = "47ae60c1-5de0-4f86-9a6a-5ce24df3b2c0"; //Will replace with logged-in user id retrieval logic || input simular userID to a customer userID
             var user = await context.ApplicationUsers.FindAsync(userId);
 
             if (user == null)
@@ -177,7 +177,7 @@ namespace HomeHub.App.Controllers
             entity.OrderedPs = model.chosen;
             entity.Fee = TotalPrice;
             entity.PromoCode = model.promo;
-            entity.UserId = "f586567c-18e9-436c-830b-bc33db67209a"; //input similar userID to customer userID
+            entity.UserId = "47ae60c1-5de0-4f86-9a6a-5ce24df3b2c0"; //input similar userID to customer userID
             entity.FirstName = user.Firstname;
             entity.LastName = user.Lastname;
             //entity.UserId = int.Parse(model.userID);
@@ -185,6 +185,7 @@ namespace HomeHub.App.Controllers
             entity.RatingId = 1; //remove
             entity.Quantity = model.qty;
             entity.ModeOfPayment = model.mode;
+            entity.Status = "Pending";
 
             var maxRatingId = await context.ClientOrders.MaxAsync(o => (int?)o.RatingId) ?? 0;
             entity.RatingId = maxRatingId + 1;
@@ -318,7 +319,6 @@ namespace HomeHub.App.Controllers
 
             if (orderLog == null)
             {
-                // Set an error message in TempData for display on the next page
                 TempData["ErrorMessage"] = "The specified order does not exist or has been removed.";
 
                 return RedirectToAction("ShowEligibleOrdersForRefund");
@@ -339,18 +339,21 @@ namespace HomeHub.App.Controllers
             var refundRequest = new RefundRequest
             {
                 OrderId = orderId,
-                BusinessId = orderLog.BusinessId, // Fetch the BusinessId from OrdersLog
+                BusinessId = orderLog.BusinessId, 
                 Item = orderLog.Item,
                 RefundQuantity = orderLog.Qty,
                 Fee = orderLog.Fee,
                 RefundReason = refundReason,
-                RefundStatus = "Pending", // Default to Pending
+                RefundStatus = "Pending", 
                 PromoCode= orderLog.PromoCode,  
                 RefundRequestDate = DateTime.Now,
                 RefundAmount = 0 
             };
 
             context.RefundRequests.Add(refundRequest);
+
+            // Update the order status in OrdersLog to track the refund request
+            orderLog.Status = "Refund Requested";
 
             // Create a notification for the provider
             var notification = new Notification

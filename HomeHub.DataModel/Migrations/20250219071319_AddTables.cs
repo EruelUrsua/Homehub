@@ -98,7 +98,7 @@ namespace HomeHub.DataModel.Migrations
                     Schedule = table.Column<DateTime>(type: "datetime", nullable: false, defaultValueSql: "(getdate())"),
                     OrderedPS = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Fee = table.Column<decimal>(type: "money", nullable: false),
-                    Status = table.Column<bool>(type: "bit", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false, defaultValue: "Pending"),
                     PromoCode = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     UserID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     RatingID = table.Column<int>(type: "int", nullable: false),

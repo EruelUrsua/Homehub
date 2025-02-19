@@ -157,7 +157,7 @@ namespace HomeHub.App.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(model);  // If validation fails, return the same view
+                return View(model);  
             }
 
             Service entity = new Service
@@ -287,7 +287,7 @@ namespace HomeHub.App.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(model);  // If validation fails, return the same view
+                return View(model);  
             }
 
             var service = await _context.Services.FindAsync(model.ServiceId);
@@ -404,21 +404,19 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> AcceptOrder(int clientId)
         {
             var order = await _context.ClientOrders
-                .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == "Pending");//Pacheck to
+                .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == "Pending");
 
             if (order == null)
             {
-                // Handle case where order does not exist
                 return NotFound();
             }
 
             // Fetch the product(s) in the order
             var product = await _context.Products
-                .FirstOrDefaultAsync(p => p.ProductItem == order.OrderedPs); // Assuming `OrderedPs` is the product ID
+                .FirstOrDefaultAsync(p => p.ProductItem == order.OrderedPs); 
 
             if (product == null)
             {
-                // Handle case where the product does not exist
                 return NotFound("Product not found.");
             }
 
@@ -448,7 +446,7 @@ namespace HomeHub.App.Controllers
             }
 
             // Update the order status and discounted fee
-            order.Status = "Accepted";//pakicheck to
+            order.Status = "Accepted";
             order.Fee = totalFee;
 
             // Log the accepted order into OrdersLog
@@ -468,7 +466,6 @@ namespace HomeHub.App.Controllers
                 PromoCode = order.PromoCode
             };
 
-            // Add the log to the OrdersLog table
             _context.OrdersLogs.Add(orderLog);
             await _context.SaveChangesAsync();
 
@@ -601,8 +598,6 @@ namespace HomeHub.App.Controllers
 
             return View(model);
         }
-
-
 
         public async Task<IActionResult> EditPromo(int id)
         {
