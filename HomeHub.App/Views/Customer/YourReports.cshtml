@@ -1,0 +1,105 @@
+﻿@model List<HomeHub.DataModel.Report>
+
+<div class="report-container">
+    <h2 class="report-title">Your Reports</h2>
+
+    @if (!Model.Any())
+    {
+        <p class="no-reports">You haven't reported any issues yet.</p>
+    }
+    else
+    {
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Report ID</th>
+                    <th>Date Submitted</th>
+                    <th>Title</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var report in Model)
+                {
+                    <tr>
+                        <td>@report.ReportId</td>
+                        <td>@report.Date.ToString("yyyy-MM-dd")</td>
+                        <td>@report.Title</td>
+                        <td>
+                            <a asp-controller="Customer" asp-action="ReviewReport" asp-route-id="@report.ReportId" class="btn btn-primary">Review</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+<style>
+    .report-container {
+        background-color: #203B81;
+        color: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        max-width: 850px;
+        margin: auto;
+    }
+
+    .report-title {
+        font-weight: bold;
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    .styled-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+        .styled-table thead {
+            background-color: #203B81;
+        }
+
+        .styled-table th {
+            font-weight: bold;
+            text-align: center;
+            padding: 14px;
+            color: white;
+        }
+
+        .styled-table td {
+            text-align: center;
+            padding: 12px;
+            color: white;
+        }
+
+        .styled-table tbody tr {
+            background-color: #203B81;
+        }
+
+            .styled-table tbody tr:nth-child(odd) {
+                background-color: #233876;
+            }
+
+            .styled-table tbody tr:hover {
+                background-color: rgba(255, 255, 255, 0.15);
+                transition: background 0.3s;
+            }
+
+    .btn-primary {
+        background-color: #2563eb;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+        }
+</style>

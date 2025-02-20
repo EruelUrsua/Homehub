@@ -286,8 +286,12 @@ namespace HomeHub.App.Controllers
 
         public IActionResult ViewOrders()
         {
-            //Retrieve all OrdersLogs entries for the logged-in user (dagdagan ng UserID na filter pag ayos na)
-            var orders = context.OrdersLogs.ToList();
+            string userId = userManager.GetUserId(User);
+            //Retrieve all OrdersLogs entries for the logged-in user
+            //var orders = context.OrdersLogs.ToList();
+            var orders = context.OrdersLogs
+                .Where(o => o.UserId == userId)
+                .ToList();
 
             //Retrieve all rated order IDs to identify which orders are rated
             var ratedOrderIds = context.Ratings.Select(r => r.OrderId).ToHashSet();
@@ -557,8 +561,15 @@ namespace HomeHub.App.Controllers
         }
 
         [HttpPost]
-        public IActionResult ReportProblem(string LogId)
+        public async Task<IActionResult> ReportProblem(string LogId)
         {
+            string userId = await GetCurrentUserId();
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("SignIn", "Account");
+            }
+
             var orderLog = context.OrdersLogs.FirstOrDefault(o => o.LogId == LogId);
 
             if (orderLog == null)
@@ -583,6 +594,8 @@ namespace HomeHub.App.Controllers
                     ViewBag.BusinessName = business.BusinessName;
                 }
 
+                ViewBag.UserId = userId;
+
                 return View("ReportProblem", clientOrder);
             }
             else
@@ -593,8 +606,15 @@ namespace HomeHub.App.Controllers
         }
 
         [HttpPost]
-        public IActionResult SubmitReport(string title, string description, int clientId)
+        public async Task<IActionResult> SubmitReport(string title, string description, int clientId)
         {
+            string userId = await GetCurrentUserId();
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("SignIn", "Account");
+            }
+
             if (string.IsNullOrWhiteSpace(title))
             {
                 TempData["ErrorMessage"] = "Please enter a title.";
@@ -613,7 +633,7 @@ namespace HomeHub.App.Controllers
                 Title = title,
                 Description = description,
                 Date = DateTime.Now.Date,
-                UserId = clientId.ToString()
+                UserId = userId
             };
 
             context.Reports.Add(report);
@@ -742,6 +762,34 @@ namespace HomeHub.App.Controllers
 
             // Pass the rating details to the view
             return View(model);
+        }
+
+        public async Task<IActionResult> YourReports()
+        {
+            string userId = await GetCurrentUserId();
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                return View("SignIn", "Account");
+            }
+
+            var userReports = context.Reports
+                .Where(r => r.UserId == userId)
+                .ToList();
+
+            return View(userReports);
+        }
+
+        public IActionResult ReviewReport(string id)
+        {
+            var report = context.Reports.FirstOrDefault(r => r.ReportId == id);
+
+            if (report == null)
+            {
+                return Index();
+            }
+
+            return View(report);
         }
     }
 }

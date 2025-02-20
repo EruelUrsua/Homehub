@@ -1,0 +1,102 @@
+﻿@model HomeHub.DataModel.Report
+
+<div class="report-container">
+    <h2 class="report-title">Report Details</h2>
+
+    <div class="report-content">
+        <div class="report-row">
+            <span class="label">Report ID:</span> <span class="value">@Model.ReportId</span>
+        </div>
+        <div class="report-row">
+            <span class="label">Date Submitted:</span> <span class="value">@Model.Date.ToString("yyyy-MM-dd")</span>
+        </div>
+        <div class="report-row">
+            <span class="label">Title:</span> <span class="value">@Model.Title</span>
+        </div>
+        <div class="report-row description">
+            <span class="label">Description:</span>
+            <p class="value">@Model.Description</p>
+        </div>
+    </div>
+
+    <a asp-controller="Customer" asp-action="YourReports" class="btn-back">Back to Reports</a>
+</div>
+
+<style>
+    .report-container {
+        background-color: #19376D;
+        color: white;
+        padding: 30px;
+        border-radius: 12px;
+        width: 50%;
+        margin: 40px auto;
+        box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    .report-title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 28px;
+        margin-bottom: 20px;
+        letter-spacing: 0.5px;
+    }
+
+    .report-content {
+        background-color: rgba(255, 255, 255, 0.12);
+        padding: 18px;
+        border-radius: 8px;
+    }
+
+    .report-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        font-size: 18px;
+        border-bottom: 1.5px solid rgba(255, 255, 255, 0.3);
+    }
+
+        .report-row:last-child {
+            border-bottom: none;
+        }
+
+    .label {
+        font-weight: bold;
+        flex: 1;
+        font-size: 20px;
+    }
+
+    .value {
+        flex: 2;
+        text-align: right;
+        font-size: 19px;
+    }
+
+    .description {
+        display: block;
+    }
+
+        .description p {
+            text-align: left;
+            margin-top: 6px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+    .btn-back {
+        display: block;
+        text-align: center;
+        margin: 25px auto 0;
+        background-color: #007bff;
+        color: white;
+        padding: 14px 22px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 18px;
+        width: fit-content;
+        transition: background 0.3s ease-in-out;
+    }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+</style>
