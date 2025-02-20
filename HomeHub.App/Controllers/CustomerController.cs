@@ -691,5 +691,35 @@ namespace HomeHub.App.Controllers
             }
             return RedirectToAction("ViewOrders");
         }
+
+        public IActionResult ReviewRating(int LogId)
+        {
+            var rating = (from r in context.Ratings
+                          join b in context.Businesses on r.BusinessId equals b.UserID
+                          where r.OrderId == LogId
+                          select new
+                          {
+                              r.OrderId,
+                              r.Score,
+                              r.Comments,
+                              b.BusinessName
+                          }).FirstOrDefault();
+
+            if (rating == null)
+            {
+                return RedirectToAction("ViewOrders"); // Redirect if no rating exists
+            }
+
+            var model = new ReviewRatingVM
+            {
+                OrderId = rating.OrderId,
+                Score = rating.Score,
+                Comments = rating.Comments,
+                BusinessName = rating.BusinessName
+            };
+
+            // Pass the rating details to the view
+            return View(model);
+        }
     }
 }

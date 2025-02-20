@@ -1,0 +1,137 @@
+﻿@model HomeHub.App.Models.ReviewRatingVM
+
+@{
+    ViewData["Title"] = "Review Rating";
+}
+
+<div class="review-container">
+    <h2 class="text-dark fw-bold">Review Your Rating</h2>
+
+    <div class="review-card">
+        <h4 class="business-name">@Model.BusinessName</h4>
+        <hr class="my-3" />
+
+        <p class="rating-label">Rating:</p>
+        <div class="rating-container">
+            @for (int i = 1; i <= 5; i++)
+            {
+                if (i <= Model.Score)
+                {
+                    <span class="rating-star">&#9733;</span> @* Full Star *@
+                }
+                else
+                {
+                    <span class="rating-star" style="opacity: 0.4;">&#9733;</span> @* Faded Star *@
+                }
+            }
+        </div>
+
+        <p class="comments-label">Description:</p> 
+        <p class="comments-value">@Model.Comments</p>
+
+        <a asp-action="ViewOrders" class="back-button">Back to Orders</a>
+    </div>
+</div>
+
+
+<style>
+    .review-container {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .review-card {
+        background-color: #1e3a8a; /* Deep blue */
+        color: white;
+        padding: 30px;
+        border-radius: 12px;
+        max-width: 400px;
+        margin: 0 auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .business-name {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    hr {
+        border: none;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.3);
+        margin: 15px 0;
+    }
+
+    .rating-label {
+        font-size: 17px;
+        font-weight: 500;
+        opacity: 0.8;
+        margin-bottom: 5px;
+    }
+
+    .rating-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .rating-star {
+        color: #f1c40f;
+        font-size: 24px;
+    }
+
+    .comments-label {
+        font-size: 17px;
+        font-weight: 500;
+        opacity: 0.8;
+        margin-top: 20px;
+    }
+
+    .comments-value {
+        font-size: 16px;
+        font-style: italic;
+        margin-bottom: 20px;
+    }
+
+    .back-button {
+        display: inline-block;
+        padding: 8px 20px; 
+        background-color: white;
+        color: #1e3a8a; 
+        font-weight: bold;
+        font-size: 14px; 
+        border-radius: 30px;
+        border: none;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .back-button:hover {
+            background-color: #f0f0f0; /* Slightly darker on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+
+    @@media (max-width: 768px) {
+        .review-card
+
+    {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .rating-star {
+        font-size: 22px;
+    }
+
+    }
+</style>
