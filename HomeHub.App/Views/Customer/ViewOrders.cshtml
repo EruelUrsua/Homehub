@@ -18,8 +18,7 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin-top: 20px;
-        width: 100%;
-        max-width: 1200px;
+        width: 110%;
         margin-left: auto;
         margin-right: auto;
         box-sizing: border-box;
@@ -49,6 +48,12 @@
         font-weight: bold;
         background: rgba(255, 255, 255, 0.1);
     }
+
+        .order-list th:nth-child(5), .order-list td:nth-child(5) {
+            width: 150px;
+            min-width: 150px;
+            text-align: center;
+        }
 
     .order-list tr {
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -145,7 +150,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!--Still needs ID of logged in user to filter-->
                     @foreach (var item in Model)
                     {
                         <tr>
@@ -153,7 +157,7 @@
                             <td>@item.Item</td>
                             <td>@item.Qty</td>
                             <td>Php @item.Fee</td>
-                            <td>@item.Date</td>
+                            <td>@item.Date.ToString("yyyy-MM-dd")</td>
                             <td>@item.Status</td>
                             <td class="action-buttons">
                                 @if (item.IsRated)

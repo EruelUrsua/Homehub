@@ -10,15 +10,18 @@ wwwroot\images\2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit.jpg
 wwwroot\images\37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.jpg
 wwwroot\images\4870b1e3-93de-4422-b4cf-a0f6e4463bf9_cleaning kit.jpg
 wwwroot\images\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg
+wwwroot\images\5bbefea5-426a-4543-b641-a84bb16e6cc0_samplestock.jpg
 wwwroot\images\64881bdf-7713-4f10-bbed-dcabafde54b0_cleaning kit.jpg
 wwwroot\images\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg
 wwwroot\images\925e66ba-5942-4496-a5dd-f23ddd2c11d2_cleaning kit.jpg
 wwwroot\images\9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg
+wwwroot\images\a2dd9eb6-5e13-42df-8646-043af4e56d2f_samplestock.jpg
 wwwroot\images\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg
 wwwroot\images\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg
 wwwroot\images\bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg
 wwwroot\images\c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.jpg
 wwwroot\images\c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.jpg
+wwwroot\images\c8ac0cd5-057e-468c-995c-2742d41206af_samplestock.jpg
 wwwroot\images\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg
 wwwroot\images\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg
 wwwroot\js\site.js
