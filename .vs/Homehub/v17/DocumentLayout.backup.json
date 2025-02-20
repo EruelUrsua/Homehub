@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\HomeHub\\Homehub\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\homehub\\homehub\\homehub.app\\views\\customer\\reviewrating.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\customer\\reviewrating.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\homehub\\homehub\\homehub.app\\views\\customer\\vieworders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\customer\\vieworders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\homehub\\homehub\\homehub.app\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\homehub\\homehub\\homehub.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,6 +43,43 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ReviewRating.cshtml",
+              "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.App\\Views\\Customer\\ReviewRating.cshtml",
+              "RelativeDocumentMoniker": "HomeHub.App\\Views\\Customer\\ReviewRating.cshtml",
+              "ToolTip": "D:\\HomeHub\\Homehub\\HomeHub.App\\Views\\Customer\\ReviewRating.cshtml",
+              "RelativeToolTip": "HomeHub.App\\Views\\Customer\\ReviewRating.cshtml",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAQwHYAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-19T23:07:10.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.App\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "HomeHub.App\\Controllers\\CustomerController.cs",
+              "ToolTip": "D:\\HomeHub\\Homehub\\HomeHub.App\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "HomeHub.App\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAKACAAAAAAAAAAAAAMcCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T23:01:35.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ViewOrders.cshtml",
+              "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.App\\Views\\Customer\\ViewOrders.cshtml",
+              "RelativeDocumentMoniker": "HomeHub.App\\Views\\Customer\\ViewOrders.cshtml",
+              "ToolTip": "D:\\HomeHub\\Homehub\\HomeHub.App\\Views\\Customer\\ViewOrders.cshtml",
+              "RelativeToolTip": "HomeHub.App\\Views\\Customer\\ViewOrders.cshtml",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAAAJoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-19T23:00:13.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.App\\Program.cs",
               "RelativeDocumentMoniker": "HomeHub.App\\Program.cs",
@@ -38,12 +87,11 @@
               "RelativeToolTip": "HomeHub.App\\Program.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T11:31:15.789Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T11:31:15.789Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "HomeHubContext.cs",
               "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHubContext.cs",
               "RelativeDocumentMoniker": "HomeHub.DataModel\\HomeHubContext.cs",
@@ -51,12 +99,11 @@
               "RelativeToolTip": "HomeHub.DataModel\\HomeHubContext.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAAADYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T11:30:59.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T11:30:59.318Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.App\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Shared\\_Layout.cshtml",
@@ -64,8 +111,7 @@
               "RelativeToolTip": "HomeHub.App\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAQwBEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-14T06:35:25.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-14T06:35:25.94Z"
             }
           ]
         }

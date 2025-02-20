@@ -18,9 +18,8 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin-top: 20px;
-        margin-top: 20px;
         width: 100%;
-        max-width: 1000px;
+        max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
         box-sizing: border-box;
@@ -35,7 +34,9 @@
 
     .order-list table {
         width: 100%;
-        border-collapse: collapse;
+        border-collapse: separate;
+        border-spacing: 0 5px;
+        font-size: 16px;
     }
 
     .order-list th, .order-list td {
@@ -46,24 +47,83 @@
 
     .order-list th {
         font-weight: bold;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .order-list tr {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .order-list td:last-child {
+        padding-right: 15px;
     }
 
     .action-buttons {
         display: flex;
         gap: 10px;
         align-items: center;
-        width: 100%;
+        justify-content: center;
+        flex-wrap: nowrap;
     }
 
     .btn {
-        padding: 10px 20px;
+        padding: 10px 0;
+        width: 160px;
+        height: 40px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         text-align: center;
-        flex: 1;
-        max-width: 150px;
-        margin-bottom: 5px;
+        font-size: 15px;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        color: black;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        color: white;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        color: white;
+    }
+
+        @@media screen and (max-width: 1024px) {
+        .action-buttons
+
+    {
+        flex-wrap: wrap;
+    }
+
+    }
+
+        @@media screen and (max-width: 768px) {
+        .order-list table
+
+    {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
     }
 </style>
 
@@ -78,6 +138,7 @@
                         <th>Provider</th>
                         <th>Item</th>
                         <th>Quantity</th>
+                        <th>Price</th>
                         <th>Date</th>
                         <th>Status</th>
                         <th>Action</th>
@@ -91,17 +152,16 @@
                             <td>@item.BusinessId</td>
                             <td>@item.Item</td>
                             <td>@item.Qty</td>
+                            <td>Php @item.Fee</td>
                             <td>@item.Date</td>
                             <td>@item.Status</td>
                             <td class="action-buttons">
-                                <!--For Cancellation
-                                <form asp-controller="Customer" asp-action="OrderListProduct">
-                                    <input type="hidden" name="id" value="" />
-                                    <input type="submit" class="btn btn-success" value="Cancel Order" />
-                                </form> -->
                                 @if (item.IsRated)
                                 {
-                                    <button class="btn btn-secondary" disabled>Rated</button>
+                                    <form asp-controller="Customer" asp-action="ReviewRating">
+                                        <input type="hidden" name="LogId" value="@item.LogId" />
+                                        <input type="submit" class="btn btn-success" value="Review Rating" />
+                                    </form>
                                 }
                                 else
                                 {

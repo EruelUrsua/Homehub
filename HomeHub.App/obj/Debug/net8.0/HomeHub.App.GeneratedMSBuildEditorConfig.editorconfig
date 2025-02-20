@@ -104,6 +104,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcUmVwb3J0UHJvYmxlbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/HomeHub/Homehub/HomeHub.App/Views/Customer/ReviewRating.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcUmV2aWV3UmF0aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/HomeHub/Homehub/HomeHub.App/Views/Customer/SellerProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcU2VsbGVyUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
