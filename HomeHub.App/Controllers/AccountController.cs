@@ -233,7 +233,21 @@ namespace HomeHub.App.Controllers
                 var result = await signInManager.PasswordSignInAsync(user, model.Password, false, false);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Home");
+                    var userlog = await userManager.FindByEmailAsync(model.Username);
+                    var role = await userManager.GetRolesAsync(userlog);
+
+
+                    if (role.Contains("Customer"))
+                    {
+                        return RedirectToAction("Index", "Customer");
+                    }
+
+                    else if (role.Contains("Provider"))
+                    {
+                        return RedirectToAction("ProviderHome", "Provider");
+
+                    }
+                        return RedirectToAction("Index", "Home");
                 }
                 else
                 {
