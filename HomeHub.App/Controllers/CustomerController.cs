@@ -310,6 +310,15 @@ namespace HomeHub.App.Controllers
 
         public async Task<IActionResult> ShowEligibleOrdersForRefund(int refundId, string refundReason)
         {
+            // Get the logged-in user's ID
+            string userId = await GetCurrentUserId();
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                ViewBag.ErrorMessage = "You need to be logged in to view eligible orders for a refund.";
+                return View(new List<RefundRequest>()); 
+            }
+
             // Fetch delivered orders from the OrdersLog (assuming "Delivered" status)
             var deliveredOrders = await context.OrdersLogs
                 .Where(log => log.Status == "Delivered" && log.OrderId != null)
@@ -348,7 +357,7 @@ namespace HomeHub.App.Controllers
                 {
                     RefundId = refundId,
                     OrderId = orderLog.OrderId,
-                    // Skip adding ClientId here since it's nullable
+                    UserId = userId,
                     BusinessId = orderLog.BusinessId,
                     Item = orderLog.Item,
                     RefundQuantity = orderLog.Qty,
@@ -366,7 +375,7 @@ namespace HomeHub.App.Controllers
             // Check if refundList is empty and add a message
             if (refundList.Count == 0)
             {
-                ViewBag.NoEligibleRefunds = "No eligible refund requests found.";
+                ViewBag.NoEligibleRefunds = "Only orders delivered within the last 7 days are eligible for a refund. Orders delivered more than 7 days ago are not eligible.";
             }
 
             return View(refundList);
@@ -376,9 +385,11 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> RequestRefund(string orderId, string refundReason)
         {
-            // Fetch the order log entry for the given OrderId
+            string userId = await GetCurrentUserId(); // Get the logged-in user's ID
+
+            // Fetch the order log entry for the given OrderId and ensure it belongs to the logged-in user
             var orderLog = await context.OrdersLogs
-                .FirstOrDefaultAsync(log => log.OrderId == orderId);
+                .FirstOrDefaultAsync(log => log.OrderId == orderId && log.UserId == userId);
 
             if (orderLog == null)
             {
@@ -402,6 +413,7 @@ namespace HomeHub.App.Controllers
             var refundRequest = new RefundRequest
             {
                 OrderId = orderId,
+                UserId = userId,
                 BusinessId = orderLog.BusinessId, 
                 Item = orderLog.Item,
                 RefundQuantity = orderLog.Qty,
@@ -429,12 +441,22 @@ namespace HomeHub.App.Controllers
             context.Notifications.Add(notification);
             await context.SaveChangesAsync();
 
+            TempData["SuccessMessage"] = "Your refund request has been submitted successfully.";
+
             return RedirectToAction("ShowEligibleOrdersForRefund");
         }
 
         public async Task<IActionResult> RefundHistory(string statusFilter)
         {
-            var refundRequests = context.RefundRequests.AsQueryable();
+            var userId = await GetCurrentUserId(); // Get the logged-in user's ID
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                ViewBag.ErrorMessage = "You need to be logged in to view your refund history.";
+                return View(new List<RefundRequest>()); // Return an empty list to avoid errors
+            }
+
+            var refundRequests = context.RefundRequests.Where(r => r.UserId == userId).AsQueryable();
 
             // Apply filter if a status is selected
             if (!string.IsNullOrEmpty(statusFilter) && statusFilter != "All")

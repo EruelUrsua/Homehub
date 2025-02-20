@@ -21,8 +21,8 @@ namespace HomeHub.DataModel
         [MaxLength(50)]
         public string OrderId { get; set; }
 
-        [Column("ClientID")]
-        public int? ClientId { get; set; }
+        // 🔹 Store ASP.NET Identity UserId 
+        public string UserId { get; set; }
 
         [Required]
         [Column("BusinessID")]
@@ -55,5 +55,6 @@ namespace HomeHub.DataModel
 
         [Column(TypeName = "MONEY")]
         public decimal? RefundAmount { get; set; }
+        public string? RejectionReason { get; set; }
     }
 }

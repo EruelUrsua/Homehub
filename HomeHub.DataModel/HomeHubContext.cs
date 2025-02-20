@@ -43,16 +43,16 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-         //optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
+         optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
 
 
       //  optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
       //"Database=HomeHub; Integrated Security=SSPI;" +
       //"TrustServerCertificate=true");
 
-        optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
-              "Database=HomeHub; Integrated Security=SSPI;" +
-              "TrustServerCertificate=true");
+        //optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
+        //      "Database=HomeHub; Integrated Security=SSPI;" +
+        //      "TrustServerCertificate=true");
 
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -167,6 +167,8 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.LogId)
                 .HasMaxLength(50)
                 .HasColumnName("LogID");
+            entity.Property(e => e.UserId)
+                .IsRequired();
             entity.Property(e => e.BusinessId)
                 .HasMaxLength(50)
                 .HasColumnName("BusinessID");
@@ -259,8 +261,8 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
                 .HasMaxLength(50)
                 .HasColumnName("OrderID");
 
-            entity.Property(e => e.ClientId)
-                .HasColumnName("ClientID");
+            entity.Property(e => e.UserId)
+                .IsRequired();
 
             entity.Property(e => e.BusinessId)
                 .IsRequired()
@@ -298,6 +300,10 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
             entity.Property(e => e.RefundAmount)
                 .HasColumnType("MONEY");
+
+            entity.Property(r => r.RejectionReason)
+                .HasMaxLength(500)  
+                .IsUnicode(true);  // Allow special characters if needed
         });
 
         modelBuilder.Entity<Notification>(entity =>

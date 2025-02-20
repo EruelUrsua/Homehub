@@ -432,6 +432,10 @@ namespace HomeHub.DataModel.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("LogId");
 
                     b.ToTable("OrdersLogs");
@@ -559,10 +563,6 @@ namespace HomeHub.DataModel.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("BusinessID");
 
-                    b.Property<int?>("ClientId")
-                        .HasColumnType("int")
-                        .HasColumnName("ClientID");
-
                     b.Property<decimal>("Fee")
                         .HasColumnType("MONEY");
 
@@ -601,6 +601,15 @@ namespace HomeHub.DataModel.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("RejectionReason")
+                        .HasMaxLength(500)
+                        .IsUnicode(true)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("RefundId");
 
