@@ -155,6 +155,7 @@ namespace HomeHub.DataModel.Migrations
                     LogID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     OrderID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     OrderDate = table.Column<DateTime>(type: "datetime", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     BusinessID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
@@ -229,7 +230,7 @@ namespace HomeHub.DataModel.Migrations
                     RefundID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     OrderID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    ClientID = table.Column<int>(type: "int", nullable: true),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BusinessID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Item = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     RefundQuantity = table.Column<int>(type: "int", nullable: false),
@@ -239,7 +240,8 @@ namespace HomeHub.DataModel.Migrations
                     RefundActionDate = table.Column<DateTime>(type: "DATETIME", nullable: true),
                     Fee = table.Column<decimal>(type: "MONEY", nullable: false),
                     PromoCode = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
-                    RefundAmount = table.Column<decimal>(type: "MONEY", nullable: true)
+                    RefundAmount = table.Column<decimal>(type: "MONEY", nullable: true),
+                    RejectionReason = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true)
                 },
                 constraints: table =>
                 {

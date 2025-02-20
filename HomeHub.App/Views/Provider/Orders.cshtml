@@ -2,6 +2,20 @@
 
 <h2>Orders</h2>
 
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
 <table class="table">
     <thead>
         <tr>
@@ -52,7 +66,7 @@
                 <td>
                         @order.PromoCode
                 </td>
-                <td> <!--Pakicheck tong mga nasa baba-->
+                <td> 
                     @if (order.Status == "Accepted")
                     {
                         <span class="text-success">Accepted</span>

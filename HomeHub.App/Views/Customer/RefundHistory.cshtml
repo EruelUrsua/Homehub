@@ -2,6 +2,13 @@
 
 <h2>Refund History</h2>
 
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div class="alert alert-warning">
+        @ViewBag.ErrorMessage
+    </div>
+}
+
 <!-- Filter Dropdown -->
 <form method="get" action="@Url.Action("RefundHistory", "Customer")" class="mb-3">
     <label for="statusFilter">Filter by Status:</label>
@@ -22,6 +29,7 @@
             <th>Refund Amount</th>
             <th>Status</th>
             <th>Request Date</th>
+            <th>Rejection Reason</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -35,6 +43,16 @@
                 <td>₱@(refund.RefundAmount.HasValue ? refund.RefundAmount.Value.ToString("N2") : "0.00")</td>
                 <td>@refund.RefundStatus</td>
                 <td>@refund.RefundRequestDate.ToShortDateString()</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(refund.RejectionReason))
+                    {
+                        @refund.RejectionReason
+                    }
+                    else
+                    {
+                        <span class="text-muted">N/A</span>
+                    }
+                </td>
                 <td>
                     @if (refund.RefundStatus == "Refund Accepted")
                     {

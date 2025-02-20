@@ -454,6 +454,7 @@ namespace HomeHub.App.Controllers
             {
                 LogId = Guid.NewGuid().ToString(),
                 OrderId = order.ClientId.ToString(),
+                UserId = order.UserId, 
                 OrderDate = order.OrderDate,
                 FirstName = order.FirstName,
                 LastName = order.LastName,
@@ -480,6 +481,7 @@ namespace HomeHub.App.Controllers
                 {
                     LogId = log.LogId,
                     OrderId = log.OrderId,
+                    UserId = log.UserId, 
                     OrderDate = log.OrderDate,
                     FirstName = log.FirstName,
                     LastName = log.LastName,
@@ -519,18 +521,31 @@ namespace HomeHub.App.Controllers
             return RedirectToAction("ShowNotifications", new { businessId = notification?.BusinessId });
         }
 
-
         public async Task<IActionResult> ShowRefundRequests()
         {
-            string businessId = "1";
+            string businessId = "2";
 
             // Get refund requests for this provider's BusinessId
             var refundList = await _context.RefundRequests
                 .Where(r => r.BusinessId == businessId)
+                .Select(r => new RefundRequest
+                {
+                    RefundId = r.RefundId,
+                    OrderId = r.OrderId,
+                    Item = r.Item,
+                    RefundQuantity = r.RefundQuantity,
+                    Fee = r.Fee,
+                    PromoCode = r.PromoCode,
+                    RefundAmount = r.Fee,
+                    RefundStatus = r.RefundStatus,
+                    RefundReason = r.RefundReason,
+                    RejectionReason = r.RejectionReason, 
+                    RefundRequestDate = r.RefundRequestDate
+                })
                 .ToListAsync();
 
             // Check if refundList is empty and add a message
-                if (!refundList.Any())
+            if (!refundList.Any())
                 {
                     ViewBag.NoRefundRequests = "No refund requests found for your business.";
                 }
@@ -559,19 +574,26 @@ namespace HomeHub.App.Controllers
                 orderLog.Status = "Refund Accepted"; // Update order history
             }
 
+            // Fetch the product(s) in the order
+            var product = await _context.Products
+                .FirstOrDefaultAsync(p => p.ProductItem == orderLog.Item);
+
+            // Return the product back to inventory
+            product.Qty += refundRequest.RefundQuantity;
+
             refundRequest.RefundStatus = "Refund Accepted";
             refundRequest.RefundActionDate = DateTime.Now;
             refundRequest.RefundAmount = refundRequest.Fee;
 
             await _context.SaveChangesAsync();
 
-            TempData["SuccessMessage"] = "Refund request has been accepted successfully.";
+            TempData["SuccessMessage"] = $"Refund request has been accepted successfully. {refundRequest.RefundQuantity} item(s) have been returned to inventory.";
             return RedirectToAction("ShowRefundRequests");
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> RejectRefund(int refundId)
+        public async Task<IActionResult> RejectRefund(int refundId, string rejectionReason)
         {
             var refundRequest = await _context.RefundRequests
                 .FirstOrDefaultAsync(r => r.RefundId == refundId);
@@ -579,6 +601,12 @@ namespace HomeHub.App.Controllers
             if (refundRequest == null)
             {
                 TempData["ErrorMessage"] = "Refund request not found.";
+                return RedirectToAction("ShowRefundRequests");
+            }
+
+            if (string.IsNullOrWhiteSpace(rejectionReason))
+            {
+                TempData["ErrorMessage"] = "Rejection reason is required.";
                 return RedirectToAction("ShowRefundRequests");
             }
 
@@ -592,6 +620,7 @@ namespace HomeHub.App.Controllers
 
             refundRequest.RefundStatus = "Refund Rejected";
             refundRequest.RefundActionDate = DateTime.Now;
+            refundRequest.RejectionReason = rejectionReason;
 
             await _context.SaveChangesAsync();
 

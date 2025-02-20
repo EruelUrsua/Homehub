@@ -11,6 +11,8 @@ public class OrdersLog
     public string OrderId { get; set; } = null!;
 
     public DateTime OrderDate { get; set; }
+    // 🔹 Store ASP.NET Identity UserId 
+    public string UserId { get; set; }
 
     public string FirstName { get; set; } = null!;
 

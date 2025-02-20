@@ -2,6 +2,15 @@
 
 <h2>Refund Requests for Your Business</h2>
 
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+
 <table class="table">
     <thead>
         <tr>
@@ -14,6 +23,7 @@
             <th>Status</th>
             <th>Refund Reason</th>
             <th>Request Date</th>
+            <th>Rejection Reason</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -40,21 +50,49 @@
                 <td>@refundRequest.RefundReason</td>
                 <td>@refundRequest.RefundRequestDate.ToShortDateString()</td>
                 <td>
+                    @if (!string.IsNullOrEmpty(refundRequest.RejectionReason))
+                    {
+                        @refundRequest.RejectionReason
+                    }
+                    else
+                    {
+                        <span class="text-muted">N/A</span>
+                    }
+                </td>
+                <td>
                     @if (refundRequest.RefundStatus == "Pending")
                     {
                         @using (Html.BeginForm("AcceptRefund", "Provider", FormMethod.Post, new { @class = "refund-form" }))
                         {
                             @Html.AntiForgeryToken()
-                            @Html.Hidden("refundId", refundRequest.RefundId) 
+                            @Html.Hidden("refundId", refundRequest.RefundId)
                             <button type="submit" class="btn btn-success mt-2">Accept</button>
                         }
 
-                        @using (Html.BeginForm("RejectRefund", "Provider", FormMethod.Post, new { @class = "refund-form" }))
-                        {
-                            @Html.AntiForgeryToken()
-                            @Html.Hidden("refundId", refundRequest.RefundId)
-                            <button type="submit" class="btn btn-danger mt-2">Reject</button>
-                        }
+                        <button type="button" class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#rejectModal-@refundRequest.RefundId">Reject</button>
+
+                        <div class="modal fade" id="rejectModal-@refundRequest.RefundId" tabindex="-1" aria-labelledby="rejectModalLabel-@refundRequest.RefundId" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="rejectModalLabel-@refundRequest.RefundId">Reject Refund Request</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="post" action="@Url.Action("RejectRefund", "Provider")">
+                                            @Html.AntiForgeryToken()
+                                            @Html.Hidden("refundId", refundRequest.RefundId)
+                                            <label for="rejectionReason">Rejection Reason:</label>
+                                            <textarea name="rejectionReason" class="form-control" rows="3" required></textarea>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn btn-danger">Reject Refund</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     }
                     else if (refundRequest.RefundStatus == "Refund Accepted")
                     {
@@ -77,4 +115,12 @@
     </div>
 }
 
-
+<script>
+    $(document).ready(function () {
+        $(".request-refund-btn").click(function () {
+            var orderId = $(this).data("orderid");
+            $("#modalOrderId").val(orderId);
+            $("#refundModal").modal("show");
+        });
+    });
+</script>
