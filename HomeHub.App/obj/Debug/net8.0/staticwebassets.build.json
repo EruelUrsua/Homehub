@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Fl+axp/c3SzXUybvrSdWHHp74rCESfUaVmcXL7udzAk=",
+  "Hash": "Zg1ARH3BV/BCqB+BJC8coa3BxDe02Ah/lmHbtN/jCoY=",
   "Source": "HomeHub.App",
   "BasePath": "_content/HomeHub.App",
   "Mode": "Default",
@@ -267,6 +267,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\3afcd1ef-8c9f-4dbf-9971-263c52b9ad83_cleaning kit.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/3afcd1ef-8c9f-4dbf-9971-263c52b9ad83_cleaning kit#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6qu6mo43sh",
+      "Integrity": "DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\3afcd1ef-8c9f-4dbf-9971-263c52b9ad83_cleaning kit.jpg"
     },
     {
       "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\4870b1e3-93de-4422-b4cf-a0f6e4463bf9_cleaning kit.jpg",
@@ -2112,7 +2133,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 02:32:44 GMT"
+          "Value": "Thu, 20 Feb 2025 04:55:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2157,7 +2178,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 02:32:44 GMT"
+          "Value": "Thu, 20 Feb 2025 04:55:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2358,7 +2379,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 04:08:12 GMT"
+          "Value": "Thu, 20 Feb 2025 04:55:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2403,7 +2424,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 04:08:12 GMT"
+          "Value": "Thu, 20 Feb 2025 04:55:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2746,6 +2767,88 @@
       ]
     },
     {
+      "Route": "images/3afcd1ef-8c9f-4dbf-9971-263c52b9ad83_cleaning kit.6qu6mo43sh.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\3afcd1ef-8c9f-4dbf-9971-263c52b9ad83_cleaning kit.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "100241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Feb 2025 05:02:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6qu6mo43sh"
+        },
+        {
+          "Name": "label",
+          "Value": "images/3afcd1ef-8c9f-4dbf-9971-263c52b9ad83_cleaning kit.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI="
+        }
+      ]
+    },
+    {
+      "Route": "images/3afcd1ef-8c9f-4dbf-9971-263c52b9ad83_cleaning kit.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\3afcd1ef-8c9f-4dbf-9971-263c52b9ad83_cleaning kit.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "100241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 20 Feb 2025 05:02:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI="
+        }
+      ]
+    },
+    {
       "Route": "images/4870b1e3-93de-4422-b4cf-a0f6e4463bf9_cleaning kit.6qu6mo43sh.jpg",
       "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\4870b1e3-93de-4422-b4cf-a0f6e4463bf9_cleaning kit.jpg",
       "Selectors": [],
@@ -2768,7 +2871,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 02:47:55 GMT"
+          "Value": "Thu, 20 Feb 2025 04:55:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2813,7 +2916,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 02:47:55 GMT"
+          "Value": "Thu, 20 Feb 2025 04:55:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2932,7 +3035,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 04:40:19 GMT"
+          "Value": "Thu, 20 Feb 2025 04:55:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2977,7 +3080,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 20 Feb 2025 04:40:19 GMT"
+          "Value": "Thu, 20 Feb 2025 04:55:18 GMT"
         },
         {
           "Name": "Cache-Control",

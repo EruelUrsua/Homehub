@@ -497,7 +497,7 @@ namespace HomeHub.App.Controllers
 
         public async Task<IActionResult> ShowNotifications(string businessId)
         {
-            businessId = "1";
+            businessId = "2";
 
             var notifications = await _context.Notifications
                 .Where(n => n.BusinessId == businessId)
