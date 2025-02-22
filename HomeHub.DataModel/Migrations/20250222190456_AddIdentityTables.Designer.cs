@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeHub.DataModel.Migrations
 {
     [DbContext(typeof(HomeHubContext))]
-    [Migration("20250220043658_AddIdentityTables")]
+    [Migration("20250222190456_AddIdentityTables")]
     partial class AddIdentityTables
     {
         /// <inheritdoc />
@@ -59,6 +59,12 @@ namespace HomeHub.DataModel.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("BusinessName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BusnessType")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -91,6 +97,9 @@ namespace HomeHub.DataModel.Migrations
                     b.Property<string>("NormalizedUserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("OfferList")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");

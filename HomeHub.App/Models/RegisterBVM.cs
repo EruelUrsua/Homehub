@@ -21,6 +21,12 @@ namespace HomeHub.App.Models
         [Phone]
         public string ContactNo { get; set; }
         [Required]
+        public string? BusinessName { get; set; }
+        [Required]
+        public string? OfferList { get; set; }
+        [Required]
+        public string? BusinessType { get; set; }
+        [Required]
         public string BusinessAddress { get; set; }
         [Required]
         [DataType(DataType.Password)]

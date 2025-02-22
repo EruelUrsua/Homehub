@@ -192,7 +192,9 @@ namespace HomeHub.App.Controllers
                 user.Firstname = model.Firstname;
                 user.PhoneNumber = model.ContactNo;
                 user.Address = model.BusinessAddress;
-
+                user.BusinessName = model.BusinessName;
+               // user.BusinessType = model.BusinessType;
+                user.OfferList = model.OfferList;
 
                 var result = await userManager.CreateAsync(user, model.Password);
                 await userManager.AddToRoleAsync(user, "Provider");
