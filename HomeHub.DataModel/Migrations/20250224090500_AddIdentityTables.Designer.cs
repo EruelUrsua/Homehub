@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeHub.DataModel.Migrations
 {
     [DbContext(typeof(HomeHubContext))]
-    [Migration("20250224084724_AddIdentityTables")]
+    [Migration("20250224090500_AddIdentityTables")]
     partial class AddIdentityTables
     {
         /// <inheritdoc />
@@ -62,11 +62,11 @@ namespace HomeHub.DataModel.Migrations
                     b.Property<string>("BusinessName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BusinessType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool?>("Category")
+                    b.Property<bool?>("BusinessType")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Category")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
