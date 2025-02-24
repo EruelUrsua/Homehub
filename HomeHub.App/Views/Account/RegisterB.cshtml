@@ -20,7 +20,11 @@
     <span asp-validation-for="BusinessName"></span>
     <br />
     <label asp-for="BusinessType"></label> 
-     <input asp-for="BusinessType" class="form-control" /> 
+    <select asp-for="BusinessType" name="BusinessType" id="BusinessType">
+        <option value="true">Product</option>
+        <option value="false">Service</option>
+    </select>
+     @* <input asp-for="BusinessType" class="form-control" />  *@
     <span asp-validation-for="BusinessType"></span> 
     <br />
     <label asp-for="Category"></label>
