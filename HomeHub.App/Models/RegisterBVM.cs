@@ -23,9 +23,9 @@ namespace HomeHub.App.Models
         [Required]
         public string? BusinessName { get; set; }
         [Required]
-        public bool? Category { get; set; }
+        public String? Category { get; set; }
         [Required]
-        public string? BusinessType { get; set; }
+        public bool? BusinessType { get; set; }
         [Required]
         public string BusinessAddress { get; set; }
         [Required]
