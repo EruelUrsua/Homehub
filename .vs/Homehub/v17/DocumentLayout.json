@@ -122,8 +122,7 @@
               "RelativeToolTip": "HomeHub.App\\Views\\Shared\\_LoginPartial.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-24T10:03:21.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T10:03:21.218Z"
             },
             {
               "$type": "Document",
@@ -135,8 +134,7 @@
               "RelativeToolTip": "HomeHub.App\\Models\\ProductVM.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T08:19:50.845Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T08:19:50.845Z"
             },
             {
               "$type": "Document",
@@ -170,7 +168,7 @@
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Account\\RegisterB.cshtml",
               "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Account\\RegisterB.cshtml",
               "RelativeToolTip": "HomeHub.App\\Views\\Account\\RegisterB.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABYAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-22T18:44:44.729Z",
               "EditorCaption": ""
