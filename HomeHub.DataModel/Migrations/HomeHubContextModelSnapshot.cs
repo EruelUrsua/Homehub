@@ -59,11 +59,11 @@ namespace HomeHub.DataModel.Migrations
                     b.Property<string>("BusinessName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BusinessType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool?>("Category")
+                    b.Property<bool?>("BusinessType")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Category")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
