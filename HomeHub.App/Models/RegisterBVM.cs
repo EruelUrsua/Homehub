@@ -23,7 +23,7 @@ namespace HomeHub.App.Models
         [Required]
         public string? BusinessName { get; set; }
         [Required]
-        public string? OfferList { get; set; }
+        public bool? Category { get; set; }
         [Required]
         public string? BusinessType { get; set; }
         [Required]

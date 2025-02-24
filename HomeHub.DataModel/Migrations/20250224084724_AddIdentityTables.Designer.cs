@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeHub.DataModel.Migrations
 {
     [DbContext(typeof(HomeHubContext))]
-    [Migration("20250222190428_AddTables")]
-    partial class AddTables
+    [Migration("20250224084724_AddIdentityTables")]
+    partial class AddIdentityTables
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -62,8 +62,11 @@ namespace HomeHub.DataModel.Migrations
                     b.Property<string>("BusinessName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BusnessType")
+                    b.Property<string>("BusinessType")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("Category")
+                        .HasColumnType("bit");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -97,9 +100,6 @@ namespace HomeHub.DataModel.Migrations
                     b.Property<string>("NormalizedUserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("OfferList")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
@@ -197,8 +197,8 @@ namespace HomeHub.DataModel.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.Property<string>("OfferList")
                         .IsRequired()
