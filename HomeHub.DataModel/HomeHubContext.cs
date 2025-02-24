@@ -59,6 +59,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
     {
         base.OnModelCreating(modelBuilder);
 
+
         modelBuilder.Entity<Admin>(entity =>
         {
             entity.ToTable("Admin");
@@ -96,7 +97,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
             //entity.Property(e => e.BusinessType).HasMaxLength(1);
             entity.Property(e => e.CompanyAddress).HasMaxLength(100);
             entity.Property(e => e.ContactNo).HasMaxLength(11);
-            entity.Property(e => e.Email).HasMaxLength(20);
+            entity.Property(e => e.Email).HasMaxLength(40);
             entity.Property(e => e.OfferList).HasMaxLength(50);
             entity.Property(e => e.Password).HasMaxLength(20);
             entity.Property(e => e.RepresentativeName).HasMaxLength(50);

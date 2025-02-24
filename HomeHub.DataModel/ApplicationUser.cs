@@ -15,8 +15,8 @@ namespace HomeHub.DataModel
 
         public string? BusinessName { get; set; }    
 
-        public string? OfferList { get; set; }
+        public bool? Category { get; set; }
 
-        public string? BusnessType { get; set; }
+        public string? BusinessType { get; set; }
     }
 }
