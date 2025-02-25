@@ -16,6 +16,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Net;
+using static HomeHub.App.Models.PayMayaVM;
 
 namespace HomeHub.App.Controllers
 {
@@ -675,6 +676,7 @@ namespace HomeHub.App.Controllers
         [HttpPost]
         public async Task<ActionResult> PayOnline(string LogId)
         {
+            /*
             var orderLog = context.OrdersLogs.FirstOrDefault(o => o.LogId == LogId);
 
             if (orderLog == null)
@@ -684,17 +686,45 @@ namespace HomeHub.App.Controllers
             }
 
             decimal amount = orderLog.Fee;
-            string orderRef = "ORDER-123456"; // Unique order ID
+            string orderRef = "ORDER-" + LogId; // Unique order ID
+            var items = new List<>
 
-            string qrCodeUrl = await _payMayaService.PayOnline(amount, orderRef);
+            /*string qrCodeUrl = await _payMayaService.PayOnline(amount, orderRef);
 
             if (!string.IsNullOrEmpty(qrCodeUrl))
             {
                 ViewBag.QRCodeUrl = qrCodeUrl;
                 return View(); 
             }
+            
+            return View("Error");*/
+            try
+            {
+                var orderLog = context.OrdersLogs.FirstOrDefault(o => o.LogId == LogId);
 
-            return View("Error");
+
+                decimal totalAmount = orderLog.Fee;
+                string currency = "PHP";
+
+                List<PayMayaVM.PayMayaItem> items = new List<PayMayaVM.PayMayaItem>
+                {
+                    //will change once multiple order
+                    new PayMayaVM.PayMayaItem
+                    {
+                        name = orderLog.Item,
+                        //amount = new PayMayaVM.PayMayaAmount {totalAmount = orderLog.Fee },
+                        totalAmount = new PayMayaAmount {value = totalAmount, currency = currency}
+                    }
+                };
+
+                string response = await _payMayaService.CreateCheckoutAsync(totalAmount, currency, items, LogId);
+
+                return Content(response, "application/json");
+            }
+            catch(Exception ex)
+            {
+                return Content ("Error" + ex.Message);
+            }
         }
 
         [HttpPost]
