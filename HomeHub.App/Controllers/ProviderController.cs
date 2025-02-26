@@ -528,6 +528,91 @@ namespace HomeHub.App.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        public async Task<IActionResult> MarkAsShipped(int clientId)
+        {
+            var order = await _context.ClientOrders
+                .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == "Processing");
+
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            order.Status = "Shipped";
+
+            // Find existing log entry and update the status
+            var orderLog = await _context.OrdersLogs
+                .FirstOrDefaultAsync(log => log.OrderId == order.ClientId.ToString());
+
+            if (orderLog != null)
+            {
+                orderLog.Status = "Shipped";
+                orderLog.Date = DateTime.Now;
+            }
+
+            await _context.SaveChangesAsync();
+            TempData["SuccessMessage"] = "Order has been shipped.";
+            return RedirectToAction(nameof(ProductOrders));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> MarkAsOutForDelivery(int clientId)
+        {
+            var order = await _context.ClientOrders
+                .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == "Shipped");
+
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            order.Status = "Out for Delivery";
+
+            var orderLog = await _context.OrdersLogs
+                .FirstOrDefaultAsync(log => log.OrderId == order.ClientId.ToString());
+
+            if (orderLog != null)
+            {
+                orderLog.Status = "Out for Delivery";
+                orderLog.Date = DateTime.Now;
+            }
+
+            await _context.SaveChangesAsync();
+            TempData["SuccessMessage"] = "Order is out for delivery.";
+            return RedirectToAction(nameof(ProductOrders));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> MarkAsDelivered(int clientId)
+        {
+            var order = await _context.ClientOrders
+                .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == "Out for Delivery");
+
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            order.Status = "Delivered";
+
+            var orderLog = await _context.OrdersLogs
+                .FirstOrDefaultAsync(log => log.OrderId == order.ClientId.ToString());
+
+            if (orderLog != null)
+            {
+                orderLog.Status = "Delivered";
+                orderLog.Date = DateTime.Now;
+            }
+
+            await _context.SaveChangesAsync();
+            TempData["SuccessMessage"] = "Order has been delivered successfully.";
+            return RedirectToAction(nameof(ProductOrders));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> ConfirmServiceReq(int clientId)
         {
             var order = await _context.ClientOrders
@@ -578,6 +663,66 @@ namespace HomeHub.App.Controllers
             await _context.SaveChangesAsync();
 
             TempData["SuccessMessage"] = "Service has been scheduled. Please prepare for the appointment date.";
+            return RedirectToAction(nameof(ServiceRequests));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> StartService(int clientId)
+        {
+            var order = await _context.ClientOrders
+                .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == "Scheduled");
+
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            order.Status = "Ongoing";
+
+            // Find and update the existing OrdersLog entry
+            var orderLog = await _context.OrdersLogs
+                .FirstOrDefaultAsync(log => log.OrderId == order.ClientId.ToString());
+
+            if (orderLog != null)
+            {
+                orderLog.Status = "Ongoing";
+                orderLog.Date = DateTime.Now;
+            }
+
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Service is now Ongoing.";
+            return RedirectToAction(nameof(ServiceRequests));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CompleteService(int clientId)
+        {
+            var order = await _context.ClientOrders
+                .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == "Ongoing");
+
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            order.Status = "Completed";
+
+            // Find and update the existing OrdersLog entry
+            var orderLog = await _context.OrdersLogs
+                .FirstOrDefaultAsync(log => log.OrderId == order.ClientId.ToString());
+
+            if (orderLog != null)
+            {
+                orderLog.Status = "Completed";
+                orderLog.Date = DateTime.Now;
+            }
+
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Service has been marked as Completed.";
             return RedirectToAction(nameof(ServiceRequests));
         }
 

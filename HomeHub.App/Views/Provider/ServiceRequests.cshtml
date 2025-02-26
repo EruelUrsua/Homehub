@@ -15,8 +15,7 @@
             <th>Client ID</th>
             <th>Schedule</th>
             <th>Order Date</th>
-            <th>Ordered Items</th>
-            <th>Quantity</th>
+            <th>Service Requests</th>
             <th>Fee</th>
             <th>Total Discount</th>
             <th>Discount</th>
@@ -30,10 +29,9 @@
         {
             <tr>
                 <td>@order.ClientId</td>
-                <td>@order.OrderDate.ToShortDateString()</td>
                 <td>@order.Schedule.ToShortDateString()</td>
+                <td>@order.OrderDate.ToShortDateString()</td>
                 <td>@order.OrderedPs</td>
-                <td>@order.Quantity</td>
                 <td>₱@order.Fee.ToString("N2")</td>
                 <td>
                     @if (order.DiscountAmount > 0)
@@ -55,14 +53,19 @@
                         <span>0%</span>
                     }
                 </td>
-
-                <td>
-                    @order.PromoCode
-                </td>
+                <td>@order.PromoCode</td>
                 <td>
                     @if (order.Status == "Scheduled")
                     {
                         <span class="text-success">Scheduled</span>
+                    }
+                    else if (order.Status == "Ongoing")
+                    {
+                        <span class="text-primary">Ongoing</span>
+                    }
+                    else if (order.Status == "Completed")
+                    {
+                        <span class="text-muted">Completed</span>
                     }
                     else
                     {
@@ -76,10 +79,20 @@
                             <button type="submit" class="btn btn-sm btn-primary">Schedule Service</button>
                         </form>
                     }
+                    else if (order.Status == "Scheduled")
+                    {
+                        <form asp-action="StartService" asp-route-clientId="@order.ClientId" method="post">
+                            <button type="submit" class="btn btn-sm btn-warning">Start Service</button>
+                        </form>
+                    }
+                    else if (order.Status == "Ongoing")
+                    {
+                        <form asp-action="CompleteService" asp-route-clientId="@order.ClientId" method="post">
+                            <button type="submit" class="btn btn-sm btn-success">Complete Service</button>
+                        </form>
+                    }
                 </td>
             </tr>
         }
     </tbody>
 </table>
-
-

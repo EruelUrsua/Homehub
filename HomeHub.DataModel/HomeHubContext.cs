@@ -130,7 +130,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
                 .HasColumnType("datetime");
             entity.Property(e => e.Status)
                 .HasDefaultValue("Pending")
-                .HasColumnType("nvarchar(10)")
+                .HasColumnType("nvarchar(20)")
                 .HasMaxLength(10);
             entity.Property(e => e.UserId)
                 .HasMaxLength(50)

@@ -15,6 +15,7 @@ wwwroot\images\64881bdf-7713-4f10-bbed-dcabafde54b0_cleaning kit.jpg
 wwwroot\images\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg
 wwwroot\images\925e66ba-5942-4496-a5dd-f23ddd2c11d2_cleaning kit.jpg
 wwwroot\images\9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg
+wwwroot\images\9f5ea479-1f19-4c07-a030-c7a272b16cb9_cleaning kit.jpg
 wwwroot\images\a2dd9eb6-5e13-42df-8646-043af4e56d2f_samplestock.jpg
 wwwroot\images\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg
 wwwroot\images\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg
