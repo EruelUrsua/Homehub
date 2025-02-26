@@ -56,15 +56,6 @@ namespace HomeHub.DataModel.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BusinessName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool?>("BusinessType")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Category")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -516,6 +507,29 @@ namespace HomeHub.DataModel.Migrations
                     b.HasKey("PromoId");
 
                     b.ToTable("Promos");
+                });
+
+            modelBuilder.Entity("HomeHub.DataModel.Provider", b =>
+                {
+                    b.Property<string>("UserID")
+                        .HasColumnType("nvarchar(450)")
+                        .HasColumnName("UserID");
+
+                    b.Property<string>("BusinessName")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<bool>("Businesstype")
+                        .HasMaxLength(1)
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Category")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("UserID");
+
+                    b.ToTable("Providers");
                 });
 
             modelBuilder.Entity("HomeHub.DataModel.Rating", b =>

@@ -13,10 +13,10 @@ namespace HomeHub.DataModel
         public string Firstname { get; set; }
         public string Address { get; set; }
 
-        public string? BusinessName { get; set; }    
+        //public string? BusinessName { get; set; }    
 
-        public String? Category { get; set; }
+        //public String? Category { get; set; }
 
-        public bool? BusinessType { get; set; }
+        //public bool? BusinessType { get; set; }
     }
 }

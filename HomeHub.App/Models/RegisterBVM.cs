@@ -21,11 +21,11 @@ namespace HomeHub.App.Models
         [Phone]
         public string ContactNo { get; set; }
         [Required]
-        public string? BusinessName { get; set; }
+        public string BusinessName { get; set; }
         [Required]
-        public String? Category { get; set; }
+        public String Category { get; set; }
         [Required]
-        public bool? BusinessType { get; set; }
+        public bool BusinessType { get; set; }
         [Required]
         public string BusinessAddress { get; set; }
         [Required]

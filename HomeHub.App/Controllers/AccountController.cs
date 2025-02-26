@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using System.Net.Mail;
+using System.Security.Claims;
 using System.Text.Encodings.Web;
 
 namespace HomeHub.App.Controllers
@@ -14,11 +15,13 @@ namespace HomeHub.App.Controllers
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
         private readonly EmailSenderService emailSender;
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, EmailSenderService emailSender)
+        private readonly HomeHubContext context;
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, EmailSenderService emailSender, HomeHubContext context)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             this.emailSender = emailSender;
+            this.context = context;
         }
 
 
@@ -28,7 +31,14 @@ namespace HomeHub.App.Controllers
             return View();
 
         }
+        [HttpGet]
+        public async Task<string> GetCurrentUserId()
+        {
+            ApplicationUser usr = await GetCurrentUserAsync();
+            return usr?.Id;
+        }
 
+        private Task<ApplicationUser> GetCurrentUserAsync() => userManager.GetUserAsync(HttpContext.User);
 
         private async Task SendConfirmationEmail(string email, ApplicationUser user)
         {
@@ -186,18 +196,22 @@ namespace HomeHub.App.Controllers
             {
 
                 ApplicationUser user = new ApplicationUser();
+                Provider provider = new Provider();
+
                 user.UserName = model.Email;
                 user.Email = model.Email;
                 user.Lastname = model.Lastname;
                 user.Firstname = model.Firstname;
                 user.PhoneNumber = model.ContactNo;
                 user.Address = model.BusinessAddress;
-                user.BusinessName = model.BusinessName;
-                user.BusinessType = model.BusinessType;
-                user.Category = model.Category;
-
+                provider.BusinessName = model.BusinessName;
+                provider.Businesstype = model.BusinessType;
+                provider.Category = model.Category;
                 var result = await userManager.CreateAsync(user, model.Password);
                 await userManager.AddToRoleAsync(user, "Provider");
+                provider.UserID = user.Id;
+                await context.AddAsync(provider);
+                await context.SaveChangesAsync();
                 if (result.Succeeded)
                 {
                     //Then send the Confirmation Email to the User
