@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeHub.DataModel.Migrations
 {
     [DbContext(typeof(HomeHubContext))]
-    [Migration("20250224090500_AddIdentityTables")]
+    [Migration("20250226074623_AddIdentityTables")]
     partial class AddIdentityTables
     {
         /// <inheritdoc />
@@ -229,10 +229,8 @@ namespace HomeHub.DataModel.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ClientId"));
 
-                    b.Property<string>("BusinessId")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
+                    b.Property<int>("BusinessId")
+                        .HasColumnType("int")
                         .HasColumnName("BusinessID");
 
                     b.Property<decimal>("Fee")
@@ -362,10 +360,8 @@ namespace HomeHub.DataModel.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NotificationId"));
 
-                    b.Property<string>("BusinessId")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.Property<int>("BusinessId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
@@ -394,10 +390,8 @@ namespace HomeHub.DataModel.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("LogID");
 
-                    b.Property<string>("BusinessId")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
+                    b.Property<int>("BusinessId")
+                        .HasColumnType("int")
                         .HasColumnName("BusinessID");
 
                     b.Property<DateTime>("Date")
@@ -569,10 +563,8 @@ namespace HomeHub.DataModel.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RefundId"));
 
-                    b.Property<string>("BusinessId")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
+                    b.Property<int>("BusinessId")
+                        .HasColumnType("int")
                         .HasColumnName("BusinessID");
 
                     b.Property<decimal>("Fee")

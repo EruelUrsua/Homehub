@@ -7,7 +7,6 @@ namespace HomeHub.DataModel;
 
 public class HomeHubContext : IdentityDbContext<ApplicationUser>
 {
-
     public HomeHubContext(DbContextOptions options) : base(options)
     {
 
