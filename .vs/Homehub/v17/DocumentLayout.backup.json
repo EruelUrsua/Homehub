@@ -1,53 +1,97 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\HomeHub\\Homehub\\",
+  "WorkspaceRootPath": "C:\\Users\\Charlize\\Documents\\Homehub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\homehub\\homehub\\homehub.app\\services\\paymayaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\services\\paymayaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.app\\controllers\\providercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\controllers\\providercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\homehub\\homehub\\homehub.app\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.app\\views\\provider\\servicerequests.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\provider\\servicerequests.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\homehub\\homehub\\homehub.app\\models\\paymayavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\models\\paymayavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.datamodel\\refundrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|solutionrelative:homehub.datamodel\\refundrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|d:\\homehub\\homehub\\homehub.datamodel\\homehubcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.app\\views\\provider\\providerhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\provider\\providerhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.app\\views\\provider\\productorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\provider\\productorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.datamodel\\homehubcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|solutionrelative:homehub.datamodel\\homehubcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\homehub\\homehub\\homehub.app\\views\\customer\\vieworders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\customer\\vieworders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.app\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\homehub\\homehub\\homehub.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.datamodel\\orderslog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|solutionrelative:homehub.datamodel\\orderslog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\homehub\\homehub\\homehub.app\\models\\providerordervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.datamodel\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|solutionrelative:homehub.datamodel\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.datamodel\\clientorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|solutionrelative:homehub.datamodel\\clientorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.datamodel\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|solutionrelative:homehub.datamodel\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.app\\models\\orderslogvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\models\\orderslogvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.app\\models\\providerordervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\models\\providerordervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|d:\\homehub\\homehub\\homehub.datamodel\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.datamodel\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|solutionrelative:homehub.datamodel\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.app\\services\\paymayaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\services\\paymayaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.app\\models\\paymayavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\models\\paymayavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.app\\views\\customer\\vieworders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\customer\\vieworders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.datamodel\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|solutionrelative:homehub.datamodel\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\homehub\\homehub\\homehub.app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\homehub\\homehub\\homehub.app\\views\\customer\\orderproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.app\\views\\customer\\orderproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\customer\\orderproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\homehub\\homehub\\homehub.app\\views\\customer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.app\\views\\customer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\customer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\homehub\\homehub\\homehub.app\\views\\customer\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|c:\\users\\charlize\\documents\\homehub\\homehub.app\\views\\customer\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\customer\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -58,84 +102,255 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{4a9b7e51-aa16-11d0-a8c5-00a0c921a4d2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PayMayaVM.cs",
-              "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.App\\Models\\PayMayaVM.cs",
-              "RelativeDocumentMoniker": "HomeHub.App\\Models\\PayMayaVM.cs",
-              "ToolTip": "D:\\HomeHub\\Homehub\\HomeHub.App\\Models\\PayMayaVM.cs",
-              "RelativeToolTip": "HomeHub.App\\Models\\PayMayaVM.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwA0AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T22:15:32.814Z",
+              "DocumentIndex": 1,
+              "Title": "ServiceRequests.cshtml",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Provider\\ServiceRequests.cshtml",
+              "RelativeDocumentMoniker": "HomeHub.App\\Views\\Provider\\ServiceRequests.cshtml",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Provider\\ServiceRequests.cshtml",
+              "RelativeToolTip": "HomeHub.App\\Views\\Provider\\ServiceRequests.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAgwFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-26T07:13:37.125Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PayMayaService.cs",
-              "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.App\\Services\\PayMayaService.cs",
-              "RelativeDocumentMoniker": "HomeHub.App\\Services\\PayMayaService.cs",
-              "ToolTip": "D:\\HomeHub\\Homehub\\HomeHub.App\\Services\\PayMayaService.cs",
-              "RelativeToolTip": "HomeHub.App\\Services\\PayMayaService.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAAwEgAAABJAAAAAAAAAA==",
+              "Title": "ProviderController.cs",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Controllers\\ProviderController.cs",
+              "RelativeDocumentMoniker": "HomeHub.App\\Controllers\\ProviderController.cs",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Controllers\\ProviderController.cs",
+              "RelativeToolTip": "HomeHub.App\\Controllers\\ProviderController.cs",
+              "ViewState": "AgIAACwCAAAAAAAAAAAowEQCAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T22:06:33.268Z",
+              "WhenOpened": "2025-02-26T05:45:58.166Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CustomerController.cs",
-              "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.App\\Controllers\\CustomerController.cs",
-              "RelativeDocumentMoniker": "HomeHub.App\\Controllers\\CustomerController.cs",
-              "ToolTip": "D:\\HomeHub\\Homehub\\HomeHub.App\\Controllers\\CustomerController.cs",
-              "RelativeToolTip": "HomeHub.App\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAALQCAAAAAAAAAAAAwMsCAABhAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "RefundRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\RefundRequest.cs",
+              "RelativeDocumentMoniker": "HomeHub.DataModel\\RefundRequest.cs",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\RefundRequest.cs",
+              "RelativeToolTip": "HomeHub.DataModel\\RefundRequest.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwBUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T23:01:35.475Z",
+              "WhenOpened": "2025-02-26T06:42:06.783Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
+              "Title": "OrdersLog.cs",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\OrdersLog.cs",
+              "RelativeDocumentMoniker": "HomeHub.DataModel\\OrdersLog.cs",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\OrdersLog.cs",
+              "RelativeToolTip": "HomeHub.DataModel\\OrdersLog.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T06:40:00.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ClientOrder.cs",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\ClientOrder.cs",
+              "RelativeDocumentMoniker": "HomeHub.DataModel\\ClientOrder.cs",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\ClientOrder.cs",
+              "RelativeToolTip": "HomeHub.DataModel\\ClientOrder.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAcwCAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T06:33:18.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Business.cs",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\Business.cs",
+              "RelativeDocumentMoniker": "HomeHub.DataModel\\Business.cs",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\Business.cs",
+              "RelativeToolTip": "HomeHub.DataModel\\Business.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAIwBYAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T06:33:13.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "HomeHubContext.cs",
-              "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHubContext.cs",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\HomeHubContext.cs",
               "RelativeDocumentMoniker": "HomeHub.DataModel\\HomeHubContext.cs",
-              "ToolTip": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\HomeHubContext.cs",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\HomeHubContext.cs",
               "RelativeToolTip": "HomeHub.DataModel\\HomeHubContext.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAuwD4AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAACcBAAAAAAAAAAAAADkBAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-22T03:18:57.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "ProviderHome.cshtml",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Provider\\ProviderHome.cshtml",
+              "RelativeDocumentMoniker": "HomeHub.App\\Views\\Provider\\ProviderHome.cshtml",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Provider\\ProviderHome.cshtml",
+              "RelativeToolTip": "HomeHub.App\\Views\\Provider\\ProviderHome.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAADsAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-26T06:14:56.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductOrders.cshtml",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Provider\\ProductOrders.cshtml",
+              "RelativeDocumentMoniker": "HomeHub.App\\Views\\Provider\\ProductOrders.cshtml",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Provider\\ProductOrders.cshtml",
+              "RelativeToolTip": "HomeHub.App\\Views\\Provider\\ProductOrders.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAAAgwFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-26T05:51:00.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "HomeHub.App\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "HomeHub.App\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAEYBAAAAAAAAAAAkwFQBAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T23:01:35.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\Notification.cs",
+              "RelativeDocumentMoniker": "HomeHub.DataModel\\Notification.cs",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\Notification.cs",
+              "RelativeToolTip": "HomeHub.DataModel\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T06:57:34.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrdersLogVM.cs",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Models\\OrdersLogVM.cs",
+              "RelativeDocumentMoniker": "HomeHub.App\\Models\\OrdersLogVM.cs",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Models\\OrdersLogVM.cs",
+              "RelativeToolTip": "HomeHub.App\\Models\\OrdersLogVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T06:44:18.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PayMayaVM.cs",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Models\\PayMayaVM.cs",
+              "RelativeDocumentMoniker": "HomeHub.App\\Models\\PayMayaVM.cs",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Models\\PayMayaVM.cs",
+              "RelativeToolTip": "HomeHub.App\\Models\\PayMayaVM.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwA0AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T22:15:32.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProviderOrderVM.cs",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Models\\ProviderOrderVM.cs",
+              "RelativeDocumentMoniker": "HomeHub.App\\Models\\ProviderOrderVM.cs",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Models\\ProviderOrderVM.cs",
+              "RelativeToolTip": "HomeHub.App\\Models\\ProviderOrderVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T08:20:14.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\Service.cs",
+              "RelativeDocumentMoniker": "HomeHub.DataModel\\Service.cs",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\Service.cs",
+              "RelativeToolTip": "HomeHub.DataModel\\Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T05:45:32.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PayMayaService.cs",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Services\\PayMayaService.cs",
+              "RelativeDocumentMoniker": "HomeHub.App\\Services\\PayMayaService.cs",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Services\\PayMayaService.cs",
+              "RelativeToolTip": "HomeHub.App\\Services\\PayMayaService.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAuwEgAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T22:06:33.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.App\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Program.cs",
               "RelativeDocumentMoniker": "HomeHub.App\\Program.cs",
-              "ToolTip": "D:\\HomeHub\\Homehub\\HomeHub.App\\Program.cs",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Program.cs",
               "RelativeToolTip": "HomeHub.App\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-22T18:55:46.163Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 18,
               "Title": "Products.cs",
-              "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\Products.cs",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\Products.cs",
               "RelativeDocumentMoniker": "HomeHub.DataModel\\Products.cs",
-              "ToolTip": "D:\\HomeHub\\Homehub\\HomeHub.DataModel\\Products.cs",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.DataModel\\Products.cs",
               "RelativeToolTip": "HomeHub.DataModel\\Products.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -143,11 +358,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 20,
               "Title": "OrderProduct.cshtml",
-              "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.App\\Views\\Customer\\OrderProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Customer\\OrderProduct.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Customer\\OrderProduct.cshtml",
-              "ToolTip": "D:\\HomeHub\\Homehub\\HomeHub.App\\Views\\Customer\\OrderProduct.cshtml",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Customer\\OrderProduct.cshtml",
               "RelativeToolTip": "HomeHub.App\\Views\\Customer\\OrderProduct.cshtml",
               "ViewState": "AgIAAJwAAAAAAAAAAAAQwKwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -155,24 +370,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 17,
               "Title": "ViewOrders.cshtml",
-              "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.App\\Views\\Customer\\ViewOrders.cshtml",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Customer\\ViewOrders.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Customer\\ViewOrders.cshtml",
-              "ToolTip": "D:\\HomeHub\\Homehub\\HomeHub.App\\Views\\Customer\\ViewOrders.cshtml",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Customer\\ViewOrders.cshtml",
               "RelativeToolTip": "HomeHub.App\\Views\\Customer\\ViewOrders.cshtml",
               "ViewState": "AgIAAKEAAAAAAAAAAAAAALcAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-20T23:08:52.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-20T23:08:52.444Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 21,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.App\\Views\\Customer\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Customer\\Index.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Customer\\Index.cshtml",
-              "ToolTip": "D:\\HomeHub\\Homehub\\HomeHub.App\\Views\\Customer\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Customer\\Index.cshtml",
               "RelativeToolTip": "HomeHub.App\\Views\\Customer\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -180,11 +394,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 19,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.App\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\HomeHub\\Homehub\\HomeHub.App\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "HomeHub.App\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAAAAAC4AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -192,23 +406,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProviderOrderVM.cs",
-              "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.App\\Models\\ProviderOrderVM.cs",
-              "RelativeDocumentMoniker": "HomeHub.App\\Models\\ProviderOrderVM.cs",
-              "ToolTip": "D:\\HomeHub\\Homehub\\HomeHub.App\\Models\\ProviderOrderVM.cs",
-              "RelativeToolTip": "HomeHub.App\\Models\\ProviderOrderVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T08:20:14.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 22,
               "Title": "UserProfile.cshtml",
-              "DocumentMoniker": "D:\\HomeHub\\Homehub\\HomeHub.App\\Views\\Customer\\UserProfile.cshtml",
+              "DocumentMoniker": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Customer\\UserProfile.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Customer\\UserProfile.cshtml",
-              "ToolTip": "D:\\HomeHub\\Homehub\\HomeHub.App\\Views\\Customer\\UserProfile.cshtml",
+              "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Customer\\UserProfile.cshtml",
               "RelativeToolTip": "HomeHub.App\\Views\\Customer\\UserProfile.cshtml",
               "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",

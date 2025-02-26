@@ -1,0 +1,91 @@
+﻿@model IEnumerable<HomeHub.App.Models.ProviderOrderVM>
+
+<h2>Product Orders</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (TempData["WarningMessage"] != null)
+{
+    <div class="alert alert-warning">
+        @TempData["WarningMessage"]
+    </div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Client ID</th>
+            <th>Schedule</th>
+            <th>Order Date</th>
+            <th>Ordered Items</th>
+            <th>Quantity</th>
+            <th>Fee</th>
+            <th>Total Discount</th>
+            <th>Discount</th>
+            <th>Promo Code</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.ClientId</td>
+                <td>@order.OrderDate.ToShortDateString()</td>
+                <td>@order.Schedule.ToShortDateString()</td>
+                <td>@order.OrderedPs</td>
+                <td>@order.Quantity</td>
+                <td>₱@order.Fee.ToString("N2")</td>
+                <td>
+                    @if (order.DiscountAmount > 0)
+                    {
+                        <span style="color: red;">- ₱@order.DiscountAmount.ToString("N2")</span>
+                    }
+                    else
+                    {
+                        <span style="color: black;">₱@order.DiscountAmount.ToString("N2")</span>
+                    }
+                </td>
+                <td>
+                    @if (order.DiscountPercentage > 0)
+                    {
+                        <span style="color: red;">-@((int)order.DiscountPercentage)%</span>
+                    }
+                    else
+                    {
+                        <span>0%</span>
+                    }
+                </td>
+
+                <td>
+                        @order.PromoCode
+                </td>
+                <td> 
+                    @if (order.Status == "Processing")
+                    {
+                        <span class="text-success">Processing</span>
+                    }
+                    else
+                    {
+                        <span class="text-warning">Pending</span>
+                    }
+                </td>
+                <td>
+                    @if (order.Status == "Pending")  
+                    {
+                        <form asp-action="ProcessOrder" asp-route-clientId="@order.ClientId" method="post">
+                            <button type="submit" class="btn btn-sm btn-primary">Process Order</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

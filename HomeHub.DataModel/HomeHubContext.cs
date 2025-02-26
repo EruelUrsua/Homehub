@@ -43,16 +43,16 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        //optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
+        optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
 
 
       //  optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
       //"Database=HomeHub; Integrated Security=SSPI;" +
       //"TrustServerCertificate=true");
 
-        optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
-              "Database=HomeHub; Integrated Security=SSPI;" +
-              "TrustServerCertificate=true");
+        //optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
+        //      "Database=HomeHub; Integrated Security=SSPI;" +
+        //      "TrustServerCertificate=true");
 
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -111,7 +111,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.ClientId)
                 .HasColumnName("ClientID");
             entity.Property(e => e.BusinessId)
-                .HasMaxLength(50)
+                .HasColumnType("int")
                 .HasColumnName("BusinessID");
             entity.Property(e => e.Fee).HasColumnType("money");
             entity.Property(e => e.OrderDate)
@@ -171,7 +171,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.UserId)
                 .IsRequired();
             entity.Property(e => e.BusinessId)
-                .HasMaxLength(50)
+                .HasColumnType("int")
                 .HasColumnName("BusinessID");
             entity.Property(e => e.Date).HasColumnType("datetime");
             entity.Property(e => e.FirstName).HasMaxLength(50);
@@ -267,7 +267,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
             entity.Property(e => e.BusinessId)
                 .IsRequired()
-                .HasMaxLength(50)
+                .HasColumnType("int")
                 .HasColumnName("BusinessID");
 
             entity.Property(e => e.Item)
@@ -311,7 +311,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
         {
             entity.HasKey(n => n.NotificationId);
             entity.Property(n => n.BusinessId)
-                .HasMaxLength(50);
+                .HasColumnType("int");
             entity.Property(n => n.Message)
                 .IsRequired()
                 .HasMaxLength(255);  

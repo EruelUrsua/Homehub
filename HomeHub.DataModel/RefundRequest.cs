@@ -26,7 +26,7 @@ namespace HomeHub.DataModel
 
         [Required]
         [Column("BusinessID")]
-        public string BusinessId { get; set; }
+        public int BusinessId { get; set; }
 
         [Required]
         [MaxLength(255)]

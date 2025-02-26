@@ -23,6 +23,7 @@ wwwroot\images\c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.jpg
 wwwroot\images\c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.jpg
 wwwroot\images\c8ac0cd5-057e-468c-995c-2742d41206af_samplestock.jpg
 wwwroot\images\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg
+wwwroot\images\e0188f78-6475-461f-a987-ec370078a467_cleaning kit.jpg
 wwwroot\images\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

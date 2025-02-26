@@ -8,7 +8,7 @@
         public DateTime OrderDate { get; set; }
         public string FirstName { get; set; } 
         public string LastName { get; set; } 
-        public string BusinessId { get; set; } 
+        public int BusinessId { get; set; } 
         public string Item { get; set; } 
         public int Qty { get; set; }
         public DateTime Date { get; set; }
