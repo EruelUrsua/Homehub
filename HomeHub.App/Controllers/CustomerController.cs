@@ -186,7 +186,7 @@ namespace HomeHub.App.Controllers
             }
 
             ClientOrder entity = new ClientOrder();
-            entity.BusinessId = businessId.ToString();
+            entity.BusinessId = businessId;
             entity.OrderDate = DateTime.Parse(model.ddeliv);
             entity.Schedule = DateTime.Parse(model.tdeliv);
             entity.OrderedPs = model.chosen;
@@ -211,7 +211,7 @@ namespace HomeHub.App.Controllers
             // **Create a notification for the provider**
             var notification = new Notification
             {
-                BusinessId = businessId.ToString(),
+                BusinessId = businessId,
                 Message = $"A new order has been placed by {user.Firstname} {user.Lastname}.",
                 IsRead = false,
             };
@@ -338,11 +338,7 @@ namespace HomeHub.App.Controllers
 
             foreach (var orderLog in deliveredOrders)
             {
-                int businessId;
-                if (!int.TryParse(orderLog.BusinessId, out businessId))
-                {
-                    continue;
-                }
+                int businessId = orderLog.BusinessId; 
 
                 // Skip if the order is not from a business with BusinessType = 0
                 if (!eligibleUserIds.Contains(businessId)) continue;
@@ -516,7 +512,7 @@ namespace HomeHub.App.Controllers
                     return RedirectToAction("ViewOrders");
                 }
 
-                var business = context.Businesses.FirstOrDefault(b => b.UserID == int.Parse(clientOrder.BusinessId));
+                var business = context.Businesses.FirstOrDefault(b => b.UserID == clientOrder.BusinessId);
                 if (business != null)
                 {
                     ViewBag.BusinessName = business.BusinessName;
@@ -589,7 +585,7 @@ namespace HomeHub.App.Controllers
                     return RedirectToAction("ViewOrders");
                 }
 
-                var business = context.Businesses.FirstOrDefault(b => b.UserID == int.Parse(clientOrder.BusinessId));
+                var business = context.Businesses.FirstOrDefault(b => b.UserID == clientOrder.BusinessId);
                 if (business != null)
                 {
                     ViewBag.BusinessName = business.BusinessName;

@@ -20,6 +20,6 @@ public class Business
     public string OfferList { get; set; } = null!;
     public char Businesstype { get; set; } 
     public string CompanyAddress { get; set; } = null!;
-    public string BusinessPermitNo { get; set; }= null;
+    public string BusinessPermitNo { get; set; } = null!;   
 
 }

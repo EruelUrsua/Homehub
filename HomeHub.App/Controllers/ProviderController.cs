@@ -344,27 +344,31 @@ namespace HomeHub.App.Controllers
             return (discountedFee, 0);
         }
 
-        public async Task<IActionResult> Orders()
+        public async Task<IActionResult> ProductOrders()
         {
-            var orders = await _context.ClientOrders
-                .Select(o => new ProviderOrderVM
-                {
-                    ClientId = o.ClientId,
-                    BusinessId = o.BusinessId,
-                    OrderDate = o.OrderDate,
-                    Schedule = o.Schedule,
-                    OrderedPs = o.OrderedPs,
-                    Fee = o.Fee,
-                    Status = o.Status,
-                    PromoCode = o.PromoCode ?? string.Empty,
-                    UserId = o.UserId,
-                    RatingId = o.RatingId,
-                    ReportId = o.ReportId,
-                    Quantity = o.Quantity,
-                    ModeOfPayment = o.ModeOfPayment,
-                }).ToListAsync();
+            var productOrders = await (from order in _context.ClientOrders
+                                       join business in _context.Businesses
+                                       on order.BusinessId equals business.UserID // Manual join
+                                       where business.Businesstype == '0'
+                                       select new ProviderOrderVM
+                                       {
+                                           ClientId = order.ClientId,
+                                           BusinessId = order.BusinessId,
+                                           OrderDate = order.OrderDate,
+                                           Schedule = order.Schedule,
+                                           OrderedPs = order.OrderedPs,
+                                           Fee = order.Fee,
+                                           Status = order.Status,
+                                           PromoCode = order.PromoCode ?? string.Empty,
+                                           UserId = order.UserId,
+                                           RatingId = order.RatingId,
+                                           ReportId = order.ReportId,
+                                           Quantity = order.Quantity,
+                                           ModeOfPayment = order.ModeOfPayment,
+                                       }).ToListAsync();
 
-            foreach (var order in orders)
+
+            foreach (var order in productOrders)
             {
                 if (!string.IsNullOrEmpty(order.PromoCode))
                 {
@@ -379,7 +383,6 @@ namespace HomeHub.App.Controllers
                     var promo = _context.Promos.FirstOrDefault(p => p.PromoCode == order.PromoCode);
                     order.DiscountPercentage = promo != null ? promo.Discount * 100 : 0; // Assign discount percentage if promo exists
                 }
-
                 else
                 {
                     // If no promo, the discounted fee is the original fee
@@ -388,10 +391,61 @@ namespace HomeHub.App.Controllers
                     order.DiscountPercentage = 0;
                     order.DiscountAmount = 0;
                 }
-
             }
 
-            return View(orders);
+            return View(productOrders);
+        }
+
+        public async Task<IActionResult> ServiceRequests()
+        {
+            var serviceRequests = await (from order in _context.ClientOrders
+                                       join business in _context.Businesses
+                                       on order.BusinessId equals business.UserID // Manual join
+                                       where business.Businesstype == '1'
+                                       select new ProviderOrderVM
+                                       {
+                                           ClientId = order.ClientId,
+                                           BusinessId = order.BusinessId,
+                                           OrderDate = order.OrderDate,
+                                           Schedule = order.Schedule,
+                                           OrderedPs = order.OrderedPs,
+                                           Fee = order.Fee,
+                                           Status = order.Status,
+                                           PromoCode = order.PromoCode ?? string.Empty,
+                                           UserId = order.UserId,
+                                           RatingId = order.RatingId,
+                                           ReportId = order.ReportId,
+                                           Quantity = order.Quantity,
+                                           ModeOfPayment = order.ModeOfPayment,
+                                       }).ToListAsync();
+
+
+            foreach (var order in serviceRequests)
+            {
+                if (!string.IsNullOrEmpty(order.PromoCode))
+                {
+                    // Calculate the original fee and discount amount
+                    var (originalFee, discountAmount) = CalculateDiscount(order.PromoCode, order.Fee);
+
+                    // Assign the calculated values
+                    order.OriginalFee = originalFee;
+                    order.DiscountAmount = discountAmount;
+                    order.DiscountedFee = order.Fee; // This is already the discounted fee from the database
+
+                    var promo = _context.Promos.FirstOrDefault(p => p.PromoCode == order.PromoCode);
+                    order.DiscountPercentage = promo != null ? promo.Discount * 100 : 0; // Assign discount percentage if promo exists
+                }
+                else
+                {
+                    // If no promo, the discounted fee is the original fee
+                    order.OriginalFee = order.Fee;
+                    order.DiscountedFee = order.Fee;
+                    order.DiscountPercentage = 0;
+                    order.DiscountAmount = 0;
+                }
+            }
+
+            return View(serviceRequests);
         }
 
         private Promo GetPromo(string code)
@@ -401,7 +455,7 @@ namespace HomeHub.App.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AcceptOrder(int clientId)
+        public async Task<IActionResult> ProcessOrder(int clientId)
         {
             var order = await _context.ClientOrders
                 .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == "Pending");
@@ -411,7 +465,6 @@ namespace HomeHub.App.Controllers
                 return NotFound();
             }
 
-            // Fetch the product(s) in the order
             var product = await _context.Products
                 .FirstOrDefaultAsync(p => p.ProductItem == order.OrderedPs); 
 
@@ -420,12 +473,11 @@ namespace HomeHub.App.Controllers
                 return NotFound("Product not found.");
             }
 
-            // Check if there is enough inventory
-            if (product.Qty < order.Quantity)
+            // **Low Inventory Notification**
+            int lowStockThreshold = 10;
+            if (product.Qty > 0 && product.Qty <= lowStockThreshold)
             {
-                // Handle insufficient inventory
-                TempData["ErrorMessage"] = $"Insufficient inventory for product {product.ProductItem}. Available: {product.Qty}, Requested: {order.Quantity}";
-                return RedirectToAction(nameof(Orders));
+                TempData["WarningMessage"] = $"Low inventory alert: {product.ProductItem} is running low. Remaining stock: {product.Qty}.";
             }
 
             // Decrease the inventory
@@ -446,7 +498,7 @@ namespace HomeHub.App.Controllers
             }
 
             // Update the order status and discounted fee
-            order.Status = "Accepted";
+            order.Status = "Processing";
             order.Fee = totalFee;
 
             // Log the accepted order into OrdersLog
@@ -462,7 +514,7 @@ namespace HomeHub.App.Controllers
                 Item = order.OrderedPs,
                 Qty = order.Quantity,
                 Date = DateTime.Now,
-                Status = "Accepted",
+                Status = "Processing",
                 Fee = totalFee,
                 PromoCode = order.PromoCode
             };
@@ -470,8 +522,63 @@ namespace HomeHub.App.Controllers
             _context.OrdersLogs.Add(orderLog);
             await _context.SaveChangesAsync();
 
-            TempData["SuccessMessage"] = "Order accepted and inventory updated successfully.";
-            return RedirectToAction(nameof(Orders));
+            TempData["SuccessMessage"] = "Order is now being processed and inventory has been updated successfully.";
+            return RedirectToAction(nameof(ProductOrders));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ConfirmServiceReq(int clientId)
+        {
+            var order = await _context.ClientOrders
+                .FirstOrDefaultAsync(o => o.ClientId == clientId && o.Status == "Pending");
+
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            // Default values
+            decimal discount = 0;
+            decimal totalFee = order.Fee;
+
+            // Apply promo if available
+            if (!string.IsNullOrWhiteSpace(order.PromoCode))
+            {
+                var promo = GetPromo(order.PromoCode);
+                if (promo != null)
+                {
+                    discount = promo.Discount; // Get the discount percentage
+                }
+            }
+
+            // Update the order status and discounted fee
+            order.Status = "Scheduled";
+            order.Fee = totalFee;
+
+            // Log the accepted order into OrdersLog
+            var orderLog = new OrdersLog
+            {
+                LogId = Guid.NewGuid().ToString(),
+                OrderId = order.ClientId.ToString(),
+                UserId = order.UserId,
+                OrderDate = order.OrderDate,
+                FirstName = order.FirstName,
+                LastName = order.LastName,
+                BusinessId = order.BusinessId,
+                Item = order.OrderedPs,
+                Qty = order.Quantity,
+                Date = DateTime.Now,
+                Status = "Scheduled",
+                Fee = totalFee,
+                PromoCode = order.PromoCode
+            };
+
+            _context.OrdersLogs.Add(orderLog);
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Service has been scheduled. Please prepare for the appointment date.";
+            return RedirectToAction(nameof(ServiceRequests));
         }
 
         public async Task<IActionResult> OrdersLog()
@@ -495,9 +602,9 @@ namespace HomeHub.App.Controllers
             return View(logs);
         }
 
-        public async Task<IActionResult> ShowNotifications(string businessId)
+        public async Task<IActionResult> ShowNotifications(int businessId)
         {
-            businessId = "1";
+            businessId = 3;
 
             var notifications = await _context.Notifications
                 .Where(n => n.BusinessId == businessId)
@@ -523,7 +630,7 @@ namespace HomeHub.App.Controllers
 
         public async Task<IActionResult> ShowRefundRequests()
         {
-            string businessId = "2";
+            int businessId = 1;
 
             // Get refund requests for this provider's BusinessId
             var refundList = await _context.RefundRequests

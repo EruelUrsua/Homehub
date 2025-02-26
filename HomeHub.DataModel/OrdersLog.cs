@@ -12,21 +12,21 @@ public class OrdersLog
 
     public DateTime OrderDate { get; set; }
     // 🔹 Store ASP.NET Identity UserId 
-    public string UserId { get; set; }
+    public string UserId { get; set; } = null!;
 
-    public string FirstName { get; set; } = null!;
+    public string FirstName { get; set; } = null!; 
 
-    public string LastName { get; set; } = null!;
+    public string LastName { get; set; } = null!; 
 
-    public string BusinessId { get; set; } = null!;
+    public int BusinessId { get; set; } 
 
-    public string Item { get; set; } = null!;
+    public string Item { get; set; } = null!; 
 
     public int Qty { get; set; }
 
     public DateTime Date { get; set; }
 
-    public string Status { get; set; } = null!;
+    public string Status { get; set; } = null!; 
 
     public decimal Fee { get; set; }
 
