@@ -64,23 +64,53 @@
                 </td>
 
                 <td>
-                        @order.PromoCode
+                    @order.PromoCode
                 </td>
-                <td> 
+                <td>
                     @if (order.Status == "Processing")
                     {
-                        <span class="text-success">Processing</span>
+                        <span class="badge bg-info text-white">Processing</span>
+                    }
+                    else if (order.Status == "Shipped")
+                    {
+                        <span class="badge bg-primary text-white">Shipped</span>
+                    }
+                    else if (order.Status == "Out for Delivery")
+                    {
+                        <span class="badge bg-warning text-dark">Out for Delivery</span>
+                    }
+                    else if (order.Status == "Delivered")
+                    {
+                        <span class="badge bg-success text-white">Delivered</span>
                     }
                     else
                     {
-                        <span class="text-warning">Pending</span>
+                        <span class="badge bg-secondary text-white">Pending</span>
                     }
                 </td>
                 <td>
-                    @if (order.Status == "Pending")  
+                    @if (order.Status == "Pending")
                     {
                         <form asp-action="ProcessOrder" asp-route-clientId="@order.ClientId" method="post">
-                            <button type="submit" class="btn btn-sm btn-primary">Process Order</button>
+                            <button type="submit" class="btn btn-sm btn-primary">Process</button>
+                        </form>
+                    }
+                    else if (order.Status == "Processing")
+                    {
+                        <form asp-action="MarkAsShipped" asp-route-clientId="@order.ClientId" method="post">
+                            <button type="submit" class="btn btn-sm btn-info">Mark as Shipped</button>
+                        </form>
+                    }
+                    else if (order.Status == "Shipped")
+                    {
+                        <form asp-action="MarkAsOutForDelivery" asp-route-clientId="@order.ClientId" method="post">
+                            <button type="submit" class="btn btn-sm btn-warning">Out for Delivery</button>
+                        </form>
+                    }
+                    else if (order.Status == "Out for Delivery")
+                    {
+                        <form asp-action="MarkAsDelivered" asp-route-clientId="@order.ClientId" method="post">
+                            <button type="submit" class="btn btn-sm btn-success">Delivered</button>
                         </form>
                     }
                 </td>
@@ -88,4 +118,3 @@
         }
     </tbody>
 </table>
-
