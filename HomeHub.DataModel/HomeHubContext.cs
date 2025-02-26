@@ -41,14 +41,16 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
     public DbSet<Notification> Notifications { get; set; }
 
+    public DbSet<Provider> Providers { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
+        //optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
 
 
-      //  optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
-      //"Database=HomeHub; Integrated Security=SSPI;" +
-      //"TrustServerCertificate=true");
+        optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
+      "Database=HomeHub; Integrated Security=SSPI;" +
+      "TrustServerCertificate=true");
 
         //optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
         //      "Database=HomeHub; Integrated Security=SSPI;" +
@@ -86,6 +88,20 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
                 .HasMaxLength(50)
                 .HasColumnName("UserID");
         });
+
+
+
+        modelBuilder.Entity<Provider>(entity =>
+        {
+            entity.HasKey(e => e.UserID);
+
+            entity.Property(e => e.UserID)
+                .HasColumnName("UserID");
+            entity.Property(e => e.BusinessName).HasMaxLength(50);
+            entity.Property(e => e.Businesstype).HasMaxLength(1);
+            entity.Property(e => e.Category).HasMaxLength(50);
+        });
+
 
         modelBuilder.Entity<Business>(entity =>
         {

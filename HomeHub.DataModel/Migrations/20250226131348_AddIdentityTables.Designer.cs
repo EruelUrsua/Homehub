@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeHub.DataModel.Migrations
 {
     [DbContext(typeof(HomeHubContext))]
-    [Migration("20250226103712_AddIdentityTables")]
+    [Migration("20250226131348_AddIdentityTables")]
     partial class AddIdentityTables
     {
         /// <inheritdoc />
@@ -57,15 +57,6 @@ namespace HomeHub.DataModel.Migrations
 
                     b.Property<string>("Address")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("BusinessName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool?>("BusinessType")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Category")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -519,6 +510,29 @@ namespace HomeHub.DataModel.Migrations
                     b.HasKey("PromoId");
 
                     b.ToTable("Promos");
+                });
+
+            modelBuilder.Entity("HomeHub.DataModel.Provider", b =>
+                {
+                    b.Property<string>("UserID")
+                        .HasColumnType("nvarchar(450)")
+                        .HasColumnName("UserID");
+
+                    b.Property<string>("BusinessName")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<bool>("Businesstype")
+                        .HasMaxLength(1)
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Category")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("UserID");
+
+                    b.ToTable("Providers");
                 });
 
             modelBuilder.Entity("HomeHub.DataModel.Rating", b =>
