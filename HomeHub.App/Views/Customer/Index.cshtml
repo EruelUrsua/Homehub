@@ -149,34 +149,58 @@
             <h3>Recommendations for you</h3>
             <div class="card1">
                 <div class="table-container">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Business Name</th>
-                                <th>Address</th>
-                                <th>Business Type</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @if (ViewBag.Businesses != null && ViewBag.Businesses.Count > 0)
+                    @* <table class="table"> *@
+                    @*     <thead> *@
+                    @*         <tr> *@
+                    @*             <th>Business Name</th> *@
+                    @*             <th>Address</th> *@
+                    @*             <th>Business Type</th> *@
+                    @*         </tr> *@
+                    @*     </thead> *@
+                    @*     <tbody> *@
+                    @*         @if (ViewBag.Businesses != null && ViewBag.Businesses.Count > 0) *@
+                    @*         { *@
+                    @*             foreach (var business in ViewBag.Businesses) *@
+                    @*             { *@
+                    @*                 <tr> *@
+                    @*                     <td>@business.BusinessName</td> *@
+                    @*                     <td>@business.CompanyAddress</td> *@
+                    @*                     <td>@business.OfferList</td> *@
+                    @*                 </tr> *@
+                    @*             } *@
+                    @*         } *@
+                    @*         else *@
+                    @*         { *@
+                    @*             <tr> *@
+                    @*                 <td colspan="3">No recommendations available</td> *@
+                    @*             </tr> *@
+                    @*         } *@
+                    @*     </tbody> *@
+                    @* </table> *@
+
+                    @* This is the Map Script do not touch! *@
+                    <script src="~/lib/leaflet/leaflet.js"></script>
+                    <script src="~ /lib/leaflet/leaflet.min.js"></script>
+                    @* <a href="~/lib/leaflet/leaflet.js.map"></a> *@
+                    <div id="map" style="width:100%;height:400px"></div>
+                    <script>
+                        var map = L.map('map').setView([14.58699, 120.98634], 15);
+                            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            }).addTo(map);
+
+                            var jsModel = @Html.Raw(Json.Serialize(Model));
+                            console.log(jsModel)
+
+                            for (i in jsModel)
                             {
-                                foreach (var business in ViewBag.Businesses)
-                                {
-                                    <tr>
-                                        <td>@business.BusinessName</td>
-                                        <td>@business.CompanyAddress</td>
-                                        <td>@business.OfferList</td>
-                                    </tr>
-                                }
+                             item = jsModel [i]
+                                 L.marker([item.lat, item.long]).addTo(map)
+                              .bindPopup(item.name + '<br>' + item.address);
+                            
                             }
-                            else
-                            {
-                                <tr>
-                                    <td colspan="3">No recommendations available</td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
+
+                    </script>
                 </div>
             </div>
         </div>
@@ -194,7 +218,7 @@
                 }
                 else
                 {
-                    <p>No ongoing promos at the moment.</p>
+                    <p style="color:#F1F1F1">No ongoing promos at the moment.</p>
                 }
                 <div class="promo-navigation-container">
                     <!-- Navigation buttons -->
