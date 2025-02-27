@@ -73,6 +73,7 @@ namespace HomeHub.App.Controllers
 
         public IActionResult OrderProduct()
         {
+            /*old logic
             var categories = context.Providers
                 .Where(b => b.Businesstype == false)
                 .Select(b => b.Category)
@@ -85,11 +86,48 @@ namespace HomeHub.App.Controllers
             List<Provider> list = context.Providers.Where(x => x.Businesstype == false).ToList();
             ViewBag.Businesses = list;
             return View(list);
+            */
+            var categories = context.Providers
+                .Where(b => b.Businesstype == false)
+                .Select(b => b.Category)
+                .Distinct()
+                .ToList();
+
+            ViewBag.Categories = categories;
+
+            // Retrieve Service Providers and include AspNetUsers data
+            var productProviders = (from p in context.Providers
+                                    join u in context.Users on p.UserID equals u.Id
+                                    where p.Businesstype == false
+                                    select new
+                                    {
+                                        p.UserID,
+                                        p.BusinessName,
+                                        p.Category,
+                                        u.PhoneNumber,
+                                        u.Address
+                                    }).ToList();
+
+            ViewBag.Businesses = productProviders;
+            return View(productProviders);
         }
 
         public IActionResult AvailService()
         {
             // Get the unique categories from the OfferList in the Businesses table
+            /*
+            var categories = context.Providers
+                .Where(b => b.Businesstype == false)
+                .Select(b => b.Category)
+                .Distinct()
+                .ToList();
+
+            ViewBag.Categories = categories;
+
+            //To only show Service Providers
+            List<Provider> list = context.Providers.Where(x => x.Businesstype == false).ToList();
+            ViewBag.Businesses = list; // Store businesses in ViewBag
+            return View(list);*/
             var categories = context.Providers
                 .Where(b => b.Businesstype == true)
                 .Select(b => b.Category)
@@ -98,14 +136,25 @@ namespace HomeHub.App.Controllers
 
             ViewBag.Categories = categories;
 
-            //To only show Service Providers
-            List<Provider> list = context.Providers.Where(x => x.Businesstype == true).ToList();
-            ViewBag.Businesses = list; // Store businesses in ViewBag
-            return View(list);
+            // Retrieve Service Providers and include AspNetUsers data
+            var serviceProviders = (from p in context.Providers
+                                    join u in context.Users on p.UserID equals u.Id
+                                    where p.Businesstype == true
+                                    select new
+                                    {
+                                        p.UserID,
+                                        p.BusinessName,
+                                        p.Category,
+                                        u.PhoneNumber,
+                                        u.Address
+                                    }).ToList();
+
+            ViewBag.Businesses = serviceProviders;
+            return View(serviceProviders);
         }
 
 
-        public IActionResult OrderListProduct(string businessId)
+        public IActionResult OrderListProduct(string businessId)  
         {
             var provider = context.Providers.FirstOrDefault(x => x.UserID == businessId);
 
