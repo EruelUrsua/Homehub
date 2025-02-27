@@ -22,6 +22,11 @@ namespace HomeHub.DataModel
 
         public string Category { get; set; }
         public bool Businesstype { get; set; }
+
+        //public double Long {  get; set; }
+
+        //public double Lat {  get; set; }
+
        // public string CompanyAddress { get; set; } = null!;
         //public string BusinessPermitNo { get; set; } = null!;
     }
