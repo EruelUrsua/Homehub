@@ -112,18 +112,20 @@
                     <thead>
                         <tr>
                             <th>Product Providers</th>
+                            <th>Product Category</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody id="businessTableBody">
                         @foreach (var item in ViewBag.Businesses)
                         {
-                            <tr data-category="@item.OfferList">
+                            <tr data-category="@item.Category">
                                 <td>
                                     <strong>@item.BusinessName</strong><br />
-                                    <span class="business-details">@item.CompanyAddress</span><br />
-                                    <span class="business-details">@item.ContactNo</span>
+                                    <span class="business-details">@item.Address</span><br />
+                                    <span class="business-details">@item.PhoneNumber</span>
                                 </td>
+                                <td>@item.Category</td>
                                 <td>
                                     <form asp-controller="Customer" asp-action="OrderListProduct">
                                         <input type="hidden" name="businessId" value="@item.UserID" />
