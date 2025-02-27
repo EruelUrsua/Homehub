@@ -2,26 +2,10 @@
 
 <h1>Services for @ViewBag.BusinessName</h1>
 
-<!-- Dropdown to select service provider -->
-<form method="get" asp-action="ServicesView">
-    <div class="form-group">
-        <label for="businessId">Select Service Provider</label>
-        @Html.DropDownList(
-                 "businessId",
-                 new SelectList(ViewBag.Businesses, "UserID", "BusinessName", ViewBag.ProviderID),
-                 "-- Select a Service Provider --",
-                 new { @class = "form-control", onchange = "this.form.submit()" }
-                 )
-    </div>
-</form><br />
-
-<!-- Button to add a service (visible only when a provider is selected) -->
-@if (ViewBag.ProviderID != null)
-{
-    <div class="mb-3">
-        <a class="btn btn-success" asp-action="AddService" asp-route-businessId="@ViewBag.ProviderID">Add Service</a>
-    </div>
-}
+<!-- Button to add a service (always visible to logged-in providers) -->
+<div class="mb-3">
+    <a class="btn btn-success" asp-action="AddService" asp-route-businessId="@ViewBag.ProviderID">Add Service</a>
+</div>
 
 @if (Model.Any())
 {
@@ -66,5 +50,5 @@
 }
 else
 {
-    <p>No services found for this business.</p>
+    <p>No services found.</p>
 }

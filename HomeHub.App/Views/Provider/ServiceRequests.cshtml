@@ -96,3 +96,10 @@
         }
     </tbody>
 </table>
+
+@if (ViewBag.NoRequestsMessage != null)
+{
+    <div class="alert alert-warning">
+        @ViewBag.NoRequestsMessage
+    </div>
+}

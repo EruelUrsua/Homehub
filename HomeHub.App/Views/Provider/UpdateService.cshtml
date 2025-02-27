@@ -2,7 +2,8 @@
 
 <h1>Update Service</h1>
 
-<form asp-action="UpdateService">
+<form asp-action="UpdateService" method="post">
+    @Html.AntiForgeryToken()
     <input type="hidden" asp-for="ServiceId" />
 
     <div class="form-group">
@@ -10,25 +11,32 @@
         <input asp-for="ServiceItem" class="form-control" />
         <span asp-validation-for="ServiceItem" class="text-danger"></span>
     </div>
+
     <div class="form-group">
         <label asp-for="Details" class="control-label">Details</label>
-        <input asp-for="Details" class="form-control" />
+        <textarea asp-for="Details" class="form-control" rows="3"></textarea>
         <span asp-validation-for="Details" class="text-danger"></span>
     </div>
+
     <div class="form-group">
         <label asp-for="Fee" class="control-label">Fee</label>
-        <input asp-for="Fee" class="form-control" />
+        <input asp-for="Fee" class="form-control" type="number" />
         <span asp-validation-for="Fee" class="text-danger"></span>
     </div>
-    <div class="form-group">
-        <label asp-for="Available" class="control-label">Available</label>
+
+    <div class="form-group form-check">
         <input asp-for="Available" type="checkbox" class="form-check-input" />
+        <label asp-for="Available" class="form-check-label">Available</label>
         <span asp-validation-for="Available" class="text-danger"></span>
-    </div><br />
+    </div>
+
+    <br />
+
     <div class="form-group">
         <input type="submit" value="Update Service" class="btn btn-primary" />
     </div>
 </form>
 
-
-
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

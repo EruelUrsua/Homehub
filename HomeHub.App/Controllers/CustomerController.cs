@@ -42,6 +42,7 @@ namespace HomeHub.App.Controllers
         }
 
         private Task<ApplicationUser> GetCurrentUserAsync() => userManager.GetUserAsync(HttpContext.User);
+
         public IActionResult Index(int promoIndex = 0)
         {
             var ongoingPromos = context.Promos.Where(p => p.PromoEnd > DateTime.Now).
@@ -58,13 +59,13 @@ namespace HomeHub.App.Controllers
             ViewBag.Promos = ongoingPromos;
             ViewBag.CurrentPromoIndex = promoIndex;
 
-            List<Business> businesses = context.Businesses.ToList();
+            List<Provider> businesses = context.Providers.ToList();
             ViewBag.Businesses = businesses;
 
             var model = new CHomeViewModel
             {
-                ProductProviders = context.Businesses.Where(x => x.Businesstype == '0').ToList(),
-                ServiceProviders = context.Businesses.Where(x => x.Businesstype == '1').ToList()
+                ProductProviders = context.Providers.Where(x => x.Businesstype == false).ToList(),
+                ServiceProviders = context.Providers.Where(x => x.Businesstype == true).ToList()
             };
 
             return View(model);
@@ -72,16 +73,16 @@ namespace HomeHub.App.Controllers
 
         public IActionResult OrderProduct()
         {
-            var categories = context.Businesses
-                .Where(b => b.Businesstype == '0')
-                .Select(b => b.OfferList)
+            var categories = context.Providers
+                .Where(b => b.Businesstype == false)
+                .Select(b => b.Category)
                 .Distinct()
                 .ToList();
 
             ViewBag.Categories = categories;
 
             //To only show Product Providers
-            List<Business> list = context.Businesses.Where(x => x.Businesstype == '0').ToList();
+            List<Provider> list = context.Providers.Where(x => x.Businesstype == false).ToList();
             ViewBag.Businesses = list;
             return View(list);
         }
@@ -89,43 +90,43 @@ namespace HomeHub.App.Controllers
         public IActionResult AvailService()
         {
             // Get the unique categories from the OfferList in the Businesses table
-            var categories = context.Businesses
-                .Where(b => b.Businesstype == '1')
-                .Select(b => b.OfferList)
+            var categories = context.Providers
+                .Where(b => b.Businesstype == true)
+                .Select(b => b.Category)
                 .Distinct()
                 .ToList();
 
             ViewBag.Categories = categories;
 
             //To only show Service Providers
-            List<Business> list = context.Businesses.Where(x => x.Businesstype == '1').ToList();
+            List<Provider> list = context.Providers.Where(x => x.Businesstype == true).ToList();
             ViewBag.Businesses = list; // Store businesses in ViewBag
             return View(list);
         }
 
 
-        public IActionResult OrderListProduct(int businessId)
+        public IActionResult OrderListProduct(string businessId)
         {
-            var provider = context.Businesses.FirstOrDefault(x => x.UserID == businessId);
+            var provider = context.Providers.FirstOrDefault(x => x.UserID == businessId);
 
             var products = context.Products.Where(x => x.ProviderID == businessId).ToList();
 
             ViewBag.ProviderID = businessId;
             ViewBag.BusinessName = provider.BusinessName;
-            ViewBag.Address = provider.CompanyAddress;
+            //ViewBag.Address = provider.CompanyAddress;
 
             return View(products);
         }
 
-        public IActionResult AvailListService(int businessId)
+        public IActionResult AvailListService(string businessId)
         {
-            var provider = context.Businesses.FirstOrDefault(x => x.UserID == businessId);
+            var provider = context.Providers.FirstOrDefault(x => x.UserID == businessId);
 
             var services = context.Services.Where(x => x.ProviderID == businessId).ToList();
 
             ViewBag.ProviderID = businessId;
             ViewBag.BusinessName = provider.BusinessName;
-            ViewBag.Address = provider.CompanyAddress;
+            //ViewBag.Address = provider.CompanyAddress;
 
             return View(services);
         }
@@ -138,7 +139,7 @@ namespace HomeHub.App.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ConfirmOrder(OrderAvailViewModel model, int businessId)
+        public async Task<IActionResult> ConfirmOrder(OrderAvailViewModel model, string businessId)
         {
             string getCurrentUserId = await GetCurrentUserId();
 
@@ -329,8 +330,8 @@ namespace HomeHub.App.Controllers
                 .Where(log => log.Status == "Delivered" && log.OrderId != null)
                 .ToListAsync();
 
-            var eligibleUserIds = await context.Businesses
-                .Where(b => b.Businesstype == '0')
+            var eligibleUserIds = await context.Providers
+                .Where(b => b.Businesstype == false)
                 .Select(b => b.UserID) 
                 .ToListAsync();
 
@@ -338,7 +339,7 @@ namespace HomeHub.App.Controllers
 
             foreach (var orderLog in deliveredOrders)
             {
-                int businessId = orderLog.BusinessId; 
+                string businessId = orderLog.BusinessId; 
 
                 // Skip if the order is not from a business with BusinessType = 0
                 if (!eligibleUserIds.Contains(businessId)) continue;
@@ -478,9 +479,9 @@ namespace HomeHub.App.Controllers
             return View(filteredRefunds);
         }
 
-        public async Task<IActionResult> SellerProfile(int businessId)
+        public async Task<IActionResult> SellerProfile(string businessId)
         {
-            var seller = await context.Businesses.FirstOrDefaultAsync(b => b.UserID == businessId);
+            var seller = await context.Providers.FirstOrDefaultAsync(b => b.UserID == businessId);
 
             if (seller == null)
             {
@@ -512,7 +513,7 @@ namespace HomeHub.App.Controllers
                     return RedirectToAction("ViewOrders");
                 }
 
-                var business = context.Businesses.FirstOrDefault(b => b.UserID == clientOrder.BusinessId);
+                var business = context.Providers.FirstOrDefault(b => b.UserID == clientOrder.BusinessId);
                 if (business != null)
                 {
                     ViewBag.BusinessName = business.BusinessName;
@@ -585,7 +586,7 @@ namespace HomeHub.App.Controllers
                     return RedirectToAction("ViewOrders");
                 }
 
-                var business = context.Businesses.FirstOrDefault(b => b.UserID == clientOrder.BusinessId);
+                var business = context.Providers.FirstOrDefault(b => b.UserID == clientOrder.BusinessId);
                 if (business != null)
                 {
                     ViewBag.BusinessName = business.BusinessName;

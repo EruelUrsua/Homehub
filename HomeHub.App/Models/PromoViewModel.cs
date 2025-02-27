@@ -25,5 +25,6 @@ namespace HomeHub.App.Models
 
         [Required(ErrorMessage = "Discount is required.")]
         public decimal Discount { get; set; }
+        public string BusinessId { get; set; }
     }
 }

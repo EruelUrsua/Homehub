@@ -20,5 +20,6 @@ namespace HomeHub.DataModel
 
         public string BusinessName { get; set; } = null!;
         public decimal Discount { get; set; }
+        public string BusinessId { get; set; }
     }
 }

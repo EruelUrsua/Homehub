@@ -27,7 +27,7 @@ namespace HomeHub.App.Models
         [StringLength(50, ErrorMessage = "Container type can't be longer than 50 characters.")]
         public string ContainerType { get; set; }
 
-        public int ProviderID { get; set; }  // Link to business provider
+        public string ProviderID { get; set; }  // Link to business provider
 
         [Required(ErrorMessage = "Please upload a product image.")]
 

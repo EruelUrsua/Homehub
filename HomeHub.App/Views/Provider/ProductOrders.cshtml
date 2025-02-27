@@ -118,3 +118,10 @@
         }
     </tbody>
 </table>
+
+@if (ViewBag.NoOrdersMessage != null)
+{
+    <div class="alert alert-warning">
+        @ViewBag.NoOrdersMessage
+    </div>
+}

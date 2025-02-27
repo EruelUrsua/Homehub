@@ -4,7 +4,7 @@
     {
         public int ClientId { get; set; }
 
-        public int? BusinessId { get; set; } 
+        public string? BusinessId { get; set; } 
 
         public DateTime OrderDate { get; set; }
 
