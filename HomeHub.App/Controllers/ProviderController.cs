@@ -352,10 +352,17 @@ namespace HomeHub.App.Controllers
 
             var service = await _context.Services.FindAsync(model.ServiceId);
 
+            if (service == null)
+            {
+                return NotFound();
+            }
+
             service.ServiceItem = model.ServiceItem;
             service.Details = model.Details;
             service.Fee = model.Fee;
             service.Available = model.Available;
+            service.ProviderID = model.ProviderID; 
+
 
             _context.Services.Update(service);
             await _context.SaveChangesAsync();
