@@ -5,6 +5,7 @@
 <form asp-action="UpdateService" method="post">
     @Html.AntiForgeryToken()
     <input type="hidden" asp-for="ServiceId" />
+    <input type="hidden" asp-for="ProviderID" />
 
     <div class="form-group">
         <label asp-for="ServiceItem" class="control-label">Service Item</label>
