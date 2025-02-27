@@ -16,5 +16,5 @@ public class Service
 
     public bool Available { get; set; }
 
-    public int ProviderID { get; set; }
+    public string ProviderID { get; set; }
 }

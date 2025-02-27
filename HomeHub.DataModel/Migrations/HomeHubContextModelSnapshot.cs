@@ -217,8 +217,9 @@ namespace HomeHub.DataModel.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ClientId"));
 
-                    b.Property<int>("BusinessId")
-                        .HasColumnType("int")
+                    b.Property<string>("BusinessId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(MAX)")
                         .HasColumnName("BusinessID");
 
                     b.Property<decimal>("Fee")
@@ -348,8 +349,9 @@ namespace HomeHub.DataModel.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NotificationId"));
 
-                    b.Property<int>("BusinessId")
-                        .HasColumnType("int");
+                    b.Property<string>("BusinessId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
@@ -378,8 +380,9 @@ namespace HomeHub.DataModel.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("LogID");
 
-                    b.Property<int>("BusinessId")
-                        .HasColumnType("int")
+                    b.Property<string>("BusinessId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(MAX)")
                         .HasColumnName("BusinessID");
 
                     b.Property<DateTime>("Date")
@@ -460,8 +463,9 @@ namespace HomeHub.DataModel.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("ProviderID")
-                        .HasColumnType("int");
+                    b.Property<string>("ProviderID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<int>("Qty")
                         .HasColumnType("int");
@@ -479,6 +483,10 @@ namespace HomeHub.DataModel.Migrations
                         .HasColumnName("PromoID");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PromoId"));
+
+                    b.Property<string>("BusinessId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<string>("BusinessName")
                         .IsRequired()
@@ -516,6 +524,7 @@ namespace HomeHub.DataModel.Migrations
                         .HasColumnName("UserID");
 
                     b.Property<string>("BusinessName")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -524,6 +533,7 @@ namespace HomeHub.DataModel.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Category")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -574,8 +584,9 @@ namespace HomeHub.DataModel.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RefundId"));
 
-                    b.Property<int>("BusinessId")
-                        .HasColumnType("int")
+                    b.Property<string>("BusinessId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(MAX)")
                         .HasColumnName("BusinessID");
 
                     b.Property<decimal>("Fee")
@@ -680,8 +691,9 @@ namespace HomeHub.DataModel.Migrations
                     b.Property<decimal>("Fee")
                         .HasColumnType("money");
 
-                    b.Property<int>("ProviderID")
-                        .HasColumnType("int");
+                    b.Property<string>("ProviderID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<string>("ServiceItem")
                         .IsRequired()

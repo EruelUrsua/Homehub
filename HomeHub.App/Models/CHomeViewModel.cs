@@ -4,7 +4,7 @@ namespace HomeHub.App.Models
 {
     public class CHomeViewModel
     {
-        public List<Business> ProductProviders { get; set; } = new List<Business>();
-        public List<Business> ServiceProviders { get; set; } = new List<Business>();
+        public List<Provider> ProductProviders { get; set; } = new List<Provider>();
+        public List<Provider> ServiceProviders { get; set; } = new List<Provider>();
     }
 }

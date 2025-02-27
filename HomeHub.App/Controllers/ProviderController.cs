@@ -1,5 +1,6 @@
 ﻿using HomeHub.App.Models;
 using HomeHub.DataModel;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,74 +10,98 @@ namespace HomeHub.App.Controllers
     public class ProviderController : Controller
     {
         private readonly HomeHubContext _context;
+        private readonly UserManager<ApplicationUser> userManager;
 
-        public ProviderController(HomeHubContext context)
+        public ProviderController(HomeHubContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            this.userManager = userManager;
         }
+
+        [HttpGet]
+        public async Task<string> GetCurrentUserId()
+        {
+            ApplicationUser usr = await GetCurrentUserAsync();
+            return usr?.Id;
+        }
+
+        private Task<ApplicationUser> GetCurrentUserAsync() => userManager.GetUserAsync(HttpContext.User);
 
         public IActionResult ProviderHome()
         {
             return View();
         }
 
-        public IActionResult ProductsView(int? businessId)
+        public async Task<IActionResult> ProductsView()
         {
-            ViewBag.Businesses = _context.Businesses
-            .Where(b => b.Businesstype == '0') // Filter only product providers
-            .ToList();
+            string userId = await GetCurrentUserId();
 
-            ViewBag.ProviderID = businessId;
-
-            if (businessId.HasValue)
+            if (string.IsNullOrEmpty(userId))
             {
-                var products = _context.Products
-                    .Where(p => p.ProviderID == businessId.Value)
-                    .ToList();
-
-                ViewBag.BusinessName = _context.Businesses
-                    .FirstOrDefault(b => b.UserID == businessId.Value)?.BusinessName;
-
-                return View(products);
+                return Unauthorized(); // Prevent access if not logged in
             }
 
-            return View(new List<Product>()); // Empty list if no business is selected
+            var provider = _context.Providers.FirstOrDefault(p => p.UserID == userId && p.Businesstype == false); // 0 for product providers
+
+            if (provider == null)
+            {
+                return Forbid(); // Prevent non-providers from accessing this
+            }
+
+            ViewBag.BusinessName = provider.BusinessName;
+            ViewBag.ProviderID = provider.UserID;
+
+            var products = _context.Products
+                .Where(p => p.ProviderID == userId)
+                .ToList();
+
+            return View(products);
         }
 
-        // Services View
-        public IActionResult ServicesView(int? businessId)
+        public async Task<IActionResult> ServicesView()
         {
-            ViewBag.Businesses = _context.Businesses
-            .Where(b => b.Businesstype == '1') // Filter only service providers
-            .ToList();
+            string userId = await GetCurrentUserId();
 
-            ViewBag.ProviderID = businessId;
-
-            if (businessId.HasValue)
+            if (string.IsNullOrEmpty(userId))
             {
-                var services = _context.Services
-                    .Where(s => s.ProviderID == businessId.Value)
-                    .ToList();
-
-                ViewBag.BusinessName = _context.Businesses
-                    .FirstOrDefault(b => b.UserID == businessId.Value)?.BusinessName;
-
-                return View(services);
+                return Unauthorized(); // Prevent access if not logged in
             }
 
-            return View(new List<Service>()); // Empty list if no business is selected
+            var provider = _context.Providers.FirstOrDefault(p => p.UserID == userId && p.Businesstype == true); // 1 for service providers
+
+            if (provider == null)
+            {
+                return Forbid(); // Prevent non-providers from accessing this
+            }
+
+            ViewBag.BusinessName = provider.BusinessName;
+            ViewBag.ProviderID = provider.UserID;
+
+            var services = _context.Services
+                .Where(s => s.ProviderID == userId)
+                .ToList();
+
+            return View(services);
         }
 
         [HttpGet]
-        public IActionResult AddProduct(int providerId)
+        public async Task<IActionResult> AddProduct()
         {
-            // Ensure you have a valid provider ID
-            ViewBag.ProviderID = providerId;
+            // Get the logged-in provider's UserID
+            var user = await GetCurrentUserAsync();
 
-            ViewBag.Businesses = _context.Businesses
-               .Where(b => b.Businesstype == '0') // Only Product Providers
-               .ToList();
+            if (user == null)
+            {
+                return Unauthorized(); // Ensure the user is logged in
+            }
 
+            var provider = _context.Providers.FirstOrDefault(p => p.UserID == user.Id);
+            if (provider == null)
+            {
+                return Forbid(); // User is not a provider
+            }
+
+            ViewBag.ProviderID = provider.UserID;
             return View();
         }
 
@@ -84,8 +109,20 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddProduct(ProductVM model)
         {
-            // Ensure the ProviderID is captured from the ViewBag (or use a hidden field)
-            var providerId = model.ProviderID;  // This will come from the form or ViewBag
+            // Get the logged-in provider's UserID
+            var user = await GetCurrentUserAsync();
+
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
+            var provider = _context.Providers.FirstOrDefault(p => p.UserID == user.Id);
+
+            if (provider == null)
+            {
+                return Forbid();
+            }
 
             if (!ModelState.IsValid)
             {
@@ -131,23 +168,35 @@ namespace HomeHub.App.Controllers
                 Qty = model.Qty,
                 Price = model.Price,
                 ContainerType = model.ContainerType,
-                ProviderID = providerId,
+                ProviderID = provider.UserID,
                 ProductImagePath = "/images/" + uniqueFileName // Save file path
             };
 
             await _context.AddAsync(entity);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("ProductsView", new { businessId = model.ProviderID });
+            return RedirectToAction("ProductsView");
         }
 
         [HttpGet]
-        public IActionResult AddService()
+        public async Task<IActionResult> AddService()
         {
-            ViewBag.Businesses = _context.Businesses
-               .Where(b => b.Businesstype == '1') // Only Service Providers
-               .ToList();
+            // Get the logged-in provider's UserID
+            var user = await GetCurrentUserAsync();
 
+            if (user == null)
+            {
+                return Unauthorized(); // Ensure the user is logged in
+            }
+
+            var provider = _context.Providers.FirstOrDefault(p => p.UserID == user.Id && p.Businesstype == true);
+
+            if (provider == null)
+            {
+                return Forbid(); // User is not a service provider
+            }
+
+            ViewBag.ProviderID = provider.UserID;
             return View(new ServiceVM());
         }
 
@@ -155,6 +204,21 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddService(ServiceVM model)
         {
+            // Get the logged-in provider's UserID
+            var user = await GetCurrentUserAsync();
+
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
+            var provider = _context.Providers.FirstOrDefault(p => p.UserID == user.Id && p.Businesstype == true);
+            
+            if (provider == null)
+            {
+                return Forbid();
+            }
+
             if (!ModelState.IsValid)
             {
                 return View(model);  
@@ -167,19 +231,24 @@ namespace HomeHub.App.Controllers
                 Details = model.Details,
                 Fee = model.Fee,
                 Available = model.Available,
-                ProviderID = model.ProviderID
+                ProviderID = provider.UserID
             };
 
             await _context.AddAsync(entity);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("ServicesView", new { businessId = model.ProviderID });
+            return RedirectToAction("ServicesView");
         }
 
         [HttpGet]
         public async Task<IActionResult> UpdateProduct(string? id)
         {
+            if (string.IsNullOrEmpty(id)) return RedirectToAction("ProductsView");
+
             var product = await _context.Products.FindAsync(id);
+
+            if (product == null) return RedirectToAction("ProductsView");
+
             var viewModel = new ProductVM
             {
                 ProductId = product.ProductId,
@@ -191,12 +260,9 @@ namespace HomeHub.App.Controllers
                 ExistingImage = product.ProductImagePath // Store the image file path
             };
 
-            ViewBag.Businesses = _context.Businesses
-                .Where(b => b.Businesstype == '0') // Only Product Providers
+            ViewBag.Providers = _context.Providers
+                .Where(b => b.Businesstype == false) // Only Product Providers
                 .ToList();
-
-
-            if (id == null || product == null) return RedirectToAction("ProductsView");
 
             return View(viewModel);
         }
@@ -211,8 +277,7 @@ namespace HomeHub.App.Controllers
             }
 
             var product = await _context.Products.FindAsync(model.ProductId);
-            if (product == null)
-                return RedirectToAction("ProductsView");
+            if (product == null) return RedirectToAction("ProductsView");
 
             product.ProductItem = model.ProductItem;
             product.Qty = model.Qty;
@@ -236,7 +301,7 @@ namespace HomeHub.App.Controllers
                 }
 
                 // Save the new image
-                string uniqueFileName = Guid.NewGuid().ToString() + "_" + model.ProductImage.FileName;
+                string uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(model.ProductImage.FileName);
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
@@ -253,7 +318,7 @@ namespace HomeHub.App.Controllers
                 product.ProductImagePath = model.ExistingImage;
             }
 
-            _context.Set<Product>().Update(product);
+            _context.Products.Update(product);
             await _context.SaveChangesAsync();
 
             return RedirectToAction("ProductsView", new { businessId = model.ProviderID });
@@ -262,6 +327,7 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> UpdateService(string? id)
         {
             var service = await _context.Services.FindAsync(id);
+
             var viewModel = new ServiceVM
             {
                 ServiceId = service.ServiceId,
@@ -272,12 +338,6 @@ namespace HomeHub.App.Controllers
                 ProviderID = service.ProviderID
             };
 
-            ViewBag.Businesses = _context.Businesses
-                .Where(b => b.Businesstype == '1') // Only Service Providers
-                .ToList();
-
-            if (id == null || service == null) return RedirectToAction("ServicesView");
-
             return View(viewModel);
         }
 
@@ -287,31 +347,30 @@ namespace HomeHub.App.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(model);  
+                return View(model);
             }
 
             var service = await _context.Services.FindAsync(model.ServiceId);
-            if (service == null)
-                return RedirectToAction("ServicesView");
 
             service.ServiceItem = model.ServiceItem;
             service.Details = model.Details;
             service.Fee = model.Fee;
             service.Available = model.Available;
-            service.ProviderID = model.ProviderID;
 
-            _context.Set<Service>().Update(service);
+            _context.Services.Update(service);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("ServicesView", new { businessId = model.ProviderID });
+            return RedirectToAction("ServicesView");
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> RemoveProduct(string id)
         {
             var product = await _context.Products.FindAsync(id);
-            _context.Set<Product>().Remove(product);
+
+            _context.Products.Remove(product);
             await _context.SaveChangesAsync();
             return RedirectToAction("ProductsView");
         }
@@ -321,7 +380,8 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> RemoveService(string id)
         {
             var service = await _context.Services.FindAsync(id);
-            _context.Set<Service>().Remove(service);
+
+            _context.Services.Remove(service);
             await _context.SaveChangesAsync();
             return RedirectToAction("ServicesView");
         }
@@ -346,10 +406,22 @@ namespace HomeHub.App.Controllers
 
         public async Task<IActionResult> ProductOrders()
         {
+            var user = await GetCurrentUserAsync();
+
+            if (user == null) return Unauthorized();
+
+            var prov = await _context.Providers
+                .FirstOrDefaultAsync(p => p.UserID == user.Id && p.Businesstype == false);
+
+            if (prov == null)
+            {
+                return Forbid();
+            }
+
             var productOrders = await (from order in _context.ClientOrders
-                                       join business in _context.Businesses
-                                       on order.BusinessId equals business.UserID // Manual join
-                                       where business.Businesstype == '0'
+                                       join provider in _context.Providers
+                                       on order.BusinessId equals provider.UserID // Manual join
+                                       where provider.Businesstype == false
                                        select new ProviderOrderVM
                                        {
                                            ClientId = order.ClientId,
@@ -367,6 +439,10 @@ namespace HomeHub.App.Controllers
                                            ModeOfPayment = order.ModeOfPayment,
                                        }).ToListAsync();
 
+            if (!productOrders.Any()) // Check if the list is empty
+            {
+                ViewBag.NoOrdersMessage = "No product orders available.";
+            }
 
             foreach (var order in productOrders)
             {
@@ -398,10 +474,22 @@ namespace HomeHub.App.Controllers
 
         public async Task<IActionResult> ServiceRequests()
         {
+            var user = await GetCurrentUserAsync();
+
+            if (user == null) return Unauthorized();
+
+            var prov = await _context.Providers
+                .FirstOrDefaultAsync(p => p.UserID == user.Id && p.Businesstype == true);
+
+            if (prov == null)
+            {
+                return Forbid();
+            }
+
             var serviceRequests = await (from order in _context.ClientOrders
-                                       join business in _context.Businesses
-                                       on order.BusinessId equals business.UserID // Manual join
-                                       where business.Businesstype == '1'
+                                       join provider in _context.Providers
+                                       on order.BusinessId equals provider.UserID // Manual join
+                                       where provider.Businesstype == true
                                        select new ProviderOrderVM
                                        {
                                            ClientId = order.ClientId,
@@ -419,6 +507,10 @@ namespace HomeHub.App.Controllers
                                            ModeOfPayment = order.ModeOfPayment,
                                        }).ToListAsync();
 
+            if (!serviceRequests.Any()) // Check if the list is empty
+            {
+                ViewBag.NoRequestsMessage = "No service requests available.";
+            }
 
             foreach (var order in serviceRequests)
             {
@@ -728,7 +820,17 @@ namespace HomeHub.App.Controllers
 
         public async Task<IActionResult> OrdersLog()
         {
+            var user = await GetCurrentUserAsync();
+
+            if (user == null) return Unauthorized();
+
+            var provider = await _context.Providers
+                .FirstOrDefaultAsync(p => p.UserID == user.Id);
+
+            if (provider == null) return Forbid();
+
             var logs = await _context.OrdersLogs
+                .Where(log => log.BusinessId == provider.UserID) // Filter logs only for the logged-in provider
                 .Select(log => new OrdersLogVM
                 {
                     LogId = log.LogId,
@@ -747,12 +849,19 @@ namespace HomeHub.App.Controllers
             return View(logs);
         }
 
-        public async Task<IActionResult> ShowNotifications(int businessId)
+        public async Task<IActionResult> ShowNotifications()
         {
-            businessId = 3;
+            var user = await GetCurrentUserAsync();
+
+            if (user == null) return Unauthorized();
+
+            var provider = await _context.Providers
+                .FirstOrDefaultAsync(p => p.UserID == user.Id);
+
+            if (provider == null) return Forbid();
 
             var notifications = await _context.Notifications
-                .Where(n => n.BusinessId == businessId)
+                 .Where(n => n.BusinessId == provider.UserID) // Filter notifications for logged-in provider
                 .OrderByDescending(n => n.CreatedAt)
                 .ToListAsync();
 
@@ -775,11 +884,18 @@ namespace HomeHub.App.Controllers
 
         public async Task<IActionResult> ShowRefundRequests()
         {
-            int businessId = 1;
+            var user = await GetCurrentUserAsync();
+
+            if (user == null) return Unauthorized();
+
+            var provider = await _context.Providers
+                .FirstOrDefaultAsync(p => p.UserID == user.Id);
+
+            if (provider == null) return Forbid();
 
             // Get refund requests for this provider's BusinessId
             var refundList = await _context.RefundRequests
-                .Where(r => r.BusinessId == businessId)
+                 .Where(r => r.BusinessId == provider.UserID) 
                 .Select(r => new RefundRequest
                 {
                     RefundId = r.RefundId,
@@ -880,20 +996,35 @@ namespace HomeHub.App.Controllers
             return RedirectToAction("ShowRefundRequests");
         }
 
-        public IActionResult ManagePromo()
+        public async Task<IActionResult> ManagePromo()
         {
-            List<Promo> list = _context.Promos.ToList();
+            var user = await GetCurrentUserAsync();
+
+            if (user == null) return Unauthorized();
+
+            List<Promo> list = await _context.Promos
+                 .Where(p => p.BusinessId == user.Id) // Filter promos for the current user
+                 .ToListAsync();
+
             return View(list);
         }
 
-        public IActionResult CreatePromo()
+        public async Task<IActionResult> CreatePromo()
         {
+            var user = await GetCurrentUserAsync();
+
+            if (user == null) return Unauthorized(); // Ensure user is logged in
+
             return View();
         }
 
         [HttpPost]
-        public IActionResult CreatePromo(PromoViewModel model)
+        public async Task<IActionResult> CreatePromo(PromoViewModel model)
         {
+            var user = await GetCurrentUserAsync();
+
+            if (user == null) return Unauthorized(); // Ensure user is logged in
+
             if (ModelState.IsValid)
             {
                 Promo entity = new Promo();
@@ -903,6 +1034,7 @@ namespace HomeHub.App.Controllers
                 entity.PromoEnd = model.PromoEnd;
                 entity.BusinessName = model.BusinessName;
                 entity.Discount = model.Discount;
+                entity.BusinessId = user.Id; // Assign the promo to the current logged-in user
 
                 _context.Promos.Add(entity);
                 _context.SaveChanges();

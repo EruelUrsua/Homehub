@@ -22,6 +22,6 @@ namespace HomeHub.App.Models
 
         public bool Available { get; set; }
 
-        public int ProviderID { get; set; }  // Link to business provider
+        public string ProviderID { get; set; }  // Link to business provider
     }
 }

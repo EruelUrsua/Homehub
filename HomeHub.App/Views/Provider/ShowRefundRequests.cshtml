@@ -48,7 +48,7 @@
                 </td>
                 <td>@refundRequest.RefundStatus</td>
                 <td>@refundRequest.RefundReason</td>
-                <td>@refundRequest.RefundRequestDate.ToShortDateString()</td>
+                <td>@refundRequest.RefundRequestDate.ToString("yyyy-MM-dd HH:mm:ss")</td>
                 <td>
                     @if (!string.IsNullOrEmpty(refundRequest.RejectionReason))
                     {

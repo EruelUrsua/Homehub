@@ -15,7 +15,7 @@ public class Product
 
     public string ContainerType { get; set; } = null!;
 
-    public int ProviderID { get; set; }
+    public string ProviderID { get; set; }
 
     public string ProductImagePath { get; set; }
 

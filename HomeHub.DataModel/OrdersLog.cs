@@ -18,7 +18,7 @@ public class OrdersLog
 
     public string LastName { get; set; } = null!; 
 
-    public int BusinessId { get; set; } 
+    public string BusinessId { get; set; } 
 
     public string Item { get; set; } = null!; 
 

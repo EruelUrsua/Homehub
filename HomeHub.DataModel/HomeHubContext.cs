@@ -45,12 +45,12 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        //optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
+        optionsBuilder.UseSqlServer("Server=DESKTOP-TRU0264\\SQLEXPRESS;Database=HomeHub;Integrated Security=SSPI;TrustServerCertificate=true;");
 
 
-        optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
-      "Database=HomeHub; Integrated Security=SSPI;" +
-      "TrustServerCertificate=true");
+      //  optionsBuilder.UseSqlServer("Server=DESKTOP-HGGKL34\\SQLEXPRESS;" +
+      //"Database=HomeHub; Integrated Security=SSPI;" +
+      //"TrustServerCertificate=true");
 
         //optionsBuilder.UseSqlServer("Server=DESKTOP-JJNUTRM\\MSSQL2022;" +
         //      "Database=HomeHub; Integrated Security=SSPI;" +
@@ -127,7 +127,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.ClientId)
                 .HasColumnName("ClientID");
             entity.Property(e => e.BusinessId)
-                .HasColumnType("int")
+                .HasColumnType("nvarchar(MAX)")
                 .HasColumnName("BusinessID");
             entity.Property(e => e.Fee).HasColumnType("money");
             entity.Property(e => e.OrderDate)
@@ -187,7 +187,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.UserId)
                 .IsRequired();
             entity.Property(e => e.BusinessId)
-                .HasColumnType("int")
+                .HasColumnType("nvarchar(MAX)")
                 .HasColumnName("BusinessID");
             entity.Property(e => e.Date).HasColumnType("datetime");
             entity.Property(e => e.FirstName).HasMaxLength(50);
@@ -214,6 +214,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.ContainerType).HasMaxLength(50);
             entity.Property(e => e.Price).HasColumnType("money");
             entity.Property(e => e.ProductItem).HasMaxLength(50);
+            entity.Property(e => e.ProviderID).HasColumnType("nvarchar(MAX)");
             entity.Property(e => e.ProductImagePath)
                 .HasColumnType("nvarchar(max)")
                 .HasColumnName("ProductImagePath");
@@ -228,6 +229,8 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.PromoName).HasMaxLength(10);
             entity.Property(e => e.PromoStart).HasColumnType("date");
             entity.Property(e => e.Discount).HasColumnType("decimal(18,4)");
+            entity.Property(n => n.BusinessId)
+                .HasColumnType("nvarchar(MAX)");
         });
 
         modelBuilder.Entity<Rating>(entity =>
@@ -263,6 +266,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.Details).HasMaxLength(100);
             entity.Property(e => e.Fee).HasColumnType("money");
             entity.Property(e => e.ServiceItem).HasMaxLength(50);
+            entity.Property(e => e.ProviderID).HasColumnType("nvarchar(MAX)");
         });
 
         modelBuilder.Entity<RefundRequest>(entity =>
@@ -283,7 +287,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
             entity.Property(e => e.BusinessId)
                 .IsRequired()
-                .HasColumnType("int")
+                .HasColumnType("nvarchar(MAX)")
                 .HasColumnName("BusinessID");
 
             entity.Property(e => e.Item)
@@ -327,7 +331,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
         {
             entity.HasKey(n => n.NotificationId);
             entity.Property(n => n.BusinessId)
-                .HasColumnType("int");
+                .HasColumnType("nvarchar(MAX)");
             entity.Property(n => n.Message)
                 .IsRequired()
                 .HasMaxLength(255);  
