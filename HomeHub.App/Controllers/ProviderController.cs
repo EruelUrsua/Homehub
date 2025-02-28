@@ -859,20 +859,18 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> ShowNotifications()
         {
             var user = await GetCurrentUserAsync();
-
             if (user == null) return Unauthorized();
 
             var provider = await _context.Providers
                 .FirstOrDefaultAsync(p => p.UserID == user.Id);
-
             if (provider == null) return Forbid();
 
             var notifications = await _context.Notifications
-                 .Where(n => n.BusinessId == provider.UserID) // Filter notifications for logged-in provider
+                .Where(n => n.BusinessId == provider.UserID)
                 .OrderByDescending(n => n.CreatedAt)
                 .ToListAsync();
 
-            return View(notifications);
+            return View(notifications); 
         }
 
         [HttpPost]

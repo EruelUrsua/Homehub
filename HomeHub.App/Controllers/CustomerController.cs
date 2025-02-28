@@ -569,7 +569,20 @@ namespace HomeHub.App.Controllers
 
         public async Task<IActionResult> SellerProfile(string businessId)
         {
-            var seller = await context.Providers.FirstOrDefaultAsync(b => b.UserID == businessId);
+            var seller = (from p in context.Providers
+                          join u in context.Users on p.UserID equals u.Id
+                          where p.UserID == businessId
+                          select new SellerProfileVM
+                          {
+                              UserID = p.UserID,
+                              BusinessName = p.BusinessName,
+                              Category = p.Category,
+                              PhoneNumber = u.PhoneNumber,
+                              Address = u.Address,
+                              FirstName = u.Firstname,  
+                              LastName = u.Lastname,    
+                              Email = u.Email           
+                          }).FirstOrDefault();
 
             if (seller == null)
             {
