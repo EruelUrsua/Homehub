@@ -91,30 +91,44 @@
                 <h3 class="mb-3 text-primary">Recommendations for You</h3>
                 <div class="card shadow-sm p-3">
                     <div class="table-responsive">
-                        <table class="table">
-                            <thead>
+                        <table class="table table-hover">
+                            <thead class="table-primary">
                                 <tr>
                                     <th>Business Name</th>
                                     <th>Category</th>
                                     <th>Business Type</th>
+                                    <th>Item</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @if (ViewBag.Providers != null && ViewBag.Providers.Count > 0)
+                                @if (ViewBag.recs != null && ViewBag.recs.Count > 0)
                                 {
-                                    foreach (var providers in ViewBag.Providers)
+                                    foreach (var recs in ViewBag.recs)
                                     {
+                                        var bt = recs.Businesstype;
+                                        if (bt == false) 
+                                        {
+
+                                            bt = "Product";
+
+                                        }
+                                        else
+                                        {
+                                            bt = "Service";
+                                        }
+
                                         <tr>
-                                            <td>@providers.BusinesName</td>
-                                            <td>@providers.Category</td>
-                                            <td>@providers.BusinessType</td>
+                                            <td>@recs.BusinessName</td>
+                                            <td>@recs.Category</td>
+                                            <td>@bt</td>
+                                            <td>@recs.Item</td>
                                         </tr>
                                     }
                                 }
                                 else
                                 {
                                     <tr>
-                                        <td colspan="3">No recommendations available</td>
+                                        <td colspan="3" class="text-center">No recommendations available</td>
                                     </tr>
                                 }
                             </tbody>
