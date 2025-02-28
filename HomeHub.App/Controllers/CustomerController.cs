@@ -44,8 +44,22 @@ namespace HomeHub.App.Controllers
 
         private Task<ApplicationUser> GetCurrentUserAsync() => userManager.GetUserAsync(HttpContext.User);
 
-        public IActionResult Index(int promoIndex = 0, int productPage = 1, int pageSize = 8)
+        public async Task<IActionResult> Index(int promoIndex = 0, int productPage = 1, int pageSize = 8)
         {
+
+            string loggedInUser = await GetCurrentUserId();
+            //Recommendations 
+            var recsList = from o in context.OrdersLogs
+                           join p in context.Providers on o.BusinessId equals p.UserID
+                           where o.UserId == loggedInUser
+                           select new
+                           {
+                               p.BusinessName,
+                               p.Category,
+                               p.Businesstype,
+                               o.Item
+                           };
+            ViewBag.recs = recsList.ToList();
             var productsQuery = (from a in context.Providers
                                  join b in context.Products on a.UserID equals b.ProviderID
                                  where a.Businesstype == false
@@ -908,13 +922,13 @@ namespace HomeHub.App.Controllers
             return View(userReports);
         }
 
-        public IActionResult ReviewReport(string id)
+        public async Task<IActionResult> ReviewReport(string id)
         {
             var report = context.Reports.FirstOrDefault(r => r.ReportId == id);
 
             if (report == null)
             {
-                return Index();
+                return await Index();
             }
 
             return View(report);
