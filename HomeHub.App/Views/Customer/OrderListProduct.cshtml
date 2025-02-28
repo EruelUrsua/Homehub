@@ -123,8 +123,11 @@
 <body>
     <div class="container">
         <!-- Name and address of chosen provider-->
-        <h2>@ViewBag.BusinessName</h2>
-        <p>@ViewBag.Address</p>
+        <!--h2>@ViewBag.BusinessName</!--h2>
+        <!--p>@ViewBag.Address</ -->
+
+        <h2>@(TempData["BusinessName"] ?? "Unknown Business")</h2>
+        <p>@(ViewBag.Address ?? "No Address Available")</p>
 
         <!-- Product List of chosen provider-->
         <div class="card">
@@ -152,7 +155,7 @@
                                 {
                                     <tr>
                                         <td><input type="radio" id="chosen" name="chosen" value="@item.ProductItem" onclick="setPrice('@item.Price')" required>@item.ProductItem</td>
-                                        <td>Php @item.Price</td>
+                                        <td>Php @item.Price.ToString("0.00")</td>
                                     </tr>
                                 }
                                 <input type="hidden" id="price" name="price" value="">

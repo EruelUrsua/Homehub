@@ -107,28 +107,22 @@
         color: white;
     }
 
-        @@media screen and (max-width: 1024px) {
-        .action-buttons
-
-    {
-        flex-wrap: wrap;
+    @@media screen and (max-width: 1024px) {
+        .action-buttons {
+            flex-wrap: wrap;
+        }
     }
 
-    }
+    @@media screen and (max-width: 768px) {
+        .order-list table {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
 
-        @@media screen and (max-width: 768px) {
-        .order-list table
-
-    {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
+        .btn {
+            width: 100%;
+        }
     }
 </style>
 
@@ -156,7 +150,7 @@
                             <td>@item.BusinessId</td>
                             <td>@item.Item</td>
                             <td>@item.Qty</td>
-                            <td>Php @item.Fee</td>
+                            <td>Php @item.Fee.ToString("0.00")</td>
                             <td>@item.Date.ToString("yyyy-MM-dd")</td>
                             <td>@item.Status</td>
                             <td class="action-buttons">

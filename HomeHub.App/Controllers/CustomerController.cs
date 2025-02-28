@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Net;
 using static HomeHub.App.Models.PayMayaVM;
+using System.Threading.Tasks.Dataflow;
 
 namespace HomeHub.App.Controllers
 {
@@ -43,8 +44,28 @@ namespace HomeHub.App.Controllers
 
         private Task<ApplicationUser> GetCurrentUserAsync() => userManager.GetUserAsync(HttpContext.User);
 
-        public IActionResult Index(int promoIndex = 0)
+        public IActionResult Index(int promoIndex = 0, int productPage = 1, int pageSize = 8)
         {
+            var productsQuery = (from a in context.Providers
+                                 join b in context.Products on a.UserID equals b.ProviderID
+                                 where a.Businesstype == false
+                                 select new
+                                 {
+                                     b.ProductItem,
+                                     b.Price,
+                                     b.ProductImagePath,
+                                     a.BusinessName,
+                                     a.UserID
+                                 }).ToList();
+
+            var productList = productsQuery.ToList();
+            var totalProducts = productList.Count();
+            var paginatedProducts = productList.Skip((productPage - 1) * pageSize).Take(pageSize).ToList();
+
+            ViewBag.Products = paginatedProducts;
+            ViewBag.CurrentPage = productPage;
+            ViewBag.TotalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
+
             var ongoingPromos = context.Promos.Where(p => p.PromoEnd > DateTime.Now).
                 OrderBy(p => p.PromoEnd).ToList();
 
@@ -60,7 +81,8 @@ namespace HomeHub.App.Controllers
             ViewBag.CurrentPromoIndex = promoIndex;
 
             List<Provider> businesses = context.Providers.ToList();
-            ViewBag.Businesses = businesses;
+            //ViewBag.Businesses = businesses;
+            ViewBag.Businesses = context.Providers.ToList();
 
             var model = new CHomeViewModel
             {
@@ -95,7 +117,6 @@ namespace HomeHub.App.Controllers
 
             ViewBag.Categories = categories;
 
-            // Retrieve Service Providers and include AspNetUsers data
             var productProviders = (from p in context.Providers
                                     join u in context.Users on p.UserID equals u.Id
                                     where p.Businesstype == false
@@ -136,7 +157,6 @@ namespace HomeHub.App.Controllers
 
             ViewBag.Categories = categories;
 
-            // Retrieve Service Providers and include AspNetUsers data
             var serviceProviders = (from p in context.Providers
                                     join u in context.Users on p.UserID equals u.Id
                                     where p.Businesstype == true
@@ -154,15 +174,34 @@ namespace HomeHub.App.Controllers
         }
 
 
-        public IActionResult OrderListProduct(string businessId)  
+        public IActionResult OrderListProduct(string businessId)
         {
-            var provider = context.Providers.FirstOrDefault(x => x.UserID == businessId);
+            if (string.IsNullOrEmpty(businessId))
+            {
+                return RedirectToAction("Index");
+            }
+
+            //var provider = context.Providers.FirstOrDefault(x => x.UserID == businessId);
+            var provider = (from p in context.Providers
+                            join u in context.Users on p.UserID equals u.Id
+                            where p.UserID == businessId
+                            select new
+                            {
+                                p.BusinessName,
+                                u.Address
+                            }).FirstOrDefault();
+
+            if (provider == null)
+            {
+                return NotFound();
+            }
 
             var products = context.Products.Where(x => x.ProviderID == businessId).ToList();
 
             ViewBag.ProviderID = businessId;
-            ViewBag.BusinessName = provider.BusinessName;
-            //ViewBag.Address = provider.CompanyAddress;
+            //ViewBag.BusinessName = provider.BusinessName;
+            TempData["BusinessName"] = provider.BusinessName;
+            ViewBag.Address = provider.Address;
 
             return View(products);
         }
@@ -220,12 +259,12 @@ namespace HomeHub.App.Controllers
                     Discount = promo.Discount;
                 }
             }
-            
+
             else if (string.IsNullOrWhiteSpace(model.promo))
             {
                 model.promo = "No Promo Used";
             }
-                    
+
             var userId = getCurrentUserId; //"47ae60c1-5de0-4f86-9a6a-5ce24df3b2c0"; //Will replace with logged-in user id retrieval logic || input simular userID to a customer userID
             var user = await context.ApplicationUsers.FindAsync(userId);
 
@@ -371,7 +410,7 @@ namespace HomeHub.App.Controllers
             if (string.IsNullOrEmpty(userId))
             {
                 ViewBag.ErrorMessage = "You need to be logged in to view eligible orders for a refund.";
-                return View(new List<RefundRequest>()); 
+                return View(new List<RefundRequest>());
             }
 
             // Fetch delivered orders from the OrdersLog (assuming "Delivered" status)
@@ -381,14 +420,14 @@ namespace HomeHub.App.Controllers
 
             var eligibleUserIds = await context.Providers
                 .Where(b => b.Businesstype == false)
-                .Select(b => b.UserID) 
+                .Select(b => b.UserID)
                 .ToListAsync();
 
             var refundList = new List<RefundRequest>();
 
             foreach (var orderLog in deliveredOrders)
             {
-                string businessId = orderLog.BusinessId; 
+                string businessId = orderLog.BusinessId;
 
                 // Skip if the order is not from a business with BusinessType = 0
                 if (!eligibleUserIds.Contains(businessId)) continue;
@@ -417,7 +456,7 @@ namespace HomeHub.App.Controllers
                     Fee = orderLog.Fee,
                     PromoCode = orderLog.PromoCode,
                     RefundReason = refundReason,
-                    RefundAmount = 0 
+                    RefundAmount = 0
                 };
 
                 refundList.Add(refundRequest);
@@ -465,15 +504,15 @@ namespace HomeHub.App.Controllers
             {
                 OrderId = orderId,
                 UserId = userId,
-                BusinessId = orderLog.BusinessId, 
+                BusinessId = orderLog.BusinessId,
                 Item = orderLog.Item,
                 RefundQuantity = orderLog.Qty,
                 Fee = orderLog.Fee,
                 RefundReason = refundReason,
-                RefundStatus = "Pending", 
-                PromoCode= orderLog.PromoCode,  
+                RefundStatus = "Pending",
+                PromoCode = orderLog.PromoCode,
                 RefundRequestDate = DateTime.Now,
-                RefundAmount = 0 
+                RefundAmount = 0
             };
 
             context.RefundRequests.Add(refundRequest);
@@ -767,9 +806,9 @@ namespace HomeHub.App.Controllers
 
                 return Content(response, "application/json");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                return Content ("Error" + ex.Message);
+                return Content("Error" + ex.Message);
             }
         }
 
