@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
       "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -23,6 +27,10 @@
     {
       "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg"
+    },
+    {
+      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\13523080-28f1-4c27-ba48-9dbd2c1d19f0_samplestock.jpg",
+      "PackagePath": "staticwebassets\\images\\13523080-28f1-4c27-ba48-9dbd2c1d19f0_samplestock.jpg"
     },
     {
       "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\1ae7e95d-6c20-43e5-9a52-9cd7444e55d3_cleaning kit.jpg",
@@ -53,8 +61,16 @@
       "PackagePath": "staticwebassets\\images\\37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.jpg"
     },
     {
+      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\4561f575-7d1e-41f5-812c-735b4a444291_samplestock.jpg",
+      "PackagePath": "staticwebassets\\images\\4561f575-7d1e-41f5-812c-735b4a444291_samplestock.jpg"
+    },
+    {
       "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\4870b1e3-93de-4422-b4cf-a0f6e4463bf9_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\4870b1e3-93de-4422-b4cf-a0f6e4463bf9_cleaning kit.jpg"
+    },
+    {
+      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\4ee234a5-2081-4f90-9413-584be3e8ec7d_samplestock.jpg",
+      "PackagePath": "staticwebassets\\images\\4ee234a5-2081-4f90-9413-584be3e8ec7d_samplestock.jpg"
     },
     {
       "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg",
@@ -71,6 +87,10 @@
     {
       "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\64881bdf-7713-4f10-bbed-dcabafde54b0_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\64881bdf-7713-4f10-bbed-dcabafde54b0_cleaning kit.jpg"
+    },
+    {
+      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\687cbf2c-f95b-4caf-aa37-2a3b5fdda779_samplestock.jpg",
+      "PackagePath": "staticwebassets\\images\\687cbf2c-f95b-4caf-aa37-2a3b5fdda779_samplestock.jpg"
     },
     {
       "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\73938a12-d477-4825-88c7-060fe9b97ff2_cleaning kit.jpg",
@@ -109,6 +129,10 @@
       "PackagePath": "staticwebassets\\images\\a567fa3b-2202-4da2-a551-80e3f89a28e4_samplestock.jpg"
     },
     {
+      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\a613de58-e29d-466b-8847-515dc643ed41_aev-gt-image 1.jpg",
+      "PackagePath": "staticwebassets\\images\\a613de58-e29d-466b-8847-515dc643ed41_aev-gt-image 1.jpg"
+    },
+    {
       "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg"
     },
@@ -141,12 +165,24 @@
       "PackagePath": "staticwebassets\\images\\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg"
     },
     {
+      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\dcd2f485-3d0d-47e4-971b-ddff0930a278_samplestock.jpg",
+      "PackagePath": "staticwebassets\\images\\dcd2f485-3d0d-47e4-971b-ddff0930a278_samplestock.jpg"
+    },
+    {
       "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\e0188f78-6475-461f-a987-ec370078a467_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\e0188f78-6475-461f-a987-ec370078a467_cleaning kit.jpg"
     },
     {
+      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\f275e97c-5540-477e-93ac-feb55760cc32_samplestock.jpg",
+      "PackagePath": "staticwebassets\\images\\f275e97c-5540-477e-93ac-feb55760cc32_samplestock.jpg"
+    },
+    {
       "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg"
+    },
+    {
+      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\js\\scripts.js"
     },
     {
       "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\js\\site.js",

@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Net;
 using static HomeHub.App.Models.PayMayaVM;
+using System.Threading.Tasks.Dataflow;
 
 namespace HomeHub.App.Controllers
 {
@@ -43,8 +44,28 @@ namespace HomeHub.App.Controllers
 
         private Task<ApplicationUser> GetCurrentUserAsync() => userManager.GetUserAsync(HttpContext.User);
 
-        public IActionResult Index(int promoIndex = 0)
+        public IActionResult Index(int promoIndex = 0, int productPage = 1, int pageSize = 8)
         {
+            var productsQuery = (from a in context.Providers
+                                join b in context.Products on a.UserID equals b.ProviderID
+                                where a.Businesstype == false
+                                select new
+                                {
+                                    b.ProductItem,
+                                    b.Price,
+                                    b.ProductImagePath,
+                                    a.BusinessName,
+                                    a.UserID
+                                }).ToList();
+
+            var productList = productsQuery.ToList();
+            var totalProducts = productList.Count();
+            var paginatedProducts = productList.Skip((productPage - 1) * pageSize).Take(pageSize).ToList();
+
+            ViewBag.Products = paginatedProducts;
+            ViewBag.CurrentPage = productPage;
+            ViewBag.TotalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
+
             var ongoingPromos = context.Promos.Where(p => p.PromoEnd > DateTime.Now).
                 OrderBy(p => p.PromoEnd).ToList();
 
@@ -60,7 +81,8 @@ namespace HomeHub.App.Controllers
             ViewBag.CurrentPromoIndex = promoIndex;
 
             List<Provider> businesses = context.Providers.ToList();
-            ViewBag.Businesses = businesses;
+            //ViewBag.Businesses = businesses;
+            ViewBag.Businesses = context.Providers.ToList();
 
             var model = new CHomeViewModel
             {
@@ -95,7 +117,6 @@ namespace HomeHub.App.Controllers
 
             ViewBag.Categories = categories;
 
-            // Retrieve Service Providers and include AspNetUsers data
             var productProviders = (from p in context.Providers
                                     join u in context.Users on p.UserID equals u.Id
                                     where p.Businesstype == false
@@ -136,7 +157,6 @@ namespace HomeHub.App.Controllers
 
             ViewBag.Categories = categories;
 
-            // Retrieve Service Providers and include AspNetUsers data
             var serviceProviders = (from p in context.Providers
                                     join u in context.Users on p.UserID equals u.Id
                                     where p.Businesstype == true
@@ -156,13 +176,32 @@ namespace HomeHub.App.Controllers
 
         public IActionResult OrderListProduct(string businessId)  
         {
-            var provider = context.Providers.FirstOrDefault(x => x.UserID == businessId);
+            if (string.IsNullOrEmpty(businessId))
+            {
+                return RedirectToAction("Index");
+            }
+
+            //var provider = context.Providers.FirstOrDefault(x => x.UserID == businessId);
+            var provider = (from p in context.Providers
+                            join u in context.Users on p.UserID equals u.Id
+                            where p.UserID == businessId
+                            select new
+                            {
+                                p.BusinessName,
+                                u.Address
+                            }).FirstOrDefault();
+
+            if (provider == null)
+            {
+                return NotFound();
+            }
 
             var products = context.Products.Where(x => x.ProviderID == businessId).ToList();
 
             ViewBag.ProviderID = businessId;
-            ViewBag.BusinessName = provider.BusinessName;
-            //ViewBag.Address = provider.CompanyAddress;
+            //ViewBag.BusinessName = provider.BusinessName;
+            TempData["BusinessName"] = provider.BusinessName;
+            ViewBag.Address = provider.Address;
 
             return View(products);
         }

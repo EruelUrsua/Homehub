@@ -2,214 +2,158 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<style>
-    .html {
-    font-family: Arial
-    }
+<body style="background-color:#F1F1F1; margin: 0; padding: 0; width: 100vw; overflow-x: hidden;">
 
-    .row {
-    padding-top: 30px;
-    padding-bottom: 20px;
-    }
-
-    .card {
-    background-color: #203B81;
-    border-radius: 30px;
-    height: 270px;
-    padding-top: 42px;
-    padding-left: 55px;
-    margin-top: 20px;
-    }
-
-    .card1 {
-    background-color: #203B81;
-    border-radius: 30px;
-    height: 300px;
-    padding: 20px;
-    overflow: hidden;
-    }
-
-    .button {
-    width: 30px;
-    height: 20px;
-    background-color: #F1F1F1;
-    color: #203B81;
-    font-family: Arial;
-    border-color: #F1F1F1;
-    }
-
-    button {
-    background-color: #F1F1F1;
-    color: #203B81;
-    font-family: Arial;
-    font-size: 20px;
-    border-color: #F1F1F1;
-    border-radius: 30px;
-    height: 80px;
-    width: 300px;
-    }
-
-    .promo-carousel {
-    text-align: center;
-    position: relative;
-    }
-
-    .promo-navigation-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    }
-
-    .promo-navigation button {
-    background-color: #F1F1F1;
-    color: #203B81;
-    border: none;
-    font-size: 14x;
-    padding: 5px 15px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 30px;
-    }
-
-    .promo-item {
-    margin: 10px 0;
-    padding: 20px;
-    background-color: #203B81;
-    color: #fff;
-    border-radius: 10px;
-    }
-
-    button2 {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 30px;
-    cursor: pointer;
-    }
-
-    button2:hover {
-    background-color: #F1F1F1;
-    color: #203B81;
-    }
-
-    .table-container {
-    overflow-y: auto;
-    max-height: 260px;
-    border-radius: 10px;
-    }
-
-    .table {
-    width: 100%;
-    border-collapse: collapse;
-    }
-
-    .table th, .table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    }
-
-    .table th {
-    background-color: #203B81;
-    color: #FFFFFF;
-    }
-
-    .table tr:nth-child(even) {
-    background-color: #F2F2F2;
-    ;
-    }
-
-    .table tr:nth-child(odd) {
-    background-color: #203B81;
-    color: #FFFFFF;
-    }
-</style>
-
-<body style="background-color:#F1F1F1">
-
-    <div>
-        <h2>Welcome back</h2>
+    <div class="container-fluid bg-dark text-white text-center py-5">
+        <h1>Welcome to HomeHub</h1>
+        <p class="lead">Find the best products and services for your needs.</p>
     </div>
 
-
-    <div class="card">
-        <div class="container">
-            <h4 style="color:#F1F1F1">What do you want to do?</h4>
-            <div class="row" style="color:#203B81; border-color:#F1F1F1">
-                <div class="col-sm-4"><a class="nav-link" asp-action="OrderProduct"><button>Order Products</button></a></div>
-                <div class="col-sm-4"><a class="nav-link" asp-action="AvailService"><button>Avail Services</button></a></div>
-                <div class="col-sm-4"><a class="nav-link" asp-action="ViewOrders"><button>View Orders</button></a></div>
+    <div class="container-fluid my-4">
+        <div class="row w-100 text-center d-flex justify-content-center">
+            <div class="col-md-3 px-2">
+                <a asp-action="OrderProduct">
+                    <button class="btn btn-primary btn-lg w-100">Order Products</button>
+                </a>
+            </div>
+            <div class="col-md-3 px-2">
+                <a asp-action="AvailService">
+                    <button class="btn btn-success btn-lg w-100">Avail Services</button>
+                </a>
+            </div>
+            <div class="col-md-3 px-2">
+                <a asp-action="ViewOrders">
+                    <button class="btn btn-warning btn-lg w-100">View Orders</button>
+                </a>
             </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col">
-            <h3>Recommendations for you</h3>
-            <div class="card1">
-                <div class="table-container">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Business Name</th>
-                                <th>Address</th>
-                                <th>Business Type</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @if (ViewBag.Businesses != null && ViewBag.Businesses.Count > 0)
-                            {
-                                foreach (var business in ViewBag.Businesses)
-                                {
-                                    <tr>
-                                        <td>@business.BusinessName</td>
-                                        <td>@business.CompanyAddress</td>
-                                        <td>@business.OfferList</td>
-                                    </tr>
-                                }
-                            }
-                            else
-                            {
-                                <tr>
-                                    <td colspan="3">No recommendations available</td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <h3>Ongoing Promos</h3>
-            <div class="card1 promo-carousel">
-                @if (ViewBag.Promos != null && ViewBag.Promos.Count > 0)
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Featured Products</h2>
+        <div class="row">
+            @if (ViewBag.Products != null && ViewBag.Products.Count > 0)
+            {
+                foreach (var product in ViewBag.Products)
                 {
-                    var currentPromo = ViewBag.Promos[ViewBag.CurrentPromoIndex];
-                    <div class="promo-item">
-                        <h4 style="color:#F1F1F1">Code: @currentPromo.PromoCode</h4>
-                        <p>@currentPromo.PromoName</p>
-                        <p>Ends on: @currentPromo.PromoEnd.ToString("yyyy-MM-dd")</p>
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="@product.ProductImagePath" class="card-img-top" alt="@product.ProductItem" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">@product.ProductItem</h5>
+                                <p class="card-text text-muted">by @product.BusinessName</p>
+                                <p class="text-primary fw-bold">Php @product.Price.ToString("0.00")</p>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a asp-action="OrderListProduct" asp-route-businessId="@product.UserID" class="btn btn-primary w-100">Order Now</a>
+                            </div>
+                        </div>
                     </div>
                 }
-                else
-                {
-                    <p>No ongoing promos at the moment.</p>
-                }
-                <div class="promo-navigation-container">
-                    <!-- Navigation buttons -->
-                    <div class="promo-navigation">
+            }
+            else
+            {
+                <p class="text-center">No products available at the moment.</p>
+            }
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="d-flex justify-content-between mt-4">
+            @if (ViewBag.CurrentPage > 1)
+            {
+                <a href="@Url.Action("Index", new { productPage = ViewBag.CurrentPage - 1 })" class="btn btn-outline-primary pagination-link">
+                    ← Previous
+                </a>
+            }
+            else
+            {
+                <button class="btn btn-outline-secondary" disabled>← Previous</button>
+            }
+
+            <span>Page @ViewBag.CurrentPage of @ViewBag.TotalPages</span>
+
+            @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+            {
+                <a href="@Url.Action("Index", new { productPage = ViewBag.CurrentPage + 1 })" class="btn btn-outline-primary pagination-link">
+                    Next →
+                </a>
+            }
+            else
+            {
+                <button class="btn btn-outline-secondary" disabled>Next →</button>
+            }
+        </div>
+    </div>
+
+    <div class="container-fluid mt-5">
+        <div class="row w-100">
+            <div class="col-md-6">
+                <h3 class="mb-3 text-primary">Recommendations for You</h3>
+                <div class="card shadow-sm p-3">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th>Business Name</th>
+                                    <th>Address</th>
+                                    <th>Business Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (ViewBag.Businesses != null && ViewBag.Businesses.Count > 0)
+                                {
+                                    foreach (var business in ViewBag.Businesses)
+                                    {
+                                        <tr>
+                                            <td>@business.BusinessName</td>
+                                            <td>@business.CompanyAddress</td>
+                                            <td>@business.OfferList</td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="3" class="text-center">No recommendations available</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ongoing Promos Section -->
+            <div class="col-md-6">
+                <h3 class="mb-3 text-warning">Ongoing Promos</h3>
+                <div class="card shadow-sm p-3 bg-secondary text-white">
+                    @if (ViewBag.Promos != null && ViewBag.Promos.Count > 0)
+                    {
+                        var currentPromo = ViewBag.Promos[ViewBag.CurrentPromoIndex];
+                        <div class="promo-item">
+                            <h4>Code: <strong>@currentPromo.PromoCode</strong></h4>
+                            <p>@currentPromo.PromoName</p>
+                            <p>Ends on: @currentPromo.PromoEnd.ToString("yyyy-MM-dd")</p>
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-center">No ongoing promos at the moment.</p>
+                    }
+
+                    <!-- Promo Navigation -->
+                    <div class="d-flex justify-content-between mt-3">
                         @if (ViewBag.Promos != null && ViewBag.Promos.Count > 0)
                         {
                             var prevPromoIndex = (ViewBag.CurrentPromoIndex - 1 + ViewBag.Promos.Count) % ViewBag.Promos.Count;
-                            <a href="@Url.Action("Index", new { promoIndex = prevPromoIndex })"><button class="button2">❮ Prev</button></a>
-                        }
-                    </div>
-                    <div class="promo-navigation">
-                        @if (ViewBag.Promos != null && ViewBag.Promos.Count > 0)
-                        {
+                            <a href="@Url.Action("Index", new { promoIndex = prevPromoIndex })">
+                                <button class="btn btn-outline-light">Previous</button>
+                            </a>
+
                             var nextPromoIndex = (ViewBag.CurrentPromoIndex + 1) % ViewBag.Promos.Count;
-                            <a href="@Url.Action("Index", new { promoIndex = nextPromoIndex })"><button class="button2">Next ❯</button></a>
+                            <a href="@Url.Action("Index", new { promoIndex = nextPromoIndex })">
+                                <button class="btn btn-outline-light">Next</button>
+                            </a>
                         }
                     </div>
                 </div>
@@ -217,4 +161,19 @@
         </div>
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Restore the scroll position when the page loads
+            if (sessionStorage.getItem("scrollPosition") !== null) {
+            window.scrollTo(0, sessionStorage.getItem("scrollPosition"));
+            }
+
+            // Save scroll position when user clicks pagination links
+            document.querySelectorAll(".pagination-link").forEach(link => {
+            link.addEventListener("click", function () {
+                sessionStorage.setItem("scrollPosition", window.scrollY);
+            });
+            });
+        });
+    </script>
 </body>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "X0+UwJuaz2ywjobCHCwta+QsQEQx/Lu88DUZeciyDZc=",
+  "Hash": "AHkTIA2cCIrHWGL/h5uVy/AmSkyek2pc6FrgY3nujRM=",
   "Source": "HomeHub.App",
   "BasePath": "_content/HomeHub.App",
   "Mode": "Default",
@@ -78,6 +78,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\css\\styles.css",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "css/styles#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "050gf1li0j",
+      "Integrity": "TLhg5T7bwuGuuPHHrLtxGHT9a1GENI8pcIdRStzaPQ0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles.css"
     },
     {
       "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\favicon.ico",
@@ -162,6 +183,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg"
+    },
+    {
+      "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\13523080-28f1-4c27-ba48-9dbd2c1d19f0_samplestock.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/13523080-28f1-4c27-ba48-9dbd2c1d19f0_samplestock#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u6iwnlni8k",
+      "Integrity": "6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\13523080-28f1-4c27-ba48-9dbd2c1d19f0_samplestock.jpg"
     },
     {
       "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\1ae7e95d-6c20-43e5-9a52-9cd7444e55d3_cleaning kit.jpg",
@@ -311,6 +353,27 @@
       "OriginalItemSpec": "wwwroot\\images\\37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.jpg"
     },
     {
+      "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\4561f575-7d1e-41f5-812c-735b4a444291_samplestock.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/4561f575-7d1e-41f5-812c-735b4a444291_samplestock#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u6iwnlni8k",
+      "Integrity": "6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\4561f575-7d1e-41f5-812c-735b4a444291_samplestock.jpg"
+    },
+    {
       "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\4870b1e3-93de-4422-b4cf-a0f6e4463bf9_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
@@ -330,6 +393,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\4870b1e3-93de-4422-b4cf-a0f6e4463bf9_cleaning kit.jpg"
+    },
+    {
+      "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\4ee234a5-2081-4f90-9413-584be3e8ec7d_samplestock.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/4ee234a5-2081-4f90-9413-584be3e8ec7d_samplestock#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u6iwnlni8k",
+      "Integrity": "6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\4ee234a5-2081-4f90-9413-584be3e8ec7d_samplestock.jpg"
     },
     {
       "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg",
@@ -414,6 +498,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\64881bdf-7713-4f10-bbed-dcabafde54b0_cleaning kit.jpg"
+    },
+    {
+      "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\687cbf2c-f95b-4caf-aa37-2a3b5fdda779_samplestock.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/687cbf2c-f95b-4caf-aa37-2a3b5fdda779_samplestock#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u6iwnlni8k",
+      "Integrity": "6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\687cbf2c-f95b-4caf-aa37-2a3b5fdda779_samplestock.jpg"
     },
     {
       "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\73938a12-d477-4825-88c7-060fe9b97ff2_cleaning kit.jpg",
@@ -605,6 +710,27 @@
       "OriginalItemSpec": "wwwroot\\images\\a567fa3b-2202-4da2-a551-80e3f89a28e4_samplestock.jpg"
     },
     {
+      "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\a613de58-e29d-466b-8847-515dc643ed41_aev-gt-image 1.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/a613de58-e29d-466b-8847-515dc643ed41_aev-gt-image 1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dbexu1x911",
+      "Integrity": "R2fWzrS6Uu/n7NmCkJhzn/VZpUPr6pqVlyni0RUJPmc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a613de58-e29d-466b-8847-515dc643ed41_aev-gt-image 1.jpg"
+    },
+    {
       "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
@@ -773,6 +899,27 @@
       "OriginalItemSpec": "wwwroot\\images\\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg"
     },
     {
+      "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\dcd2f485-3d0d-47e4-971b-ddff0930a278_samplestock.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/dcd2f485-3d0d-47e4-971b-ddff0930a278_samplestock#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u6iwnlni8k",
+      "Integrity": "6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\dcd2f485-3d0d-47e4-971b-ddff0930a278_samplestock.jpg"
+    },
+    {
       "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\e0188f78-6475-461f-a987-ec370078a467_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
@@ -794,6 +941,27 @@
       "OriginalItemSpec": "wwwroot\\images\\e0188f78-6475-461f-a987-ec370078a467_cleaning kit.jpg"
     },
     {
+      "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\f275e97c-5540-477e-93ac-feb55760cc32_samplestock.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/f275e97c-5540-477e-93ac-feb55760cc32_samplestock#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u6iwnlni8k",
+      "Integrity": "6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\f275e97c-5540-477e-93ac-feb55760cc32_samplestock.jpg"
+    },
+    {
       "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
@@ -813,6 +981,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg"
+    },
+    {
+      "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\js\\scripts.js",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "js/scripts#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "y1wpdlk933",
+      "Integrity": "enDUpamFCxqy6JlH3XYb4Q/zGCirUpQwWs3Jh8XPZgk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\scripts.js"
     },
     {
       "Identity": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\js\\site.js",
@@ -2117,6 +2306,88 @@
       ]
     },
     {
+      "Route": "css/styles.050gf1li0j.css",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\css\\styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "236792"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TLhg5T7bwuGuuPHHrLtxGHT9a1GENI8pcIdRStzaPQ0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 26 Feb 2025 12:55:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "050gf1li0j"
+        },
+        {
+          "Name": "label",
+          "Value": "css/styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TLhg5T7bwuGuuPHHrLtxGHT9a1GENI8pcIdRStzaPQ0="
+        }
+      ]
+    },
+    {
+      "Route": "css/styles.css",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\css\\styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "236792"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TLhg5T7bwuGuuPHHrLtxGHT9a1GENI8pcIdRStzaPQ0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 26 Feb 2025 12:55:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TLhg5T7bwuGuuPHHrLtxGHT9a1GENI8pcIdRStzaPQ0="
+        }
+      ]
+    },
+    {
       "Route": "favicon.61n19gt1b8.ico",
       "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\favicon.ico",
       "Selectors": [],
@@ -2605,6 +2876,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI="
+        }
+      ]
+    },
+    {
+      "Route": "images/13523080-28f1-4c27-ba48-9dbd2c1d19f0_samplestock.jpg",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\13523080-28f1-4c27-ba48-9dbd2c1d19f0_samplestock.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84926"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:29:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A="
+        }
+      ]
+    },
+    {
+      "Route": "images/13523080-28f1-4c27-ba48-9dbd2c1d19f0_samplestock.u6iwnlni8k.jpg",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\13523080-28f1-4c27-ba48-9dbd2c1d19f0_samplestock.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84926"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:29:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u6iwnlni8k"
+        },
+        {
+          "Name": "label",
+          "Value": "images/13523080-28f1-4c27-ba48-9dbd2c1d19f0_samplestock.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A="
         }
       ]
     },
@@ -3183,6 +3536,88 @@
       ]
     },
     {
+      "Route": "images/4561f575-7d1e-41f5-812c-735b4a444291_samplestock.jpg",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\4561f575-7d1e-41f5-812c-735b4a444291_samplestock.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84926"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:29:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A="
+        }
+      ]
+    },
+    {
+      "Route": "images/4561f575-7d1e-41f5-812c-735b4a444291_samplestock.u6iwnlni8k.jpg",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\4561f575-7d1e-41f5-812c-735b4a444291_samplestock.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84926"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:29:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u6iwnlni8k"
+        },
+        {
+          "Name": "label",
+          "Value": "images/4561f575-7d1e-41f5-812c-735b4a444291_samplestock.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A="
+        }
+      ]
+    },
+    {
       "Route": "images/4870b1e3-93de-4422-b4cf-a0f6e4463bf9_cleaning kit.6qu6mo43sh.jpg",
       "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\4870b1e3-93de-4422-b4cf-a0f6e4463bf9_cleaning kit.jpg",
       "Selectors": [],
@@ -3261,6 +3696,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI="
+        }
+      ]
+    },
+    {
+      "Route": "images/4ee234a5-2081-4f90-9413-584be3e8ec7d_samplestock.jpg",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\4ee234a5-2081-4f90-9413-584be3e8ec7d_samplestock.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84926"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:27:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A="
+        }
+      ]
+    },
+    {
+      "Route": "images/4ee234a5-2081-4f90-9413-584be3e8ec7d_samplestock.u6iwnlni8k.jpg",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\4ee234a5-2081-4f90-9413-584be3e8ec7d_samplestock.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84926"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:27:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u6iwnlni8k"
+        },
+        {
+          "Name": "label",
+          "Value": "images/4ee234a5-2081-4f90-9413-584be3e8ec7d_samplestock.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A="
         }
       ]
     },
@@ -3369,7 +3886,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Feb 2025 11:42:58 GMT"
+          "Value": "Thu, 27 Feb 2025 13:00:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3406,7 +3923,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Feb 2025 11:42:58 GMT"
+          "Value": "Thu, 27 Feb 2025 13:00:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3589,6 +4106,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI="
+        }
+      ]
+    },
+    {
+      "Route": "images/687cbf2c-f95b-4caf-aa37-2a3b5fdda779_samplestock.jpg",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\687cbf2c-f95b-4caf-aa37-2a3b5fdda779_samplestock.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84926"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:29:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A="
+        }
+      ]
+    },
+    {
+      "Route": "images/687cbf2c-f95b-4caf-aa37-2a3b5fdda779_samplestock.u6iwnlni8k.jpg",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\687cbf2c-f95b-4caf-aa37-2a3b5fdda779_samplestock.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84926"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:29:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u6iwnlni8k"
+        },
+        {
+          "Name": "label",
+          "Value": "images/687cbf2c-f95b-4caf-aa37-2a3b5fdda779_samplestock.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A="
         }
       ]
     },
@@ -4271,7 +4870,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Feb 2025 11:41:30 GMT"
+          "Value": "Thu, 27 Feb 2025 13:00:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4308,7 +4907,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Feb 2025 11:41:30 GMT"
+          "Value": "Thu, 27 Feb 2025 13:00:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4327,6 +4926,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A="
+        }
+      ]
+    },
+    {
+      "Route": "images/a613de58-e29d-466b-8847-515dc643ed41_aev-gt-image 1.dbexu1x911.jpg",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\a613de58-e29d-466b-8847-515dc643ed41_aev-gt-image 1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "75512"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R2fWzrS6Uu/n7NmCkJhzn/VZpUPr6pqVlyni0RUJPmc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:28:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dbexu1x911"
+        },
+        {
+          "Name": "label",
+          "Value": "images/a613de58-e29d-466b-8847-515dc643ed41_aev-gt-image 1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-R2fWzrS6Uu/n7NmCkJhzn/VZpUPr6pqVlyni0RUJPmc="
+        }
+      ]
+    },
+    {
+      "Route": "images/a613de58-e29d-466b-8847-515dc643ed41_aev-gt-image 1.jpg",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\a613de58-e29d-466b-8847-515dc643ed41_aev-gt-image 1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "75512"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R2fWzrS6Uu/n7NmCkJhzn/VZpUPr6pqVlyni0RUJPmc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:28:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-R2fWzrS6Uu/n7NmCkJhzn/VZpUPr6pqVlyni0RUJPmc="
         }
       ]
     },
@@ -4987,6 +5668,88 @@
       ]
     },
     {
+      "Route": "images/dcd2f485-3d0d-47e4-971b-ddff0930a278_samplestock.jpg",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\dcd2f485-3d0d-47e4-971b-ddff0930a278_samplestock.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84926"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:27:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A="
+        }
+      ]
+    },
+    {
+      "Route": "images/dcd2f485-3d0d-47e4-971b-ddff0930a278_samplestock.u6iwnlni8k.jpg",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\dcd2f485-3d0d-47e4-971b-ddff0930a278_samplestock.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84926"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:27:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u6iwnlni8k"
+        },
+        {
+          "Name": "label",
+          "Value": "images/dcd2f485-3d0d-47e4-971b-ddff0930a278_samplestock.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A="
+        }
+      ]
+    },
+    {
       "Route": "images/e0188f78-6475-461f-a987-ec370078a467_cleaning kit.6qu6mo43sh.jpg",
       "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\e0188f78-6475-461f-a987-ec370078a467_cleaning kit.jpg",
       "Selectors": [],
@@ -5069,6 +5832,88 @@
       ]
     },
     {
+      "Route": "images/f275e97c-5540-477e-93ac-feb55760cc32_samplestock.jpg",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\f275e97c-5540-477e-93ac-feb55760cc32_samplestock.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84926"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:28:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A="
+        }
+      ]
+    },
+    {
+      "Route": "images/f275e97c-5540-477e-93ac-feb55760cc32_samplestock.u6iwnlni8k.jpg",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\f275e97c-5540-477e-93ac-feb55760cc32_samplestock.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "84926"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:28:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u6iwnlni8k"
+        },
+        {
+          "Name": "label",
+          "Value": "images/f275e97c-5540-477e-93ac-feb55760cc32_samplestock.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A="
+        }
+      ]
+    },
+    {
       "Route": "images/faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.6qu6mo43sh.jpg",
       "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg",
       "Selectors": [],
@@ -5147,6 +5992,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-DheP0o2Bsk4yvVPuRIZivLisANxWzscFGpL9r+dQGoI="
+        }
+      ]
+    },
+    {
+      "Route": "js/scripts.js",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\js\\scripts.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "913"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"enDUpamFCxqy6JlH3XYb4Q/zGCirUpQwWs3Jh8XPZgk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:43:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-enDUpamFCxqy6JlH3XYb4Q/zGCirUpQwWs3Jh8XPZgk="
+        }
+      ]
+    },
+    {
+      "Route": "js/scripts.y1wpdlk933.js",
+      "AssetFile": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\js\\scripts.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "913"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"enDUpamFCxqy6JlH3XYb4Q/zGCirUpQwWs3Jh8XPZgk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Feb 2025 23:43:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y1wpdlk933"
+        },
+        {
+          "Name": "label",
+          "Value": "js/scripts.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-enDUpamFCxqy6JlH3XYb4Q/zGCirUpQwWs3Jh8XPZgk="
         }
       ]
     },
