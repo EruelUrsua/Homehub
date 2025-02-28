@@ -455,3 +455,4 @@ D:\HomeHub\Homehub\HomeHub.App\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\Charlize\Documents\Homehub\HomeHub.App\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\Notes\C#\Homehub\HomeHub.App\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\Notes\C#\Homehub\HomeHub.App\bin\Debug\net8.0\libman.json
+D:\HomeHub\Homehub\HomeHub.App\bin\Debug\net8.0\libman.json
