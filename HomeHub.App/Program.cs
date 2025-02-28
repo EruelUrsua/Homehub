@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<HomeHubContext>(opts =>
 {
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("Paw"));
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("Ursua"));
 });
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
@@ -59,8 +59,9 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    //pattern: "{controller=Provider}/{action=ProductsServices}/{id?}");
-    pattern: "{controller=Customer}/{action=Index}/{id?}");
+  //pattern: "{controller=Provider}/{action=ProductsServices}/{id?}");
+  //   pattern: "{controller=Customer}/{action=Index}/{id?}");
+  pattern: "{controller=Home}/{action=Index}/{id?}");
 
 using (var scope = app.Services.CreateScope())
 {

@@ -91,27 +91,55 @@
                 <h3 class="mb-3 text-primary">Recommendations for You</h3>
                 <div class="card shadow-sm p-3">
                     <div class="table-responsive">
-                        @* This is the Map Script do not touch! *@
-                        <script src="~/lib/leaflet/leaflet.js"></script>
-                        <script src="~ /lib/leaflet/leaflet.min.js"></script>
-                        @* <a href="~/lib/leaflet/leaflet.js.map"></a> *@
-                        <div id="map" style="width:100%;height:400px"></div>
-                        <script>
-                            var map = L.map('map').setView([14.58699, 120.98634], 15);
-                                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                                }).addTo(map);
-
-                                var jsModel = @Html.Raw(Json.Serialize(Model));
-                                console.log(jsModel)
-
-                                for (i in jsModel)
-                                {item = jsModel [i]
-                                     L.marker([item.lat, item.long]).addTo(map)
-                                  .bindPopup(item.name + '<br>' + item.address);
-
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Business Name</th>
+                                    <th>Category</th>
+                                    <th>Business Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (ViewBag.Providers != null && ViewBag.Providers.Count > 0)
+                                {
+                                    foreach (var providers in ViewBag.Providers)
+                                    {
+                                        <tr>
+                                            <td>@providers.BusinesName</td>
+                                            <td>@providers.Category</td>
+                                            <td>@providers.BusinessType</td>
+                                        </tr>
+                                    }
                                 }
-                        </script>
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="3">No recommendations available</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        @* This is the Map Script do not touch! *@
+                        @* <script src="~/lib/leaflet/leaflet.js"></script> *@
+                        @* <script src="~ /lib/leaflet/leaflet.min.js"></script> *@
+                        @* <a href="~/lib/leaflet/leaflet.js.map"></a> *@
+                        @* <div id="map" style="width:100%;height:400px"></div> *@
+                        @* <script> *@
+                        @*     var map = L.map('map').setView([14.58699, 120.98634], 15); *@
+                        @*         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { *@
+                        @*         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' *@
+                        @*         }).addTo(map); *@
+
+                        @*         var jsModel = @Html.Raw(Json.Serialize(Model)); *@
+                        @*         console.log(jsModel) *@
+
+                        @*         for (i in jsModel) *@
+                        @*         {item = jsModel [i] *@
+                        @*              L.marker([item.lat, item.long]).addTo(map) *@
+                        @*           .bindPopup(item.name + '<br>' + item.address); *@
+
+                        @*         } *@
+                        @* </script> *@
                     </div>
                 </div>
             </div>
