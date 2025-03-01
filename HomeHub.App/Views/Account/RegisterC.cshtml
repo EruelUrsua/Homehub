@@ -29,7 +29,28 @@
              L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { 
              attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' 
              }).addTo(map); 
+            var marker = L.marker([14.58699, 120.98634],{draggable: true} ).addTo(map);
+        //      var popup = L.popup();
+        //     function onDragEnd(e)
+        //     {
+        //                 popup
+        // .setLatLng(e.latlng)
+        // .setContent("You clicked the map at " + e.latlng.toString())
+        // .openOn(map);
+        //     }
+        //     map.on('dragend', onDragEnd);
+                var popup = L.popup();
 
+      
+
+        function ondragend(e) {
+           popup
+                .setLatLng(e.latlng)
+                .setContent("You clicked the map at " + e.latlng.toString())
+                .openOn(map);
+        }
+
+        map.on('dragend', onDragend);
              var jsModel = @Html.Raw(Json.Serialize(Model)); 
              console.log(jsModel) 
 
