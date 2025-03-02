@@ -16,14 +16,13 @@
 <span asp-validation-for="ContactNo"></span>
     <br />
     <label asp-for="Address"></label>
-    <input asp-for="Address" class="form-control" />
+    <input asp-for="Address" class="form-control" id="latlang" />
     <span asp-validation-for="Address"></span>
     <br />
     @* This is the Map Script do not touch! *@
      <script src="~/lib/leaflet/leaflet.js"></script> 
      <script src="~ /lib/leaflet/leaflet.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.83.1/dist/L.Control.Locate.min.js" charset="utf-8"></script>
-W
      <a href="~/lib/leaflet/leaflet.js.map"></a> 
      <div id="map" style="width:100%;height:400px"></div> 
      <script> 
@@ -32,6 +31,19 @@ W
              attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' 
              }).addTo(map); 
             var marker = L.marker([14.58699, 120.98634],{draggable: true} ).addTo(map);
+      
+
+            marker.on("drag", function(e) {
+            //var marker = e.target;
+            var position = marker.getLatLng();
+
+            document.getElementById("latlang").value = position.lat +", " + position.lng;
+            console.log(position.lat);
+            console.log(position.lng);
+        });
+
+
+
         //      var popup = L.popup();
         //     function onDragEnd(e)
         //     {
@@ -41,8 +53,8 @@ W
         // .openOn(map);
         //     }
         //     map.on('dragend', onDragEnd);
-                var popup = marker.bindPopup('address' + marker.getLatLng()).openPopup();
-                popup.addTo(map);
+                // var popup = marker.bindPopup('address' + marker.getLatLng()).openPopup();
+                // popup.addTo(map);
 
       
                 L.control.locate().addTo(map);
@@ -57,16 +69,16 @@ W
 
 
 
-        map.on('dragend', onDragend);
-             var jsModel = @Html.Raw(Json.Serialize(Model)); 
-             console.log(jsModel) 
+        // map.on('dragend', onDragend);
+        //      var jsModel = @@Html.Raw(Json.Serialize(Model)); 
+        //      console.log(jsModel) 
 
-             for (i in jsModel) 
-             {item = jsModel [i] 
-                  L.marker([item.lat, item.long]).addTo(map) 
-               .bindPopup(item.name + '<br>' + item.address); 
+        //      for (i in jsModel) 
+        //      {item = jsModel [i] 
+        //           L.marker([item.lat, item.long]).addTo(map) 
+        //        .bindPopup(item.name + '<br>' + item.address); 
 
-            } 
+        //     } 
      </script>
 
     <br />
