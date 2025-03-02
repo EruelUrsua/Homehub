@@ -85,7 +85,8 @@ namespace HomeHub.App.Services
                         currency = currency
                     },
                     items = items, // List of items passed dynamically
-                    requestReferenceNumber = "ORDER-" + logId // Dynamic Log ID
+                    //requestReferenceNumber = "ORDER-" + logId // Dynamic Log ID
+                    requestReferenceNumber = logId
                 };
 
                 /*

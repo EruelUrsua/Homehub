@@ -33,7 +33,8 @@ public class OrdersLog
     public string PromoCode { get; set; } = null!;
 
 
-    // Temporary property to track if the order has been rated
+    [NotMapped]
+    public string ProviderName { get; set; } = string.Empty;
     [NotMapped]
     public bool IsRated { get; set; }
 }

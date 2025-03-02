@@ -244,13 +244,41 @@ namespace HomeHub.App.Controllers
 
         public IActionResult AvailListService(string businessId)
         {
-            var provider = context.Providers.FirstOrDefault(x => x.UserID == businessId);
+            /*var provider = context.Providers.FirstOrDefault(x => x.UserID == businessId);
 
             var services = context.Services.Where(x => x.ProviderID == businessId).ToList();
 
             ViewBag.ProviderID = businessId;
             ViewBag.BusinessName = provider.BusinessName;
             //ViewBag.Address = provider.CompanyAddress;
+
+            return View(services);*/
+            if (string.IsNullOrEmpty(businessId))
+            {
+                return RedirectToAction("Index");
+            }
+
+            //var provider = context.Providers.FirstOrDefault(x => x.UserID == businessId);
+            var provider = (from p in context.Providers
+                            join u in context.Users on p.UserID equals u.Id
+                            where p.UserID == businessId
+                            select new
+                            {
+                                p.BusinessName,
+                                u.Address
+                            }).FirstOrDefault();
+
+            if (provider == null)
+            {
+                return NotFound();
+            }
+
+            var services = context.Services.Where(x => x.ProviderID == businessId).ToList();
+
+            ViewBag.ProviderID = businessId;
+            //ViewBag.BusinessName = provider.BusinessName;
+            TempData["BusinessName"] = provider.BusinessName;
+            ViewBag.Address = provider.Address;
 
             return View(services);
         }
@@ -433,9 +461,9 @@ namespace HomeHub.App.Controllers
 
         public IActionResult ViewOrders()
         {
+            /*
             string userId = userManager.GetUserId(User);
-            //Retrieve all OrdersLogs entries for the logged-in user
-            //var orders = context.OrdersLogs.ToList();
+            
             var orders = context.OrdersLogs
                 .Where(o => o.UserId == userId)
                 .ToList();
@@ -448,7 +476,41 @@ namespace HomeHub.App.Controllers
             {
                 // Check if the order ID is in the set of rated order IDs
                 order.IsRated = ratedOrderIds.Contains(int.Parse(order.OrderId));
-            }
+            }*/
+
+            string userId = userManager.GetUserId(User);
+
+            // Get all rated order IDs and convert them to a HashSet for efficient lookup
+            var ratedOrderIds = context.Ratings
+                .Select(r => r.OrderId.ToString()) // Convert OrderId to string to match OrdersLog
+                .ToHashSet();
+
+            var orders = context.OrdersLogs
+                .Where(o => o.UserId == userId)
+                .ToList() // Retrieve from database before processing `int.Parse`
+                .Select(o => new OrdersLog
+                {
+                    LogId = o.LogId,
+                    OrderId = o.OrderId,
+                    OrderDate = o.OrderDate,
+                    UserId = o.UserId,
+                    FirstName = o.FirstName,
+                    LastName = o.LastName,
+                    BusinessId = o.BusinessId,
+                    Item = o.Item,
+                    Qty = o.Qty,
+                    Date = o.Date,
+                    Status = o.Status,
+                    Fee = o.Fee,
+                    PromoCode = o.PromoCode,
+                    ProviderName = context.Providers
+                        .Where(b => b.UserID == o.BusinessId)
+                        .Select(b => b.BusinessName) // Assuming BusinessName is the column for the provider's name
+                        .FirstOrDefault() ?? "Unknown Provider",
+                    IsRated = ratedOrderIds.Contains(o.OrderId) // Now comparing as strings
+                })
+                .OrderBy(o => o.OrderId)
+                .ToList();
 
             return View(orders);
         }
@@ -653,6 +715,7 @@ namespace HomeHub.App.Controllers
         [HttpPost]
         public IActionResult RateProvider(string LogId)
         {
+            /*
             var orderLog = context.OrdersLogs.FirstOrDefault(o => o.LogId == LogId);
 
             if (orderLog == null)
@@ -683,11 +746,34 @@ namespace HomeHub.App.Controllers
             {
                 TempData["ErrorMessage"] = "Invalid Client ID format.";
                 return RedirectToAction("ViewOrders");
+            }*/
+            var orderLog = context.OrdersLogs.FirstOrDefault(o => o.LogId == LogId);
+
+            if (orderLog == null)
+            {
+                TempData["ErrorMessage"] = "Order not found for the given Log ID.";
+                return RedirectToAction("ViewOrders");
             }
+
+            var clientOrder = context.ClientOrders.FirstOrDefault(co => co.ClientId.ToString() == orderLog.OrderId);
+
+            if (clientOrder == null)
+            {
+                TempData["ErrorMessage"] = "No corresponding client order found.";
+                return RedirectToAction("ViewOrders");
+            }
+
+            var business = context.Providers.FirstOrDefault(b => b.UserID == clientOrder.BusinessId);
+            if (business != null)
+            {
+                ViewBag.BusinessName = business.BusinessName;
+            }
+
+            return View("RateProvider", clientOrder);
         }
 
         [HttpPost]
-        public IActionResult SubmitRating(int score, string comments, int clientId, int businessId)
+        public IActionResult SubmitRating(int score, string comments, string clientId, string businessId)
         {
 
             if (string.IsNullOrWhiteSpace(comments))
@@ -919,10 +1005,11 @@ namespace HomeHub.App.Controllers
             return RedirectToAction("ViewOrders");
         }
 
-        public IActionResult ReviewRating(int LogId)
+        public IActionResult ReviewRating(string LogId)
         {
+            /*
             var rating = (from r in context.Ratings
-                          join b in context.Businesses on r.BusinessId equals b.UserID
+                          join b in context.Providers on r.BusinessId equals b.UserID
                           where r.OrderId == LogId
                           select new
                           {
@@ -946,6 +1033,41 @@ namespace HomeHub.App.Controllers
             };
 
             // Pass the rating details to the view
+            return View(model);*/
+
+            var orderLog = context.OrdersLogs.FirstOrDefault(o => o.LogId == LogId);
+
+            if (orderLog == null)
+            {
+                TempData["ErrorMessage"] = "Order not found for the given Log ID.";
+                return RedirectToAction("ViewOrders");
+            }
+
+            var rating = (from r in context.Ratings
+                          join b in context.Providers on r.BusinessId equals b.UserID
+                          where r.OrderId == orderLog.OrderId
+                          select new
+                          {
+                              r.OrderId,
+                              r.Score,
+                              r.Comments,
+                              b.BusinessName
+                          }).FirstOrDefault();
+
+            if (rating == null)
+            {
+                TempData["ErrorMessage"] = "No rating found for this order.";
+                return RedirectToAction("ViewOrders");
+            }
+
+            var model = new ReviewRatingVM
+            {
+                OrderId = rating.OrderId,
+                Score = rating.Score,
+                Comments = rating.Comments,
+                BusinessName = rating.BusinessName
+            };
+
             return View(model);
         }
 
