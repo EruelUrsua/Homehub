@@ -1,34 +1,66 @@
 ﻿@model HomeHub.App.Models.UpdateAddressVM
 
-<div class="container">
-    <h1>Edit Address</h1>
+<div class="container py-5">
+    <div class="header-section text-center">
+        <h1 class="primary-heading text-white">Edit Address</h1>
+    </div>
 
     @if (TempData["ErrorMessage"] != null)
     {
-        <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+        <div class="alert alert-danger text-center mt-3 w-50 mx-auto">@TempData["ErrorMessage"]</div>
     }
-    <div class="edit-card">
+
+    <div class="card shadow-sm border-0 rounded-3 p-4 mx-auto mt-4" style="max-width: 600px; background-color: #f8f9fa;">
         <form asp-action="EditAddress" asp-controller="Customer" method="post">
             @Html.AntiForgeryToken()
 
-            <div class="form-group">
-                <label asp-for="Address"></label>
+            <div class="mb-3">
+                <label asp-for="Address" class="form-label fw-semibold text-dark"></label>
                 <input asp-for="Address" class="form-control" />
                 <span asp-validation-for="Address" class="text-danger"></span>
             </div>
 
-            <div class="button-container">
-                <button type="submit" class="custom-btn">Save</button>
-                <a asp-controller="Customer" asp-action="UserProfile" class="custom-btn cancel-btn">Cancel</a>
+            <div class="d-flex justify-content-center gap-2">
+                <button type="submit" class="btn btn-success px-4">Save</button>
+                <a asp-controller="Customer" asp-action="UserProfile" class="btn btn-secondary px-4">Cancel</a>
             </div>
         </form>
     </div>
 </div>
 
+
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
 
+<style>
+    .header-section {
+        background-color: #203B81;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        border-radius: 8px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        max-width: 600px;
+    }
+
+    .primary-heading {
+        font-weight: bold;
+    }
+
+    .success-message {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .table th {
+        background-color: #203B81 !important;
+        color: white !important;
+    }
+</style>
+
+<!--
 <style>
     body {
         background-color: #F1F1F1;
@@ -154,4 +186,4 @@
     }
 
     }
-</style>
+</style>-->

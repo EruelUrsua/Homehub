@@ -241,9 +241,11 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.Comments).HasMaxLength(50);
             entity.Property(e => e.Date).HasColumnType("date");
             entity.Property(e => e.OrderId)
+                .HasMaxLength(50)
                 .HasColumnName("OrderID");
             entity.Property(e => e.BusinessId)
-                .HasColumnName("BusinessID");
+                .HasColumnName("BusinessID")
+                .HasColumnType("nvarchar(MAX)");
         });
 
         modelBuilder.Entity<Report>(entity =>
