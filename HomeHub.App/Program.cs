@@ -61,7 +61,7 @@ app.MapControllerRoute(
     name: "default",
   //pattern: "{controller=Provider}/{action=ProductsServices}/{id?}");
   //   pattern: "{controller=Customer}/{action=Index}/{id?}");
-  pattern: "{controller=Home}/{action=Index}/{id?}");
+  pattern: "{controller=Account}/{action=RegisterC}/{id?}");
 
 using (var scope = app.Services.CreateScope())
 {
