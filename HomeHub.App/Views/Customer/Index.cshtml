@@ -57,7 +57,7 @@
             }
         </div>
 
-        <!-- Pagination Controls -->
+        <!-- Pagination for Products -->
         <div class="d-flex justify-content-between mt-4">
             @if (ViewBag.CurrentPage > 1)
             {
@@ -85,6 +85,63 @@
         </div>
     </div>
 
+    <!-- Featured Services-->
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Featured Services</h2>
+        <div class="row">
+            @if (ViewBag.Services != null && ViewBag.Services.Count > 0)
+            {
+                foreach (var service in ViewBag.Services)
+                {
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">@service.ServiceItem</h5>
+                                <p class="card-text text-muted">by @service.BusinessName</p>
+                                <p class="text-primary fw-bold">Php @service.Fee.ToString("0.00")</p>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a asp-action="AvailListService" asp-route-businessId="@service.UserID" class="btn btn-success w-100">Avail Now</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="text-center">No services available at the moment.</p>
+            }
+        </div>
+
+        <!-- Pagination Controls for Services -->
+        <div class="d-flex justify-content-between mt-4">
+            @if (ViewBag.CurrentServicePage > 1)
+            {
+                <a href="@Url.Action("Index", new { servicePage = ViewBag.CurrentServicePage - 1, productPage = ViewBag.CurrentPage })" class="btn btn-outline-primary pagination-link">
+                    ← Previous
+                </a>
+            }
+            else
+            {
+                <button class="btn btn-outline-secondary" disabled>← Previous</button>
+            }
+
+            <span>Page @ViewBag.CurrentServicePage of @ViewBag.TotalServicePages</span>
+
+            @if (ViewBag.CurrentServicePage < ViewBag.TotalServicePages)
+            {
+                <a href="@Url.Action("Index", new { servicePage = ViewBag.CurrentServicePage + 1, productPage = ViewBag.CurrentPage })" class="btn btn-outline-primary pagination-link">
+                    Next →
+                </a>
+            }
+            else
+            {
+                <button class="btn btn-outline-secondary" disabled>Next →</button>
+            }
+        </div>
+    </div>
+
+    <!-- Recommendations -->
     <div class="container-fluid mt-5">
         <div class="row w-100">
             <div class="col-md-6">

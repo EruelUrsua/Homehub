@@ -44,7 +44,7 @@ namespace HomeHub.App.Controllers
 
         private Task<ApplicationUser> GetCurrentUserAsync() => userManager.GetUserAsync(HttpContext.User);
 
-        public async Task<IActionResult> Index(int promoIndex = 0, int productPage = 1, int pageSize = 8)
+        public async Task<IActionResult> Index(int promoIndex = 0, int productPage = 1, int servicePage = 1, int pageSize = 8)
         {
 
             string loggedInUser = await GetCurrentUserId();
@@ -60,6 +60,8 @@ namespace HomeHub.App.Controllers
                                o.Item
                            };
             ViewBag.recs = recsList.ToList();
+
+            //Featured Products
             var productsQuery = (from a in context.Providers
                                  join b in context.Products on a.UserID equals b.ProviderID
                                  where a.Businesstype == false
@@ -80,6 +82,26 @@ namespace HomeHub.App.Controllers
             ViewBag.CurrentPage = productPage;
             ViewBag.TotalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
 
+            //Featured Services
+            var servicesQuery = (from a in context.Providers
+                                 join b in context.Services on a.UserID equals b.ProviderID
+                                 where a.Businesstype == true
+                                 select new
+                                 {
+                                     b.ServiceItem,
+                                     b.Fee,
+                                     a.BusinessName,
+                                     a.UserID
+                                 }).ToList();
+
+            var totalServices = servicesQuery.Count();
+            var paginatedServices = servicesQuery.Skip((servicePage - 1) * pageSize).Take(pageSize).ToList();
+
+            ViewBag.Services = paginatedServices;
+            ViewBag.CurrentServicePage = servicePage;
+            ViewBag.TotalServicePages = (int)Math.Ceiling((double)totalServices / pageSize);
+
+            //Promos
             var ongoingPromos = context.Promos.Where(p => p.PromoEnd > DateTime.Now).
                 OrderBy(p => p.PromoEnd).ToList();
 
@@ -279,7 +301,7 @@ namespace HomeHub.App.Controllers
                 model.promo = "No Promo Used";
             }
 
-            var userId = getCurrentUserId; //"47ae60c1-5de0-4f86-9a6a-5ce24df3b2c0"; //Will replace with logged-in user id retrieval logic || input simular userID to a customer userID
+            var userId = getCurrentUserId; 
             var user = await context.ApplicationUsers.FindAsync(userId);
 
             if (user == null)
@@ -295,20 +317,41 @@ namespace HomeHub.App.Controllers
             entity.OrderedPs = model.chosen;
             entity.Fee = TotalPrice;
             entity.PromoCode = model.promo;
-            entity.UserId = getCurrentUserId; //input similar userID to customer userID
+            entity.UserId = getCurrentUserId;
             entity.FirstName = user.Firstname;
             entity.LastName = user.Lastname;
-            //entity.UserId = int.Parse(model.userID);
             entity.ReportId = 1; //remove
             entity.RatingId = 1; //remove
             entity.Quantity = model.qty;
             entity.ModeOfPayment = model.mode;
             entity.Status = "Pending";
+            entity.AddInstructions = model.requestatt;
 
             var maxRatingId = await context.ClientOrders.MaxAsync(o => (int?)o.RatingId) ?? 0;
             entity.RatingId = maxRatingId + 1;
 
             await context.AddAsync(entity);
+            await context.SaveChangesAsync();
+
+            //Create Order Log
+            var orderLog = new OrdersLog
+            {
+                LogId = Guid.NewGuid().ToString(),
+                OrderId = entity.ClientId.ToString(),
+                OrderDate = entity.OrderDate,
+                UserId = getCurrentUserId,
+                FirstName = entity.FirstName,
+                LastName = entity.LastName,
+                BusinessId = entity.BusinessId,
+                Item = entity.OrderedPs,
+                Qty = entity.Quantity,
+                Date = entity.Schedule,
+                Status = entity.Status,
+                Fee = entity.Fee,
+                PromoCode = entity.PromoCode,
+            };
+
+            await context.OrdersLogs.AddAsync(orderLog);
             await context.SaveChangesAsync();
 
             // **Create a notification for the provider**

@@ -600,7 +600,7 @@ namespace HomeHub.App.Controllers
             order.Status = "Processing";
             order.Fee = totalFee;
 
-            // Log the accepted order into OrdersLog
+            /* Log the accepted order into OrdersLog
             var orderLog = new OrdersLog
             {
                 LogId = Guid.NewGuid().ToString(),
@@ -619,6 +619,21 @@ namespace HomeHub.App.Controllers
             };
 
             _context.OrdersLogs.Add(orderLog);
+            */
+            //Update OrderLogs Status
+            var orderLog = await _context.OrdersLogs
+                .FirstOrDefaultAsync(log => log.OrderId == order.ClientId.ToString());
+
+            if (orderLog != null)
+            {
+                //Update existing order log
+                orderLog.Status = "Processing";
+            }
+            else
+            {
+                View("ProductOrders");
+            }
+
             await _context.SaveChangesAsync();
 
             TempData["SuccessMessage"] = "Order is now being processed and inventory has been updated successfully.";
@@ -740,7 +755,7 @@ namespace HomeHub.App.Controllers
             order.Status = "Scheduled";
             order.Fee = totalFee;
 
-            // Log the accepted order into OrdersLog
+            /* Log the accepted order into OrdersLog
             var orderLog = new OrdersLog
             {
                 LogId = Guid.NewGuid().ToString(),
@@ -756,9 +771,22 @@ namespace HomeHub.App.Controllers
                 Status = "Scheduled",
                 Fee = totalFee,
                 PromoCode = order.PromoCode
-            };
+            };*/
 
-            _context.OrdersLogs.Add(orderLog);
+            //Update OrderLogs Status
+            var orderLog = await _context.OrdersLogs
+                .FirstOrDefaultAsync(log => log.OrderId == order.ClientId.ToString());
+
+            if (orderLog != null)
+            {
+                //Update existing order log
+                orderLog.Status = "Processing";
+            }
+            else
+            {
+                View("ProductOrders");
+            }
+
             await _context.SaveChangesAsync();
 
             TempData["SuccessMessage"] = "Service has been scheduled. Please prepare for the appointment date.";

@@ -176,7 +176,7 @@
 
 
                 <label for="requestatt">Additional Instructions</label>
-                <textarea id="requestatt" name="requestatt" rows="4" cols="50" placeholder="Enter additional instructions..."></textarea>
+                <textarea id="requestatt" name="requestatt" rows="4" cols="50" maxlength="150" placeholder="Enter additional instructions..."></textarea>
 
 
                 <label>Mode of Payment</label>
@@ -189,9 +189,6 @@
                 <label>Promo Code</label>
                 <input type="text" id="promo" name="promo" />
 
-
-                <!-- To pass logged in user's' id
-                <input type="hidden" id="userID" value="@User.Identity.Name" />-->
 
                 <div class="button-group">
                     <input type="submit" value="Book" class="confirm-btn" />

@@ -33,5 +33,5 @@ public class ClientOrder
     public string FirstName { get; set; } = null!;
     public string LastName { get; set; } = null!;
 
-
+    public string? AddInstructions { get; set; }
 }
