@@ -13,6 +13,7 @@ namespace HomeHub.App.Models
         public string ddeliv { get; set; }
         [Required(ErrorMessage = "Please select a time.")]
         public string tdeliv { get; set; }
+        [StringLength(150, ErrorMessage = "Cannot exceed 150 characters.")]
         public string requestatt { get; set; }
         public string mode { get; set; }
         public string? promo { get; set; }
