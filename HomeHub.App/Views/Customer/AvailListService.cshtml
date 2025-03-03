@@ -2,6 +2,7 @@
 
 @model List<Service>
 
+<!--
 <style>
     .container {
         color: #203B81;
@@ -119,92 +120,145 @@
         }
 
 </style>
+-->
 
 <body>
-    <div class="container">
-        <!-- Name and address of chosen provider
-        <h2>@ViewBag.BusinessName</h2>
-        <p>@ViewBag.Address</p>-->
+    <div class="container mt-4">
+        <div class="header-section">
+            <h2>@(TempData["BusinessName"] ?? "Unknown Business")</h2>
+            <p>@(ViewBag.Address ?? "No Address Available")</p>
+        </div>
 
-        <h2>@(TempData["BusinessName"] ?? "Unknown Business")</h2>
-        <p>@(ViewBag.Address ?? "No Address Available")</p>
-
-
-        <!-- Service List of chosen provider-->
-        <div class="card">
+        <div class="card shadow-sm border-0">
             <form asp-controller="Customer" asp-action="ConfirmOrder" method="post">
                 <input type="hidden" name="businessId" value="@ViewBag.ProviderID" />
 
-                @if (Model.Count() < 1)
-                {
-                    <div class="alert alert-info">
-                        No Services Found
-                    </div>
-                }
-                else
-                {
-                    <div class="service-list">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Services</th>
-                                    <th>Price</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var item in Model)
-                                {
+                <!-- Service List -->
+                <div class="mb-4">
+                    <h4 class="primary-heading">Select a Service</h4>
+                    @if (!Model.Any())
+                    {
+                        <div class="alert alert-info text-center">No Services Found</div>
+                    }
+                    else
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class="table-light">
                                     <tr>
-                                        <td><input type="radio" id="chosen" name="chosen" value="@item.ServiceItem" onclick="setPrice(@item.Fee)" required>@item.ServiceItem</td>
-                                        <td>Php @item.Fee.ToString("0.00")</td>
+                                        <th>Service</th>
+                                        <th class="text-center">Price</th>
                                     </tr>
-                                }
-                                <input type="hidden" id="price" name="price" value="">
-                            </tbody>
-                        </table>
-                    </div>
-                }
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="chosen"
+                                                           value="@item.ServiceItem" onclick="setPrice('@item.Fee')" required>
+                                                    <label class="form-check-label">@item.ServiceItem</label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center fw-bold text-primary">Php @item.Fee.ToString("0.00")</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <input type="hidden" id="price" name="price" value="">
+                    }
+                </div>
 
-                <!--Date and Time-->
-                <div class="date-time-container">
-                    <div class="date-time-item">
-                        <label>Date of Booking</label>
-                        <input type="date" id="ddeliv" name="ddeliv" min="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")" required />
+                <!-- Date & Time Selection -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="ddeliv" class="fw-bold">Date of Booking</label>
+                            <input type="date" id="ddeliv" name="ddeliv"
+                                   class="form-control"
+                                   min="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")" required />
+                        </div>
                     </div>
-                    <div class="date-time-item">
-                        <label>Time of Booking</label>
-                        <input type="time" id="tdeliv" name="tdeliv" min="08:00" max="18:00" required />
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="tdeliv" class="fw-bold">Time of Booking</label>
+                            <input type="time" id="tdeliv" name="tdeliv"
+                                   class="form-control"
+                                   min="08:00" max="18:00" required />
+                        </div>
                     </div>
                 </div>
 
+                <!-- Additional Instructions -->
+                <div class="mb-3">
+                    <label for="requestatt" class="fw-bold">Additional Instructions</label>
+                    <textarea id="requestatt" name="requestatt" class="form-control"
+                              rows="3" maxlength="150" placeholder="Enter additional instructions..."></textarea>
+                </div>
 
-                <label for="requestatt">Additional Instructions</label>
-                <textarea id="requestatt" name="requestatt" rows="4" cols="50" maxlength="150" placeholder="Enter additional instructions..."></textarea>
+                <!-- Payment Mode -->
+                <div class="mb-3">
+                    <label for="mode" class="fw-bold">Mode of Payment</label>
+                    <select name="mode" id="mode" class="form-select">
+                        <option value="Cash">Cash</option>
+                        <option value="Maya">PayMaya</option>
+                    </select>
+                </div>
 
+                <!-- Promo Code -->
+                <div class="mb-3">
+                    <label for="promo" class="fw-bold">Promo Code</label>
+                    <input type="text" id="promo" name="promo" class="form-control" />
+                </div>
 
-                <label>Mode of Payment</label>
-                <select name="mode" id="mode">
-                    <option value="Cash">Cash</option>
-                    <option value="Maya">PayMaya</option>
-                </select>
-
-
-                <label>Promo Code</label>
-                <input type="text" id="promo" name="promo" />
-
-
-                <div class="button-group">
-                    <input type="submit" value="Book" class="confirm-btn" />
-                    <a asp-action="Index" class="cancel-btn">Cancel</a>
+                <!-- Buttons -->
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary fw-bold px-4">Book</button>
+                    <a asp-action="Index" class="btn btn-outline-danger fw-bold px-4 ms-2">Cancel</a>
                 </div>
             </form>
         </div>
     </div>
 
     <script>
-        function setPrice(price) {
-            document.getElementById('price').value = price;
+        function setPrice(Fee) {
+            document.getElementById('price').value = Fee;
         }
     </script>
 
+    <style>
+        .container {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .header-section {
+            background-color: #203B81;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .primary-heading {
+            color: #203B81;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .table th {
+            background-color: #eef5ff !important;
+        }
+
+        .card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
 </body>

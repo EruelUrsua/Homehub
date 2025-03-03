@@ -504,6 +504,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\75c85b54-a790-4d91-96d0-76a597fc5107_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\82e435b7-7ce8-4e7a-afb5-9abb9d23aa48_samplestock.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HomeHub.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HomeHub.App</BasePath>
+      <RelativePath>images/82e435b7-7ce8-4e7a-afb5-9abb9d23aa48_samplestock.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>u6iwnlni8k</Fingerprint>
+      <Integrity>6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\82e435b7-7ce8-4e7a-afb5-9abb9d23aa48_samplestock.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\87d5604e-25da-4ea5-8ce0-5bc7861eb357_Just The Two of Us Wallpaper.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>HomeHub.App</SourceId>
@@ -719,6 +737,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\b568e3d8-8d52-4497-8679-2bed24ff59db_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\b5a04bd6-bc22-4bdf-8784-5e438071b01a_samplestock.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HomeHub.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HomeHub.App</BasePath>
+      <RelativePath>images/b5a04bd6-bc22-4bdf-8784-5e438071b01a_samplestock.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>u6iwnlni8k</Fingerprint>
+      <Integrity>6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\b5a04bd6-bc22-4bdf-8784-5e438071b01a_samplestock.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\b798f7e9-8fcd-411f-b481-2d0c320ce52a_cleaning kit.jpg'))">
       <SourceType>Package</SourceType>
