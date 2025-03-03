@@ -1,0 +1,62 @@
+﻿@model HomeHub.App.Models.InStorePurchaseVM
+
+@{
+    ViewData["Title"] = "In-Store Purchase";
+}
+
+<h2>📦 In-Store Purchase</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@Html.Raw(TempData["SuccessMessage"])</div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+
+<form asp-action="ProcessInStorePurchase" method="post">
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Product Image</th>
+                <th>Product Name</th>
+                <th>Stock</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Products.Count; i++)
+            {
+                var product = Model.Products[i].Product; // Using the Product reference inside ProductSelectionVM
+
+                <tr>
+                    <td>
+                        @if (!string.IsNullOrEmpty(product?.ProductImagePath))
+                        {
+                            <img src="@Url.Content(product.ProductImagePath)" width="100" height="100" alt="Product Image"
+                                 style="border-radius: 10px; object-fit: cover; border: 1px solid #ddd; padding: 5px;" />
+                        }
+                        else
+                        {
+                            <span>No Image Available</span>
+                        }
+                    </td>
+                    <td>
+                        @product.ProductItem
+                        <input type="hidden" asp-for="Products[i].ProductId" />
+                        <input type="hidden" asp-for="Products[i].Product.ProductItem" />
+                    </td>
+                    <td>@product.Qty</td>
+                    <td>₱@product.Price.ToString("N2")</td>
+                    <td>
+                        <input type="number" asp-for="Products[i].Quantity" class="form-control" min="1" max="@product.Qty" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <button type="submit" class="btn btn-primary">Confirm Purchase</button>
+</form>
