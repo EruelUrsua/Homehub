@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeHub.DataModel.Migrations
 {
     [DbContext(typeof(HomeHubContext))]
-    [Migration("20250303121354_AddIdentityTables")]
+    [Migration("20250303193352_AddIdentityTables")]
     partial class AddIdentityTables
     {
         /// <inheritdoc />
@@ -110,6 +110,12 @@ namespace HomeHub.DataModel.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<double>("lat")
+                        .HasColumnType("float");
+
+                    b.Property<double>("lng")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
