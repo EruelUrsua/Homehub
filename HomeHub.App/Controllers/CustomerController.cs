@@ -773,8 +773,9 @@ namespace HomeHub.App.Controllers
         }
 
         [HttpPost]
-        public IActionResult SubmitRating(int score, string comments, string clientId, string businessId)
+        public async Task<IActionResult> SubmitRating(int score, string comments, string clientId, string businessId)
         {
+            var userId = await GetCurrentUserId();
 
             if (string.IsNullOrWhiteSpace(comments))
             {
@@ -788,7 +789,9 @@ namespace HomeHub.App.Controllers
                 Score = score,
                 Comments = comments,
                 BusinessId = businessId,
-                Date = DateTime.Now
+                Date = DateTime.Now,
+                CustomerId = userId,
+                ReviewerId = userId
             };
 
             context.Ratings.Add(rating);

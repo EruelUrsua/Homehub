@@ -1,33 +1,111 @@
 ﻿@model SignInVM
 
-<h3>Sign in to the the App</h3>
+<body>
+    <div class="banner"></div>
+    <div class="signin-container">
+        <div class="card">
+            <h2>Sign In</h2>
 
-<form asp-controller="Account" asp-action="SignIn" method="post">
-    <div asp-validation-summary="All" class="text-danger"></div>
+            <form asp-controller="Account" asp-action="SignIn" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
 
+                <div class="form-group">
+                    <input asp-for="Username" class="form-control" placeholder="Email" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
 
-    <label asp-for="Username">Email</label>
-    <input asp-for="Username" />
-    <span asp-validation-for="Username"></span>
-    <br /><br 
-    <label asp-for="Password"></label>
-    <input asp-for="Password" />
-    <span asp-validation-for="Password"></span>
-    <br /><br
-    <a asp-action="Index" asp-controller="Home" class="btn btn-light">
-        Back to Home Page
-    </a>
-    <input type="submit" class="btn btn-success" value="Log-In" />
+                <div class="form-group">
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
 
-</form>
-<br />
-Don't have an account?
-<a asp-controller="Account" asp-action="Selection">
-    Register here
-</a>
+                <input type="submit" class="btn btn-custom" value="Login" />
+            </form>
 
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+            <p class="register-link">
+                New to HomeHub?
+                <a asp-controller="Account" asp-action="Selection">Sign Up</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+<style>
+    body {
+        background-color: #F1F1F1;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .banner {
+        background-color: #3964D2;
+        height: 200px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 0;
+    }
+
+    .signin-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        position: relative;
+        z-index: 1;
+        margin-top: -30px;
+    }
+
+    .card {
+        background-color: #1A3D8F;
+        color: white;
+        padding: 40px;
+        border-radius: 12px;
+        text-align: center;
+        width: 400px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 10px;
+        border-radius: 6px;
+        border: none;
+        font-size: 14px;
+    }
+
+    .btn-custom {
+        background-color: #ffffff;
+        color: #1A3D8F;
+        font-weight: bold;
+        width: 100%;
+        padding: 6px;
+        margin-top: 14px;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+
+        .btn-custom:hover {
+            background-color: #dfe6f1;
+        }
+
+    .register-link {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+        .register-link a {
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+            .register-link a:hover {
+                text-decoration: underline;
+            }
+</style>

@@ -1,23 +1,67 @@
-﻿
-
-<h2>Create Your Account</h2>
-<br />
-<h3>Choose User type</h3>
-<br />
-<br />
-<body style="background-color:#F1F1F1">
-<a asp-controller="Account" asp-action="RegisterC" class="btn btn-light">
-        Customer
-    </a>
-
-<a asp-controller="Account" asp-action="RegisterB" class="btn btn-light">
-        Business
-    </a>
-
-
+﻿<body>
+    <div class="banner"></div>
+    <div class="selection-container">
+        <div class="card">
+            <h2>Create Your Account</h2>
+            <h5>Choose User Type</h5>
+            <a asp-controller="Account" asp-action="RegisterC" class="btn btn-custom">Customer</a>
+            <a asp-controller="Account" asp-action="RegisterB" class="btn btn-custom">Business</a>
+        </div>
+    </div>
 </body>
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+
+<style>
+    body {
+        background-color: #F1F1F1;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .banner {
+        background-color: #3964D2;
+        height: 200px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 0;
+    }
+
+    .selection-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        position: relative;
+        z-index: 1;
+        margin-top: -30px;
+    }
+
+    .card {
+        background-color: #1A3D8F;
+        color: white;
+        padding: 50px;
+        border-radius: 12px;
+        text-align: center;
+        width: 420px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-custom {
+        background-color: #ffffff;
+        color: #1A3D8F;
+        font-weight: bold;
+        width: 100%;
+        padding: 12px;
+        margin-top: 15px;
+        font-size: 18px;
+        border-radius: 8px;
+    }
+
+        .btn-custom:hover {
+            background-color: #dfe6f1;
+        }
+</style>

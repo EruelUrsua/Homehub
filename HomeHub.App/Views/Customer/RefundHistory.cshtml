@@ -1,72 +1,125 @@
-﻿@model IEnumerable<HomeHub.DataModel.RefundRequest>
+﻿RefundHistory.cshtml
 
-<h2>Refund History</h2>
+@model IEnumerable<HomeHub.DataModel.RefundRequest>
 
-@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
-{
-    <div class="alert alert-warning">
-        @ViewBag.ErrorMessage
-    </div>
-}
+<body>
+    <div class="container mt-4">
+        <div class="header-section">
+            <h2 class="text-center">Refund History</h2>
+        </div>
 
-<!-- Filter Dropdown -->
-<form method="get" action="@Url.Action("RefundHistory", "Customer")" class="mb-3">
-    <label for="statusFilter">Filter by Status:</label>
-    <select name="statusFilter" id="statusFilter" class="form-control" onchange="this.form.submit()">
-        <option value="All" selected="@(ViewBag.StatusFilter == "All" ? "selected" : null)">All</option>
-        <option value="Refund Pending" selected="@(ViewBag.StatusFilter == "Refund Pending" ? "selected" : null)">Refund Pending</option>
-        <option value="Refund Accepted" selected="@(ViewBag.StatusFilter == "Refund Accepted" ? "selected" : null)">Refund Accepted</option>
-        <option value="Refund Rejected" selected="@(ViewBag.StatusFilter == "Refund Rejected" ? "selected" : null)">Refund Rejected</option>
-    </select>
-</form>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Order ID</th>
-            <th>Item</th>
-            <th>Quantity</th>
-            <th>Refund Amount</th>
-            <th>Status</th>
-            <th>Request Date</th>
-            <th>Rejection Reason</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var refund in Model)
+        @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
         {
-            <tr>
-                <td>@refund.OrderId</td>
-                <td>@refund.Item</td>
-                <td>@refund.RefundQuantity</td>
-                <td>₱@(refund.RefundAmount.HasValue ? refund.RefundAmount.Value.ToString("N2") : "0.00")</td>
-                <td>@refund.RefundStatus</td>
-                <td>@refund.RefundRequestDate.ToShortDateString()</td>
-                <td>
-                    @if (!string.IsNullOrEmpty(refund.RejectionReason))
-                    {
-                        @refund.RejectionReason
-                    }
-                    else
-                    {
-                        <span class="text-muted">N/A</span>
-                    }
-                </td>
-                <td>
-                    @if (refund.RefundStatus == "Refund Accepted")
-                    {
-                        <a href="@Url.Action("SellerProfile", "Customer", new { businessId = refund.BusinessId })" class="btn btn-info btn-sm">
-                            View Seller's Profile
-                        </a>
-                    }
-                </td>
-            </tr>
+            <div class="alert alert-warning text-center">
+                @ViewBag.ErrorMessage
+            </div>
         }
-    </tbody>
-</table>
 
-@if (!Model.Any())
-{
-    <div class="alert alert-warning">No refund requests found.</div>
-}
+        <form method="get" action="@Url.Action("RefundHistory", "Customer")" class="mb-3">
+            <label for="statusFilter" class="fw-bold">Filter by Status:</label>
+            <select name="statusFilter" id="statusFilter" class="form-select" onchange="this.form.submit()">
+                <option value="All" selected="@(ViewBag.StatusFilter == "All" ? "selected" : null)">All</option>
+                <option value="Refund Pending" selected="@(ViewBag.StatusFilter == "Refund Pending" ? "selected" : null)">Refund Pending</option>
+                <option value="Refund Accepted" selected="@(ViewBag.StatusFilter == "Refund Accepted" ? "selected" : null)">Refund Accepted</option>
+                <option value="Refund Rejected" selected="@(ViewBag.StatusFilter == "Refund Rejected" ? "selected" : null)">Refund Rejected</option>
+            </select>
+        </form>
+
+        <div class="card shadow-sm border-0">
+            @if (!Model.Any())
+            {
+                <div class="alert alert-info text-center">No refund requests found.</div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Item</th>
+                                <th class="text-center">Quantity</th>
+                                <th class="text-center">Refund Amount</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Request Date</th>
+                                <th>Rejection Reason</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var refund in Model)
+                            {
+                                <tr>
+                                    <td>@refund.OrderId</td>
+                                    <td>@refund.Item</td>
+                                    <td class="text-center">@refund.RefundQuantity</td>
+                                    <td class="text-center text-primary fw-bold">
+                                        ₱@(refund.RefundAmount.HasValue ? refund.RefundAmount.Value.ToString("N2") : "0.00")
+                                    </td>
+                                    <td class="text-center fw-bold
+                                        @(refund.RefundStatus == "Refund Accepted" ? "text-success" :
+                                          refund.RefundStatus == "Refund Rejected" ? "text-danger" :
+                                          "text-warning")">
+                                        @refund.RefundStatus
+                                    </td>
+                                    <td class="text-center">@refund.RefundRequestDate.ToShortDateString()</td>
+                                    <td>
+                                        @if (!string.IsNullOrEmpty(refund.RejectionReason))
+                                        {
+                                            @refund.RejectionReason
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted">N/A</span>
+                                        }
+                                    </td>
+                                    <td class="text-center">
+                                        @if (refund.RefundStatus == "Refund Accepted")
+                                        {
+                                            <a href="@Url.Action("SellerProfile", "Customer", new { businessId = refund.BusinessId })"
+                                               class="btn btn-info btn-sm fw-bold">
+                                                View Seller's Profile
+                                            </a>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+
+<style>
+    .container {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .header-section {
+        background-color: #203B81;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .table th {
+        background-color: #eef5ff !important;
+    }
+
+    .table td {
+        vertical-align: middle;
+    }
+
+    .card {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+    }
+</style>
