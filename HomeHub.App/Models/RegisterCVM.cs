@@ -13,6 +13,8 @@ namespace HomeHub.App.Models
             ConfirmPassword = "";
             ContactNo = "";
             Address = "";
+            lat = 14.58699;
+            lng = 120.98634;
         }
 
         [Required]
@@ -27,6 +29,14 @@ namespace HomeHub.App.Models
         public string ContactNo { get; set; }
         [Required]
         public string Address { get; set; }
+
+        [Required]
+        public double lat { get; set; }
+
+        [Required]
+        public double lng { get; set; }
+
+
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }

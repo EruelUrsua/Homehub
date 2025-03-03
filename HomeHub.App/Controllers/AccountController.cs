@@ -161,6 +161,8 @@ namespace HomeHub.App.Controllers
                 user.Firstname = model.Firstname;
                 user.PhoneNumber = model.ContactNo;
                 user.Address = model.Address;
+                user.lat = model.lat;
+                user.lng = model.lng;
 
                 var result = await userManager.CreateAsync(user, model.Password);
                 await userManager.AddToRoleAsync(user, "Customer");
@@ -207,6 +209,8 @@ namespace HomeHub.App.Controllers
                 provider.BusinessName = model.BusinessName;
                 provider.Businesstype = model.BusinessType;
                 provider.Category = model.Category;
+                user.lat = model.lat;
+                user.lng = model.lng;
                 var result = await userManager.CreateAsync(user, model.Password);
                 await userManager.AddToRoleAsync(user, "Provider");
                 provider.UserID = user.Id;

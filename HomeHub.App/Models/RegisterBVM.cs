@@ -6,7 +6,16 @@ namespace HomeHub.App.Models
     {
         public RegisterBVM()
         {
-            
+
+            Lastname = "";
+            Firstname = "";
+            Email = "";
+            Password = "";
+            ConfirmPassword = "";
+            ContactNo = "";
+            BusinessAddress = "";
+            lat = 14.58699;
+            lng = 120.98634;
         }
 
 
@@ -28,6 +37,14 @@ namespace HomeHub.App.Models
         public bool BusinessType { get; set; }
         [Required]
         public string BusinessAddress { get; set; }
+
+        [Required]
+        public double lat { get; set; }
+
+        [Required]
+        public double lng { get; set; }
+
+
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }

@@ -19,6 +19,10 @@
     <input asp-for="Address" class="form-control" id="latlang" />
     <span asp-validation-for="Address"></span>
     <br />
+
+    <input type="hidden" id="lat" asp-for="lat" class="form-control" />
+    <input type="hidden" id="lng" asp-for="lng" class="form-control" />
+
     @* This is the Map Script do not touch! *@
      <script src="~/lib/leaflet/leaflet.js"></script> 
      <script src="~ /lib/leaflet/leaflet.min.js"></script> 
@@ -34,51 +38,17 @@
       
 
             marker.on("drag", function(e) {
-            //var marker = e.target;
             var position = marker.getLatLng();
 
-            document.getElementById("latlang").value = position.lat +", " + position.lng;
-            console.log(position.lat);
-            console.log(position.lng);
+            // document.getElementById("latlang").value = position.lat +", " + position.lng;
+             document.getElementById("lat").value = position.lat;
+              document.getElementById("lng").value = position.lng;
+            // console.log(position.lat);
+            // console.log(position.lng);
         });
-
-
-
-        //      var popup = L.popup();
-        //     function onDragEnd(e)
-        //     {
-        //                 popup
-        // .setLatLng(e.latlng)
-        // .setContent("You clicked the map at " + e.latlng.toString())
-        // .openOn(map);
-        //     }
-        //     map.on('dragend', onDragEnd);
-                // var popup = marker.bindPopup('address' + marker.getLatLng()).openPopup();
-                // popup.addTo(map);
 
       
                 L.control.locate().addTo(map);
-
-        // function ondragend(e) {
-        //   marker
-        //         .setLatLng(e.latlng)
-        //         .setContent("You clicked the map at " + e.latlng.toString())
-        //         .openOn(map);
-        // }
-
-
-
-
-        // map.on('dragend', onDragend);
-        //      var jsModel = @@Html.Raw(Json.Serialize(Model)); 
-        //      console.log(jsModel) 
-
-        //      for (i in jsModel) 
-        //      {item = jsModel [i] 
-        //           L.marker([item.lat, item.long]).addTo(map) 
-        //        .bindPopup(item.name + '<br>' + item.address); 
-
-        //     } 
      </script>
 
     <br />
