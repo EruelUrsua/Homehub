@@ -1125,5 +1125,70 @@ namespace HomeHub.App.Controllers
             }
             return View(promoViewModel);
         }
+
+        public IActionResult InStorePurchase()
+        {
+            var products = _context.Products
+                .Where(p => p.Qty > 0)
+                .Select(p => new ProductSelectionVM
+                {
+                    ProductId = p.ProductId,
+                    Quantity = p.Qty,
+                }).ToList();
+
+            var viewModel = new InStorePurchaseVM
+            {
+                Products = products
+            };
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ProcessInStorePurchase(InStorePurchaseVM model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("InStorePurchase", model);
+            }
+
+            List<string> messages = new List<string>();
+
+            foreach (var item in model.Products)
+            {
+                if (item.Quantity > 0) // Ensure only selected products are processed
+                {
+                    var product = await _context.Products.FindAsync(item.ProductId);
+
+                    if (product != null)
+                    {
+                        if (product.Qty >= item.Quantity)
+                        {
+                            product.Qty -= item.Quantity; // Deduct stock
+
+                            messages.Add($"✅ {item.Quantity} {product.ProductItem}(s) sold. Remaining stock: {product.Qty}.");
+
+                            // ⚠ Low stock warning 
+                            if (product.Qty < 10)
+                            {
+                                messages.Add($"⚠ Warning: {product.ProductItem} is running low on stock! Only {product.Qty} left.");
+                            }
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", $"❌ Not enough stock for {product.ProductItem}");
+                            return View("InStorePurchase", model);
+                        }
+                    }
+                }
+            }
+
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = string.Join("<br>", messages); // Store multiple messages
+
+            return RedirectToAction("InStorePurchase");
+        }
     }
 }
