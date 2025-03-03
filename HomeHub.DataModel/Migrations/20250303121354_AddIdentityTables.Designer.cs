@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeHub.DataModel.Migrations
 {
     [DbContext(typeof(HomeHubContext))]
-    [Migration("20250227080222_AddIdentityTables")]
+    [Migration("20250303121354_AddIdentityTables")]
     partial class AddIdentityTables
     {
         /// <inheritdoc />
@@ -219,6 +219,10 @@ namespace HomeHub.DataModel.Migrations
                         .HasColumnName("ClientID");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ClientId"));
+
+                    b.Property<string>("AddInstructions")
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<string>("BusinessId")
                         .IsRequired()
@@ -554,8 +558,9 @@ namespace HomeHub.DataModel.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RatingId"));
 
-                    b.Property<int>("BusinessId")
-                        .HasColumnType("int")
+                    b.Property<string>("BusinessId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(MAX)")
                         .HasColumnName("BusinessID");
 
                     b.Property<string>("Comments")
@@ -563,12 +568,22 @@ namespace HomeHub.DataModel.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<string>("CustomerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("Date")
                         .HasColumnType("date");
 
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int")
+                    b.Property<string>("OrderId")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
                         .HasColumnName("OrderID");
+
+                    b.Property<string>("ReviewerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Score")
                         .HasColumnType("int");

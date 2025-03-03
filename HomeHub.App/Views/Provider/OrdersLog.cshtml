@@ -13,24 +13,29 @@
             <th>Quantity</th>
             <th>Date</th>
             <th>Status</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var log in Model)
         {
             <tr>
-                <td hidden>@Html.HiddenFor(m => log.LogId)</td>
+                <td hidden>@log.LogId</td> 
                 <td>@log.OrderId</td>
                 <td>@log.OrderDate.ToShortDateString()</td>
                 <td>@log.FirstName</td>
                 <td>@log.LastName</td>
-                <td hidden>@Html.HiddenFor(m => log.BusinessId)</td>
+                <td hidden>@log.BusinessId</td>
                 <td>@log.Item</td>
                 <td>@log.Qty</td>
                 <td>@log.Date.ToShortDateString()</td>
                 <td>@log.Status</td>
+                <td>
+                    <a asp-action="CustomerReview" asp-route-LogId="@log.LogId" class="btn btn-primary">
+                        Review Customer
+                    </a>
+                </td>
             </tr>
         }
     </tbody>
 </table>
-
