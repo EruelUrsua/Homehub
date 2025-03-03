@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
 
 namespace HomeHub.App.Controllers
 {
@@ -1189,6 +1191,73 @@ namespace HomeHub.App.Controllers
             TempData["SuccessMessage"] = string.Join("<br>", messages); // Store multiple messages
 
             return RedirectToAction("InStorePurchase");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> CustomerReview(string LogId)
+        {
+            var user = await GetCurrentUserAsync(); 
+
+            if (user == null)
+                return Unauthorized(); 
+
+            var orderLog = _context.OrdersLogs.FirstOrDefault(o => o.LogId == LogId);
+
+            if (orderLog == null)
+            {
+                TempData["ErrorMessage"] = "Order not found for the given Log ID.";
+                return RedirectToAction("ViewOrders");
+            }
+
+            var existingReview = _context.Ratings
+                .FirstOrDefault(r => r.OrderId == orderLog.OrderId && r.ReviewerId == user.Id);
+
+            if (existingReview != null)
+            {
+                TempData["ErrorMessage"] = "You have already reviewed this customer.";
+                return RedirectToAction("ViewOrders");
+            }
+
+            var model = new ProviderReviewVM
+            {
+                OrderId = orderLog.OrderId,
+                CustomerId = orderLog.UserId,
+                CustomerName = $"{orderLog.FirstName} {orderLog.LastName}"
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CustomerReview(ProviderReviewVM model)
+        {
+            var user = await GetCurrentUserAsync(); 
+
+            if (user == null)
+                return Unauthorized(); 
+
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var newReview = new Rating
+            {
+                OrderId = model.OrderId,
+                BusinessId = user.Id, 
+                CustomerId = model.CustomerId,
+                ReviewerId = user.Id, // Mark provider as the reviewer
+                Score = model.Score,
+                Comments = model.Comments,
+                Date = DateTime.UtcNow
+            };
+
+            _context.Ratings.Add(newReview);
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Review successfully submitted!";
+            return RedirectToAction("ViewOrders");
         }
     }
 }

@@ -152,6 +152,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcQ3JlYXRlUHJvbW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Charlize/Documents/Homehub/HomeHub.App/Views/Provider/CustomerReview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcQ3VzdG9tZXJSZXZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Charlize/Documents/Homehub/HomeHub.App/Views/Provider/EditPromo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmlkZXJcRWRpdFByb21vLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

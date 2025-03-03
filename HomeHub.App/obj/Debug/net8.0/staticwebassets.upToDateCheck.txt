@@ -1,6 +1,7 @@
 wwwroot\css\site.css
 wwwroot\css\styles.css
 wwwroot\favicon.ico
+wwwroot\images\08894f65-c9e4-4184-a1d8-def0412675e3_cleaning kit.jpg
 wwwroot\images\0ad5f321-fc89-4782-ab70-46b5e685f9c5_cleaning kit.jpg
 wwwroot\images\0c6db692-5aa4-4306-a5e5-ca890b5b04d5_cleaning kit.jpg
 wwwroot\images\0e175329-4e30-4e91-8b21-ae30884a12ec_samplestock.jpg

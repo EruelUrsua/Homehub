@@ -1,4 +1,6 @@
-﻿namespace HomeHub.App.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace HomeHub.App.Models
 {
     public class ReviewRatingVM
     {

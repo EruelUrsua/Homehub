@@ -154,7 +154,7 @@ namespace HomeHub.App.Controllers
             ViewBag.Categories = categories;
 
             var productProviders = (from p in context.Providers
-                                    join u in context.Users on p.UserID equals u.Id
+                                    join u in context.ApplicationUsers on p.UserID equals u.Id
                                     where p.Businesstype == false
                                     select new
                                     {
@@ -194,7 +194,7 @@ namespace HomeHub.App.Controllers
             ViewBag.Categories = categories;
 
             var serviceProviders = (from p in context.Providers
-                                    join u in context.Users on p.UserID equals u.Id
+                                    join u in context.ApplicationUsers on p.UserID equals u.Id
                                     where p.Businesstype == true
                                     select new
                                     {
@@ -219,7 +219,7 @@ namespace HomeHub.App.Controllers
 
             //var provider = context.Providers.FirstOrDefault(x => x.UserID == businessId);
             var provider = (from p in context.Providers
-                            join u in context.Users on p.UserID equals u.Id
+                            join u in context.ApplicationUsers on p.UserID equals u.Id
                             where p.UserID == businessId
                             select new
                             {
@@ -260,7 +260,7 @@ namespace HomeHub.App.Controllers
 
             //var provider = context.Providers.FirstOrDefault(x => x.UserID == businessId);
             var provider = (from p in context.Providers
-                            join u in context.Users on p.UserID equals u.Id
+                            join u in context.ApplicationUsers on p.UserID equals u.Id
                             where p.UserID == businessId
                             select new
                             {
@@ -689,7 +689,7 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> SellerProfile(string businessId)
         {
             var seller = (from p in context.Providers
-                          join u in context.Users on p.UserID equals u.Id
+                          join u in context.ApplicationUsers on p.UserID equals u.Id
                           where p.UserID == businessId
                           select new SellerProfileVM
                           {

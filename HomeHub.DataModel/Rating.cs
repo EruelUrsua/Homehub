@@ -15,4 +15,6 @@ public class Rating
     public string Comments { get; set; } = null!;
 
     public DateTime Date { get; set; }
+    public string CustomerId { get; set; }
+    public string ReviewerId { get; set; } // New field to determine who wrote the review
 }
