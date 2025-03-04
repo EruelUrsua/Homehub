@@ -449,6 +449,12 @@ namespace HomeHub.DataModel.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("lat")
+                        .HasColumnType("float");
+
+                    b.Property<double>("lng")
+                        .HasColumnType("float");
+
                     b.HasKey("LogId");
 
                     b.ToTable("OrdersLogs");
