@@ -446,6 +446,8 @@ namespace HomeHub.App.Controllers
                                            ReportId = order.ReportId,
                                            Quantity = order.Quantity,
                                            ModeOfPayment = order.ModeOfPayment,
+                                           lat    = order.lat,
+                                           lng = order.lng
                                        }).ToListAsync();
 
             if (!productOrders.Any()) // Check if the list is empty
@@ -514,6 +516,8 @@ namespace HomeHub.App.Controllers
                                            ReportId = order.ReportId,
                                            Quantity = order.Quantity,
                                            ModeOfPayment = order.ModeOfPayment,
+                                           lat = order.lat,
+                                           lng = order.lng
                                        }).ToListAsync();
 
             if (!serviceRequests.Any()) // Check if the list is empty

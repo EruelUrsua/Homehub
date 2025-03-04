@@ -348,6 +348,9 @@ namespace HomeHub.App.Controllers
             entity.UserId = getCurrentUserId;
             entity.FirstName = user.Firstname;
             entity.LastName = user.Lastname;
+              entity.lat = user.lat;
+            entity.lng = user.lng; 
+    
             entity.ReportId = 1; //remove
             entity.RatingId = 1; //remove
             entity.Quantity = model.qty;
@@ -449,7 +452,7 @@ namespace HomeHub.App.Controllers
             if (user == null)
                 return View("Index");
 
-            user.Address = model.Address;
+            user.Address = model.Address; // change to lat lng
             var result = await userManager.UpdateAsync(user);
 
             if (result.Succeeded)
