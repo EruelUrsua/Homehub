@@ -461,23 +461,6 @@ namespace HomeHub.App.Controllers
 
         public IActionResult ViewOrders()
         {
-            /*
-            string userId = userManager.GetUserId(User);
-            
-            var orders = context.OrdersLogs
-                .Where(o => o.UserId == userId)
-                .ToList();
-
-            //Retrieve all rated order IDs to identify which orders are rated
-            var ratedOrderIds = context.Ratings.Select(r => r.OrderId).ToHashSet();
-
-            //Attach an "IsRated" flag to each OrdersLog entry based on whether it exists in the Ratings table
-            foreach (var order in orders)
-            {
-                // Check if the order ID is in the set of rated order IDs
-                order.IsRated = ratedOrderIds.Contains(int.Parse(order.OrderId));
-            }*/
-
             string userId = userManager.GetUserId(User);
 
             // Get all rated order IDs and convert them to a HashSet for efficient lookup
@@ -507,7 +490,7 @@ namespace HomeHub.App.Controllers
                         .Where(b => b.UserID == o.BusinessId)
                         .Select(b => b.BusinessName) // Assuming BusinessName is the column for the provider's name
                         .FirstOrDefault() ?? "Unknown Provider",
-                    IsRated = ratedOrderIds.Contains(o.OrderId) // Now comparing as strings
+                    IsRated = ratedOrderIds.Contains(o.OrderId)
                 })
                 .OrderBy(o => o.OrderId)
                 .ToList();

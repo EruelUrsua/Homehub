@@ -1038,7 +1038,7 @@ namespace HomeHub.App.Controllers
             if (user == null) return Unauthorized();
 
             List<Promo> list = await _context.Promos
-                 .Where(p => p.BusinessId == user.Id) // Filter promos for the current user
+                 .Where(p => p.BusinessId == user.Id)
                  .ToListAsync();
 
             return View(list);
@@ -1048,33 +1048,73 @@ namespace HomeHub.App.Controllers
         {
             var user = await GetCurrentUserAsync();
 
-            if (user == null) return Unauthorized(); // Ensure user is logged in
+            if (user == null) return Unauthorized();
 
-            return View();
+            var model = new PromoViewModel
+            {
+                PromoStart = DateTime.Today,
+                PromoEnd = DateTime.Today.AddDays(1)
+            };
+
+            return View(model);
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreatePromo(PromoViewModel model)
         {
+            if (model.PromoStart < DateTime.Today)
+            {
+                ModelState.AddModelError("PromoStart", "Promo start date cannot be in the past.");
+            }
+
+            if (model.PromoEnd <= model.PromoStart)
+            {
+                ModelState.AddModelError("PromoEnd", "Promo end date must be at least one day after the start date.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
             var user = await GetCurrentUserAsync();
 
-            if (user == null) return Unauthorized(); // Ensure user is logged in
+            if (user == null) return Unauthorized();
+
+            var business = _context.Providers.FirstOrDefault(b => b.UserID == user.Id);
+
+            if (business == null)
+            {
+                ModelState.AddModelError("", "Business not found for the current user.");
+                return View(model);
+            }
+
+            bool promoExists = await _context.Promos.AnyAsync(p => p.PromoCode == model.PromoCode);
+            if (promoExists)
+            {
+                ModelState.AddModelError("PromoCode", "This promo code is already in use. Please choose a different one.");
+                return View(model);
+            }
+
 
             if (ModelState.IsValid)
             {
-                Promo entity = new Promo();
-                entity.PromoName = model.PromoName;
-                entity.PromoCode = model.PromoCode;
-                entity.PromoStart = model.PromoStart;
-                entity.PromoEnd = model.PromoEnd;
-                entity.BusinessName = model.BusinessName;
-                entity.Discount = model.Discount;
-                entity.BusinessId = user.Id; // Assign the promo to the current logged-in user
+                Promo entity = new Promo
+                {
+                    PromoName = model.PromoName,
+                    PromoCode = model.PromoCode,
+                    PromoStart = model.PromoStart,
+                    PromoEnd = model.PromoEnd,
+                    BusinessName = business.BusinessName,
+                    Discount = model.Discount /100,
+                    BusinessId = user.Id
+                };
 
                 _context.Promos.Add(entity);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
 
-                return RedirectToAction("ProviderHome", "Provider");
+                return RedirectToAction("ManagePromo", "Provider");
             }
 
             return View(model);
@@ -1095,8 +1135,7 @@ namespace HomeHub.App.Controllers
                 PromoCode = promo.PromoCode,
                 PromoStart = promo.PromoStart,
                 PromoEnd = promo.PromoEnd,
-                BusinessName = promo.BusinessName,
-                Discount = promo.Discount
+                Discount = promo.Discount * 100
             };
 
             return View(promoViewModel);
@@ -1113,12 +1152,31 @@ namespace HomeHub.App.Controllers
                     return RedirectToAction("ManagePromo");
                 }
 
+                bool promoExists = await _context.Promos.AnyAsync(p => p.PromoCode == promoViewModel.PromoCode);
+                if (promoExists)
+                {
+                    ModelState.AddModelError("PromoCode", "Promo Code already exists.");
+                    return View(promoViewModel);
+                }
+
+                //Date validation
+                if (promoViewModel.PromoStart < DateTime.Today)
+                {
+                    ModelState.AddModelError("PromoStart", "Promo start date cannot be earlier than today.");
+                    return View(promoViewModel);
+                }
+
+                if (promoViewModel.PromoEnd < promoViewModel.PromoStart.AddDays(1))
+                {
+                    ModelState.AddModelError("PromoEnd", "Promo end date must be at least one day after the start date.");
+                    return View(promoViewModel);
+                }
+
                 promo.PromoName = promoViewModel.PromoName;
                 promo.PromoCode = promoViewModel.PromoCode;
                 promo.PromoStart = promoViewModel.PromoStart;
                 promo.PromoEnd = promoViewModel.PromoEnd;
-                promo.BusinessName = promoViewModel.BusinessName;
-                promo.Discount = promoViewModel.Discount;
+                promo.Discount = promoViewModel.Discount / 100;
 
                 _context.Promos.Update(promo);
                 await _context.SaveChangesAsync();

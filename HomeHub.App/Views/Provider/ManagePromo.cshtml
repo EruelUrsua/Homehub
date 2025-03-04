@@ -2,171 +2,69 @@
 @model List<Promo>
 
 <style>
-    .container {
-        width: 100%;
-        margin: 0 auto;
-        padding: 20px;
-        font-family: Arial, sans-serif;
-    }
-
-    .card {
+    .header-section {
         background-color: #203B81;
-        color: #F1F1F1;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        max-width: 900px;
-        margin: 20px auto;
-        box-sizing: border-box;
-    }
-
-    h1 {
-        font-size: 42px;
-        color: #203B81;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 0;
-    }
-
-    .table-container {
-        overflow-x: auto;
-        margin-top: 20px;
-    }
-
-    .table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-        .table th, .table td {
-            padding: 10px;
-            text-align: left;
-            color: #F1F1F1;
-        }
-
-        .table th {
-            font-weight: bold;
-            background-color: #203B81;
-        }
-
-        .table tbody tr {
-            background-color: #203B81;
-            transition: background-color 0.2s;
-        }
-
-            .table tbody tr:hover {
-                background-color: #2a4b91;
-            }
-
-        .table tbody td {
-            border-bottom: 1px solid #1c3a60;
-        }
-
-    .action-buttons {
-        display: flex;
-        gap: 8px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .btn {
-        padding: 8px 16px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 0.875rem;
-        font-weight: bold;
-        text-align: center;
         color: white;
-        width: 100%;
-        max-width: 120px;
-        text-transform: uppercase;
-    }
-
-    .btn-primary {
-        background-color: #3498db;
-    }
-
-        .btn-primary:hover {
-            background-color: #2980b9;
-        }
-
-    .btn-danger {
-        background-color: #e74c3c;
-    }
-
-        .btn-danger:hover {
-            background-color: #c0392b;
-        }
-
-    .btn-success {
-        background-color: #27ae60;
-        width: 200px;
-    }
-
-        .btn-success:hover {
-            background-color: #1e8449;
-        }
-
-    .mb-3 {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
+        padding: 30px;
+        text-align: center;
+        border-radius: 8px;
         margin-bottom: 20px;
     }
 
-        .mb-3 .btn {
-            white-space: nowrap;
-            flex: 0 1 auto;
-            min-width: 200px;
-        }
+    .table tbody tr:hover {
+        background-color: #eef5ff;
+    }
+
+    .btn-sm {
+        min-width: 100px;
+    }
 </style>
 
-<div class="container">
-    <h1>Manage Promos</h1>
+<div class="container py-5">
+    <div class="header-section">
+        <h1 class="fw-bold">Manage Promos</h1>
+    </div>
 
-    <div class="card">
-        <div class="table-container">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Promo Name</th>
-                        <th>Promo Code</th>
-                        <th>Promo Start</th>
-                        <th>Promo End</th>
-                        <th>Business Name</th>
-                        <th>Discount</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
+    <div class="card shadow-lg">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover table-bordered">
+                    <thead class="table-primary">
                         <tr>
-                            <td>@item.PromoName</td>
-                            <td>@item.PromoCode</td>
-                            <td>@item.PromoStart.ToShortDateString()</td>
-                            <td>@item.PromoEnd.ToShortDateString()</td>
-                            <td>@item.BusinessName</td>
-                            <td>@item.Discount</td>
-                            <td>
-                                <form asp-controller="Provider" asp-action="EditPromo" method="get">
-                                    <input type="hidden" name="id" value="@item.PromoId" />
-                                    <input type="submit" class="btn btn-primary" value="Edit Promo" />
-                                </form>
-                            </td>
+                            <th>Promo Name</th>
+                            <th>Promo Code</th>
+                            <th>Promo Start</th>
+                            <th>Promo End</th>
+                            <th>Discount</th>
+                            <th class="text-center">Actions</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.PromoName</td>
+                                <td>@item.PromoCode</td>
+                                <td>@item.PromoStart.ToShortDateString()</td>
+                                <td>@item.PromoEnd.ToShortDateString()</td>
+                                <td>@((item.Discount * 100).ToString("0"))%</td>
+                                <td class="text-center">
+                                    <form asp-controller="Provider" asp-action="EditPromo" method="get" class="d-inline">
+                                        <input type="hidden" name="id" value="@item.PromoId" />
+                                        <button type="submit" class="btn btn-primary btn-sm">Edit</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
 
-        <div class="mb-3 text-center">
-            <form asp-controller="Provider" asp-action="CreatePromo">
-                <input type="submit" class="btn btn-success" value="Create New Promo" />
-            </form>
+            <div class="text-center mt-4">
+                <form asp-controller="Provider" asp-action="CreatePromo">
+                    <button type="submit" class="btn btn-success btn-lg">Create New Promo</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
-
