@@ -30,6 +30,7 @@
                     </tr>
                     <tr>
                         <th class="bg-primary text-white">Map</th>
+                        <td>
                         <script src="~/lib/leaflet/leaflet.js"></script>
                         <script src="~ /lib/leaflet/leaflet.min.js"></script>
                         <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.83.1/dist/L.Control.Locate.min.js" charset="utf-8"></script>
@@ -37,12 +38,13 @@
                         <div id="map" style="width:100%;height:400px"></div>
                         <script>
 
-                                    var map = L.map('map').setView([14.58699, 120.98634], 15);
+                                    var map = L.map('map').setView([@Model.lat, @Model.lng], 15);
                                          L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                                          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                                          }).addTo(map);
                                         var marker = L.marker([14.58699, 120.98634],{draggable: true} ).addTo(map);
                                          </script>
+                        </td>
                     </tr>
                 </tbody>
             </table>

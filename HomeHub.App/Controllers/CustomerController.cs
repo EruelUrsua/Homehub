@@ -415,7 +415,10 @@ namespace HomeHub.App.Controllers
             {
                 FirstName = user.Firstname,
                 LastName = user.Lastname,
-                Address = user.Address
+                Address = user.Address,
+                lat = user.lat,
+                lng = user.lng
+
             };
 
             return View(model);

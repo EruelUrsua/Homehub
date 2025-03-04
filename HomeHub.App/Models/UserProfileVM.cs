@@ -8,5 +8,9 @@ namespace HomeHub.App.Models
         public string LastName { get; set; }
         [Required]
         public string Address { get; set; }
+
+        public double lat { get; set; }
+
+        public double lng { get; set; }
     }
 }
