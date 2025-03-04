@@ -18,6 +18,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Net;
 using static HomeHub.App.Models.PayMayaVM;
 using System.Threading.Tasks.Dataflow;
+using Newtonsoft.Json;
 
 namespace HomeHub.App.Controllers
 {
@@ -911,28 +912,6 @@ namespace HomeHub.App.Controllers
         [HttpPost]
         public async Task<ActionResult> PayOnline(string LogId)
         {
-            /*
-            var orderLog = context.OrdersLogs.FirstOrDefault(o => o.LogId == LogId);
-
-            if (orderLog == null)
-            {
-                TempData["ErrorMessage"] = "Order not found for the given Log ID.";
-                return RedirectToAction("ViewOrders");
-            }
-
-            decimal amount = orderLog.Fee;
-            string orderRef = "ORDER-" + LogId; // Unique order ID
-            var items = new List<>
-
-            /*string qrCodeUrl = await _payMayaService.PayOnline(amount, orderRef);
-
-            if (!string.IsNullOrEmpty(qrCodeUrl))
-            {
-                ViewBag.QRCodeUrl = qrCodeUrl;
-                return View(); 
-            }
-            
-            return View("Error");*/
             try
             {
                 var orderLog = context.OrdersLogs.FirstOrDefault(o => o.LogId == LogId);
@@ -954,7 +933,18 @@ namespace HomeHub.App.Controllers
 
                 string response = await _payMayaService.CreateCheckoutAsync(totalAmount, currency, items, LogId);
 
-                return Content(response, "application/json");
+                //redirect user to Maya site
+                var checkoutData = JsonConvert.DeserializeObject<dynamic>(response);
+                string checkoutUrl = checkoutData.redirectUrl; // Adjust this based on PayMaya's actual response format
+
+                if (string.IsNullOrEmpty(checkoutUrl))
+                {
+                    return BadRequest("Failed to retrieve PayMaya payment URL.");
+                }
+
+                return Redirect(checkoutUrl);
+
+                //return Content(response, "application/json");
             }
             catch (Exception ex)
             {
@@ -1001,34 +991,6 @@ namespace HomeHub.App.Controllers
 
         public IActionResult ReviewRating(string LogId)
         {
-            /*
-            var rating = (from r in context.Ratings
-                          join b in context.Providers on r.BusinessId equals b.UserID
-                          where r.OrderId == LogId
-                          select new
-                          {
-                              r.OrderId,
-                              r.Score,
-                              r.Comments,
-                              b.BusinessName
-                          }).FirstOrDefault();
-
-            if (rating == null)
-            {
-                return RedirectToAction("ViewOrders"); // Redirect if no rating exists
-            }
-
-            var model = new ReviewRatingVM
-            {
-                OrderId = rating.OrderId,
-                Score = rating.Score,
-                Comments = rating.Comments,
-                BusinessName = rating.BusinessName
-            };
-
-            // Pass the rating details to the view
-            return View(model);*/
-
             var orderLog = context.OrdersLogs.FirstOrDefault(o => o.LogId == LogId);
 
             if (orderLog == null)
@@ -1108,7 +1070,7 @@ namespace HomeHub.App.Controllers
         {
             if (!string.IsNullOrEmpty(requestReferenceNumber))
             {
-                await UpdateOrderStatus(requestReferenceNumber, "Failed");
+                await UpdateOrderStatus(requestReferenceNumber, "Pending");
             }
 
             ViewBag.Message = "Payment failed!";
@@ -1119,7 +1081,7 @@ namespace HomeHub.App.Controllers
         {
             if (!string.IsNullOrEmpty(requestReferenceNumber))
             {
-                await UpdateOrderStatus(requestReferenceNumber, "Cancelled");
+                await UpdateOrderStatus(requestReferenceNumber, "Pending");
             }
 
             ViewBag.Message = "Payment was cancelled!";

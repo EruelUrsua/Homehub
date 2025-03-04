@@ -6,8 +6,12 @@ wwwroot\images\0ad5f321-fc89-4782-ab70-46b5e685f9c5_cleaning kit.jpg
 wwwroot\images\0c6db692-5aa4-4306-a5e5-ca890b5b04d5_cleaning kit.jpg
 wwwroot\images\0e175329-4e30-4e91-8b21-ae30884a12ec_samplestock.jpg
 wwwroot\images\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg
+wwwroot\images\11429e45-9901-4237-a093-809445edb725_West Cebu Estate.png
 wwwroot\images\1ae7e95d-6c20-43e5-9a52-9cd7444e55d3_cleaning kit.jpg
+wwwroot\images\1b217f8e-b9b2-4d8e-815b-699df9a68e09_samplestock.jpg
 wwwroot\images\243470ad-70b5-455a-aeea-ca9526e946d2_cleaning kit.jpg
+wwwroot\images\28448869-fb75-4cd5-b7ec-c8dc21e49a31_ENG 8.png
+wwwroot\images\289a8425-5eb1-4ac7-8498-2a3bf51c8c0b_Sample jpeg.jpeg
 wwwroot\images\2a1dc543-06cd-4551-b20d-5fcf5dae529c_cleaning kit.jpg
 wwwroot\images\2d2a1b92-55ea-4e0d-a7e7-7cb67af8418a_cleaning kit.jpg
 wwwroot\images\2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit.jpg
@@ -37,7 +41,6 @@ wwwroot\images\a567fa3b-2202-4da2-a551-80e3f89a28e4_samplestock.jpg
 wwwroot\images\a67cea36-06e0-4e02-a788-7644adf18cbf_samplestock.jpg
 wwwroot\images\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg
 wwwroot\images\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg
-wwwroot\images\aabd7ba2-6c8e-4003-b17b-65788e87988b_samplestock.jpg
 wwwroot\images\abc08f8c-3ff3-4ebe-86fb-1a4c4a37d989_samplestock.jpg
 wwwroot\images\b568e3d8-8d52-4497-8679-2bed24ff59db_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg
 wwwroot\images\b5a04bd6-bc22-4bdf-8784-5e438071b01a_samplestock.jpg
@@ -46,12 +49,13 @@ wwwroot\images\bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg
 wwwroot\images\c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.jpg
 wwwroot\images\c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.jpg
 wwwroot\images\c8ac0cd5-057e-468c-995c-2742d41206af_samplestock.jpg
+wwwroot\images\d5100e17-1d32-48bc-8609-01b1030814e7_digital-icon 1.png
 wwwroot\images\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg
 wwwroot\images\e0188f78-6475-461f-a987-ec370078a467_cleaning kit.jpg
 wwwroot\images\e5faf723-40ab-42eb-93a6-893a604beda1_cleaning kit.jpg
 wwwroot\images\f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg
-wwwroot\images\f292d79b-d4c3-4b0f-bac2-ae551e99d86b_samplestock.jpg
 wwwroot\images\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg
+wwwroot\images\fc846dd2-acf2-421b-8d70-4698102a27b4_samplestock.jpg
 wwwroot\js\scripts.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

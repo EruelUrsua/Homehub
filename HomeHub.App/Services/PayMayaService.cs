@@ -85,7 +85,6 @@ namespace HomeHub.App.Services
                         currency = currency
                     },
                     items = items,
-                    //requestReferenceNumber = "ORDER-" + logId // Dynamic Log ID
                     requestReferenceNumber = logId,
 
                     redirectUrl = new PayMayaRedirectUrl

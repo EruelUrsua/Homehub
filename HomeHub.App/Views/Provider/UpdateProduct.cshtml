@@ -1,60 +1,71 @@
 ﻿@model HomeHub.App.Models.ProductVM
 
-<h1>Update Product</h1>
-
-<form id="updateProductForm" asp-controller="Provider" asp-action="UpdateProduct" enctype="multipart/form-data" method="post">
-    @Html.AntiForgeryToken()
-
-    <input type="hidden" asp-for="ProviderID" />
-    <input type="hidden" asp-for="ExistingImage" />
-
-    <div class="form-group">
-        <label asp-for="ProductId" class="control-label">Product ID</label>
-        <input asp-for="ProductId" class="form-control" readonly />
+<div class="container mt-4">
+    <div class="header-section">
+        <h2>Update Product</h2>
     </div>
 
-    <div class="form-group">
-        <label asp-for="ProductItem" class="control-label">Product Item</label>
-        <input asp-for="ProductItem" class="form-control" required />
-    </div>
+    <div class="card shadow-sm border-0 p-4">
+        <form id="updateProductForm" asp-controller="Provider" asp-action="UpdateProduct" enctype="multipart/form-data" method="post">
+            @Html.AntiForgeryToken()
 
-    <!-- Display Existing Image with Fallback -->
-    <div class="form-group">
-        <label>Current Product Image</label><br />
-        <img id="existingImage" src="@(string.IsNullOrEmpty(Model.ExistingImage) ? "/images/default-placeholder.png" : Model.ExistingImage)"
-             alt="Product Image" width="150" height="150" />
-    </div>
+            <input type="hidden" asp-for="ProviderID" />
+            <input type="hidden" asp-for="ExistingImage" />
 
-    <!-- File Upload for New Image -->
-    <div class="form-group">
-        <label asp-for="ProductImage">Upload New Product Image</label>
-        <input type="file" asp-for="ProductImage" class="form-control" id="productImage" accept="image/*" />
-        <br />
-        <!-- Preview New Image Before Upload -->
-        <img id="newImagePreview" src="#" alt="New Image Preview" width="150" height="150" style="display: none;" />
-    </div>
+            <div class="mb-3">
+                <label asp-for="ProductId" class="form-label fw-bold">Product ID</label>
+                <input asp-for="ProductId" class="form-control" readonly />
+            </div>
 
-    <div class="form-group">
-        <label asp-for="Qty" class="control-label">Quantity</label>
-        <input asp-for="Qty" class="form-control" required type="number" min="1" />
-    </div>
+            <div class="mb-3">
+                <label asp-for="ProductItem" class="form-label fw-bold">Product Item</label>
+                <input asp-for="ProductItem" class="form-control" required />
+            </div>
 
-    <div class="form-group">
-        <label asp-for="Price" class="control-label">Price</label>
-        <input asp-for="Price" class="form-control" required type="number" min="0" step="0.01" />
-    </div>
+            <!-- Display Existing Image with Fallback -->
+            <div class="mb-3 text-center">
+                <label class="form-label fw-bold">Current Product Image</label>
+                <div>
+                    <img id="existingImage" class="rounded border"
+                         src="@(string.IsNullOrEmpty(Model.ExistingImage) ? "/images/default-placeholder.png" : Model.ExistingImage)"
+                         alt="Product Image" width="150" height="150" />
+                </div>
+            </div>
 
-    <div class="form-group">
-        <label asp-for="ContainerType" class="control-label">Container Type</label>
-        <input asp-for="ContainerType" class="form-control" required />
-    </div>
+            <div class="mb-3">
+                <label asp-for="ProductImage" class="form-label fw-bold">Upload New Product Image</label>
+                <input type="file" asp-for="ProductImage" class="form-control" id="productImage" accept="image/*" />
+                <br />
+                <div class="text-center">
+                    <img id="newImagePreview" class="rounded border" src="#" alt="New Image Preview" width="150" height="150" style="display: none;" />
+                </div>
+            </div>
 
-    <br />
+            <div class="mb-3">
+                <label asp-for="Qty" class="form-label fw-bold">Quantity</label>
+                <input asp-for="Qty" class="form-control" required type="number" min="1" />
+            </div>
 
-    <div class="form-group">
-        <input type="submit" value="Update Product" class="btn btn-primary" />
+            <div class="mb-3">
+                <label asp-for="Price" class="form-label fw-bold">Price</label>
+                <div class="input-group">
+                    <span class="input-group-text">₱</span>
+                    <input asp-for="Price" class="form-control" required type="number" min="0" step="0.01" />
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ContainerType" class="form-label fw-bold">Container Type</label>
+                <input asp-for="ContainerType" class="form-control" required />
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary fw-bold px-4">Update Product</button>
+                <a asp-action="ProductsView" class="btn btn-outline-danger fw-bold px-4 ms-2">Cancel</a>
+            </div>
+        </form>
     </div>
-</form>
+</div>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
@@ -78,3 +89,29 @@
         }
     });
 </script>
+
+<style>
+    .container {
+        max-width: 600px;
+    }
+
+    .header-section {
+        background-color: #203B81;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .card {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+    }
+
+    .rounded {
+        border-radius: 8px;
+    }
+</style>
