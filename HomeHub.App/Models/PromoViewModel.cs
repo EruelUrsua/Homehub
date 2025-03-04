@@ -6,25 +6,27 @@ namespace HomeHub.App.Models
     {
         public int PromoID { get; set; }
 
-        [Required(ErrorMessage = "Promo Name is required.")]
+        [Required]
+        [StringLength(10, ErrorMessage = "Promo name cannot exceed 10 characters.")]
         public string PromoName { get; set; }
 
-        [Required(ErrorMessage = "Promo Code is required.")]
+        [Required]
+        [StringLength(10, ErrorMessage = "Promo code cannot exceed 10 characters.")]
         public string PromoCode { get; set; }
 
         [Required(ErrorMessage = "Promo Start Date is required.")]
-        [DataType(DataType.DateTime)]
-        public DateTime PromoStart { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime PromoStart { get; set; } = DateTime.Today;
 
         [Required(ErrorMessage = "Promo End Date is required.")]
-        [DataType(DataType.DateTime)]
-        public DateTime PromoEnd { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime PromoEnd { get; set; } = DateTime.Today.AddDays(1);
 
-        [Required(ErrorMessage = "Business Name is required.")]
-        public string BusinessName { get; set; }
+        public string? BusinessName { get; set; }
 
         [Required(ErrorMessage = "Discount is required.")]
+        [Range(0, 100, ErrorMessage = "Discount must be between 0% and 100%.")]
         public decimal Discount { get; set; }
-        public string BusinessId { get; set; }
+        public string? BusinessId { get; set; }
     }
 }

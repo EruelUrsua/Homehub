@@ -1,4 +1,5 @@
 ﻿@using HomeHub.DataModel;
+@inject HomeHubContext context;
 
 @model List<OrdersLog>
 
@@ -7,28 +8,32 @@
         width: 100%;
         margin: 0 auto;
         padding: 20px;
-        padding-top: 8px;
         font-family: Arial, sans-serif;
     }
 
-    .card {
+    .header-section {
         background-color: #203B81;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .primary-heading {
         color: #F1F1F1;
+        font-weight: bold;
+    }
+
+    .card {
+        background-color: #eef5ff;
+        color: #203B81;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin-top: 20px;
-        width: 110%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
         box-sizing: border-box;
-    }
-
-    h2 {
-        font-size: 38px;
-        color: #203B81;
-        font-weight: bold;
-        text-align: center;
     }
 
     .order-list table {
@@ -41,26 +46,16 @@
     .order-list th, .order-list td {
         padding: 10px;
         text-align: left;
-        color: #F1F1F1;
+        color: #203B81;
     }
 
     .order-list th {
         font-weight: bold;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.3);
     }
-
-        .order-list th:nth-child(5), .order-list td:nth-child(5) {
-            width: 150px;
-            min-width: 150px;
-            text-align: center;
-        }
 
     .order-list tr {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .order-list td:last-child {
-        padding-right: 15px;
+        border-bottom: 1px solid rgba(32, 59, 129, 0.3);
     }
 
     .action-buttons {
@@ -80,6 +75,11 @@
         cursor: pointer;
         text-align: center;
         font-size: 15px;
+    }
+
+    .btn-success, .btn-warning, .btn-primary, .btn-secondary, .btn-danger {
+        width: 140px;
+        text-align: center;
     }
 
     .btn-success {
@@ -107,12 +107,6 @@
         color: white;
     }
 
-    @@media screen and (max-width: 1024px) {
-        .action-buttons {
-            flex-wrap: wrap;
-        }
-    }
-
     @@media screen and (max-width: 768px) {
         .order-list table {
             display: block;
@@ -127,8 +121,9 @@
 </style>
 
 <div class="container">
-    <h2>Your Orders</h2>
-
+    <div class="header-section">
+        <h1 class="primary-heading">Your Orders</h1>
+    </div>
     <div class="card">
         <div class="order-list">
             <table>
@@ -163,26 +158,33 @@
                                 }
                                 else
                                 {
-                                    <!--For Rating-->
                                     <form asp-controller="Customer" asp-action="RateProvider">
                                         <input type="hidden" name="LogId" value="@item.LogId" />
                                         <input type="submit" class="btn btn-success" value="Rate Order" />
                                     </form>
                                 }
-                                <!--For Report-->
                                 <form asp-controller="Customer" asp-action="ReportProblem">
                                     <input type="hidden" name="LogId" value="@item.LogId" />
                                     <input type="submit" class="btn btn-warning" value="Report Problem" />
                                 </form>
-                                <!--For PayMaya-->
-                                <form asp-controller="Customer" asp-action="PayOnline">
-                                    <input type="hidden" name="LogId" value="@item.LogId" />
-                                    <input type="submit" class="btn btn-primary" value="Pay with Maya" />
-                                </form>
-                                <!--For Cancellation-->
+
                                 @{
-                                    var orderDateTime = item.OrderDate.Date + item.Date.TimeOfDay;
-                                    var timeRemaining = orderDateTime - DateTime.Now;
+                                    var modeOfPayment = context.ClientOrders.Where(c => c.ClientId.ToString() == item.OrderId).Select(c => c.ModeOfPayment).FirstOrDefault();
+                                }
+                                @if (modeOfPayment == "Maya")
+                                {
+                                    <form asp-controller="Customer" asp-action="PayOnline">
+                                        <input type="hidden" name="LogId" value="@item.LogId" />
+                                        <input type="submit" class="btn btn-primary" value="Pay with Maya" />
+                                    </form>
+                                }
+                                else
+                                {
+                                    <button class="btn btn-secondary" disabled>Payment: @modeOfPayment</button>
+                                }
+
+                                @{
+                                    var orderDateTime = item.OrderDate.Date + item.Date.TimeOfDay; var timeRemaining = orderDateTime - DateTime.Now;
                                 }
                                 @if (item.Status == "Cancelled")
                                 {

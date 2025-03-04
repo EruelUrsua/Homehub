@@ -1,73 +1,5 @@
 ﻿@model OrderAvailViewModel
 
-<!--<style>
-    .container {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding-top: 20px;
-    }
-
-    .card {
-        background-color: #203B81;
-        color: #F1F1F1;
-        border-radius: 20px;
-        padding: 40px;
-        max-width: 920px;
-        margin: 20px auto;
-        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    h3 {
-        color: #F1F1F1;
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-    }
-
-    p {
-        font-size: 1rem;
-        color: #F1F1F1;
-    }
-
-    table {
-        width: 100%;
-        margin-top: 20px;
-        color: #F1F1F1;
-        border-collapse: collapse;
-    }
-
-    th, td {
-        padding: 8px;
-        text-align: center;
-    }
-
-    th {
-        font-weight: bold;
-        border-bottom: 1px solid #ddd;
-    }
-
-    td {
-        border-top: 1px solid #ddd;
-    }
-
-    .button {
-        background-color: #F1F1F1;
-        color: #203B81;
-        font-size: 1rem;
-        font-weight: bold;
-        border: none;
-        border-radius: 30px;
-        padding: 10px 30px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
-    }
-
-        .button:hover {
-            background-color: #ddd;
-        }
-</style>
--->
-
 <body>
     <div class="container py-5">
         <div class="header-section text-center">
@@ -101,7 +33,7 @@
                         <td>@Model.requestatt</td>
                         <td>@Model.promo</td>
                         <td>@Model.mode</td>
-                        <td>@Model.discount</td>
+                        <td>@((Model.discount * 100).ToString("0"))%</td>
                         <td><strong>Php @Model.totalPrice.ToString("F2")</strong></td>
                     </tr>
                 </tbody>
