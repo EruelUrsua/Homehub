@@ -380,6 +380,7 @@ namespace HomeHub.App.Controllers
                 Status = entity.Status,
                 Fee = entity.Fee,
                 PromoCode = entity.PromoCode,
+                PayStatus = "Pending"
             };
 
             await context.OrdersLogs.AddAsync(orderLog);
@@ -476,7 +477,7 @@ namespace HomeHub.App.Controllers
 
             var orders = context.OrdersLogs
                 .Where(o => o.UserId == userId)
-                .ToList() // Retrieve from database before processing `int.Parse`
+                .ToList() 
                 .Select(o => new OrdersLog
                 {
                     LogId = o.LogId,
@@ -492,9 +493,10 @@ namespace HomeHub.App.Controllers
                     Status = o.Status,
                     Fee = o.Fee,
                     PromoCode = o.PromoCode,
+                    PayStatus = o.PayStatus,
                     ProviderName = context.Providers
                         .Where(b => b.UserID == o.BusinessId)
-                        .Select(b => b.BusinessName) // Assuming BusinessName is the column for the provider's name
+                        .Select(b => b.BusinessName)
                         .FirstOrDefault() ?? "Unknown Provider",
                     IsRated = ratedOrderIds.Contains(o.OrderId)
                 })
@@ -1089,6 +1091,49 @@ namespace HomeHub.App.Controllers
             }
 
             return View(report);
+        }
+
+        public async Task<IActionResult> PaymentSuccess(string requestReferenceNumber)
+        {
+            if (!string.IsNullOrEmpty(requestReferenceNumber))
+            {
+                await UpdateOrderStatus(requestReferenceNumber, "Paid");
+            }
+
+            ViewBag.Message = "Payment was successful!";
+            return View();
+        }
+
+        public async Task<IActionResult> PaymentFailure(string requestReferenceNumber)
+        {
+            if (!string.IsNullOrEmpty(requestReferenceNumber))
+            {
+                await UpdateOrderStatus(requestReferenceNumber, "Failed");
+            }
+
+            ViewBag.Message = "Payment failed!";
+            return View();
+        }
+
+        public async Task<IActionResult> PaymentCancel(string requestReferenceNumber)
+        {
+            if (!string.IsNullOrEmpty(requestReferenceNumber))
+            {
+                await UpdateOrderStatus(requestReferenceNumber, "Cancelled");
+            }
+
+            ViewBag.Message = "Payment was cancelled!";
+            return View();
+        }
+
+        private async Task UpdateOrderStatus(string logId, string status)
+        {
+            var orderLog = await context.OrdersLogs.FirstOrDefaultAsync(o => o.LogId == logId);
+            if (orderLog != null)
+            {
+                orderLog.PayStatus = status;
+                await context.SaveChangesAsync();
+            }
         }
     }
 }

@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "ContainingType": "HomeHub.App.Controllers.PayMayaWebhookController",
+    "Method": "HandleWebhook",
+    "RelativePath": "api/paymaya/webhook",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "payload",
+        "Type": "HomeHub.App.Controllers.PayMayaWebhookController\u002BPayMayaWebhookPayload",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

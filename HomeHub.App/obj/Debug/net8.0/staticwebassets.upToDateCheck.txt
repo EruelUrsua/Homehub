@@ -37,6 +37,7 @@ wwwroot\images\a567fa3b-2202-4da2-a551-80e3f89a28e4_samplestock.jpg
 wwwroot\images\a67cea36-06e0-4e02-a788-7644adf18cbf_samplestock.jpg
 wwwroot\images\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg
 wwwroot\images\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg
+wwwroot\images\aabd7ba2-6c8e-4003-b17b-65788e87988b_samplestock.jpg
 wwwroot\images\abc08f8c-3ff3-4ebe-86fb-1a4c4a37d989_samplestock.jpg
 wwwroot\images\b568e3d8-8d52-4497-8679-2bed24ff59db_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg
 wwwroot\images\b5a04bd6-bc22-4bdf-8784-5e438071b01a_samplestock.jpg
@@ -48,6 +49,8 @@ wwwroot\images\c8ac0cd5-057e-468c-995c-2742d41206af_samplestock.jpg
 wwwroot\images\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg
 wwwroot\images\e0188f78-6475-461f-a987-ec370078a467_cleaning kit.jpg
 wwwroot\images\e5faf723-40ab-42eb-93a6-893a604beda1_cleaning kit.jpg
+wwwroot\images\f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg
+wwwroot\images\f292d79b-d4c3-4b0f-bac2-ae551e99d86b_samplestock.jpg
 wwwroot\images\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg
 wwwroot\js\scripts.js
 wwwroot\js\site.js
