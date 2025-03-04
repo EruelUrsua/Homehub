@@ -15,11 +15,20 @@
             public PayMayaAmount totalAmount { get; set; }
         }
 
+        public class PayMayaRedirectUrl
+        {
+            public string success { get; set; }
+            public string failure { get; set; }
+            public string cancel { get; set; }
+        }
+
         public class PayMayaCheckoutRequest
         {
             public PayMayaAmount totalAmount { get; set; }
             public List<PayMayaItem> items { get; set; }
             public string requestReferenceNumber { get; set; }
+
+            public PayMayaRedirectUrl redirectUrl { get; set; }
         }
     }
 }
