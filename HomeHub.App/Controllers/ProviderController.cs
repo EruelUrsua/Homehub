@@ -29,9 +29,25 @@ namespace HomeHub.App.Controllers
 
         private Task<ApplicationUser> GetCurrentUserAsync() => userManager.GetUserAsync(HttpContext.User);
 
-        public IActionResult ProviderHome()
+        public async Task<IActionResult> ProviderHome()
         {
-            return View();
+            var userId = await GetCurrentUserId();
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                return NotFound();
+            }
+
+            var provider = _context.Providers.FirstOrDefault(p => p.UserID == userId);
+
+            if (provider == null)
+            {
+                return NotFound();
+            }
+
+            ViewBag.BusinessType = provider.Businesstype;
+
+            return View("ProviderHome");
         }
 
         public async Task<IActionResult> ProductsView()

@@ -107,8 +107,8 @@
                 <tr>
                     <td>@Model.OrderedPs</td>
                     <td>@Model.Quantity</td>
-                    <td>@Model.OrderDate</td>
-                    <td>@Model.Schedule</td>
+                    <td>@Model.OrderDate.ToShortDateString()</td>
+                    <td>@Model.Schedule.ToShortTimeString()</td>
                     <td>@Model.Fee</td>
             </tbody>
         </table>

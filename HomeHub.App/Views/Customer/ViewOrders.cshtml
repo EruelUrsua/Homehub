@@ -134,6 +134,7 @@
                         <th>Quantity</th>
                         <th>Price</th>
                         <th>Date</th>
+                        <th>Time</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
@@ -146,7 +147,8 @@
                             <td>@item.Item</td>
                             <td>@item.Qty</td>
                             <td>Php @item.Fee.ToString("0.00")</td>
-                            <td>@item.Date.ToString("yyyy-MM-dd")</td>
+                            <td>@item.OrderDate.ToString("yyyy-MM-dd")</td>
+                            <td>@item.Date.ToShortTimeString()</td>
                             <td>@item.Status</td>
                             <td class="action-buttons">
                                 @if (item.IsRated)
@@ -171,16 +173,20 @@
                                 @{
                                     var modeOfPayment = context.ClientOrders.Where(c => c.ClientId.ToString() == item.OrderId).Select(c => c.ModeOfPayment).FirstOrDefault();
                                 }
-                                @if (modeOfPayment == "Maya" && item.PayStatus == "Pending")
+                                @if (modeOfPayment == "Cash")
+                                {
+                                    <button class="btn btn-secondary" disabled>Cash</button>
+                                }
+                                else if (modeOfPayment == "Maya" && item.PayStatus != "Paid")
                                 {
                                     <form asp-controller="Customer" asp-action="PayOnline">
                                         <input type="hidden" name="LogId" value="@item.LogId" />
                                         <input type="submit" class="btn btn-primary" value="Pay with Maya" />
                                     </form>
                                 }
-                                else
+                                else if (item.PayStatus == "Paid")
                                 {
-                                    <button class="btn btn-secondary" disabled>Payment: @modeOfPayment</button>
+                                    <button class="btn btn-success" disabled>Payment Success</button>
                                 }
 
                                 @{

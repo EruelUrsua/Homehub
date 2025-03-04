@@ -1,67 +1,131 @@
-﻿﻿<style>
-     .html {
-         font-family: Arial
-     }
+﻿@{
+    bool isProductProvider = ViewBag.BusinessType == false;
+    bool isServiceProvider = ViewBag.BusinessType == true;
+}
 
-     .row {
-         padding-top: 30px;
-         padding-bottom: 20px;
-     }
-
-     .card {
-         background-color: #203B81;
-         border-radius: 30px;
-         width: 300;
-         height: 270px;
-         padding-top: 42px;
-         padding-left: 55px;
-         margin-top: 20px;
-     }
-
-     .card1 {
-         background-color: #203B81;
-         border-radius: 30px;
-         width: 300;
-         height: 300px;
-         padding: 20px;
-     }
-
-     .button {
-         width: 30px;
-         height: 20px;
-         background-color: #F1F1F1;
-         color: #203B81;
-         font-family: Arial;
-         border-color: #F1F1F1;
-     }
-
-     button {
-         background-color: #F1F1F1;
-         color: #203B81;
-         font-family: Arial;
-         font-size: 20px;
-         border-color: #F1F1F1;
-         border-radius: 30px;
-         height: 80px;
-         width: 300px;
-     }
-</style>
-
-<body style="background-color:#F1F1F1">
-    <!-- Action Section -->
-    <div class="card">
-        <div class="container">
-            <h4 style="color:#F1F1F1">What do you want to do?</h4>
-            <div class="row" style="color:#203B81; border-color:#F1F1F1">
-                <div class="col-sm-4"><a class="nav-link" asp-action="ProductsView"><button>Your Products</button></a></div>
-                <div class="col-sm-4"><a class="nav-link" asp-action="ServicesView"><button>Your Services</button></a></div>
-                <div class="col-sm-4"><a class="nav-link" asp-action="ManagePromo"><button>Post a Promo</button></a></div>
-                <div class="col-sm-4"><a class="nav-link" asp-action="ProductOrders"><button>Product Orders</button></a></div>
-                <div class="col-sm-4"><a class="nav-link" asp-action="ServiceRequests"><button>Service Requests</button></a></div>
-                <div class="col-sm-4"><a class="nav-link" asp-action="ShowRefundRequests"><button>Customer Refund Requests</button></a></div>
-                <div class="col-sm-4"><a class="nav-link" asp-action="InStorePurchase"><button>In Store Purchase</button></a></div>
-                <div class="col-sm-4"><a class="nav-link" asp-action="OrdersLog"><button>Orders Log</button></a></div>
+<div class="container-fluid">
+    <div class="row">
+        <!--Sidebar-->
+        <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar">
+            <div class="position-sticky">
+                <h4 class="text-white text-center py-3">Dashboard</h4>
+                <ul class="nav flex-column">
+                    @if (isProductProvider)
+                    {
+                        <li class="nav-item"><a class="nav-link text-white" asp-action="ProductsView">Your Products</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" asp-action="ProductOrders">Product Orders</a></li>
+                    }
+                    @if (isServiceProvider)
+                    {
+                        <li class="nav-item"><a class="nav-link text-white" asp-action="ServicesView">Your Services</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" asp-action="ServiceRequests">Service Requests</a></li>
+                    }
+                    <li class="nav-item"><a class="nav-link text-white" asp-action="ManagePromo">Post a Promo</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" asp-action="ShowRefundRequests">Refund Requests</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" asp-action="InStorePurchase">In-Store Purchase</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" asp-action="OrdersLog">Orders Log</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 content">
+            <div class="container-fluid py-5 header-section">
+                <h1>Welcome to HomeHub!</h1>
+                <p class="lead">What would you like to do?</p>
+            </div>
+
+            <div class="row mt-4">
+                @if (isProductProvider)
+                {
+                    foreach (var action in new[]
+                    {
+                        new { Name = "Your Products", Route = "ProductsView" },
+                        new { Name = "Product Orders", Route = "ProductOrders" },
+                        new { Name = "Post a Promo", Route = "ManagePromo" },
+                        new { Name = "Refund Requests", Route = "ShowRefundRequests" },
+                        new { Name = "In-Store Purchase", Route = "InStorePurchase" },
+                        new { Name = "Orders Log", Route = "OrdersLog" }
+                    })
+                    {
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">@action.Name</h5>
+                                    <a class="btn btn-primary fw-bold px-4 mt-2" asp-action="@action.Route">Manage</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+
+                @if (isServiceProvider)
+                {
+                    foreach (var action in new[]
+                    {
+                        new { Name = "Your Services", Route = "ServicesView" },
+                        new { Name = "Service Requests", Route = "ServiceRequests" },
+                        new { Name = "Post a Promo", Route = "ManagePromo" },
+                        new { Name = "Refund Requests", Route = "ShowRefundRequests" },
+                        new { Name = "In-Store Purchase", Route = "InStorePurchase" },
+                        new { Name = "Orders Log", Route = "OrdersLog" }
+                    })
+                    {
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow-sm">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">@action.Name</h5>
+                                    <a class="btn btn-primary fw-bold px-4 mt-2" asp-action="@action.Route">Manage</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </main>
     </div>
-</body>
+</div>
+
+<style>
+    .content {
+        padding-top: 80px;
+    }
+
+    .sidebar {
+        height: 100vh;
+        position: fixed;
+        top: 56px;
+        left: 0;
+        width: 250px;
+        padding-top: 20px;
+    }
+
+        .sidebar .nav-link {
+            font-size: 16px;
+            padding: 12px;
+            transition: background 0.3s ease-in-out;
+        }
+
+            .sidebar .nav-link:hover {
+                background: #3658a7;
+                border-radius: 5px;
+            }
+
+    .header-section {
+        background-color: #203B81;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .card {
+        border-radius: 12px;
+        transition: transform 0.2s ease-in-out;
+    }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+</style>
