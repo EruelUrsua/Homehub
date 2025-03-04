@@ -37,4 +37,9 @@ public class OrdersLog
     public string ProviderName { get; set; } = string.Empty;
     [NotMapped]
     public bool IsRated { get; set; }
+
+
+    public double? lat { get; set; }
+
+    public double? lng { get; set; }
 }

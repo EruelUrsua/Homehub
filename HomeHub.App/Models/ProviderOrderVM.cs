@@ -29,5 +29,10 @@
 
         public int Quantity { get; set; }
         public string? ModeOfPayment { get; set; }
+
+
+        public double lat { get; set; }
+
+        public double lng { get; set; }
     }
 }

@@ -33,5 +33,10 @@ public class ClientOrder
     public string FirstName { get; set; } = null!;
     public string LastName { get; set; } = null!;
 
+
+    public double lat { get; set; }
+
+    public double lng { get; set; }
+
     public string? AddInstructions { get; set; }
 }

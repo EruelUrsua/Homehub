@@ -297,6 +297,12 @@ namespace HomeHub.DataModel.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("UserID");
 
+                    b.Property<double>("lat")
+                        .HasColumnType("float");
+
+                    b.Property<double>("lng")
+                        .HasColumnType("float");
+
                     b.HasKey("ClientId");
 
                     b.ToTable("ClientOrders");

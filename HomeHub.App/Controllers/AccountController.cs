@@ -163,7 +163,6 @@ namespace HomeHub.App.Controllers
                 user.Address = model.Address;
                 user.lat = model.lat;
                 user.lng = model.lng;
-
                 var result = await userManager.CreateAsync(user, model.Password);
                 await userManager.AddToRoleAsync(user, "Customer");
                 if (result.Succeeded)
@@ -232,7 +231,36 @@ namespace HomeHub.App.Controllers
 
         }
 
-       
+        //Register Admin Account
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RegisterA()
+        {
+
+                ApplicationUser user = new ApplicationUser();
+                user.UserName = "admin-homehub@yopmail.com";
+                user.Email = "admin-homehub@yopmail.com";
+                user.Lastname = "Perez";
+                user.Firstname = "John";
+                user.PhoneNumber = "09278302317";
+                user.Address = "Manila";
+                user.lat = 14.58699;
+                user.lng = 120.98634;
+                var result = await userManager.CreateAsync(user, "Admin@12345");
+                await userManager.AddToRoleAsync(user, "Admin");
+                if (result.Succeeded)
+                {
+                    //Then send the Confirmation Email to the User
+                    await SendConfirmationEmail("admin-homehub@yopmail.com", user);
+
+                    return View("RegistrationSuccessful");
+                }
+                return View();
+            }
+          
+
+
 
         public IActionResult SignIn()
         {
