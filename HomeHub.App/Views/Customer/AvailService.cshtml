@@ -1,4 +1,8 @@
-﻿@{
+﻿@using System.Linq;
+@using System.Collections.Generic;
+@using Microsoft.AspNetCore.Mvc.Rendering;
+
+@{
     ViewData["Title"] = "Available Services";
 }
 
@@ -6,7 +10,7 @@
     <div class="container py-5">
         <div class="header-section">
             <h1 class="primary-heading text-white">Choose a Service Provider</h1>
-            <p class="text-white">Find the best service providers near you!</p>
+            <p class="text-white">Find the best service providers for your needs!</p>
         </div>
 
         <div class="row justify-content-center">
@@ -29,7 +33,7 @@
             </div>
         </div>
 
-        <div class="row mt-4">
+        <div class="row mt-4" id="serviceList">
             @if (ViewBag.Businesses.Count < 1)
             {
                 <div class="alert alert-info text-center">
@@ -40,7 +44,10 @@
             {
                 @foreach (var item in ViewBag.Businesses)
                 {
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-4 mb-3 service-card"
+                         data-category="@item.Category"
+                         data-price="@item.AvgPrice"
+                         data-name="@item.BusinessName">
                         <div class="card border-0 shadow-sm rounded-3" style="background-color: #f8f9fa; transition: transform 0.2s;">
                             <div class="card-header fw-bold primary-heading">
                                 @item.BusinessName
@@ -67,47 +74,41 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var selectElement = document.getElementById('filter');
-            var tbodyElement = document.getElementById('businessTableBody');
-            var rows = tbodyElement.getElementsByTagName('tr');
+            var categoryFilter = document.getElementById('categoryFilter');
+            var sortFilter = document.getElementById('filter');
+            var serviceList = document.getElementById('serviceList');
+            var services = Array.from(document.getElementsByClassName('service-card'));
+            
+            function filterAndSort() {
+                var selectedCategory = categoryFilter.value;
+                var selectedSort = sortFilter.value;
 
-            selectElement.addEventListener('change', function () {
-                var selectedOption = this.value;
-
-                var sortedRows = Array.from(rows).sort(function (rowA, rowB) {
-                    var textA = rowA.cells[0].textContent.trim();
-                    var textB = rowB.cells[0].textContent.trim();
-
-                    if (selectedOption === 'byName') {
-                        return textA.localeCompare(textB);
-                    }
-                });
-
-                // Clear existing rows
-                while (tbodyElement.firstChild) {
-                    tbodyElement.removeChild(tbodyElement.firstChild);
-                }
-
-                // Append sorted rows
-                sortedRows.forEach(function (sortedRow) {
-                    tbodyElement.appendChild(sortedRow);
-                });
-            });
-
-            // Category Filtering
-            document.getElementById('categoryFilter').addEventListener('change', function () {
-                var selectedCategory = this.value;
-
-                // Show all or filter based on selected category
-                Array.from(rows).forEach(row => {
-                    const category = row.getAttribute('data-category');
+                    // Filter by Category
+                services.forEach(service => {
+                    const category = service.getAttribute('data-category');
                     if (selectedCategory === 'All' || category === selectedCategory) {
-                        row.style.display = ''; // Show the row
+                        service.style.display = '';
                     } else {
-                        row.style.display = 'none'; // Hide the row
+                        service.style.display = 'none';
+                    }
+                });
+
+                // Sort by Name or Price
+                var sortedServices = services.filter(s => s.style.display !== 'none').sort((a, b) => {
+                    if (selectedSort === 'byName') {
+                        return a.getAttribute('data-name').localeCompare(b.getAttribute('data-name'));
+                    } else if (selectedSort === 'byPrice') {
+                        return parseFloat(a.getAttribute('data-price')) - parseFloat(b.getAttribute('data-price'));
                     }
                 });
             });
+
+            // Reorder elements in the DOM
+                sortedServices.forEach(s => serviceList.appendChild(s));
+            }
+
+                categoryFilter.addEventListener('change', filterAndSort);
+            sortFilter.addEventListener('change', filterAndSort);
         });
     </script>
 </body>
