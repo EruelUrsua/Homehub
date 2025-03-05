@@ -76,6 +76,13 @@ namespace HomeHub.App.Controllers
             return View(products);
         }
 
+        public IActionResult SalesView()
+        { 
+        
+             var sales = _context.OrdersLogs.ToList();
+            return View(sales);
+        }
+
         public async Task<IActionResult> ServicesView()
         {
             string userId = await GetCurrentUserId();

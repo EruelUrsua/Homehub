@@ -224,6 +224,7 @@ namespace HomeHub.App.Controllers
                 }
                 return View(model);
             }
+
             else
             {
                 return View(model);
@@ -233,31 +234,45 @@ namespace HomeHub.App.Controllers
 
         //Register Admin Account
 
+        public IActionResult RegisterA()
+        {
+            return View(new RegisterAVM());
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> RegisterA()
+        public async Task<IActionResult> RegisterA(RegisterAVM model)
         {
 
+            if (ModelState.IsValid)
+            {
+
                 ApplicationUser user = new ApplicationUser();
-                user.UserName = "admin-homehub@yopmail.com";
-                user.Email = "admin-homehub@yopmail.com";
-                user.Lastname = "Perez";
-                user.Firstname = "John";
-                user.PhoneNumber = "09278302317";
-                user.Address = "Manila";
-                user.lat = 14.58699;
-                user.lng = 120.98634;
-                var result = await userManager.CreateAsync(user, "Admin@12345");
+                user.UserName = model.Email;
+                user.Email = model.Email;
+                user.Lastname = model.Lastname;
+                user.Firstname = model.Firstname;
+                user.PhoneNumber = model.ContactNo;
+                user.Address = model.Address;
+                user.lat = model.lat;
+                user.lng = model.lng;
+
+                var result = await userManager.CreateAsync(user, model.Password);
                 await userManager.AddToRoleAsync(user, "Admin");
                 if (result.Succeeded)
                 {
                     //Then send the Confirmation Email to the User
-                    await SendConfirmationEmail("admin-homehub@yopmail.com", user);
+                    await SendConfirmationEmail(model.Email, user);
 
                     return View("RegistrationSuccessful");
                 }
-                return View();
+                return View(model);
             }
+            else
+            {
+                return View(model);
+            }
+        }
           
 
 
@@ -295,7 +310,14 @@ namespace HomeHub.App.Controllers
                         return RedirectToAction("ProviderHome", "Provider");
 
                     }
-                        return RedirectToAction("Index", "Home");
+
+                    else if (role.Contains("Admin"))
+                    {
+                        return RedirectToAction("ProviderHome", "Provider");
+
+                    }
+
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {

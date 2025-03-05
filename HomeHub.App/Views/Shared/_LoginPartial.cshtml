@@ -1,9 +1,11 @@
-﻿@if (User.Identity.IsAuthenticated)
+﻿
+
+@if (User.Identity.IsAuthenticated)
 {
     <div class="dropdown">
         <span class="dropdown-toggle" typeof="button" id="dropdownMenuUser"
             data-bs-toggle="dropdown" aria-expanded="false">
-            @User.Identity.Name
+            @User.Identity.Name;
         </span>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuUser">
             <li>
