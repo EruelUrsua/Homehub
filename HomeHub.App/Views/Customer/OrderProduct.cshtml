@@ -6,83 +6,11 @@
     ViewData["Title"] = "Choose where to order";
 }
 
-<!--
-<style>
-    .container {
-        width: 60%;
-        margin: 0 auto;
-        padding: 20px;
-        font-family: Arial, sans-serif;
-    }
-
-    .card {
-        background-color: #203B81;
-        color: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-top: 20px;
-    }
-
-    h1 {
-        font-size: 38px;
-        color: #203B81;
-        font-weight: bold;
-    }
-
-    .filter-section label {
-        font-weight: bold;
-        margin-right: 10px;
-        color: #203B81;
-    }
-
-    .filter-section select {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin-right: 15px;
-    }
-
-    .table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-        .table th, .table td {
-            padding: 10px;
-            text-align: left;
-            color: #F1F1F1;
-        }
-
-        .table th {
-            font-weight: bold;
-        }
-
-    .business-details {
-        font-size: 0.80rem;
-        color: #white;
-    }
-
-    .btn-success {
-        background-color: #F1F1F1;
-        color: #203B81;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-    }
-
-        .btn-success:hover {
-            opacity: 0.9;
-        }
-</style>-->
-
 <body>
     <div class="container py-5">
         <div class="header-section">
             <h1 class="primary-heading text-white">Choose where to order</h1>
-            <p class="text-white">Find the best product providers near you!</p>
+            <p class="text-white">Find the best product providers for your needs!</p>
         </div>
 
         <div class="row justify-content-center">
@@ -101,12 +29,11 @@
                 <select name="filter" id="filter" class="form-select">
                     <option value="byName">By Name (A-Z)</option>
                     <option value="byPrice">By Price (Low to High)</option>
-                    <!--<option value="byLoc">By Location</option>-->
                 </select>
             </div>
         </div>
 
-        <div class="row mt-4">
+        <div class="row mt-4" id="businessList">
             @if (ViewBag.Businesses.Count < 1)
             {
                 <div class="alert alert-info text-center">
@@ -117,7 +44,10 @@
             {
                 @foreach (var item in ViewBag.Businesses)
                 {
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-4 mb-3 business-card"
+                         data-category="@item.Category"
+                         data-price="@item.AvgPrice"
+                         data-name="@item.BusinessName">
                         <div class="card border-0 shadow-sm rounded-3" style="background-color: #f8f9fa; transition: transform 0.2s;">
                             <div class="card-header fw-bold primary-heading">
                                 @item.BusinessName
@@ -144,47 +74,40 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var selectElement = document.getElementById('filter');
-            var tbodyElement = document.getElementById('businessTableBody');
-            var rows = tbodyElement.getElementsByTagName('tr');
+           var categoryFilter = document.getElementById('categoryFilter');
+            var sortFilter = document.getElementById('filter');
+            var businessList = document.getElementById('businessList');
+            var businesses = Array.from(document.getElementsByClassName('business-card'));
 
-            selectElement.addEventListener('change', function () {
-                var selectedOption = this.value;
+            function filterAndSort() {
+                var selectedCategory = categoryFilter.value;
+                var selectedSort = sortFilter.value;
 
-                var sortedRows = Array.from(rows).sort(function (rowA, rowB) {
-                    var textA = rowA.cells[0].textContent.trim();
-                    var textB = rowB.cells[0].textContent.trim();
-
-                    if (selectedOption === 'byName') {
-                        return textA.localeCompare(textB);
-                    }
-                });
-
-                // Clear existing rows
-                while (tbodyElement.firstChild) {
-                    tbodyElement.removeChild(tbodyElement.firstChild);
-                }
-
-                // Append sorted rows
-                sortedRows.forEach(function (sortedRow) {
-                    tbodyElement.appendChild(sortedRow);
-                });
-            });
-
-            // Category Filtering
-            document.getElementById('categoryFilter').addEventListener('change', function () {
-                var selectedCategory = this.value;
-
-                // Show all or filter based on selected category
-                Array.from(rows).forEach(row => {
-                    const category = row.getAttribute('data-category');
+                //Filter by Category
+                businesses.forEach(business => {
+                    const category = business.getAttribute('data-category');
                     if (selectedCategory === 'All' || category === selectedCategory) {
-                        row.style.display = ''; // Show the row
+                        business.style.display = '';
                     } else {
-                        row.style.display = 'none'; // Hide the row
+                        business.style.display = 'none';
                     }
                 });
-            });
+
+                //Sort by Name or Price
+                var sortedBusinesses = businesses.filter(b => b.style.display !== 'none').sort((a, b) => {
+                    if (selectedSort === 'byName') {
+                        return a.getAttribute('data-name').localeCompare(b.getAttribute('data-name'));
+                    } else if (selectedSort === 'byPrice') {
+                        return parseFloat(a.getAttribute('data-price')) - parseFloat(b.getAttribute('data-price'));
+                    }
+                });
+
+                //Reorder elements in the DOM
+                sortedBusinesses.forEach(b => businessList.appendChild(b));
+            }
+
+                categoryFilter.addEventListener('change', filterAndSort);
+                sortFilter.addEventListener('change', filterAndSort);
         });
     </script>
 </body>
