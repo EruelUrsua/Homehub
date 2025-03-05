@@ -1,0 +1,82 @@
+﻿@model RegisterAVM
+
+
+<h3>Register an Account</h3>
+
+<form asp-controller="Account" asp-action="RegisterA" method="post">
+    <label asp-for="Lastname"></label>
+    <input asp-for="Lastname" class="form-control" />
+    <span asp-validation-for="Lastname"></span>
+    <br />
+    <label asp-for="Firstname"></label>
+    <input asp-for="Firstname" class="form-control" />
+    <span asp-validation-for="Firstname"></span>
+    <br />
+    <label asp-for="ContactNo"></label>
+    <input asp-for="ContactNo" class="form-control" />
+    <span asp-validation-for="ContactNo"></span>
+    <br />
+
+    <label asp-for="Address"></label>
+    <input asp-for="Address" class="form-control" id="latlang" />
+    <span asp-validation-for="Address"></span>
+    <br />
+
+
+    <input type="hidden" id="lat" asp-for="lat" class="form-control" />
+    <input type="hidden" id="lng" asp-for="lng" class="form-control" />
+
+
+    @* This is the Map Script do not touch! *@
+    <script src="~/lib/leaflet/leaflet.js"></script>
+    <script src="~ /lib/leaflet/leaflet.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.83.1/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+    <a href="~/lib/leaflet/leaflet.js.map"></a>
+    <div id="map" style="width:100%;height:400px"></div>
+    <script>
+
+        var map = L.map('map').setView([14.58699, 120.98634], 15);
+             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+             }).addTo(map);
+            var marker = L.marker([14.58699, 120.98634],{draggable: true} ).addTo(map);
+
+
+            marker.on("drag", function(e) {
+            var position = marker.getLatLng();
+
+            // document.getElementById("latlang").value = position.lat +", " + position.lng;
+             document.getElementById("lat").value = position.lat;
+              document.getElementById("lng").value = position.lng;
+            // console.log(position.lat);
+            // console.log(position.lng);
+        });
+
+
+                L.control.locate().addTo(map);
+    </script>
+    <br />
+    <label asp-for="Email"></label>
+    <input asp-for="Email" class="form-control" />
+    <span asp-validation-for="Email"></span>
+    <br />
+    <label asp-for="Password"></label>
+    <input asp-for="Password" class="form-control" />
+    <span asp-validation-for="Password"></span>
+    <br />
+    <label asp-for="ConfirmPassword"></label>
+    <input asp-for="ConfirmPassword" class="form-control" />
+    <span asp-validation-for="ConfirmPassword"></span>
+    <br />
+    <a asp-controller="Home" asp-action="Index" class="btn btn-light">
+        Back to Home Page
+    </a>
+
+    <input type="submit" class="btn btn-success" value="Register" />
+
+</form>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}

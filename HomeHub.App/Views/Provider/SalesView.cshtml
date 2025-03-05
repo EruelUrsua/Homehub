@@ -1,0 +1,39 @@
+﻿@model List<HomeHub.DataModel.OrdersLog>
+
+<canvas id="salesChart"></canvas>
+
+@section scripts{
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('salesChart').getContext('2d');
+    var chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+    labels: @Html.Raw(Json.Serialize(Model.Select(d => d.Date.ToString("MMM ddd")).ToList())),
+    datasets: [{
+    label: 'Sales',
+    data: @Html.Raw(Json.Serialize(Model.Select(d => d.Fee).ToList())),
+    backgroundColor: 'rgba(0, 119, 204, 0.3)',
+    borderColor: 'rgba(0, 119, 204, 1)',
+    borderWidth: 1
+    }]
+    },
+    options: {
+    scales: {
+    yAxes: [{
+    ticks: {
+    beginAtZero: true
+    }
+    }]
+    }
+    }
+    });
+</script>
+}
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
