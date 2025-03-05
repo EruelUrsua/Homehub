@@ -108,10 +108,10 @@ namespace HomeHub.App.Controllers
 
             if (ongoingPromos.Count == 0)
             {
-                return View(); // If no promos return empty view
+                return View();
             }
 
-            // Ensure the promo index is within the bounds of available promos
+            //Ensure the promo index is within the bounds of available promos
             promoIndex = promoIndex >= ongoingPromos.Count ? 0 : promoIndex;
 
             ViewBag.Promos = ongoingPromos;
@@ -132,20 +132,6 @@ namespace HomeHub.App.Controllers
 
         public IActionResult OrderProduct()
         {
-            /*old logic
-            var categories = context.Providers
-                .Where(b => b.Businesstype == false)
-                .Select(b => b.Category)
-                .Distinct()
-                .ToList();
-
-            ViewBag.Categories = categories;
-
-            //To only show Product Providers
-            List<Provider> list = context.Providers.Where(x => x.Businesstype == false).ToList();
-            ViewBag.Businesses = list;
-            return View(list);
-            */
             var categories = context.Providers
                 .Where(b => b.Businesstype == false)
                 .Select(b => b.Category)
@@ -163,7 +149,10 @@ namespace HomeHub.App.Controllers
                                         p.BusinessName,
                                         p.Category,
                                         u.PhoneNumber,
-                                        u.Address
+                                        u.Address,
+                                        AvgPrice = context.Products
+                                        .Where(pr => pr.ProviderID == p.UserID)
+                                        .Average(pr => (decimal?)pr.Price) ?? 0
                                     }).ToList();
 
             ViewBag.Businesses = productProviders;
@@ -172,20 +161,6 @@ namespace HomeHub.App.Controllers
 
         public IActionResult AvailService()
         {
-            // Get the unique categories from the OfferList in the Businesses table
-            /*
-            var categories = context.Providers
-                .Where(b => b.Businesstype == false)
-                .Select(b => b.Category)
-                .Distinct()
-                .ToList();
-
-            ViewBag.Categories = categories;
-
-            //To only show Service Providers
-            List<Provider> list = context.Providers.Where(x => x.Businesstype == false).ToList();
-            ViewBag.Businesses = list; // Store businesses in ViewBag
-            return View(list);*/
             var categories = context.Providers
                 .Where(b => b.Businesstype == true)
                 .Select(b => b.Category)
@@ -203,7 +178,10 @@ namespace HomeHub.App.Controllers
                                         p.BusinessName,
                                         p.Category,
                                         u.PhoneNumber,
-                                        u.Address
+                                        u.Address,
+                                        AvgPrice = context.Services
+                                        .Where(sv => sv.ProviderID == p.UserID)
+                                        .Average(pr => (decimal?)pr.Fee) ?? 0
                                     }).ToList();
 
             ViewBag.Businesses = serviceProviders;
@@ -245,15 +223,6 @@ namespace HomeHub.App.Controllers
 
         public IActionResult AvailListService(string businessId)
         {
-            /*var provider = context.Providers.FirstOrDefault(x => x.UserID == businessId);
-
-            var services = context.Services.Where(x => x.ProviderID == businessId).ToList();
-
-            ViewBag.ProviderID = businessId;
-            ViewBag.BusinessName = provider.BusinessName;
-            //ViewBag.Address = provider.CompanyAddress;
-
-            return View(services);*/
             if (string.IsNullOrEmpty(businessId))
             {
                 return RedirectToAction("Index");

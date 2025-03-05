@@ -1,119 +1,125 @@
 ﻿@model IEnumerable<HomeHub.DataModel.RefundRequest>
 
-<h2>Refund Requests</h2>
+<body>
+    <div class="container mt-4">
+        <div class="header-section">
+            <h2 class="text-center">Refund Requests</h2>
+        </div>
 
-@if (TempData["SuccessMessage"] != null)
-{
-    <div class="alert alert-success">
-        @TempData["SuccessMessage"]
-    </div>
-}
-
-@if (TempData["ErrorMessage"] != null)
-{
-    <div class="alert alert-danger">
-        @TempData["ErrorMessage"]
-    </div>
-}
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Order ID</th>
-            <th>Item</th>
-            <th>Quantity</th>
-            <th>Fee</th>
-            <th>Promo Code</th>
-            <th>Refund Amount</th>
-            <th>Status</th>
-            <th>Request Date</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var refundRequest in Model)
+        @if (TempData["SuccessMessage"] != null)
         {
-            <tr>
-                <td>@refundRequest.OrderId</td>
-                <td>@refundRequest.Item</td>
-                <td>@refundRequest.RefundQuantity</td>
-                <td>₱@refundRequest.Fee.ToString("N2")</td>
-                <td>@refundRequest.PromoCode</td>
-                <td>
-                    @if (refundRequest.PromoCode != null)
-                    {
-                        <span>₱@(refundRequest.RefundAmount.HasValue ? refundRequest.RefundAmount.Value.ToString("N2") : "0.00")</span>
-                    }
-                    else
-                    {
-                        <span>₱@refundRequest.Fee.ToString("N2")</span>
-                    }
-                </td>
-                <td>@refundRequest.RefundStatus</td>
-                <td>@refundRequest.RefundRequestDate.ToShortDateString()</td>
-                <td>
-                    @if (refundRequest.RefundStatus == "Pending")
-                    {
-                        using (Html.BeginForm("RequestRefund", "Customer", FormMethod.Post, new { @class = "refund-form" }))
-                        {
-                            @Html.AntiForgeryToken()
-                            @Html.Hidden("OrderId", refundRequest.OrderId)
-                            @Html.TextArea("RefundReason", null, new { placeholder = "Enter Refund Reason", rows = 3, @class = "form-control", required = "required" })
-                            <button type="submit" class="btn btn-primary mt-2">Request Refund</button>
-                        }
-                    }
-                    else if (refundRequest.RefundStatus == "Refund Accepted")
-                    {
-                        <span class="text-success">Refund Accepted</span>
-                        <br />
-                        <a href="@Url.Action("SellerProfile", "Business", new { businessId = refundRequest.BusinessId })"
-                           class="btn btn-info btn-sm mt-1">
-                            View Seller Profile
-                        </a>
-                        <br />
-                        @using (Html.BeginForm("SubmitFeedback", "Customer", FormMethod.Post, new { @class = "feedback-form" }))
-                        {
-                            @Html.AntiForgeryToken()
-                            @Html.Hidden("OrderId", refundRequest.OrderId)
-                            @Html.TextArea("Feedback", null, new { placeholder = "Leave feedback...", rows = 2, @class = "form-control", required = "required" })
-                            <button type="submit" class="btn btn-warning mt-2">Submit Feedback</button>
-                        }
-                    }
-                    else if (refundRequest.RefundStatus == "Refund Rejected")
-                    {
-                        <span class="text-danger">Refund Rejected</span>
-                        <br />
-                        <a href="@Url.Action("SellerProfile", "Business", new { businessId = refundRequest.BusinessId })"
-                           class="btn btn-info btn-sm mt-1">
-                            View Seller Profile
-                        </a>
-                    }
-                    else
-                    {
-                        <span class="text-muted">No actions available</span>
-                    }
-                </td>
-            </tr>
+            <div class="alert alert-success text-center">
+                @TempData["SuccessMessage"]
+            </div>
         }
-    </tbody>
-</table>
 
-@if (ViewBag.NoEligibleRefunds != null)
-{
-    <div class="alert alert-warning">
-        @ViewBag.NoEligibleRefunds
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger text-center">
+                @TempData["ErrorMessage"]
+            </div>
+        }
+
+        <div class="card shadow-sm border-0">
+            @if (!Model.Any())
+            {
+                <div class="alert alert-info text-center">No refund requests found.</div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Item</th>
+                                <th class="text-center">Quantity</th>
+                                <th class="text-center">Fee</th>
+                                <th class="text-center">Promo Code</th>
+                                <th class="text-center">Refund Amount</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Request Date</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var refundRequest in Model)
+                            {
+                                <tr>
+                                    <td>@refundRequest.OrderId</td>
+                                    <td>@refundRequest.Item</td>
+                                    <td class="text-center">@refundRequest.RefundQuantity</td>
+                                    <td class="text-center">₱@refundRequest.Fee.ToString("N2")</td>
+                                    <td class="text-center">@(refundRequest.PromoCode ?? "N/A")</td>
+                                    <td class="text-center text-primary fw-bold">
+                                        ₱@(refundRequest.RefundAmount.HasValue ? refundRequest.RefundAmount.Value.ToString("N2") : "0.00")
+                                    </td>
+                                    <td class="text-center fw-bold
+                                        @(refundRequest.RefundStatus == "Refund Accepted" ? "text-success" :
+                                          refundRequest.RefundStatus == "Refund Rejected" ? "text-danger" :
+                                          "text-warning")">
+                                        @refundRequest.RefundStatus
+                                    </td>
+                                    <td class="text-center">@refundRequest.RefundRequestDate.ToShortDateString()</td>
+                                    <td class="text-center">
+                                        @if (refundRequest.RefundStatus == "Pending")
+                                        {
+                                            using (Html.BeginForm("RequestRefund", "Customer", FormMethod.Post))
+                                            {
+                                                @Html.AntiForgeryToken()
+                                                @Html.Hidden("OrderId", refundRequest.OrderId)
+                                                @Html.TextArea("RefundReason", null, new { placeholder = "Enter Refund Reason", rows = 3, @class = "form-control", required = "required" })
+                                                <button type="submit" class="btn btn-primary btn-sm mt-2">Request Refund</button>
+                                            }
+                                        }
+                                        else if (refundRequest.RefundStatus == "Refund Accepted")
+                                        {
+                                            <a href="@Url.Action("SellerProfile", "Business", new { businessId = refundRequest.BusinessId })"
+                                               class="btn btn-info btn-sm mt-1">View Seller Profile</a>
+                                        }
+                                        else if (refundRequest.RefundStatus == "Refund Rejected")
+                                        {
+                                            <a href="@Url.Action("SellerProfile", "Business", new { businessId = refundRequest.BusinessId })"
+                                               class="btn btn-info btn-sm mt-1">View Seller Profile</a>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
     </div>
-}
+</body>
 
-@section Scripts {
-    <script>
-        $(document).ready(function () {
-            $(".refund-form, .feedback-form").on("submit", function (e) {
-                if ($(this).find("textarea").val().trim() === "") {
-                    e.preventDefault();
-                    alert("Please fill in the required field.");
-                }
-            });
-        });
-    </script>
-}
+<style>
+    .container {
+        margin: auto;
+    }
+
+    .header-section {
+        background-color: #203B81;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .table th {
+        background-color: #eef5ff !important;
+    }
+
+    .table td {
+        vertical-align: middle;
+    }
+
+    .card {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+    }
+</style>

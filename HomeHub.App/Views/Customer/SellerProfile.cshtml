@@ -1,18 +1,61 @@
 ﻿@model HomeHub.App.Models.SellerProfileVM
 
-<h2>Seller Profile</h2>
+<div class="container py-5" style="max-width: 600px">
+    <div class="header-section">
+        <h1 class="text-white">Seller Profile</h1>
+    </div>
 
-<div class="card">
-    <div class="card-body">
-        <h4>@Model.BusinessName</h4>
-        <p><strong>Category:</strong> @Model.Category</p>
-        <hr />
-        <h5>Seller Details</h5>
-        <p><strong>Representative:</strong> @Model.FirstName @Model.LastName</p>
-        <p><strong>Email:</strong> @Model.Email</p>
-        <p><strong>Phone Number:</strong> @Model.PhoneNumber</p>
-        <p><strong>Address:</strong> @Model.Address</p>
+    <div class="card border-0 shadow-sm rounded-3 mx-auto" style="background-color: #f8f9fa;">
+        <div class="card-body">
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                        <th class="bg-primary text-white">Business Name</th>
+                        <td>@Model.BusinessName</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-primary text-white">Category</th>
+                        <td>@Model.Category</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-primary text-white">Representative</th>
+                        <td>@Model.FirstName @Model.LastName</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-primary text-white">Email</th>
+                        <td>@Model.Email</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-primary text-white">Phone Number</th>
+                        <td>@Model.PhoneNumber</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-primary text-white">Address</th>
+                        <td>@Model.Address</td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <a href="@Url.Action("RefundHistory", "Customer")" class="btn btn-secondary">Back to Refund History</a>
+            <div class="text-center mt-3">
+                <a href="@Url.Action("RefundHistory", "Customer")" class="btn btn-secondary px-4">Back to Refund History</a>
+            </div>
+        </div>
     </div>
 </div>
+
+<style>
+    .header-section {
+        background-color: #203B81;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        border-radius: 8px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .table th {
+        background-color: #203B81 !important;
+        color: white !important;
+    }
+</style>

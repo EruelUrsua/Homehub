@@ -13,17 +13,17 @@
         <div class="row w-100 text-center d-flex justify-content-center">
             <div class="col-md-3 px-2">
                 <a asp-action="OrderProduct">
-                    <button class="btn btn-primary btn-lg w-100">Order Products</button>
+                    <button class="btn btn-custom btn-lg w-100">Order Products</button>
                 </a>
             </div>
             <div class="col-md-3 px-2">
                 <a asp-action="AvailService">
-                    <button class="btn btn-success btn-lg w-100">Avail Services</button>
+                    <button class="btn btn-custom btn-lg w-100">Avail Services</button>
                 </a>
             </div>
             <div class="col-md-3 px-2">
                 <a asp-action="ViewOrders">
-                    <button class="btn btn-warning btn-lg w-100">View Orders</button>
+                    <button class="btn btn-custom btn-lg w-100">View Orders</button>
                 </a>
             </div>
         </div>
@@ -57,7 +57,7 @@
             }
         </div>
 
-        <!-- Pagination for Products -->
+        <!--Pagination for Products-->
         <div class="d-flex justify-content-between mt-4">
             @if (ViewBag.CurrentPage > 1)
             {
@@ -85,7 +85,7 @@
         </div>
     </div>
 
-    <!-- Featured Services-->
+    <!--Featured Services-->
     <div class="container mt-5">
         <h2 class="text-center mb-4">Featured Services</h2>
         <div class="row">
@@ -113,7 +113,7 @@
             }
         </div>
 
-        <!-- Pagination Controls for Services -->
+        <!--Pagination for Services -->
         <div class="d-flex justify-content-between mt-4">
             @if (ViewBag.CurrentServicePage > 1)
             {
@@ -141,11 +141,11 @@
         </div>
     </div>
 
-    <!-- Recommendations -->
+    <!--Recommendations-->
     <div class="container-fluid mt-5">
         <div class="row w-100">
             <div class="col-md-6">
-                <h3 class="mb-3 text-primary">Recommendations for You</h3>
+                <h3 class="mb-3">Recommendations for You</h3>
                 <div class="card shadow-sm p-3">
                     <div class="table-responsive">
                         <table class="table table-hover">
@@ -215,17 +215,21 @@
                 </div>
             </div>
 
-            <!-- Ongoing Promos Section -->
+            <!--Ongoing Promos-->
             <div class="col-md-6">
-                <h3 class="mb-3 text-warning">Ongoing Promos</h3>
-                <div class="card shadow-sm p-3 bg-secondary text-white">
+                <h3 class="mb-3 text-center">Ongoing Promos</h3>
+                <div class="card shadow-sm p-4 bg-white text-dark rounded">
                     @if (ViewBag.Promos != null && ViewBag.Promos.Count > 0)
                     {
                         var currentPromo = ViewBag.Promos[ViewBag.CurrentPromoIndex];
-                        <div class="promo-item">
-                            <h4>Code: <strong>@currentPromo.PromoCode</strong></h4>
-                            <p>@currentPromo.PromoName</p>
-                            <p>Ends on: @currentPromo.PromoEnd.ToString("yyyy-MM-dd")</p>
+                        <div class="promo-item text-center">
+                            <h3 class="text-primary fw-bold">@currentPromo.PromoName</h3>
+                            <p class="mb-1">
+                                <strong>Code:</strong>
+                                <span class="badge bg-success text-white fs-5 px-3 py-2">@currentPromo.PromoCode</span>
+                            </p>
+                            <p class="mb-1"><strong>Provider:</strong> @currentPromo.BusinessName</p>
+                            <p class="mb-1"><strong>Ends on:</strong> @currentPromo.PromoEnd.ToString("MMMM dd, yyyy")</p>
                         </div>
                     }
                     else
@@ -233,23 +237,25 @@
                         <p class="text-center">No ongoing promos at the moment.</p>
                     }
 
-                    <!-- Promo Navigation -->
-                    <div class="d-flex justify-content-between mt-3">
+                    <!--Promo Pagination-->
+                    <div class="d-flex justify-content-between mt-4">
                         @if (ViewBag.Promos != null && ViewBag.Promos.Count > 0)
                         {
                             var prevPromoIndex = (ViewBag.CurrentPromoIndex - 1 + ViewBag.Promos.Count) % ViewBag.Promos.Count;
-                            <a href="@Url.Action("Index", new { promoIndex = prevPromoIndex })">
-                                <button class="btn btn-outline-light">Previous</button>
+                            <a href="@Url.Action("Index", new { promoIndex = prevPromoIndex })" class="btn btn-outline-primary pagination-link">
+                                ← Previous
                             </a>
 
                             var nextPromoIndex = (ViewBag.CurrentPromoIndex + 1) % ViewBag.Promos.Count;
-                            <a href="@Url.Action("Index", new { promoIndex = nextPromoIndex })">
-                                <button class="btn btn-outline-light">Next</button>
+                            <a href="@Url.Action("Index", new { promoIndex = nextPromoIndex })" class="btn btn-outline-primary pagination-link">
+                                Next →
                             </a>
                         }
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
 
@@ -269,3 +275,18 @@
         });
     </script>
 </body>
+
+<style>
+    .btn-custom {
+        background-color: #203B81;
+        border-color: white;
+        color: white;
+    }
+
+        .btn-custom:hover {
+            background-color: #1A2F65;
+            border-color: white;
+            color: white;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+</style>
