@@ -185,7 +185,8 @@ namespace HomeHub.DataModel.Migrations
                     Fee = table.Column<decimal>(type: "MONEY", nullable: false),
                     PromoCode = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     lat = table.Column<double>(type: "float", nullable: false),
-                    lng = table.Column<double>(type: "float", nullable: false)
+                    lng = table.Column<double>(type: "float", nullable: false),
+                    PayStatus = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {

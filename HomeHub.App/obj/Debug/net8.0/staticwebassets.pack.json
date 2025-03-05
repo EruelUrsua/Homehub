@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\021150fc-920a-4dad-9d94-557fb59925b2_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
+      "PackagePath": "staticwebassets\\images\\021150fc-920a-4dad-9d94-557fb59925b2_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg"
+    },
+    {
       "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\08894f65-c9e4-4184-a1d8-def0412675e3_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\08894f65-c9e4-4184-a1d8-def0412675e3_cleaning kit.jpg"
     },
@@ -207,6 +211,10 @@
     {
       "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c8ac0cd5-057e-468c-995c-2742d41206af_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\c8ac0cd5-057e-468c-995c-2742d41206af_samplestock.jpg"
+    },
+    {
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c9bceb61-0417-4667-8fb3-17dc1acfd003_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
+      "PackagePath": "staticwebassets\\images\\c9bceb61-0417-4667-8fb3-17dc1acfd003_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg"
     },
     {
       "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\d5100e17-1d32-48bc-8609-01b1030814e7_digital-icon 1.png",

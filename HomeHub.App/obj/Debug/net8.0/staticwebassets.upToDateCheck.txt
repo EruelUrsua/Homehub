@@ -1,6 +1,7 @@
 wwwroot\css\site.css
 wwwroot\css\styles.css
 wwwroot\favicon.ico
+wwwroot\images\021150fc-920a-4dad-9d94-557fb59925b2_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg
 wwwroot\images\08894f65-c9e4-4184-a1d8-def0412675e3_cleaning kit.jpg
 wwwroot\images\0ad5f321-fc89-4782-ab70-46b5e685f9c5_cleaning kit.jpg
 wwwroot\images\0c6db692-5aa4-4306-a5e5-ca890b5b04d5_cleaning kit.jpg
@@ -49,6 +50,7 @@ wwwroot\images\bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg
 wwwroot\images\c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.jpg
 wwwroot\images\c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.jpg
 wwwroot\images\c8ac0cd5-057e-468c-995c-2742d41206af_samplestock.jpg
+wwwroot\images\c9bceb61-0417-4667-8fb3-17dc1acfd003_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg
 wwwroot\images\d5100e17-1d32-48bc-8609-01b1030814e7_digital-icon 1.png
 wwwroot\images\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg
 wwwroot\images\e0188f78-6475-461f-a987-ec370078a467_cleaning kit.jpg

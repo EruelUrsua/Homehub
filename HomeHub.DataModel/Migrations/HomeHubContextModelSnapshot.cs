@@ -431,6 +431,11 @@ namespace HomeHub.DataModel.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("OrderID");
 
+                    b.Property<string>("PayStatus")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<string>("PromoCode")
                         .IsRequired()
                         .HasMaxLength(50)
