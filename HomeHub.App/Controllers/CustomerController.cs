@@ -420,7 +420,7 @@ namespace HomeHub.App.Controllers
             {
                 FirstName = user.Firstname,
                 LastName = user.Lastname,
-                Address = user.Address,
+                //Address = user.Address,
                 lat = user.lat,
                 lng = user.lng
 
@@ -437,7 +437,8 @@ namespace HomeHub.App.Controllers
 
             var model = new UpdateAddressVM
             {
-                Address = user.Address
+                lat = user.lat,
+                lng = user.lng
             };
 
             return View(model);
@@ -454,7 +455,11 @@ namespace HomeHub.App.Controllers
             if (user == null)
                 return View("Index");
 
-            user.Address = model.Address; // change to lat lng
+            //user.Address = model.Address; // change to lat lng
+
+            user.lat = model.lat;
+            user.lng = model.lng;
+
             var result = await userManager.UpdateAsync(user);
 
             if (result.Succeeded)

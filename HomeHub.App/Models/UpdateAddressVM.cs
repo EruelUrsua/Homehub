@@ -5,6 +5,9 @@ namespace HomeHub.App.Models
     public class UpdateAddressVM
     {
         [Required]
-        public string Address { get; set; }
+        public double lat { get; set; }
+
+        [Required]
+        public double lng { get; set; }
     }
 }
