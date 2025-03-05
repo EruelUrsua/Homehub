@@ -317,7 +317,7 @@ namespace HomeHub.App.Controllers
         {
                 
             await signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("SignIn", "Account");
         
         }
 
