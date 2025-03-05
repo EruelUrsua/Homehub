@@ -469,6 +469,7 @@ namespace HomeHub.App.Controllers
                                            ReportId = order.ReportId,
                                            Quantity = order.Quantity,
                                            ModeOfPayment = order.ModeOfPayment,
+                                           Address = order.Address, 
                                            lat    = order.lat,
                                            lng = order.lng
                                        }).ToListAsync();
@@ -539,6 +540,7 @@ namespace HomeHub.App.Controllers
                                            ReportId = order.ReportId,
                                            Quantity = order.Quantity,
                                            ModeOfPayment = order.ModeOfPayment,
+                                           Address = order.Address,
                                            lat = order.lat,
                                            lng = order.lng
                                        }).ToListAsync();

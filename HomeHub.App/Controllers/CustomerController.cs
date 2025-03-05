@@ -327,8 +327,8 @@ namespace HomeHub.App.Controllers
             entity.FirstName = user.Firstname;
             entity.LastName = user.Lastname;
               entity.lat = user.lat;
-            entity.lng = user.lng; 
-    
+            entity.lng = user.lng;
+            entity.Address = user.Address;
             entity.ReportId = 1; //remove
             entity.RatingId = 1; //remove
             entity.Quantity = model.qty;

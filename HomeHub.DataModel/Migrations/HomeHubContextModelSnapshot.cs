@@ -227,6 +227,10 @@ namespace HomeHub.DataModel.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("BusinessId")
                         .IsRequired()
                         .HasColumnType("nvarchar(MAX)")
