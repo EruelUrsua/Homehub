@@ -123,6 +123,7 @@ namespace HomeHub.DataModel.Migrations
                     ModeOfPayment = table.Column<string>(type: "nvarchar(5)", maxLength: 5, nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     lat = table.Column<double>(type: "float", nullable: false),
                     lng = table.Column<double>(type: "float", nullable: false),
                     AddInstructions = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true)
