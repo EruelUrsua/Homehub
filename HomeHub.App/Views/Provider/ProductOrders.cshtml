@@ -23,6 +23,7 @@
         <thead class="table-dark">
             <tr>
                 <th>Client ID</th>
+                <th>Address Map</th>
                 <th>Schedule</th>
                 <th>Order Date</th>
                 <th>Ordered Items</th>
@@ -40,6 +41,21 @@
             {
                 <tr>
                     <td>@order.ClientId</td>
+                    <td>
+                        <script src="~/lib/leaflet/leaflet.js"></script>
+                        <script src="~ /lib/leaflet/leaflet.min.js"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.83.1/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+                        <a href="~/lib/leaflet/leaflet.js.map"></a>
+                        <div id="map" style="width:100%;height:200px"></div>
+                        <script>
+
+                            var map = L.map('map').setView([@order.lat, @order.lng], 15);
+                                 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                 }).addTo(map);
+                            var marker = L.marker([@order.lat, @order.lng],{draggable: false} ).addTo(map);
+                        </script>
+                    </td>
                     <td>@order.OrderDate.ToShortDateString()</td>
                     <td>@order.Schedule.ToShortDateString()</td>
                     <td>@order.OrderedPs</td>

@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\Notes\\C#\\Homehub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\views\\provider\\productorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\provider\\productorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\controllers\\providercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\controllers\\providercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\views\\customer\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\customer\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|d:\\notes\\c#\\homehub\\homehub.datamodel\\homehubcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,20 +23,20 @@
       "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|d:\\notes\\c#\\homehub\\homehub.datamodel\\orderslog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|solutionrelative:homehub.datamodel\\orderslog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|d:\\notes\\c#\\homehub\\homehub.datamodel\\clientorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|solutionrelative:homehub.datamodel\\clientorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\views\\customer\\confirmorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\customer\\confirmorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\views\\provider\\productorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\provider\\productorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|d:\\notes\\c#\\homehub\\homehub.datamodel\\orderslog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68FEDE27-4A6B-4F30-A49F-551C2743F085}|HomeHub.DataModel\\HomeHub.DataModel.csproj|solutionrelative:homehub.datamodel\\orderslog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\views\\customer\\confirmorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\customer\\confirmorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -41,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\views\\customer\\editaddress.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\customer\\editaddress.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\views\\customer\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\customer\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\models\\updateaddressvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,7 +110,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -130,57 +134,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "ProviderController.cs",
+              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Controllers\\ProviderController.cs",
+              "RelativeDocumentMoniker": "HomeHub.App\\Controllers\\ProviderController.cs",
+              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Controllers\\ProviderController.cs",
+              "RelativeToolTip": "HomeHub.App\\Controllers\\ProviderController.cs",
+              "ViewState": "AgIAAL0BAAAAAAAAAAAkwMwBAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T05:34:29.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Program.cs",
               "RelativeDocumentMoniker": "HomeHub.App\\Program.cs",
               "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Program.cs",
               "RelativeToolTip": "HomeHub.App\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAgwBgAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T01:46:25.679Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ConfirmOrder.cshtml",
-              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Customer\\ConfirmOrder.cshtml",
-              "RelativeDocumentMoniker": "HomeHub.App\\Views\\Customer\\ConfirmOrder.cshtml",
-              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Customer\\ConfirmOrder.cshtml",
-              "RelativeToolTip": "HomeHub.App\\Views\\Customer\\ConfirmOrder.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-04T12:11:18.121Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "HomeHub.App\\Controllers\\CustomerController.cs",
               "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Controllers\\CustomerController.cs",
               "RelativeToolTip": "HomeHub.App\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAAIMBAAAAAAAAAAAgwHkBAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAFMBAAAAAAAAAAAgwGABAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T11:49:39.269Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ClientOrder.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\ClientOrder.cs",
               "RelativeDocumentMoniker": "HomeHub.DataModel\\ClientOrder.cs",
               "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\ClientOrder.cs",
               "RelativeToolTip": "HomeHub.DataModel\\ClientOrder.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAABMAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwBMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T12:00:21.08Z"
+              "WhenOpened": "2025-03-04T12:00:21.08Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "HomeHubContext.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHubContext.cs",
               "RelativeDocumentMoniker": "HomeHub.DataModel\\HomeHubContext.cs",
@@ -193,19 +199,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "ProductOrders.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Provider\\ProductOrders.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Provider\\ProductOrders.cshtml",
               "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Provider\\ProductOrders.cshtml",
               "RelativeToolTip": "HomeHub.App\\Views\\Provider\\ProductOrders.cshtml",
-              "ViewState": "AgIAAHsAAAAAAAAAAADwv4kAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAADoAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-04T23:29:01.626Z"
+              "WhenOpened": "2025-03-04T23:29:01.626Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "UserProfile.cshtml",
+              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Customer\\UserProfile.cshtml",
+              "RelativeDocumentMoniker": "HomeHub.App\\Views\\Customer\\UserProfile.cshtml",
+              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Customer\\UserProfile.cshtml",
+              "RelativeToolTip": "HomeHub.App\\Views\\Customer\\UserProfile.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-05T00:32:56.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ConfirmOrder.cshtml",
+              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Customer\\ConfirmOrder.cshtml",
+              "RelativeDocumentMoniker": "HomeHub.App\\Views\\Customer\\ConfirmOrder.cshtml",
+              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Customer\\ConfirmOrder.cshtml",
+              "RelativeToolTip": "HomeHub.App\\Views\\Customer\\ConfirmOrder.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-04T12:11:18.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Shared\\_Layout.cshtml",
@@ -217,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "OrdersLog.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\OrdersLog.cs",
               "RelativeDocumentMoniker": "HomeHub.DataModel\\OrdersLog.cs",
@@ -229,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Shared\\_LoginPartial.cshtml",
@@ -241,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "UpdateAddressVM.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Models\\UpdateAddressVM.cs",
               "RelativeDocumentMoniker": "HomeHub.App\\Models\\UpdateAddressVM.cs",
@@ -253,19 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserProfile.cshtml",
-              "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Customer\\UserProfile.cshtml",
-              "RelativeDocumentMoniker": "HomeHub.App\\Views\\Customer\\UserProfile.cshtml",
-              "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Customer\\UserProfile.cshtml",
-              "RelativeToolTip": "HomeHub.App\\Views\\Customer\\UserProfile.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACwAAABkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-05T00:32:56.336Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "EditAddress.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Customer\\EditAddress.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Customer\\EditAddress.cshtml",
@@ -277,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ProviderHome.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Provider\\ProviderHome.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Provider\\ProviderHome.cshtml",
@@ -289,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "UserProfileVM.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Models\\UserProfileVM.cs",
               "RelativeDocumentMoniker": "HomeHub.App\\Models\\UserProfileVM.cs",
@@ -301,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "ProductsView.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Provider\\ProductsView.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Provider\\ProductsView.cshtml",
@@ -313,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ServiceRequests.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Provider\\ServiceRequests.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Provider\\ServiceRequests.cshtml",
@@ -325,7 +345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "RefundHistory.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Customer\\RefundHistory.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Customer\\RefundHistory.cshtml",
@@ -337,7 +357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "PayMayaWebhookController.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Controllers\\PayMayaWebhookController.cs",
               "RelativeDocumentMoniker": "HomeHub.App\\Controllers\\PayMayaWebhookController.cs",
@@ -349,7 +369,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "OrderSummary.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Customer\\OrderSummary.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Customer\\OrderSummary.cshtml",
@@ -361,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "ProviderOrderVM.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Models\\ProviderOrderVM.cs",
               "RelativeDocumentMoniker": "HomeHub.App\\Models\\ProviderOrderVM.cs",
@@ -373,7 +393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "OrderProduct.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Customer\\OrderProduct.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Customer\\OrderProduct.cshtml",
@@ -385,7 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "RegisterC.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Account\\RegisterC.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Account\\RegisterC.cshtml",
@@ -397,7 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Admin.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\Admin.cs",
               "RelativeDocumentMoniker": "HomeHub.DataModel\\Admin.cs",
@@ -409,7 +429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "HomeHub.DataModel\\ApplicationUser.cs",
