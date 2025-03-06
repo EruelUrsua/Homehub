@@ -109,6 +109,31 @@ namespace HomeHub.App.Controllers
             return View(services);
         }
 
+        private string GenerateProductId()
+        {
+            // Retrieve the last Product ID that starts with "P"
+            var lastProduct = _context.Products
+                .Where(p => p.ProductId.StartsWith("P"))
+                .OrderByDescending(p => p.ProductId)
+                .FirstOrDefault();
+
+            // Default sequence number if no products exist yet
+            int sequenceNumber = 1;
+
+            // Increment the sequence number based on the last Product ID
+            if (lastProduct != null)
+            {
+                string lastId = lastProduct.ProductId.Substring(1); // Remove the "P" prefix
+                if (int.TryParse(lastId, out int lastNumber))
+                {
+                    sequenceNumber = lastNumber + 1;
+                }
+            }
+
+            return $"P{sequenceNumber:D3}"; // Format as P001, P002, P003...
+        }
+
+
         [HttpGet]
         public async Task<IActionResult> AddProduct()
         {
@@ -126,6 +151,11 @@ namespace HomeHub.App.Controllers
                 return Forbid(); // User is not a provider
             }
 
+            // Generate new Product ID
+            string newProductId = GenerateProductId();
+
+            // Pass generated Product ID and Provider ID to the view
+            ViewBag.GeneratedProductId = newProductId;
             ViewBag.ProviderID = provider.UserID;
             return View();
         }
@@ -134,7 +164,6 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddProduct(ProductVM model)
         {
-            // Get the logged-in provider's UserID
             var user = await GetCurrentUserAsync();
 
             if (user == null)
@@ -186,9 +215,12 @@ namespace HomeHub.App.Controllers
                 }
             }
 
+            // Generate unique Product ID
+            string newProductId = GenerateProductId();
+
             Product entity = new Product
             {
-                ProductId = model.ProductId,
+                ProductId = newProductId,
                 ProductItem = model.ProductItem,
                 Qty = model.Qty,
                 Price = model.Price,
@@ -201,6 +233,29 @@ namespace HomeHub.App.Controllers
             await _context.SaveChangesAsync();
 
             return RedirectToAction("ProductsView");
+        }
+
+        private string GenerateServiceId()
+        {
+            var lastService = _context.Services
+                .OrderByDescending(s => s.ServiceId)
+                .FirstOrDefault();
+
+            int nextIdNumber = 1; // Default to S001 if no services exist
+
+            if (lastService != null)
+            {
+                string lastServiceId = lastService.ServiceId; // Example: "S003"
+
+                // Extract the numeric part (003) and increment
+                if (lastServiceId.Length > 1 && int.TryParse(lastServiceId.Substring(1), out int lastNumber))
+                {
+                    nextIdNumber = lastNumber + 1;
+                }
+            }
+
+            // Format as "S001", "S002", etc.
+            return $"S{nextIdNumber:D3}";
         }
 
         [HttpGet]
@@ -221,6 +276,11 @@ namespace HomeHub.App.Controllers
                 return Forbid(); // User is not a service provider
             }
 
+            // Generate new Service ID
+            string newServiceId = GenerateServiceId();
+
+            // Pass generated Service ID and Provider ID to the view
+            ViewBag.GeneratedServiceId = newServiceId;
             ViewBag.ProviderID = provider.UserID;
             return View(new ServiceVM());
         }
@@ -249,9 +309,12 @@ namespace HomeHub.App.Controllers
                 return View(model);  
             }
 
+            // Generate unique Product ID
+            string newServiceId = GenerateServiceId();
+
             Service entity = new Service
             {
-                ServiceId = model.ServiceId,
+                ServiceId = newServiceId,
                 ServiceItem = model.ServiceItem,
                 Details = model.Details,
                 Fee = model.Fee,
