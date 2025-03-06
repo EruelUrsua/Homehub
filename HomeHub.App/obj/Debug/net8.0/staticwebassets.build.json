@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BnH+9prlfCDWQlSzKCa2Rv68Ykz16/5J60NMVEn7rPQ=",
+  "Hash": "XOOOuBwQlVSjl8QxrNgqTSGT5y24629HnCFBdr1Bz1s=",
   "Source": "HomeHub.App",
   "BasePath": "_content/HomeHub.App",
   "Mode": "Default",
@@ -1422,6 +1422,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg"
+    },
+    {
+      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uhoqjlngko",
+      "Integrity": "gtVrGpvCxRQLnDjgn9Qlx+e2mcgXnkYaxZbDhjazxrA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg"
     },
     {
       "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg",
@@ -5647,7 +5668,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 06 Mar 2025 06:56:53 GMT"
+          "Value": "Thu, 06 Mar 2025 07:12:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5684,7 +5705,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 06 Mar 2025 06:56:53 GMT"
+          "Value": "Thu, 06 Mar 2025 07:12:17 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8487,6 +8508,88 @@
         {
           "Name": "label",
           "Value": "images/f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gtVrGpvCxRQLnDjgn9Qlx+e2mcgXnkYaxZbDhjazxrA="
+        }
+      ]
+    },
+    {
+      "Route": "images/f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg",
+      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "43752"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gtVrGpvCxRQLnDjgn9Qlx+e2mcgXnkYaxZbDhjazxrA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Mar 2025 07:12:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gtVrGpvCxRQLnDjgn9Qlx+e2mcgXnkYaxZbDhjazxrA="
+        }
+      ]
+    },
+    {
+      "Route": "images/f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.uhoqjlngko.jpg",
+      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "43752"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gtVrGpvCxRQLnDjgn9Qlx+e2mcgXnkYaxZbDhjazxrA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Mar 2025 07:12:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uhoqjlngko"
+        },
+        {
+          "Name": "label",
+          "Value": "images/f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg"
         },
         {
           "Name": "integrity",

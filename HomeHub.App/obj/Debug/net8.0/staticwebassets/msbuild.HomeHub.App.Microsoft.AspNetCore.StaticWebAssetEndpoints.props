@@ -376,13 +376,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\68c113ea-d7e2-404c-8a82-c751941a6dcb_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-GNrR9ez8hsqf4cHgHklHzTI9Vokw6z2UkB71KLTzey0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"20333"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022GNrR9ez8hsqf4cHgHklHzTI9Vokw6z2UkB71KLTzey0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Mar 2025 06:56:53 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"20333"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022GNrR9ez8hsqf4cHgHklHzTI9Vokw6z2UkB71KLTzey0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Mar 2025 07:12:17 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HomeHub.App/images/68c113ea-d7e2-404c-8a82-c751941a6dcb_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.wuha136v1a.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\68c113ea-d7e2-404c-8a82-c751941a6dcb_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wuha136v1a"},{"Name":"integrity","Value":"sha256-GNrR9ez8hsqf4cHgHklHzTI9Vokw6z2UkB71KLTzey0="},{"Name":"label","Value":"_content/HomeHub.App/images/68c113ea-d7e2-404c-8a82-c751941a6dcb_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"20333"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022GNrR9ez8hsqf4cHgHklHzTI9Vokw6z2UkB71KLTzey0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Mar 2025 06:56:53 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"20333"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022GNrR9ez8hsqf4cHgHklHzTI9Vokw6z2UkB71KLTzey0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Mar 2025 07:12:17 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HomeHub.App/images/73938a12-d477-4825-88c7-060fe9b97ff2_cleaning kit.6qu6mo43sh.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\73938a12-d477-4825-88c7-060fe9b97ff2_cleaning kit.jpg'))</AssetFile>
@@ -791,6 +791,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"uhoqjlngko"},{"Name":"integrity","Value":"sha256-gtVrGpvCxRQLnDjgn9Qlx\u002Be2mcgXnkYaxZbDhjazxrA="},{"Name":"label","Value":"_content/HomeHub.App/images/f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"43752"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022gtVrGpvCxRQLnDjgn9Qlx\u002Be2mcgXnkYaxZbDhjazxrA=\u0022"},{"Name":"Last-Modified","Value":"Tue, 04 Mar 2025 14:41:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HomeHub.App/images/f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-gtVrGpvCxRQLnDjgn9Qlx\u002Be2mcgXnkYaxZbDhjazxrA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"43752"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022gtVrGpvCxRQLnDjgn9Qlx\u002Be2mcgXnkYaxZbDhjazxrA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Mar 2025 07:12:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HomeHub.App/images/f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.uhoqjlngko.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"uhoqjlngko"},{"Name":"integrity","Value":"sha256-gtVrGpvCxRQLnDjgn9Qlx\u002Be2mcgXnkYaxZbDhjazxrA="},{"Name":"label","Value":"_content/HomeHub.App/images/f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"43752"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022gtVrGpvCxRQLnDjgn9Qlx\u002Be2mcgXnkYaxZbDhjazxrA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Mar 2025 07:12:17 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HomeHub.App/images/faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.6qu6mo43sh.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg'))</AssetFile>
