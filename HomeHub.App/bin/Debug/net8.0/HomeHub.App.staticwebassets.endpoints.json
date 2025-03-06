@@ -2571,7 +2571,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 06 Mar 2025 06:56:53 GMT"
+          "Value": "Thu, 06 Mar 2025 07:12:17 GMT"
         }
       ],
       "EndpointProperties": [
@@ -2608,7 +2608,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 06 Mar 2025 06:56:53 GMT"
+          "Value": "Thu, 06 Mar 2025 07:12:17 GMT"
         }
       ],
       "EndpointProperties": [
@@ -5411,6 +5411,88 @@
         {
           "Name": "label",
           "Value": "images/f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg",
+      "AssetFile": "images/f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "43752"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gtVrGpvCxRQLnDjgn9Qlx+e2mcgXnkYaxZbDhjazxrA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Mar 2025 07:12:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gtVrGpvCxRQLnDjgn9Qlx+e2mcgXnkYaxZbDhjazxrA="
+        }
+      ]
+    },
+    {
+      "Route": "images/f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.uhoqjlngko.jpg",
+      "AssetFile": "images/f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "43752"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gtVrGpvCxRQLnDjgn9Qlx+e2mcgXnkYaxZbDhjazxrA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Mar 2025 07:12:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uhoqjlngko"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gtVrGpvCxRQLnDjgn9Qlx+e2mcgXnkYaxZbDhjazxrA="
+        },
+        {
+          "Name": "label",
+          "Value": "images/f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg"
         }
       ]
     },

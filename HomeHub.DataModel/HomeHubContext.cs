@@ -13,15 +13,15 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
     }
 
-    public DbSet<Admin> Admins { get; set; }
+   // public DbSet<Admin> Admins { get; set; }
 
-    public DbSet<BugReport> BugReports { get; set; }
+    //public DbSet<BugReport> BugReports { get; set; }
 
-    public DbSet<Business> Businesses { get; set; }
+   // public DbSet<Business> Businesses { get; set; }
 
     public DbSet<ClientOrder> ClientOrders { get; set; }
 
-    public  DbSet<Customer> Customers { get; set; }
+   // public  DbSet<Customer> Customers { get; set; }
 
     public  DbSet<OrdersLog> OrdersLogs { get; set; }
 
@@ -62,16 +62,16 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
         base.OnModelCreating(modelBuilder);
 
 
-        modelBuilder.Entity<Admin>(entity =>
-        {
-            entity.ToTable("Admin");
+        //modelBuilder.Entity<Admin>(entity =>
+        //{
+        //    entity.ToTable("Admin");
 
-            entity.Property(e => e.AdminId)
-                .HasMaxLength(50)
-                .HasColumnName("AdminID");
-            entity.Property(e => e.Email).HasMaxLength(50);
-            entity.Property(e => e.Password).HasMaxLength(50);
-        });
+        //    entity.Property(e => e.AdminId)
+        //        .HasMaxLength(50)
+        //        .HasColumnName("AdminID");
+        //    entity.Property(e => e.Email).HasMaxLength(50);
+        //    entity.Property(e => e.Password).HasMaxLength(50);
+        //});
 
         modelBuilder.Entity<BugReport>(entity =>
         {
@@ -93,6 +93,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
 
         modelBuilder.Entity<Provider>(entity =>
         {
+            entity.ToTable("Business");
             entity.HasKey(e => e.UserID);
 
             entity.Property(e => e.UserID)
@@ -103,22 +104,22 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
         });
 
 
-        modelBuilder.Entity<Business>(entity =>
-        {
-            entity.HasKey(e => e.UserID);
+        //modelBuilder.Entity<Business>(entity =>
+        //{
+        //    entity.HasKey(e => e.UserID);
 
-            entity.Property(e => e.UserID)
-                .HasColumnName("UserID");
-            entity.Property(e => e.BusinessName).HasMaxLength(50);
-            //entity.Property(e => e.BusinessType).HasMaxLength(1);
-            entity.Property(e => e.CompanyAddress).HasMaxLength(100);
-            entity.Property(e => e.ContactNo).HasMaxLength(11);
-            entity.Property(e => e.Email).HasMaxLength(40);
-            entity.Property(e => e.OfferList).HasMaxLength(50);
-            entity.Property(e => e.Password).HasMaxLength(20);
-            entity.Property(e => e.RepresentativeName).HasMaxLength(50);
-            entity.Property(e => e.BusinessPermitNo).HasMaxLength(50);
-        });
+        //    entity.Property(e => e.UserID)
+        //        .HasColumnName("UserID");
+        //    entity.Property(e => e.BusinessName).HasMaxLength(50);
+        //    //entity.Property(e => e.BusinessType).HasMaxLength(1);
+        //    entity.Property(e => e.CompanyAddress).HasMaxLength(100);
+        //    entity.Property(e => e.ContactNo).HasMaxLength(11);
+        //    entity.Property(e => e.Email).HasMaxLength(40);
+        //    entity.Property(e => e.OfferList).HasMaxLength(50);
+        //    entity.Property(e => e.Password).HasMaxLength(20);
+        //    entity.Property(e => e.RepresentativeName).HasMaxLength(50);
+        //    entity.Property(e => e.BusinessPermitNo).HasMaxLength(50);
+        //});
 
         modelBuilder.Entity<ClientOrder>(entity =>
         {
@@ -163,20 +164,20 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
                 .HasMaxLength(150);
         });
 
-        modelBuilder.Entity<Customer>(entity =>
-        {
-            entity.HasKey(e => e.UserId);
+        //modelBuilder.Entity<Customer>(entity =>
+        //{
+        //    entity.HasKey(e => e.UserId);
 
-            entity.Property(e => e.UserId)
-                .HasColumnName("UserID");
-            entity.Property(e => e.Address).HasMaxLength(80);
-            entity.Property(e => e.ContactNo).HasMaxLength(11);
-            entity.Property(e => e.Email).HasMaxLength(20);
-            entity.Property(e => e.Firstname).HasMaxLength(20);
-            entity.Property(e => e.Lastname).HasMaxLength(20);
-            entity.Property(e => e.Password).HasMaxLength(20);
-            entity.Property(e => e.ValidIDno).HasMaxLength(50);
-        });
+        //    entity.Property(e => e.UserId)
+        //        .HasColumnName("UserID");
+        //    entity.Property(e => e.Address).HasMaxLength(80);
+        //    entity.Property(e => e.ContactNo).HasMaxLength(11);
+        //    entity.Property(e => e.Email).HasMaxLength(20);
+        //    entity.Property(e => e.Firstname).HasMaxLength(20);
+        //    entity.Property(e => e.Lastname).HasMaxLength(20);
+        //    entity.Property(e => e.Password).HasMaxLength(20);
+        //    entity.Property(e => e.ValidIDno).HasMaxLength(50);
+        //});
 
         modelBuilder.Entity<OrdersLog>(entity =>
         {

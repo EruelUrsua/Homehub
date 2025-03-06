@@ -12,19 +12,6 @@ namespace HomeHub.DataModel.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Admin",
-                columns: table => new
-                {
-                    AdminID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Admin", x => x.AdminID);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
                 {
@@ -69,7 +56,7 @@ namespace HomeHub.DataModel.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "BugReports",
+                name: "BugReport",
                 columns: table => new
                 {
                     BugID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
@@ -79,28 +66,21 @@ namespace HomeHub.DataModel.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BugReports", x => x.BugID);
+                    table.PrimaryKey("PK_BugReport", x => x.BugID);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Businesses",
+                name: "Business",
                 columns: table => new
                 {
-                    UserID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Email = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    UserID = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false),
                     BusinessName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    RepresentativeName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    ContactNo = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: false),
-                    OfferList = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Businesstype = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    CompanyAddress = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    BusinessPermitNo = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
+                    Category = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Businesstype = table.Column<bool>(type: "bit", maxLength: 1, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Businesses", x => x.UserID);
+                    table.PrimaryKey("PK_Business", x => x.UserID);
                 });
 
             migrationBuilder.CreateTable(
@@ -131,25 +111,6 @@ namespace HomeHub.DataModel.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ClientOrders", x => x.ClientID);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Customers",
-                columns: table => new
-                {
-                    UserID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Email = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Firstname = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Lastname = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    ContactNo = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(80)", maxLength: 80, nullable: false),
-                    ValidIDno = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Customers", x => x.UserID);
                 });
 
             migrationBuilder.CreateTable(
@@ -228,20 +189,6 @@ namespace HomeHub.DataModel.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Promos", x => x.PromoID);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Providers",
-                columns: table => new
-                {
-                    UserID = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false),
-                    BusinessName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Category = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Businesstype = table.Column<bool>(type: "bit", maxLength: 1, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Providers", x => x.UserID);
                 });
 
             migrationBuilder.CreateTable(
@@ -469,9 +416,6 @@ namespace HomeHub.DataModel.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Admin");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
             migrationBuilder.DropTable(
@@ -487,16 +431,13 @@ namespace HomeHub.DataModel.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "BugReports");
+                name: "BugReport");
 
             migrationBuilder.DropTable(
-                name: "Businesses");
+                name: "Business");
 
             migrationBuilder.DropTable(
                 name: "ClientOrders");
-
-            migrationBuilder.DropTable(
-                name: "Customers");
 
             migrationBuilder.DropTable(
                 name: "Notifications");
@@ -509,9 +450,6 @@ namespace HomeHub.DataModel.Migrations
 
             migrationBuilder.DropTable(
                 name: "Promos");
-
-            migrationBuilder.DropTable(
-                name: "Providers");
 
             migrationBuilder.DropTable(
                 name: "Ratings");

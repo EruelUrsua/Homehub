@@ -63,6 +63,7 @@ wwwroot\images\e0188f78-6475-461f-a987-ec370078a467_cleaning kit.jpg
 wwwroot\images\e343c083-60ed-4d03-a806-63fa38a648ca_Water.jpg
 wwwroot\images\e5faf723-40ab-42eb-93a6-893a604beda1_cleaning kit.jpg
 wwwroot\images\f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg
+wwwroot\images\f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg
 wwwroot\images\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg
 wwwroot\images\fb997c26-867a-42b3-9920-e552f181c25e_Water.jpg
 wwwroot\images\fc846dd2-acf2-421b-8d70-4698102a27b4_samplestock.jpg
