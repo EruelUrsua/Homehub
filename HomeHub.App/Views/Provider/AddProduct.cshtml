@@ -12,9 +12,7 @@
             <input type="hidden" asp-for="ProviderID" value="@ViewBag.ProviderID" />
 
             <div class="mb-3">
-                <label asp-for="ProductId" class="form-label">Product ID</label>
-                <input asp-for="ProductId" class="form-control" value="@ViewBag.GeneratedProductId" readonly />
-                <span asp-validation-for="ProductId" class="text-danger"></span>
+                <input type="hidden" asp-for="ProductId" class="form-control" value="@ViewBag.GeneratedProductId" />
             </div>
 
             <div class="mb-3">
