@@ -147,8 +147,8 @@ namespace HomeHub.DataModel.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(450)
+                        .HasColumnType("nvarchar(450)")
                         .HasColumnName("UserID");
 
                     b.HasKey("BugId");
@@ -233,7 +233,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.Property<string>("BusinessId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(MAX)")
+                        .HasColumnType("nvarchar(450)")
                         .HasColumnName("BusinessID");
 
                     b.Property<decimal>("Fee")
@@ -297,8 +297,8 @@ namespace HomeHub.DataModel.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(450)
+                        .HasColumnType("nvarchar(450)")
                         .HasColumnName("UserID");
 
                     b.Property<double>("lat")
@@ -371,7 +371,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.Property<string>("BusinessId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(MAX)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
@@ -402,7 +402,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.Property<string>("BusinessId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(MAX)")
+                        .HasColumnType("nvarchar(450)")
                         .HasColumnName("BusinessID");
 
                     b.Property<DateTime>("Date")
@@ -496,7 +496,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.Property<string>("ProviderID")
                         .IsRequired()
-                        .HasColumnType("nvarchar(MAX)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("Qty")
                         .HasColumnType("int");
@@ -517,7 +517,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.Property<string>("BusinessId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(MAX)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("BusinessName")
                         .IsRequired()
@@ -551,6 +551,7 @@ namespace HomeHub.DataModel.Migrations
             modelBuilder.Entity("HomeHub.DataModel.Provider", b =>
                 {
                     b.Property<string>("UserID")
+                        .HasMaxLength(450)
                         .HasColumnType("nvarchar(450)")
                         .HasColumnName("UserID");
 
@@ -584,7 +585,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.Property<string>("BusinessId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(MAX)")
+                        .HasColumnType("nvarchar(450)")
                         .HasColumnName("BusinessID");
 
                     b.Property<string>("Comments")
@@ -735,7 +736,7 @@ namespace HomeHub.DataModel.Migrations
 
                     b.Property<string>("ProviderID")
                         .IsRequired()
-                        .HasColumnType("nvarchar(MAX)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ServiceItem")
                         .IsRequired()

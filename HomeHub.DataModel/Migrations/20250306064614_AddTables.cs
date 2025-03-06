@@ -73,7 +73,7 @@ namespace HomeHub.DataModel.Migrations
                 columns: table => new
                 {
                     BugID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    UserID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    UserID = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     FunctionID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
@@ -109,14 +109,14 @@ namespace HomeHub.DataModel.Migrations
                 {
                     ClientID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    BusinessID = table.Column<string>(type: "nvarchar(MAX)", nullable: false),
+                    BusinessID = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     OrderDate = table.Column<DateTime>(type: "datetime", nullable: false, defaultValueSql: "(getdate())"),
                     Schedule = table.Column<DateTime>(type: "datetime", nullable: false, defaultValueSql: "(getdate())"),
                     OrderedPS = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Fee = table.Column<decimal>(type: "money", nullable: false),
                     Status = table.Column<string>(type: "nvarchar(20)", maxLength: 10, nullable: false, defaultValue: "Pending"),
                     PromoCode = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    UserID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    UserID = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false),
                     RatingID = table.Column<int>(type: "int", nullable: false),
                     ReportID = table.Column<int>(type: "int", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
@@ -158,7 +158,7 @@ namespace HomeHub.DataModel.Migrations
                 {
                     NotificationId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    BusinessId = table.Column<string>(type: "nvarchar(MAX)", nullable: false),
+                    BusinessId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Message = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     IsRead = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETDATE()")
@@ -178,7 +178,7 @@ namespace HomeHub.DataModel.Migrations
                     UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    BusinessID = table.Column<string>(type: "nvarchar(MAX)", nullable: false),
+                    BusinessID = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Item = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Qty = table.Column<int>(type: "int", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -203,7 +203,7 @@ namespace HomeHub.DataModel.Migrations
                     Qty = table.Column<int>(type: "int", nullable: false),
                     Price = table.Column<decimal>(type: "money", nullable: false),
                     ContainerType = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    ProviderID = table.Column<string>(type: "nvarchar(MAX)", nullable: false),
+                    ProviderID = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ProductImagePath = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -223,7 +223,7 @@ namespace HomeHub.DataModel.Migrations
                     PromoEnd = table.Column<DateTime>(type: "date", nullable: false),
                     BusinessName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Discount = table.Column<decimal>(type: "decimal(18,4)", nullable: false),
-                    BusinessId = table.Column<string>(type: "nvarchar(MAX)", nullable: false)
+                    BusinessId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -234,7 +234,7 @@ namespace HomeHub.DataModel.Migrations
                 name: "Providers",
                 columns: table => new
                 {
-                    UserID = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    UserID = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false),
                     BusinessName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Category = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Businesstype = table.Column<bool>(type: "bit", maxLength: 1, nullable: false)
@@ -251,7 +251,7 @@ namespace HomeHub.DataModel.Migrations
                     RatingID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     OrderID = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    BusinessID = table.Column<string>(type: "nvarchar(MAX)", nullable: false),
+                    BusinessID = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Score = table.Column<int>(type: "int", nullable: false),
                     Comments = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Date = table.Column<DateTime>(type: "date", nullable: false),
@@ -312,7 +312,7 @@ namespace HomeHub.DataModel.Migrations
                     Details = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Fee = table.Column<decimal>(type: "money", nullable: false),
                     Available = table.Column<bool>(type: "bit", nullable: false),
-                    ProviderID = table.Column<string>(type: "nvarchar(MAX)", nullable: false)
+                    ProviderID = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
