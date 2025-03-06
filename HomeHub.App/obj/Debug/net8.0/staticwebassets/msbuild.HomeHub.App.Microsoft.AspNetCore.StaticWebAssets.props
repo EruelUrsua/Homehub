@@ -252,6 +252,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\243470ad-70b5-455a-aeea-ca9526e946d2_cleaning kit.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\263e305f-baa1-4379-8b3f-476efdf62abe_Water.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HomeHub.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HomeHub.App</BasePath>
+      <RelativePath>images/263e305f-baa1-4379-8b3f-476efdf62abe_Water.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lssc2slqht</Fingerprint>
+      <Integrity>xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\263e305f-baa1-4379-8b3f-476efdf62abe_Water.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\28448869-fb75-4cd5-b7ec-c8dc21e49a31_ENG 8.png'))">
       <SourceType>Package</SourceType>
       <SourceId>HomeHub.App</SourceId>
@@ -450,6 +468,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\526b3e4e-3c0a-49d2-bee6-28d2881aae56_Water.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HomeHub.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HomeHub.App</BasePath>
+      <RelativePath>images/526b3e4e-3c0a-49d2-bee6-28d2881aae56_Water.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lssc2slqht</Fingerprint>
+      <Integrity>xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\526b3e4e-3c0a-49d2-bee6-28d2881aae56_Water.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\5b6856c8-d836-4414-a6f4-c462eb2e40f4_samplestock.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>HomeHub.App</SourceId>
@@ -539,6 +575,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\73938a12-d477-4825-88c7-060fe9b97ff2_cleaning kit.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\73b63481-32d6-48a6-8ca9-c4a34784c97e_Water.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HomeHub.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HomeHub.App</BasePath>
+      <RelativePath>images/73b63481-32d6-48a6-8ca9-c4a34784c97e_Water.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lssc2slqht</Fingerprint>
+      <Integrity>xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\73b63481-32d6-48a6-8ca9-c4a34784c97e_Water.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg'))">
       <SourceType>Package</SourceType>
@@ -792,6 +846,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\a7786b16-1ab5-4551-ae38-2ededf14bdd6_1000s.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HomeHub.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HomeHub.App</BasePath>
+      <RelativePath>images/a7786b16-1ab5-4551-ae38-2ededf14bdd6_1000s.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lssc2slqht</Fingerprint>
+      <Integrity>xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\a7786b16-1ab5-4551-ae38-2ededf14bdd6_1000s.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>HomeHub.App</SourceId>
@@ -881,6 +953,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\b798f7e9-8fcd-411f-b481-2d0c320ce52a_cleaning kit.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\b7f78991-615e-4454-9288-9902ca496b12_Water.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HomeHub.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HomeHub.App</BasePath>
+      <RelativePath>images/b7f78991-615e-4454-9288-9902ca496b12_Water.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lssc2slqht</Fingerprint>
+      <Integrity>xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\b7f78991-615e-4454-9288-9902ca496b12_Water.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg'))">
       <SourceType>Package</SourceType>
@@ -1026,6 +1116,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\e0188f78-6475-461f-a987-ec370078a467_cleaning kit.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\e343c083-60ed-4d03-a806-63fa38a648ca_Water.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HomeHub.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HomeHub.App</BasePath>
+      <RelativePath>images/e343c083-60ed-4d03-a806-63fa38a648ca_Water.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lssc2slqht</Fingerprint>
+      <Integrity>xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\e343c083-60ed-4d03-a806-63fa38a648ca_Water.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\e5faf723-40ab-42eb-93a6-893a604beda1_cleaning kit.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>HomeHub.App</SourceId>
@@ -1079,6 +1187,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\fb997c26-867a-42b3-9920-e552f181c25e_Water.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HomeHub.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HomeHub.App</BasePath>
+      <RelativePath>images/fb997c26-867a-42b3-9920-e552f181c25e_Water.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>lssc2slqht</Fingerprint>
+      <Integrity>xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\fb997c26-867a-42b3-9920-e552f181c25e_Water.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\fc846dd2-acf2-421b-8d70-4698102a27b4_samplestock.jpg'))">
       <SourceType>Package</SourceType>

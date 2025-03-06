@@ -13,8 +13,8 @@
             <input type="hidden" asp-for="ProviderID" value="@ViewBag.ProviderID" />
 
             <div class="mb-3">
-                <label asp-for="ServiceId" class="form-label fw-bold">Service ID</label>
-                <input asp-for="ServiceId" class="form-control" />
+                <label asp-for="ServiceId" class="form-label">Service ID</label>
+                <input asp-for="ServiceId" class="form-control" value="@ViewBag.GeneratedServiceId" readonly />
                 <span asp-validation-for="ServiceId" class="text-danger"></span>
             </div>
 
