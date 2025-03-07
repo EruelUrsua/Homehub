@@ -20,8 +20,6 @@
                         <li class="nav-item"><a class="nav-link text-white" asp-action="ServiceRequests">Service Requests</a></li>
                     }
                     <li class="nav-item"><a class="nav-link text-white" asp-action="ManagePromo">Post a Promo</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" asp-action="ShowRefundRequests">Refund Requests</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" asp-action="InStorePurchase">In-Store Purchase</a></li>
                     <li class="nav-item"><a class="nav-link text-white" asp-action="OrdersLog">Orders Log</a></li>
                     <li class="nav-item"><a class="nav-link text-white" asp-action="SalesView">Sales Report</a></li>
                 </ul>
@@ -45,7 +43,8 @@
                         new { Name = "Refund Requests", Route = "ShowRefundRequests" },
                         new { Name = "In-Store Purchase", Route = "InStorePurchase" },
                         new { Name = "Orders Log", Route = "OrdersLog" },
-                        new { Name = "Sales Report", Route = "SalesView" }
+                        new { Name = "Sales Report", Route = "SalesView" },
+                        new { Name = "Reviewed Customers", Route = "ReviewedCustomers"}
                     })
                     {
                         <div class="col-md-4 mb-4">
@@ -66,9 +65,8 @@
                         new { Name = "Your Services", Route = "ServicesView" },
                         new { Name = "Service Requests", Route = "ServiceRequests" },
                         new { Name = "Post a Promo", Route = "ManagePromo" },
-                        new { Name = "Refund Requests", Route = "ShowRefundRequests" },
-                        new { Name = "In-Store Purchase", Route = "InStorePurchase" },
-                        new { Name = "Orders Log", Route = "OrdersLog" }
+                        new { Name = "Orders Log", Route = "OrdersLog" },
+                        new { Name = "Reviewed Customers", Route = "ReviewedCustomers"}
                     })
                     {
                         <div class="col-md-4 mb-4">

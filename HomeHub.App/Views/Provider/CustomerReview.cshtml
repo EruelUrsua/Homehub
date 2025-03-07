@@ -2,23 +2,14 @@
 
 <h2>📝 Review Customer</h2>
 
-@if (TempData["ErrorMessage"] != null)
-{
-    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
-}
-
-@if (TempData["SuccessMessage"] != null)
-{
-    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
-}
-
 <form asp-action="CustomerReview" method="post">
     <input type="hidden" asp-for="OrderId" />
     <input type="hidden" asp-for="CustomerId" />
+    <input type="hidden" asp-for="CustomerName" />
 
     <div class="form-group">
         <label>Customer Name:</label>
-        <input type="text" class="form-control" value="@Model.CustomerName" disabled />
+        <input type="text" class="form-control" value="@Model.CustomerName" readonly />
     </div>
 
     <div class="form-group">

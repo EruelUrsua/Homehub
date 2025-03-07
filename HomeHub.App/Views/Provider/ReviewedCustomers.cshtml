@@ -1,0 +1,29 @@
+﻿@model List<HomeHub.App.Models.ProviderReviewVM>
+
+<div class="container mt-4">
+    <h2>Reviewed Customers</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Order ID</th>
+                <th>Score</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var review in Model)
+            {
+                <tr>
+                    <td>@review.CustomerName</td>
+                    <td>@review.OrderId</td>
+                    <td>@review.Score</td>
+                    <td>@review.Comments</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a asp-action="OrdersLog" class="btn btn-secondary">Back to Orders Log</a>
+</div>
