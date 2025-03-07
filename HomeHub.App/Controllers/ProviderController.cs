@@ -1278,19 +1278,25 @@ namespace HomeHub.App.Controllers
             return View(promoViewModel);
         }
 
-        public IActionResult InStorePurchase()
+        public async Task<IActionResult> InStorePurchase()
         {
-            var products = _context.Products
-                .Where(p => p.Qty > 0)
-                .Select(p => new ProductSelectionVM
-                {
-                    ProductId = p.ProductId,
-                    Quantity = p.Qty,
-                }).ToList();
+            var user = await GetCurrentUserAsync();
+            if (user == null) return Unauthorized();
+
+            var provider = await _context.Providers.FirstOrDefaultAsync(p => p.UserID == user.Id);
+            if (provider == null) return Forbid();
+
+            var products = await _context.Products.Where(p => p.ProviderID == provider.UserID).ToListAsync();
 
             var viewModel = new InStorePurchaseVM
             {
-                Products = products
+                Products = products.Select(p => new ProductSelectionVM
+                {
+                    ProductId = p.ProductId,
+                    ProductName = p.ProductItem,
+                    Stock = p.Qty,
+                    Price = p.Price
+                }).ToList()
             };
 
             return View(viewModel);
@@ -1305,7 +1311,7 @@ namespace HomeHub.App.Controllers
                 return View("InStorePurchase", model);
             }
 
-            List<string> messages = new List<string>();
+            List<string> messages = new List<string>(); // Store success and warning messages
 
             foreach (var item in model.Products)
             {
@@ -1318,10 +1324,10 @@ namespace HomeHub.App.Controllers
                         if (product.Qty >= item.Quantity)
                         {
                             product.Qty -= item.Quantity; // Deduct stock
+                            _context.Products.Update(product); 
 
                             messages.Add($"✅ {item.Quantity} {product.ProductItem}(s) sold. Remaining stock: {product.Qty}.");
 
-                            // ⚠ Low stock warning 
                             if (product.Qty < 10)
                             {
                                 messages.Add($"⚠ Warning: {product.ProductItem} is running low on stock! Only {product.Qty} left.");
@@ -1329,19 +1335,20 @@ namespace HomeHub.App.Controllers
                         }
                         else
                         {
-                            ModelState.AddModelError("", $"❌ Not enough stock for {product.ProductItem}");
+                            ModelState.AddModelError("", $"❌ Not enough stock for {product.ProductItem}.");
                             return View("InStorePurchase", model);
                         }
                     }
                 }
             }
 
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync(); 
 
             TempData["SuccessMessage"] = string.Join("<br>", messages); // Store multiple messages
 
             return RedirectToAction("InStorePurchase");
         }
+
 
         [HttpGet]
         public async Task<IActionResult> CustomerReview(string LogId)
@@ -1356,7 +1363,25 @@ namespace HomeHub.App.Controllers
             if (orderLog == null)
             {
                 TempData["ErrorMessage"] = "Order not found for the given Log ID.";
-                return RedirectToAction("ViewOrders");
+                return RedirectToAction("OrdersLog");
+            }
+
+            // Check the provider's business type
+            var provider = _context.Providers.FirstOrDefault(p => p.UserID == user.Id);
+            if (provider == null)
+            {
+                TempData["ErrorMessage"] = "You are not authorized to leave a review.";
+                return RedirectToAction("OrdersLog");
+            }
+
+            bool isServiceProvider = provider.Businesstype; // true = service, false = product
+
+            // Validate order status based on provider type
+            if ((isServiceProvider && orderLog.Status != "Completed") ||
+                (!isServiceProvider && orderLog.Status != "Delivered"))
+            {
+                TempData["ErrorMessage"] = "You can only review customers for completed or delivered orders.";
+                return RedirectToAction("OrdersLog");
             }
 
             var existingReview = _context.Ratings
@@ -1365,7 +1390,7 @@ namespace HomeHub.App.Controllers
             if (existingReview != null)
             {
                 TempData["ErrorMessage"] = "You have already reviewed this customer.";
-                return RedirectToAction("ViewOrders");
+                return RedirectToAction("OrdersLog");
             }
 
             var model = new ProviderReviewVM
@@ -1407,7 +1432,35 @@ namespace HomeHub.App.Controllers
             await _context.SaveChangesAsync();
 
             TempData["SuccessMessage"] = "Review successfully submitted!";
-            return RedirectToAction("ViewOrders");
+            return RedirectToAction("OrdersLog");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> ReviewedCustomers()
+        {
+            var user = await GetCurrentUserAsync();
+
+            if (user == null)
+                return Unauthorized();
+
+            // Get all reviews submitted by this provider
+            var reviews = _context.Ratings
+                .Where(r => r.ReviewerId == user.Id)
+                .Select(r => new ProviderReviewVM
+                {
+                    OrderId = r.OrderId,
+                    CustomerId = r.CustomerId,
+                    CustomerName = _context.Users
+                        .Where(u => u.Id == r.CustomerId)
+                        .Select(u => u.Firstname + " " + u.Lastname)
+                        .FirstOrDefault(),
+                    Score = r.Score,
+                    Comments = r.Comments
+                })
+                .ToList();
+
+            return View(reviews);
+        }
+
     }
 }

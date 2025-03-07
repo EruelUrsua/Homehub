@@ -2,6 +2,20 @@
 
 <h2>Orders Log</h2>
 
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+<div class="mb-3">
+    <a asp-action="ReviewedCustomers" class="btn btn-info">View My Reviews</a>
+</div>
+
 <table class="table">
     <thead>
         <tr>
