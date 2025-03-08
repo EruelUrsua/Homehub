@@ -19,6 +19,7 @@ using System.Net;
 using static HomeHub.App.Models.PayMayaVM;
 using System.Threading.Tasks.Dataflow;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace HomeHub.App.Controllers
 {
@@ -28,12 +29,14 @@ namespace HomeHub.App.Controllers
         private readonly HomeHubContext context;
         private readonly PayMayaService _payMayaService;
         private readonly UserManager<ApplicationUser> userManager;
+        private readonly EmailSenderService emailSender;
 
-        public CustomerController(HomeHubContext context, UserManager<ApplicationUser> userManager)
+        public CustomerController(HomeHubContext context, UserManager<ApplicationUser> userManager, EmailSenderService emailSender)
         {
             this.context = context;
             _payMayaService = new PayMayaService();
             this.userManager = userManager;
+            this.emailSender = emailSender;
         }
 
         [HttpGet]
@@ -267,6 +270,31 @@ namespace HomeHub.App.Controllers
             return View(new OrderAvailViewModel());
         }
 
+
+        private async Task SendNotificationEmail(string email, string providername, OrdersLog order)
+        {
+
+            var subject = "Urgent Check your Order Notification";
+            // Create a professional HTML body
+            // Customize inline styles, text, and branding as needed
+            var messageBody = $@"
+        <div style=""font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#333;"">
+            <p>Hi {providername}</p>
+            <p> Kindly Check your order notification in <strong>HomeHub</strong>.
+             you have pending orders from {order.FirstName} {order.LastName} that need to be processed</p>
+            <p>Order Details:</p>
+            <p>Item/service: {order.Item}</p>
+            <p>Date of Order: {order.OrderDate} </p>    
+            <p>Thanks,<br />
+            The HomeHub Team</p>
+        </div>
+    ";
+            //Send the Confirmation Email to the User Email Id
+            await emailSender.SendEmailAsync(email, subject, messageBody, true);
+        }
+
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ConfirmOrder(OrderAvailViewModel model, string businessId)
@@ -372,9 +400,15 @@ namespace HomeHub.App.Controllers
                 IsRead = false,
             };
 
+            
+
+            var provider = await context.ApplicationUsers.FirstOrDefaultAsync(p => p.Id == businessId);
+
+            var details = await context.Providers.FirstOrDefaultAsync(p => p.UserID == businessId);
+
             context.Notifications.Add(notification);
             await context.SaveChangesAsync();
-
+            await SendNotificationEmail(provider.Email, details.BusinessName, orderLog);
             model.discount = Discount;
             model.totalPrice = TotalPrice;
 

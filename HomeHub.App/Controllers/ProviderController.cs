@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Collections.Immutable;
 using System.Security.Claims;
+using System.Text.Encodings.Web;
 
 namespace HomeHub.App.Controllers
 {
@@ -14,11 +15,13 @@ namespace HomeHub.App.Controllers
     {
         private readonly HomeHubContext _context;
         private readonly UserManager<ApplicationUser> userManager;
+        private readonly EmailSenderService emailSender;
 
-        public ProviderController(HomeHubContext context, UserManager<ApplicationUser> userManager)
+        public ProviderController(HomeHubContext context, UserManager<ApplicationUser> userManager, EmailSenderService emailSender)
         {
             _context = context;
             this.userManager = userManager;
+            this.emailSender = emailSender;
         }
 
         [HttpGet]
@@ -987,7 +990,31 @@ namespace HomeHub.App.Controllers
             return View(logs);
         }
 
-        public async Task<IActionResult> ShowNotifications()
+
+        private async Task SendNotificationEmail(string email, string providername, OrdersLog order,ApplicationUser user)
+        {
+     
+            var subject = "Urgent Check your Order Notification";
+            // Create a professional HTML body
+            // Customize inline styles, text, and branding as needed
+            var messageBody = $@"
+        <div style=""font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#333;"">
+           style=""font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#333;"">
+            <p>Hi {providername}</p>
+            <p> Kindly Check your order notification in <strong>HomeHub</strong>.
+             you have pending orders from {order.FirstName}{order.LastName} that need to be processed</p>
+            <p>Order Details:</p><br />
+            <p>Item/service{order.Item}</p><br />
+            <p>Date of Order{order.OrderDate} </p>    
+            <p>Thanks,<br />
+            The HomeHub Team</p>
+        </div>
+    ";
+            //Send the Confirmation Email to the User Email Id
+            await emailSender.SendEmailAsync(email, subject, messageBody, true);
+        }
+
+        public async Task<IActionResult> ShowNotifications(string email)
         {
             var user = await GetCurrentUserAsync();
             if (user == null) return Unauthorized();
@@ -1000,7 +1027,6 @@ namespace HomeHub.App.Controllers
                 .Where(n => n.BusinessId == provider.UserID)
                 .OrderByDescending(n => n.CreatedAt)
                 .ToListAsync();
-
             return View(notifications); 
         }
 
