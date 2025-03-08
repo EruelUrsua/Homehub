@@ -20,6 +20,7 @@ wwwroot\images\2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit.jpg
 wwwroot\images\2eff64c2-e314-459f-9c65-36f3d6b46f64_aev-gt-image 1.jpg
 wwwroot\images\32524986-0cf8-436e-b5a9-53fe9e5dc6a4_cleaning kit.jpg
 wwwroot\images\37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.jpg
+wwwroot\images\3cb6d383-2b04-498a-b7ba-6b74f54805e1_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg
 wwwroot\images\4870b1e3-93de-4422-b4cf-a0f6e4463bf9_cleaning kit.jpg
 wwwroot\images\490944cd-35e8-41df-a58c-141757bc7afc_drinking-water-container.jpg
 wwwroot\images\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg
