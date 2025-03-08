@@ -334,11 +334,11 @@ namespace HomeHub.App.Controllers
 
                     else if (role.Contains("Admin"))
                     {
-                        return RedirectToAction("ProviderHome", "Provider");
+                        return RedirectToAction("AdminHome", "Admin");
 
                     }
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Home", "Index");
                 }
                 else
                 {
