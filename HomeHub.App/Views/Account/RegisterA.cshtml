@@ -4,6 +4,7 @@
 <h3>Register an Account</h3>
 
 <form asp-controller="Account" asp-action="RegisterA" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
     <label asp-for="Lastname"></label>
     <input asp-for="Lastname" class="form-control" />
     <span asp-validation-for="Lastname"></span>

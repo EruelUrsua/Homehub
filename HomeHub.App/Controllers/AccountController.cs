@@ -150,35 +150,45 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> RegisterC(RegisterCVM model)
         {
-           
+
             if (ModelState.IsValid)
             {
+                var checkEmail = await userManager.FindByEmailAsync(model.Email);
 
-                ApplicationUser user = new ApplicationUser();
-                user.UserName = model.Email;
-                user.Email = model.Email;
-                user.Lastname = model.Lastname;
-                user.Firstname = model.Firstname;
-                user.PhoneNumber = model.ContactNo;
-                user.Address = model.Address;
-                user.lat = model.lat;
-                user.lng = model.lng;
-                var result = await userManager.CreateAsync(user, model.Password);
-                await userManager.AddToRoleAsync(user, "Customer");
-                if (result.Succeeded)
+                if (checkEmail != null)
                 {
-                    //Then send the Confirmation Email to the User
-                    await SendConfirmationEmail(model.Email, user);
+                    ModelState.AddModelError("Registration Error", "Email has already been used");
+                    return View(model);
 
-                    return View("RegistrationSuccessful");
                 }
-                return View(model);
+                else
+                {
+                    ApplicationUser user = new ApplicationUser();
+                    user.UserName = model.Email;
+                    user.Email = model.Email;
+                    user.Lastname = model.Lastname;
+                    user.Firstname = model.Firstname;
+                    user.PhoneNumber = model.ContactNo;
+                    user.Address = model.Address;
+                    user.lat = model.lat;
+                    user.lng = model.lng;
+                    var result = await userManager.CreateAsync(user, model.Password);
+                    await userManager.AddToRoleAsync(user, "Customer");
+                    if (result.Succeeded)
+                    {
+                        //Then send the Confirmation Email to the User
+                        await SendConfirmationEmail(model.Email, user);
+
+                        return View("RegistrationSuccessful");
+                    }
+                    return View(model);
+                }
             }
             else
             {
                 return View(model);
             }
-        
+
         }
 
 
@@ -196,41 +206,52 @@ namespace HomeHub.App.Controllers
             if (ModelState.IsValid)
             {
 
-                ApplicationUser user = new ApplicationUser();
-                Provider provider = new Provider();
+                var checkEmail = await userManager.FindByEmailAsync(model.Email);
 
-                user.UserName = model.Email;
-                user.Email = model.Email;
-                user.Lastname = model.Lastname;
-                user.Firstname = model.Firstname;
-                user.PhoneNumber = model.ContactNo;
-                user.Address = model.BusinessAddress;
-                provider.BusinessName = model.BusinessName;
-                provider.Businesstype = model.BusinessType;
-                provider.Category = model.Category;
-                user.lat = model.lat;
-                user.lng = model.lng;
-                var result = await userManager.CreateAsync(user, model.Password);
-                await userManager.AddToRoleAsync(user, "Provider");
-                provider.UserID = user.Id;
-                await context.AddAsync(provider);
-                await context.SaveChangesAsync();
-                if (result.Succeeded)
+                if (checkEmail != null)
                 {
-                    //Then send the Confirmation Email to the User
-                    await SendConfirmationEmail(model.Email, user);
+                    ModelState.AddModelError("Registration Error", "Email has already been used");
+                    return View(model);
 
-                    return View("RegistrationSuccessful");
                 }
-                return View(model);
+                else
+                {
+                    ApplicationUser user = new ApplicationUser();
+                    Provider provider = new Provider();
+
+                    user.UserName = model.Email;
+                    user.Email = model.Email;
+                    user.Lastname = model.Lastname;
+                    user.Firstname = model.Firstname;
+                    user.PhoneNumber = model.ContactNo;
+                    user.Address = model.BusinessAddress;
+                    provider.BusinessName = model.BusinessName;
+                    provider.Businesstype = model.BusinessType;
+                    provider.Category = model.Category;
+                    user.lat = model.lat;
+                    user.lng = model.lng;
+                    var result = await userManager.CreateAsync(user, model.Password);
+                    await userManager.AddToRoleAsync(user, "Provider");
+                    provider.UserID = user.Id;
+                    await context.AddAsync(provider);
+                    await context.SaveChangesAsync();
+                    if (result.Succeeded)
+                    {
+                        //Then send the Confirmation Email to the User
+                        await SendConfirmationEmail(model.Email, user);
+
+                        return View("RegistrationSuccessful");
+                    }
+                    return View(model);
+                }
             }
 
             else
             {
                 return View(model);
             }
-
         }
+    
 
         //Register Admin Account
 
