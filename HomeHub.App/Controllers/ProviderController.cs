@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Collections.Immutable;
 using System.Security.Claims;
 
 namespace HomeHub.App.Controllers
@@ -76,10 +77,18 @@ namespace HomeHub.App.Controllers
             return View(products);
         }
 
-        public IActionResult SalesView()
-        { 
-        
-             var sales = _context.OrdersLogs.ToList();
+        public async Task<IActionResult> SalesView()
+        {
+            var user = await GetCurrentUserId();
+
+            if (user == null) return Unauthorized();
+
+            var provider = await _context.Providers
+                .FirstOrDefaultAsync(p => p.UserID == user);
+
+            if (provider == null) return Forbid();
+
+            var sales = _context.ClientOrders.Where(c => c.BusinessId == user).ToList();
             return View(sales);
         }
 

@@ -1,5 +1,5 @@
-﻿@model List<HomeHub.DataModel.OrdersLog>
-
+﻿@model List<HomeHub.DataModel.ClientOrder>
+@* @model IEnumerable<HomeHub.App.Models.OrdersLogVM>  *@
 <canvas id="salesChart"></canvas>
 
 @section scripts{
@@ -10,7 +10,7 @@
     var chart = new Chart(ctx, {
     type: 'line',
     data: {
-    labels: @Html.Raw(Json.Serialize(Model.Select(d => d.Date.ToString("MMM ddd")).ToList())),
+    labels: @Html.Raw(Json.Serialize(Model.Select(d => d.OrderDate.ToString("MMM ddd")).ToList())),
     datasets: [{
     label: 'Sales',
     data: @Html.Raw(Json.Serialize(Model.Select(d => d.Fee).ToList())),

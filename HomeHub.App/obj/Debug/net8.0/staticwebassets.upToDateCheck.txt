@@ -34,6 +34,7 @@ wwwroot\images\73b63481-32d6-48a6-8ca9-c4a34784c97e_Water.jpg
 wwwroot\images\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg
 wwwroot\images\75124d2d-f5de-4989-ae2c-76a72d093cf4_cleaning kit.jpg
 wwwroot\images\75c85b54-a790-4d91-96d0-76a597fc5107_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg
+wwwroot\images\788c5cf5-46af-4e8f-8744-fecbb9ac9213_drinking-water-container.jpg
 wwwroot\images\82e435b7-7ce8-4e7a-afb5-9abb9d23aa48_samplestock.jpg
 wwwroot\images\87d5604e-25da-4ea5-8ce0-5bc7861eb357_Just The Two of Us Wallpaper.jpg
 wwwroot\images\925e66ba-5942-4496-a5dd-f23ddd2c11d2_cleaning kit.jpg
@@ -48,6 +49,7 @@ wwwroot\images\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg
 wwwroot\images\a7786b16-1ab5-4551-ae38-2ededf14bdd6_1000s.jpg
 wwwroot\images\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg
 wwwroot\images\abc08f8c-3ff3-4ebe-86fb-1a4c4a37d989_samplestock.jpg
+wwwroot\images\b27d5515-89e5-4aec-a99e-b989a820600d_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg
 wwwroot\images\b568e3d8-8d52-4497-8679-2bed24ff59db_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg
 wwwroot\images\b5a04bd6-bc22-4bdf-8784-5e438071b01a_samplestock.jpg
 wwwroot\images\b798f7e9-8fcd-411f-b481-2d0c320ce52a_cleaning kit.jpg

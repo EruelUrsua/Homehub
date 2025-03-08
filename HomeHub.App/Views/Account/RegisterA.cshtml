@@ -17,7 +17,7 @@
     <span asp-validation-for="ContactNo"></span>
     <br />
 
-    <label asp-for="Address"></label>
+    <label asp-for="Address">District</label>
     <input asp-for="Address" class="form-control" id="latlang" />
     <span asp-validation-for="Address"></span>
     <br />
@@ -37,7 +37,7 @@
 
         var map = L.map('map').setView([14.58699, 120.98634], 15);
              L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright"></a>'
              }).addTo(map);
             var marker = L.marker([14.58699, 120.98634],{draggable: true} ).addTo(map);
 
