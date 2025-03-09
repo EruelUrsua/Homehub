@@ -1,18 +1,20 @@
 ﻿@model List<HomeHub.DataModel.ClientOrder>
 @* @model IEnumerable<HomeHub.App.Models.OrdersLogVM>  *@
 <canvas id="salesChart"></canvas>
+<br />
+<canvas id="orderChart"></canvas>
 
 @section scripts{
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     var ctx = document.getElementById('salesChart').getContext('2d');
-    var chart = new Chart(ctx, {
+    var linechart = new Chart(ctx, {
     type: 'line',
     data: {
     labels: @Html.Raw(Json.Serialize(Model.Select(d => d.OrderDate.ToString("MMM ddd")).ToList())),
     datasets: [{
-    label: 'Sales',
+    label: 'Weekly Sales Report',
     data: @Html.Raw(Json.Serialize(Model.Select(d => d.Fee).ToList())),
     backgroundColor: 'rgba(0, 119, 204, 0.3)',
     borderColor: 'rgba(0, 119, 204, 1)',
@@ -29,8 +31,32 @@
     }
     }
     });
+   var cty = document.getElementById('orderChart').getContext('2d');
+   var barchart = new Chart(cty, {
+        type: 'bar',
+        data: {
+        labels: @Html.Raw(Json.Serialize(Model.Select(d => d.OrderedPs).ToList())),
+        datasets: [{
+        label: 'Availed Products/Services',
+        data: @Html.Raw(Json.Serialize(Model.Select(d => d.Fee).ToList())),
+        backgroundColor: 'rgba(0, 119, 204, 0.3)',
+        borderColor: 'rgba(0, 119, 204, 1)',
+        borderWidth: 1
+        }]
+        },
+        options: {
+        scales: {
+        yAxes: [{
+        ticks: {
+        beginAtZero: true
+        }
+        }]
+        }
+        }
+        });
 </script>
 }
+
 
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
