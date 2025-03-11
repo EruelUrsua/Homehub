@@ -1,55 +1,88 @@
 ﻿@model IEnumerable<HomeHub.App.Models.OrdersLogVM>
 
-<h2>Orders Log</h2>
+<div class="container mt-4">
+    <div class="header-section">
+        <h2>Orders Log</h2>
+    </div>
 
-@if (TempData["ErrorMessage"] != null)
-{
-    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
-}
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+    }
 
-@if (TempData["SuccessMessage"] != null)
-{
-    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
-}
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    }
 
-<div class="mb-3">
-    <a asp-action="ReviewedCustomers" class="btn btn-info">View My Reviews</a>
+    <div class="mb-3">
+        <a asp-action="ReviewedCustomers" class="btn btn-info">View My Reviews</a>
+    </div>
+
+    <table class="table table-striped table-bordered align-middle text-center">
+        <thead class="table-dark">
+            <tr>
+                <th>Order ID</th>
+                <th>Order Date</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var log in Model)
+            {
+                <tr>
+                    <td hidden>@log.LogId</td>
+                    <td>@log.OrderId</td>
+                    <td>@log.OrderDate.ToString("yyyy-MM-dd")</td>
+                    <td>@log.FirstName</td>
+                    <td>@log.LastName</td>
+                    <td hidden>@log.BusinessId</td>
+                    <td>@log.Item</td>
+                    <td>@log.Qty</td>
+                    <td>@log.Date.ToString("yyyy-MM-dd")</td>
+                    <td>
+                        @{
+                            string statusBadgeClass = log.Status switch
+                            {
+                                "Pending" => "bg-warning text-dark",
+                                "Completed" => "bg-success text-white",
+                                "Cancelled" => "bg-danger text-white",
+                                _ => "bg-secondary text-white"
+                            };
+                        }
+                        <span class="badge @statusBadgeClass">@log.Status</span>
+                    </td>
+                    <td>
+                        <a asp-action="CustomerReview" asp-route-LogId="@log.LogId" class="btn btn-primary btn-sm">
+                            Review Customer
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Order ID</th>
-            <th>Order Date</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Item</th>
-            <th>Quantity</th>
-            <th>Date</th>
-            <th>Status</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var log in Model)
-        {
-            <tr>
-                <td hidden>@log.LogId</td> 
-                <td>@log.OrderId</td>
-                <td>@log.OrderDate.ToShortDateString()</td>
-                <td>@log.FirstName</td>
-                <td>@log.LastName</td>
-                <td hidden>@log.BusinessId</td>
-                <td>@log.Item</td>
-                <td>@log.Qty</td>
-                <td>@log.Date.ToShortDateString()</td>
-                <td>@log.Status</td>
-                <td>
-                    <a asp-action="CustomerReview" asp-route-LogId="@log.LogId" class="btn btn-primary">
-                        Review Customer
-                    </a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<style>
+    .header-section {
+        background-color: #203B81;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .table th {
+        background-color: #203B81 !important;
+        color: white !important;
+    }
+</style>

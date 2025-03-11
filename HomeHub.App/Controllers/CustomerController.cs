@@ -20,9 +20,11 @@ using static HomeHub.App.Models.PayMayaVM;
 using System.Threading.Tasks.Dataflow;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HomeHub.App.Controllers
 {
+    [Authorize(Roles = "Customer")]
     public class CustomerController : Controller
     {
 

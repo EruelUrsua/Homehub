@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<HomeHubContext>(opts =>
 {
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("Ursua"));
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("Pascual"));
 });
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
@@ -34,6 +34,12 @@ builder.Services.ConfigureApplicationCookie(options =>
 );
 
 builder.Services.AddTransient<EmailSenderService>();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Account/SignIn";
+    options.AccessDeniedPath = "/Account/SignIn";
+});
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
