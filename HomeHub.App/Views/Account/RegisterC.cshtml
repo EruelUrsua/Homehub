@@ -1,79 +1,167 @@
 ﻿@model RegisterCVM
 
-<h3>Register an Account</h3>
+<body>
+    <div class="banner"></div>
+    <div class="register-container">
+        <div class="card">
+            <h2>Register as Customer</h2>
+            <form asp-controller="Account" asp-action="RegisterC" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
 
-<form asp-controller="Account" asp-action="RegisterC" method="post">
-<div asp-validation-summary="All" class="text-danger"></div>
-<label asp-for="Lastname">Last Name:</label>
-<input asp-for="Lastname" class="form-control" />
-<span asp-validation-for="Lastname"></span>
-<br />
-<label asp-for="Firstname">First Name:</label>
-<input asp-for="Firstname" class="form-control" />
-<span asp-validation-for="Firstname"></span>
-    <br />
-<label asp-for="ContactNo">Contact Number:</label>
-<input asp-for="ContactNo" class="form-control" />
-<span asp-validation-for="ContactNo"></span>
-    <br />
-    <label asp-for="Address">District: </label>
-    <input asp-for="Address" class="form-control" id="latlang" />
-    <span asp-validation-for="Address"></span>
-    <br />
+                <div class="form-group">
+                    <input asp-for="Lastname" class="form-control" placeholder="Last Name" />
+                    <span asp-validation-for="Lastname" class="text-danger"></span>
+                </div>
 
-    <input type="hidden" id="lat" asp-for="lat" class="form-control" />
-    <input type="hidden" id="lng" asp-for="lng" class="form-control" />
+                <div class="form-group">
+                    <input asp-for="Firstname" class="form-control" placeholder="First Name" />
+                    <span asp-validation-for="Firstname" class="text-danger"></span>
+                </div>
 
-    @* This is the Map Script do not touch! *@
-     <script src="~/lib/leaflet/leaflet.js"></script> 
-     <script src="~ /lib/leaflet/leaflet.min.js"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.83.1/dist/L.Control.Locate.min.js" charset="utf-8"></script>
-     <a href="~/lib/leaflet/leaflet.js.map"></a> 
-     <div id="map" style="width:100%;height:400px"></div> 
-     <script> 
-        var map = L.map('map').setView([14.58699, 120.98634], 15); 
-             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { 
-             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright"></a>' 
-             }).addTo(map); 
-            var marker = L.marker([14.58699, 120.98634],{draggable: true} ).addTo(map);
-      
+                <div class="form-group">
+                    <input asp-for="ContactNo" class="form-control" placeholder="Contact Number" />
+                    <span asp-validation-for="ContactNo" class="text-danger"></span>
+                </div>
 
-            marker.on("drag", function(e) {
-            var position = marker.getLatLng();
+                <div class="form-group">
+                    <input asp-for="Address" class="form-control" placeholder="District" id="latlang" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
 
-            // document.getElementById("latlang").value = position.lat +", " + position.lng;
-             document.getElementById("lat").value = position.lat;
-              document.getElementById("lng").value = position.lng;
-            // console.log(position.lat);
-            // console.log(position.lng);
-        });
+                <input type="hidden" id="lat" asp-for="lat" class="form-control" />
+                <input type="hidden" id="lng" asp-for="lng" class="form-control" />
 
-      
-                L.control.locate().addTo(map);
-     </script>
+                @* This is the Map Script do not touch! *@
+                <script src="~/lib/leaflet/leaflet.js"></script>
+                <script src="~ /lib/leaflet/leaflet.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.83.1/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+                <a href="~/lib/leaflet/leaflet.js.map"></a>
+                <div id="map" style="width:100%;height:400px"></div>
+                <script>
 
-    <br />
-<label asp-for="Email">Email: </label>
-<input asp-for="Email" class="form-control" />
-<span asp-validation-for="Email"></span>
-    <br />
-<label asp-for="Password">Password: </label>
-<input asp-for="Password" class="form-control" />
-<span asp-validation-for="Password"></span>
-    <br />
-<label asp-for="ConfirmPassword">Confirm Password:</label>
-<input asp-for="ConfirmPassword" class="form-control" />
-<span asp-validation-for="ConfirmPassword"></span>
-    <br />
-<a asp-controller="Home" asp-action="Index" class="btn btn-light">
-    Back to Home Page
-</a>
+                    var map = L.map('map').setView([14.58699, 120.98634], 15);
+                         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright"></a>'
+                         }).addTo(map);
+                        var marker = L.marker([14.58699, 120.98634],{draggable: true} ).addTo(map);
 
-<input type="submit" class="btn btn-success" value="Register" />
 
-</form>
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+                        marker.on("drag", function(e) {
+                        var position = marker.getLatLng();
+
+                        // document.getElementById("latlang").value = position.lat +", " + position.lng;
+                         document.getElementById("lat").value = position.lat;
+                          document.getElementById("lng").value = position.lng;
+                        // console.log(position.lat);
+                        // console.log(position.lng);
+                    });
+
+
+                            L.control.locate().addTo(map);
+                </script>
+
+                <div class="form-group">
+                    <input asp-for="Email" class="form-control" placeholder="Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirm Password" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <input type="submit" class="btn btn-custom" value="Register" />
+            </form>
+            <p class="register-link">
+                Already have an account? <a asp-controller="Account" asp-action="SignIn">Sign In</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+<style>
+    body {
+        background-color: #F1F1F1;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        overflow-y: auto;
+    }
+
+    .banner {
+        background-color: #3964D2;
+        height: 200px;
+        width: 100%;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 0;
+    }
+
+    .register-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 50px 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .card {
+        background-color: #1A3D8F;
+        color: white;
+        padding: 40px;
+        border-radius: 12px;
+        text-align: center;
+        width: 550px;
+        max-width: 90%;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-group input, .form-group select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 6px;
+        border: none;
+        font-size: 14px;
+    }
+
+    .btn-custom {
+        background-color: #ffffff;
+        color: #1A3D8F;
+        font-weight: bold;
+        width: 100%;
+        padding: 8px;
+        margin-top: 16px;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+
+        .btn-custom:hover {
+            background-color: #dfe6f1;
+        }
+
+    .register-link {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+        .register-link a {
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+            .register-link a:hover {
+                text-decoration: underline;
+            }
+</style>
