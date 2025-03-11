@@ -1,108 +1,215 @@
 ﻿@model RegisterBVM
 
+<body>
+    <div class="banner"></div>
+    <div class="signin-container">
+        <div class="card">
+            <h2>Register as Provider</h2>
 
-<h3>Register an Account</h3>
+            <form asp-controller="Account" asp-action="RegisterB" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
 
-<form asp-controller="Account" asp-action="RegisterB" method="post">
-    <div asp-validation-summary="All" class="text-danger"></div>
-    <label asp-for="Lastname">Last Name:</label>
-    <input asp-for="Lastname" class="form-control" />
-    <span asp-validation-for="Lastname"></span>
-    <br />
-    <label asp-for="Firstname">First Name:</label>
-    <input asp-for="Firstname" class="form-control" />
-    <span asp-validation-for="Firstname"></span>
-    <br />
-    <label asp-for="ContactNo">Contact Number:</label>
-    <input asp-for="ContactNo" class="form-control" />
-    <span asp-validation-for="ContactNo"></span>
-    <br />
-    <label asp-for="BusinessName">Business Name:</label>
-    <input asp-for="BusinessName" class="form-control" />
-    <span asp-validation-for="BusinessName"></span>
-    <br />
-    <label asp-for="BusinessType">Business Type:</label> 
-    <select asp-for="BusinessType" name="BusinessType" id="BusinessType">
-        <option value="false">Product</option>
-         <option value="true">Service</option>
-     </select>
-    @*<input asp-for="BusinessType" class="form-control" />  *@
-    <span asp-validation-for="BusinessType"></span> 
-    <br />
-    <br />
-    <label asp-for="Category">Category:</label>
-    <select asp-for="Category" name="Category" id="Category">
-        <optgroup label="Product" />
-        <option value="Water Refill">Water Refill</option>
-        <option value="Gas Refill">Gas Refill</option>
-        <optgroup label="Service" />
-        <option value="Electric Repair">Electric Repair</option>
-        <option value="Plumbing Repair">Plumbing Repair</option>
-        <option value="Carpentry">Carpentry</option>
-    </select>
-    <span asp-validation-for="Category"></span>
-    <br />
-    <br />
-    <label asp-for="BusinessAddress">District:</label>
-    <input asp-for="BusinessAddress" class="form-control" />
-    <span asp-validation-for="BusinessAddress"></span>
-    <br />
+                <div class="form-group">
+                    <input asp-for="Lastname" class="form-control" placeholder="Last Name" />
+                    <span asp-validation-for="Lastname" class="text-danger"></span>
+                </div>
 
-    <input type="hidden" id="lat" asp-for="lat" class="form-control" />
-    <input type="hidden" id="lng" asp-for="lng" class="form-control" />
+                <div class="form-group">
+                    <input asp-for="Firstname" class="form-control" placeholder="First Name" />
+                    <span asp-validation-for="Firstname" class="text-danger"></span>
+                </div>
 
+                <div class="form-group">
+                    <input asp-for="ContactNo" class="form-control" placeholder="Contact Number" />
+                    <span asp-validation-for="ContactNo" class="text-danger"></span>
+                </div>
 
-    @* This is the Map Script do not touch! *@
-    <script src="~/lib/leaflet/leaflet.js"></script>
-    <script src="~ /lib/leaflet/leaflet.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.83.1/dist/L.Control.Locate.min.js" charset="utf-8"></script>
-    <a href="~/lib/leaflet/leaflet.js.map"></a>
-    <div id="map" style="width:100%;height:400px"></div>
-    <script>
+                <div class="form-group">
+                    <input asp-for="BusinessName" class="form-control" placeholder="Business Name" />
+                    <span asp-validation-for="BusinessName" class="text-danger"></span>
+                </div>
 
-        var map = L.map('map').setView([14.58699, 120.98634], 15);
-             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright"></a>'
-             }).addTo(map);
-            var marker = L.marker([14.58699, 120.98634],{draggable: true} ).addTo(map);
+                <div class="form-group dropdown-container">
+                    <select asp-for="BusinessType" class="form-control dropdown">
+                        <option value="">Select Business Type</option>
+                        <option value="false">Product</option>
+                        <option value="true">Service</option>
+                    </select>
+                    <i class="fa fa-chevron-down dropdown-icon"></i>
+                    <span asp-validation-for="BusinessType" class="text-danger"></span>
+                </div>
 
+                <div class="form-group dropdown-container">
+                    <select asp-for="Category" class="form-control dropdown">
+                        <option>Select a Business Category</option>
+                        <option>Products</option>
+                        <option value="Water Refill">Water Refill</option>
+                        <option value="Gas Refill">Gas Refill</option>
+                        <option>Service</option>
+                        <option value="Electric Repair">Electric Repair</option>
+                        <option value="Plumbing Repair">Plumbing Repair</option>
+                        <option value="Carpentry">Carpentry</option>
+                    </select>
+                    <i class="fa fa-chevron-down dropdown-icon"></i>
+                    <span asp-validation-for="Category" class="text-danger"></span>
+                </div>
 
-            marker.on("drag", function(e) {
-            var position = marker.getLatLng();
+                <div class="form-group">
+                    <input asp-for="BusinessAddress" class="form-control" placeholder="District" />
+                    <span asp-validation-for="BusinessAddress" class="text-danger"></span>
+                </div>
 
-            // document.getElementById("latlang").value = position.lat +", " + position.lng;
-             document.getElementById("lat").value = position.lat;
-              document.getElementById("lng").value = position.lng;
-            // console.log(position.lat);
-            // console.log(position.lng);
-        });
+                <input type="hidden" id="lat" asp-for="lat" class="form-control" />
+                <input type="hidden" id="lng" asp-for="lng" class="form-control" />
+
+                @* This is the Map Script do not touch! *@
+                <script src="~/lib/leaflet/leaflet.js"></script>
+                <script src="~ /lib/leaflet/leaflet.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.83.1/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+                <a href="~/lib/leaflet/leaflet.js.map"></a>
+                <div id="map" style="width:100%;height:400px"></div>
+                <script>
+
+                    var map = L.map('map').setView([14.58699, 120.98634], 15);
+                         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright"></a>'
+                         }).addTo(map);
+                        var marker = L.marker([14.58699, 120.98634],{draggable: true} ).addTo(map);
 
 
-                L.control.locate().addTo(map);
-    </script>
-        <br />
-     <label asp-for="Email">Email: </label>
-    <input asp-for="Email" class="form-control" />
-    <span asp-validation-for="Email"></span>
-    <br />
-    <label asp-for="Password">Password:</label>
-    <input asp-for="Password" class="form-control" />
-    <span asp-validation-for="Password"></span>
-    <br />
-    <label asp-for="ConfirmPassword">Confirm Password:</label>
-    <input asp-for="ConfirmPassword" class="form-control" />
-    <span asp-validation-for="ConfirmPassword"></span>
-    <br />
-    <a asp-controller="Home" asp-action="Index" class="btn btn-light">
-        Back to Home Page
-    </a>
+                        marker.on("drag", function(e) {
+                        var position = marker.getLatLng();
 
-    <input type="submit" class="btn btn-success" value="Register" />
+                        // document.getElementById("latlang").value = position.lat +", " + position.lng;
+                         document.getElementById("lat").value = position.lat;
+                          document.getElementById("lng").value = position.lng;
+                        // console.log(position.lat);
+                        // console.log(position.lng);
+                    });
 
-</form>
 
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+                            L.control.locate().addTo(map);
+                </script>
+                <div class="form-group">
+                    <input asp-for="Email" class="form-control" placeholder="Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirm Password" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <input type="submit" class="btn btn-custom" value="Register" />
+            </form>
+
+            <p class="register-link">
+                Already have an account?
+                <a asp-controller="Account" asp-action="SignIn">Sign In</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+<style>
+    body {
+        background-color: #F1F1F1;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .banner {
+        background-color: #3964D2;
+        height: 200px;
+        width: 100%;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 0;
+    }
+
+    .signin-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .card {
+        background-color: #1A3D8F;
+        color: white;
+        padding: 40px;
+        border-radius: 12px;
+        text-align: center;
+        width: 500px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-group input, .form-group select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 10px;
+        border-radius: 6px;
+        border: none;
+        font-size: 14px;
+    }
+
+    .btn-custom {
+        background-color: #ffffff;
+        color: #1A3D8F;
+        font-weight: bold;
+        width: 100%;
+        padding: 6px;
+        margin-top: 14px;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+
+        .btn-custom:hover {
+            background-color: #dfe6f1;
+        }
+
+    .register-link {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+        .register-link a {
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+            .register-link a:hover {
+                text-decoration: underline;
+            }
+
+    .dropdown-container {
+        position: relative;
+    }
+
+    .dropdown {
+        appearance: none;
+        background-color: white;
+        padding-right: 35px;
+    }
+
+    .dropdown-icon {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #1A3D8F;
+        pointer-events: none;
+    }
+</style>
