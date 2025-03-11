@@ -57,7 +57,7 @@ namespace HomeHub.App.Controllers
                            join p in context.Providers on o.BusinessId equals p.UserID
                            where o.UserId == loggedInUser
                            select new
-                           {
+                           {  
                                p.BusinessName,
                                p.Category,
                                p.Businesstype,

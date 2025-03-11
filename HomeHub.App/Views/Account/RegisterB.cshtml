@@ -32,17 +32,17 @@
     <br />
     <label asp-for="Category">Category:</label>
     <select asp-for="Category" name="Category" id="Category">
-        <option>Select a Business Category</option>
-        <option>Products</option>
+        <optgroup label="Product" />
         <option value="Water Refill">Water Refill</option>
         <option value="Gas Refill">Gas Refill</option>
-        <option>Service</option>
+        <optgroup label="Service" />
         <option value="Electric Repair">Electric Repair</option>
         <option value="Plumbing Repair">Plumbing Repair</option>
         <option value="Carpentry">Carpentry</option>
     </select>
+    <span asp-validation-for="Category"></span>
     <br />
-
+    <br />
     <label asp-for="BusinessAddress">District:</label>
     <input asp-for="BusinessAddress" class="form-control" />
     <span asp-validation-for="BusinessAddress"></span>
