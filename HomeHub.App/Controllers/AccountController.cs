@@ -310,48 +310,51 @@ namespace HomeHub.App.Controllers
 
         public async Task<IActionResult> SignIn(SignInVM model)
         {
-
-            ApplicationUser user = await userManager.FindByNameAsync(model.Username);
-            if (user != null)
+            if (ModelState.IsValid)
             {
-                var result = await signInManager.PasswordSignInAsync(user, model.Password, false, false);
-                if (result.Succeeded)
+                ApplicationUser user = await userManager.FindByNameAsync(model.Username);
+                if (user != null)
                 {
-                    var userlog = await userManager.FindByEmailAsync(model.Username);
-                    var role = await userManager.GetRolesAsync(userlog);
-
-
-                    if (role.Contains("Customer"))
+                    var result = await signInManager.PasswordSignInAsync(user, model.Password, false, false);
+                    if (result.Succeeded)
                     {
-                        return RedirectToAction("Index", "Customer");
-                    }
+                        var userlog = await userManager.FindByEmailAsync(model.Username);
+                        var role = await userManager.GetRolesAsync(userlog);
 
-                    else if (role.Contains("Provider"))
+
+                        if (role.Contains("Customer"))
+                        {
+                            return RedirectToAction("Index", "Customer");
+                        }
+
+                        else if (role.Contains("Provider"))
+                        {
+                            return RedirectToAction("ProviderHome", "Provider");
+
+                        }
+
+                        else if (role.Contains("Admin"))
+                        {
+                            return RedirectToAction("AdminHome", "Admin");
+
+                        }
+
+                        return RedirectToAction("Home", "Index");
+                    }
+                    else
                     {
-                        return RedirectToAction("ProviderHome", "Provider");
-
+                        ModelState.AddModelError("Login Error", "Invalid Credentials");
+                        return View(model);
                     }
-
-                    else if (role.Contains("Admin"))
-                    {
-                        return RedirectToAction("AdminHome", "Admin");
-
-                    }
-
-                    return RedirectToAction("Home", "Index");
                 }
                 else
                 {
                     ModelState.AddModelError("Login Error", "Invalid Credentials");
                     return View(model);
+
                 }
             }
-            else
-            {
-                ModelState.AddModelError("Login Error", "Invalid Credentials");
-                return View(model);
-
-            }
+            return View(model);
         
         }
         [HttpPost]
