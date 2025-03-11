@@ -90,9 +90,12 @@ namespace HomeHub.App.Controllers
                 .FirstOrDefaultAsync(p => p.UserID == user);
 
             if (provider == null) return Forbid();
-
             var sales = _context.ClientOrders.Where(c => c.BusinessId == user).ToList();
+
             return View(sales);
+
+
+            
         }
 
         public async Task<IActionResult> ServicesView()
