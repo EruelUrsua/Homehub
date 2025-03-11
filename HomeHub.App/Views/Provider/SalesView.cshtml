@@ -1,21 +1,24 @@
 ﻿@model List<HomeHub.DataModel.ClientOrder>
-@* @model IEnumerable<HomeHub.App.Models.OrdersLogVM>  *@
+
+ @* Shows Sales chart *@
 <canvas id="salesChart"></canvas>
 <br />
+@* Shows Order chart *@
 <canvas id="orderChart"></canvas>
 
-@section scripts{
 
+
+@section scripts{
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     var ctx = document.getElementById('salesChart').getContext('2d');
     var linechart = new Chart(ctx, {
     type: 'line',
     data: {
-    labels: @Html.Raw(Json.Serialize(Model.Select(d => d.OrderDate.ToString("MMM ddd")).ToList())),
+         labels: @Html.Raw(Json.Serialize(Model.DistinctBy(d => d.OrderDate).Select(d => d.OrderDate.ToString("MMM ddd")).ToList())),
     datasets: [{
     label: 'Weekly Sales Report',
-    data: @Html.Raw(Json.Serialize(Model.Select(d => d.Fee).ToList())),
+         data: @Html.Raw(Json.Serialize(Model.GroupBy(d => d.OrderDate).Select(d => d.Sum(d => d.Fee).ToString()).ToList())),
     backgroundColor: 'rgba(0, 119, 204, 0.3)',
     borderColor: 'rgba(0, 119, 204, 1)',
     borderWidth: 1
@@ -31,14 +34,15 @@
     }
     }
     });
+
    var cty = document.getElementById('orderChart').getContext('2d');
    var barchart = new Chart(cty, {
         type: 'bar',
         data: {
-        labels: @Html.Raw(Json.Serialize(Model.Select(d => d.OrderedPs).ToList())),
+                       labels: @Html.Raw(Json.Serialize(Model.DistinctBy(d => d.OrderedPs).Select(d => d.OrderedPs).ToList())),
         datasets: [{
         label: 'Availed Products/Services',
-        data: @Html.Raw(Json.Serialize(Model.Select(d => d.Fee).ToList())),
+        data: @Html.Raw(Json.Serialize(Model.GroupBy(d => d.OrderedPs).Select(d => d.Sum(d => d.Quantity).ToString()).ToList())),
         backgroundColor: 'rgba(0, 119, 204, 0.3)',
         borderColor: 'rgba(0, 119, 204, 1)',
         borderWidth: 1
