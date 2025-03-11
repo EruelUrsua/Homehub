@@ -140,7 +140,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model)
+                    @foreach (var item in Model.OrderByDescending(o => o.OrderId))
                     {
                         <tr>
                             <td>@item.ProviderName</td>
@@ -151,61 +151,80 @@
                             <td>@item.Date.ToShortTimeString()</td>
                             <td>@item.Status</td>
                             <td class="action-buttons">
-                                @if (item.IsRated)
-                                {
-                                    <form asp-controller="Customer" asp-action="ReviewRating">
-                                        <input type="hidden" name="LogId" value="@item.LogId" />
-                                        <input type="submit" class="btn btn-success" value="Review Rating" />
-                                    </form>
-                                }
-                                else
-                                {
-                                    <form asp-controller="Customer" asp-action="RateProvider">
-                                        <input type="hidden" name="LogId" value="@item.LogId" />
-                                        <input type="submit" class="btn btn-success" value="Rate Order" />
-                                    </form>
-                                }
-                                <form asp-controller="Customer" asp-action="ReportProblem">
-                                    <input type="hidden" name="LogId" value="@item.LogId" />
-                                    <input type="submit" class="btn btn-warning" value="Report Problem" />
-                                </form>
-
-                                @{
-                                    var modeOfPayment = context.ClientOrders.Where(c => c.ClientId.ToString() == item.OrderId).Select(c => c.ModeOfPayment).FirstOrDefault();
-                                }
-                                @if (modeOfPayment == "Cash")
-                                {
-                                    <button class="btn btn-secondary" disabled>Cash</button>
-                                }
-                                else if (modeOfPayment == "Maya" && item.PayStatus != "Paid")
-                                {
-                                    <form asp-controller="Customer" asp-action="PayOnline">
-                                        <input type="hidden" name="LogId" value="@item.LogId" />
-                                        <input type="submit" class="btn btn-primary" value="Pay with Maya" />
-                                    </form>
-                                }
-                                else if (item.PayStatus == "Paid")
-                                {
-                                    <button class="btn btn-success" disabled>Payment Success</button>
-                                }
-
-                                @{
-                                    var orderDateTime = item.OrderDate.Date + item.Date.TimeOfDay; var timeRemaining = orderDateTime - DateTime.Now;
-                                }
                                 @if (item.Status == "Cancelled")
                                 {
                                     <button class="btn btn-secondary" disabled>Cancelled</button>
                                 }
-                                else if (timeRemaining.TotalHours >= 24)
-                                {
-                                    <form asp-controller="Customer" asp-action="CancelOrder" method="post">
-                                        <input type="hidden" name="LogId" value="@item.LogId" />
-                                        <input type="submit" class="btn btn-danger" value="Cancel Order" onclick="return confirm('Are you sure you want to cancel this order?');" />
-                                    </form>
-                                }
                                 else
                                 {
-                                    <button class="btn btn-secondary" disabled>Cannot Cancel</button>
+                                    //Rating
+                                    if (item.IsRated)
+                                    {
+                                        <form asp-controller="Customer" asp-action="ReviewRating">
+                                            <input type="hidden" name="LogId" value="@item.LogId" />
+                                            <input type="submit" class="btn btn-success" value="Review Rating" />
+                                        </form>
+                                    }
+                                    else if (item.Status == "Delivered")
+                                    {
+                                        <form asp-controller="Customer" asp-action="RateProvider">
+                                            <input type="hidden" name="LogId" value="@item.LogId" />
+                                            <input type="submit" class="btn btn-success" value="Rate Order" />
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <button class="btn btn-secondary" disabled>Rate Order</button>
+                                    }
+
+                                    //Report Problem
+                                    <form asp-controller="Customer" asp-action="ReportProblem">
+                                        <input type="hidden" name="LogId" value="@item.LogId" />
+                                        <input type="submit" class="btn btn-warning" value="Report Problem" />
+                                    </form>
+
+                                    //Payment
+                                    var modeOfPayment = context.ClientOrders
+                                    .Where(c => c.ClientId.ToString() == item.OrderId)
+                                    .Select(c => c.ModeOfPayment)
+                                    .FirstOrDefault();
+
+                                    if (modeOfPayment == "Cash")
+                                    {
+                                        <button class="btn btn-secondary" disabled>Cash</button>
+                                    }
+                                    else if (modeOfPayment == "Maya" && item.PayStatus != "Paid")
+                                    {
+                                        <form asp-controller="Customer" asp-action="PayOnline">
+                                            <input type="hidden" name="LogId" value="@item.LogId" />
+                                            <input type="submit" class="btn btn-primary" value="Pay with Maya" />
+                                        </form>
+                                    }
+                                    else if (item.PayStatus == "Paid")
+                                    {
+                                        <button class="btn btn-success" disabled>Payment Success</button>
+                                    }
+
+                                    //Cancel Order
+                                    var orderDateTime = item.OrderDate.Date + item.Date.TimeOfDay;
+                                    var timeRemaining = orderDateTime - DateTime.Now;
+
+                                    if (item.Status == "Delivered" || item.Status == "Out for Delivery")
+                                    {
+                                        <button class="btn btn-secondary" disabled>Cannot Cancel</button>
+                                    }
+                                    else if (timeRemaining.TotalHours >= 24)
+                                    {
+                                        <form asp-controller="Customer" asp-action="CancelOrder" method="post">
+                                            <input type="hidden" name="LogId" value="@item.LogId" />
+                                            <input type="submit" class="btn btn-danger" value="Cancel Order"
+                                                   onclick="return confirm('Are you sure you want to cancel this order?');" />
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <button class="btn btn-secondary" disabled>Cannot Cancel</button>
+                                    }
                                 }
                             </td>
                         </tr>
