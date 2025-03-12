@@ -70,8 +70,7 @@
               "RelativeToolTip": "HomeHub.App\\Models\\InStorePurchaseVM.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T01:10:56.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T01:10:56.791Z"
             },
             {
               "$type": "Document",
@@ -83,8 +82,7 @@
               "RelativeToolTip": "HomeHub.DataModel\\HomeHubContext.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAzwC8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T01:02:31.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T01:02:31.221Z"
             },
             {
               "$type": "Document",
@@ -94,7 +92,7 @@
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Provider\\InStorePurchase.cshtml",
               "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Views\\Provider\\InStorePurchase.cshtml",
               "RelativeToolTip": "HomeHub.App\\Views\\Provider\\InStorePurchase.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADAAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-12T01:00:00.088Z",
               "EditorCaption": ""
@@ -107,7 +105,7 @@
               "RelativeDocumentMoniker": "HomeHub.App\\Controllers\\ProviderController.cs",
               "ToolTip": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\Controllers\\ProviderController.cs",
               "RelativeToolTip": "HomeHub.App\\Controllers\\ProviderController.cs",
-              "ViewState": "AgIAAEcFAAAAAAAAAAAkwGUFAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAE4FAAAAAAAAAAAkwGgFAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-12T00:57:25.872Z",
               "EditorCaption": ""
@@ -122,8 +120,7 @@
               "RelativeToolTip": "HomeHub.App\\Views\\Account\\SignIn.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-11T11:45:05.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T11:45:05.331Z"
             },
             {
               "$type": "Document",
@@ -147,8 +144,7 @@
               "RelativeToolTip": "HomeHub.App\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T11:43:08.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T11:43:08.057Z"
             }
           ]
         }

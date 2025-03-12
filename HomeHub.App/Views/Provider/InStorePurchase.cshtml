@@ -16,6 +16,13 @@
         </div>
     }
 
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @Html.Raw(TempData["ErrorMessage"])
+        </div>
+    }
+
     <form asp-action="ProcessInStorePurchase" method="post">
         <table class="table table-striped table-bordered align-middle text-center">
             <thead class="table-dark">
@@ -35,8 +42,12 @@
                             <input type="hidden" asp-for="Products[i].ProductId" />
                             <input type="hidden" asp-for="Products[i].ProductName" />
                         </td>
-                        <td>@Model.Products[i].Stock</td>
-                        <td>₱@Model.Products[i].Price</td>
+                        <td>@Model.Products[i].Stock
+                            <input type="hidden" asp-for="Products[i].Stock" />
+                        </td>
+                        <td>₱@Model.Products[i].Price
+                            <input type="hidden" asp-for="Products[i].Price" />
+                        </td>
                         <td>
                             <input type="number" asp-for="Products[i].Quantity"
                                    class="form-control text-center product-quantity"
