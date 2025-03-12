@@ -17,6 +17,7 @@ namespace HomeHub.DataModel
 
         public double lng { get; set; }
 
+        //public ICollection<ApplicationUserRole> UserRoles { get; set; }
 
         //public string? BusinessName { get; set; }    
 

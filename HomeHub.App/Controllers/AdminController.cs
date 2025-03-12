@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Linq;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace HomeHub.App.Controllers
 {
@@ -16,6 +19,8 @@ namespace HomeHub.App.Controllers
             this.context = context;
             this.userManager = userManager;
         }
+
+        [HttpGet]
         public async Task<string> GetCurrentUserId()
         {
             ApplicationUser usr = await GetCurrentUserAsync();
@@ -25,15 +30,27 @@ namespace HomeHub.App.Controllers
         private Task<ApplicationUser> GetCurrentUserAsync() => userManager.GetUserAsync(HttpContext.User);
         public async Task<IActionResult> AdminHome()
         {
-            var users = GetCurrentUserId();
+            var uid = await GetCurrentUserId(); 
             ApplicationUser user = new ApplicationUser();
+            var userlog = await userManager.FindByIdAsync(uid);
+            var email = await userManager.GetEmailAsync(userlog);
 
-            var accounts = userManager.Users.Where(u => u.Id != users.ToString()).ToList();
+            var accounts = userManager.Users.Where(u => u.Email != email).ToList();
 
-            ViewBag.Users = accounts;
 
-            return View();
+            return View(accounts);
         }
-       
+
+
+        //public IActionResult AdminHome()
+        //{
+
+        //    var users = userManager.Users.ToList().Except();
+
+
+
+        //    return View(users);
+        //}
+
     }
 }
