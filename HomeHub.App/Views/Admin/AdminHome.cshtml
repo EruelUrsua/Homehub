@@ -1,15 +1,81 @@
-﻿
+﻿@model IEnumerable<HomeHub.DataModel.ApplicationUser>
 
-<div class="container-fluid py-5 header-section">
-    <h1>Welcome to HomeHub!</h1>
-</div>
+@{
+    ViewData["Title"] = "AdminHome";
 
-@foreach (var item in ViewBag.Users)
-{ 
-    @item.ToString()
+    }
+
+
+<h1>All Users</h1>
+@* @if (Model.Any()) *@
+@* { *@
+@*     <a asp-action="Register" asp-controller="Account" *@
+@*  class="btn btn-primary mb-3" style="width:auto">  *@
+@*         Add New User  *@
+@*      </a>  *@
+    @* @foreach (var item in Model) *@
+    <table class="table">
+    <thead>
+    <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Id)
+            </td>
+        <td>
+            @Html.DisplayNameFor(model => model.Email)
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </td>
+        <td>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </td>
+        @* <td> *@
+        @*     @foreach (var userRole in item.UserRole) *@
+        @*     { *@
+        @*         <p>@Html.DisplayFor(model => userRole.Role.Name)&nbsp;</p> *@
+        @*     } *@
+        @* </td> *@
+    </tr>
+</thead>
+<tbody>
+@foreach (var item in Model) { 
+<tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+<td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lastname)
+        </td>
+</tr>
+}
+</tbody>
+</table>
+@* } *@
+@* else *@
+@* { *@
+@*     <div class="card"> *@
+@*         <div class="card-header"> *@
+@*             No Users Added Yet *@
+@*         </div> *@
+@*     </div> *@
+@* } *@
+
+@* <div class="container-fluid py-5 header-section"> *@
+@*     <h1>Welcome to HomeHub!</h1> *@
+@* </div> *@
+
+@* @foreach (var item in ViewBag.Users) *@
+@* {  *@
+@*     @item.ToString() *@
     
 
-}
+@* } *@
 
 
 @*
