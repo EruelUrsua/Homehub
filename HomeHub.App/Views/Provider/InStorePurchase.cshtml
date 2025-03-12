@@ -11,7 +11,9 @@
 
     @if (TempData["SuccessMessage"] != null)
     {
-        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+        <div class="alert alert-success">
+            @Html.Raw(TempData["SuccessMessage"])
+        </div>
     }
 
     <form asp-action="ProcessInStorePurchase" method="post">
@@ -36,7 +38,10 @@
                         <td>@Model.Products[i].Stock</td>
                         <td>₱@Model.Products[i].Price</td>
                         <td>
-                            <input type="number" asp-for="Products[i].Quantity" class="form-control text-center" min="1" max="@Model.Products[i].Stock" />
+                            <input type="number" asp-for="Products[i].Quantity"
+                                   class="form-control text-center product-quantity"
+                                   value="0" min="0" max="@Model.Products[i].Stock"
+                                   data-product-id="@i" />
                         </td>
                     </tr>
                 }
@@ -47,6 +52,21 @@
         </div>
     </form>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.querySelector("form");
+
+        form.addEventListener("submit", function(event) {
+            // Remove hidden fields for products with 0 quantity
+            document.querySelectorAll(".product-quantity").forEach(input => {
+                if (input.value === "" || parseInt(input.value) <= 0) {
+                    input.disabled = true;
+                }
+            });
+        });
+    });
+</script>
 
 <style>
     .header-section {
