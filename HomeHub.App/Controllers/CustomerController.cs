@@ -65,7 +65,7 @@ namespace HomeHub.App.Controllers
                     o.Item,
                     OrderId = Convert.ToInt32(o.OrderId)
                 })
-                .OrderByDescending(r => r.OrderId) 
+                .OrderBy(r => r.Businesstype) 
                 .ToList()
                 .DistinctBy(r => new { r.Item, r.BusinessName })
                 .ToList();
