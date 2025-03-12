@@ -1351,6 +1351,14 @@ namespace HomeHub.App.Controllers
 
             List<string> messages = new List<string>();
 
+            bool isProductSelected = model.Products.Any(p => p.Quantity > 0);
+
+            if (!isProductSelected)
+            {
+                TempData["ErrorMessage"] = "❌ Please select at least one product before confirming purchase.";
+                return View("InStorePurchase", model);
+            }
+
             foreach (var item in model.Products.Where(p => p.Quantity > 0)) // ✅ Process only selected products
             {
                 var product = await _context.Products.FindAsync(item.ProductId);
