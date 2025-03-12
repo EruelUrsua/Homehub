@@ -1349,44 +1349,40 @@ namespace HomeHub.App.Controllers
                 return View("InStorePurchase", model);
             }
 
-            List<string> messages = new List<string>(); // Store success and warning messages
+            List<string> messages = new List<string>();
 
-            foreach (var item in model.Products)
+            foreach (var item in model.Products.Where(p => p.Quantity > 0)) // ✅ Process only selected products
             {
-                if (item.Quantity > 0) // Ensure only selected products are processed
+                var product = await _context.Products.FindAsync(item.ProductId);
+
+                if (product != null)
                 {
-                    var product = await _context.Products.FindAsync(item.ProductId);
-
-                    if (product != null)
+                    if (product.Qty >= item.Quantity)
                     {
-                        if (product.Qty >= item.Quantity)
-                        {
-                            product.Qty -= item.Quantity; // Deduct stock
-                            _context.Products.Update(product); 
+                        product.Qty -= item.Quantity;
+                        _context.Products.Update(product);
 
-                            messages.Add($"✅ {item.Quantity} {product.ProductItem}(s) sold. Remaining stock: {product.Qty}.");
+                        messages.Add($"✅ {item.Quantity} {product.ProductItem}(s) sold. Remaining stock: {product.Qty}.");
 
-                            if (product.Qty < 10)
-                            {
-                                messages.Add($"⚠ Warning: {product.ProductItem} is running low on stock! Only {product.Qty} left.");
-                            }
-                        }
-                        else
+                        if (product.Qty < 10)
                         {
-                            ModelState.AddModelError("", $"❌ Not enough stock for {product.ProductItem}.");
-                            return View("InStorePurchase", model);
+                            messages.Add($"⚠ Warning: {product.ProductItem} is running low on stock! Only {product.Qty} left.");
                         }
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", $"❌ Not enough stock for {product.ProductItem}.");
+                        return View("InStorePurchase", model);
                     }
                 }
             }
 
-            await _context.SaveChangesAsync(); 
+            await _context.SaveChangesAsync();
 
-            TempData["SuccessMessage"] = string.Join("<br>", messages); // Store multiple messages
+            TempData["SuccessMessage"] = string.Join("<br>", messages);
 
             return RedirectToAction("InStorePurchase");
         }
-
 
         [HttpGet]
         public async Task<IActionResult> CustomerReview(string LogId)
