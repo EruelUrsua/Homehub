@@ -55,17 +55,22 @@ namespace HomeHub.App.Controllers
 
             string loggedInUser = await GetCurrentUserId();
             //Recommendations 
-            var recsList = from o in context.OrdersLogs
-                           join p in context.Providers on o.BusinessId equals p.UserID
-                           where o.UserId == loggedInUser
-                           select new
-                           {  
-                               p.BusinessName,
-                               p.Category,
-                               p.Businesstype,
-                               o.Item
-                           };
-            ViewBag.recs = recsList.ToList();
+            var recsList = context.OrdersLogs
+                .Where(o => o.UserId == loggedInUser)
+                .Join(context.Providers, o => o.BusinessId, p => p.UserID, (o, p) => new
+                {
+                    p.BusinessName,
+                    p.Category,
+                    p.Businesstype,
+                    o.Item,
+                    OrderId = Convert.ToInt32(o.OrderId)
+                })
+                .OrderByDescending(r => r.OrderId) 
+                .ToList()
+                .DistinctBy(r => new { r.Item, r.BusinessName })
+                .ToList();
+
+            ViewBag.recs = recsList;
 
             //Featured Products
             var productsQuery = (from a in context.Providers
@@ -122,7 +127,6 @@ namespace HomeHub.App.Controllers
             ViewBag.CurrentPromoIndex = promoIndex;
 
             List<Provider> businesses = context.Providers.ToList();
-            //ViewBag.Businesses = businesses;
             ViewBag.Businesses = context.Providers.ToList();
 
             var model = new CHomeViewModel
@@ -227,15 +231,6 @@ namespace HomeHub.App.Controllers
 
         public IActionResult AvailListService(string businessId)
         {
-            /*var provider = context.Providers.FirstOrDefault(x => x.UserID == businessId);
-
-            var services = context.Services.Where(x => x.ProviderID == businessId).ToList();
-
-            ViewBag.ProviderID = businessId;
-            ViewBag.BusinessName = provider.BusinessName;
-            //ViewBag.Address = provider.CompanyAddress;
-
-            return View(services);*/
             if (string.IsNullOrEmpty(businessId))
             {
                 return RedirectToAction("Index");

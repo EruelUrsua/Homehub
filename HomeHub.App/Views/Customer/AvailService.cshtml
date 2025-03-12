@@ -78,14 +78,14 @@
             var sortFilter = document.getElementById('filter');
             var serviceList = document.getElementById('serviceList');
             var services = Array.from(document.getElementsByClassName('service-card'));
-            
+
             function filterAndSort() {
                 var selectedCategory = categoryFilter.value;
                 var selectedSort = sortFilter.value;
 
-                    // Filter by Category
+                //Filter services by category
                 services.forEach(service => {
-                    const category = service.getAttribute('data-category');
+                    const category = service.getAttribute('data-category').trim();
                     if (selectedCategory === 'All' || category === selectedCategory) {
                         service.style.display = '';
                     } else {
@@ -93,24 +93,28 @@
                     }
                 });
 
-                // Sort by Name or Price
+                //Sort filtered services
                 var sortedServices = services.filter(s => s.style.display !== 'none').sort((a, b) => {
                     if (selectedSort === 'byName') {
-                        return a.getAttribute('data-name').localeCompare(b.getAttribute('data-name'));
+                        return a.getAttribute('data-name').trim().toLowerCase()
+                            .localeCompare(b.getAttribute('data-name').trim().toLowerCase());
                     } else if (selectedSort === 'byPrice') {
                         return parseFloat(a.getAttribute('data-price')) - parseFloat(b.getAttribute('data-price'));
                     }
                 });
-            });
 
-            // Reorder elements in the DOM
+                //Clear and re-add sorted order
                 sortedServices.forEach(s => serviceList.appendChild(s));
             }
 
-                categoryFilter.addEventListener('change', filterAndSort);
+            categoryFilter.addEventListener('change', filterAndSort);
             sortFilter.addEventListener('change', filterAndSort);
+
+            filterAndSort();
         });
     </script>
+
+
 </body>
 
 <style>
