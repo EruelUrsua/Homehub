@@ -140,7 +140,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model.OrderByDescending(o => o.OrderId))
+                    @foreach (var item in Model.OrderByDescending(o => int.Parse(o.OrderId)))
                     {
                         <tr>
                             <td>@item.ProviderName</td>

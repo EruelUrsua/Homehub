@@ -222,7 +222,6 @@ namespace HomeHub.App.Controllers
             var products = context.Products.Where(x => x.ProviderID == businessId).ToList();
 
             ViewBag.ProviderID = businessId;
-            //ViewBag.BusinessName = provider.BusinessName;
             TempData["BusinessName"] = provider.BusinessName;
             ViewBag.Address = provider.Address;
 
@@ -254,7 +253,6 @@ namespace HomeHub.App.Controllers
             var services = context.Services.Where(x => x.ProviderID == businessId).ToList();
 
             ViewBag.ProviderID = businessId;
-            //ViewBag.BusinessName = provider.BusinessName;
             TempData["BusinessName"] = provider.BusinessName;
             ViewBag.Address = provider.Address;
 
@@ -272,8 +270,8 @@ namespace HomeHub.App.Controllers
         {
 
             var subject = "Urgent Check your Order Notification";
-            // Create a professional HTML body
-            // Customize inline styles, text, and branding as needed
+            //Create a professional HTML body
+            //Customize inline styles, text, and branding as needed
             var messageBody = $@"
         <div style=""font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#333;"">
             <p>Hi {providername}</p>
@@ -514,7 +512,7 @@ namespace HomeHub.App.Controllers
                         .FirstOrDefault() ?? "Unknown Provider",
                     IsRated = ratedOrderIds.Contains(o.OrderId)
                 })
-                .OrderBy(o => o.OrderId)
+                .OrderByDescending(o => o.OrderId)
                 .ToList();
 
             return View(orders);
@@ -720,38 +718,7 @@ namespace HomeHub.App.Controllers
         [HttpPost]
         public IActionResult RateProvider(string LogId)
         {
-            /*
-            var orderLog = context.OrdersLogs.FirstOrDefault(o => o.LogId == LogId);
-
-            if (orderLog == null)
-            {
-                TempData["ErrorMessage"] = "Order not found for the given Log ID.";
-                return RedirectToAction("ViewOrders");
-            }
-
-            if (int.TryParse(orderLog.OrderId, out int clientId))
-            {
-                var clientOrder = context.ClientOrders.FirstOrDefault(co => co.ClientId == clientId);
-
-                if (clientOrder == null)
-                {
-                    TempData["ErrorMessage"] = "No corresponding client order found.";
-                    return RedirectToAction("ViewOrders");
-                }
-
-                var business = context.Providers.FirstOrDefault(b => b.UserID == clientOrder.BusinessId);
-                if (business != null)
-                {
-                    ViewBag.BusinessName = business.BusinessName;
-                }
-
-                return View("RateProvider", clientOrder);
-            }
-            else
-            {
-                TempData["ErrorMessage"] = "Invalid Client ID format.";
-                return RedirectToAction("ViewOrders");
-            }*/
+            
             var orderLog = context.OrdersLogs.FirstOrDefault(o => o.LogId == LogId);
 
             if (orderLog == null)
@@ -935,11 +902,9 @@ namespace HomeHub.App.Controllers
 
                 List<PayMayaVM.PayMayaItem> items = new List<PayMayaVM.PayMayaItem>
                 {
-                    //will change once multiple order
                     new PayMayaVM.PayMayaItem
                     {
                         name = orderLog.Item,
-                        //amount = new PayMayaVM.PayMayaAmount {totalAmount = orderLog.Fee },
                         totalAmount = new PayMayaAmount {value = totalAmount, currency = currency}
                     }
                 };
@@ -957,7 +922,6 @@ namespace HomeHub.App.Controllers
 
                 return Redirect(checkoutUrl);
 
-                //return Content(response, "application/json");
             }
             catch (Exception ex)
             {
