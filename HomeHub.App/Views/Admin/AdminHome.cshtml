@@ -5,7 +5,12 @@
 
 }
 
-
+<a asp-controller="Account" asp-action="RegisterA" class="btn btn-success">
+    <i class="fas fa-plus"></i>
+    Create New Admin User
+</a>
+<br />
+<br />
 <h1>All Users</h1>
 @if (Model.Count() < 1)
 { 
@@ -33,6 +38,9 @@ else
         <td>
             @Html.DisplayNameFor(model => model.Lastname)
         </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.EmailConfirmed)
+                </td>
             <td>
                 Actions
             </td>
@@ -60,10 +68,17 @@ else
         <td>
             @Html.DisplayFor(modelItem => item.Lastname)
         </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EmailConfirmed)
+                    </td>
                 <td>
                     <form method="post" asp-action="DeleteUser" asp-controller="Admin">
                         <input type="hidden" name="Id" value="@item.Id" >
                        <input type="submit" class="btn btn-danger" value="Delete" >
+                    </form>
+                        <form asp-action="UserProfileAdmin" asp-controller="Admin">
+                        <input type="hidden" name="Id" value="@item.Id" >
+                       <input type="submit" class="btn btn-sm" value="View Profile" >
                     </form>
                 </td>
 </tr>

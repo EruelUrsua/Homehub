@@ -1,4 +1,5 @@
-﻿using HomeHub.DataModel;
+﻿using HomeHub.App.Models;
+using HomeHub.DataModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -41,6 +42,25 @@ namespace HomeHub.App.Controllers
             return View(accounts);
         }
 
+        public async Task<ActionResult> UserProfile()
+        {
+            ApplicationUser user = await GetCurrentUserAsync();
+            if (user == null)
+                return View("Index");
+
+            var model = new UserProfileVM
+            {
+                FirstName = user.Firstname,
+                LastName = user.Lastname,
+                //Address = user.Address,
+                lat = user.lat,
+                lng = user.lng
+
+            };
+
+            return View(model);
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteUser(string Id)
@@ -73,7 +93,24 @@ namespace HomeHub.App.Controllers
                 return View("AdminHome");
             }
         }
+        public async Task<ActionResult> UserProfileAdmin(string Id)
+        {
+            ApplicationUser user = await userManager.FindByIdAsync(Id);
+            if (user == null)
+                return View("Index");
 
+            var model = new UserProfileVM
+            {
+                FirstName = user.Firstname,
+                LastName = user.Lastname,
+                //Address = user.Address,
+                lat = user.lat,
+                lng = user.lng
+
+            };
+
+            return View(model);
+        }
 
         //public IActionResult AdminHome()
         //{
