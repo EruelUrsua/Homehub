@@ -285,7 +285,7 @@ namespace HomeHub.App.Controllers
                     //Then send the Confirmation Email to the User
                     await SendConfirmationEmail(model.Email, user);
 
-                    return View("RegistrationSuccessful");
+                    return RedirectToAction("AdminHome", "Admin");
                 }
                 return View(model);
             }
