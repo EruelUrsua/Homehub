@@ -268,6 +268,7 @@ namespace HomeHub.App.Controllers
 
         private async Task SendNotificationEmail(string email, string providername, OrdersLog order)
         {
+            DateTime dateAndTime = order.OrderDate;
 
             var subject = "Urgent Check your Order Notification";
             //Create a professional HTML body
@@ -279,7 +280,7 @@ namespace HomeHub.App.Controllers
              you have pending orders from {order.FirstName} {order.LastName} that need to be processed</p>
             <p>Order Details:</p>
             <p>Item/service: {order.Item}</p>
-            <p>Date of Order: {order.OrderDate} </p>    
+            <p>Date of Order: {dateAndTime.ToString("dd/MM/yyyy")} </p>    
             <p>Thanks,<br />
             The HomeHub Team</p>
         </div>
