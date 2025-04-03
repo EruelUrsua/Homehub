@@ -81,6 +81,8 @@ wwwroot\images\f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg
 wwwroot\images\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg
 wwwroot\images\fb997c26-867a-42b3-9920-e552f181c25e_Water.jpg
 wwwroot\images\fc846dd2-acf2-421b-8d70-4698102a27b4_samplestock.jpg
+wwwroot\images\validids\7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg
+wwwroot\images\validids\df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg
 wwwroot\js\scripts.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
@@ -153,3 +155,4 @@ wwwroot\lib\leaflet\leaflet.min.js
 wwwroot\lib\leaflet\leaflet-src.js
 wwwroot\lib\leaflet\leaflet-src.js.map
 wwwroot\lib\leaflet\leaflet-src.min.js
+wwwroot\permits\eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg

@@ -150,6 +150,37 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> RegisterC(RegisterCVM model)
         {
+            if (model.ValidId == null || model.ValidId.Length == 0)
+            {
+                ModelState.AddModelError("ValidId", "Please upload a valid ID image.");
+                return View(model);
+            }
+
+            string uniqueFileName = null;
+
+            if (model.ValidId != null)
+            {
+                // Define the folder path for valid IDs
+                string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/validids");
+
+                // Ensure folder exists
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+
+                // Create a unique file name
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + model.ValidId.FileName;
+
+                // Combine folder path + file name
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                // Save the image to the `wwwroot/images/validids/` folder
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await model.ValidId.CopyToAsync(fileStream);
+                }
+            }
 
             if (ModelState.IsValid)
             {
@@ -172,7 +203,7 @@ namespace HomeHub.App.Controllers
                     user.Address = model.Address;
                     user.lat = model.lat;
                     user.lng = model.lng;
-                    user.ValidId = model.ValidId;
+                    user.ValidId = "/validids/" + uniqueFileName;
 
                     var result = await userManager.CreateAsync(user, model.Password);
                     await userManager.AddToRoleAsync(user, "Customer");
@@ -236,6 +267,32 @@ namespace HomeHub.App.Controllers
                 }
             }
 
+            // Valid ID Image Upload
+            if (model.ValidId == null || model.ValidId.Length == 0)
+            {
+                ModelState.AddModelError("ValidId", "Please upload a valid ID image.");
+                return View(model);
+            }
+
+            string validIdFileName = null;
+            if (model.ValidId != null)
+            {
+                string uploadsFolderForValidId = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/validids");
+
+                if (!Directory.Exists(uploadsFolderForValidId))
+                {
+                    Directory.CreateDirectory(uploadsFolderForValidId);
+                }
+
+                validIdFileName = Guid.NewGuid().ToString() + "_" + model.ValidId.FileName;
+                string validIdFilePath = Path.Combine(uploadsFolderForValidId, validIdFileName);
+
+                using (var fileStream = new FileStream(validIdFilePath, FileMode.Create))
+                {
+                    await model.ValidId.CopyToAsync(fileStream);
+                }
+            }
+
             if (ModelState.IsValid)
             {
 
@@ -263,7 +320,7 @@ namespace HomeHub.App.Controllers
                     provider.Category = model.Category;
                     user.lat = model.lat;
                     user.lng = model.lng;
-                    user.ValidId = model.ValidId;
+                    user.ValidId = "/validids/" + validIdFileName;
                     provider.BusinessPermit = "/permits/" + uniqueFileName;
                     var result = await userManager.CreateAsync(user, model.Password);
                     await userManager.AddToRoleAsync(user, "Provider");

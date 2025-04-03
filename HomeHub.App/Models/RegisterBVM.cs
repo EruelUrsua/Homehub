@@ -53,7 +53,8 @@ namespace HomeHub.App.Models
         [Compare("Password")]
         public string ConfirmPassword { get; set; }
         [Required]
-        public string ValidId { get; set; }
+        public IFormFile ValidId { get; set; }
+        [Required]
         public IFormFile BusinessPermitNo { get; set; } 
     }
 }

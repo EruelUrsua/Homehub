@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ydZ5soWvOc/QAW6VimUU8fimssl+D2BQpJCwUEXytIk=",
+  "Hash": "4VEXy2ob6vLaZvnN8uO9eX5qFat6kkkOKWT+U/wcV74=",
   "Source": "HomeHub.App",
   "BasePath": "_content/HomeHub.App",
   "Mode": "Default",
@@ -1802,6 +1802,48 @@
       "OriginalItemSpec": "wwwroot\\images\\fc846dd2-acf2-421b-8d70-4698102a27b4_samplestock.jpg"
     },
     {
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/validids/7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lssc2slqht",
+      "Integrity": "xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\validids\\7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/validids/df499cee-18fd-4f92-89f7-baa5c082d76d_Water#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lssc2slqht",
+      "Integrity": "xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\validids\\df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\js\\scripts.js",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
@@ -3312,6 +3354,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\leaflet\\leaflet-src.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\permits\\eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "permits/eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xh7xfe9g0o",
+      "Integrity": "y2Rn+TUNLwfe1F59z4ED55OfeR3XPPVPFkpwEs67e78=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\permits\\eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg"
     }
   ],
   "Endpoints": [
@@ -4732,7 +4795,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 03:15:37 GMT"
+          "Value": "Thu, 03 Apr 2025 09:23:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4769,7 +4832,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 03:15:37 GMT"
+          "Value": "Thu, 03 Apr 2025 09:23:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5552,7 +5615,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 03:15:01 GMT"
+          "Value": "Thu, 03 Apr 2025 09:23:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5589,7 +5652,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 03:15:01 GMT"
+          "Value": "Thu, 03 Apr 2025 09:23:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5716,7 +5779,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 12:11:30 GMT"
+          "Value": "Thu, 03 Apr 2025 09:23:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5753,7 +5816,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 12:11:30 GMT"
+          "Value": "Thu, 03 Apr 2025 09:23:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10282,6 +10345,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A="
+        }
+      ]
+    },
+    {
+      "Route": "images/validids/7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "217694"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 13:16:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8="
+        }
+      ]
+    },
+    {
+      "Route": "images/validids/7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.lssc2slqht.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "217694"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 13:16:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lssc2slqht"
+        },
+        {
+          "Name": "label",
+          "Value": "images/validids/7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8="
+        }
+      ]
+    },
+    {
+      "Route": "images/validids/df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "217694"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 13:14:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8="
+        }
+      ]
+    },
+    {
+      "Route": "images/validids/df499cee-18fd-4f92-89f7-baa5c082d76d_Water.lssc2slqht.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "217694"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 13:14:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lssc2slqht"
+        },
+        {
+          "Name": "label",
+          "Value": "images/validids/df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8="
         }
       ]
     },
@@ -16186,6 +16413,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-+n/fJZR5t1Oo2QvGZSpIQED1qotFvqY+A5is4LAk/1Q="
+        }
+      ]
+    },
+    {
+      "Route": "permits/eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\permits\\eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "326375"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y2Rn+TUNLwfe1F59z4ED55OfeR3XPPVPFkpwEs67e78=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 09:23:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-y2Rn+TUNLwfe1F59z4ED55OfeR3XPPVPFkpwEs67e78="
+        }
+      ]
+    },
+    {
+      "Route": "permits/eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.xh7xfe9g0o.jpg",
+      "AssetFile": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\permits\\eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "326375"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y2Rn+TUNLwfe1F59z4ED55OfeR3XPPVPFkpwEs67e78=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 09:23:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xh7xfe9g0o"
+        },
+        {
+          "Name": "label",
+          "Value": "permits/eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-y2Rn+TUNLwfe1F59z4ED55OfeR3XPPVPFkpwEs67e78="
         }
       ]
     }
