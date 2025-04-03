@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeHub.DataModel.Migrations
 {
     [DbContext(typeof(HomeHubContext))]
-    [Migration("20250306081309_AddIdentityTables")]
-    partial class AddIdentityTables
+    [Migration("20250403072032_AddedTables")]
+    partial class AddedTables
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -88,6 +88,10 @@ namespace HomeHub.DataModel.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("ValidId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("lat")
                         .HasColumnType("float");
@@ -433,6 +437,10 @@ namespace HomeHub.DataModel.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("BusinessPermit")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<bool>("Businesstype")
                         .HasMaxLength(1)

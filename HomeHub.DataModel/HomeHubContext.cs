@@ -101,6 +101,7 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.BusinessName).HasMaxLength(50);
             entity.Property(e => e.Businesstype).HasMaxLength(1);
             entity.Property(e => e.Category).HasMaxLength(50);
+            entity.Property(e => e.BusinessPermit).HasColumnType("nvarchar(MAX)");
         });
 
 

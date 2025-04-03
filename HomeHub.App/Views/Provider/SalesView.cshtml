@@ -15,7 +15,7 @@
     var linechart = new Chart(ctx, {
     type: 'line',
     data: {
-         labels: @Html.Raw(Json.Serialize(Model.DistinctBy(d => d.OrderDate).Select(d => d.OrderDate.ToString("MMM ddd")).ToList())),
+         labels: @Html.Raw(Json.Serialize(Model.DistinctBy(d => d.OrderDate).Select(d => d.OrderDate.ToString("MMM")).ToList())),
     datasets: [{
     label: 'Weekly Sales Report',
          data: @Html.Raw(Json.Serialize(Model.GroupBy(d => d.OrderDate).Select(d => d.Sum(d => d.Fee).ToString()).ToList())),
