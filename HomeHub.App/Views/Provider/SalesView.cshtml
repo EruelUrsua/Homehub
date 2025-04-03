@@ -5,7 +5,7 @@
 <br />
 @* Shows Order chart *@
 <canvas id="orderChart"></canvas>
-
+<br />
 
 
 @section scripts{
@@ -15,9 +15,9 @@
     var linechart = new Chart(ctx, {
     type: 'line',
     data: {
-         labels: @Html.Raw(Json.Serialize(Model.DistinctBy(d => d.OrderDate).Select(d => d.OrderDate.ToString("MMM")).ToList())),
+         labels: @Html.Raw(Json.Serialize(Model.DistinctBy(d => d.OrderDate).Select(d => d.OrderDate.ToString("MMM yyyy")).ToList())),
     datasets: [{
-    label: 'Weekly Sales Report',
+    label: 'Monthly Sales Report',
          data: @Html.Raw(Json.Serialize(Model.GroupBy(d => d.OrderDate).Select(d => d.Sum(d => d.Fee).ToString()).ToList())),
     backgroundColor: 'rgba(0, 119, 204, 0.3)',
     borderColor: 'rgba(0, 119, 204, 1)',
