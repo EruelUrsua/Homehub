@@ -337,6 +337,14 @@
       "PackagePath": "staticwebassets\\images\\fc846dd2-acf2-421b-8d70-4698102a27b4_samplestock.jpg"
     },
     {
+      "Id": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg",
+      "PackagePath": "staticwebassets\\images\\validids\\7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg",
+      "PackagePath": "staticwebassets\\images\\validids\\df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg"
+    },
+    {
       "Id": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\js\\scripts.js",
       "PackagePath": "staticwebassets\\js\\scripts.js"
     },
@@ -623,6 +631,10 @@
     {
       "Id": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet.min.js",
       "PackagePath": "staticwebassets\\lib\\leaflet\\leaflet.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Charlize\\Documents\\Homehub\\HomeHub.App\\wwwroot\\permits\\eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg",
+      "PackagePath": "staticwebassets\\permits\\eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HomeHub.App.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

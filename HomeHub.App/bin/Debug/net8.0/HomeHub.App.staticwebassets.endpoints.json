@@ -1341,7 +1341,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 03:15:37 GMT"
+          "Value": "Thu, 03 Apr 2025 09:23:37 GMT"
         }
       ],
       "EndpointProperties": [
@@ -1378,7 +1378,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 03:15:37 GMT"
+          "Value": "Thu, 03 Apr 2025 09:23:37 GMT"
         }
       ],
       "EndpointProperties": [
@@ -2161,7 +2161,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 03:15:01 GMT"
+          "Value": "Thu, 03 Apr 2025 09:23:37 GMT"
         }
       ],
       "EndpointProperties": [
@@ -2198,7 +2198,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 03:15:01 GMT"
+          "Value": "Thu, 03 Apr 2025 09:23:37 GMT"
         }
       ],
       "EndpointProperties": [
@@ -2325,7 +2325,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 12:11:30 GMT"
+          "Value": "Thu, 03 Apr 2025 09:23:37 GMT"
         }
       ],
       "EndpointProperties": [
@@ -2362,7 +2362,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 12:11:30 GMT"
+          "Value": "Thu, 03 Apr 2025 09:23:37 GMT"
         }
       ],
       "EndpointProperties": [
@@ -6887,6 +6887,170 @@
         {
           "Name": "label",
           "Value": "images/fc846dd2-acf2-421b-8d70-4698102a27b4_samplestock.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/validids/7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg",
+      "AssetFile": "images/validids/7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "217694"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 13:16:20 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8="
+        }
+      ]
+    },
+    {
+      "Route": "images/validids/7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.lssc2slqht.jpg",
+      "AssetFile": "images/validids/7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "217694"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 13:16:20 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lssc2slqht"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8="
+        },
+        {
+          "Name": "label",
+          "Value": "images/validids/7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/validids/df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg",
+      "AssetFile": "images/validids/df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "217694"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 13:14:37 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8="
+        }
+      ]
+    },
+    {
+      "Route": "images/validids/df499cee-18fd-4f92-89f7-baa5c082d76d_Water.lssc2slqht.jpg",
+      "AssetFile": "images/validids/df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "217694"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 13:14:37 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lssc2slqht"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8="
+        },
+        {
+          "Name": "label",
+          "Value": "images/validids/df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg"
         }
       ]
     },
@@ -12791,6 +12955,88 @@
         {
           "Name": "label",
           "Value": "lib/leaflet/leaflet.min.js"
+        }
+      ]
+    },
+    {
+      "Route": "permits/eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg",
+      "AssetFile": "permits/eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "326375"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y2Rn+TUNLwfe1F59z4ED55OfeR3XPPVPFkpwEs67e78=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 09:23:37 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-y2Rn+TUNLwfe1F59z4ED55OfeR3XPPVPFkpwEs67e78="
+        }
+      ]
+    },
+    {
+      "Route": "permits/eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.xh7xfe9g0o.jpg",
+      "AssetFile": "permits/eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "326375"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y2Rn+TUNLwfe1F59z4ED55OfeR3XPPVPFkpwEs67e78=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 09:23:37 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xh7xfe9g0o"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-y2Rn+TUNLwfe1F59z4ED55OfeR3XPPVPFkpwEs67e78="
+        },
+        {
+          "Name": "label",
+          "Value": "permits/eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg"
         }
       ]
     }
