@@ -43,6 +43,8 @@ namespace HomeHub.App.Models
         [Required]
         [DataType(DataType.Password)]
         [Compare("Password")]
-        public string ConfirmPassword { get; set; } 
+        public string ConfirmPassword { get; set; }
+        [Required]
+        public string ValidId { get; set; }
     }
 }

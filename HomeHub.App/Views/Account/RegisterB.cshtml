@@ -6,7 +6,7 @@
         <div class="card">
             <h2>Register as Provider</h2>
 
-            <form asp-controller="Account" asp-action="RegisterB" method="post">
+            <form asp-controller="Account" asp-action="RegisterB" method="post" enctype="multipart/form-data">
                 <div asp-validation-summary="All" class="text-danger"></div>
 
                 <div class="form-group">
@@ -22,6 +22,20 @@
                 <div class="form-group">
                     <input asp-for="ContactNo" class="form-control" placeholder="Contact Number" />
                     <span asp-validation-for="ContactNo" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input asp-for="ValidId" class="form-control" placeholder="Valid ID Number" />
+                    <span asp-validation-for="ValidId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="BusinessPermitNo">Upload Business Permit</label>
+                    <input asp-for="BusinessPermitNo" type="file" class="form-control-file" />
+                    <span asp-validation-for="BusinessPermitNo" class="text-danger"></span>
+                    <br />
+                    <!-- Preview Image -->
+                    <img id="permitPreview" src="#" alt="Preview" class="img-thumbnail mt-2" style="display: none; max-width: 150px;" />
                 </div>
 
                 <div class="form-group">

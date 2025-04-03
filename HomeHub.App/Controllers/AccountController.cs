@@ -172,7 +172,7 @@ namespace HomeHub.App.Controllers
                     user.Address = model.Address;
                     user.lat = model.lat;
                     user.lng = model.lng;
-                    user.ValidId = "Insert Model";
+                    user.ValidId = model.ValidId;
 
                     var result = await userManager.CreateAsync(user, model.Password);
                     await userManager.AddToRoleAsync(user, "Customer");
@@ -204,6 +204,37 @@ namespace HomeHub.App.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> RegisterB(RegisterBVM model)
         {
+            if (model.BusinessPermitNo == null || model.BusinessPermitNo.Length == 0)
+            {
+                ModelState.AddModelError("BusinessPermit", "Please upload a business permit image.");
+                return View(model);
+            }
+
+            string uniqueFileName = null;
+
+            if (model.BusinessPermitNo != null)
+            {
+                // Define the folder path
+                string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/permits");
+
+                // Ensure folder exists
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+
+                // Create a unique file name
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + model.BusinessPermitNo.FileName;
+
+                // Combine folder path + file name
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                // Save the image to the `wwwroot/permits/` folder
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await model.BusinessPermitNo.CopyToAsync(fileStream);
+                }
+            }
 
             if (ModelState.IsValid)
             {
@@ -232,8 +263,8 @@ namespace HomeHub.App.Controllers
                     provider.Category = model.Category;
                     user.lat = model.lat;
                     user.lng = model.lng;
-                    user.ValidId = "Insert Model";
-                    provider.BusinessPermit = "Insert Model";
+                    user.ValidId = model.ValidId;
+                    provider.BusinessPermit = "/permits/" + uniqueFileName;
                     var result = await userManager.CreateAsync(user, model.Password);
                     await userManager.AddToRoleAsync(user, "Provider");
                     provider.UserID = user.Id;
