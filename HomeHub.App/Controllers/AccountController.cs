@@ -172,6 +172,8 @@ namespace HomeHub.App.Controllers
                     user.Address = model.Address;
                     user.lat = model.lat;
                     user.lng = model.lng;
+                    user.ValidId = "Insert Model";
+
                     var result = await userManager.CreateAsync(user, model.Password);
                     await userManager.AddToRoleAsync(user, "Customer");
                     if (result.Succeeded)
@@ -230,6 +232,8 @@ namespace HomeHub.App.Controllers
                     provider.Category = model.Category;
                     user.lat = model.lat;
                     user.lng = model.lng;
+                    user.ValidId = "Insert Model";
+                    provider.BusinessPermit = "Insert Model";
                     var result = await userManager.CreateAsync(user, model.Password);
                     await userManager.AddToRoleAsync(user, "Provider");
                     provider.UserID = user.Id;
@@ -277,7 +281,7 @@ namespace HomeHub.App.Controllers
                 user.Address = model.Address;
                 user.lat = model.lat;
                 user.lng = model.lng;
-
+                user.ValidId = "Insert Model";
                 var result = await userManager.CreateAsync(user, model.Password);
                 await userManager.AddToRoleAsync(user, "Admin");
                 if (result.Succeeded)

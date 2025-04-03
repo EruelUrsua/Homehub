@@ -86,6 +86,10 @@ namespace HomeHub.DataModel.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
+                    b.Property<string>("ValidId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double>("lat")
                         .HasColumnType("float");
 
@@ -430,6 +434,10 @@ namespace HomeHub.DataModel.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("BusinessPermit")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<bool>("Businesstype")
                         .HasMaxLength(1)

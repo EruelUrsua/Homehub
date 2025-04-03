@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace HomeHub.DataModel.Migrations
 {
     /// <inheritdoc />
-    public partial class AddTables : Migration
+    public partial class AddedTables : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -35,6 +35,7 @@ namespace HomeHub.DataModel.Migrations
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     lat = table.Column<double>(type: "float", nullable: false),
                     lng = table.Column<double>(type: "float", nullable: false),
+                    ValidId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -76,7 +77,8 @@ namespace HomeHub.DataModel.Migrations
                     UserID = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false),
                     BusinessName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Category = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Businesstype = table.Column<bool>(type: "bit", maxLength: 1, nullable: false)
+                    Businesstype = table.Column<bool>(type: "bit", maxLength: 1, nullable: false),
+                    BusinessPermit = table.Column<string>(type: "nvarchar(MAX)", nullable: false)
                 },
                 constraints: table =>
                 {
