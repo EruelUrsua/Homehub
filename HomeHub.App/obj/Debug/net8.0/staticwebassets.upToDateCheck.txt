@@ -81,9 +81,23 @@ wwwroot\images\f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg
 wwwroot\images\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg
 wwwroot\images\fb997c26-867a-42b3-9920-e552f181c25e_Water.jpg
 wwwroot\images\fc846dd2-acf2-421b-8d70-4698102a27b4_samplestock.jpg
+wwwroot\images\validids\0974d2c2-4de3-4dd9-b1a9-76bca897fa89_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg
+wwwroot\images\validids\14f686c2-1330-43d2-8a7e-f7a83a1f6b92_lpg.jpg
+wwwroot\images\validids\48e05b30-4b08-4a92-8fae-6d2d17a5eb0a_lpg.jpg
+wwwroot\images\validids\64801f9a-2b10-4195-b220-f33842c9e79f_Logo v2.png
+wwwroot\images\validids\72502de8-1cf8-4f76-8832-3f08462b0bb3_Logo v2.png
+wwwroot\images\validids\7b27db5a-f41a-487e-94e8-792eea381a01_Logo v2.png
 wwwroot\images\validids\7b5d7b49-04b8-42de-8831-8ad68ec9a58f_Just The Two of Us Wallpaper.jpg
 wwwroot\images\validids\7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg
+wwwroot\images\validids\a97a8bb0-136f-4c9d-82d6-9db0ea1b76d2_lpg.jpg
+wwwroot\images\validids\c0c3ecb9-8612-400d-9f0c-f16635de552f_lpg.jpg
+wwwroot\images\validids\cfa9b3c4-a35a-4837-8703-1bc3369fbe04_Logo v2.png
+wwwroot\images\validids\d5889477-baf7-4ffd-8cdf-1d6db10cab7b_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg
 wwwroot\images\validids\df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg
+wwwroot\images\validids\ed0aeade-e37b-43af-b41a-d5a5a393123a_Logo v2.png
+wwwroot\images\validids\eeb157b9-f7c9-4176-b0f3-a79454d336c6_Logo v2.png
+wwwroot\images\validids\ef895bd6-8bcc-46d8-8c11-a69f1014bc01_Logo v2.png
+wwwroot\images\validids\faf8f2f6-5ddc-4edc-aec3-ec9dd0fff2f4_Logo v2.png
 wwwroot\js\scripts.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
