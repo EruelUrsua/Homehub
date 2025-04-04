@@ -86,8 +86,7 @@
               "RelativeToolTip": "HomeHub.App\\appsettings.json",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-04T04:25:30.379Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T04:25:30.379Z"
             },
             {
               "$type": "Document",
@@ -99,8 +98,7 @@
               "RelativeToolTip": "HomeHub.App\\libman.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-04T04:25:28.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T04:25:28.69Z"
             },
             {
               "$type": "Document",
@@ -112,8 +110,7 @@
               "RelativeToolTip": "HomeHub.App\\Views\\Provider\\SalesView.cshtml",
               "ViewState": "AgIAACQAAAAAAAAAAAAAADUAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-03T13:33:07.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T13:33:07.502Z"
             },
             {
               "$type": "Document",
@@ -147,7 +144,7 @@
               "RelativeDocumentMoniker": "HomeHub.App\\Controllers\\AccountController.cs",
               "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Controllers\\AccountController.cs",
               "RelativeToolTip": "HomeHub.App\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAUwFoAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAwwEkAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T06:46:18.363Z",
               "EditorCaption": ""
@@ -162,8 +159,7 @@
               "RelativeToolTip": "HomeHub.App\\Controllers\\AdminController.cs",
               "ViewState": "AgIAAFkAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T08:45:50.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T08:45:50.707Z"
             },
             {
               "$type": "Document",
@@ -199,8 +195,7 @@
               "RelativeToolTip": "HomeHub.DataModel\\ApplicationUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T07:13:30.559Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T07:13:30.559Z"
             },
             {
               "$type": "Document",
@@ -212,8 +207,7 @@
               "RelativeToolTip": "HomeHub.App\\Views\\Provider\\AddProduct.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-03T09:11:21.618Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T09:11:21.618Z"
             }
           ]
         }
