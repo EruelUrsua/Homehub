@@ -43,7 +43,7 @@
 
                 <div class="form-group dropdown-container">
                     <select asp-for="BusinessType" class="form-control dropdown">
-                        <option value="">Select Business Type</option>
+                        <option>Select Business Type</option>
                         <option value="false">Product</option>
                         <option value="true">Service</option>
                     </select>
@@ -54,13 +54,15 @@
                 <div class="form-group dropdown-container">
                     <select asp-for="Category" class="form-control dropdown">
                         <option>Select a Business Category</option>
-                        <optgroup>Products</optgroup>
+                        <optgroup label="Products">
                         <option value="Water Refill">Water Refill</option>
                         <option value="Gas Refill">Gas Refill</option>
-                        <optgroup>Service</optgroup>
+                        </optgroup>
+                        <optgroup label="Service">
                         <option value="Electric Repair">Electric Repair</option>
                         <option value="Plumbing Repair">Plumbing Repair</option>
                         <option value="Carpentry">Carpentry</option>
+                        </optgroup>
                     </select>
                     <i class="fa fa-chevron-down dropdown-icon"></i>
                     <span asp-validation-for="Category" class="text-danger"></span>

@@ -341,6 +341,10 @@
       "PackagePath": "staticwebassets\\images\\validids\\0974d2c2-4de3-4dd9-b1a9-76bca897fa89_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg"
     },
     {
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\10a84cb5-7a39-4b6c-92e5-af0ae44190fe_Logo v2.png",
+      "PackagePath": "staticwebassets\\images\\validids\\10a84cb5-7a39-4b6c-92e5-af0ae44190fe_Logo v2.png"
+    },
+    {
       "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\14f686c2-1330-43d2-8a7e-f7a83a1f6b92_lpg.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\14f686c2-1330-43d2-8a7e-f7a83a1f6b92_lpg.jpg"
     },
@@ -699,6 +703,10 @@
     {
       "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\permits\\592ce9fd-0da7-4f84-9ace-938e58f97814_Water.jpg",
       "PackagePath": "staticwebassets\\permits\\592ce9fd-0da7-4f84-9ace-938e58f97814_Water.jpg"
+    },
+    {
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\permits\\e5d5959e-13b4-4194-9563-944e2c59a2ca_lpg.jpg",
+      "PackagePath": "staticwebassets\\permits\\e5d5959e-13b4-4194-9563-944e2c59a2ca_lpg.jpg"
     },
     {
       "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\permits\\eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg",
