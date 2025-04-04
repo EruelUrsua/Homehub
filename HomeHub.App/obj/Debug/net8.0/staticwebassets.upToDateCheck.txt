@@ -82,6 +82,7 @@ wwwroot\images\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg
 wwwroot\images\fb997c26-867a-42b3-9920-e552f181c25e_Water.jpg
 wwwroot\images\fc846dd2-acf2-421b-8d70-4698102a27b4_samplestock.jpg
 wwwroot\images\validids\0974d2c2-4de3-4dd9-b1a9-76bca897fa89_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg
+wwwroot\images\validids\10a84cb5-7a39-4b6c-92e5-af0ae44190fe_Logo v2.png
 wwwroot\images\validids\14f686c2-1330-43d2-8a7e-f7a83a1f6b92_lpg.jpg
 wwwroot\images\validids\48e05b30-4b08-4a92-8fae-6d2d17a5eb0a_lpg.jpg
 wwwroot\images\validids\64801f9a-2b10-4195-b220-f33842c9e79f_Logo v2.png
@@ -172,4 +173,5 @@ wwwroot\lib\leaflet\leaflet-src.js
 wwwroot\lib\leaflet\leaflet-src.js.map
 wwwroot\lib\leaflet\leaflet-src.min.js
 wwwroot\permits\592ce9fd-0da7-4f84-9ace-938e58f97814_Water.jpg
+wwwroot\permits\e5d5959e-13b4-4194-9563-944e2c59a2ca_lpg.jpg
 wwwroot\permits\eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg

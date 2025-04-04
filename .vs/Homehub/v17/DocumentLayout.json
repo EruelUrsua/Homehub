@@ -132,7 +132,7 @@
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Account\\RegisterB.cshtml",
               "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Account\\RegisterB.cshtml",
               "RelativeToolTip": "HomeHub.App\\Views\\Account\\RegisterB.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADcAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAC0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-03T08:49:31.203Z",
               "EditorCaption": ""
@@ -147,8 +147,7 @@
               "RelativeToolTip": "HomeHub.App\\Controllers\\AccountController.cs",
               "ViewState": "AgIAAMoAAAAAAAAAAAAUwEkAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T06:46:18.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T06:46:18.363Z"
             },
             {
               "$type": "Document",

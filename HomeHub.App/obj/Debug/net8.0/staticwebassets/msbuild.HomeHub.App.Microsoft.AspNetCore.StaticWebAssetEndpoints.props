@@ -1020,6 +1020,18 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"pdeh5f0h8p"},{"Name":"integrity","Value":"sha256-DWSqZ81i/\u002B4TQvvJh/v1GFOyc9ls1lCFLwmelHJYdW8="},{"Name":"label","Value":"_content/HomeHub.App/images/validids/0974d2c2-4de3-4dd9-b1a9-76bca897fa89_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"206484"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022DWSqZ81i/\u002B4TQvvJh/v1GFOyc9ls1lCFLwmelHJYdW8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 06:22:37 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HomeHub.App/images/validids/10a84cb5-7a39-4b6c-92e5-af0ae44190fe_Logo v2.65xsd9bh4s.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\validids\10a84cb5-7a39-4b6c-92e5-af0ae44190fe_Logo v2.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"65xsd9bh4s"},{"Name":"integrity","Value":"sha256-yncNOblKQRNYVY5q6ACu2SDpYb5MtW3s9qLIIGXi/T4="},{"Name":"label","Value":"_content/HomeHub.App/images/validids/10a84cb5-7a39-4b6c-92e5-af0ae44190fe_Logo v2.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5364"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022yncNOblKQRNYVY5q6ACu2SDpYb5MtW3s9qLIIGXi/T4=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 07:30:38 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HomeHub.App/images/validids/10a84cb5-7a39-4b6c-92e5-af0ae44190fe_Logo v2.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\validids\10a84cb5-7a39-4b6c-92e5-af0ae44190fe_Logo v2.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-yncNOblKQRNYVY5q6ACu2SDpYb5MtW3s9qLIIGXi/T4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5364"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022yncNOblKQRNYVY5q6ACu2SDpYb5MtW3s9qLIIGXi/T4=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 07:30:38 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HomeHub.App/images/validids/14f686c2-1330-43d2-8a7e-f7a83a1f6b92_lpg.faxks2amgx.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\validids\14f686c2-1330-43d2-8a7e-f7a83a1f6b92_lpg.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -2099,6 +2111,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"lssc2slqht"},{"Name":"integrity","Value":"sha256-xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8="},{"Name":"label","Value":"_content/HomeHub.App/permits/592ce9fd-0da7-4f84-9ace-938e58f97814_Water.jpg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"217694"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022xR7a3pCKFf0KE23LQEnDbMLhybrrbDfFSMPzyJDjpV8=\u0022"},{"Name":"Last-Modified","Value":"Thu, 03 Apr 2025 13:29:50 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HomeHub.App/permits/e5d5959e-13b4-4194-9563-944e2c59a2ca_lpg.faxks2amgx.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\permits\e5d5959e-13b4-4194-9563-944e2c59a2ca_lpg.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"faxks2amgx"},{"Name":"integrity","Value":"sha256-eRZK49UmRPeeRWRwzqvgLkFHuAzd15LWWeN7YPIYuQI="},{"Name":"label","Value":"_content/HomeHub.App/permits/e5d5959e-13b4-4194-9563-944e2c59a2ca_lpg.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"7783"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022eRZK49UmRPeeRWRwzqvgLkFHuAzd15LWWeN7YPIYuQI=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 07:30:38 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HomeHub.App/permits/e5d5959e-13b4-4194-9563-944e2c59a2ca_lpg.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\permits\e5d5959e-13b4-4194-9563-944e2c59a2ca_lpg.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-eRZK49UmRPeeRWRwzqvgLkFHuAzd15LWWeN7YPIYuQI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"7783"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022eRZK49UmRPeeRWRwzqvgLkFHuAzd15LWWeN7YPIYuQI=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 07:30:38 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HomeHub.App/permits/eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\permits\eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg'))</AssetFile>
