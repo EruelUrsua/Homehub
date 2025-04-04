@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DFhHjXKH/ltopArt+lv++8qm3HjhBEz6pi8G12a1uyo=",
+  "Hash": "lIEyEc05/w7TfVdvm0bW/qe/T8v3/jU05f/8CIglAoE=",
   "Source": "HomeHub.App",
   "BasePath": "_content/HomeHub.App",
   "Mode": "Default",
@@ -1968,6 +1968,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\validids\\7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg"
+    },
+    {
+      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\91734090-8c11-4c26-9c8e-9148e064fa09_Logo v2.png",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/validids/91734090-8c11-4c26-9c8e-9148e064fa09_Logo v2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "65xsd9bh4s",
+      "Integrity": "yncNOblKQRNYVY5q6ACu2SDpYb5MtW3s9qLIIGXi/T4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\validids\\91734090-8c11-4c26-9c8e-9148e064fa09_Logo v2.png"
     },
     {
       "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\a97a8bb0-136f-4c9d-82d6-9db0ea1b76d2_lpg.jpg",
@@ -10707,7 +10728,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 04:32:17 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10744,7 +10765,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 04:32:17 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10789,7 +10810,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 04:34:20 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10834,7 +10855,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 04:34:20 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10953,7 +10974,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 05:16:02 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10998,7 +11019,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 05:16:02 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11035,7 +11056,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 06:09:45 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11080,7 +11101,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 06:09:45 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11117,7 +11138,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 05:17:56 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11162,7 +11183,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 05:17:56 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11341,6 +11362,88 @@
       ]
     },
     {
+      "Route": "images/validids/91734090-8c11-4c26-9c8e-9148e064fa09_Logo v2.65xsd9bh4s.png",
+      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\91734090-8c11-4c26-9c8e-9148e064fa09_Logo v2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yncNOblKQRNYVY5q6ACu2SDpYb5MtW3s9qLIIGXi/T4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "65xsd9bh4s"
+        },
+        {
+          "Name": "label",
+          "Value": "images/validids/91734090-8c11-4c26-9c8e-9148e064fa09_Logo v2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yncNOblKQRNYVY5q6ACu2SDpYb5MtW3s9qLIIGXi/T4="
+        }
+      ]
+    },
+    {
+      "Route": "images/validids/91734090-8c11-4c26-9c8e-9148e064fa09_Logo v2.png",
+      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\91734090-8c11-4c26-9c8e-9148e064fa09_Logo v2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yncNOblKQRNYVY5q6ACu2SDpYb5MtW3s9qLIIGXi/T4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yncNOblKQRNYVY5q6ACu2SDpYb5MtW3s9qLIIGXi/T4="
+        }
+      ]
+    },
+    {
       "Route": "images/validids/a97a8bb0-136f-4c9d-82d6-9db0ea1b76d2_lpg.faxks2amgx.jpg",
       "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\a97a8bb0-136f-4c9d-82d6-9db0ea1b76d2_lpg.jpg",
       "Selectors": [],
@@ -11363,7 +11466,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 04:43:37 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11408,7 +11511,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 04:43:37 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11445,7 +11548,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 04:31:49 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11490,7 +11593,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 04:31:49 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11527,7 +11630,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 05:33:30 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11572,7 +11675,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 05:33:30 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11609,7 +11712,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 04:26:52 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11646,7 +11749,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 04:26:52 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11773,7 +11876,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 05:52:37 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11818,7 +11921,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 05:52:37 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11855,7 +11958,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 05:46:12 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11900,7 +12003,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 05:46:12 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11937,7 +12040,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 05:55:25 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11982,7 +12085,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 05:55:25 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12019,7 +12122,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 05:02:12 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12064,7 +12167,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 05:02:12 GMT"
+          "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
         },
         {
           "Name": "Cache-Control",
