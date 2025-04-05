@@ -1,0 +1,30 @@
+﻿@using HomeHub.DataModel
+
+@model IEnumerable<ApplicationUser>
+
+<div class="container">
+    <h2>Users Under Review</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Firstname @user.Lastname</td>
+                    <td>@user.Email</td>
+                    <td>
+                        <a href="@Url.Action("UserRatings", "Admin", new { userId = user.Id })" class="btn btn-info">View Ratings</a>
+                        <a href="@Url.Action("LiftRestriction", "Admin", new { userId = user.Id })" class="btn btn-success">Lift Restriction</a>
+                        <a href="@Url.Action("PermanentlyRestrict", "Admin", new { userId = user.Id })" class="btn btn-danger">Permanently Restrict</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

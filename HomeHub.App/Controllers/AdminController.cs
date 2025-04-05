@@ -1,5 +1,6 @@
 ﻿using HomeHub.App.Models;
 using HomeHub.DataModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace HomeHub.App.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         private readonly HomeHubContext context;
@@ -122,5 +124,58 @@ namespace HomeHub.App.Controllers
         //    return View(users);
         //}
 
+        public async Task<IActionResult> UsersUnderReview()
+        {
+            var usersUnderReview = userManager.Users
+                .Where(u => u.IsUnderReview) // Get all users who are under review
+                .ToList();
+
+            return View(usersUnderReview);
+        }
+
+        public async Task<IActionResult> UserRatings(string userId)
+        {
+            var ratings = context.Ratings
+                .Where(r => r.CustomerId == userId)
+                .ToList();
+
+            var user = await userManager.FindByIdAsync(userId);
+            var averageRating = ratings.Any() ? ratings.Average(r => r.Score) : 0;
+
+            var model = new UserRatingViewModel
+            {
+                User = user,
+                Ratings = ratings,
+                AverageRating = averageRating
+            };
+
+            return View(model);
+        }
+
+        public async Task<IActionResult> LiftRestriction(string userId)
+        {
+            var user = await userManager.FindByIdAsync(userId);
+            if (user != null)
+            {
+                user.IsUnderReview = false;
+                user.LastReviewDate = DateTime.Now;
+                await userManager.UpdateAsync(user);
+            }
+
+            return RedirectToAction("UsersUnderReview");
+        }
+
+        public async Task<IActionResult> PermanentlyRestrict(string userId)
+        {
+            var user = await userManager.FindByIdAsync(userId);
+            if (user != null)
+            {
+                user.IsUnderReview = false;
+                user.IsRestricted = true;
+                await userManager.UpdateAsync(user);
+            }
+
+            return RedirectToAction("UsersUnderReview");
+        }
     }
 }

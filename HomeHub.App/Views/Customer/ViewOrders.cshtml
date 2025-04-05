@@ -124,6 +124,13 @@
     <div class="header-section">
         <h1 class="primary-heading">Your Orders</h1>
     </div>
+    @if (ViewBag.Warning != null)
+    {
+        <div class="alert alert-warning" style="margin-top: 15px; font-size: 16px; padding: 10px 20px; border-radius: 6px; background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba;">
+            <strong>Warning:</strong> @ViewBag.Warning
+        </div>
+    }
+
     <div class="card">
         <div class="order-list">
             <table>

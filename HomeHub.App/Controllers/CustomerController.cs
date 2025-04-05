@@ -140,6 +140,17 @@ namespace HomeHub.App.Controllers
 
         public IActionResult OrderProduct()
         {
+            string userId = userManager.GetUserId(User);
+            var user = context.Users.FirstOrDefault(u => u.Id == userId);
+
+            // Check if the user is under review
+            if (user != null && user.IsUnderReview)
+            {
+                // Redirect to a page or show a message about the restriction
+                TempData["Message"] = "Your account is under review. You cannot access this page at the moment.";
+                return View("AccountUnderReview");
+            }
+
             var categories = context.Providers
                 .Where(b => b.Businesstype == false)
                 .Select(b => b.Category)
@@ -169,6 +180,17 @@ namespace HomeHub.App.Controllers
 
         public IActionResult AvailService()
         {
+            string userId = userManager.GetUserId(User);
+            var user = context.Users.FirstOrDefault(u => u.Id == userId);
+
+            // Check if the user is under review
+            if (user != null && user.IsUnderReview)
+            {
+                // Redirect to a page or show a message about the restriction
+                TempData["Message"] = "Your account is under review. You cannot access this page at the moment.";
+                return View("AccountUnderReview");
+            }
+
             var categories = context.Providers
                 .Where(b => b.Businesstype == true)
                 .Select(b => b.Category)
@@ -199,6 +221,17 @@ namespace HomeHub.App.Controllers
 
         public IActionResult OrderListProduct(string businessId)
         {
+            string userId = userManager.GetUserId(User);
+            var user = context.Users.FirstOrDefault(u => u.Id == userId);
+
+            // Check if the user is under review
+            if (user != null && user.IsUnderReview)
+            {
+                // Redirect to a page or show a message about the restriction
+                TempData["Message"] = "Your account is under review. You cannot access this page at the moment.";
+                return View("AccountUnderReview");
+            }
+
             if (string.IsNullOrEmpty(businessId))
             {
                 return RedirectToAction("Index");
@@ -230,6 +263,17 @@ namespace HomeHub.App.Controllers
 
         public IActionResult AvailListService(string businessId)
         {
+            string userId = userManager.GetUserId(User);
+            var user = context.Users.FirstOrDefault(u => u.Id == userId);
+
+            // Check if the user is under review
+            if (user != null && user.IsUnderReview)
+            {
+                // Redirect to a page or show a message about the restriction
+                TempData["Message"] = "Your account is under review. You cannot access this page at the moment.";
+                return View("AccountUnderReview");
+            }
+
             if (string.IsNullOrEmpty(businessId))
             {
                 return RedirectToAction("Index");
@@ -482,11 +526,36 @@ namespace HomeHub.App.Controllers
         public IActionResult ViewOrders()
         {
             string userId = userManager.GetUserId(User);
+            var user = context.Users.FirstOrDefault(u => u.Id == userId);
 
             // Get all rated order IDs and convert them to a HashSet for efficient lookup
             var ratedOrderIds = context.Ratings
                 .Select(r => r.OrderId.ToString()) // Convert OrderId to string to match OrdersLog
                 .ToHashSet();
+
+            // Cancellation counter
+            DateTime threeDaysAgo = DateTime.Now.AddDays(-3);
+            DateTime lastReviewDate = user.LastReviewDate ?? DateTime.Now.AddDays(-1);
+
+            int recentCancellations = context.OrdersLogs
+                .Count(o => o.UserId == userId && o.Status == "Cancelled" && o.Date >= threeDaysAgo && o.Date > lastReviewDate);
+
+            // Cancellation warnings
+            if (recentCancellations == 3)
+            {
+                ViewBag.Warning = "Canceling too many orders can negatively affect your credibility.";
+            }
+            else if (recentCancellations == 4)
+            {
+                ViewBag.Warning = "You have canceled 4 orders in the past 3 days. One more and your account will be put under review.";
+            }
+            else if (recentCancellations == 5)
+            {
+                ViewBag.Warning = "You have canceled 5 orders in the past 3 days. Your account is now under review. Some features have been disabled";
+                user.IsUnderReview = true;
+                user.LastReviewDate = DateTime.Now;
+                context.SaveChanges();
+            }
 
             var orders = context.OrdersLogs
                 .Where(o => o.UserId == userId)

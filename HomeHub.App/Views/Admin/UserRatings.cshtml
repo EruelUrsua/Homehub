@@ -1,0 +1,25 @@
+﻿@model UserRatingViewModel
+
+<div class="container">
+    <h2>Ratings for @Model.User.UserName</h2>
+    <p>Average Rating: @Model.AverageRating</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Score</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var rating in Model.Ratings)
+            {
+                <tr>
+                    <td>@rating.OrderId</td>
+                    <td>@rating.Score</td>
+                    <td>@rating.Comments</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
