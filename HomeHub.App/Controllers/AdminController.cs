@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Data;
 using System.Linq;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
@@ -33,13 +34,14 @@ namespace HomeHub.App.Controllers
         private Task<ApplicationUser> GetCurrentUserAsync() => userManager.GetUserAsync(HttpContext.User);
         public async Task<IActionResult> AdminHome()
         {
-            var uid = await GetCurrentUserId(); 
+            var uid = await GetCurrentUserId();
             ApplicationUser user = new ApplicationUser();
-            var userlog = await userManager.FindByIdAsync(uid);
-            var email = await userManager.GetEmailAsync(userlog);
+            //var userlog = await userManager.FindByIdAsync(uid);
+            //var email = await userManager.GetEmailAsync(userlog);
+            var provider = await userManager.GetUsersInRoleAsync("Provider");
+            var Customer = await userManager.GetUsersInRoleAsync("Customer");
 
-            var accounts = userManager.Users.Where(u => u.Email != email).ToList();
-
+            var accounts = provider.Concat(Customer);
 
             return View(accounts);
         }
@@ -98,8 +100,19 @@ namespace HomeHub.App.Controllers
         public async Task<ActionResult> UserProfileAdmin(string Id)
         {
             ApplicationUser user = await userManager.FindByIdAsync(Id);
+            var role = await userManager.GetRolesAsync(user);
+            var ur = "";
             if (user == null)
                 return View("Index");
+
+            if (role.Contains("Customer"))
+            {
+                ur = "Customer";
+            }
+            else if (role.Contains("Provider"))
+            {
+                ur = "Provider";
+            }
 
             var model = new UserProfileVM
             {
@@ -107,8 +120,8 @@ namespace HomeHub.App.Controllers
                 LastName = user.Lastname,
                 //Address = user.Address,
                 lat = user.lat,
-                lng = user.lng
-
+                lng = user.lng,
+                Role = ur, 
             };
 
             return View(model);

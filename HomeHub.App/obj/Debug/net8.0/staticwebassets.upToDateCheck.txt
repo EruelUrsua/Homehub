@@ -96,6 +96,7 @@ wwwroot\images\validids\35345c0f-4572-4da7-a651-bc536419c4c2_samplestock.jpg
 wwwroot\images\validids\48e05b30-4b08-4a92-8fae-6d2d17a5eb0a_lpg.jpg
 wwwroot\images\validids\52529948-118b-4239-8e90-deb53bc77520_samplestock.jpg
 wwwroot\images\validids\64801f9a-2b10-4195-b220-f33842c9e79f_Logo v2.png
+wwwroot\images\validids\650391f0-37f5-43be-b0d7-ae816c075256_samplestock.jpg
 wwwroot\images\validids\71777542-e622-4dcf-ada9-f43818325ed5_samplestock.jpg
 wwwroot\images\validids\72502de8-1cf8-4f76-8832-3f08462b0bb3_Logo v2.png
 wwwroot\images\validids\7b27db5a-f41a-487e-94e8-792eea381a01_Logo v2.png

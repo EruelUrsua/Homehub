@@ -1,815 +1,819 @@
 {
   "Files": [
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HomeHub.App.bundle.scp.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HomeHub.App.bundle.scp.css",
       "PackagePath": "staticwebassets\\HomeHub.App.2u5iatmdza.bundle.scp.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\css\\site.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\css\\styles.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\css\\styles.css",
       "PackagePath": "staticwebassets\\css\\styles.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\favicon.ico",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\003b7a5f-9ce7-49ee-992f-daff7e5c4e1e_drinking-water-container.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\003b7a5f-9ce7-49ee-992f-daff7e5c4e1e_drinking-water-container.jpg",
       "PackagePath": "staticwebassets\\images\\003b7a5f-9ce7-49ee-992f-daff7e5c4e1e_drinking-water-container.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\021150fc-920a-4dad-9d94-557fb59925b2_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\021150fc-920a-4dad-9d94-557fb59925b2_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
       "PackagePath": "staticwebassets\\images\\021150fc-920a-4dad-9d94-557fb59925b2_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\08894f65-c9e4-4184-a1d8-def0412675e3_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\08894f65-c9e4-4184-a1d8-def0412675e3_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\08894f65-c9e4-4184-a1d8-def0412675e3_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\0ad5f321-fc89-4782-ab70-46b5e685f9c5_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\0ad5f321-fc89-4782-ab70-46b5e685f9c5_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\0ad5f321-fc89-4782-ab70-46b5e685f9c5_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\0c6db692-5aa4-4306-a5e5-ca890b5b04d5_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\0c6db692-5aa4-4306-a5e5-ca890b5b04d5_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\0c6db692-5aa4-4306-a5e5-ca890b5b04d5_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\0e175329-4e30-4e91-8b21-ae30884a12ec_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\0e175329-4e30-4e91-8b21-ae30884a12ec_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\0e175329-4e30-4e91-8b21-ae30884a12ec_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\11429e45-9901-4237-a093-809445edb725_West Cebu Estate.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\11429e45-9901-4237-a093-809445edb725_West Cebu Estate.png",
       "PackagePath": "staticwebassets\\images\\11429e45-9901-4237-a093-809445edb725_West Cebu Estate.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\1ae7e95d-6c20-43e5-9a52-9cd7444e55d3_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\1ae7e95d-6c20-43e5-9a52-9cd7444e55d3_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\1ae7e95d-6c20-43e5-9a52-9cd7444e55d3_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\1b217f8e-b9b2-4d8e-815b-699df9a68e09_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\1b217f8e-b9b2-4d8e-815b-699df9a68e09_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\1b217f8e-b9b2-4d8e-815b-699df9a68e09_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\243470ad-70b5-455a-aeea-ca9526e946d2_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\243470ad-70b5-455a-aeea-ca9526e946d2_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\243470ad-70b5-455a-aeea-ca9526e946d2_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\2507c1eb-9340-4a96-a715-e1084b7a1e6e_lpg.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\2507c1eb-9340-4a96-a715-e1084b7a1e6e_lpg.jpg",
       "PackagePath": "staticwebassets\\images\\2507c1eb-9340-4a96-a715-e1084b7a1e6e_lpg.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\260a3dd2-7346-437b-9a9a-259b36bdfcd2_Water.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\260a3dd2-7346-437b-9a9a-259b36bdfcd2_Water.jpg",
       "PackagePath": "staticwebassets\\images\\260a3dd2-7346-437b-9a9a-259b36bdfcd2_Water.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\263e305f-baa1-4379-8b3f-476efdf62abe_Water.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\263e305f-baa1-4379-8b3f-476efdf62abe_Water.jpg",
       "PackagePath": "staticwebassets\\images\\263e305f-baa1-4379-8b3f-476efdf62abe_Water.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\28448869-fb75-4cd5-b7ec-c8dc21e49a31_ENG 8.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\28448869-fb75-4cd5-b7ec-c8dc21e49a31_ENG 8.png",
       "PackagePath": "staticwebassets\\images\\28448869-fb75-4cd5-b7ec-c8dc21e49a31_ENG 8.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\289a8425-5eb1-4ac7-8498-2a3bf51c8c0b_Sample jpeg.jpeg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\289a8425-5eb1-4ac7-8498-2a3bf51c8c0b_Sample jpeg.jpeg",
       "PackagePath": "staticwebassets\\images\\289a8425-5eb1-4ac7-8498-2a3bf51c8c0b_Sample jpeg.jpeg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\2a1dc543-06cd-4551-b20d-5fcf5dae529c_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\2a1dc543-06cd-4551-b20d-5fcf5dae529c_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\2a1dc543-06cd-4551-b20d-5fcf5dae529c_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\2d2a1b92-55ea-4e0d-a7e7-7cb67af8418a_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\2d2a1b92-55ea-4e0d-a7e7-7cb67af8418a_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\2d2a1b92-55ea-4e0d-a7e7-7cb67af8418a_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\2d4eceff-06f1-4748-83da-1649e25463ab_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\2eff64c2-e314-459f-9c65-36f3d6b46f64_aev-gt-image 1.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\2eff64c2-e314-459f-9c65-36f3d6b46f64_aev-gt-image 1.jpg",
       "PackagePath": "staticwebassets\\images\\2eff64c2-e314-459f-9c65-36f3d6b46f64_aev-gt-image 1.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\32524986-0cf8-436e-b5a9-53fe9e5dc6a4_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\32524986-0cf8-436e-b5a9-53fe9e5dc6a4_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\32524986-0cf8-436e-b5a9-53fe9e5dc6a4_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\37cb7c43-ff90-4b59-a603-27096fbf2dc2_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\3a7c1c4c-e326-4bbb-8c66-7b922f4377f2_Water.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\3a7c1c4c-e326-4bbb-8c66-7b922f4377f2_Water.jpg",
       "PackagePath": "staticwebassets\\images\\3a7c1c4c-e326-4bbb-8c66-7b922f4377f2_Water.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\3cb6d383-2b04-498a-b7ba-6b74f54805e1_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\3cb6d383-2b04-498a-b7ba-6b74f54805e1_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
       "PackagePath": "staticwebassets\\images\\3cb6d383-2b04-498a-b7ba-6b74f54805e1_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\43fc9064-f10f-469a-a232-6b7a7aa0cd22_Water.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\43fc9064-f10f-469a-a232-6b7a7aa0cd22_Water.jpg",
       "PackagePath": "staticwebassets\\images\\43fc9064-f10f-469a-a232-6b7a7aa0cd22_Water.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\4870b1e3-93de-4422-b4cf-a0f6e4463bf9_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\4870b1e3-93de-4422-b4cf-a0f6e4463bf9_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\4870b1e3-93de-4422-b4cf-a0f6e4463bf9_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\490944cd-35e8-41df-a58c-141757bc7afc_drinking-water-container.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\490944cd-35e8-41df-a58c-141757bc7afc_drinking-water-container.jpg",
       "PackagePath": "staticwebassets\\images\\490944cd-35e8-41df-a58c-141757bc7afc_drinking-water-container.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\501e6358-4907-4595-8a52-4b8ef8b311f0_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\526b3e4e-3c0a-49d2-bee6-28d2881aae56_Water.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\526b3e4e-3c0a-49d2-bee6-28d2881aae56_Water.jpg",
       "PackagePath": "staticwebassets\\images\\526b3e4e-3c0a-49d2-bee6-28d2881aae56_Water.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\5b6856c8-d836-4414-a6f4-c462eb2e40f4_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\5b6856c8-d836-4414-a6f4-c462eb2e40f4_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\5b6856c8-d836-4414-a6f4-c462eb2e40f4_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\5bbefea5-426a-4543-b641-a84bb16e6cc0_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\5bbefea5-426a-4543-b641-a84bb16e6cc0_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\5bbefea5-426a-4543-b641-a84bb16e6cc0_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\5daaadad-6729-4958-aa6c-e386655c0e42_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\5daaadad-6729-4958-aa6c-e386655c0e42_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\5daaadad-6729-4958-aa6c-e386655c0e42_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\612a4a78-9640-4bf3-951c-f88323c0af3c_drinking-water-container.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\612a4a78-9640-4bf3-951c-f88323c0af3c_drinking-water-container.jpg",
       "PackagePath": "staticwebassets\\images\\612a4a78-9640-4bf3-951c-f88323c0af3c_drinking-water-container.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\64881bdf-7713-4f10-bbed-dcabafde54b0_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\64881bdf-7713-4f10-bbed-dcabafde54b0_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\64881bdf-7713-4f10-bbed-dcabafde54b0_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\68c113ea-d7e2-404c-8a82-c751941a6dcb_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\68c113ea-d7e2-404c-8a82-c751941a6dcb_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
       "PackagePath": "staticwebassets\\images\\68c113ea-d7e2-404c-8a82-c751941a6dcb_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\73938a12-d477-4825-88c7-060fe9b97ff2_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\73938a12-d477-4825-88c7-060fe9b97ff2_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\73938a12-d477-4825-88c7-060fe9b97ff2_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\73b63481-32d6-48a6-8ca9-c4a34784c97e_Water.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\73b63481-32d6-48a6-8ca9-c4a34784c97e_Water.jpg",
       "PackagePath": "staticwebassets\\images\\73b63481-32d6-48a6-8ca9-c4a34784c97e_Water.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\741399d7-3047-49db-981e-1ccc138ffcc0_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\75124d2d-f5de-4989-ae2c-76a72d093cf4_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\75124d2d-f5de-4989-ae2c-76a72d093cf4_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\75124d2d-f5de-4989-ae2c-76a72d093cf4_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\75c85b54-a790-4d91-96d0-76a597fc5107_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\75c85b54-a790-4d91-96d0-76a597fc5107_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
       "PackagePath": "staticwebassets\\images\\75c85b54-a790-4d91-96d0-76a597fc5107_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\788c5cf5-46af-4e8f-8744-fecbb9ac9213_drinking-water-container.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\788c5cf5-46af-4e8f-8744-fecbb9ac9213_drinking-water-container.jpg",
       "PackagePath": "staticwebassets\\images\\788c5cf5-46af-4e8f-8744-fecbb9ac9213_drinking-water-container.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\7bcb9229-8a68-4b81-a281-69c5d2da656b_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\7bcb9229-8a68-4b81-a281-69c5d2da656b_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\7bcb9229-8a68-4b81-a281-69c5d2da656b_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\82e435b7-7ce8-4e7a-afb5-9abb9d23aa48_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\82e435b7-7ce8-4e7a-afb5-9abb9d23aa48_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\82e435b7-7ce8-4e7a-afb5-9abb9d23aa48_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\87d5604e-25da-4ea5-8ce0-5bc7861eb357_Just The Two of Us Wallpaper.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\87d5604e-25da-4ea5-8ce0-5bc7861eb357_Just The Two of Us Wallpaper.jpg",
       "PackagePath": "staticwebassets\\images\\87d5604e-25da-4ea5-8ce0-5bc7861eb357_Just The Two of Us Wallpaper.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\8b7a59fe-4a7f-4a4f-9676-81cce7acb606_lpgsample.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\8b7a59fe-4a7f-4a4f-9676-81cce7acb606_lpgsample.jpg",
       "PackagePath": "staticwebassets\\images\\8b7a59fe-4a7f-4a4f-9676-81cce7acb606_lpgsample.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\925e66ba-5942-4496-a5dd-f23ddd2c11d2_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\925e66ba-5942-4496-a5dd-f23ddd2c11d2_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\925e66ba-5942-4496-a5dd-f23ddd2c11d2_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\95923b7e-fa5d-423a-ae71-7db90f8e9569_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\95923b7e-fa5d-423a-ae71-7db90f8e9569_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
       "PackagePath": "staticwebassets\\images\\95923b7e-fa5d-423a-ae71-7db90f8e9569_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\9894567a-11ea-4207-b479-c5980f2827dc_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\9bcbfaa2-4867-4e4f-87e1-f0ab5e827041_1point4sample.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\9bcbfaa2-4867-4e4f-87e1-f0ab5e827041_1point4sample.jpg",
       "PackagePath": "staticwebassets\\images\\9bcbfaa2-4867-4e4f-87e1-f0ab5e827041_1point4sample.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\9f5ea479-1f19-4c07-a030-c7a272b16cb9_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\9f5ea479-1f19-4c07-a030-c7a272b16cb9_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\9f5ea479-1f19-4c07-a030-c7a272b16cb9_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\a0fe8e09-b3d8-474d-8e8b-e411acf32ee5_lpgsample.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\a0fe8e09-b3d8-474d-8e8b-e411acf32ee5_lpgsample.jpg",
       "PackagePath": "staticwebassets\\images\\a0fe8e09-b3d8-474d-8e8b-e411acf32ee5_lpgsample.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\a1c06578-ef47-4032-b7db-828ad4805d9e_drinking-water-container.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\a1c06578-ef47-4032-b7db-828ad4805d9e_drinking-water-container.jpg",
       "PackagePath": "staticwebassets\\images\\a1c06578-ef47-4032-b7db-828ad4805d9e_drinking-water-container.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\a2dd9eb6-5e13-42df-8646-043af4e56d2f_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\a2dd9eb6-5e13-42df-8646-043af4e56d2f_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\a2dd9eb6-5e13-42df-8646-043af4e56d2f_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\a567fa3b-2202-4da2-a551-80e3f89a28e4_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\a567fa3b-2202-4da2-a551-80e3f89a28e4_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\a567fa3b-2202-4da2-a551-80e3f89a28e4_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\a67cea36-06e0-4e02-a788-7644adf18cbf_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\a67cea36-06e0-4e02-a788-7644adf18cbf_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\a67cea36-06e0-4e02-a788-7644adf18cbf_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\a6e1ee5c-325d-4ee3-867b-22ffa1c37b96_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\a7786b16-1ab5-4551-ae38-2ededf14bdd6_1000s.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\a7786b16-1ab5-4551-ae38-2ededf14bdd6_1000s.jpg",
       "PackagePath": "staticwebassets\\images\\a7786b16-1ab5-4551-ae38-2ededf14bdd6_1000s.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\a9e444e6-0481-4d34-9e2b-8f559cb18f70_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\abc08f8c-3ff3-4ebe-86fb-1a4c4a37d989_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\abc08f8c-3ff3-4ebe-86fb-1a4c4a37d989_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\abc08f8c-3ff3-4ebe-86fb-1a4c4a37d989_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\adcdc594-468c-45e3-9bd6-1d6838e2bbc8_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\adcdc594-468c-45e3-9bd6-1d6838e2bbc8_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
       "PackagePath": "staticwebassets\\images\\adcdc594-468c-45e3-9bd6-1d6838e2bbc8_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\b27d5515-89e5-4aec-a99e-b989a820600d_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\b27d5515-89e5-4aec-a99e-b989a820600d_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
       "PackagePath": "staticwebassets\\images\\b27d5515-89e5-4aec-a99e-b989a820600d_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\b568e3d8-8d52-4497-8679-2bed24ff59db_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\b568e3d8-8d52-4497-8679-2bed24ff59db_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
       "PackagePath": "staticwebassets\\images\\b568e3d8-8d52-4497-8679-2bed24ff59db_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\b5a04bd6-bc22-4bdf-8784-5e438071b01a_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\b5a04bd6-bc22-4bdf-8784-5e438071b01a_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\b5a04bd6-bc22-4bdf-8784-5e438071b01a_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\b798f7e9-8fcd-411f-b481-2d0c320ce52a_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\b798f7e9-8fcd-411f-b481-2d0c320ce52a_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\b798f7e9-8fcd-411f-b481-2d0c320ce52a_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\b7da58ee-1b98-46d1-8e0d-a86424d79d55_Water.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\b7da58ee-1b98-46d1-8e0d-a86424d79d55_Water.jpg",
       "PackagePath": "staticwebassets\\images\\b7da58ee-1b98-46d1-8e0d-a86424d79d55_Water.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\b7f78991-615e-4454-9288-9902ca496b12_Water.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\b7f78991-615e-4454-9288-9902ca496b12_Water.jpg",
       "PackagePath": "staticwebassets\\images\\b7f78991-615e-4454-9288-9902ca496b12_Water.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\bdbd1cde-f400-4941-8021-7f8dc6b1ee9b_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\c16964c6-adf5-4734-a283-bfa0b8de7ad6_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\c8ac0cd5-057e-468c-995c-2742d41206af_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c8ac0cd5-057e-468c-995c-2742d41206af_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\c8ac0cd5-057e-468c-995c-2742d41206af_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\c9bceb61-0417-4667-8fb3-17dc1acfd003_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c9bceb61-0417-4667-8fb3-17dc1acfd003_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
       "PackagePath": "staticwebassets\\images\\c9bceb61-0417-4667-8fb3-17dc1acfd003_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\d5100e17-1d32-48bc-8609-01b1030814e7_digital-icon 1.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\d5100e17-1d32-48bc-8609-01b1030814e7_digital-icon 1.png",
       "PackagePath": "staticwebassets\\images\\d5100e17-1d32-48bc-8609-01b1030814e7_digital-icon 1.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\d592f70e-99be-40da-87e5-993e48667711_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\d592f70e-99be-40da-87e5-993e48667711_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\d592f70e-99be-40da-87e5-993e48667711_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\d66c5807-a533-4ab5-b4c9-426d18f70d0d_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\e0188f78-6475-461f-a987-ec370078a467_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\e0188f78-6475-461f-a987-ec370078a467_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\e0188f78-6475-461f-a987-ec370078a467_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\e343c083-60ed-4d03-a806-63fa38a648ca_Water.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\e343c083-60ed-4d03-a806-63fa38a648ca_Water.jpg",
       "PackagePath": "staticwebassets\\images\\e343c083-60ed-4d03-a806-63fa38a648ca_Water.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\e5faf723-40ab-42eb-93a6-893a604beda1_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\e5faf723-40ab-42eb-93a6-893a604beda1_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\e5faf723-40ab-42eb-93a6-893a604beda1_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\ed5d219d-fdfb-4cbd-82f1-d1df197c24be_download.jfif",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\ed5d219d-fdfb-4cbd-82f1-d1df197c24be_download.jfif",
       "PackagePath": "staticwebassets\\images\\ed5d219d-fdfb-4cbd-82f1-d1df197c24be_download.jfif"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg",
       "PackagePath": "staticwebassets\\images\\f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg",
       "PackagePath": "staticwebassets\\images\\f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg",
       "PackagePath": "staticwebassets\\images\\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\fb997c26-867a-42b3-9920-e552f181c25e_Water.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\fb997c26-867a-42b3-9920-e552f181c25e_Water.jpg",
       "PackagePath": "staticwebassets\\images\\fb997c26-867a-42b3-9920-e552f181c25e_Water.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\fc846dd2-acf2-421b-8d70-4698102a27b4_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\fc846dd2-acf2-421b-8d70-4698102a27b4_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\fc846dd2-acf2-421b-8d70-4698102a27b4_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\0974d2c2-4de3-4dd9-b1a9-76bca897fa89_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\0974d2c2-4de3-4dd9-b1a9-76bca897fa89_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\0974d2c2-4de3-4dd9-b1a9-76bca897fa89_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\0ceb786e-97f8-44f4-aabe-7e125c0aeadf_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\0ceb786e-97f8-44f4-aabe-7e125c0aeadf_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\0ceb786e-97f8-44f4-aabe-7e125c0aeadf_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\10a84cb5-7a39-4b6c-92e5-af0ae44190fe_Logo v2.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\10a84cb5-7a39-4b6c-92e5-af0ae44190fe_Logo v2.png",
       "PackagePath": "staticwebassets\\images\\validids\\10a84cb5-7a39-4b6c-92e5-af0ae44190fe_Logo v2.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\143c0f43-cea1-45f1-8ebb-9b593fd7af64_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\143c0f43-cea1-45f1-8ebb-9b593fd7af64_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\143c0f43-cea1-45f1-8ebb-9b593fd7af64_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\14f686c2-1330-43d2-8a7e-f7a83a1f6b92_lpg.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\14f686c2-1330-43d2-8a7e-f7a83a1f6b92_lpg.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\14f686c2-1330-43d2-8a7e-f7a83a1f6b92_lpg.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\21c3de57-317f-43b0-a8b7-2a2fe9e6cb23_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\21c3de57-317f-43b0-a8b7-2a2fe9e6cb23_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\21c3de57-317f-43b0-a8b7-2a2fe9e6cb23_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\2b58566d-b113-4e7c-bd18-ce8c75105e1e_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\2b58566d-b113-4e7c-bd18-ce8c75105e1e_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\2b58566d-b113-4e7c-bd18-ce8c75105e1e_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\34b2fcf3-713c-42e5-941d-84d3c094ceee_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\34b2fcf3-713c-42e5-941d-84d3c094ceee_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\34b2fcf3-713c-42e5-941d-84d3c094ceee_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\35345c0f-4572-4da7-a651-bc536419c4c2_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\35345c0f-4572-4da7-a651-bc536419c4c2_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\35345c0f-4572-4da7-a651-bc536419c4c2_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\48e05b30-4b08-4a92-8fae-6d2d17a5eb0a_lpg.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\48e05b30-4b08-4a92-8fae-6d2d17a5eb0a_lpg.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\48e05b30-4b08-4a92-8fae-6d2d17a5eb0a_lpg.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\52529948-118b-4239-8e90-deb53bc77520_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\52529948-118b-4239-8e90-deb53bc77520_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\52529948-118b-4239-8e90-deb53bc77520_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\64801f9a-2b10-4195-b220-f33842c9e79f_Logo v2.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\64801f9a-2b10-4195-b220-f33842c9e79f_Logo v2.png",
       "PackagePath": "staticwebassets\\images\\validids\\64801f9a-2b10-4195-b220-f33842c9e79f_Logo v2.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\71777542-e622-4dcf-ada9-f43818325ed5_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\650391f0-37f5-43be-b0d7-ae816c075256_samplestock.jpg",
+      "PackagePath": "staticwebassets\\images\\validids\\650391f0-37f5-43be-b0d7-ae816c075256_samplestock.jpg"
+    },
+    {
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\71777542-e622-4dcf-ada9-f43818325ed5_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\71777542-e622-4dcf-ada9-f43818325ed5_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\72502de8-1cf8-4f76-8832-3f08462b0bb3_Logo v2.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\72502de8-1cf8-4f76-8832-3f08462b0bb3_Logo v2.png",
       "PackagePath": "staticwebassets\\images\\validids\\72502de8-1cf8-4f76-8832-3f08462b0bb3_Logo v2.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\7b27db5a-f41a-487e-94e8-792eea381a01_Logo v2.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\7b27db5a-f41a-487e-94e8-792eea381a01_Logo v2.png",
       "PackagePath": "staticwebassets\\images\\validids\\7b27db5a-f41a-487e-94e8-792eea381a01_Logo v2.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\7b5d7b49-04b8-42de-8831-8ad68ec9a58f_Just The Two of Us Wallpaper.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\7b5d7b49-04b8-42de-8831-8ad68ec9a58f_Just The Two of Us Wallpaper.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\7b5d7b49-04b8-42de-8831-8ad68ec9a58f_Just The Two of Us Wallpaper.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\87393b18-2f5e-4a03-9bfa-878a4eefa62f_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\87393b18-2f5e-4a03-9bfa-878a4eefa62f_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\87393b18-2f5e-4a03-9bfa-878a4eefa62f_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\8c73e782-4148-4a42-bbd9-cbabe18a659c_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\8c73e782-4148-4a42-bbd9-cbabe18a659c_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\8c73e782-4148-4a42-bbd9-cbabe18a659c_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\91734090-8c11-4c26-9c8e-9148e064fa09_Logo v2.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\91734090-8c11-4c26-9c8e-9148e064fa09_Logo v2.png",
       "PackagePath": "staticwebassets\\images\\validids\\91734090-8c11-4c26-9c8e-9148e064fa09_Logo v2.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\a00fb76e-33a6-490b-a5c6-a5586e6550bd_Logo v2.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\a00fb76e-33a6-490b-a5c6-a5586e6550bd_Logo v2.png",
       "PackagePath": "staticwebassets\\images\\validids\\a00fb76e-33a6-490b-a5c6-a5586e6550bd_Logo v2.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\a97a8bb0-136f-4c9d-82d6-9db0ea1b76d2_lpg.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\a97a8bb0-136f-4c9d-82d6-9db0ea1b76d2_lpg.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\a97a8bb0-136f-4c9d-82d6-9db0ea1b76d2_lpg.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\bc897414-e266-4a00-8328-6336cd7908ec_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\bc897414-e266-4a00-8328-6336cd7908ec_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\bc897414-e266-4a00-8328-6336cd7908ec_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\c0c3ecb9-8612-400d-9f0c-f16635de552f_lpg.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\c0c3ecb9-8612-400d-9f0c-f16635de552f_lpg.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\c0c3ecb9-8612-400d-9f0c-f16635de552f_lpg.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\c1c0b356-be7d-4d8f-a5d8-3bc3f2b1e174_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\c1c0b356-be7d-4d8f-a5d8-3bc3f2b1e174_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\c1c0b356-be7d-4d8f-a5d8-3bc3f2b1e174_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\ce0d196e-fda1-44a4-9515-45b5b1ec1ff1_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\ce0d196e-fda1-44a4-9515-45b5b1ec1ff1_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\ce0d196e-fda1-44a4-9515-45b5b1ec1ff1_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\cfa9b3c4-a35a-4837-8703-1bc3369fbe04_Logo v2.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\cfa9b3c4-a35a-4837-8703-1bc3369fbe04_Logo v2.png",
       "PackagePath": "staticwebassets\\images\\validids\\cfa9b3c4-a35a-4837-8703-1bc3369fbe04_Logo v2.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\d53ab4dc-44eb-489c-a4c1-9c1497c43621_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\d53ab4dc-44eb-489c-a4c1-9c1497c43621_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\d53ab4dc-44eb-489c-a4c1-9c1497c43621_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\d5889477-baf7-4ffd-8cdf-1d6db10cab7b_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\d5889477-baf7-4ffd-8cdf-1d6db10cab7b_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\d5889477-baf7-4ffd-8cdf-1d6db10cab7b_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\d719d4bd-ff88-48ef-891d-a18ece49fb54_Logo v2.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\d719d4bd-ff88-48ef-891d-a18ece49fb54_Logo v2.png",
       "PackagePath": "staticwebassets\\images\\validids\\d719d4bd-ff88-48ef-891d-a18ece49fb54_Logo v2.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\ed0aeade-e37b-43af-b41a-d5a5a393123a_Logo v2.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\ed0aeade-e37b-43af-b41a-d5a5a393123a_Logo v2.png",
       "PackagePath": "staticwebassets\\images\\validids\\ed0aeade-e37b-43af-b41a-d5a5a393123a_Logo v2.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\eeb157b9-f7c9-4176-b0f3-a79454d336c6_Logo v2.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\eeb157b9-f7c9-4176-b0f3-a79454d336c6_Logo v2.png",
       "PackagePath": "staticwebassets\\images\\validids\\eeb157b9-f7c9-4176-b0f3-a79454d336c6_Logo v2.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\ef895bd6-8bcc-46d8-8c11-a69f1014bc01_Logo v2.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\ef895bd6-8bcc-46d8-8c11-a69f1014bc01_Logo v2.png",
       "PackagePath": "staticwebassets\\images\\validids\\ef895bd6-8bcc-46d8-8c11-a69f1014bc01_Logo v2.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\faf8f2f6-5ddc-4edc-aec3-ec9dd0fff2f4_Logo v2.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\faf8f2f6-5ddc-4edc-aec3-ec9dd0fff2f4_Logo v2.png",
       "PackagePath": "staticwebassets\\images\\validids\\faf8f2f6-5ddc-4edc-aec3-ec9dd0fff2f4_Logo v2.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\js\\scripts.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\js\\scripts.js",
       "PackagePath": "staticwebassets\\js\\scripts.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\js\\site.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\images\\layers-2x.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\images\\layers-2x.png",
       "PackagePath": "staticwebassets\\lib\\leaflet\\images\\layers-2x.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\images\\layers.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\images\\layers.png",
       "PackagePath": "staticwebassets\\lib\\leaflet\\images\\layers.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\images\\marker-icon-2x.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\images\\marker-icon-2x.png",
       "PackagePath": "staticwebassets\\lib\\leaflet\\images\\marker-icon-2x.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\images\\marker-icon.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\images\\marker-icon.png",
       "PackagePath": "staticwebassets\\lib\\leaflet\\images\\marker-icon.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\images\\marker-shadow.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\images\\marker-shadow.png",
       "PackagePath": "staticwebassets\\lib\\leaflet\\images\\marker-shadow.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet-src.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet-src.js",
       "PackagePath": "staticwebassets\\lib\\leaflet\\leaflet-src.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet-src.js.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet-src.js.map",
       "PackagePath": "staticwebassets\\lib\\leaflet\\leaflet-src.js.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet-src.min.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet-src.min.js",
       "PackagePath": "staticwebassets\\lib\\leaflet\\leaflet-src.min.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet.css",
       "PackagePath": "staticwebassets\\lib\\leaflet\\leaflet.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet.js",
       "PackagePath": "staticwebassets\\lib\\leaflet\\leaflet.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet.js.map",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet.js.map",
       "PackagePath": "staticwebassets\\lib\\leaflet\\leaflet.js.map"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet.min.css",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet.min.css",
       "PackagePath": "staticwebassets\\lib\\leaflet\\leaflet.min.css"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet.min.js",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\lib\\leaflet\\leaflet.min.js",
       "PackagePath": "staticwebassets\\lib\\leaflet\\leaflet.min.js"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\permits\\06dc1a64-685a-42f8-8be4-aab620560ae7_Logo v2.png",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\permits\\06dc1a64-685a-42f8-8be4-aab620560ae7_Logo v2.png",
       "PackagePath": "staticwebassets\\permits\\06dc1a64-685a-42f8-8be4-aab620560ae7_Logo v2.png"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\permits\\31e8ab7d-1139-4c18-a18c-5bae5319edbc_lpg.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\permits\\31e8ab7d-1139-4c18-a18c-5bae5319edbc_lpg.jpg",
       "PackagePath": "staticwebassets\\permits\\31e8ab7d-1139-4c18-a18c-5bae5319edbc_lpg.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\permits\\592ce9fd-0da7-4f84-9ace-938e58f97814_Water.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\permits\\592ce9fd-0da7-4f84-9ace-938e58f97814_Water.jpg",
       "PackagePath": "staticwebassets\\permits\\592ce9fd-0da7-4f84-9ace-938e58f97814_Water.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\permits\\6e295fff-0b3b-4f11-8b2b-f9d93b9e5e65_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\permits\\6e295fff-0b3b-4f11-8b2b-f9d93b9e5e65_samplestock.jpg",
       "PackagePath": "staticwebassets\\permits\\6e295fff-0b3b-4f11-8b2b-f9d93b9e5e65_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\permits\\76c34b44-18e9-41a6-947a-733f9d6ffdf1_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\permits\\76c34b44-18e9-41a6-947a-733f9d6ffdf1_samplestock.jpg",
       "PackagePath": "staticwebassets\\permits\\76c34b44-18e9-41a6-947a-733f9d6ffdf1_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\permits\\8978b3f5-3be4-423c-962e-0eea9756f67f_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\permits\\8978b3f5-3be4-423c-962e-0eea9756f67f_samplestock.jpg",
       "PackagePath": "staticwebassets\\permits\\8978b3f5-3be4-423c-962e-0eea9756f67f_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\permits\\bcb4d964-edf0-4224-a9d5-3f18a68461fe_samplestock.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\permits\\bcb4d964-edf0-4224-a9d5-3f18a68461fe_samplestock.jpg",
       "PackagePath": "staticwebassets\\permits\\bcb4d964-edf0-4224-a9d5-3f18a68461fe_samplestock.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\permits\\e5d5959e-13b4-4194-9563-944e2c59a2ca_lpg.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\permits\\e5d5959e-13b4-4194-9563-944e2c59a2ca_lpg.jpg",
       "PackagePath": "staticwebassets\\permits\\e5d5959e-13b4-4194-9563-944e2c59a2ca_lpg.jpg"
     },
     {
-      "Id": "D:\\HomeHub\\Homehub\\HomeHub.App\\wwwroot\\permits\\eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg",
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\permits\\eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg",
       "PackagePath": "staticwebassets\\permits\\eec969ac-ca9c-41c8-853d-e937160fa80b_Just The Two of Us Wallpaper.jpg"
     },
     {
