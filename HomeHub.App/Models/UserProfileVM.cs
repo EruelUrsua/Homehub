@@ -12,5 +12,7 @@ namespace HomeHub.App.Models
         public double lat { get; set; }
 
         public double lng { get; set; }
+
+        public string? Role { get; set; }
     }
 }
