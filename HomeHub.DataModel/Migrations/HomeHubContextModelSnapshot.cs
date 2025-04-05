@@ -49,6 +49,15 @@ namespace HomeHub.DataModel.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsRestricted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsUnderReview")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastReviewDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Lastname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

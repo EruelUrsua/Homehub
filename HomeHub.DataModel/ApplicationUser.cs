@@ -19,6 +19,12 @@ namespace HomeHub.DataModel
 
         public string ValidId { get; set; }
 
+        public bool IsUnderReview { get; set; }
+
+        public DateTime? LastReviewDate { get; set; }
+
+        public bool IsRestricted { get; set; }
+
         //public ICollection<ApplicationUserRole> UserRoles { get; set; }
 
         //public string? BusinessName { get; set; }    

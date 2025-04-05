@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Account Under Review";
+}
+
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<div class="container">
+    <div class="alert alert-danger" style="margin-top: 40px; padding: 30px; border-radius: 10px; background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24;">
+        <div class="text-center mb-4">
+            <i class="fas fa-exclamation-circle" style="font-size: 40px; color: #721c24;"></i>
+        </div>
+        <h4 class="text-center font-weight-bold" style="color: #721c24;">Your account is currently under review.</h4>
+        <p class="text-center" style="font-size: 16px;">You have exceeded the allowed number of cancellations in a short period of time.</p>
+        <p class="text-center" style="font-size: 16px;">Access to some features has been temporarily restricted.</p>
+
+        @if (TempData["ReviewWarning"] != null)
+        {
+            <p class="text-center font-weight-bold" style="font-size: 18px; color: #856404;">@TempData["ReviewWarning"]</p>
+        }
+
+        <div class="text-center" style="margin-top: 20px;">
+            <a asp-controller="Customer" asp-action="Index" class="btn btn-primary btn-lg" style="padding: 12px 30px; font-size: 16px; border-radius: 8px;">Go Back to Home</a>
+        </div>
+    </div>
+</div>
+
+<div style="height: 100px;"></div>

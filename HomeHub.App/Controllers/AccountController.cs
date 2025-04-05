@@ -413,6 +413,15 @@ namespace HomeHub.App.Controllers
                 ApplicationUser user = await userManager.FindByNameAsync(model.Username);
                 if (user != null)
                 {
+                    // Restricted User Popup
+                    if (user.IsRestricted)
+                    {
+                        // Set a flag in TempData or ViewBag
+                        TempData["AccountRestricted"] = true;
+                        ModelState.AddModelError("Login Error", "Your account has been permanently restricted. Thank you for using HomeHub.");
+                        return View(model);
+                    }
+
                     var result = await signInManager.PasswordSignInAsync(user, model.Password, false, false);
                     if (result.Succeeded)
                     {
