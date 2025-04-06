@@ -14,5 +14,8 @@ namespace HomeHub.App.Models
         public double lng { get; set; }
 
         public string? Role { get; set; }
+
+        public string? ValidId { get; set; }
+        public string? BusinessPermitNo { get; set; }
     }
 }

@@ -55,6 +55,9 @@ namespace HomeHub.DataModel.Migrations
                     b.Property<bool>("IsUnderReview")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsVerified")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime?>("LastReviewDate")
                         .HasColumnType("datetime2");
 

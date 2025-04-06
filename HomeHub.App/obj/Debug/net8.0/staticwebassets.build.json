@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QoYlRWZfN+R5bHE1msnI5bEarqOi/sy7mhq40R6ogZs=",
+  "Hash": "WlUZAfSvuJpFtU6QecnpQ3fJYB4Y5sN9Awo0z9P1+DI=",
   "Source": "HomeHub.App",
   "BasePath": "_content/HomeHub.App",
   "Mode": "Default",
@@ -2304,6 +2304,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\validids\\91734090-8c11-4c26-9c8e-9148e064fa09_Logo v2.png"
+    },
+    {
+      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\9b3a52e0-44f8-4c86-a79d-a1cac8fc194d_Logo v2.png",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/validids/9b3a52e0-44f8-4c86-a79d-a1cac8fc194d_Logo v2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "65xsd9bh4s",
+      "Integrity": "yncNOblKQRNYVY5q6ACu2SDpYb5MtW3s9qLIIGXi/T4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\validids\\9b3a52e0-44f8-4c86-a79d-a1cac8fc194d_Logo v2.png"
     },
     {
       "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\a00fb76e-33a6-490b-a5c6-a5586e6550bd_Logo v2.png",
@@ -13248,6 +13269,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Fri, 04 Apr 2025 06:22:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yncNOblKQRNYVY5q6ACu2SDpYb5MtW3s9qLIIGXi/T4="
+        }
+      ]
+    },
+    {
+      "Route": "images/validids/9b3a52e0-44f8-4c86-a79d-a1cac8fc194d_Logo v2.65xsd9bh4s.png",
+      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\9b3a52e0-44f8-4c86-a79d-a1cac8fc194d_Logo v2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yncNOblKQRNYVY5q6ACu2SDpYb5MtW3s9qLIIGXi/T4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 15:14:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "65xsd9bh4s"
+        },
+        {
+          "Name": "label",
+          "Value": "images/validids/9b3a52e0-44f8-4c86-a79d-a1cac8fc194d_Logo v2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yncNOblKQRNYVY5q6ACu2SDpYb5MtW3s9qLIIGXi/T4="
+        }
+      ]
+    },
+    {
+      "Route": "images/validids/9b3a52e0-44f8-4c86-a79d-a1cac8fc194d_Logo v2.png",
+      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\9b3a52e0-44f8-4c86-a79d-a1cac8fc194d_Logo v2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yncNOblKQRNYVY5q6ACu2SDpYb5MtW3s9qLIIGXi/T4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 06 Apr 2025 15:14:48 GMT"
         },
         {
           "Name": "Cache-Control",

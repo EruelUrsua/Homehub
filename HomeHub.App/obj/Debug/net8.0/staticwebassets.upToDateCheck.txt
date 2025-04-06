@@ -105,6 +105,7 @@ wwwroot\images\validids\7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg
 wwwroot\images\validids\87393b18-2f5e-4a03-9bfa-878a4eefa62f_samplestock.jpg
 wwwroot\images\validids\8c73e782-4148-4a42-bbd9-cbabe18a659c_samplestock.jpg
 wwwroot\images\validids\91734090-8c11-4c26-9c8e-9148e064fa09_Logo v2.png
+wwwroot\images\validids\9b3a52e0-44f8-4c86-a79d-a1cac8fc194d_Logo v2.png
 wwwroot\images\validids\a00fb76e-33a6-490b-a5c6-a5586e6550bd_Logo v2.png
 wwwroot\images\validids\a97a8bb0-136f-4c9d-82d6-9db0ea1b76d2_lpg.jpg
 wwwroot\images\validids\bc897414-e266-4a00-8328-6336cd7908ec_samplestock.jpg
