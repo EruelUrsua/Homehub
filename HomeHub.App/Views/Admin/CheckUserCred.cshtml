@@ -1,0 +1,87 @@
+﻿@model HomeHub.App.Models.UserProfileVM
+
+<div class="container py-5">
+    <div class="header-section">
+        <h1 class="text-white">User Credentials</h1>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success text-center success-message">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    <div class="card border-0 shadow-sm rounded-3 mx-auto" style="max-width: 600px; background-color: #f8f9fa;">
+        <div class="card-body">
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                        <th class="bg-primary text-white">First Name</th>
+                        <td>@Model.FirstName</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-primary text-white">Last Name</th>
+                        <td>@Model.LastName</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-primary text-white">User Role</th>
+                        <td>@Model.Role</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-primary text-white">User ID</th>
+                        <td>@Model.ValidId</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-primary text-white">Map</th>
+                        <td>
+                            <script src="~/lib/leaflet/leaflet.js"></script>
+                            <script src="~ /lib/leaflet/leaflet.min.js"></script>
+                            <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.83.1/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+                            <a href="~/lib/leaflet/leaflet.js.map"></a>
+                            <div id="map" style="width:100%;height:200px"></div>
+                            <script>
+
+                                var map = L.map('map').setView([@Model.lat, @Model.lng], 15);
+                                     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright"></a>'
+                                     }).addTo(map);
+                                var marker = L.marker([@Model.lat, @Model.lng],{draggable: false} ).addTo(map);
+                            </script>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    .header-section {
+        background-color: #203B81;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        border-radius: 8px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        max-width: 600px;
+    }
+
+    .success-message {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .table th {
+        background-color: #203B81 !important;
+        color: white !important;
+        width: 30%;
+    }
+</style>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+

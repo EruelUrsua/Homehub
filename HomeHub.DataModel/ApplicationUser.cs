@@ -25,6 +25,8 @@ namespace HomeHub.DataModel
 
         public bool IsRestricted { get; set; }
 
+        public bool IsVerified { get; set; }
+
         //public ICollection<ApplicationUserRole> UserRoles { get; set; }
 
         //public string? BusinessName { get; set; }    

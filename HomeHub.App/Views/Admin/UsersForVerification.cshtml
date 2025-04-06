@@ -1,0 +1,33 @@
+﻿@using HomeHub.DataModel
+
+@model IEnumerable<ApplicationUser>
+
+<div class="container">
+    <h2>Users Under Review</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Firstname @user.Lastname</td>
+                    <td>@user.Email</td>
+                    <td>@user.PhoneNumber</td>
+                    <td>
+                        <form asp-action="CheckUserCred" asp-controller="Admin">
+                        <input type="hidden" name="Id" value="@user.Id" >
+                       <input type="submit" class="btn btn-sm" value="View Profile" >
+                    </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

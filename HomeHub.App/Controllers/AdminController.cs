@@ -137,6 +137,48 @@ namespace HomeHub.App.Controllers
         //    return View(users);
         //}
 
+
+        public async Task<IActionResult> UsersForVerification()
+        {
+            var usersUnderReview = userManager.Users
+                .Where(u => u.IsVerified == false) // Get all users who needs verification
+                .ToList();
+
+            return View(usersUnderReview);
+        }
+
+        public async Task<IActionResult> CheckUserCred(string Id)
+        {
+            ApplicationUser user = await userManager.FindByIdAsync(Id);
+            if (user == null)
+                return View("Index");
+            var role = await userManager.GetRolesAsync(user);
+            var ur = "";
+            if (user == null)
+                return View("Index");
+
+            if (role.Contains("Customer"))
+            {
+                ur = "Customer";
+            }
+            else if (role.Contains("Provider"))
+            {
+                ur = "Provider";
+            }
+            var model = new UserProfileVM
+            {
+                FirstName = user.Firstname,
+                LastName = user.Lastname,
+                //Address = user.Address,
+                lat = user.lat,
+                lng = user.lng,
+                ValidId = user.ValidId,
+                Role = ur,
+
+            };
+
+            return View(model);
+        }
         public async Task<IActionResult> UsersUnderReview()
         {
             var usersUnderReview = userManager.Users

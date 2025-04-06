@@ -104,24 +104,6 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.BusinessPermit).HasColumnType("nvarchar(MAX)");
         });
 
-
-        //modelBuilder.Entity<Business>(entity =>
-        //{
-        //    entity.HasKey(e => e.UserID);
-
-        //    entity.Property(e => e.UserID)
-        //        .HasColumnName("UserID");
-        //    entity.Property(e => e.BusinessName).HasMaxLength(50);
-        //    //entity.Property(e => e.BusinessType).HasMaxLength(1);
-        //    entity.Property(e => e.CompanyAddress).HasMaxLength(100);
-        //    entity.Property(e => e.ContactNo).HasMaxLength(11);
-        //    entity.Property(e => e.Email).HasMaxLength(40);
-        //    entity.Property(e => e.OfferList).HasMaxLength(50);
-        //    entity.Property(e => e.Password).HasMaxLength(20);
-        //    entity.Property(e => e.RepresentativeName).HasMaxLength(50);
-        //    entity.Property(e => e.BusinessPermitNo).HasMaxLength(50);
-        //});
-
         modelBuilder.Entity<ClientOrder>(entity =>
         {
             entity.HasKey(e => e.ClientId);
@@ -164,21 +146,6 @@ public class HomeHubContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.AddInstructions)
                 .HasMaxLength(150);
         });
-
-        //modelBuilder.Entity<Customer>(entity =>
-        //{
-        //    entity.HasKey(e => e.UserId);
-
-        //    entity.Property(e => e.UserId)
-        //        .HasColumnName("UserID");
-        //    entity.Property(e => e.Address).HasMaxLength(80);
-        //    entity.Property(e => e.ContactNo).HasMaxLength(11);
-        //    entity.Property(e => e.Email).HasMaxLength(20);
-        //    entity.Property(e => e.Firstname).HasMaxLength(20);
-        //    entity.Property(e => e.Lastname).HasMaxLength(20);
-        //    entity.Property(e => e.Password).HasMaxLength(20);
-        //    entity.Property(e => e.ValidIDno).HasMaxLength(50);
-        //});
 
         modelBuilder.Entity<OrdersLog>(entity =>
         {

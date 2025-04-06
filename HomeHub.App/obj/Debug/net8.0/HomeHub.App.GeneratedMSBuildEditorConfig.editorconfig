@@ -52,6 +52,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5Ib21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Notes/C\#/Homehub/HomeHub.App/Views/Admin/CheckUserCred.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2hlY2tVc2VyQ3JlZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Notes/C\#/Homehub/HomeHub.App/Views/Admin/UserProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlclByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,6 +66,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Notes/C\#/Homehub/HomeHub.App/Views/Admin/UserRatings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlclJhdGluZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Notes/C\#/Homehub/HomeHub.App/Views/Admin/UsersForVerification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlcnNGb3JWZXJpZmljYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Notes/C\#/Homehub/HomeHub.App/Views/Admin/UsersUnderReview.cshtml]

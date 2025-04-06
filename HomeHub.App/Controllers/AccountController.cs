@@ -375,7 +375,8 @@ namespace HomeHub.App.Controllers
                 user.Address = model.Address;
                 user.lat = model.lat;
                 user.lng = model.lng;
-                user.ValidId = "Insert Model";
+                user.ValidId = "N/A";
+                user.IsVerified = true;
                 var result = await userManager.CreateAsync(user, model.Password);
                 await userManager.AddToRoleAsync(user, "Admin");
                 if (result.Succeeded)

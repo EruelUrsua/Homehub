@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HomeHub.DataModel.Migrations
 {
     [DbContext(typeof(HomeHubContext))]
-    [Migration("20250403072107_AddedIdentityTables")]
+    [Migration("20250406143453_AddedIdentityTables")]
     partial class AddedIdentityTables
     {
         /// <inheritdoc />
@@ -51,6 +51,18 @@ namespace HomeHub.DataModel.Migrations
                     b.Property<string>("Firstname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsRestricted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsUnderReview")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsVerified")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastReviewDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Lastname")
                         .IsRequired()
