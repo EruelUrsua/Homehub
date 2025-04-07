@@ -15,7 +15,7 @@ namespace HomeHub.App.Models
 
         public string? Role { get; set; }
 
-        public string? ValidId { get; set; }
-        public string? BusinessPermitNo { get; set; }
+        public IFormFile ValidId { get; set; }
+     
     }
 }
