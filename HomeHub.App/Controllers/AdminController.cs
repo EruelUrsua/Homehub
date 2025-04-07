@@ -172,8 +172,8 @@ namespace HomeHub.App.Controllers
                 //Address = user.Address,
                 lat = user.lat,
                 lng = user.lng,
-                ValidId = user.ValidId,
                 Role = ur,
+                //ValidId = user.ValidId
 
             };
 
