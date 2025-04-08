@@ -1,14 +1,19 @@
 ﻿@model List<HomeHub.DataModel.ClientOrder>
 
  @* Shows Sales chart *@
-<canvas id="salesChart"></canvas>
+<canvas id="salesChart" style="width:100%;max-width:1300px"></canvas>
 <br />
 @* Shows Order chart *@
-<canvas id="orderChart"></canvas>
+<canvas id="orderChart" style="width:100%;max-width:1300px"></canvas>
 <br />
-
+@* Shows Order chart *@
+<h4>Total Earnings Breakdown</h4>
+<canvas id="earnChart" style="width:100%;max-width:1300px; height:100%;max-height:630px"></canvas>
+<br />
+<h3>Total Earnings: @Math.Truncate(Model.Sum(i=>i.Fee)) </h3>
 
 @section scripts{
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     var ctx = document.getElementById('salesChart').getContext('2d');
@@ -25,6 +30,7 @@
     }]
     },
     options: {
+    responsive:true,
     scales: {
     yAxes: [{
     ticks: {
@@ -43,12 +49,18 @@
         datasets: [{
         label: 'Availed Products/Services',
         data: @Html.Raw(Json.Serialize(Model.GroupBy(d => d.OrderedPs).Select(d => d.Sum(d => d.Quantity).ToString()).ToList())),
-        backgroundColor: 'rgba(0, 119, 204, 0.3)',
+        backgroundColor: ['rgba(0, 119, 204, 0.3)',
+                          'rgb(255, 9, 132)',
+                          'rgb(157, 230, 41)',
+                          'rgb(41, 224, 230)',
+                          'rgb(255, 205, 86)'
+        ],
         borderColor: 'rgba(0, 119, 204, 1)',
         borderWidth: 1
         }]
         },
         options: {
+        responsive:true,
         scales: {
         yAxes: [{
         ticks: {
@@ -58,6 +70,39 @@
         }
         }
         });
+
+              var ctz = document.getElementById('earnChart').getContext('2d');
+        var barchart = new Chart(ctz, {
+             type: 'pie',
+             data: {
+                            labels: @Html.Raw(Json.Serialize(Model.DistinctBy(d => d.OrderedPs).Select(d => d.OrderedPs).ToList())),
+             datasets: [{
+             // label: 'Total Earnings Breakdown',
+             data: @Html.Raw(Json.Serialize(Model.GroupBy(d => d.OrderedPs).Select(d => d.Sum(d => d.Fee).ToString()).ToList())),
+             backgroundColor: ['rgba(0, 119, 204, 0.3)',
+                               'rgb(255, 9, 132)',
+                               'rgb(157, 230, 41)',
+                               'rgb(41, 224, 230)',
+                               'rgb(255, 205, 86)'
+             ],
+
+             borderColor: 'rgba(0, 119, 204, 1)',
+             borderWidth: 1
+             }]
+             },
+             options: {
+             responsive:true,
+             scales: {
+             yAxes: [{
+             ticks: {
+             beginAtZero: true
+             }
+             }]
+             }
+             }
+             });
+
+
 </script>
 }
 
