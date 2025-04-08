@@ -1,5 +1,4 @@
 ﻿@model HomeHub.App.Models.UserProfileVM
-
 <div class="container py-5">
     <div class="header-section">
         <h1 class="text-white">User Credentials</h1>
@@ -29,27 +28,39 @@
                         <td>@Model.Role</td>
                     </tr>
                     <tr>
-                        <th class="bg-primary text-white">User ID</th>
+                        <th class="bg-primary text-white">Valid ID</th>
                         <td>
-                            <img class="rounded border" src="@Url.Content(Model.ValidId)" width="300" alt="Valid ID" />
+                            @* <a href="" onclick="window.open('@Url.Content(Model.ValidId)','targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1090px, height=550px, top=25px left=120px'); return false;"> *@
+                            <img id="myId" class="rounded border" src="@Url.Content(Model.ValidId)" width="400" style="width:100%;max-width:400px" alt="Valid ID" />
+                            <div id="idModal" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="imgId">
+                                <div id="caption"></div>
+                            </div>
+                            @* </a> *@
                         </td>
                     </tr>
                     <tr>
-                        <th class="bg-primary text-white">Map</th>
+                        <th class="bg-primary text-white">Business Permit</th>
+                        <td>
+                            @* <a href="" onclick="window.open('@Url.Content(Model.ValidId)','targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1090px, height=550px, top=25px left=120px'); return false;"> *@
+                            @* <img class="rounded border" src="@Url.Content(Model.BusinessPermit)" width="400" style="width:100%;max-width:400px" alt="BusinessPermit" /> *@
+                            @* <div id="idModal" class="modal"> *@
+                            @*     <span class="close">&times;</span> *@
+                            @*     <img class="modal-content" id="imgId"> *@
+                            @*     <div id="caption"></div> *@
+                            @* </div> *@
+                            @* </a> *@
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="bg-primary text-white">Address Map</th>
                         <td>
                             <script src="~/lib/leaflet/leaflet.js"></script>
                             <script src="~ /lib/leaflet/leaflet.min.js"></script>
                             <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.83.1/dist/L.Control.Locate.min.js" charset="utf-8"></script>
                             <a href="~/lib/leaflet/leaflet.js.map"></a>
                             <div id="map" style="width:100%;height:200px"></div>
-                            <script>
-
-                                var map = L.map('map').setView([@Model.lat, @Model.lng], 15);
-                                     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                                     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright"></a>'
-                                     }).addTo(map);
-                                var marker = L.marker([@Model.lat, @Model.lng],{draggable: false} ).addTo(map);
-                            </script>
                         </td>
                     </tr>
                 </tbody>
@@ -58,7 +69,115 @@
     </div>
 </div>
 
+@section scripts{
+<script>
+
+        // Get the modal
+    var modal = document.getElementById("idModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myId");
+    var modalImg = document.getElementById("imgId");
+    var captionText = document.getElementById("caption");
+        var x = document.getElementById("map");
+    img.onclick = function(){
+      modal.style.display = "block";
+           x.style.display = "none";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+           x.style.display = "block";
+    }
+</script>
+<script>
+    var map = L.map('map').setView([@Model.lat, @Model.lng], 15);
+         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright"></a>'
+         }).addTo(map);
+    var marker = L.marker([@Model.lat, @Model.lng],{draggable: false} ).addTo(map);
+</script>
+}
 <style>
+    #myImg {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+
+    /* Modal Content (image) */
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    /* Caption of Modal Image */
+    #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    /* Add Animation */
+    .modal-content, #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+
+
+    /* The Close Button */
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
     .header-section {
         background-color: #203B81;
         color: white;
