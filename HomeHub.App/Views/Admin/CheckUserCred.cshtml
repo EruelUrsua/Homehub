@@ -45,8 +45,13 @@
                         <td>
                             @if (!string.IsNullOrEmpty(Model.BusinessPermit))
                             {
-                                <img class="rounded border" src="@Url.Content(Model.BusinessPermit)"
+                                <img id="myBp" class="rounded border" src="@Url.Content(Model.BusinessPermit)"
                                      width="400" style="width:100%;max-width:400px" alt="Business Permit" />
+                                <div id="bpModal" class="modal">
+                                    <span class="closeb">&times;</span>
+                                    <img class="modal-content" id="imgBp">
+                                    <div id="captionb"></div>
+                                </div>
                             }
                             else
                             {
@@ -97,6 +102,32 @@
            x.style.display = "block";
     }
 </script>
+    <script>
+
+            // Get the modal
+        var modal = document.getElementById("bpModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myBp");
+        var modalImg = document.getElementById("imgBp");
+        var captionText = document.getElementById("captionb");
+            var x = document.getElementById("map");
+        img.onclick = function(){
+          modal.style.display = "block";
+               x.style.display = "none";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("closeb")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+               x.style.display = "block";
+        }
+    </script>
 <script>
     var map = L.map('map').setView([@Model.lat, @Model.lng], 15);
          L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -159,6 +190,26 @@
         animation-duration: 0.6s;
     }
 
+    /* Caption of Modal Image */
+    #captionb {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    /* Add Animation */
+    .modal-content, #captionb {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
 
 
     /* The Close Button */
@@ -174,6 +225,23 @@
 
         .close:hover,
         .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    .closeb {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+        .closeb:hover,
+        .closeb:focus {
             color: #bbb;
             text-decoration: none;
             cursor: pointer;
