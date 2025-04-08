@@ -7245,7 +7245,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 11:22:17 GMT"
+          "Value": "Tue, 08 Apr 2025 12:02:10 GMT"
         }
       ],
       "EndpointProperties": [
@@ -7290,7 +7290,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 11:22:17 GMT"
+          "Value": "Tue, 08 Apr 2025 12:02:10 GMT"
         }
       ],
       "EndpointProperties": [
@@ -7327,7 +7327,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 11:33:36 GMT"
+          "Value": "Tue, 08 Apr 2025 12:02:10 GMT"
         }
       ],
       "EndpointProperties": [
@@ -7372,7 +7372,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 11:33:36 GMT"
+          "Value": "Tue, 08 Apr 2025 12:02:10 GMT"
         }
       ],
       "EndpointProperties": [
@@ -8475,7 +8475,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 11:33:36 GMT"
+          "Value": "Tue, 08 Apr 2025 12:02:11 GMT"
         }
       ],
       "EndpointProperties": [
@@ -8512,7 +8512,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 11:33:36 GMT"
+          "Value": "Tue, 08 Apr 2025 12:02:11 GMT"
         }
       ],
       "EndpointProperties": [
@@ -9761,6 +9761,88 @@
       ]
     },
     {
+      "Route": "images/validids/8189e610-ce8a-435e-aa61-96404db11560_b534b182b082fbf571edf38d2815ad89.jpeg",
+      "AssetFile": "images/validids/8189e610-ce8a-435e-aa61-96404db11560_b534b182b082fbf571edf38d2815ad89.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "280568"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6C/MEz6JyGQ0ld/6wEjJlOIu1Lra7Nj/Inw4Rf4tQmM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 14:33:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6C/MEz6JyGQ0ld/6wEjJlOIu1Lra7Nj/Inw4Rf4tQmM="
+        }
+      ]
+    },
+    {
+      "Route": "images/validids/8189e610-ce8a-435e-aa61-96404db11560_b534b182b082fbf571edf38d2815ad89.owxx68ig2k.jpeg",
+      "AssetFile": "images/validids/8189e610-ce8a-435e-aa61-96404db11560_b534b182b082fbf571edf38d2815ad89.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "280568"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6C/MEz6JyGQ0ld/6wEjJlOIu1Lra7Nj/Inw4Rf4tQmM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 14:33:17 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "owxx68ig2k"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6C/MEz6JyGQ0ld/6wEjJlOIu1Lra7Nj/Inw4Rf4tQmM="
+        },
+        {
+          "Name": "label",
+          "Value": "images/validids/8189e610-ce8a-435e-aa61-96404db11560_b534b182b082fbf571edf38d2815ad89.jpeg"
+        }
+      ]
+    },
+    {
       "Route": "images/validids/87393b18-2f5e-4a03-9bfa-878a4eefa62f_samplestock.jpg",
       "AssetFile": "images/validids/87393b18-2f5e-4a03-9bfa-878a4eefa62f_samplestock.jpg",
       "Selectors": [],
@@ -10771,7 +10853,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 11:22:17 GMT"
+          "Value": "Tue, 08 Apr 2025 12:02:11 GMT"
         }
       ],
       "EndpointProperties": [
@@ -10808,7 +10890,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 11:22:17 GMT"
+          "Value": "Tue, 08 Apr 2025 12:02:11 GMT"
         }
       ],
       "EndpointProperties": [

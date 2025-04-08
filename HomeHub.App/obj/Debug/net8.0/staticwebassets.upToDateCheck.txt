@@ -116,6 +116,7 @@ wwwroot\images\validids\7b27db5a-f41a-487e-94e8-792eea381a01_Logo v2.png
 wwwroot\images\validids\7b5d7b49-04b8-42de-8831-8ad68ec9a58f_Just The Two of Us Wallpaper.jpg
 wwwroot\images\validids\7d5fcd0e-db9f-4c37-8ec7-082e40af5a16_pass.PNG
 wwwroot\images\validids\7e39e172-14e4-4e0b-9cc2-b2bf248972f9_Water.jpg
+wwwroot\images\validids\8189e610-ce8a-435e-aa61-96404db11560_b534b182b082fbf571edf38d2815ad89.jpeg
 wwwroot\images\validids\87393b18-2f5e-4a03-9bfa-878a4eefa62f_samplestock.jpg
 wwwroot\images\validids\881c1608-10ed-42d9-a667-7ccdf4b2e99f_Water.jpg
 wwwroot\images\validids\8c73e782-4148-4a42-bbd9-cbabe18a659c_samplestock.jpg
