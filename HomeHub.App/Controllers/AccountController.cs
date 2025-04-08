@@ -239,29 +239,35 @@ namespace HomeHub.App.Controllers
                 return View(model);
             }
 
-            string uniqueFileName = null;
-
+            // Business Permit Upload
+            string businessPermitFileName = null;
             if (model.BusinessPermitNo != null)
             {
-                // Define the folder path
-                string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/permits");
+                string permitsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/permits");
+                Directory.CreateDirectory(permitsFolder); // Creates if doesn't exist
 
-                // Ensure folder exists
-                if (!Directory.Exists(uploadsFolder))
+                businessPermitFileName = Guid.NewGuid() + "_" + model.BusinessPermitNo.FileName;
+                string permitPath = Path.Combine(permitsFolder, businessPermitFileName);
+
+                using (var stream = new FileStream(permitPath, FileMode.Create))
                 {
-                    Directory.CreateDirectory(uploadsFolder);
+                    await model.BusinessPermitNo.CopyToAsync(stream);
                 }
+            }
 
-                // Create a unique file name
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + model.BusinessPermitNo.FileName;
+            // Valid ID Upload
+            string validIdFileName = null;
+            if (model.ValidId != null)
+            {
+                string validIdsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/validids");
+                Directory.CreateDirectory(validIdsFolder);
 
-                // Combine folder path + file name
-                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                validIdFileName = Guid.NewGuid() + "_" + model.ValidId.FileName;
+                string validIdPath = Path.Combine(validIdsFolder, validIdFileName);
 
-                // Save the image to the `wwwroot/permits/` folder
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                using (var stream = new FileStream(validIdPath, FileMode.Create))
                 {
-                    await model.BusinessPermitNo.CopyToAsync(fileStream);
+                    await model.ValidId.CopyToAsync(stream);
                 }
             }
 
@@ -270,25 +276,6 @@ namespace HomeHub.App.Controllers
             {
                 ModelState.AddModelError("ValidId", "Please upload a valid ID image.");
                 return View(model);
-            }
-
-            string validIdFileName = null;
-            if (model.ValidId != null)
-            {
-                string uploadsFolderForValidId = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/validids");
-
-                if (!Directory.Exists(uploadsFolderForValidId))
-                {
-                    Directory.CreateDirectory(uploadsFolderForValidId);
-                }
-
-                validIdFileName = Guid.NewGuid().ToString() + "_" + model.ValidId.FileName;
-                string validIdFilePath = Path.Combine(uploadsFolderForValidId, validIdFileName);
-
-                using (var fileStream = new FileStream(validIdFilePath, FileMode.Create))
-                {
-                    await model.ValidId.CopyToAsync(fileStream);
-                }
             }
 
             if (ModelState.IsValid)
@@ -318,8 +305,8 @@ namespace HomeHub.App.Controllers
                     provider.Category = model.Category;
                     user.lat = model.lat;
                     user.lng = model.lng;
-                    user.ValidId = $"/images/validids/{uniqueFileName}";
-                    provider.BusinessPermit = $"/images/permits/{uniqueFileName}";
+                    user.ValidId = $"/images/validids/{validIdFileName}";
+                    provider.BusinessPermit = $"/images/permits/{businessPermitFileName}";
                     var result = await userManager.CreateAsync(user, model.Password);
                     await userManager.AddToRoleAsync(user, "Provider");
                     provider.UserID = user.Id;

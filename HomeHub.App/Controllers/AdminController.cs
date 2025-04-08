@@ -150,12 +150,12 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> CheckUserCred(string Id)
         {
             ApplicationUser user = await userManager.FindByIdAsync(Id);
-            Provider provider = new Provider();
             if (user == null)
                 return View("Index");
             var role = await userManager.GetRolesAsync(user);
             var ur = "";
             var bp = "";
+            string businessPermitPath = null;
             if (user == null)
                 return View("Index");
 
@@ -165,6 +165,10 @@ namespace HomeHub.App.Controllers
             }
             else if (role.Contains("Provider"))
             {
+                var business = await context.Providers
+                    .FirstOrDefaultAsync(b => b.UserID == user.Id);
+
+                businessPermitPath = business?.BusinessPermit;
                 ur = "Provider";
             }
             var model = new UserProfileVM
@@ -176,7 +180,7 @@ namespace HomeHub.App.Controllers
                 lng = user.lng,
                 Role = ur,
                 ValidId = user.ValidId,
-                //BusinessPermit = provider.BusinessPermit,
+                BusinessPermit = businessPermitPath
 
             };
 

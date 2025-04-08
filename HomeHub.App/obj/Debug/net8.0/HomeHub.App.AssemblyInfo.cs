@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HomeHub.App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d13b9353efe4296eb0fed44319051fb98afd1165")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+427ad58747ec1c9b2552c81a6ebf6825ae09b8bc")]
 [assembly: System.Reflection.AssemblyProductAttribute("HomeHub.App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HomeHub.App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

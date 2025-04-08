@@ -43,14 +43,15 @@
                     <tr>
                         <th class="bg-primary text-white">Business Permit</th>
                         <td>
-                            @* <a href="" onclick="window.open('@Url.Content(Model.ValidId)','targetWindow', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1090px, height=550px, top=25px left=120px'); return false;"> *@
-                            @* <img class="rounded border" src="@Url.Content(Model.BusinessPermit)" width="400" style="width:100%;max-width:400px" alt="BusinessPermit" /> *@
-                            @* <div id="idModal" class="modal"> *@
-                            @*     <span class="close">&times;</span> *@
-                            @*     <img class="modal-content" id="imgId"> *@
-                            @*     <div id="caption"></div> *@
-                            @* </div> *@
-                            @* </a> *@
+                            @if (!string.IsNullOrEmpty(Model.BusinessPermit))
+                            {
+                                <img class="rounded border" src="@Url.Content(Model.BusinessPermit)"
+                                     width="400" style="width:100%;max-width:400px" alt="Business Permit" />
+                            }
+                            else
+                            {
+                                <span>No business permit uploaded</span>
+                            }
                         </td>
                     </tr>
                     <tr>
