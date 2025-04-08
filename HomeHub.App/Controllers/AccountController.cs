@@ -166,22 +166,16 @@ namespace HomeHub.App.Controllers
 
             if (model.ValidId != null)
             {
-                // Define the folder path for valid IDs
                 string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/validids");
 
-                // Ensure folder exists
                 if (!Directory.Exists(uploadsFolder))
                 {
                     Directory.CreateDirectory(uploadsFolder);
                 }
 
-                // Create a unique file name
                 uniqueFileName = Guid.NewGuid().ToString() + "_" + model.ValidId.FileName;
-
-                // Combine folder path + file name
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
-                // Save the image to the `wwwroot/images/validids/` folder
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
                     await model.ValidId.CopyToAsync(fileStream);
@@ -196,38 +190,36 @@ namespace HomeHub.App.Controllers
                 {
                     ModelState.AddModelError("Registration Error", "Email has already been used");
                     return View(model);
-
                 }
                 else
                 {
-                    ApplicationUser user = new ApplicationUser();
-                    user.UserName = model.Email;
-                    user.Email = model.Email;
-                    user.Lastname = model.Lastname;
-                    user.Firstname = model.Firstname;
-                    user.PhoneNumber = model.ContactNo;
-                    user.Address = model.Address;
-                    user.lat = model.lat;
-                    user.lng = model.lng;
-                    user.ValidId = "/validids/" + uniqueFileName;
+                    ApplicationUser user = new ApplicationUser
+                    {
+                        UserName = model.Email,
+                        Email = model.Email,
+                        Lastname = model.Lastname,
+                        Firstname = model.Firstname,
+                        PhoneNumber = model.ContactNo,
+                        Address = model.Address,
+                        lat = model.lat,
+                        lng = model.lng,
+                        ValidId = $"/images/validids/{uniqueFileName}"  // Corrected path
+                    };
 
                     var result = await userManager.CreateAsync(user, model.Password);
                     await userManager.AddToRoleAsync(user, "Customer");
+
                     if (result.Succeeded)
                     {
-                        //Then send the Confirmation Email to the User
                         await SendConfirmationEmail(model.Email, user);
-
                         return View("RegistrationSuccessful");
                     }
+
                     return View(model);
                 }
             }
-            else
-            {
-                return View(model);
-            }
 
+            return View(model);
         }
 
 

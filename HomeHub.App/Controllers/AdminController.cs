@@ -165,19 +165,10 @@ namespace HomeHub.App.Controllers
             {
                 ur = "Provider";
             }
-            var model = new UserProfileVM
-            {
-                FirstName = user.Firstname,
-                LastName = user.Lastname,
-                //Address = user.Address,
-                lat = user.lat,
-                lng = user.lng,
-                ValidId = user.ValidId,
-                Role = ur,
 
-            };
+            ViewBag.Role = ur;
 
-            return View(model);
+            return View(user);
         }
         public async Task<IActionResult> UsersUnderReview()
         {
