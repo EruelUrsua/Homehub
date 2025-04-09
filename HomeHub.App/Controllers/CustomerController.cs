@@ -551,10 +551,17 @@ namespace HomeHub.App.Controllers
             }
             else if (recentCancellations == 5)
             {
-                ViewBag.Warning = "You have canceled 5 orders in the past 3 days. Your account is now under review. Some features have been disabled";
-                user.IsUnderReview = true;
-                user.LastReviewDate = DateTime.Now;
-                context.SaveChanges();
+                if (user.LastReviewDate?.Date == DateTime.Now.Date)
+                {
+                    ViewBag.Warning = "You've recently had your restriction lifted. Please avoid canceling more orders.";
+                }
+                else
+                {
+                    ViewBag.Warning = "You have canceled 5 orders in the past 3 days. Your account is now under review. Some features have been disabled";
+                    user.IsUnderReview = true;
+                    user.LastReviewDate = DateTime.Now;
+                    context.SaveChanges();
+                }
             }
 
             var orders = context.OrdersLogs

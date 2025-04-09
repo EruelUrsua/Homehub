@@ -2,32 +2,127 @@
 
 @model IEnumerable<ApplicationUser>
 
+<style>
+    .container {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .header-section {
+        background-color: #203B81;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .primary-heading {
+        color: #F1F1F1;
+        font-weight: bold;
+    }
+
+    .card {
+        background-color: #eef5ff;
+        color: #203B81;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .user-list table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 5px;
+        font-size: 16px;
+    }
+
+    .user-list th, .user-list td {
+        padding: 10px;
+        text-align: left;
+        color: #203B81;
+    }
+
+    .user-list th {
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .user-list tr {
+        border-bottom: 1px solid rgba(32, 59, 129, 0.3);
+    }
+
+    .btn {
+        padding: 10px 0;
+        width: 140px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .btn-info {
+        background-color: #17a2b8;
+        color: white;
+    }
+
+    @@media screen and (max-width: 768px) {
+        .user-list table
+
+    {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    }
+</style>
+
 <div class="container">
-    <h2>Users Under Review</h2>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone Number</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var user in Model)
-            {
-                <tr>
-                    <td>@user.Firstname @user.Lastname</td>
-                    <td>@user.Email</td>
-                    <td>@user.PhoneNumber</td>
-                    <td>
-                        <form asp-action="CheckUserCred" asp-controller="Admin">
-                        <input type="hidden" name="Id" value="@user.Id" >
-                       <input type="submit" class="btn btn-sm" value="View Credentials" >
-                    </form>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    <div class="header-section">
+        <h1 class="primary-heading">Users Under Review</h1>
+    </div>
+
+    <div class="card">
+        <div class="user-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in Model)
+                    {
+                        <tr>
+                            <td>@user.Firstname @user.Lastname</td>
+                            <td>@user.Email</td>
+                            <td>@user.PhoneNumber</td>
+                            <td>
+                                <form asp-action="CheckUserCred" asp-controller="Admin">
+                                    <input type="hidden" name="Id" value="@user.Id">
+                                    <input type="submit" class="btn btn-info" value="View Credentials">
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

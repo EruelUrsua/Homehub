@@ -1,0 +1,83 @@
+﻿@model HomeHub.App.Models.ProviderRatingsViewModel
+
+@{
+    ViewBag.Title = "My Ratings";
+}
+
+<style>
+    .header-section {
+        background-color: #203B81;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    .primary-heading {
+        color: #F1F1F1;
+        font-weight: bold;
+    }
+
+    .card {
+        background-color: #eef5ff;
+        color: #203B81;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .review-box {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #203B81;
+    }
+
+        .review-box strong {
+            color: #203B81;
+        }
+
+    @@media screen and (max-width: 768px) {
+        .review-box
+
+    {
+        padding: 10px;
+    }
+
+    }
+</style>
+
+<div class="container mt-4">
+    <div class="header-section">
+        <h1 class="primary-heading">⭐ My Ratings</h1>
+    </div>
+
+    <div class="card">
+        <div class="mb-4">
+            <h4>Average Rating: <strong>@Model.AverageRating.ToString("0.0")</strong> / 5</h4>
+        </div>
+
+        @if (Model.Ratings.Any())
+        {
+            <div class="user-list">
+                @foreach (var rating in Model.Ratings)
+                {
+                    <div class="review-box card mb-3">
+                        <div><strong>Rating:</strong> @rating.Score / 5</div>
+                        <div><strong>Comment:</strong> @rating.Comments</div>
+                        <div class="text-muted"><small>@rating.Date.ToString("MMM dd, yyyy")</small></div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p>No ratings available yet.</p>
+        }
+    </div>
+</div>
