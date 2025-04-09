@@ -41,6 +41,10 @@ else
                 <td>
                     @Html.DisplayNameFor(model => model.EmailConfirmed)
                 </td>
+
+                <td>
+                    @Html.DisplayNameFor(model => model.IsVerified)
+                </td>
             <td>
                 Actions
             </td>
@@ -70,6 +74,10 @@ else
         </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.EmailConfirmed)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsVerified)
                     </td>
                 <td>
                     <form method="post" asp-action="DeleteUser" asp-controller="Admin">

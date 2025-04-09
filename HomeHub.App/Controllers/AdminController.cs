@@ -180,12 +180,26 @@ namespace HomeHub.App.Controllers
                 lng = user.lng,
                 Role = ur,
                 ValidId = user.ValidId,
-                BusinessPermit = businessPermitPath
-
+                BusinessPermit = businessPermitPath,
+                Id = user.Id
             };
 
             return View(model);
         }
+
+        public async Task<IActionResult> VerifyUser(string Id)
+        {
+            var user = await userManager.FindByIdAsync(Id);
+            if (user != null)
+            {
+                user.IsVerified = true;
+                await userManager.UpdateAsync(user);
+            }
+
+            return RedirectToAction("UsersForVerification");
+        }
+
+
         public async Task<IActionResult> UsersUnderReview()
         {
             var usersUnderReview = userManager.Users
