@@ -189,7 +189,7 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> UsersUnderReview()
         {
             var usersUnderReview = userManager.Users
-                .Where(u => u.IsUnderReview) // Get all users who are under review
+                .Where(u => u.IsUnderReview)
                 .ToList();
 
             return View(usersUnderReview);
@@ -198,7 +198,7 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> UserRatings(string userId)
         {
             var ratings = context.Ratings
-                .Where(r => r.CustomerId == userId)
+                .Where(r => r.CustomerId == userId && r.ReviewerId != userId)
                 .ToList();
 
             var user = await userManager.FindByIdAsync(userId);

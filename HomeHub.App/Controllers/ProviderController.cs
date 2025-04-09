@@ -1504,5 +1504,27 @@ namespace HomeHub.App.Controllers
             return View(reviews);
         }
 
+        public async Task<IActionResult> ViewRatings()
+        {
+            var providerId = await GetCurrentUserId(); // your BusinessId
+
+            var ratings = await _context.Ratings
+                .Where(r => r.BusinessId == providerId)
+                .OrderByDescending(r => r.Date)
+                .ToListAsync();
+
+            var viewModel = new ProviderRatingsViewModel
+            {
+                AverageRating = ratings.Any() ? ratings.Average(r => r.Score) : 0,
+                Ratings = ratings.Select(r => new RatingItemViewModel
+                {
+                    Score = r.Score,
+                    Comments = r.Comments,
+                    Date = r.Date
+                }).ToList()
+            };
+
+            return View(viewModel);
+        }
     }
 }

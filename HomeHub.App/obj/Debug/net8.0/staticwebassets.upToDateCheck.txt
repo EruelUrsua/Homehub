@@ -5,6 +5,7 @@ wwwroot\images\003b7a5f-9ce7-49ee-992f-daff7e5c4e1e_drinking-water-container.jpg
 wwwroot\images\021150fc-920a-4dad-9d94-557fb59925b2_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg
 wwwroot\images\08894f65-c9e4-4184-a1d8-def0412675e3_cleaning kit.jpg
 wwwroot\images\0ad5f321-fc89-4782-ab70-46b5e685f9c5_cleaning kit.jpg
+wwwroot\images\0c14b713-bf47-4b06-bb20-6c289856d0bf_samplestock.jpg
 wwwroot\images\0c6db692-5aa4-4306-a5e5-ca890b5b04d5_cleaning kit.jpg
 wwwroot\images\0e175329-4e30-4e91-8b21-ae30884a12ec_samplestock.jpg
 wwwroot\images\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg
@@ -86,6 +87,7 @@ wwwroot\images\fb997c26-867a-42b3-9920-e552f181c25e_Water.jpg
 wwwroot\images\fc846dd2-acf2-421b-8d70-4698102a27b4_samplestock.jpg
 wwwroot\images\permits\554cbecd-6de4-4f56-9c07-e923fb822237_Carpentry Service Provider.jpg
 wwwroot\images\permits\6dccc601-9132-4669-99f9-1aecb8fa33e6_Mayors-permit-2020.jpg
+wwwroot\images\permits\d5deddf3-0fbc-4852-bd84-3acb921e6282_samplestock.jpg
 wwwroot\images\permits\e72c1481-d3c2-40dd-9e0e-cfe0ba6f3fdf_Mayors-permit-2020.jpg
 wwwroot\images\validids\052d0a80-6fcd-45a2-888e-481cae51c1c1_b534b182b082fbf571edf38d2815ad89.jpeg
 wwwroot\images\validids\0631c78c-3d7b-49cc-89c1-710b4e46a4ba_pass.PNG
@@ -101,6 +103,7 @@ wwwroot\images\validids\2b58566d-b113-4e7c-bd18-ce8c75105e1e_samplestock.jpg
 wwwroot\images\validids\34b2fcf3-713c-42e5-941d-84d3c094ceee_samplestock.jpg
 wwwroot\images\validids\35345c0f-4572-4da7-a651-bc536419c4c2_samplestock.jpg
 wwwroot\images\validids\3589f08e-df55-40f5-ba38-6fc8f663818c_pass.PNG
+wwwroot\images\validids\37e215e7-a0ca-4711-800e-60fd940f18db_samplestock.jpg
 wwwroot\images\validids\3a7564d8-877b-46dc-9df3-c9b6b4b8d8c2_pass.PNG
 wwwroot\images\validids\41300305-370f-4c65-b2fc-80e4a5a9c253_b534b182b082fbf571edf38d2815ad89.jpeg
 wwwroot\images\validids\429ce61f-919f-434f-9b40-311a611cafe3_pass.PNG
@@ -123,6 +126,7 @@ wwwroot\images\validids\8c73e782-4148-4a42-bbd9-cbabe18a659c_samplestock.jpg
 wwwroot\images\validids\90015082-8537-4745-9539-1530b6c9c081_pass.PNG
 wwwroot\images\validids\91734090-8c11-4c26-9c8e-9148e064fa09_Logo v2.png
 wwwroot\images\validids\938c3ef4-3ce0-4520-a22f-50305b4d4a25_fc487b390a02aa1e82be4c32dd53b0ab.jpg
+wwwroot\images\validids\95e74d2a-c2da-49fe-bd8d-9ca1cba896d8_samplestock.jpg
 wwwroot\images\validids\9b3a52e0-44f8-4c86-a79d-a1cac8fc194d_Logo v2.png
 wwwroot\images\validids\9ca7c469-3950-4b30-8e4f-cf9a0290515e_pass.PNG
 wwwroot\images\validids\9fa32c4f-55c8-41e9-9a33-f4ca258ab427_nog.png
@@ -137,9 +141,11 @@ wwwroot\images\validids\c1c0b356-be7d-4d8f-a5d8-3bc3f2b1e174_samplestock.jpg
 wwwroot\images\validids\c51f8b85-9247-48af-8958-d028256e4fae_RNUSY5P7S3LS.png
 wwwroot\images\validids\ce0d196e-fda1-44a4-9515-45b5b1ec1ff1_samplestock.jpg
 wwwroot\images\validids\cfa9b3c4-a35a-4837-8703-1bc3369fbe04_Logo v2.png
+wwwroot\images\validids\d09e7c7e-7ef7-4442-be62-6e39cba70f42_samplestock.jpg
 wwwroot\images\validids\d53ab4dc-44eb-489c-a4c1-9c1497c43621_samplestock.jpg
 wwwroot\images\validids\d5889477-baf7-4ffd-8cdf-1d6db10cab7b_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg
 wwwroot\images\validids\d719d4bd-ff88-48ef-891d-a18ece49fb54_Logo v2.png
+wwwroot\images\validids\de1ef6ba-709a-468c-af29-90af83f866b5_samplestock.jpg
 wwwroot\images\validids\df499cee-18fd-4f92-89f7-baa5c082d76d_Water.jpg
 wwwroot\images\validids\ed0aeade-e37b-43af-b41a-d5a5a393123a_Logo v2.png
 wwwroot\images\validids\eeb157b9-f7c9-4176-b0f3-a79454d336c6_Logo v2.png
