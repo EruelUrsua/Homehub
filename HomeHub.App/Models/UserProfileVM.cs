@@ -4,6 +4,7 @@ namespace HomeHub.App.Models
 {
     public class UserProfileVM
     {
+        public string? Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         //[Required]
@@ -15,7 +16,7 @@ namespace HomeHub.App.Models
 
         public string? Role { get; set; }
 
-        public string ValidId { get; set; }
+        public string? ValidId { get; set; }
         public string? BusinessPermit {  get; set; } 
 
     }
