@@ -152,6 +152,12 @@ namespace HomeHub.App.Controllers
                 TempData["Message"] = "Your account is under review. You cannot access this page at the moment.";
                 return View("AccountUnderReview");
             }
+            else if (user != null && user.IsVerified == false)
+            {
+                // Redirect to a page or show a message about the restriction
+                TempData["Message"] = "Your account is not yet verified. You cannot access this page at the moment.";
+                return View("AccountUnderReview");
+            }
 
             var categories = context.Providers
                 .Where(b => b.Businesstype == false)
@@ -190,6 +196,13 @@ namespace HomeHub.App.Controllers
             {
                 // Redirect to a page or show a message about the restriction
                 TempData["Message"] = "Your account is under review. You cannot access this page at the moment.";
+                return View("AccountUnderReview");
+            }
+
+            else if (user != null && user.IsVerified == false)
+            {
+                // Redirect to a page or show a message about the restriction
+                TempData["Message"] = "Your account is not yet verified. You cannot access this page at the moment.";
                 return View("AccountUnderReview");
             }
 
@@ -233,8 +246,14 @@ namespace HomeHub.App.Controllers
                 TempData["Message"] = "Your account is under review. You cannot access this page at the moment.";
                 return View("AccountUnderReview");
             }
+           else if (user != null && user.IsVerified == false)
+            {
+                // Redirect to a page or show a message about the restriction
+                TempData["Message"] = "Your account is not yet verified. You cannot access this page at the moment.";
+                return View("AccountUnderReview");
+            }
 
-            if (string.IsNullOrEmpty(businessId))
+            else if (string.IsNullOrEmpty(businessId))
             {
                 return RedirectToAction("Index");
             }
@@ -273,6 +292,13 @@ namespace HomeHub.App.Controllers
             {
                 // Redirect to a page or show a message about the restriction
                 TempData["Message"] = "Your account is under review. You cannot access this page at the moment.";
+                return View("AccountUnderReview");
+            }
+
+           else if (user != null && user.IsVerified == false)
+            {
+                // Redirect to a page or show a message about the restriction
+                TempData["Message"] = "Your account is not yet verified. You cannot access this page at the moment.";
                 return View("AccountUnderReview");
             }
 

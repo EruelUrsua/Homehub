@@ -16,18 +16,37 @@ namespace HomeHub.App.Controllers
     {
         private readonly HomeHubContext context;
         private readonly UserManager<ApplicationUser> userManager;
+        private readonly EmailSenderService emailSender;
 
-
-        public AdminController( HomeHubContext context, UserManager<ApplicationUser> userManager)
+        public AdminController( HomeHubContext context, UserManager<ApplicationUser> userManager, EmailSenderService emailSender)
         {
             this.context = context;
             this.userManager = userManager;
+            this.emailSender = emailSender;
         }
 
-        public IActionResult AdminDashboard()
+        public async Task <IActionResult> AdminDashboard()
         {
 
-            return View();
+            var user = await GetCurrentUserId();
+
+            if (user == null) return Unauthorized();
+            //var userlog = await userManager.FindByIdAsync(uid);
+            //var email = await userManager.GetEmailAsync(userlog);
+            var provider = await userManager.GetUsersInRoleAsync("Provider");
+            var Customer = await userManager.GetUsersInRoleAsync("Customer");
+            var accounts = provider.Concat(Customer);
+
+            return View(accounts);
+
+            //var users = await context.ApplicationUsers
+            //    .FirstOrDefaultAsync(p => p.Id != user);
+
+            //if (users == null) return Forbid();
+            //var sales = context.ClientOrders.Where(c => c.BusinessId == user).ToList();
+
+ 
+
 
         }
 
@@ -57,8 +76,6 @@ namespace HomeHub.App.Controllers
         {
             var uid = await GetCurrentUserId();
             ApplicationUser user = new ApplicationUser();
-            //var userlog = await userManager.FindByIdAsync(uid);
-            //var email = await userManager.GetEmailAsync(userlog);
             var admin= await userManager.GetUsersInRoleAsync("Admin");
 
             //var accounts = provider.Concat(Customer);
@@ -147,16 +164,6 @@ namespace HomeHub.App.Controllers
             return View(model);
         }
 
-        //public IActionResult AdminHome()
-        //{
-
-        //    var users = userManager.Users.ToList().Except();
-
-
-
-        //    return View(users);
-        //}
-
 
         public async Task<IActionResult> UsersForVerification()
         {
@@ -174,7 +181,6 @@ namespace HomeHub.App.Controllers
                 return View("Index");
             var role = await userManager.GetRolesAsync(user);
             var ur = "";
-            var bp = "";
             string businessPermitPath = null;
             if (user == null)
                 return View("Index");

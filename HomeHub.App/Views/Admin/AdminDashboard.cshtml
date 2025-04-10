@@ -1,1 +1,98 @@
-﻿<h1>Admin DashBoard</h1>
+﻿@model IEnumerable<HomeHub.DataModel.ApplicationUser>
+<h1>Admin DashBoard</h1>
+@* Shows Sales chart *@
+ @* <canvas id="salesChart" style="width:100%;max-width:1300px"></canvas>  *@
+<br />
+@* Shows Order chart *@
+ <canvas id="orderChart" style="width:100%;max-width:1300px"></canvas>
+@* <br /> *@
+@* Shows Order chart *@
+@* <h4>Users BreakDown</h4> *@
+@* <canvas id="userChart" style="width:100%;max-width:1300px; height:100%;max-height:630px"></canvas> *@
+@section scripts {
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+         // var ctx = document.getElementById('salesChart').getContext('2d');
+         // var linechart = new Chart(ctx, {
+         // type: 'line',
+         // data: {
+         // datasets: [{
+         // label: 'Users',
+         // backgroundColor: 'rgba(0, 119, 204, 0.3)',
+         // borderColor: 'rgba(0, 119, 204, 1)',
+         // borderWidth: 1
+         // }]
+         // },
+         // options: {
+         // responsive:true,
+         // scales: {
+         // yAxes: [{
+         // ticks: {
+         // beginAtZero: true
+         // }
+         // }]
+         // }
+         // }
+         // });
+
+        var cty = document.getElementById('orderChart').getContext('2d');
+        var barchart = new Chart(cty, {
+             type: 'bar',
+             data: {
+                            labels: ["Verified","Not Verified"],
+             datasets: [{
+             label: 'Availed Products/Services',
+             data: @Html.Raw(Json.Serialize(Model.GroupBy(d => d.IsVerified== true).Select(d => d.Count(d => d.IsVerified).ToString()).ToList())),
+             backgroundColor: ['rgba(0, 119, 204, 0.3)',
+                               'rgb(255, 9, 132)',
+                               'rgb(157, 230, 41)',
+                               'rgb(41, 224, 230)',
+                               'rgb(255, 205, 86)'
+             ],
+             borderColor: 'rgba(0, 119, 204, 1)',
+             borderWidth: 1
+             }]
+             },
+             options: {
+             responsive:true,
+             scales: {
+             yAxes: [{
+             ticks: {
+             beginAtZero: true
+             }
+             }]
+             }
+             }
+             });
+
+             //       var ctz = document.getElementById('userChart').getContext('2d');
+             // var barchart = new Chart(ctz, {
+             //      type: 'pie',
+             //      data: {
+             //      backgroundColor: ['rgba(0, 119, 204, 0.3)',
+             //                        'rgb(255, 9, 132)',
+             //                        'rgb(157, 230, 41)',
+             //                        'rgb(41, 224, 230)',
+             //                        'rgb(255, 205, 86)'
+             //      ],
+
+             //      borderColor: 'rgba(0, 119, 204, 1)',
+             //      borderWidth: 1
+             //      }]
+             //      },
+             //      options: {
+             //      responsive:true,
+             //      scales: {
+             //      yAxes: [{
+             //      ticks: {
+             //      beginAtZero: true
+             //      }
+             //      }]
+             //      }
+             //      }
+             //      });
+
+
+    </script>
+}
