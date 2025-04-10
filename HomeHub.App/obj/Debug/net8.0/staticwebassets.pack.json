@@ -157,6 +157,10 @@
       "PackagePath": "staticwebassets\\images\\64881bdf-7713-4f10-bbed-dcabafde54b0_cleaning kit.jpg"
     },
     {
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\67b58f03-7fd0-4792-b57f-764d27812821_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg",
+      "PackagePath": "staticwebassets\\images\\67b58f03-7fd0-4792-b57f-764d27812821_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg"
+    },
+    {
       "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\68c113ea-d7e2-404c-8a82-c751941a6dcb_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
       "PackagePath": "staticwebassets\\images\\68c113ea-d7e2-404c-8a82-c751941a6dcb_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg"
     },
@@ -333,6 +337,10 @@
       "PackagePath": "staticwebassets\\images\\ed5d219d-fdfb-4cbd-82f1-d1df197c24be_download.jfif"
     },
     {
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\f1329073-00c9-4fdc-b57a-aafebe32cf5e_lpg.jpg",
+      "PackagePath": "staticwebassets\\images\\f1329073-00c9-4fdc-b57a-aafebe32cf5e_lpg.jpg"
+    },
+    {
       "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg",
       "PackagePath": "staticwebassets\\images\\f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg"
     },
@@ -367,6 +375,10 @@
     {
       "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\permits\\d5deddf3-0fbc-4852-bd84-3acb921e6282_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\permits\\d5deddf3-0fbc-4852-bd84-3acb921e6282_samplestock.jpg"
+    },
+    {
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\permits\\df66d96e-1301-44e8-94e3-6c56c3b77225_GkL-40tbUAIPY8C.jpg",
+      "PackagePath": "staticwebassets\\images\\permits\\df66d96e-1301-44e8-94e3-6c56c3b77225_GkL-40tbUAIPY8C.jpg"
     },
     {
       "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\permits\\e72c1481-d3c2-40dd-9e0e-cfe0ba6f3fdf_Mayors-permit-2020.jpg",
@@ -455,6 +467,10 @@
     {
       "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\52529948-118b-4239-8e90-deb53bc77520_samplestock.jpg",
       "PackagePath": "staticwebassets\\images\\validids\\52529948-118b-4239-8e90-deb53bc77520_samplestock.jpg"
+    },
+    {
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\57b534a9-185a-43a8-b99c-ac2431c8f26f_trashscan.PNG",
+      "PackagePath": "staticwebassets\\images\\validids\\57b534a9-185a-43a8-b99c-ac2431c8f26f_trashscan.PNG"
     },
     {
       "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\606b5616-f25d-43af-bb7a-66f2b806a224_lpg.jpg",

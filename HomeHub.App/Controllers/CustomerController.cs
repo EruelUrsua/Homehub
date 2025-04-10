@@ -75,7 +75,8 @@ namespace HomeHub.App.Controllers
             //Featured Products
             var productsQuery = (from a in context.Providers
                                  join b in context.Products on a.UserID equals b.ProviderID
-                                 where a.Businesstype == false
+                                  join c in context.ApplicationUsers on b.ProviderID equals c.Id
+                                 where a.Businesstype == false && c.IsVerified == true
                                  select new
                                  {
                                      b.ProductItem,
@@ -96,7 +97,8 @@ namespace HomeHub.App.Controllers
             //Featured Services
             var servicesQuery = (from a in context.Providers
                                  join b in context.Services on a.UserID equals b.ProviderID
-                                 where a.Businesstype == true
+                                 join c in context.ApplicationUsers on b.ProviderID equals c.Id
+                                 where a.Businesstype == true && c.IsVerified == true
                                  select new
                                  {
                                      b.ServiceItem,
@@ -161,7 +163,7 @@ namespace HomeHub.App.Controllers
 
             var productProviders = (from p in context.Providers
                                     join u in context.ApplicationUsers on p.UserID equals u.Id
-                                    where p.Businesstype == false
+                                    where p.Businesstype == false && u.IsVerified == true
                                     select new
                                     {
                                         p.UserID,
@@ -201,7 +203,7 @@ namespace HomeHub.App.Controllers
 
             var serviceProviders = (from p in context.Providers
                                     join u in context.ApplicationUsers on p.UserID equals u.Id
-                                    where p.Businesstype == true
+                                    where p.Businesstype == true && u.IsVerified == true
                                     select new
                                     {
                                         p.UserID,
