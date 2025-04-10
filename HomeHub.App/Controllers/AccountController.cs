@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Data;
 using System.Net;
 using System.Net.Mail;
 using System.Reflection.Metadata;
@@ -104,10 +105,21 @@ namespace HomeHub.App.Controllers
             }
             // Attempt to confirm the email
             var result = await userManager.ConfirmEmailAsync(user, Token);
+            var role = await userManager.GetRolesAsync(user);
             if (result.Succeeded)
             {
-                ViewBag.Message = "Thank you for confirming your email address. Your account is now verified!";
-                return View();
+                if (role.Contains("Customer"))
+                {
+                    ViewBag.Message = "Thank you for confirming your email address. Your Email is now confirmed! " +
+                    "Kindly wait for your Id to be confirmed for your account to be verified";
+                    return View();
+                }
+                else
+                {
+                    ViewBag.Message = "Thank you for confirming your email address. Your Email is now confirmed! " +
+                       "Kindly wait for your Id and Business Permit to be confirmed for your account to be verified";
+                    return View();
+                }
             }
             // If confirmation fails
             ViewBag.ErrorMessage = "We were unable to confirm your email address. Please try again or request a new link.";
