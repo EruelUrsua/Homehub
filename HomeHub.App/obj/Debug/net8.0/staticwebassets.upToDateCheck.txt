@@ -36,6 +36,7 @@ wwwroot\images\5bbefea5-426a-4543-b641-a84bb16e6cc0_samplestock.jpg
 wwwroot\images\5daaadad-6729-4958-aa6c-e386655c0e42_cleaning kit.jpg
 wwwroot\images\612a4a78-9640-4bf3-951c-f88323c0af3c_drinking-water-container.jpg
 wwwroot\images\64881bdf-7713-4f10-bbed-dcabafde54b0_cleaning kit.jpg
+wwwroot\images\67b58f03-7fd0-4792-b57f-764d27812821_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg
 wwwroot\images\68c113ea-d7e2-404c-8a82-c751941a6dcb_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg
 wwwroot\images\73938a12-d477-4825-88c7-060fe9b97ff2_cleaning kit.jpg
 wwwroot\images\73b63481-32d6-48a6-8ca9-c4a34784c97e_Water.jpg
@@ -80,6 +81,7 @@ wwwroot\images\e0188f78-6475-461f-a987-ec370078a467_cleaning kit.jpg
 wwwroot\images\e343c083-60ed-4d03-a806-63fa38a648ca_Water.jpg
 wwwroot\images\e5faf723-40ab-42eb-93a6-893a604beda1_cleaning kit.jpg
 wwwroot\images\ed5d219d-fdfb-4cbd-82f1-d1df197c24be_download.jfif
+wwwroot\images\f1329073-00c9-4fdc-b57a-aafebe32cf5e_lpg.jpg
 wwwroot\images\f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg
 wwwroot\images\f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg
 wwwroot\images\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg
@@ -89,6 +91,7 @@ wwwroot\images\permits\1285dcfb-fc7d-4565-9461-9cf23c2cb155_Mayors-permit-2020.j
 wwwroot\images\permits\554cbecd-6de4-4f56-9c07-e923fb822237_Carpentry Service Provider.jpg
 wwwroot\images\permits\6dccc601-9132-4669-99f9-1aecb8fa33e6_Mayors-permit-2020.jpg
 wwwroot\images\permits\d5deddf3-0fbc-4852-bd84-3acb921e6282_samplestock.jpg
+wwwroot\images\permits\df66d96e-1301-44e8-94e3-6c56c3b77225_GkL-40tbUAIPY8C.jpg
 wwwroot\images\permits\e72c1481-d3c2-40dd-9e0e-cfe0ba6f3fdf_Mayors-permit-2020.jpg
 wwwroot\images\validids\052d0a80-6fcd-45a2-888e-481cae51c1c1_b534b182b082fbf571edf38d2815ad89.jpeg
 wwwroot\images\validids\0631c78c-3d7b-49cc-89c1-710b4e46a4ba_pass.PNG
@@ -111,6 +114,7 @@ wwwroot\images\validids\429ce61f-919f-434f-9b40-311a611cafe3_pass.PNG
 wwwroot\images\validids\48e05b30-4b08-4a92-8fae-6d2d17a5eb0a_lpg.jpg
 wwwroot\images\validids\5238232a-3dbc-43a6-a651-a80216176ae6_LPG Gas Provider.jpg
 wwwroot\images\validids\52529948-118b-4239-8e90-deb53bc77520_samplestock.jpg
+wwwroot\images\validids\57b534a9-185a-43a8-b99c-ac2431c8f26f_trashscan.PNG
 wwwroot\images\validids\606b5616-f25d-43af-bb7a-66f2b806a224_lpg.jpg
 wwwroot\images\validids\64801f9a-2b10-4195-b220-f33842c9e79f_Logo v2.png
 wwwroot\images\validids\650391f0-37f5-43be-b0d7-ae816c075256_samplestock.jpg

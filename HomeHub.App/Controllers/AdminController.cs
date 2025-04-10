@@ -24,6 +24,13 @@ namespace HomeHub.App.Controllers
             this.userManager = userManager;
         }
 
+        public IActionResult AdminDashboard()
+        {
+
+            return View();
+
+        }
+
         [HttpGet]
         public async Task<string> GetCurrentUserId()
         {
@@ -44,6 +51,19 @@ namespace HomeHub.App.Controllers
             var accounts = provider.Concat(Customer);
 
             return View(accounts);
+        }
+
+        public async Task<IActionResult> AdminUsers()
+        {
+            var uid = await GetCurrentUserId();
+            ApplicationUser user = new ApplicationUser();
+            //var userlog = await userManager.FindByIdAsync(uid);
+            //var email = await userManager.GetEmailAsync(userlog);
+            var admin= await userManager.GetUsersInRoleAsync("Admin");
+
+            //var accounts = provider.Concat(Customer);
+
+            return View(admin);
         }
 
         public async Task<ActionResult> UserProfile()

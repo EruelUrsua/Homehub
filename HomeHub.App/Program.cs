@@ -76,7 +76,7 @@ using (var scope = app.Services.CreateScope())
 
 
 
-    var roles = new[] { "Customer", "Provider", "Admin" };
+    var roles = new[] { "Customer", "Provider", "Admin", "HeadAdmin" };
 
     foreach (var role in roles)
     {

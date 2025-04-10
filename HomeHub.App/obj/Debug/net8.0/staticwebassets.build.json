@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ubCq35keNkF58WuMTan7MQCbGlsStjWWGsUtHH0ST6g=",
+  "Hash": "51Mwn+rqNOk9+1wjgnc8XHmWWGSTmwrouvkqKjeEGIc=",
   "Source": "HomeHub.App",
   "BasePath": "_content/HomeHub.App",
   "Mode": "Default",
@@ -855,6 +855,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\64881bdf-7713-4f10-bbed-dcabafde54b0_cleaning kit.jpg"
+    },
+    {
+      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\67b58f03-7fd0-4792-b57f-764d27812821_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/67b58f03-7fd0-4792-b57f-764d27812821_2e3d90d9-db48-49e3-97ec-9da1a77f1772#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pdeh5f0h8p",
+      "Integrity": "DWSqZ81i/+4TQvvJh/v1GFOyc9ls1lCFLwmelHJYdW8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\67b58f03-7fd0-4792-b57f-764d27812821_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg"
     },
     {
       "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\68c113ea-d7e2-404c-8a82-c751941a6dcb_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
@@ -1781,6 +1802,27 @@
       "OriginalItemSpec": "wwwroot\\images\\ed5d219d-fdfb-4cbd-82f1-d1df197c24be_download.jfif"
     },
     {
+      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\f1329073-00c9-4fdc-b57a-aafebe32cf5e_lpg.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/f1329073-00c9-4fdc-b57a-aafebe32cf5e_lpg#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "faxks2amgx",
+      "Integrity": "eRZK49UmRPeeRWRwzqvgLkFHuAzd15LWWeN7YPIYuQI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\f1329073-00c9-4fdc-b57a-aafebe32cf5e_lpg.jpg"
+    },
+    {
       "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg",
       "SourceId": "HomeHub.App",
       "SourceType": "Discovered",
@@ -1968,6 +2010,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\permits\\d5deddf3-0fbc-4852-bd84-3acb921e6282_samplestock.jpg"
+    },
+    {
+      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\permits\\df66d96e-1301-44e8-94e3-6c56c3b77225_GkL-40tbUAIPY8C.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/permits/df66d96e-1301-44e8-94e3-6c56c3b77225_GkL-40tbUAIPY8C#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bksmm8ur7t",
+      "Integrity": "5S+HkymqM6f4JZpw/i/jEjUGB0ul1/R+2Ri2aZY9OlM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\permits\\df66d96e-1301-44e8-94e3-6c56c3b77225_GkL-40tbUAIPY8C.jpg"
     },
     {
       "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\permits\\e72c1481-d3c2-40dd-9e0e-cfe0ba6f3fdf_Mayors-permit-2020.jpg",
@@ -2430,6 +2493,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\validids\\52529948-118b-4239-8e90-deb53bc77520_samplestock.jpg"
+    },
+    {
+      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\57b534a9-185a-43a8-b99c-ac2431c8f26f_trashscan.PNG",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/validids/57b534a9-185a-43a8-b99c-ac2431c8f26f_trashscan#[.{fingerprint}]?.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tn1tcfyvqq",
+      "Integrity": "V0pMFxZ2UpCrc41nDC7EZ4Ake7e+WJbrXVXbTIKADNs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\validids\\57b534a9-185a-43a8-b99c-ac2431c8f26f_trashscan.PNG"
     },
     {
       "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\606b5616-f25d-43af-bb7a-66f2b806a224_lpg.jpg",
@@ -8423,6 +8507,88 @@
       ]
     },
     {
+      "Route": "images/67b58f03-7fd0-4792-b57f-764d27812821_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg",
+      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\67b58f03-7fd0-4792-b57f-764d27812821_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "206484"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DWSqZ81i/+4TQvvJh/v1GFOyc9ls1lCFLwmelHJYdW8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 11:37:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DWSqZ81i/+4TQvvJh/v1GFOyc9ls1lCFLwmelHJYdW8="
+        }
+      ]
+    },
+    {
+      "Route": "images/67b58f03-7fd0-4792-b57f-764d27812821_2e3d90d9-db48-49e3-97ec-9da1a77f1772.pdeh5f0h8p.jpg",
+      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\67b58f03-7fd0-4792-b57f-764d27812821_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "206484"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DWSqZ81i/+4TQvvJh/v1GFOyc9ls1lCFLwmelHJYdW8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 11:37:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pdeh5f0h8p"
+        },
+        {
+          "Name": "label",
+          "Value": "images/67b58f03-7fd0-4792-b57f-764d27812821_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DWSqZ81i/+4TQvvJh/v1GFOyc9ls1lCFLwmelHJYdW8="
+        }
+      ]
+    },
+    {
       "Route": "images/68c113ea-d7e2-404c-8a82-c751941a6dcb_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
       "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\68c113ea-d7e2-404c-8a82-c751941a6dcb_9b8d6136aa2dd7fc76ce6f3c38e69976.jpg_720x720q80.jpg",
       "Selectors": [],
@@ -12031,6 +12197,88 @@
       ]
     },
     {
+      "Route": "images/f1329073-00c9-4fdc-b57a-aafebe32cf5e_lpg.faxks2amgx.jpg",
+      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\f1329073-00c9-4fdc-b57a-aafebe32cf5e_lpg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7783"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eRZK49UmRPeeRWRwzqvgLkFHuAzd15LWWeN7YPIYuQI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 11:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "faxks2amgx"
+        },
+        {
+          "Name": "label",
+          "Value": "images/f1329073-00c9-4fdc-b57a-aafebe32cf5e_lpg.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eRZK49UmRPeeRWRwzqvgLkFHuAzd15LWWeN7YPIYuQI="
+        }
+      ]
+    },
+    {
+      "Route": "images/f1329073-00c9-4fdc-b57a-aafebe32cf5e_lpg.jpg",
+      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\f1329073-00c9-4fdc-b57a-aafebe32cf5e_lpg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7783"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eRZK49UmRPeeRWRwzqvgLkFHuAzd15LWWeN7YPIYuQI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 11:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eRZK49UmRPeeRWRwzqvgLkFHuAzd15LWWeN7YPIYuQI="
+        }
+      ]
+    },
+    {
       "Route": "images/f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg",
       "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg",
       "Selectors": [],
@@ -12463,7 +12711,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 09 Apr 2025 19:44:52 GMT"
+          "Value": "Wed, 09 Apr 2025 20:29:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12508,7 +12756,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 09 Apr 2025 19:44:52 GMT"
+          "Value": "Wed, 09 Apr 2025 20:29:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12765,6 +13013,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A="
+        }
+      ]
+    },
+    {
+      "Route": "images/permits/df66d96e-1301-44e8-94e3-6c56c3b77225_GkL-40tbUAIPY8C.bksmm8ur7t.jpg",
+      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\permits\\df66d96e-1301-44e8-94e3-6c56c3b77225_GkL-40tbUAIPY8C.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17941"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5S+HkymqM6f4JZpw/i/jEjUGB0ul1/R+2Ri2aZY9OlM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 11:30:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bksmm8ur7t"
+        },
+        {
+          "Name": "label",
+          "Value": "images/permits/df66d96e-1301-44e8-94e3-6c56c3b77225_GkL-40tbUAIPY8C.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5S+HkymqM6f4JZpw/i/jEjUGB0ul1/R+2Ri2aZY9OlM="
+        }
+      ]
+    },
+    {
+      "Route": "images/permits/df66d96e-1301-44e8-94e3-6c56c3b77225_GkL-40tbUAIPY8C.jpg",
+      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\permits\\df66d96e-1301-44e8-94e3-6c56c3b77225_GkL-40tbUAIPY8C.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17941"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5S+HkymqM6f4JZpw/i/jEjUGB0ul1/R+2Ri2aZY9OlM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 11:30:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5S+HkymqM6f4JZpw/i/jEjUGB0ul1/R+2Ri2aZY9OlM="
         }
       ]
     },
@@ -14569,6 +14899,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-6gB5ErRHmmuR8IK/bds51+xhYJC9zWTRRvzC+HP9c9A="
+        }
+      ]
+    },
+    {
+      "Route": "images/validids/57b534a9-185a-43a8-b99c-ac2431c8f26f_trashscan.PNG",
+      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\57b534a9-185a-43a8-b99c-ac2431c8f26f_trashscan.PNG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3992"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V0pMFxZ2UpCrc41nDC7EZ4Ake7e+WJbrXVXbTIKADNs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 11:30:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-V0pMFxZ2UpCrc41nDC7EZ4Ake7e+WJbrXVXbTIKADNs="
+        }
+      ]
+    },
+    {
+      "Route": "images/validids/57b534a9-185a-43a8-b99c-ac2431c8f26f_trashscan.tn1tcfyvqq.PNG",
+      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\57b534a9-185a-43a8-b99c-ac2431c8f26f_trashscan.PNG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3992"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V0pMFxZ2UpCrc41nDC7EZ4Ake7e+WJbrXVXbTIKADNs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Apr 2025 11:30:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tn1tcfyvqq"
+        },
+        {
+          "Name": "label",
+          "Value": "images/validids/57b534a9-185a-43a8-b99c-ac2431c8f26f_trashscan.PNG"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-V0pMFxZ2UpCrc41nDC7EZ4Ake7e+WJbrXVXbTIKADNs="
         }
       ]
     },
@@ -16891,7 +17303,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 09 Apr 2025 19:44:52 GMT"
+          "Value": "Wed, 09 Apr 2025 20:29:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -16936,7 +17348,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 09 Apr 2025 19:44:52 GMT"
+          "Value": "Wed, 09 Apr 2025 20:29:36 GMT"
         },
         {
           "Name": "Cache-Control",

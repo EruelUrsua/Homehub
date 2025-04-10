@@ -372,9 +372,49 @@ namespace HomeHub.App.Controllers
                 return View(model);
             }
         }
-          
 
+        //Register Head Admin Account
 
+        public IActionResult RegisterH()
+        {
+            return View(new RegisterAVM());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RegisterH(RegisterAVM model)
+        {
+
+            if (ModelState.IsValid)
+            {
+
+                ApplicationUser user = new ApplicationUser();
+                user.UserName = model.Email;
+                user.Email = model.Email;
+                user.Lastname = model.Lastname;
+                user.Firstname = model.Firstname;
+                user.PhoneNumber = model.ContactNo;
+                user.Address = model.Address;
+                user.lat = model.lat;
+                user.lng = model.lng;
+                user.ValidId = "N/A";
+                user.IsVerified = true;
+                var result = await userManager.CreateAsync(user, model.Password);
+                await userManager.AddToRoleAsync(user, "HeadAdmin");
+                if (result.Succeeded)
+                {
+                    //Then send the Confirmation Email to the User
+                    await SendConfirmationEmail(model.Email, user);
+
+                    return RedirectToAction("AdminDashboard", "Admin");
+                }
+                return View(model);
+            }
+            else
+            {
+                return View(model);
+            }
+        }
 
         public IActionResult SignIn()
         {
@@ -422,7 +462,12 @@ namespace HomeHub.App.Controllers
 
                         else if (role.Contains("Admin"))
                         {
-                            return RedirectToAction("AdminHome", "Admin");
+                            return RedirectToAction("AdminDashboard", "Admin");
+
+                        }
+                        else if (role.Contains("HeadAdmin"))
+                        {
+                            return RedirectToAction("AdminDashboard", "Admin");
 
                         }
 
