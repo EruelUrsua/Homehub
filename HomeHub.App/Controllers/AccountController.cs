@@ -3,6 +3,7 @@ using HomeHub.DataModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Data;
 using System.Net;
@@ -429,47 +430,89 @@ namespace HomeHub.App.Controllers
             }
         }
 
-        public IActionResult UpdateCred()
+        [HttpGet]
+        public async Task<IActionResult> UpdateCred()
         {
-            return View(new RegisterBVM());
+            var user = await userManager.GetUserAsync(User);
+            if (user == null) return RedirectToAction("Login", "Account");
+
+            var provider = await context.Providers.FirstOrDefaultAsync(p => p.UserID == user.Id);
+
+            var model = new RegisterBVM
+            {
+                ExistingValidId = user.ValidId,
+                ExistingBusinessPermit = provider?.BusinessPermit
+            };
+
+            return View(model);
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult>UpdateCred(RegisterBVM model)
+        public async Task<IActionResult> UpdateCred(RegisterBVM model)
         {
+            var user = await userManager.GetUserAsync(User);
+            if (user == null) return RedirectToAction("Login", "Account");
 
-            if (ModelState.IsValid)
+            var provider = await context.Providers.FirstOrDefaultAsync(p => p.UserID == user.Id);
+
+            if (user == null || provider == null)
             {
+                ModelState.AddModelError("", "User or Provider not found.");
+                return View(model);
+            }
 
-                ApplicationUser user = new ApplicationUser();
-                Provider provider = new Provider();
-                user.UserName = model.Email;
-                user.Email = model.Email;
-                user.Lastname = model.Lastname;
-                user.Firstname = model.Firstname;
-                user.PhoneNumber = model.ContactNo;
-                user.Address = model.BusinessAddress;
-                user.lat = model.lat;
-                user.lng = model.lng;
-                user.ValidId = $"/images/validids/{validIdFileName}";
-                provider.BusinessPermit = $"/images/permits/{businessPermitFileName}";
-                user.IsVerified = true;
-                var result = await userManager.CreateAsync(user, model.Password);
-                //await userManager.AddToRoleAsync(user, "HeadAdmin");
-                if (result.Succeeded)
+            // === VALID ID ===
+            if (model.ValidId != null && model.ValidId.Length > 0)
+            {
+                string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/validids");
+
+                // Delete the old valid ID
+                if (!string.IsNullOrEmpty(user.ValidId))
                 {
-                    //Then send the Confirmation Email to the User
-                    await SendConfirmationEmail(model.Email, user);
-
-                    return RedirectToAction("ProviderHome", "Provider");
+                    string oldPath = Path.Combine("wwwroot", user.ValidId.TrimStart('/'));
+                    if (System.IO.File.Exists(oldPath)) System.IO.File.Delete(oldPath);
                 }
-                return View(model);
+
+                string validIdFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(model.ValidId.FileName);
+                string validIdPath = Path.Combine(uploadsFolder, validIdFileName);
+                using (var fileStream = new FileStream(validIdPath, FileMode.Create))
+                {
+                    await model.ValidId.CopyToAsync(fileStream);
+                }
+                user.ValidId = "/images/validids/" + validIdFileName;
             }
-            else
+
+            // === BUSINESS PERMIT ===
+            if (model.BusinessPermitNo != null && model.BusinessPermitNo.Length > 0)
             {
-                return View(model);
+                string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/permits");
+
+                // Delete the old business permit
+                if (!string.IsNullOrEmpty(provider.BusinessPermit))
+                {
+                    string oldPath = Path.Combine("wwwroot", provider.BusinessPermit.TrimStart('/'));
+                    if (System.IO.File.Exists(oldPath)) System.IO.File.Delete(oldPath);
+                }
+
+                string businessPermitFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(model.BusinessPermitNo.FileName);
+                string permitPath = Path.Combine(uploadsFolder, businessPermitFileName);
+                using (var fileStream = new FileStream(permitPath, FileMode.Create))
+                {
+                    await model.BusinessPermitNo.CopyToAsync(fileStream);
+                }
+                provider.BusinessPermit = "/images/permits/" + businessPermitFileName;
             }
+
+            user.IsVerified = false; // Optional: reset verification until reviewed again
+
+            context.Update(provider);
+            await userManager.UpdateAsync(user);
+            await context.SaveChangesAsync();
+
+            return RedirectToAction("ProviderHome", "Provider");
         }
+
         public IActionResult SignIn()
         {
             SignInVM vm = new SignInVM();
