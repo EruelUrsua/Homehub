@@ -447,6 +447,67 @@ namespace HomeHub.App.Controllers
             return View(model);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> UpdateCredC()
+        {
+            var user = await userManager.GetUserAsync(User);
+            if (user == null) return RedirectToAction("Login", "Account");
+
+            var provider = await context.Providers.FirstOrDefaultAsync(p => p.UserID == user.Id);
+
+            var model = new RegisterCVM
+            {
+                ExistingValidId = user.ValidId,
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdateCredC(RegisterCVM model)
+        {
+            var user = await userManager.GetUserAsync(User);
+            if (user == null) return RedirectToAction("Login", "Account");
+
+          //  var provider = await context.ApplicationUsers.FirstOrDefaultAsync(p => p.Id);
+
+            if (user == null)
+            {
+                ModelState.AddModelError("", "User or Provider not found.");
+                return View(model);
+            }
+
+            // === VALID ID ===
+            if (model.ValidId != null && model.ValidId.Length > 0)
+            {
+                string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/validids");
+
+                // Delete the old valid ID
+                if (!string.IsNullOrEmpty(user.ValidId))
+                {
+                    string oldPath = Path.Combine("wwwroot", user.ValidId.TrimStart('/'));
+                    if (System.IO.File.Exists(oldPath)) System.IO.File.Delete(oldPath);
+                }
+
+                string validIdFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(model.ValidId.FileName);
+                string validIdPath = Path.Combine(uploadsFolder, validIdFileName);
+                using (var fileStream = new FileStream(validIdPath, FileMode.Create))
+                {
+                    await model.ValidId.CopyToAsync(fileStream);
+                }
+                user.ValidId = "/images/validids/" + validIdFileName;
+            }
+
+            user.IsVerified = false; // Optional: reset verification until reviewed again
+
+           // context.Update(provider);
+            await userManager.UpdateAsync(user);
+            await context.SaveChangesAsync();
+
+            return RedirectToAction("Index", "Customer");
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> UpdateCred(RegisterBVM model)
