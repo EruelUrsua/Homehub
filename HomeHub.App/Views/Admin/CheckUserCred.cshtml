@@ -72,7 +72,7 @@
                     <tr>
                         <th class="bg-primary text-white">Actions</th>
                         <td align="center">
-                            <a href="@Url.Action("UsersForVerification", "Admin", new { Id = Model.Id })" class="btn btn-info">Decline</a>
+                            <a href="@Url.Action("DeclineVerification", "Admin", new { Id = Model.Id })" class="btn btn-info">Decline</a>
                             &nbsp;&nbsp;&nbsp;
                             <a href="@Url.Action("VerifyUser", "Admin", new { Id = Model.Id })" class="btn btn-success">Verify User</a>
                         </td>

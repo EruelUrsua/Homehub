@@ -5,8 +5,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Newtonsoft.Json.Linq;
 using System.Data;
 using System.Linq;
+using System.Text.Encodings.Web;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace HomeHub.App.Controllers
@@ -204,17 +206,46 @@ namespace HomeHub.App.Controllers
 
         public async Task<IActionResult> VerifyUser(string Id)
         {
+            Provider provider = new Provider();
             var user = await userManager.FindByIdAsync(Id);
-            if (user != null)
+            var details = await context.Providers.FirstOrDefaultAsync(p => p.UserID == user.Id);
+            var role = await userManager.GetRolesAsync(user);
+            if (user != null && role.Contains("Provider") )
             {
                 user.IsVerified = true;
                 await userManager.UpdateAsync(user);
+                await SendNotificationEmail(user.Email, details.BusinessName);
+
+            }
+            else if (user != null && role.Contains("Customer"))
+            {
+                user.IsVerified = true;
+                await userManager.UpdateAsync(user);
+                await SendNotificationEmailC(user.Email, user.Firstname, user.Lastname);
 
             }
 
             return RedirectToAction("UsersForVerification");
         }
 
+        public async Task<IActionResult> DeclineVerification(string Id)
+        {
+         
+            var user = await userManager.FindByIdAsync(Id);
+            var role = await userManager.GetRolesAsync(user);
+
+            if (user != null && role.Contains("Provider"))
+            {
+                await DSendNotificationEmail(user.Email, user.Firstname, user.Lastname, user.Id);
+
+            }
+            else if (user != null && role.Contains("Customer"))
+            {
+                await DSendNotificationEmailC(user.Email, user.Firstname, user.Lastname, user.Id);
+            }
+
+            return RedirectToAction("UsersForVerification");
+        }
 
         public async Task<IActionResult> UsersUnderReview()
         {
@@ -269,6 +300,103 @@ namespace HomeHub.App.Controllers
 
             return RedirectToAction("UsersUnderReview");
         }
+
+        private async Task DSendNotificationEmail(string email, string firstname, string lastname, string Id)
+        {
+
+            var subject = "Account Verification Status";
+            //Create a professional HTML body
+            var confirmationLink = Url.Action("UpdateCred", "Account",
+              new { UserId = Id}, protocol: HttpContext.Request.Scheme);
+            // Encode the link to prevent XSS and other injection attacks
+            var safeLink = HtmlEncoder.Default.Encode(confirmationLink);
+            var messageBody = $@"
+        <div style=""font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#333;"">
+           <p>Hi {firstname} {lastname},</p>
+            <p>Unfortunately your account verification is unsuccesful</p>
+            <p>Please click the button below and send us your credentials again<p>
+ <p>
+                <a href=""{safeLink}"" 
+                   style=""background-color:#007bff;color:#fff;padding:10px 20px;text-decoration:none;
+                          font-weight:bold;border-radius:5px;display:inline-block;"">
+                    Reupload Credentials
+                </a>
+            </p>
+            <p>Thanks,<br />
+            The HomeHub Team</p>
+        </div>
+    ";
+            //Send the Confirmation Email to the User Email Id
+            await emailSender.SendEmailAsync(email, subject, messageBody, true);
+        }
+
+        private async Task DSendNotificationEmailC(string email, string firstname, string lastname, string Id)
+        {
+
+            var subject = "Account Verification Status";
+            //Create a professional HTML body
+            var confirmationLink = Url.Action("UpdateCredC", "Account",
+              new { UserId = Id }, protocol: HttpContext.Request.Scheme);
+            // Encode the link to prevent XSS and other injection attacks
+            var safeLink = HtmlEncoder.Default.Encode(confirmationLink);
+            var messageBody = $@"
+        <div style=""font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#333;"">
+           <p>Hi {firstname} {lastname},</p>
+            <p>Unfortunately your account verification is unsuccesful</p>
+            <p>Please click the button below and send us your credentials again<p>
+ <p>
+                <a href=""{safeLink}"" 
+                   style=""background-color:#007bff;color:#fff;padding:10px 20px;text-decoration:none;
+                          font-weight:bold;border-radius:5px;display:inline-block;"">
+                    Reupload Credentials
+                </a>
+            </p>
+            <p>Thanks,<br />
+            The HomeHub Team</p>
+        </div>
+    ";
+            //Send the Confirmation Email to the User Email Id
+            await emailSender.SendEmailAsync(email, subject, messageBody, true);
+        }
+
+
+        private async Task SendNotificationEmail(string email, string providername)
+        {
+           
+            var subject = "Account Verification Status";
+            //Create a professional HTML body
+            //Customize inline styles, text, and branding as needed
+            var messageBody = $@"
+        <div style=""font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#333;"">
+            <p>Hi {providername},</p>
+            <p>Congratulations is now verified</p>
+            <p>Thanks,<br />
+            The HomeHub Team</p>
+        </div>
+    ";
+            //Send the Confirmation Email to the User Email Id
+            await emailSender.SendEmailAsync(email, subject, messageBody, true);
+        }
+
+        private async Task SendNotificationEmailC(string email, string firstname, string lastname)
+        {
+
+            var subject = "Account Verification Status";
+            //Create a professional HTML body
+            //Customize inline styles, text, and branding as needed
+            var messageBody = $@"
+        <div style=""font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#333;"">
+            <p>Hi {firstname} {lastname},</p>
+            <p>Congratulations is now verified</p>
+            <p>Thanks,<br />
+            The HomeHub Team</p>
+        </div>
+    ";
+            //Send the Confirmation Email to the User Email Id
+            await emailSender.SendEmailAsync(email, subject, messageBody, true);
+        }
+
+
         [Authorize(Roles = "HeadAdmin")]
         public async Task<IActionResult> AdminUsers()
         {
