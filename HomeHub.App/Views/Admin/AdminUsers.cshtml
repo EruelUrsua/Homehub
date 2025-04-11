@@ -23,9 +23,6 @@ else
         <thead>
             <tr>
                 <td>
-                    @Html.DisplayNameFor(model => model.Id)
-                </td>
-                <td>
                     @Html.DisplayNameFor(model => model.Email)
                 </td>
                 <td>
@@ -56,10 +53,7 @@ else
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Id)
-                    </td>
+                <tr>SS
                     <td>
                         @Html.DisplayFor(modelItem => item.Email)
                     </td>

@@ -474,7 +474,7 @@ namespace HomeHub.App.Controllers
 
             if (user == null)
             {
-                ModelState.AddModelError("", "User or Provider not found.");
+                ModelState.AddModelError("", "User not found.");
                 return View(model);
             }
 

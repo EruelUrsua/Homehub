@@ -146,44 +146,46 @@ namespace HomeHub.App.Controllers
             var user = context.Users.FirstOrDefault(u => u.Id == userId);
 
             // Check if the user is under review
-            if (user != null && user.IsUnderReview)
+            if (user != null && user.IsUnderReview == true)
             {
                 // Redirect to a page or show a message about the restriction
                 TempData["Message"] = "Your account is under review. You cannot access this page at the moment.";
                 return View("AccountUnderReview");
             }
-            else if (user != null && user.IsVerified == false)
+            if (user != null && user.IsVerified == false)
             {
                 // Redirect to a page or show a message about the restriction
                 TempData["Message"] = "Your account is not yet verified. You cannot access this page at the moment.";
-                return View("AccountUnderReview");
+                return View("AccountForVerification");
             }
+            else
+            {
+                var categories = context.Providers
+                    .Where(b => b.Businesstype == false)
+                    .Select(b => b.Category)
+                    .Distinct()
+                    .ToList();
 
-            var categories = context.Providers
-                .Where(b => b.Businesstype == false)
-                .Select(b => b.Category)
-                .Distinct()
-                .ToList();
+                ViewBag.Categories = categories;
 
-            ViewBag.Categories = categories;
+                var productProviders = (from p in context.Providers
+                                        join u in context.ApplicationUsers on p.UserID equals u.Id
+                                        where p.Businesstype == false && u.IsVerified == true
+                                        select new
+                                        {
+                                            p.UserID,
+                                            p.BusinessName,
+                                            p.Category,
+                                            u.PhoneNumber,
+                                            u.Address,
+                                            AvgPrice = context.Products
+                                            .Where(pr => pr.ProviderID == p.UserID)
+                                            .Average(pr => (decimal?)pr.Price) ?? 0
+                                        }).ToList();
 
-            var productProviders = (from p in context.Providers
-                                    join u in context.ApplicationUsers on p.UserID equals u.Id
-                                    where p.Businesstype == false && u.IsVerified == true
-                                    select new
-                                    {
-                                        p.UserID,
-                                        p.BusinessName,
-                                        p.Category,
-                                        u.PhoneNumber,
-                                        u.Address,
-                                        AvgPrice = context.Products
-                                        .Where(pr => pr.ProviderID == p.UserID)
-                                        .Average(pr => (decimal?)pr.Price) ?? 0
-                                    }).ToList();
-
-            ViewBag.Businesses = productProviders;
-            return View(productProviders);
+                ViewBag.Businesses = productProviders;
+                return View(productProviders);
+            }
         }
 
         public IActionResult AvailService()
@@ -192,7 +194,7 @@ namespace HomeHub.App.Controllers
             var user = context.Users.FirstOrDefault(u => u.Id == userId);
 
             // Check if the user is under review
-            if (user != null && user.IsUnderReview)
+            if (user != null && user.IsUnderReview == true)
             {
                 // Redirect to a page or show a message about the restriction
                 TempData["Message"] = "Your account is under review. You cannot access this page at the moment.";
@@ -203,34 +205,36 @@ namespace HomeHub.App.Controllers
             {
                 // Redirect to a page or show a message about the restriction
                 TempData["Message"] = "Your account is not yet verified. You cannot access this page at the moment.";
-                return View("AccountUnderReview");
+                return View("AccountForVerification");
             }
+            else
+            {
+                var categories = context.Providers
+                    .Where(b => b.Businesstype == true)
+                    .Select(b => b.Category)
+                    .Distinct()
+                    .ToList();
 
-            var categories = context.Providers
-                .Where(b => b.Businesstype == true)
-                .Select(b => b.Category)
-                .Distinct()
-                .ToList();
+                ViewBag.Categories = categories;
 
-            ViewBag.Categories = categories;
+                var serviceProviders = (from p in context.Providers
+                                        join u in context.ApplicationUsers on p.UserID equals u.Id
+                                        where p.Businesstype == true && u.IsVerified == true
+                                        select new
+                                        {
+                                            p.UserID,
+                                            p.BusinessName,
+                                            p.Category,
+                                            u.PhoneNumber,
+                                            u.Address,
+                                            AvgPrice = context.Services
+                                            .Where(sv => sv.ProviderID == p.UserID)
+                                            .Average(pr => (decimal?)pr.Fee) ?? 0
+                                        }).ToList();
 
-            var serviceProviders = (from p in context.Providers
-                                    join u in context.ApplicationUsers on p.UserID equals u.Id
-                                    where p.Businesstype == true && u.IsVerified == true
-                                    select new
-                                    {
-                                        p.UserID,
-                                        p.BusinessName,
-                                        p.Category,
-                                        u.PhoneNumber,
-                                        u.Address,
-                                        AvgPrice = context.Services
-                                        .Where(sv => sv.ProviderID == p.UserID)
-                                        .Average(pr => (decimal?)pr.Fee) ?? 0
-                                    }).ToList();
-
-            ViewBag.Businesses = serviceProviders;
-            return View(serviceProviders);
+                ViewBag.Businesses = serviceProviders;
+                return View(serviceProviders);
+            }
         }
 
 
@@ -240,17 +244,17 @@ namespace HomeHub.App.Controllers
             var user = context.Users.FirstOrDefault(u => u.Id == userId);
 
             // Check if the user is under review
-            if (user != null && user.IsUnderReview)
+            if (user != null && user.IsUnderReview == true)
             {
                 // Redirect to a page or show a message about the restriction
                 TempData["Message"] = "Your account is under review. You cannot access this page at the moment.";
                 return View("AccountUnderReview");
             }
-           else if (user != null && user.IsVerified == false)
+            else if (user != null && user.IsVerified == false)
             {
                 // Redirect to a page or show a message about the restriction
                 TempData["Message"] = "Your account is not yet verified. You cannot access this page at the moment.";
-                return View("AccountUnderReview");
+                return View("AccountForVerification");
             }
 
             else if (string.IsNullOrEmpty(businessId))
@@ -288,7 +292,7 @@ namespace HomeHub.App.Controllers
             var user = context.Users.FirstOrDefault(u => u.Id == userId);
 
             // Check if the user is under review
-            if (user != null && user.IsUnderReview)
+            if (user != null && user.IsUnderReview == true)
             {
                 // Redirect to a page or show a message about the restriction
                 TempData["Message"] = "Your account is under review. You cannot access this page at the moment.";
@@ -299,7 +303,7 @@ namespace HomeHub.App.Controllers
             {
                 // Redirect to a page or show a message about the restriction
                 TempData["Message"] = "Your account is not yet verified. You cannot access this page at the moment.";
-                return View("AccountUnderReview");
+                return View("AccountForVerification");
             }
 
             if (string.IsNullOrEmpty(businessId))

@@ -96,6 +96,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlcnNVbmRlclJldmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Notes/C\#/Homehub/HomeHub.App/Views/Customer/AccountForVerification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQWNjb3VudEZvclZlcmlmaWNhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Notes/C\#/Homehub/HomeHub.App/Views/Customer/AccountUnderReview.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQWNjb3VudFVuZGVyUmV2aWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -310,6 +314,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Notes/C\#/Homehub/HomeHub.App/Views/Shared/_DefaultNavbar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EZWZhdWx0TmF2YmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Notes/C\#/Homehub/HomeHub.App/Views/Shared/_HeadAdminNavbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkQWRtaW5OYXZiYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Notes/C\#/Homehub/HomeHub.App/Views/Shared/_LoginPartial.cshtml]

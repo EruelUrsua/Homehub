@@ -23,7 +23,7 @@
          labels: @Html.Raw(Json.Serialize(Model.DistinctBy(d => d.OrderDate).Select(d => d.OrderDate.ToString("MMM yyyy")).ToList())),
     datasets: [{
     label: 'Monthly Sales Report',
-         data: @Html.Raw(Json.Serialize(Model.GroupBy(d => d.OrderDate).Select(d => d.Sum(d => d.Fee).ToString()).ToList())),
+              data: @Html.Raw(Json.Serialize(Model.GroupBy(d => d.OrderDate.ToString("MM")).Select(d => d.Sum(d => d.Fee).ToString()).ToList())),
     backgroundColor: 'rgba(0, 119, 204, 0.3)',
     borderColor: 'rgba(0, 119, 204, 1)',
     borderWidth: 1
