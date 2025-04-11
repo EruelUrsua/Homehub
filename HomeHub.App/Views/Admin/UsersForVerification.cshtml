@@ -94,7 +94,15 @@
     <div class="header-section">
         <h1 class="primary-heading">Users Under Review</h1>
     </div>
+    @if (Model.Count() < 1)
+    {
 
+        <div class="alert alert-info">
+            No User Records Found
+        </div>
+
+    }
+    else{
     <div class="card">
         <div class="user-list">
             <table>
@@ -125,4 +133,5 @@
             </table>
         </div>
     </div>
+}
 </div>

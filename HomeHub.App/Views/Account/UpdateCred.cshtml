@@ -1,0 +1,154 @@
+﻿@model RegisterBVM
+
+<body>
+    <div class="banner"></div>
+    <div class="signin-container">
+        <div class="card">
+            <h2>Update Credentials</h2>
+
+            <form asp-controller="Account" asp-action="UpdateCred" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                    <input type="hidden" asp-for="Lastname"/>
+          
+
+
+                    <input type="hidden" asp-for="Firstname" class="form-control" placeholder="First Name" />
+
+
+
+                    <input type="hidden" asp-for="ContactNo" class="form-control" placeholder="Contact Number" />
+
+
+                <div class="form-group">
+                    <label for="ValidId">Upload Valid ID</label>
+                    <input asp-for="ValidId" type="file" class="form-control-file" />
+                    <span asp-validation-for="ValidId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="BusinessPermitNo">Upload Business Permit</label>
+                    <input asp-for="BusinessPermitNo" type="file" class="form-control-file" />
+                    <span asp-validation-for="BusinessPermitNo" class="text-danger"></span>
+                </div>
+
+  
+                    <input type="hidden" asp-for="BusinessName" class="form-control" placeholder="Business Name" />
+
+
+                    <input type="hidden" asp-for="BusinessType"/>
+                <input type="hidden" asp-for="Category" />
+                    <input type="hidden" asp-for="BusinessAddress"/>
+
+                <input type="hidden" id="lat" asp-for="lat"/>
+                <input type="hidden" id="lng" asp-for="lng" />
+     
+                    <input type="hidden" asp-for="Email"/>
+                <input type="hidden" asp-for="Password"/>
+                   
+                    <input type="hidden" asp-for="ConfirmPassword">
+        
+
+                <input type="submit" class="btn btn-custom" value="Update Credentials" />
+            </form>
+        </div>
+    </div>
+</body>
+
+<style>
+    body {
+        background-color: #F1F1F1;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .banner {
+        background-color: #3964D2;
+        height: 200px;
+        width: 100%;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 0;
+    }
+
+    .signin-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .card {
+        background-color: #1A3D8F;
+        color: white;
+        padding: 40px;
+        border-radius: 12px;
+        text-align: center;
+        width: 500px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-group input, .form-group select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 10px;
+        border-radius: 6px;
+        border: none;
+        font-size: 14px;
+    }
+
+    .btn-custom {
+        background-color: #ffffff;
+        color: #1A3D8F;
+        font-weight: bold;
+        width: 100%;
+        padding: 6px;
+        margin-top: 14px;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+
+        .btn-custom:hover {
+            background-color: #dfe6f1;
+        }
+
+    .register-link {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+        .register-link a {
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+            .register-link a:hover {
+                text-decoration: underline;
+            }
+
+    .dropdown-container {
+        position: relative;
+    }
+
+    .dropdown {
+        appearance: none;
+        background-color: white;
+        padding-right: 35px;
+    }
+
+    .dropdown-icon {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #1A3D8F;
+        pointer-events: none;
+    }
+</style>

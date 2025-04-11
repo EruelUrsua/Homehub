@@ -90,7 +90,15 @@
     <div class="header-section">
         <h1 class="primary-heading">User Ratings</h1>
     </div>
+    @if (Model.Count() < 1)
+    {
 
+        <div class="alert alert-info">
+            No User Records Found
+        </div>
+
+    }
+    else{
     <a href="@Url.Action("UsersUnderReview", "Admin")" class="btn btn-back">
         <i class="fa fa-arrow-left"></i> Back to Users
     </a>
@@ -117,4 +125,5 @@
             </table>
         </div>
     </div>
+}
 </div>

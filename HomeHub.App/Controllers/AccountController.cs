@@ -340,10 +340,10 @@ namespace HomeHub.App.Controllers
                 return View(model);
             }
         }
-    
+
 
         //Register Admin Account
-
+        [Authorize(Roles = "HeadAdmin")]
         public IActionResult RegisterA()
         {
             return View(new RegisterAVM());
@@ -351,6 +351,7 @@ namespace HomeHub.App.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "HeadAdmin")]
         public async Task<IActionResult> RegisterA(RegisterAVM model)
         {
 
@@ -428,6 +429,47 @@ namespace HomeHub.App.Controllers
             }
         }
 
+        public IActionResult UpdateCred()
+        {
+            return View(new RegisterBVM());
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult>UpdateCred(RegisterBVM model)
+        {
+
+            if (ModelState.IsValid)
+            {
+
+                ApplicationUser user = new ApplicationUser();
+                Provider provider = new Provider();
+                user.UserName = model.Email;
+                user.Email = model.Email;
+                user.Lastname = model.Lastname;
+                user.Firstname = model.Firstname;
+                user.PhoneNumber = model.ContactNo;
+                user.Address = model.BusinessAddress;
+                user.lat = model.lat;
+                user.lng = model.lng;
+                user.ValidId = $"/images/validids/{validIdFileName}";
+                provider.BusinessPermit = $"/images/permits/{businessPermitFileName}";
+                user.IsVerified = true;
+                var result = await userManager.CreateAsync(user, model.Password);
+                //await userManager.AddToRoleAsync(user, "HeadAdmin");
+                if (result.Succeeded)
+                {
+                    //Then send the Confirmation Email to the User
+                    await SendConfirmationEmail(model.Email, user);
+
+                    return RedirectToAction("ProviderHome", "Provider");
+                }
+                return View(model);
+            }
+            else
+            {
+                return View(model);
+            }
+        }
         public IActionResult SignIn()
         {
             SignInVM vm = new SignInVM();
