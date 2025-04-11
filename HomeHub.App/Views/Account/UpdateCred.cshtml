@@ -20,16 +20,28 @@
                     <input type="hidden" asp-for="ContactNo" class="form-control" placeholder="Contact Number" />
 
 
+                <div>
+                    <label>Current Valid ID:</label><br />
+                    @if (Model.ExistingValidId != null)
+                    {
+                        <img src="@Url.Content(Model.ExistingValidId)" width="250" />
+                    }
+                </div>
                 <div class="form-group">
-                    <label for="ValidId">Upload Valid ID</label>
-                    <input asp-for="ValidId" type="file" class="form-control-file" />
-                    <span asp-validation-for="ValidId" class="text-danger"></span>
+                    <label for="ValidId">Upload New Valid ID</label>
+                    <input asp-for="ValidId" type="file" class="form-control" />
                 </div>
 
+                <div>
+                    <label>Current Business Permit:</label><br />
+                    @if (Model.ExistingBusinessPermit != null)
+                    {
+                        <img src="@Url.Content(Model.ExistingBusinessPermit)" width="250" />
+                    }
+                </div>
                 <div class="form-group">
-                    <label for="BusinessPermitNo">Upload Business Permit</label>
-                    <input asp-for="BusinessPermitNo" type="file" class="form-control-file" />
-                    <span asp-validation-for="BusinessPermitNo" class="text-danger"></span>
+                    <label for="BusinessPermit">Upload New Business Permit</label>
+                    <input asp-for="BusinessPermitNo" type="file" class="form-control" />
                 </div>
 
   

@@ -52,9 +52,11 @@ namespace HomeHub.App.Models
         [DataType(DataType.Password)]
         [Compare("Password")]
         public string ConfirmPassword { get; set; }
-        [Required]
-        public IFormFile ValidId { get; set; }
-        [Required]
-        public IFormFile BusinessPermitNo { get; set; } 
+        // For registration only, so NOT required for updates
+        public IFormFile? ValidId { get; set; }
+        public IFormFile? BusinessPermitNo { get; set; }
+        // Used to display current image paths in UpdateCred
+        public string? ExistingValidId { get; set; }
+        public string? ExistingBusinessPermit { get; set; }
     }
 }
