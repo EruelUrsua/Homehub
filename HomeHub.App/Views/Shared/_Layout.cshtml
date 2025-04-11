@@ -29,6 +29,10 @@
             {
                 <partial name="_AdminNavbar" />
             }
+            else if (User.IsInRole("HeadAdmin"))
+            {
+                <partial name="_HeadAdminNavbar" />
+            }
             else
             {
                 <partial name="_DefaultNavbar" />

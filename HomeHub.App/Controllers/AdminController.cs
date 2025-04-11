@@ -13,7 +13,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace HomeHub.App.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin, HeadAdmin")]
     public class AdminController : Controller
     {
         private readonly HomeHubContext context;

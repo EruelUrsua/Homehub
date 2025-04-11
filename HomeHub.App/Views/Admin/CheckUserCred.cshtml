@@ -43,7 +43,7 @@
                     <tr>
                         <th class="bg-primary text-white">Business Permit</th>
                         <td>
-                            @if (!string.IsNullOrEmpty(Model.BusinessPermit))
+                            @if (Model.Role == "Provider")
                             {
                                 <img id="myBp" class="rounded border" src="@Url.Content(Model.BusinessPermit)"
                                      width="400" style="width:100%;max-width:400px" alt="Business Permit" />
