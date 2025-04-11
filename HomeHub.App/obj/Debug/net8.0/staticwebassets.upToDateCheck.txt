@@ -88,7 +88,7 @@ wwwroot\images\faaa702d-f6ab-4362-83d5-49b9cbf1e0fe_cleaning kit.jpg
 wwwroot\images\fb997c26-867a-42b3-9920-e552f181c25e_Water.jpg
 wwwroot\images\fc846dd2-acf2-421b-8d70-4698102a27b4_samplestock.jpg
 wwwroot\images\permits\1285dcfb-fc7d-4565-9461-9cf23c2cb155_Mayors-permit-2020.jpg
-wwwroot\images\permits\554cbecd-6de4-4f56-9c07-e923fb822237_Carpentry Service Provider.jpg
+wwwroot\images\permits\1a7ed609-3575-440c-9d82-cbc220cce9af_Just The Two of Us Wallpaper.jpg
 wwwroot\images\permits\6dccc601-9132-4669-99f9-1aecb8fa33e6_Mayors-permit-2020.jpg
 wwwroot\images\permits\d5deddf3-0fbc-4852-bd84-3acb921e6282_samplestock.jpg
 wwwroot\images\permits\df66d96e-1301-44e8-94e3-6c56c3b77225_GkL-40tbUAIPY8C.jpg
@@ -120,6 +120,7 @@ wwwroot\images\validids\57b534a9-185a-43a8-b99c-ac2431c8f26f_trashscan.PNG
 wwwroot\images\validids\606b5616-f25d-43af-bb7a-66f2b806a224_lpg.jpg
 wwwroot\images\validids\64801f9a-2b10-4195-b220-f33842c9e79f_Logo v2.png
 wwwroot\images\validids\650391f0-37f5-43be-b0d7-ae816c075256_samplestock.jpg
+wwwroot\images\validids\6912c219-d354-4136-984f-6a6f3ae3a07f_Water.jpg
 wwwroot\images\validids\71777542-e622-4dcf-ada9-f43818325ed5_samplestock.jpg
 wwwroot\images\validids\72502de8-1cf8-4f76-8832-3f08462b0bb3_Logo v2.png
 wwwroot\images\validids\7b27db5a-f41a-487e-94e8-792eea381a01_Logo v2.png
@@ -142,7 +143,6 @@ wwwroot\images\validids\a00fb76e-33a6-490b-a5c6-a5586e6550bd_Logo v2.png
 wwwroot\images\validids\a108f9ab-0c32-4948-88e4-a96e55f06a72_pass.PNG
 wwwroot\images\validids\a97a8bb0-136f-4c9d-82d6-9db0ea1b76d2_lpg.jpg
 wwwroot\images\validids\ad41d4a6-f2d0-410b-9387-422cdf8fd126_pass.PNG
-wwwroot\images\validids\ba7bfd73-0b99-4a8f-99d8-292561a44e91_Plumbing Service Provider.jpg
 wwwroot\images\validids\bb906769-b7b1-4b07-af2f-3709ed6bc2af_GkL-40tbUAIPY8C.jpg
 wwwroot\images\validids\bc897414-e266-4a00-8328-6336cd7908ec_samplestock.jpg
 wwwroot\images\validids\c0c3ecb9-8612-400d-9f0c-f16635de552f_lpg.jpg

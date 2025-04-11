@@ -1,125 +1,168 @@
 ﻿@model IEnumerable<HomeHub.DataModel.ApplicationUser>
 
-@{
-    ViewData["Title"] = "AdminHome";
+<style>
+    .container {
+        width: 100%;
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
 
-}
+    .header-section {
+        background-color: #203B81;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
 
-@* <a asp-controller="Account" asp-action="RegisterA" class="btn btn-success"> *@
-@*     <i class="fas fa-plus"></i> *@
-@*     Create New Admin User *@
-@* </a> *@
-@* <br /> *@
-@* <br /> *@
-<h1>All Users</h1>
-@if (Model.Count() < 1)
-{ 
+    .primary-heading {
+        color: #F1F1F1;
+        font-weight: bold;
+    }
 
-    <div class="alert alert-info">
-        No User Records Found
+    .card {
+        background-color: #eef5ff;
+        color: #203B81;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .user-list table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 5px;
+        font-size: 16px;
+    }
+
+    .user-list th, .user-list td {
+        padding: 10px;
+        text-align: left;
+        color: #203B81;
+    }
+
+    .user-list th {
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .user-list tr {
+        border-bottom: 1px solid rgba(32, 59, 129, 0.3);
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 10px 0;
+        width: 140px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .btn-sm {
+        background-color: #17a2b8;
+        color: white;
+    }
+
+    input[type="checkbox"][disabled] {
+        transform: scale(1.2);
+        accent-color: #203B81;
+    }
+
+    @@media screen and (max-width: 768px) {
+        .user-list table {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .btn {
+            width: 100%;
+        }
+
+        .action-buttons {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="header-section">
+        <h1 class="primary-heading">All Users</h1>
     </div>
 
-}
-else
-{
-
-    <table class="table">
-    <thead>
-    <tr>
-            <td>
-                @Html.DisplayNameFor(model => model.Id)
-            </td>
-        <td>
-            @Html.DisplayNameFor(model => model.Email)
-        </td>
-        <td>
-            @Html.DisplayNameFor(model => model.Firstname)
-        </td>
-        <td>
-            @Html.DisplayNameFor(model => model.Lastname)
-        </td>
-                <td>
-                    @Html.DisplayNameFor(model => model.EmailConfirmed)
-                </td>
-
-                <td>
-                    @Html.DisplayNameFor(model => model.IsVerified)
-                </td>
-            <td>
-                Actions
-            </td>
-
-        @* <td> *@
-        @*     @foreach (var userRole in item.UserRole) *@
-        @*     { *@
-        @*         <p>@Html.DisplayFor(model => userRole.Role.Name)&nbsp;</p> *@
-        @*     } *@
-        @* </td> *@
-    </tr>
-</thead>
-<tbody>
-@foreach (var item in Model) { 
-<tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Id)
-        </td>
-<td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Firstname)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Lastname)
-        </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.EmailConfirmed)
-                    </td>
-
-                    <td>
-                        @Html.DisplayFor(modelItem => item.IsVerified)
-                    </td>
-                <td>
-                    <form method="post" asp-action="DeleteUser" asp-controller="Admin">
-                        <input type="hidden" name="Id" value="@item.Id" >
-                       <input type="submit" class="btn btn-danger" value="Delete" >
-                    </form>
-                        <form asp-action="UserProfileAdmin" asp-controller="Admin">
-                        <input type="hidden" name="Id" value="@item.Id" >
-                       <input type="submit" class="btn btn-sm" value="View Profile" >
-                    </form>
-                </td>
-</tr>
-}
-</tbody>
-</table>
-
-}
-
-@* } *@
-@* else *@
-@* { *@
-@*     <div class="card"> *@
-@*         <div class="card-header"> *@
-@*             No Users Added Yet *@
-@*         </div> *@
-@*     </div> *@
-@* } *@
-
-@* <div class="container-fluid py-5 header-section"> *@
-@*     <h1>Welcome to HomeHub!</h1> *@
-@* </div> *@
-
-@* @foreach (var item in ViewBag.Users) *@
-@* {  *@
-@*     @item.ToString() *@
-    
-
-@* } *@
-
-
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            No User Records Found
+        </div>
+    }
+    else
+    {
+        <div class="card">
+            <div class="user-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Email</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email Confirmed</th>
+                            <th>Is Verified</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Email</td>
+                                <td>@item.Firstname</td>
+                                <td>@item.Lastname</td>
+                                <td>
+                                    <input type="checkbox" disabled @(item.EmailConfirmed ? "checked" : "") />
+                                </td>
+                                <td>
+                                    <input type="checkbox" disabled @(item.IsVerified ? "checked" : "") />
+                                </td>
+                                <td class="action-buttons">
+                                    <form method="post" asp-action="DeleteUser" asp-controller="Admin">
+                                        <input type="hidden" name="Id" value="@item.Id" />
+                                        <input type="submit" class="btn btn-danger" value="Delete" />
+                                    </form>
+                                    <form asp-action="UserProfileAdmin" asp-controller="Admin">
+                                        <input type="hidden" name="Id" value="@item.Id" />
+                                        <input type="submit" class="btn btn-sm" value="View Profile" />
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+</div>

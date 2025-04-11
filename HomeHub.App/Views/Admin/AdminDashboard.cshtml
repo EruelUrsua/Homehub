@@ -1,97 +1,159 @@
 ﻿@model IEnumerable<HomeHub.DataModel.ApplicationUser>
-<h1>Admin DashBoard</h1>
-@* Shows Sales chart *@
- <canvas id="salesChart" style="width:100%;max-width:1300px"></canvas> 
-@* Shows Order chart *@
- @* <canvas id="orderChart" style="width:100%;max-width:1300px"></canvas> *@
-@* <br /> *@
-@* Shows Order chart *@
-@* <h4>Users BreakDown</h4> *@
-@* <canvas id="userChart" style="width:100%;max-width:1300px; height:100%;max-height:630px"></canvas> *@
-@section scripts {
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-                 var ctx = document.getElementById('salesChart').getContext('2d');
-        var linechart = new Chart(ctx, {
-        type: 'line',
-        data: {
-             labels: ["Verified Accounts"],
-        datasets: [{
-        label: 'Monthly Sales Report',
-             data: @Html.Raw(Json.Serialize(Model.GroupBy(d => d.IsVerified == true).Select(d => d.Count(d => d.IsVerified).ToString()).ToList())),
-        backgroundColor: 'rgba(0, 119, 204, 0.3)',
-        borderColor: 'rgba(0, 119, 204, 1)',
-        borderWidth: 1
-        }]
-        },
-        options: {
-        responsive:true,
-        scales: {
-        yAxes: [{
-        ticks: {
-        beginAtZero: true
-        }
-        }]
-        }
-        }
-        });
-        // var cty = document.getElementById('orderChart').getContext('2d');
-        // var barchart = new Chart(cty, {
-        //      type: 'bar',
-        //      data: {
-        //      datasets: [{
-        //      label: 'Availed Products/Services',
+<!--Admin Sidebar-->
+<nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar">
+    <div class="position-sticky">
+        <h4 class="text-white text-center py-3">Admin Panel</h4>
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link text-white" asp-action="UserProfile" asp-controller="Admin">Your Profile</a></li>
+            <li class="nav-item"><a class="nav-link text-white" asp-action="AdminHome" asp-controller="Admin">All Users</a></li>
+            <li class="nav-item"><a class="nav-link text-white" asp-action="UsersForVerification" asp-controller="Admin">Verify Users</a></li>
+            <li class="nav-item"><a class="nav-link text-white" asp-action="ReviewUsers" asp-controller="Admin">Users For Review</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 content">
+    <div class="container-fluid py-5 header-section">
+        <h1>Welcome to HomeHub, Admin!</h1>
+        <p class="lead">Verify and review users here.</p>
+    </div>
+
+
+    <h1>Admin Dashboard</h1>
+    @* Shows Sales chart *@
+     <canvas id="salesChart" style="width:100%;max-width:1300px"></canvas> 
+    @* Shows Order chart *@
+     @* <canvas id="orderChart" style="width:100%;max-width:1300px"></canvas> *@
+    @* <br /> *@
+    @* Shows Order chart *@
+    @* <h4>Users BreakDown</h4> *@
+    @* <canvas id="userChart" style="width:100%;max-width:1300px; height:100%;max-height:630px"></canvas> *@
+    @section scripts {
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+                     var ctx = document.getElementById('salesChart').getContext('2d');
+            var linechart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                 labels: ["Verified Accounts"],
+            datasets: [{
+            label: 'Monthly Sales Report',
+                 data: @Html.Raw(Json.Serialize(Model.GroupBy(d => d.IsVerified == true).Select(d => d.Count(d => d.IsVerified).ToString()).ToList())),
+            backgroundColor: 'rgba(0, 119, 204, 0.3)',
+            borderColor: 'rgba(0, 119, 204, 1)',
+            borderWidth: 1
+            }]
+            },
+            options: {
+            responsive:true,
+            scales: {
+            yAxes: [{
+            ticks: {
+            beginAtZero: true
+            }
+            }]
+            }
+            }
+            });
+            // var cty = document.getElementById('orderChart').getContext('2d');
+            // var barchart = new Chart(cty, {
+            //      type: 'bar',
+            //      data: {
+            //      datasets: [{
+            //      label: 'Availed Products/Services',
     
-        //      backgroundColor: ['rgba(0, 119, 204, 0.3)',
-        //                        'rgb(255, 9, 132)',
-        //                        'rgb(157, 230, 41)',
-        //                        'rgb(41, 224, 230)',
-        //                        'rgb(255, 205, 86)'
-        //      ],
-        //      borderColor: 'rgba(0, 119, 204, 1)',
-        //      borderWidth: 1
-        //      }]
-        //      },
-        //      options: {
-        //      responsive:true,
-        //      scales: {
-        //      yAxes: [{
-        //      ticks: {
-        //      beginAtZero: true
-        //      }
-        //      }]
-        //      }
-        //      }
-        //      });
+            //      backgroundColor: ['rgba(0, 119, 204, 0.3)',
+            //                        'rgb(255, 9, 132)',
+            //                        'rgb(157, 230, 41)',
+            //                        'rgb(41, 224, 230)',
+            //                        'rgb(255, 205, 86)'
+            //      ],
+            //      borderColor: 'rgba(0, 119, 204, 1)',
+            //      borderWidth: 1
+            //      }]
+            //      },
+            //      options: {
+            //      responsive:true,
+            //      scales: {
+            //      yAxes: [{
+            //      ticks: {
+            //      beginAtZero: true
+            //      }
+            //      }]
+            //      }
+            //      }
+            //      });
 
-             //       var ctz = document.getElementById('userChart').getContext('2d');
-             // var barchart = new Chart(ctz, {
-             //      type: 'pie',
-             //      data: {
-             //      backgroundColor: ['rgba(0, 119, 204, 0.3)',
-             //                        'rgb(255, 9, 132)',
-             //                        'rgb(157, 230, 41)',
-             //                        'rgb(41, 224, 230)',
-             //                        'rgb(255, 205, 86)'
-             //      ],
+                 //       var ctz = document.getElementById('userChart').getContext('2d');
+                 // var barchart = new Chart(ctz, {
+                 //      type: 'pie',
+                 //      data: {
+                 //      backgroundColor: ['rgba(0, 119, 204, 0.3)',
+                 //                        'rgb(255, 9, 132)',
+                 //                        'rgb(157, 230, 41)',
+                 //                        'rgb(41, 224, 230)',
+                 //                        'rgb(255, 205, 86)'
+                 //      ],
 
-             //      borderColor: 'rgba(0, 119, 204, 1)',
-             //      borderWidth: 1
-             //      }]
-             //      },
-             //      options: {
-             //      responsive:true,
-             //      scales: {
-             //      yAxes: [{
-             //      ticks: {
-             //      beginAtZero: true
-             //      }
-             //      }]
-             //      }
-             //      }
-             //      });
+                 //      borderColor: 'rgba(0, 119, 204, 1)',
+                 //      borderWidth: 1
+                 //      }]
+                 //      },
+                 //      options: {
+                 //      responsive:true,
+                 //      scales: {
+                 //      yAxes: [{
+                 //      ticks: {
+                 //      beginAtZero: true
+                 //      }
+                 //      }]
+                 //      }
+                 //      }
+                 //      });
 
 
-    </script>
-}
+        </script>
+    }
+</main>
+<style>
+    .sidebar {
+        height: 100vh;
+        position: fixed;
+        top: 56px;
+        left: 0;
+        width: 250px;
+        padding-top: 20px;
+        background-color: #343a40; 
+        z-index: 1000; 
+    }
+    }
+
+        .sidebar .nav-link {
+            font-size: 16px;
+            padding: 12px;
+            transition: background 0.3s ease-in-out;
+        }
+
+            .sidebar .nav-link:hover {
+                background: #3658a7;
+                border-radius: 5px;
+            }
+
+    .header-section {
+        background-color: #203B81;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom:20px;
+    }
+
+    .content {
+        padding-top: 80px;
+    }
+
+</style>
