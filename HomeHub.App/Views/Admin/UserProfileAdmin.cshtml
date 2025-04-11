@@ -48,6 +48,9 @@
                     </tr>
                 </tbody>
             </table>
+            <a href="@Url.Action("AdminHome", "Admin")" class="btn btn-back">
+                <i class="fa fa-arrow-left"></i> Back to Users
+            </a>
         </div>
     </div>
 </div>
@@ -74,6 +77,29 @@
         color: white !important;
         width: 30%;
     }
+
+    .btn-back {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #17a2b8;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: normal;
+        margin-top: 10px;
+    }
+
+        .btn-back i {
+            margin-right: 8px;
+        }
+
+        .btn-back:hover {
+            background-color: #138496;
+        }
 </style>
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
