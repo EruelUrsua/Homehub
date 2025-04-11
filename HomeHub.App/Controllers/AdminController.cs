@@ -72,17 +72,6 @@ namespace HomeHub.App.Controllers
             return View(accounts);
         }
 
-        public async Task<IActionResult> AdminUsers()
-        {
-            var uid = await GetCurrentUserId();
-            ApplicationUser user = new ApplicationUser();
-            var admin= await userManager.GetUsersInRoleAsync("Admin");
-
-            //var accounts = provider.Concat(Customer);
-
-            return View(admin);
-        }
-
         public async Task<ActionResult> UserProfile()
         {
             ApplicationUser user = await GetCurrentUserAsync();
@@ -220,6 +209,7 @@ namespace HomeHub.App.Controllers
             {
                 user.IsVerified = true;
                 await userManager.UpdateAsync(user);
+
             }
 
             return RedirectToAction("UsersForVerification");
@@ -278,6 +268,17 @@ namespace HomeHub.App.Controllers
             }
 
             return RedirectToAction("UsersUnderReview");
+        }
+        [Authorize(Roles = "HeadAdmin")]
+        public async Task<IActionResult> AdminUsers()
+        {
+            var uid = await GetCurrentUserId();
+            ApplicationUser user = new ApplicationUser();
+            var admin = await userManager.GetUsersInRoleAsync("Admin");
+
+            //var accounts = provider.Concat(Customer);
+
+            return View(admin);
         }
     }
 }
