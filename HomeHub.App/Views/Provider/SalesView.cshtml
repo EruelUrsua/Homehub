@@ -1,4 +1,4 @@
-﻿@model List<HomeHub.DataModel.ClientOrder>
+﻿@model List<HomeHub.DataModel.OrdersLog>
 
  @* Shows Sales chart *@
 <canvas id="salesChart" style="width:100%;max-width:1300px"></canvas>
@@ -45,10 +45,10 @@
    var barchart = new Chart(cty, {
         type: 'bar',
         data: {
-                       labels: @Html.Raw(Json.Serialize(Model.DistinctBy(d => d.OrderedPs).Select(d => d.OrderedPs).ToList())),
+                       labels: @Html.Raw(Json.Serialize(Model.DistinctBy(d => d.Item).Select(d => d.Item).ToList())),
         datasets: [{
         label: 'Availed Products/Services',
-        data: @Html.Raw(Json.Serialize(Model.GroupBy(d => d.OrderedPs).Select(d => d.Sum(d => d.Quantity).ToString()).ToList())),
+        data: @Html.Raw(Json.Serialize(Model.GroupBy(d => d.Item).Select(d => d.Sum(d => d.Qty).ToString()).ToList())),
         backgroundColor: ['rgba(0, 119, 204, 0.3)',
                           'rgb(255, 9, 132)',
                           'rgb(157, 230, 41)',
@@ -75,10 +75,10 @@
         var barchart = new Chart(ctz, {
              type: 'pie',
              data: {
-                            labels: @Html.Raw(Json.Serialize(Model.DistinctBy(d => d.OrderedPs).Select(d => d.OrderedPs).ToList())),
+                            labels: @Html.Raw(Json.Serialize(Model.DistinctBy(d => d.Item).Select(d => d.Item).ToList())),
              datasets: [{
              // label: 'Total Earnings Breakdown',
-             data: @Html.Raw(Json.Serialize(Model.GroupBy(d => d.OrderedPs).Select(d => d.Sum(d => d.Fee).ToString()).ToList())),
+             data: @Html.Raw(Json.Serialize(Model.GroupBy(d => d.Item).Select(d => d.Sum(d => d.Fee).ToString()).ToList())),
              backgroundColor: ['rgba(0, 119, 204, 0.3)',
                                'rgb(255, 9, 132)',
                                'rgb(157, 230, 41)',

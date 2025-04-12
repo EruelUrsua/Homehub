@@ -12,6 +12,7 @@ wwwroot\images\10f09286-073f-4d04-b07a-eb084c680ee0_cleaning kit.jpg
 wwwroot\images\11429e45-9901-4237-a093-809445edb725_West Cebu Estate.png
 wwwroot\images\1ae7e95d-6c20-43e5-9a52-9cd7444e55d3_cleaning kit.jpg
 wwwroot\images\1b217f8e-b9b2-4d8e-815b-699df9a68e09_samplestock.jpg
+wwwroot\images\1c557955-306c-4ed4-bfdd-1c15b2c00d4c_Water.jpg
 wwwroot\images\243470ad-70b5-455a-aeea-ca9526e946d2_cleaning kit.jpg
 wwwroot\images\2507c1eb-9340-4a96-a715-e1084b7a1e6e_lpg.jpg
 wwwroot\images\260a3dd2-7346-437b-9a9a-259b36bdfcd2_Water.jpg
@@ -162,6 +163,7 @@ wwwroot\images\validids\c5248a72-e72c-4159-8945-b270f8c91be5_validid2.jpg
 wwwroot\images\validids\c84e236e-8ac9-4533-bcbe-8579bb01b93f_GkL-40tbUAIPY8C.jpg
 wwwroot\images\validids\ce0d196e-fda1-44a4-9515-45b5b1ec1ff1_samplestock.jpg
 wwwroot\images\validids\cfa9b3c4-a35a-4837-8703-1bc3369fbe04_Logo v2.png
+wwwroot\images\validids\cfe105c8-eb55-4e94-a5d7-e3ef967a325e_Water.jpg
 wwwroot\images\validids\d09e7c7e-7ef7-4442-be62-6e39cba70f42_samplestock.jpg
 wwwroot\images\validids\d53ab4dc-44eb-489c-a4c1-9c1497c43621_samplestock.jpg
 wwwroot\images\validids\d5889477-baf7-4ffd-8cdf-1d6db10cab7b_2e3d90d9-db48-49e3-97ec-9da1a77f1772.jpg
