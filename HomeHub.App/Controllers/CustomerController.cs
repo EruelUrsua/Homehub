@@ -560,6 +560,8 @@ namespace HomeHub.App.Controllers
             string userId = userManager.GetUserId(User);
             var user = context.Users.FirstOrDefault(u => u.Id == userId);
 
+
+
             // Get all rated order IDs and convert them to a HashSet for efficient lookup
             var ratedOrderIds = context.Ratings
                 .Select(r => r.OrderId.ToString()) // Convert OrderId to string to match OrdersLog
@@ -1062,11 +1064,13 @@ namespace HomeHub.App.Controllers
                     if (order.Status != "Cancelled")
                     {
                         order.Status = "Cancelled";
+                        order.Fee = 0;
                     }
 
                     if (clientOrder != null && clientOrder.Status != "Cancelled")
                     {
                         clientOrder.Status = "Cancelled";
+                        clientOrder.Fee = 0;
                     }
 
                     context.SaveChanges();

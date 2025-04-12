@@ -1093,18 +1093,24 @@ namespace HomeHub.App.Controllers
             var refundRequest = await _context.RefundRequests
                 .FirstOrDefaultAsync(r => r.RefundId == refundId);
 
+           
+
             if (refundRequest == null)
             {
                 TempData["ErrorMessage"] = "Refund request not found.";
                 return RedirectToAction("ShowRefundRequests");
             }
-
+            ClientOrder co = new ClientOrder();
             var orderLog = await _context.OrdersLogs
                 .FirstOrDefaultAsync(log => log.OrderId == refundRequest.OrderId);
+        
 
             if (orderLog != null)
             {
                 orderLog.Status = "Refund Accepted"; // Update order history
+                orderLog.Fee = 0;
+                co.Status = "Refund Accepted";
+                co.Fee = 0;
             }
 
             // Fetch the product(s) in the order
@@ -1130,7 +1136,7 @@ namespace HomeHub.App.Controllers
         {
             var refundRequest = await _context.RefundRequests
                 .FirstOrDefaultAsync(r => r.RefundId == refundId);
-
+            ClientOrder co = new ClientOrder();
             if (refundRequest == null)
             {
                 TempData["ErrorMessage"] = "Refund request not found.";
@@ -1149,6 +1155,7 @@ namespace HomeHub.App.Controllers
             if (orderLog != null)
             {
                 orderLog.Status = "Refund Rejected"; // Update order history
+                co.Status = "Refund Rejected";
             }
 
             refundRequest.RefundStatus = "Refund Rejected";

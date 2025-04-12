@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZOGH2weJvS+6foKMmVIjHXdhlCbFQA6DoE2EacUus4o=",
+  "Hash": "ZLt2B1rpcF3FsGz6OWjV9oV+vOGj1viHxvvdhjeJLfY=",
   "Source": "HomeHub.App",
   "BasePath": "_content/HomeHub.App",
   "Mode": "Default",
@@ -1674,6 +1674,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\c4c6facb-a8dd-4fd4-ada6-e40f2e41e9bd_samplestock.jpg"
+    },
+    {
+      "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c817ec9e-f2c3-4be7-a5ee-1a28cef65557_NPetronLPG070_R4.jpg",
+      "SourceId": "HomeHub.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\",
+      "BasePath": "_content/HomeHub.App",
+      "RelativePath": "images/c817ec9e-f2c3-4be7-a5ee-1a28cef65557_NPetronLPG070_R4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "h1k7i7q8i5",
+      "Integrity": "yzBzzS3Qf7jWwzgK/hCJlxiOeMKxe270da6/D3wR1DI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\c817ec9e-f2c3-4be7-a5ee-1a28cef65557_NPetronLPG070_R4.jpg"
     },
     {
       "Identity": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c8ac0cd5-057e-468c-995c-2742d41206af_samplestock.jpg",
@@ -8087,7 +8108,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 11:52:43 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8132,7 +8153,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 11:52:43 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8169,7 +8190,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 09:48:21 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8206,7 +8227,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 09:48:21 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10219,7 +10240,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 09:47:57 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10256,7 +10277,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 09:47:57 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12083,6 +12104,88 @@
       ]
     },
     {
+      "Route": "images/c817ec9e-f2c3-4be7-a5ee-1a28cef65557_NPetronLPG070_R4.h1k7i7q8i5.jpg",
+      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c817ec9e-f2c3-4be7-a5ee-1a28cef65557_NPetronLPG070_R4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "156615"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yzBzzS3Qf7jWwzgK/hCJlxiOeMKxe270da6/D3wR1DI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Apr 2025 01:19:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h1k7i7q8i5"
+        },
+        {
+          "Name": "label",
+          "Value": "images/c817ec9e-f2c3-4be7-a5ee-1a28cef65557_NPetronLPG070_R4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yzBzzS3Qf7jWwzgK/hCJlxiOeMKxe270da6/D3wR1DI="
+        }
+      ]
+    },
+    {
+      "Route": "images/c817ec9e-f2c3-4be7-a5ee-1a28cef65557_NPetronLPG070_R4.jpg",
+      "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c817ec9e-f2c3-4be7-a5ee-1a28cef65557_NPetronLPG070_R4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "156615"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yzBzzS3Qf7jWwzgK/hCJlxiOeMKxe270da6/D3wR1DI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Apr 2025 01:19:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yzBzzS3Qf7jWwzgK/hCJlxiOeMKxe270da6/D3wR1DI="
+        }
+      ]
+    },
+    {
       "Route": "images/c8ac0cd5-057e-468c-995c-2742d41206af_samplestock.jpg",
       "AssetFile": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\c8ac0cd5-057e-468c-995c-2742d41206af_samplestock.jpg",
       "Selectors": [],
@@ -13581,7 +13684,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 10:00:28 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13626,7 +13729,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 10:00:28 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13827,7 +13930,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 09:44:27 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -13872,7 +13975,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 09:44:27 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15385,7 +15488,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 09:44:27 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15422,7 +15525,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 09:44:27 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15877,7 +15980,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 10:00:28 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15914,7 +16017,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 10:00:28 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -18091,7 +18194,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 10:14:29 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -18128,7 +18231,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 10:14:29 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -18829,7 +18932,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 12:08:17 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -18866,7 +18969,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 12:08:17 GMT"
+          "Value": "Fri, 11 Apr 2025 16:06:36 GMT"
         },
         {
           "Name": "Cache-Control",
