@@ -7,7 +7,7 @@
 </a>
 <br />
 <br />
-<h1>All Users</h1>
+<h1>Admin Users</h1>
 @if (Model.Count() < 1)
 {
 
@@ -32,6 +32,9 @@ else
                     @Html.DisplayNameFor(model => model.Lastname)
                 </td>
                 <td>
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                </td>
+                <td>
                     @Html.DisplayNameFor(model => model.EmailConfirmed)
                 </td>
 
@@ -53,7 +56,7 @@ else
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>SS
+                <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.Email)
                     </td>
@@ -62,6 +65,9 @@ else
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Lastname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneNumber)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.EmailConfirmed)
@@ -75,10 +81,7 @@ else
                             <input type="hidden" name="Id" value="@item.Id">
                             <input type="submit" class="btn btn-danger" value="Delete">
                         </form>
-                        <form method="post" asp-action="DeleteUser" asp-controller="Admin">
-                            <input type="hidden" name="Id" value="@item.Id">
-                            <input type="submit" class="btn btn-danger" value="Delete">
-                        </form>
+                        <a asp-action="UpdateAccA" asp-controller="Account" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
                         <form asp-action="UserProfileAdmin" asp-controller="Admin">
                             <input type="hidden" name="Id" value="@item.Id">
                             <input type="submit" class="btn btn-sm" value="View Profile">

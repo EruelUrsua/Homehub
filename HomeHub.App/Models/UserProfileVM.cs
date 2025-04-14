@@ -4,6 +4,12 @@ namespace HomeHub.App.Models
 {
     public class UserProfileVM
     {
+
+        public UserProfileVM()
+        {
+            Roles = new List<string>();
+        }
+
         public string? Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -14,8 +20,9 @@ namespace HomeHub.App.Models
 
         public double lng { get; set; }
 
-        public string? Role { get; set; }
+        public IList<string>? Roles { get; set; }
 
+        public string? Role { get; set; }
         public string? ValidId { get; set; }
         public string? BusinessPermit {  get; set; } 
 
