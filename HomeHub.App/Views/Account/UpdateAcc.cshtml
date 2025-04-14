@@ -4,9 +4,9 @@
     <div class="banner"></div>
     <div class="signin-container">
         <div class="card">
-            <h2>Update Credentials</h2>
+            <h2>Update Customer/Provider Credentials</h2>
 
-            <form asp-controller="Account" asp-action="UpdateAccA" method="post" enctype="multipart/form-data">
+            <form asp-controller="Account" asp-action="UpdateAcc" method="post" enctype="multipart/form-data">
                 <div asp-validation-summary="All" class="text-danger"></div>
                 <input type="hidden" asp-for="Id" />
                 <label asp-for="Lastname"></label>

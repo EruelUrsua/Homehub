@@ -431,48 +431,40 @@ namespace HomeHub.App.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> UpdateAccB()
+        public async Task<IActionResult> UpdateAcc(string Id)
         {
-            var user = await userManager.GetUserAsync(User);
+            var user = await userManager.FindByIdAsync(Id);
             if (user == null) return RedirectToAction("Login", "Account");
 
-            var provider = await context.Providers.FirstOrDefaultAsync(p => p.UserID == user.Id);
-
-            var model = new RegisterBVM
+            var model = new EditUserVM
             {
-                ExistingValidId = user.ValidId,
-                ExistingBusinessPermit = provider?.BusinessPermit
-            };
+                // Email = user.Email,
+                Id = user.Id,
+                Username = user.Email,
+                Email = user.Email,
+                Lastname = user.Lastname,
+                Firstname = user.Firstname,
+                ContactNo = user.PhoneNumber,
+                Address = user.Address,
+                lat = user.lat,
+                lng = user.lng
 
+            };
             return View(model);
         }
 
         [HttpGet]
-        public async Task<IActionResult> UpdateAccC()
+        public async Task<IActionResult> UpdateAccA(string Id)
         {
-            var user = await userManager.GetUserAsync(User);
-            if (user == null) return RedirectToAction("Login", "Account");
-
-            var provider = await context.Providers.FirstOrDefaultAsync(p => p.UserID == user.Id);
-
-            var model = new RegisterCVM
-            {
-                ExistingValidId = user.ValidId,
-              
-            };
-
-            return View(model);
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> UpdateAccA()
-        {
-            var user = await userManager.GetUserAsync(User);
+            var user = await userManager.FindByIdAsync(Id);
             if (user == null) return RedirectToAction("Login", "Account");       
 
-            var model = new RegisterAVM
+            var model = new EditUserVM
             {
-                Email = user.Email,
+               // Email = user.Email,
+               Id = user.Id,
+               Username = user.Email,
+               Email = user.Email,
                 Lastname = user.Lastname,
                 Firstname = user.Firstname,
                 ContactNo = user.PhoneNumber,
@@ -486,13 +478,57 @@ namespace HomeHub.App.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> UpdateAccA(RegisterAVM model)
+        public async Task<IActionResult> UpdateAcc(EditUserVM model)
         {
-            var user = await userManager.GetUserAsync(User);
+            var user = await userManager.FindByIdAsync(model.Id);
             if (user == null) return RedirectToAction("Login", "Account");
 
-            ModelState.Remove("Password");
-            ModelState.Remove("ConfirmPassword");
+
+
+
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            user.Firstname = model.Firstname;
+            user.Lastname = model.Lastname;
+            user.Email = model.Email;
+            user.UserName = model.Email; 
+            user.PhoneNumber = model.ContactNo;
+            user.Address = model.Address;
+            user.lat = model.lat;
+            user.lng = model.lng;
+
+            var result = await userManager.UpdateAsync(user);
+
+            if (result.Succeeded)
+            {
+                TempData["SuccessMessage"] = "Account updated successfully!";
+                return RedirectToAction("AdminHome", "Admin");
+            }
+
+            // If there's an error, add to ModelState so it can be shown in the view
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error.Description);
+            }
+
+            return View(model);
+        }
+
+
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdateAccA(EditUserVM model)
+        {
+            var user = await userManager.FindByIdAsync(model.Id);
+            if (user == null) return RedirectToAction("Login", "Account");
+
+          
+
 
             if (!ModelState.IsValid)
             {

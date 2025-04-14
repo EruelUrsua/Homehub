@@ -77,14 +77,25 @@ namespace HomeHub.App.Controllers
         public async Task<ActionResult> UserProfile()
         {
             ApplicationUser user = await GetCurrentUserAsync();
+            var role = await userManager.GetRolesAsync(user);
+            var ur = "";
             if (user == null)
                 return View("Index");
+            else if (role.Contains("Admin"))
+            {
+                ur = "Admin";
+            }
+            else if (role.Contains("HeadAdmin"))
+            {
+                ur = "Head Admin";
+            }
 
             var model = new UserProfileVM
             {
                 FirstName = user.Firstname,
                 LastName = user.Lastname,
                 //Address = user.Address,
+                Role = ur,
                 lat = user.lat,
                 lng = user.lng
 
@@ -141,7 +152,14 @@ namespace HomeHub.App.Controllers
             {
                 ur = "Provider";
             }
-
+            else if (role.Contains("Admin"))
+            {
+                ur = "Admin";
+            }
+            else if (role.Contains("HeadAdmin"))
+            {
+                ur = "HeadAdmin";
+            }
             var model = new UserProfileVM
             {
                 FirstName = user.Firstname,
