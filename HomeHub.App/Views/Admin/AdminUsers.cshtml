@@ -75,6 +75,10 @@ else
                             <input type="hidden" name="Id" value="@item.Id">
                             <input type="submit" class="btn btn-danger" value="Delete">
                         </form>
+                        <form method="post" asp-action="DeleteUser" asp-controller="Admin">
+                            <input type="hidden" name="Id" value="@item.Id">
+                            <input type="submit" class="btn btn-danger" value="Delete">
+                        </form>
                         <form asp-action="UserProfileAdmin" asp-controller="Admin">
                             <input type="hidden" name="Id" value="@item.Id">
                             <input type="submit" class="btn btn-sm" value="View Profile">

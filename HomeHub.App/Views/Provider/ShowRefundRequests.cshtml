@@ -68,9 +68,9 @@
                                 @Html.Hidden("refundId", refundRequest.RefundId)
                                 <button type="submit" class="btn btn-success btn-sm">Accept</button>
                             </form>
+                            <br />
 
                             <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#rejectModal-@refundRequest.RefundId">Reject</button>
-
                             <div class="modal fade" id="rejectModal-@refundRequest.RefundId" tabindex="-1">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
