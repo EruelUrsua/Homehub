@@ -468,25 +468,62 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> UpdateAccA()
         {
             var user = await userManager.GetUserAsync(User);
-            if (user == null) return RedirectToAction("Login", "Account");
-
-           
+            if (user == null) return RedirectToAction("Login", "Account");       
 
             var model = new RegisterAVM
             {
-                //user.UserName = model.Email ;
-                //user.Email = model.Email;
-                //user.Lastname = model.Lastname;
-                //user.Firstname = model.Firstname;
-                //user.PhoneNumber = model.ContactNo;
-                //user.Address = model.Address;
-                //user.lat = model.lat;
-                //user.lng = model.lng;
+                Email = user.Email,
+                Lastname = user.Lastname,
+                Firstname = user.Firstname,
+                ContactNo = user.PhoneNumber,
+                Address = user.Address,
+                lat = user.lat,
+                lng = user.lng
             };
 
             return View(model);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdateAccA(RegisterAVM model)
+        {
+            var user = await userManager.GetUserAsync(User);
+            if (user == null) return RedirectToAction("Login", "Account");
+
+            ModelState.Remove("Password");
+            ModelState.Remove("ConfirmPassword");
+
+            if (!ModelState.IsValid)
+            {
+                return View(model); 
+            }
+
+            user.Firstname = model.Firstname;
+            user.Lastname = model.Lastname;
+            user.Email = model.Email;
+            user.UserName = model.Email; 
+            user.PhoneNumber = model.ContactNo;
+            user.Address = model.Address;
+            user.lat = model.lat;
+            user.lng = model.lng;
+
+            var result = await userManager.UpdateAsync(user);
+
+            if (result.Succeeded)
+            {
+                TempData["SuccessMessage"] = "Account updated successfully!";
+                return RedirectToAction("AdminUsers", "Admin"); 
+            }
+
+            // If there's an error, add to ModelState so it can be shown in the view
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error.Description);
+            }
+
+            return View(model);
+        }
 
 
         [HttpGet]

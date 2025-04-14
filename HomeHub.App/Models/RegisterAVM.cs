@@ -37,12 +37,12 @@ namespace HomeHub.App.Models
         public double lng { get; set; }
 
 
-        [Required]
+        [Required(ErrorMessage = "Password is required only during registration")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
         [Required]
         [DataType(DataType.Password)]
-        [Compare("Password")]
+        [Compare("Password", ErrorMessage = "Passwords do not match")]
         public string ConfirmPassword { get; set; }
     }
 }
