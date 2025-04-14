@@ -431,6 +431,65 @@ namespace HomeHub.App.Controllers
         }
 
         [HttpGet]
+        public async Task<IActionResult> UpdateAccB()
+        {
+            var user = await userManager.GetUserAsync(User);
+            if (user == null) return RedirectToAction("Login", "Account");
+
+            var provider = await context.Providers.FirstOrDefaultAsync(p => p.UserID == user.Id);
+
+            var model = new RegisterBVM
+            {
+                ExistingValidId = user.ValidId,
+                ExistingBusinessPermit = provider?.BusinessPermit
+            };
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> UpdateAccC()
+        {
+            var user = await userManager.GetUserAsync(User);
+            if (user == null) return RedirectToAction("Login", "Account");
+
+            var provider = await context.Providers.FirstOrDefaultAsync(p => p.UserID == user.Id);
+
+            var model = new RegisterCVM
+            {
+                ExistingValidId = user.ValidId,
+              
+            };
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> UpdateAccA()
+        {
+            var user = await userManager.GetUserAsync(User);
+            if (user == null) return RedirectToAction("Login", "Account");
+
+           
+
+            var model = new RegisterAVM
+            {
+                //user.UserName = model.Email ;
+                //user.Email = model.Email;
+                //user.Lastname = model.Lastname;
+                //user.Firstname = model.Firstname;
+                //user.PhoneNumber = model.ContactNo;
+                //user.Address = model.Address;
+                //user.lat = model.lat;
+                //user.lng = model.lng;
+            };
+
+            return View(model);
+        }
+
+
+
+        [HttpGet]
         public async Task<IActionResult> UpdateCred()
         {
             var user = await userManager.GetUserAsync(User);

@@ -1,0 +1,175 @@
+﻿@model RegisterAVM
+
+<body>
+    <div class="banner"></div>
+    <div class="signin-container">
+        <div class="card">
+            <h2>Update Credentials</h2>
+
+            <form asp-controller="Account" asp-action="UpdateAccA" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <label asp-for="Lastname"></label>
+                <input asp-for="Lastname" class="form-control" />
+                <span asp-validation-for="Lastname"></span>
+                <br />
+                <label asp-for="Firstname"></label>
+                <input asp-for="Firstname" class="form-control" />
+                <span asp-validation-for="Firstname"></span>
+                <br />
+                <label asp-for="ContactNo"></label>
+                <input asp-for="ContactNo" class="form-control" />
+                <span asp-validation-for="ContactNo"></span>
+                <br />
+
+                <label asp-for="Address">District</label>
+                <input asp-for="Address" class="form-control" id="latlang" />
+                <span asp-validation-for="Address"></span>
+                <br />
+
+
+                <input type="hidden" id="lat" asp-for="lat" class="form-control" />
+                <input type="hidden" id="lng" asp-for="lng" class="form-control" />
+
+
+                @* This is the Map Script do not touch! *@
+                <script src="~/lib/leaflet/leaflet.js"></script>
+                <script src="~ /lib/leaflet/leaflet.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.83.1/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+                <a href="~/lib/leaflet/leaflet.js.map"></a>
+                <div id="map" style="width:100%;height:400px"></div>
+                <script>
+
+                    var map = L.map('map').setView([14.58699, 120.98634], 15);
+                         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright"></a>'
+                         }).addTo(map);
+                        var marker = L.marker([14.58699, 120.98634],{draggable: true} ).addTo(map);
+
+
+                        marker.on("drag", function(e) {
+                        var position = marker.getLatLng();
+
+                        // document.getElementById("latlang").value = position.lat +", " + position.lng;
+                         document.getElementById("lat").value = position.lat;
+                          document.getElementById("lng").value = position.lng;
+                        // console.log(position.lat);
+                        // console.log(position.lng);
+                    });
+
+
+                            L.control.locate().addTo(map);
+                </script>
+                <br />
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email"></span>
+
+                <input type="hidden" asp-for="Password" />
+
+                <input type="hidden" asp-for="ConfirmPassword">
+
+
+                <input type="submit" class="btn btn-custom" value="Update" />
+            </form>
+        </div>
+    </div>
+</body>
+
+<style>
+    body {
+        background-color: #F1F1F1;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .banner {
+        background-color: #3964D2;
+        height: 200px;
+        width: 100%;
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 0;
+    }
+
+    .signin-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .card {
+        background-color: #1A3D8F;
+        color: white;
+        padding: 40px;
+        border-radius: 12px;
+        text-align: center;
+        width: 500px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-group input, .form-group select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 10px;
+        border-radius: 6px;
+        border: none;
+        font-size: 14px;
+    }
+
+    .btn-custom {
+        background-color: #ffffff;
+        color: #1A3D8F;
+        font-weight: bold;
+        width: 100%;
+        padding: 6px;
+        margin-top: 14px;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+
+        .btn-custom:hover {
+            background-color: #dfe6f1;
+        }
+
+    .register-link {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+        .register-link a {
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+            .register-link a:hover {
+                text-decoration: underline;
+            }
+
+    .dropdown-container {
+        position: relative;
+    }
+
+    .dropdown {
+        appearance: none;
+        background-color: white;
+        padding-right: 35px;
+    }
+
+    .dropdown-icon {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #1A3D8F;
+        pointer-events: none;
+    }
+</style>
