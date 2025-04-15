@@ -1,4 +1,4 @@
-﻿@model IEnumerable<HomeHub.DataModel.ApplicationUser>
+﻿@model ADashboardVM
 
 <!--Admin Sidebar-->
 <nav class="col-md-3 col-lg-2 d-md-block bg-dark sidebar">
@@ -21,8 +21,15 @@
 
 
     <h1>Admin Dashboard</h1>
+
+    <h3>@Model.customers</h3>
+    <h3>@Model.providers</h3>
+    <h3>@Model.userRestricted</h3>
+    <h3>@Model.userReview</h3>
+    <h3>@Model.totalUser</h3>
+
     @* Shows Sales chart *@
-     <canvas id="salesChart" style="width:100%;max-width:1300px"></canvas> 
+     @* <canvas id="salesChart" style="width:100%;max-width:1300px"></canvas>  *@
     @* Shows Order chart *@
      @* <canvas id="orderChart" style="width:100%;max-width:1300px"></canvas> *@
     @* <br /> *@
@@ -33,30 +40,32 @@
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
-                     var ctx = document.getElementById('salesChart').getContext('2d');
-            var linechart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                 labels: ["Verified Accounts"],
-            datasets: [{
-            label: 'Monthly Sales Report',
-                 data: @Html.Raw(Json.Serialize(Model.GroupBy(d => d.IsVerified == true).Select(d => d.Count(d => d.IsVerified).ToString()).ToList())),
-            backgroundColor: 'rgba(0, 119, 204, 0.3)',
-            borderColor: 'rgba(0, 119, 204, 1)',
-            borderWidth: 1
-            }]
-            },
-            options: {
-            responsive:true,
-            scales: {
-            yAxes: [{
-            ticks: {
-            beginAtZero: true
-            }
-            }]
-            }
-            }
-            });
+
+
+            //          var ctx = document.getElementById('salesChart').getContext('2d');
+            // var linechart = new Chart(ctx, {
+            // type: 'line',
+            // data: {
+            //      labels: ["Verified Accounts"],
+            // datasets: [{
+            // label: 'Monthly Sales Report',
+
+            // backgroundColor: 'rgba(0, 119, 204, 0.3)',
+            // borderColor: 'rgba(0, 119, 204, 1)',
+            // borderWidth: 1
+            // }]
+            // },
+            // options: {
+            // responsive:true,
+            // scales: {
+            // yAxes: [{
+            // ticks: {
+            // beginAtZero: true
+            // }
+            // }]
+            // }
+            // }
+            // });
             // var cty = document.getElementById('orderChart').getContext('2d');
             // var barchart = new Chart(cty, {
             //      type: 'bar',
