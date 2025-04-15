@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HomeHub.DataModel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd2334bd0d6161ec54fe4355193a8cd09dca24c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7608595abf0c27a90d1eeca3e704782323759d4f")]
 [assembly: System.Reflection.AssemblyProductAttribute("HomeHub.DataModel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HomeHub.DataModel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
