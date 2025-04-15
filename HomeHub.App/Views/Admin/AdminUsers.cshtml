@@ -183,7 +183,7 @@
                                     <input type="checkbox" disabled @(item.IsVerified ? "checked" : "") />
                                 </td>
                                 <td class="action-buttons">
-                                    <form method="post" asp-action="DeleteUser" asp-controller="Admin">
+                                    <form method="post" asp-action="DeleteUserA" asp-controller="Admin">
                                         <input type="hidden" name="Id" value="@item.Id">
                                         <input type="submit" class="btn btn-danger" value="Delete">
                                     </form>
