@@ -27,26 +27,39 @@ namespace HomeHub.App.Controllers
             this.emailSender = emailSender;
         }
 
+
         public async Task <IActionResult> AdminDashboard()
         {
-
+            ADashboardVM vm = new ADashboardVM();
+            OrdersLog ordersLog = new OrdersLog();
             var user = await GetCurrentUserId();
-
             if (user == null) return Unauthorized();
-            //var userlog = await userManager.FindByIdAsync(uid);
-            //var email = await userManager.GetEmailAsync(userlog);
             var provider = await userManager.GetUsersInRoleAsync("Provider");
-            var Customer = await userManager.GetUsersInRoleAsync("Customer");
-            var accounts = provider.Concat(Customer);
+            var customer = await userManager.GetUsersInRoleAsync("Customer");
+            var uv = userManager.Users
+               .Where(u => u.IsVerified == true) // Get all users who needs verification
+               .ToList();
 
-            return View(accounts);
+            var ur = userManager.Users
+              .Where(u => u.IsUnderReview == true) // Get all users who needs verification
+              .ToList();
+            var rr = userManager.Users
+             .Where(u => u.IsRestricted== true) // Get all users who needs verification
+             .ToList();
 
-            //var users = await context.ApplicationUsers
-            //    .FirstOrDefaultAsync(p => p.Id != user);
+            vm.customers = customer.Count();
+            vm.providers = provider.Count();
+            vm.userRestricted = rr.Count();
+            vm.userVerified = uv.Count();
+            vm.userReview = ur.Count();
+            vm.totalUser = userManager.Users.Count(); ;
 
-            //if (users == null) return Forbid();
-            //var sales = context.ClientOrders.Where(c => c.BusinessId == user).ToList();
+            
 
+
+            return View(vm);
+
+          
  
 
 
