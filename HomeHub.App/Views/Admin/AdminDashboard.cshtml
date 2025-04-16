@@ -47,7 +47,7 @@
                 <div class="stat-card d-flex align-items-center justify-content-between">
                     <div>
                         <p class="stat-label">Users For Verification</p>
-                        <h3 class="stat-value">@Model.userRestricted</h3>
+                        <h3 class="stat-value">@Model.userVerified</h3>
                     </div>
                     <i class="bi bi-person-check-fill stat-icon"></i>
                 </div>
@@ -57,6 +57,15 @@
                     <div>
                         <p class="stat-label">Users Under Review</p>
                         <h3 class="stat-value">@Model.userReview</h3>
+                    </div>
+                    <i class="bi bi-person-exclamation stat-icon"></i>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card d-flex align-items-center justify-content-between">
+                    <div>
+                        <p class="stat-label">Restricted Users</p>
+                        <h3 class="stat-value">@Model.userRestricted</h3>
                     </div>
                     <i class="bi bi-person-exclamation stat-icon"></i>
                 </div>

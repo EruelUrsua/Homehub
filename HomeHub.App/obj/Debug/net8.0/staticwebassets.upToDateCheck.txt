@@ -134,6 +134,7 @@ wwwroot\images\validids\6879c438-913a-4672-a6a2-171ab895aa3f_b534b182b082fbf571e
 wwwroot\images\validids\6912c219-d354-4136-984f-6a6f3ae3a07f_Water.jpg
 wwwroot\images\validids\71777542-e622-4dcf-ada9-f43818325ed5_samplestock.jpg
 wwwroot\images\validids\72502de8-1cf8-4f76-8832-3f08462b0bb3_Logo v2.png
+wwwroot\images\validids\735a7f28-ec6f-4821-a8e6-b17f6878c7c7_validid.jpg
 wwwroot\images\validids\7b27db5a-f41a-487e-94e8-792eea381a01_Logo v2.png
 wwwroot\images\validids\7b5d7b49-04b8-42de-8831-8ad68ec9a58f_Just The Two of Us Wallpaper.jpg
 wwwroot\images\validids\7d5fcd0e-db9f-4c37-8ec7-082e40af5a16_pass.PNG
@@ -157,6 +158,7 @@ wwwroot\images\validids\ad41d4a6-f2d0-410b-9387-422cdf8fd126_pass.PNG
 wwwroot\images\validids\bb906769-b7b1-4b07-af2f-3709ed6bc2af_GkL-40tbUAIPY8C.jpg
 wwwroot\images\validids\bc897414-e266-4a00-8328-6336cd7908ec_samplestock.jpg
 wwwroot\images\validids\c0c3ecb9-8612-400d-9f0c-f16635de552f_lpg.jpg
+wwwroot\images\validids\c17f752f-2a18-4849-9984-203735578abe_validid.jpg
 wwwroot\images\validids\c1c0b356-be7d-4d8f-a5d8-3bc3f2b1e174_samplestock.jpg
 wwwroot\images\validids\c24d433e-7363-4bb1-9ee5-c8b044978add_GkL-40tbUAIPY8C.jpg
 wwwroot\images\validids\c51f8b85-9247-48af-8958-d028256e4fae_RNUSY5P7S3LS.png
