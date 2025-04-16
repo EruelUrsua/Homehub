@@ -37,7 +37,7 @@ namespace HomeHub.App.Controllers
             var provider = await userManager.GetUsersInRoleAsync("Provider");
             var customer = await userManager.GetUsersInRoleAsync("Customer");
             var uv = userManager.Users
-               .Where(u => u.IsVerified == true) // Get all users who needs verification
+               .Where(u => u.IsVerified == false) // Get all users who needs verification
                .ToList();
 
             var ur = userManager.Users

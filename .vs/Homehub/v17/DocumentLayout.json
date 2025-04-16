@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\Notes\\C#\\Homehub\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\models\\adashboardvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\models\\adashboardvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\models\\signinvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\models\\signinvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\views\\account\\updateacca.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -55,16 +63,8 @@
       "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\admin\\adminhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\views\\account\\registera.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\views\\account\\registera.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|d:\\notes\\c#\\homehub\\homehub.app\\models\\adashboardvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7BFBB8A-FE69-429C-9EF8-0EF70FEDD62A}|HomeHub.App\\HomeHub.App.csproj|solutionrelative:homehub.app\\models\\adashboardvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "SignIn.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Account\\SignIn.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Account\\SignIn.cshtml",
@@ -106,12 +106,11 @@
               "RelativeToolTip": "HomeHub.App\\Views\\Account\\SignIn.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-16T08:13:27.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T08:13:27.555Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "SignInVM.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Models\\SignInVM.cs",
               "RelativeDocumentMoniker": "HomeHub.App\\Models\\SignInVM.cs",
@@ -119,12 +118,11 @@
               "RelativeToolTip": "HomeHub.App\\Models\\SignInVM.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T08:11:20.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T08:11:20.317Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "UpdateAcc.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Account\\UpdateAcc.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Account\\UpdateAcc.cshtml",
@@ -136,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "UpdateAccA.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Account\\UpdateAccA.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Account\\UpdateAccA.cshtml",
@@ -148,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "SalesView.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Provider\\SalesView.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Provider\\SalesView.cshtml",
@@ -160,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Program.cs",
               "RelativeDocumentMoniker": "HomeHub.App\\Program.cs",
@@ -172,19 +170,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "AdminController.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "HomeHub.App\\Controllers\\AdminController.cs",
               "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Controllers\\AdminController.cs",
               "RelativeToolTip": "HomeHub.App\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAIAwwCcAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAD4vzQAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T13:12:10.163Z"
+              "WhenOpened": "2025-04-15T13:12:10.163Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "HomeHub.App\\Controllers\\AccountController.cs",
@@ -197,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "UserProfile.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Admin\\UserProfile.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Admin\\UserProfile.cshtml",
@@ -209,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "UserProfileAdmin.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Admin\\UserProfileAdmin.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Admin\\UserProfileAdmin.cshtml",
@@ -221,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "AdminHome.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Admin\\AdminHome.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Admin\\AdminHome.cshtml",
@@ -233,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "AdminUsers.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Admin\\AdminUsers.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Admin\\AdminUsers.cshtml",
@@ -245,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "HomeHubContext.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.DataModel\\HomeHubContext.cs",
               "RelativeDocumentMoniker": "HomeHub.DataModel\\HomeHubContext.cs",
@@ -257,19 +256,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 0,
               "Title": "AdminDashboard.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Admin\\AdminDashboard.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Admin\\AdminDashboard.cshtml",
               "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Admin\\AdminDashboard.cshtml",
               "RelativeToolTip": "HomeHub.App\\Views\\Admin\\AdminDashboard.cshtml",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAQwPsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T10:14:45.151Z"
+              "WhenOpened": "2025-04-15T10:14:45.151Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "RegisterA.cshtml",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Views\\Account\\RegisterA.cshtml",
               "RelativeDocumentMoniker": "HomeHub.App\\Views\\Account\\RegisterA.cshtml",
@@ -281,15 +281,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 1,
               "Title": "ADashboardVM.cs",
               "DocumentMoniker": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Models\\ADashboardVM.cs",
               "RelativeDocumentMoniker": "HomeHub.App\\Models\\ADashboardVM.cs",
               "ToolTip": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\Models\\ADashboardVM.cs",
               "RelativeToolTip": "HomeHub.App\\Models\\ADashboardVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T09:28:48.732Z"
+              "WhenOpened": "2025-04-15T09:28:48.732Z",
+              "EditorCaption": ""
             }
           ]
         }
