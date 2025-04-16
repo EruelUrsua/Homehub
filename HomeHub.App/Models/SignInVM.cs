@@ -9,6 +9,8 @@ namespace HomeHub.App.Models
         {
             Username = "";
             Password = "";
+            ReturnUrl = "";
+
         }
 
         [Required]
@@ -18,6 +20,7 @@ namespace HomeHub.App.Models
         [DataType(DataType.Password)]
         public string Password { get; set; }    
 
+        public string ReturnUrl { get; set; }
 
     }
 }

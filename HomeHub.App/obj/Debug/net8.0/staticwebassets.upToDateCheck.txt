@@ -86,6 +86,7 @@ wwwroot\images\e0188f78-6475-461f-a987-ec370078a467_cleaning kit.jpg
 wwwroot\images\e343c083-60ed-4d03-a806-63fa38a648ca_Water.jpg
 wwwroot\images\e5faf723-40ab-42eb-93a6-893a604beda1_cleaning kit.jpg
 wwwroot\images\ed5d219d-fdfb-4cbd-82f1-d1df197c24be_download.jfif
+wwwroot\images\f120394b-a193-4a00-bf6b-d62a5a8e3274_50kg.png
 wwwroot\images\f1329073-00c9-4fdc-b57a-aafebe32cf5e_lpg.jpg
 wwwroot\images\f14822f8-f352-4f18-8878-5e2c562d1149_drinking-water-container.jpg
 wwwroot\images\f7fe0bb5-ad16-468c-8c23-fadfdfb34c5a_drinking-water-container.jpg
@@ -175,6 +176,7 @@ wwwroot\images\validids\ed0aeade-e37b-43af-b41a-d5a5a393123a_Logo v2.png
 wwwroot\images\validids\eeb157b9-f7c9-4176-b0f3-a79454d336c6_Logo v2.png
 wwwroot\images\validids\ef895bd6-8bcc-46d8-8c11-a69f1014bc01_Logo v2.png
 wwwroot\images\validids\efb73dce-cc91-47f8-be59-421528d40d60_b534b182b082fbf571edf38d2815ad89.jpeg
+wwwroot\images\validids\f48be4f9-1c08-440d-9471-0cd6c1e74008_validid2.jpg
 wwwroot\images\validids\f8ae9bfa-b8f2-4168-8358-e95da55cb787_nog.png
 wwwroot\images\validids\f9789e2e-1b05-435d-b9f9-c9a931e627fb_IMG_0205.jpg
 wwwroot\images\validids\faf8f2f6-5ddc-4edc-aec3-ec9dd0fff2f4_Logo v2.png

@@ -357,6 +357,10 @@
       "PackagePath": "staticwebassets\\images\\ed5d219d-fdfb-4cbd-82f1-d1df197c24be_download.jfif"
     },
     {
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\f120394b-a193-4a00-bf6b-d62a5a8e3274_50kg.png",
+      "PackagePath": "staticwebassets\\images\\f120394b-a193-4a00-bf6b-d62a5a8e3274_50kg.png"
+    },
+    {
       "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\f1329073-00c9-4fdc-b57a-aafebe32cf5e_lpg.jpg",
       "PackagePath": "staticwebassets\\images\\f1329073-00c9-4fdc-b57a-aafebe32cf5e_lpg.jpg"
     },
@@ -711,6 +715,10 @@
     {
       "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\efb73dce-cc91-47f8-be59-421528d40d60_b534b182b082fbf571edf38d2815ad89.jpeg",
       "PackagePath": "staticwebassets\\images\\validids\\efb73dce-cc91-47f8-be59-421528d40d60_b534b182b082fbf571edf38d2815ad89.jpeg"
+    },
+    {
+      "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\f48be4f9-1c08-440d-9471-0cd6c1e74008_validid2.jpg",
+      "PackagePath": "staticwebassets\\images\\validids\\f48be4f9-1c08-440d-9471-0cd6c1e74008_validid2.jpg"
     },
     {
       "Id": "D:\\Notes\\C#\\Homehub\\HomeHub.App\\wwwroot\\images\\validids\\f8ae9bfa-b8f2-4168-8358-e95da55cb787_nog.png",

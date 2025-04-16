@@ -434,7 +434,7 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> UpdateAcc(string Id)
         {
             var user = await userManager.FindByIdAsync(Id);
-            if (user == null) return RedirectToAction("Login", "Account");
+            if (user == null) return RedirectToAction("SignIn", "Account");
 
             var model = new EditUserVM
             {
@@ -457,7 +457,7 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> UpdateAccA(string Id)
         {
             var user = await userManager.FindByIdAsync(Id);
-            if (user == null) return RedirectToAction("Login", "Account");       
+            if (user == null) return RedirectToAction("SignIn", "Account");       
 
             var model = new EditUserVM
             {
@@ -481,7 +481,7 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> UpdateAcc(EditUserVM model)
         {
             var user = await userManager.FindByIdAsync(model.Id);
-            if (user == null) return RedirectToAction("Login", "Account");
+            if (user == null) return RedirectToAction("SignIn", "Account");
 
 
 
@@ -525,7 +525,7 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> UpdateAccA(EditUserVM model)
         {
             var user = await userManager.FindByIdAsync(model.Id);
-            if (user == null) return RedirectToAction("Login", "Account");
+            if (user == null) return RedirectToAction("SignIn", "Account");
 
           
 
@@ -566,7 +566,7 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> UpdateCred()
         {
             var user = await userManager.GetUserAsync(User);
-            if (user == null) return RedirectToAction("Login", "Account");
+            if (user == null) return RedirectToAction("SignIn", "Account");
 
             var provider = await context.Providers.FirstOrDefaultAsync(p => p.UserID == user.Id);
 
@@ -583,7 +583,7 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> UpdateCredC()
         {
             var user = await userManager.GetUserAsync(User);
-            if (user == null) return RedirectToAction("Login", "Account");
+            if (user == null) return RedirectToAction("SignIn", "Account");
 
             var provider = await context.Providers.FirstOrDefaultAsync(p => p.UserID == user.Id);
 
@@ -600,7 +600,7 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> UpdateCredC(RegisterCVM model)
         {
             var user = await userManager.GetUserAsync(User);
-            if (user == null) return RedirectToAction("Login", "Account");
+            if (user == null) return RedirectToAction("SignIn", "Account");
 
           //  var provider = await context.ApplicationUsers.FirstOrDefaultAsync(p => p.Id);
 
@@ -645,7 +645,7 @@ namespace HomeHub.App.Controllers
         public async Task<IActionResult> UpdateCred(RegisterBVM model)
         {
             var user = await userManager.GetUserAsync(User);
-            if (user == null) return RedirectToAction("Login", "Account");
+            if (user == null) return RedirectToAction("SignIn", "Account");
 
             var provider = await context.Providers.FirstOrDefaultAsync(p => p.UserID == user.Id);
 
@@ -706,17 +706,18 @@ namespace HomeHub.App.Controllers
             return RedirectToAction("ProviderHome", "Provider");
         }
 
-        public IActionResult SignIn()
+        public IActionResult SignIn(string? returnUrl)
         {
+           
             SignInVM vm = new SignInVM();
-
+            vm.ReturnUrl = returnUrl;
             return View(vm);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> SignIn(SignInVM model)
+        public async Task<IActionResult> SignIn(SignInVM model, string? returnUrl)
         {
             if (ModelState.IsValid)
             {
@@ -738,8 +739,10 @@ namespace HomeHub.App.Controllers
                         var userlog = await userManager.FindByEmailAsync(model.Username);
                         var role = await userManager.GetRolesAsync(userlog);
 
+                        if (!string.IsNullOrEmpty(returnUrl))
+                            return LocalRedirect(returnUrl);
 
-                        if (role.Contains("Customer"))
+                        else if (role.Contains("Customer"))
                         {
                             return RedirectToAction("Index", "Customer");
                         }

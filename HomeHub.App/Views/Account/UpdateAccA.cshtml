@@ -9,15 +9,15 @@
             <form asp-controller="Account" asp-action="UpdateAccA" method="post" enctype="multipart/form-data">
                 <div asp-validation-summary="All" class="text-danger"></div>
                 <input type="hidden" asp-for="Id" />
-                <label asp-for="Lastname"></label>
+                <label asp-for="Lastname">Last Name</label>
                 <input asp-for="Lastname" class="form-control" />
                 <span asp-validation-for="Lastname"></span>
                 <br />
-                <label asp-for="Firstname"></label>
+                <label asp-for="Firstname">First Name</label>
                 <input asp-for="Firstname" class="form-control" />
                 <span asp-validation-for="Firstname"></span>
                 <br />
-                <label asp-for="ContactNo"></label>
+                <label asp-for="ContactNo">Contact Number</label>
                 <input asp-for="ContactNo" class="form-control" />
                 <span asp-validation-for="ContactNo"></span>
                 <br />
