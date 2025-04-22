@@ -31,7 +31,9 @@ namespace HomeHub.App.Controllers
         public async Task <IActionResult> AdminDashboard()
         {
             ADashboardVM vm = new ADashboardVM();
-            OrdersLog ordersLog = new OrdersLog();
+            // OrdersLog ordersLog = new OrdersLog();
+            //var sales = context.OrdersLogs.Select(d => d.Status == "Delivered").ToList();
+           // var od = context.OrdersLogs.Where(d => d.Status == "Delivered").ToList();
             var user = await GetCurrentUserId();
             if (user == null) return Unauthorized();
             var provider = await userManager.GetUsersInRoleAsync("Provider");
@@ -52,7 +54,9 @@ namespace HomeHub.App.Controllers
             vm.userRestricted = rr.Count();
             vm.userVerified = uv.Count();
             vm.userReview = ur.Count();
+            //vm.orderLogs = od.Count();
             vm.totalUser = userManager.Users.Count(); ;
+
 
             
 

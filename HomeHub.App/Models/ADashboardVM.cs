@@ -15,5 +15,8 @@
         public int userReview { get; set; }
 
         public int totalUser { get; set; }
+
+        //public DateTime orderDates { get; set; }
+        public int orderLogs { get; set; }
     }
 }

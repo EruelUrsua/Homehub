@@ -741,8 +741,8 @@ namespace HomeHub.App.Controllers
 
                         if (!string.IsNullOrEmpty(returnUrl))
                             return LocalRedirect(returnUrl);
-
-                        else if (role.Contains("Customer"))
+                        else { 
+                        if (role.Contains("Customer"))
                         {
                             return RedirectToAction("Index", "Customer");
                         }
@@ -763,8 +763,7 @@ namespace HomeHub.App.Controllers
                             return RedirectToAction("AdminDashboard", "Admin");
 
                         }
-
-                        return RedirectToAction("Home", "Index");
+                        }
                     }
                     else
                     {
